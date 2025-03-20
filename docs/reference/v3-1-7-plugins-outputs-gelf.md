@@ -24,7 +24,7 @@ For questions about the plugin, open a topic in the [Discuss](http://discuss.ela
 
 This output generates messages in GELF format. This is most useful if you want to use Logstash to output events to Graylog2.
 
-More information at [The Graylog2 GELF specs page](http://docs.graylog.org/en/2.3/pages/gelf.md#gelf-payload-specification)
+More information at [The Graylog2 GELF specs page](http://docs.graylog.org/en/2.3/pages/gelf.html#elf-payload-specification)
 
 
 ## Gelf Output Configuration Options [v3.1.7-plugins-outputs-gelf-options]

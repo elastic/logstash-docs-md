@@ -24,7 +24,7 @@ For questions about the plugin, open a topic in the [Discuss](http://discuss.ela
 
 Read events from a Jms Broker. Supports both Jms Queues and Topics.
 
-For more information about Jms, see [http://docs.oracle.com/javaee/6/tutorial/doc/bncdq.html](http://docs.oracle.com/javaee/6/tutorial/doc/bncdq.md) For more information about the Ruby Gem used, see [http://github.com/reidmorrison/jruby-jms](http://github.com/reidmorrison/jruby-jms) Here is a config example to pull from a queue: jms { include_header ⇒ false include_properties ⇒ false include_body ⇒ true use_jms_timestamp ⇒ false interval ⇒ 10 destination ⇒ "myqueue" pub-sub ⇒ false yaml_file ⇒ "~/jms.yml" yaml_section ⇒ "mybroker" }
+For more information about Jms, see [http://docs.oracle.com/javaee/6/tutorial/doc/bncdq.html](http://docs.oracle.com/javaee/6/tutorial/doc/bncdq.html) For more information about the Ruby Gem used, see [http://github.com/reidmorrison/jruby-jms](http://github.com/reidmorrison/jruby-jms) Here is a config example to pull from a queue: jms { include_header ⇒ false include_properties ⇒ false include_body ⇒ true use_jms_timestamp ⇒ false interval ⇒ 10 destination ⇒ "myqueue" pub-sub ⇒ false yaml_file ⇒ "~/jms.yml" yaml_section ⇒ "mybroker" }
 
 
 ## Jms Input Configuration Options [v3.0.2-plugins-inputs-jms-options]

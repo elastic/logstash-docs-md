@@ -81,7 +81,7 @@ This plugin attempts to send batches of events as a single request. However, if 
 
 ## DNS Caching [_dns_caching_102]
 
-This plugin uses the JVM to lookup DNS entries and is subject to the value of [networkaddress.cache.ttl](https://docs.oracle.com/javase/7/docs/technotes/guides/net/properties.md), a global setting for the JVM.
+This plugin uses the JVM to lookup DNS entries and is subject to the value of [networkaddress.cache.ttl](https://docs.oracle.com/javase/7/docs/technotes/guides/net/properties.html), a global setting for the JVM.
 
 As an example, to set your DNS TTL to 1 second you would set the `LS_JAVA_OPTS` environment variable to `-Dnetworkaddress.cache.ttl=1`.
 
@@ -168,7 +168,7 @@ Protocol agnostic (i.e. non-http, non-java specific) configs go here Protocol ag
 * update: updates a document by id. Update has a special case where you can upsert — update a document if not already present. See the `upsert` option. NOTE: This does not work and is not supported in Elasticsearch 1.x. Please upgrade to ES 2.x or greater to use this feature with Logstash!
 * A sprintf style string to change the action based on the content of the event. The value `%{[foo]}` would use the foo field for the action
 
-For more details on actions, check out the [Elasticsearch bulk API documentation](http://www.elastic.co/guide/en/elasticsearch/reference/current/docs-bulk.md)
+For more details on actions, check out the [Elasticsearch bulk API documentation](http://www.elastic.co/guide/en/elasticsearch/reference/current/docs-bulk.html)
 
 
 ### `bulk_path` [v9.2.3-plugins-outputs-elasticsearch-bulk_path]
@@ -244,7 +244,7 @@ HTTP Path where a HEAD request is sent when a backend is marked down the request
 * Value type is [uri](logstash://reference/configuration-file-structure.md#uri)
 * Default value is `[//127.0.0.1]`
 
-Sets the host(s) of the remote instance. If given an array it will load balance requests across the hosts specified in the `hosts` parameter. Remember the `http` protocol uses the [http](http://www.elastic.co/guide/en/elasticsearch/reference/current/modules-http.md#modules-http) address (eg. 9200, not 9300). `"127.0.0.1"` `["127.0.0.1:9200","127.0.0.2:9200"]` `["http://127.0.0.1"]` `["https://127.0.0.1:9200"]` `["https://127.0.0.1:9200/mypath"]` (If using a proxy on a subpath) It is important to exclude [dedicated master nodes](http://www.elastic.co/guide/en/elasticsearch/reference/current/modules-node.md) from the `hosts` list to prevent LS from sending bulk requests to the master nodes.  So this parameter should only reference either data or client nodes in Elasticsearch.
+Sets the host(s) of the remote instance. If given an array it will load balance requests across the hosts specified in the `hosts` parameter. Remember the `http` protocol uses the [http](http://www.elastic.co/guide/en/elasticsearch/reference/current/modules-http.html#modules-http) address (eg. 9200, not 9300). `"127.0.0.1"` `["127.0.0.1:9200","127.0.0.2:9200"]` `["http://127.0.0.1"]` `["https://127.0.0.1:9200"]` `["https://127.0.0.1:9200/mypath"]` (If using a proxy on a subpath) It is important to exclude [dedicated master nodes](http://www.elastic.co/guide/en/elasticsearch/reference/current/modules-node.html) from the `hosts` list to prevent LS from sending bulk requests to the master nodes.  So this parameter should only reference either data or client nodes in Elasticsearch.
 
 Any special characters present in the URLs here MUST be URL escaped! This means `#` should be put in as `%23` for instance.
 
@@ -262,7 +262,7 @@ Enable gzip compression on requests. Note that response compression is on by def
 * Value type is [string](logstash://reference/configuration-file-structure.md#string)
 * Default value is `"logstash-%{+YYYY.MM.dd}"`
 
-The index to write events to. This can be dynamic using the `%{{foo}}` syntax. The default value will partition your indices by day so you can more easily delete old data or only search specific date ranges. Indexes may not contain uppercase characters. For weekly indexes ISO 8601 format is recommended, eg. logstash-%{+xxxx.ww}. LS uses Joda to format the index pattern from event timestamp. Joda formats are defined [here](http://www.joda.org/joda-time/apidocs/org/joda/time/format/DateTimeFormat.md).
+The index to write events to. This can be dynamic using the `%{{foo}}` syntax. The default value will partition your indices by day so you can more easily delete old data or only search specific date ranges. Indexes may not contain uppercase characters. For weekly indexes ISO 8601 format is recommended, eg. logstash-%{+xxxx.ww}. LS uses Joda to format the index pattern from event timestamp. Joda formats are defined [here](http://www.joda.org/joda-time/apidocs/org/joda/time/format/DateTimeFormat.html).
 
 
 ### `keystore` [v9.2.3-plugins-outputs-elasticsearch-keystore]
@@ -560,7 +560,7 @@ Username to authenticate to a secure Elasticsearch cluster
 * Value type is [number](logstash://reference/configuration-file-structure.md#number)
 * Default value is `10000`
 
-How long to wait before checking if the connection is stale before executing a request on a connection using keepalive. You may want to set this lower, if you get connection errors regularly Quoting the Apache commons docs (this client is based Apache Commmons): *Defines period of inactivity in milliseconds after which persistent connections must be re-validated prior to being leased to the consumer. Non-positive value passed to this method disables connection validation. This check helps detect connections that have become stale (half-closed) while kept inactive in the pool.* See [these docs for more info](https://hc.apache.org/httpcomponents-client-ga/httpclient/apidocs/org/apache/http/impl/conn/PoolingHttpClientConnectionManager.md#setValidateAfterInactivity(int))
+How long to wait before checking if the connection is stale before executing a request on a connection using keepalive. You may want to set this lower, if you get connection errors regularly Quoting the Apache commons docs (this client is based Apache Commmons): *Defines period of inactivity in milliseconds after which persistent connections must be re-validated prior to being leased to the consumer. Non-positive value passed to this method disables connection validation. This check helps detect connections that have become stale (half-closed) while kept inactive in the pool.* See [these docs for more info](https://hc.apache.org/httpcomponents-client-ga/httpclient/apidocs/org/apache/http/impl/conn/PoolingHttpClientConnectionManager.html#setValidateAfterInactivity(int))
 
 
 ### `version` [v9.2.3-plugins-outputs-elasticsearch-version]

@@ -188,7 +188,7 @@ The AWS Region
 * Value type is [string](logstash://reference/configuration-file-structure.md#string)
 * There is no default value for this setting.
 
-The AWS IAM Role to assume, if any. This is used to generate temporary credentials, typically for cross-account access. See the [AssumeRole API documentation](https://docs.aws.amazon.com/STS/latest/APIReference/API_AssumeRole.md) for more information.
+The AWS IAM Role to assume, if any. This is used to generate temporary credentials, typically for cross-account access. See the [AssumeRole API documentation](https://docs.aws.amazon.com/STS/latest/APIReference/API_AssumeRole.html) for more information.
 
 
 ### `role_session_name` [v3.1.3-plugins-inputs-sqs-role_session_name]

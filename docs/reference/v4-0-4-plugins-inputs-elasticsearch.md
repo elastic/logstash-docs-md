@@ -126,7 +126,7 @@ Example
 * Value type is [array](logstash://reference/configuration-file-structure.md#array)
 * Default value is `["_index", "_type", "_id"]`
 
-List of document metadata to move to the `docinfo_target` field To learn more about Elasticsearch metadata fields read [http://www.elasticsearch.org/guide/en/elasticsearch/guide/current/_document_metadata.html](http://www.elasticsearch.org/guide/en/elasticsearch/guide/current/_document_metadata.md)
+List of document metadata to move to the `docinfo_target` field To learn more about Elasticsearch metadata fields read [http://www.elasticsearch.org/guide/en/elasticsearch/guide/current/_document_metadata.html](http://www.elasticsearch.org/guide/en/elasticsearch/guide/current/_document_metadata.html)
 
 
 ### `docinfo_target` [v4.0.4-plugins-inputs-elasticsearch-docinfo_target]

@@ -57,7 +57,7 @@ $ smidump --level=1 -k -f python RFC1213-MIB > RFC1213-MIB.dic
 
 Note that the resulting file as output by `smidump` must have the `.dic` extension.
 
-As `smidump` only looks for mib dependencies in its pre-configured path lists as defined in the documentaion in the ["MODULES LOCATIONS"](https://www.ibr.cs.tu-bs.de/projects/libsmi/smi_config.md) section, you may need to provide the paths to locations of MIBs in your particular environment to avoid a `failed to locate MIB module` error.
+As `smidump` only looks for mib dependencies in its pre-configured path lists as defined in the documentaion in the ["MODULES LOCATIONS"](https://www.ibr.cs.tu-bs.de/projects/libsmi/smi_config.html) section, you may need to provide the paths to locations of MIBs in your particular environment to avoid a `failed to locate MIB module` error.
 
 Two ways to achieve this are by using an environment variable or a config file to provide the additional path configuration.
 

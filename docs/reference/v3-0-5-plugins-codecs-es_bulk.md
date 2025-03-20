@@ -22,7 +22,7 @@ For questions about the plugin, open a topic in the [Discuss](http://discuss.ela
 
 ## Description [_description_2279]
 
-This codec will decode the [Elasticsearch bulk format](http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/docs-bulk.md) into individual events, plus metadata into the `@metadata` field.
+This codec will decode the [Elasticsearch bulk format](http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/docs-bulk.html) into individual events, plus metadata into the `@metadata` field.
 
 Encoding is not supported at this time as the Elasticsearch output submits Logstash events in bulk format.
 

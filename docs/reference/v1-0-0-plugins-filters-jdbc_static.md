@@ -369,7 +369,7 @@ Local_db_objects Field Descriptions
 :   The name of the table to be created in the database.
 
 columns
-:   An array of column specifications. Each column specification is an array of exactly two elements, for example `["ip", "varchar(15)"]`. The first element is the column name string. The second element is a string that should be an [Apache Derby SQL type](https://db.apache.org/derby/docs/10.14/ref/crefsqlj31068.md). The string content is not checked during settings validation but when the local lookup tables are built any misspelled SQL type strings will give errors.
+:   An array of column specifications. Each column specification is an array of exactly two elements, for example `["ip", "varchar(15)"]`. The first element is the column name string. The second element is a string that should be an [Apache Derby SQL type](https://db.apache.org/derby/docs/10.14/ref/crefsqlj31068.html). The string content is not checked during settings validation but when the local lookup tables are built any misspelled SQL type strings will give errors.
 
 index_columns
 :   An array of strings. Each string must have been defined in the `columns` setting. The index name will be generated internally. Unique or sorted indexes are not supported.

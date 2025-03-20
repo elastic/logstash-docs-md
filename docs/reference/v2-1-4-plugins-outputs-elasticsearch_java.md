@@ -113,7 +113,7 @@ The Elasticsearch action to perform. Valid actions are:
 * update: updates a document by id. Update has a special case where you can upsert — update a document if not already present. See the `upsert` option
 * create_unless_exists: create the document unless it already exists, in which case do nothing.
 
-For more details on actions, check out the [Elasticsearch bulk API documentation](http://www.elastic.co/guide/en/elasticsearch/reference/current/docs-bulk.md)
+For more details on actions, check out the [Elasticsearch bulk API documentation](http://www.elastic.co/guide/en/elasticsearch/reference/current/docs-bulk.html)
 
 
 ### `cluster` [v2.1.4-plugins-outputs-elasticsearch_java-cluster]
@@ -160,7 +160,7 @@ The document type to write events to. Generally you should try to write only sim
 * Value type is [uri](logstash://reference/configuration-file-structure.md#uri)
 * Default value is `[//127.0.0.1]`
 
-Sets the host(s) of the remote instance. If given an array it will load balance requests across the hosts specified in the `hosts` parameter. Remember the `http` protocol uses the [http](http://www.elastic.co/guide/en/elasticsearch/reference/current/modules-http.md#modules-http) address (eg. 9200, not 9300). `"127.0.0.1"` `["127.0.0.1:9200","127.0.0.2:9200"]` `["http://127.0.0.1"]` `["https://127.0.0.1:9200"]` `["https://127.0.0.1:9200/mypath"]` (If using a proxy on a subpath) It is important to exclude [dedicated master nodes](http://www.elastic.co/guide/en/elasticsearch/reference/current/modules-node.md) from the `hosts` list to prevent LS from sending bulk requests to the master nodes.  So this parameter should only reference either data or client nodes in Elasticsearch.
+Sets the host(s) of the remote instance. If given an array it will load balance requests across the hosts specified in the `hosts` parameter. Remember the `http` protocol uses the [http](http://www.elastic.co/guide/en/elasticsearch/reference/current/modules-http.html#modules-http) address (eg. 9200, not 9300). `"127.0.0.1"` `["127.0.0.1:9200","127.0.0.2:9200"]` `["http://127.0.0.1"]` `["https://127.0.0.1:9200"]` `["https://127.0.0.1:9200/mypath"]` (If using a proxy on a subpath) It is important to exclude [dedicated master nodes](http://www.elastic.co/guide/en/elasticsearch/reference/current/modules-node.html) from the `hosts` list to prevent LS from sending bulk requests to the master nodes.  So this parameter should only reference either data or client nodes in Elasticsearch.
 
 Any special characters present in the URLs here MUST be URL escaped! This means `#` should be put in as `%23` for instance.
 
@@ -177,7 +177,7 @@ Any special characters present in the URLs here MUST be URL escaped! This means 
 * Value type is [string](logstash://reference/configuration-file-structure.md#string)
 * Default value is `"logstash-%{+YYYY.MM.dd}"`
 
-The index to write events to. This can be dynamic using the `%{{foo}}` syntax. The default value will partition your indices by day so you can more easily delete old data or only search specific date ranges. Indexes may not contain uppercase characters. For weekly indexes ISO 8601 format is recommended, eg. logstash-%{+xxxx.ww}. LS uses Joda to format the index pattern from event timestamp. Joda formats are defined [here](http://www.joda.org/joda-time/apidocs/org/joda/time/format/DateTimeFormat.md).
+The index to write events to. This can be dynamic using the `%{{foo}}` syntax. The default value will partition your indices by day so you can more easily delete old data or only search specific date ranges. Indexes may not contain uppercase characters. For weekly indexes ISO 8601 format is recommended, eg. logstash-%{+xxxx.ww}. LS uses Joda to format the index pattern from event timestamp. Joda formats are defined [here](http://www.joda.org/joda-time/apidocs/org/joda/time/format/DateTimeFormat.html).
 
 
 ### `manage_template` [v2.1.4-plugins-outputs-elasticsearch_java-manage_template]
@@ -243,7 +243,7 @@ Choose the protocol used to talk to Elasticsearch.
 
 The *node* protocol (default) will connect to the cluster as a normal Elasticsearch node (but will not store data). If you use the `node` protocol, you must permit bidirectional communication on the port 9300 (or whichever port you have configured).
 
-If you do not specify the `host` parameter, it will use  multicast for [Elasticsearch discovery](docs-content://deploy-manage/distributed-architecture/discovery-cluster-formation.md).  While this may work in a test/dev environment where multicast is enabled in Elasticsearch, we strongly recommend [using unicast](http://www.elastic.co/guide/en/elasticsearch/guide/current/important-configuration-changes.md#unicast) in Elasticsearch.  To connect to an Elasticsearch cluster with unicast, you must include the `host` parameter (see relevant section above).
+If you do not specify the `host` parameter, it will use  multicast for [Elasticsearch discovery](docs-content://deploy-manage/distributed-architecture/discovery-cluster-formation.md).  While this may work in a test/dev environment where multicast is enabled in Elasticsearch, we strongly recommend [using unicast](http://www.elastic.co/guide/en/elasticsearch/guide/current/important-configuration-changes.html#unicast) in Elasticsearch.  To connect to an Elasticsearch cluster with unicast, you must include the `host` parameter (see relevant section above).
 
 The *transport* protocol will connect to the host you specify and will not show up as a *node* in the Elasticsearch cluster. This is useful in situations where you cannot permit connections outbound from the Elasticsearch cluster to this Logstash server.
 

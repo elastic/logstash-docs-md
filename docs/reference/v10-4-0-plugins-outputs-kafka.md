@@ -50,9 +50,9 @@ If you want the full content of your events to be sent as json, you should set t
     }
 ```
 
-For more information see [https://kafka.apache.org/24/documentation.html#theproducer](https://kafka.apache.org/24/documentation.md#theproducer)
+For more information see [https://kafka.apache.org/24/documentation.html#theproducer](https://kafka.apache.org/24/documentation.html#theproducer)
 
-Kafka producer configuration: [https://kafka.apache.org/24/documentation.html#producerconfigs](https://kafka.apache.org/24/documentation.md#producerconfigs)
+Kafka producer configuration: [https://kafka.apache.org/24/documentation.html#producerconfigs](https://kafka.apache.org/24/documentation.html#producerconfigs)
 
 
 ## Kafka Output Configuration Options [v10.4.0-plugins-outputs-kafka-options]
@@ -189,7 +189,7 @@ Please note that specifying `jaas_path` and `kerberos_config` in the config file
 * Value type is [path](logstash://reference/configuration-file-structure.md#path)
 * There is no default value for this setting.
 
-Optional path to kerberos config file. This is krb5.conf style as detailed in [https://web.mit.edu/kerberos/krb5-1.12/doc/admin/conf_files/krb5_conf.html](https://web.mit.edu/kerberos/krb5-1.12/doc/admin/conf_files/krb5_conf.md)
+Optional path to kerberos config file. This is krb5.conf style as detailed in [https://web.mit.edu/kerberos/krb5-1.12/doc/admin/conf_files/krb5_conf.html](https://web.mit.edu/kerberos/krb5-1.12/doc/admin/conf_files/krb5_conf.html)
 
 
 ### `key_serializer` [v10.4.0-plugins-outputs-kafka-key_serializer]
@@ -331,7 +331,7 @@ The Kerberos principal name that Kafka broker runs as. This can be defined eithe
 * Value type is [string](logstash://reference/configuration-file-structure.md#string)
 * Default value is `"GSSAPI"`
 
-[SASL mechanism](http://kafka.apache.org/documentation.md#security_sasl) used for client connections. This may be any mechanism for which a security provider is available. GSSAPI is the default mechanism.
+[SASL mechanism](http://kafka.apache.org/documentation.html#security_sasl) used for client connections. This may be any mechanism for which a security provider is available. GSSAPI is the default mechanism.
 
 
 ### `security_protocol` [v10.4.0-plugins-outputs-kafka-security_protocol]

@@ -143,7 +143,7 @@ This plugin uses the AWS SDK and supports several ways to get credentials, which
 * Value type is [hash](logstash://reference/configuration-file-structure.md#hash)
 * Default value is `{}`
 
-Key-value pairs of settings and corresponding values used to parametrize the connection to S3. See full list in [the AWS SDK documentation](https://docs.aws.amazon.com/sdkforruby/api/Aws/S3/Client.md). Example:
+Key-value pairs of settings and corresponding values used to parametrize the connection to S3. See full list in [the AWS SDK documentation](https://docs.aws.amazon.com/sdkforruby/api/Aws/S3/Client.html). Example:
 
 ```ruby
     output {
@@ -265,7 +265,7 @@ Delay (in seconds) to wait between consecutive retries on upload failures.
 * Value type is [string](logstash://reference/configuration-file-structure.md#string)
 * There is no default value for this setting.
 
-The AWS IAM Role to assume, if any. This is used to generate temporary credentials, typically for cross-account access. See the [AssumeRole API documentation](https://docs.aws.amazon.com/STS/latest/APIReference/API_AssumeRole.md) for more information.
+The AWS IAM Role to assume, if any. This is used to generate temporary credentials, typically for cross-account access. See the [AssumeRole API documentation](https://docs.aws.amazon.com/STS/latest/APIReference/API_AssumeRole.html) for more information.
 
 
 ### `role_session_name` [v7.1.2-plugins-outputs-s3-role_session_name]
@@ -341,7 +341,7 @@ Set the file size in bytes. When the number of bytes exceeds the `size_file` val
 * Value type is [string](logstash://reference/configuration-file-structure.md#string)
 * There is no default value for this setting.
 
-The key to use when specified along with server_side_encryption ⇒ aws:kms. If server_side_encryption ⇒ aws:kms is set but this is not default KMS key is used. [http://docs.aws.amazon.com/AmazonS3/latest/dev/UsingKMSEncryption.html](http://docs.aws.amazon.com/AmazonS3/latest/dev/UsingKMSEncryption.md)
+The key to use when specified along with server_side_encryption ⇒ aws:kms. If server_side_encryption ⇒ aws:kms is set but this is not default KMS key is used. [http://docs.aws.amazon.com/AmazonS3/latest/dev/UsingKMSEncryption.html](http://docs.aws.amazon.com/AmazonS3/latest/dev/UsingKMSEncryption.html)
 
 
 ### `storage_class` [v7.1.2-plugins-outputs-s3-storage_class]
@@ -349,7 +349,7 @@ The key to use when specified along with server_side_encryption ⇒ aws:kms. If 
 * Value can be any of: `STANDARD`, `REDUCED_REDUNDANCY`, `STANDARD_IA`, `ONEZONE_IA`
 * Default value is `"STANDARD"`
 
-Specifies what S3 storage class to use when uploading the file. More information about the different storage classes can be found: [http://docs.aws.amazon.com/AmazonS3/latest/dev/storage-class-intro.html](http://docs.aws.amazon.com/AmazonS3/latest/dev/storage-class-intro.md) Defaults to STANDARD.
+Specifies what S3 storage class to use when uploading the file. More information about the different storage classes can be found: [http://docs.aws.amazon.com/AmazonS3/latest/dev/storage-class-intro.html](http://docs.aws.amazon.com/AmazonS3/latest/dev/storage-class-intro.html) Defaults to STANDARD.
 
 
 ### `temporary_directory` [v7.1.2-plugins-outputs-s3-temporary_directory]

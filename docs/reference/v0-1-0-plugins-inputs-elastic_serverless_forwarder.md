@@ -217,7 +217,7 @@ This is an advanced SSL configuration.
 SSL key to use.
 
 ::::{note}
-This key need to be in the PKCS8 format, you can convert it with [OpenSSL](https://www.openssl.org/docs/man1.1.1/man1/openssl-pkcs8.md) for more information.
+This key need to be in the PKCS8 format, you can convert it with [OpenSSL](https://www.openssl.org/docs/man1.1.1/man1/openssl-pkcs8.html) for more information.
 ::::
 
 

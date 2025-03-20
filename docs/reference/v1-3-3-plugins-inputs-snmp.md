@@ -66,7 +66,7 @@ You can avoid  to avoid a `failed to locate MIB module` error by providing the a
 * an environment variable, or
 * a config file to provide the additional path configuration.
 
-See the "MODULE LOCATIONS" section of the [smi_config documentation](https://www.ibr.cs.tu-bs.de/projects/libsmi/smi_config.md) for more info.
+See the "MODULE LOCATIONS" section of the [smi_config documentation](https://www.ibr.cs.tu-bs.de/projects/libsmi/smi_config.html) for more info.
 
 
 ### Option 1: Use an environment variable [v1.3.3-plugins-inputs-snmp-env-var]

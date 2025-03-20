@@ -154,7 +154,7 @@ Example response:
 
 ## Details [_details_28]
 
-A `[geoip][location]` field is created if the GeoIP lookup returns a latitude and longitude. The field is stored in [GeoJSON](http://geojson.org/geojson-spec.md) format. Additionally, the default Elasticsearch template provided with the [elasticsearch output](logstash://reference/plugins-outputs-elasticsearch.md) maps the `[geoip][location]` field to an [Elasticsearch Geo_point datatype](elasticsearch://reference/elasticsearch/mapping-reference/geo-point.md).
+A `[geoip][location]` field is created if the GeoIP lookup returns a latitude and longitude. The field is stored in [GeoJSON](http://geojson.org/geojson-spec.html) format. Additionally, the default Elasticsearch template provided with the [elasticsearch output](logstash://reference/plugins-outputs-elasticsearch.md) maps the `[geoip][location]` field to an [Elasticsearch Geo_point datatype](elasticsearch://reference/elasticsearch/mapping-reference/geo-point.md).
 
 As this field is a `geo_point` *and* it is still valid GeoJSON, you get the awesomeness of Elasticsearch’s geospatial query, facet and filter functions and the flexibility of having GeoJSON for all other applications (like Kibana’s map visualization).
 

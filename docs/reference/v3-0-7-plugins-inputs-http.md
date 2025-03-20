@@ -31,7 +31,7 @@ This input can also be used to receive webhook requests to integrate with other 
 
 This plugin supports standard HTTP basic authentication headers to identify the requester. You can pass in a username, password combination while sending data to this input
 
-You can also setup SSL and send data securely over https, with an option of validating the client’s certificate. Currently, the certificate setup is through [Java Keystore format](https://docs.oracle.com/cd/E19509-01/820-3503/ggfen/index.md)
+You can also setup SSL and send data securely over https, with an option of validating the client’s certificate. Currently, the certificate setup is through [Java Keystore format](https://docs.oracle.com/cd/E19509-01/820-3503/ggfen/index.html)
 
 
 ## Http Input Configuration Options [v3.0.7-plugins-inputs-http-options]

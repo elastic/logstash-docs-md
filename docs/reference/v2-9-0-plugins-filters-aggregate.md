@@ -374,7 +374,7 @@ Available variables are :
 
 `event`: current Logstash event
 
-`map`: aggregated map associated to `task_id`, containing key/value pairs. Data structure is a ruby [Hash](http://ruby-doc.org/core-1.9.1/Hash.md)
+`map`: aggregated map associated to `task_id`, containing key/value pairs. Data structure is a ruby [Hash](http://ruby-doc.org/core-1.9.1/Hash.html)
 
 `map_meta`: meta informations associated to aggregate map. It allows to set a custom `timeout` or `inactivity_timeout`. It allows also to get `creation_timestamp`, `lastevent_timestamp` and `task_id`.
 

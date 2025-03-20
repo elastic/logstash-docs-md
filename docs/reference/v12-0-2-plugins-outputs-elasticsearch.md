@@ -253,7 +253,7 @@ This plugin attempts to send batches of events to the [{{es}} Bulk API](https://
 
 ## DNS Caching [_dns_caching]
 
-This plugin uses the JVM to lookup DNS entries and is subject to the value of [networkaddress.cache.ttl](https://docs.oracle.com/javase/7/docs/technotes/guides/net/properties.md), a global setting for the JVM.
+This plugin uses the JVM to lookup DNS entries and is subject to the value of [networkaddress.cache.ttl](https://docs.oracle.com/javase/7/docs/technotes/guides/net/properties.html), a global setting for the JVM.
 
 As an example, to set your DNS TTL to 1 second you would set the `LS_JAVA_OPTS` environment variable to `-Dnetworkaddress.cache.ttl=1`.
 
@@ -737,7 +737,7 @@ Updating the rollover alias will require the index template to be rewritten.
     * ECS Compatibility enabled: `"ecs-logstash-%{+yyyy.MM.dd}"`
 
 
-The indexing target to write events to. Can point to an [index](https://www.elastic.co/guide/en/elasticsearch/reference/current/index-mgmt.html), [alias](docs-content://manage-data/data-store/aliases.md), or [data stream](docs-content://manage-data/data-store/data-streams.md). This can be dynamic using the `%{{foo}}` syntax. The default value will partition your indices by day so you can more easily delete old data or only search specific date ranges. Indexes may not contain uppercase characters. For weekly indexes ISO 8601 format is recommended, eg. logstash-%{+xxxx.ww}. Logstash uses [Joda formats](http://www.joda.org/joda-time/apidocs/org/joda/time/format/DateTimeFormat.md) and the `@timestamp` field of each event is being used as source for the date.
+The indexing target to write events to. Can point to an [index](https://www.elastic.co/guide/en/elasticsearch/reference/current/index-mgmt.html), [alias](docs-content://manage-data/data-store/aliases.md), or [data stream](docs-content://manage-data/data-store/data-streams.md). This can be dynamic using the `%{{foo}}` syntax. The default value will partition your indices by day so you can more easily delete old data or only search specific date ranges. Indexes may not contain uppercase characters. For weekly indexes ISO 8601 format is recommended, eg. logstash-%{+xxxx.ww}. Logstash uses [Joda formats](http://www.joda.org/joda-time/apidocs/org/joda/time/format/DateTimeFormat.html) and the `@timestamp` field of each event is being used as source for the date.
 
 
 ### `manage_template` [v12.0.2-plugins-outputs-elasticsearch-manage_template]
@@ -996,7 +996,7 @@ Enable SSL/TLS secured communication to Elasticsearch cluster. Leaving this unsp
 * Value type is [path](logstash://reference/configuration-file-structure.md#path)
 * There is no default value for this setting.
 
-SSL key to use. This key must be in the PKCS8 format and PEM encoded. You can use the [openssl pkcs8](https://www.openssl.org/docs/man1.1.1/man1/openssl-pkcs8.md) command to complete the conversion. For example, the command to convert a PEM encoded PKCS1 private key to a PEM encoded, non-encrypted PKCS8 key is:
+SSL key to use. This key must be in the PKCS8 format and PEM encoded. You can use the [openssl pkcs8](https://www.openssl.org/docs/man1.1.1/man1/openssl-pkcs8.html) command to complete the conversion. For example, the command to convert a PEM encoded PKCS1 private key to a PEM encoded, non-encrypted PKCS8 key is:
 
 ```sh
 openssl pkcs8 -inform PEM -in path/to/logstash.key -topk8 -nocrypt -outform PEM -out path/to/logstash.pkcs8.key
@@ -1179,7 +1179,7 @@ Username to authenticate to a secure Elasticsearch cluster
 
 How long to wait before checking for a stale connection to determine if a keepalive request is needed. Consider setting this value lower than the default, possibly to 0, if you get connection errors regularly.
 
-This client is based on Apache Commons. Here’s how the [Apache Commons documentation](https://hc.apache.org/httpcomponents-client-4.5.x/current/httpclient/apidocs/org/apache/http/impl/conn/PoolingHttpClientConnectionManager.md#setValidateAfterInactivity(int)) describes this option: "Defines period of inactivity in milliseconds after which persistent connections must be re-validated prior to being leased to the consumer. Non-positive value passed to this method disables connection validation. This check helps detect connections that have become stale (half-closed) while kept inactive in the pool."
+This client is based on Apache Commons. Here’s how the [Apache Commons documentation](https://hc.apache.org/httpcomponents-client-4.5.x/current/httpclient/apidocs/org/apache/http/impl/conn/PoolingHttpClientConnectionManager.html#setValidateAfterInactivity(int)) describes this option: "Defines period of inactivity in milliseconds after which persistent connections must be re-validated prior to being leased to the consumer. Non-positive value passed to this method disables connection validation. This check helps detect connections that have become stale (half-closed) while kept inactive in the pool."
 
 
 ### `version` [v12.0.2-plugins-outputs-elasticsearch-version]

@@ -127,7 +127,7 @@ The number of events to be sent in each batch. Set this to `1` to disable the ba
 * Value type is [bytes](logstash://reference/configuration-file-structure.md#bytes)
 * Default value is `"256KiB"`
 
-The maximum number of bytes for any message sent to SQS. Messages exceeding this size will be dropped. See [http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/limits-messages.html](http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/limits-messages.md).
+The maximum number of bytes for any message sent to SQS. Messages exceeding this size will be dropped. See [http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/limits-messages.html](http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/limits-messages.html).
 
 
 ### `proxy_uri` [v5.0.2-plugins-outputs-sqs-proxy_uri]

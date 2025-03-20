@@ -164,7 +164,7 @@ Time in milliseconds for an incomplete ssl handshake to timeout
 * Value type is [path](logstash://reference/configuration-file-structure.md#path)
 * There is no default value for this setting.
 
-SSL key to use. NOTE: This key need to be in the PKCS8 format, you can convert it with [OpenSSL](https://www.openssl.org/docs/man1.1.0/apps/pkcs8.md) for more information.
+SSL key to use. NOTE: This key need to be in the PKCS8 format, you can convert it with [OpenSSL](https://www.openssl.org/docs/man1.1.0/apps/pkcs8.html) for more information.
 
 
 ### `ssl_key_passphrase` [v3.1.30-plugins-inputs-beats-ssl_key_passphrase]

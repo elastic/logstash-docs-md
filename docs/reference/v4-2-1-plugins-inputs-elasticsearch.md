@@ -147,7 +147,7 @@ Starting with Logstash 6.0, the `document_type` option is deprecated due to the 
 * Value type is [array](logstash://reference/configuration-file-structure.md#array)
 * Default value is `["_index", "_type", "_id"]`
 
-If document metadata storage is requested by enabling the `docinfo` option, this option lists the metadata fields to save in the current event. See [Document Metadata](http://www.elasticsearch.org/guide/en/elasticsearch/guide/current/_document_metadata.md) in the Elasticsearch documentation for more information.
+If document metadata storage is requested by enabling the `docinfo` option, this option lists the metadata fields to save in the current event. See [Document Metadata](http://www.elasticsearch.org/guide/en/elasticsearch/guide/current/_document_metadata.html) in the Elasticsearch documentation for more information.
 
 
 ### `docinfo_target` [v4.2.1-plugins-inputs-elasticsearch-docinfo_target]
