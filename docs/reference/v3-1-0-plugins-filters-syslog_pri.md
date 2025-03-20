@@ -57,7 +57,7 @@ Also see [Common options](v3-1-0-plugins-filters-syslog_pri.md#v3.1.0-plugins-fi
     * Otherwise, the default value is `disabled`.
 
 
-Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)][Elastic Common Schema (ECS)](ecs://docs/reference/index.md)). The value of this setting affects the *default* value of [`syslog_pri_field_name`](v3-1-0-plugins-filters-syslog_pri.md#v3.1.0-plugins-filters-syslog_pri-syslog_pri_field_name).
+Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)][Elastic Common Schema (ECS)\]\(([^:]+)://reference/index.md)). The value of this setting affects the *default* value of [`syslog_pri_field_name`](v3-1-0-plugins-filters-syslog_pri.md#v3.1.0-plugins-filters-syslog_pri-syslog_pri_field_name).
 
 
 ### `facility_labels` [v3.1.0-plugins-filters-syslog_pri-facility_labels]

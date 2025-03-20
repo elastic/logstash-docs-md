@@ -33,7 +33,7 @@ Encoding behavior
 
 ## Compatibility with the Elastic Common Schema (ECS) [v3.1.1-plugins-codecs-line-ecs]
 
-This plugin is compatible with the [Elastic Common Schema (ECS)][Elastic Common Schema (ECS)](ecs://docs/reference/index.md)). No additional configuration is required.
+This plugin is compatible with the [Elastic Common Schema (ECS)][Elastic Common Schema (ECS)\]\(([^:]+)://reference/index.md)). No additional configuration is required.
 
 
 ## Line codec configuration options [v3.1.1-plugins-codecs-line-options]

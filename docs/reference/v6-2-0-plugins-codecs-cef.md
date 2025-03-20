@@ -146,7 +146,7 @@ If the codec handles data from a variety of sources, the ECS recommendation is t
     * Otherwise, the default value is `disabled`.
 
 
-Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)][Elastic Common Schema (ECS)](ecs://docs/reference/index.md)) (ECS)].
+Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)][Elastic Common Schema (ECS)\]\(([^:]+)://reference/index.md)) (ECS)].
 
 
 ### `fields` [v6.2.0-plugins-codecs-cef-fields]

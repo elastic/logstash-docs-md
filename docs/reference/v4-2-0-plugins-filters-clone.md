@@ -74,7 +74,7 @@ Note: setting an empty array will not create any clones. A warning message is lo
     * Otherwise, the default value is `disabled`.
 
 
-Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)][Elastic Common Schema (ECS)](ecs://docs/reference/index.md)). The value of this setting affects the behavior of the [`clones`](v4-2-0-plugins-filters-clone.md#v4.2.0-plugins-filters-clone-clones)
+Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)][Elastic Common Schema (ECS)\]\(([^:]+)://reference/index.md)). The value of this setting affects the behavior of the [`clones`](v4-2-0-plugins-filters-clone.md#v4.2.0-plugins-filters-clone-clones)
 
 Example:
 

@@ -73,7 +73,7 @@ The maximum packet size to read from the network
     * Otherwise, the default value is `disabled`.
 
 
-Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)][Elastic Common Schema (ECS)](ecs://docs/reference/index.md)). The value of this setting affects the placement of a TCP connection’s metadata on events.
+Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)][Elastic Common Schema (ECS)\]\(([^:]+)://reference/index.md)). The value of this setting affects the placement of a TCP connection’s metadata on events.
 
 | `disabled` | `v1` | Availability | Description |
 | --- | --- | --- | --- |

@@ -242,7 +242,7 @@ For loader performance reasons, the loading mechanism uses a CSV style file with
 
 ## Compatibility with the Elastic Common Schema (ECS) [v5.5.1-plugins-filters-jdbc_static-ecs]
 
-This plugin is compatible with the [Elastic Common Schema (ECS)][Elastic Common Schema (ECS)](ecs://docs/reference/index.md)). It behaves the same regardless of ECS compatibility, except giving a warning when ECS is enabled and `target` isn’t set.
+This plugin is compatible with the [Elastic Common Schema (ECS)][Elastic Common Schema (ECS)\]\(([^:]+)://reference/index.md)). It behaves the same regardless of ECS compatibility, except giving a warning when ECS is enabled and `target` isn’t set.
 
 ::::{tip}
 Set the `target` option to avoid potential schema conflicts.

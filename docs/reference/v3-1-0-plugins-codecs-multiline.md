@@ -151,7 +151,7 @@ This only affects "plain" format logs since JSON is `UTF-8` already.
     * Otherwise, the default value is `disabled`
 
 
-Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)][Elastic Common Schema (ECS)](ecs://docs/reference/index.md)).
+Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)][Elastic Common Schema (ECS)\]\(([^:]+)://reference/index.md)).
 
 
 ### `max_bytes` [v3.1.0-plugins-codecs-multiline-max_bytes]

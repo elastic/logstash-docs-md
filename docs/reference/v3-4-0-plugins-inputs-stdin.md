@@ -53,7 +53,7 @@ Also see [Common options](v3-4-0-plugins-inputs-stdin.md#v3.4.0-plugins-inputs-s
     * Otherwise, the default value is `disabled`.
 
 
-Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)][Elastic Common Schema (ECS)](ecs://docs/reference/index.md)).
+Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)][Elastic Common Schema (ECS)\]\(([^:]+)://reference/index.md)).
 
 
 

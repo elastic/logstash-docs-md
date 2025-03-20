@@ -169,7 +169,7 @@ The currently supported formats are YAML, JSON, and CSV. Format selection is bas
     * Otherwise, the default value is `disabled`.
 
 
-Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)][Elastic Common Schema (ECS)](ecs://docs/reference/index.md)). The value of this setting affects the *default* value of [`target`](v3-3-1-plugins-filters-translate.md#v3.3.1-plugins-filters-translate-target).
+Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)][Elastic Common Schema (ECS)\]\(([^:]+)://reference/index.md)). The value of this setting affects the *default* value of [`target`](v3-3-1-plugins-filters-translate.md#v3.3.1-plugins-filters-translate-target).
 
 
 ### `exact` [v3.3.1-plugins-filters-translate-exact]

@@ -86,7 +86,7 @@ Historically, this metadata was added to a variety of non-standard top-level fie
 | [@metadata][input][tcp][proxy][port] | [proxy_port] |
 | SSL Subject Metadata from a secured TCPconnection. Available when `ssl_enable => true`AND `ssl_verify => true` | [@metadata][input][tcp][ssl][subject] | [sslsubject] |
 
-For example, the Elastic Common Schema reserves the [top-level `host` field](ecs://docs/reference/ecs-host.md) for information about the host on which the event happened. If an event is missing this metadata, it can be copied into place from the source TCP connection metadata that has been added to the event:
+For example, the Elastic Common Schema reserves the [top-level `host` field\]\(([^:]+)://reference/ecs-host.md) for information about the host on which the event happened. If an event is missing this metadata, it can be copied into place from the source TCP connection metadata that has been added to the event:
 
 ```txt
 filter {
@@ -151,7 +151,7 @@ It is possible to avoid DNS reverse-lookups by disabling this setting. If disabl
     * Otherwise, the default value is `disabled`.
 
 
-Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)][Elastic Common Schema (ECS)](ecs://docs/reference/index.md)). The value of this setting affects the [placement of a TCP connection’s metadata](v6-3-0-plugins-inputs-tcp.md#v6.3.0-plugins-inputs-tcp-ecs_metadata) on events.
+Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)][Elastic Common Schema (ECS)\]\(([^:]+)://reference/index.md)). The value of this setting affects the [placement of a TCP connection’s metadata](v6-3-0-plugins-inputs-tcp.md#v6.3.0-plugins-inputs-tcp-ecs_metadata) on events.
 
 
 ### `host` [v6.3.0-plugins-inputs-tcp-host]

@@ -91,7 +91,7 @@ output {
     * `v1`,`v8`: Elastic Common Schema compliant behavior (`[event][original]` is also added)
 
 
-Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)][Elastic Common Schema (ECS)](ecs://docs/reference/index.md)).
+Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)][Elastic Common Schema (ECS)\]\(([^:]+)://reference/index.md)).
 
 
 ### `schema_uri` [v3.3.0-plugins-codecs-avro-schema_uri]

@@ -128,7 +128,7 @@ If set to `"json"` and the [`body`](v2-0-0-plugins-filters-http.md#v2.0.0-plugin
     * Otherwise, the default value is `disabled`.
 
 
-Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)][Elastic Common Schema (ECS)](ecs://docs/reference/index.md)). The value of this setting affects the *default* value of [`target_body`](v2-0-0-plugins-filters-http.md#v2.0.0-plugins-filters-http-target_body) and [`target_headers`](v2-0-0-plugins-filters-http.md#v2.0.0-plugins-filters-http-target_headers).
+Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)][Elastic Common Schema (ECS)\]\(([^:]+)://reference/index.md)). The value of this setting affects the *default* value of [`target_body`](v2-0-0-plugins-filters-http.md#v2.0.0-plugins-filters-http-target_body) and [`target_headers`](v2-0-0-plugins-filters-http.md#v2.0.0-plugins-filters-http-target_headers).
 
 
 ### `headers` [v2.0.0-plugins-filters-http-headers]

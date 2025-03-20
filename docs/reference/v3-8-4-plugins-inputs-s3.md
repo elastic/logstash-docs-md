@@ -180,7 +180,7 @@ Whether to delete processed files from the original bucket.
     * `v1`,`v8`: uses metadata fields that are compatible with Elastic Common Schema
 
 
-Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)][Elastic Common Schema (ECS)](ecs://docs/reference/index.md)). See [Event Metadata and the Elastic Common Schema (ECS)](v3-8-4-plugins-inputs-s3.md#v3.8.4-plugins-inputs-s3-ecs_metadata) for detailed information.
+Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)][Elastic Common Schema (ECS)\]\(([^:]+)://reference/index.md)). See [Event Metadata and the Elastic Common Schema (ECS)](v3-8-4-plugins-inputs-s3.md#v3.8.4-plugins-inputs-s3-ecs_metadata) for detailed information.
 
 
 ### `endpoint` [v3.8.4-plugins-inputs-s3-endpoint]

@@ -55,7 +55,7 @@ When ECS compatibility is disabled, the metadata is stored in the `[@metadata]` 
     * `v1`: uses `[@metadata][codec][es_bulk]` fields
 
 
-Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)][Elastic Common Schema (ECS)](ecs://docs/reference/index.md)).
+Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)][Elastic Common Schema (ECS)\]\(([^:]+)://reference/index.md)).
 
 
 ### `target` [v3.1.0-plugins-codecs-es_bulk-target]

@@ -109,7 +109,7 @@ For multipart messages, use the first part that has this content-type as the eve
     * Otherwise, the default value is `disabled`.
 
 
-Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)][Elastic Common Schema (ECS)](ecs://docs/reference/index.md)). The value of this setting affects the *default* value of [`headers_target`](v3-2-1-plugins-inputs-imap.md#v3.2.1-plugins-inputs-imap-headers_target) and [`attachments_target`](v3-2-1-plugins-inputs-imap.md#v3.2.1-plugins-inputs-imap-attachments_target).
+Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)][Elastic Common Schema (ECS)\]\(([^:]+)://reference/index.md)). The value of this setting affects the *default* value of [`headers_target`](v3-2-1-plugins-inputs-imap.md#v3.2.1-plugins-inputs-imap-headers_target) and [`attachments_target`](v3-2-1-plugins-inputs-imap.md#v3.2.1-plugins-inputs-imap-attachments_target).
 
 
 ### `expunge` [v3.2.1-plugins-inputs-imap-expunge]

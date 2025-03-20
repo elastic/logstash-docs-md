@@ -238,7 +238,7 @@ Enable cookie support. With this enabled the client will persist cookies across 
     * `v1`: uses `error`, `url` and `http` fields that are compatible with Elastic Common Schema
 
 
-Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)][Elastic Common Schema (ECS)](ecs://docs/reference/index.md)). See [Event Metadata and the Elastic Common Schema (ECS)](v5-5-1-plugins-inputs-http_poller.md#v5.5.1-plugins-inputs-http_poller-ecs_metadata) for detailed information.
+Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)][Elastic Common Schema (ECS)\]\(([^:]+)://reference/index.md)). See [Event Metadata and the Elastic Common Schema (ECS)](v5-5-1-plugins-inputs-http_poller.md#v5.5.1-plugins-inputs-http_poller-ecs_metadata) for detailed information.
 
 Example output:
 

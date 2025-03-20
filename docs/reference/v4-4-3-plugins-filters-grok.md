@@ -160,7 +160,7 @@ Another option is to define patterns *inline* in the filter using `pattern_defin
 
 ## Migrating to Elastic Common Schema (ECS) [v4.4.3-plugins-filters-grok-ecs]
 
-To ease migration to the [Elastic Common Schema (ECS)][Elastic Common Schema (ECS)](ecs://docs/reference/index.md)), the filter plugin offers a new set of ECS-compliant patterns in addition to the existing patterns. The new ECS pattern definitions capture event field names that are compliant with the schema.
+To ease migration to the [Elastic Common Schema (ECS)][Elastic Common Schema (ECS)\]\(([^:]+)://reference/index.md)), the filter plugin offers a new set of ECS-compliant patterns in addition to the existing patterns. The new ECS pattern definitions capture event field names that are compliant with the schema.
 
 The ECS pattern set has all of the pattern definitions from the legacy set, and is a drop-in replacement. Use the [`ecs_compatibility`](v4-4-3-plugins-filters-grok.md#v4.4.3-plugins-filters-grok-ecs_compatibility) setting to switch modes.
 
@@ -213,7 +213,7 @@ Break on first match. The first successful match by grok will result in the filt
     * Otherwise, the default value is `disabled`.
 
 
-Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)][Elastic Common Schema (ECS)](ecs://docs/reference/index.md)). The value of this setting affects extracted event field names when a composite pattern (such as `HTTPD_COMMONLOG`) is matched.
+Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)][Elastic Common Schema (ECS)\]\(([^:]+)://reference/index.md)). The value of this setting affects extracted event field names when a composite pattern (such as `HTTPD_COMMONLOG`) is matched.
 
 
 ### `keep_empty_captures` [v4.4.3-plugins-filters-grok-keep_empty_captures]

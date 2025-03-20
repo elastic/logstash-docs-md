@@ -66,7 +66,7 @@ Also see [Common options](v3-2-0-plugins-filters-json.md#v3.2.0-plugins-filters-
     * `v1`: Elastic Common Schema compliant behavior (warns when `target` isn’t set)
 
 
-Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)][Elastic Common Schema (ECS)](ecs://docs/reference/index.md)). See [Event Metadata and the Elastic Common Schema (ECS)](v3-2-0-plugins-filters-json.md#v3.2.0-plugins-filters-json-ecs_metadata) for detailed information.
+Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)][Elastic Common Schema (ECS)\]\(([^:]+)://reference/index.md)). See [Event Metadata and the Elastic Common Schema (ECS)](v3-2-0-plugins-filters-json.md#v3.2.0-plugins-filters-json-ecs_metadata) for detailed information.
 
 
 ### `skip_on_invalid_json` [v3.2.0-plugins-filters-json-skip_on_invalid_json]

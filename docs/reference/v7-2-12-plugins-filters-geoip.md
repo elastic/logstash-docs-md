@@ -283,7 +283,7 @@ For a complete list of available fields and how they map to an event’s structu
     * Otherwise, the default value is `disabled`.
 
 
-Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)][Elastic Common Schema (ECS)](ecs://docs/reference/index.md)). The value of this setting affects the *default* value of [`target`](v7-2-12-plugins-filters-geoip.md#v7.2.12-plugins-filters-geoip-target).
+Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)][Elastic Common Schema (ECS)\]\(([^:]+)://reference/index.md)). The value of this setting affects the *default* value of [`target`](v7-2-12-plugins-filters-geoip.md#v7.2.12-plugins-filters-geoip-target).
 
 
 ### `source` [v7.2.12-plugins-filters-geoip-source]

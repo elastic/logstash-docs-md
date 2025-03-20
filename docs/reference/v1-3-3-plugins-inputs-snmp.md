@@ -324,7 +324,7 @@ The `auth_protocol` option specifies the SNMPv3 authentication protocol or type
     * Otherwise, the default value is `disabled`.
 
 
-Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)][Elastic Common Schema (ECS)](ecs://docs/reference/index.md)).
+Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)][Elastic Common Schema (ECS)\]\(([^:]+)://reference/index.md)).
 
 
 ### `priv_pass` [v1.3.3-plugins-inputs-snmp-priv_pass]

@@ -137,7 +137,7 @@ When set to `true` and `method` isn’t `UUID` or `PUNCTUATION`, the plugin conc
     * `v1`: uses `[event][hash]` fields that are compatible with Elastic Common Schema
 
 
-Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)][Elastic Common Schema (ECS)](ecs://docs/reference/index.md)). See [Event Metadata and the Elastic Common Schema (ECS)](v3-4-3-plugins-filters-fingerprint.md#v3.4.3-plugins-filters-fingerprint-ecs_metadata) for detailed information.
+Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)][Elastic Common Schema (ECS)\]\(([^:]+)://reference/index.md)). See [Event Metadata and the Elastic Common Schema (ECS)](v3-4-3-plugins-filters-fingerprint.md#v3.4.3-plugins-filters-fingerprint-ecs_metadata) for detailed information.
 
 
 ### `key` [v3.4.3-plugins-filters-fingerprint-key]

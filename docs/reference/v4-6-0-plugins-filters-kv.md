@@ -145,7 +145,7 @@ A hash specifying the default keys and their values which should be added to the
     * `v1`: Elastic Common Schema compliant behavior (warns when `target` isn’t set)
 
 
-Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)][Elastic Common Schema (ECS)](ecs://docs/reference/index.md)). See [Event Metadata and the Elastic Common Schema (ECS)](v4-6-0-plugins-filters-kv.md#v4.6.0-plugins-filters-kv-ecs_metadata) for detailed information.
+Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)][Elastic Common Schema (ECS)\]\(([^:]+)://reference/index.md)). See [Event Metadata and the Elastic Common Schema (ECS)](v4-6-0-plugins-filters-kv.md#v4.6.0-plugins-filters-kv-ecs_metadata) for detailed information.
 
 
 ### `exclude_keys` [v4.6.0-plugins-filters-kv-exclude_keys]

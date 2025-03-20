@@ -129,7 +129,7 @@ Also see [Common options](v3-3-4-plugins-filters-useragent.md#v3.3.4-plugins-fil
     * Otherwise, the default value is `disabled`.
 
 
-Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)][Elastic Common Schema (ECS)](ecs://docs/reference/index.md)). The value of this setting affects the *default* value of [`target`](v3-3-4-plugins-filters-useragent.md#v3.3.4-plugins-filters-useragent-target).
+Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)][Elastic Common Schema (ECS)\]\(([^:]+)://reference/index.md)). The value of this setting affects the *default* value of [`target`](v3-3-4-plugins-filters-useragent.md#v3.3.4-plugins-filters-useragent-target).
 
 
 ### `lru_cache_size` [v3.3.4-plugins-filters-useragent-lru_cache_size]

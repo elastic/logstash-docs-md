@@ -128,7 +128,7 @@ The list of ciphers suite to use, listed by priorities.
     * `v1`,`v8`: headers added under `[@metadata][http][header]`. Some are copied to structured ECS fields `http`, `url`, `user_agent` and `host`
 
 
-Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)][Elastic Common Schema (ECS)](ecs://docs/reference/index.md)). See [Event Metadata and the Elastic Common Schema (ECS)](v3-4-2-plugins-inputs-http.md#v3.4.2-plugins-inputs-http-ecs_metadata) for detailed information.
+Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)][Elastic Common Schema (ECS)\]\(([^:]+)://reference/index.md)). See [Event Metadata and the Elastic Common Schema (ECS)](v3-4-2-plugins-inputs-http.md#v3.4.2-plugins-inputs-http-ecs_metadata) for detailed information.
 
 Example output:
 

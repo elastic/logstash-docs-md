@@ -31,7 +31,7 @@ Can either accept connections from clients or connect to a server, depending on 
 
 ## Compatibility with the Elastic Common Schema (ECS) [v3.1.2-plugins-inputs-unix-ecs]
 
-This plugin adds extra fields about the event’s source. Configure the [`ecs_compatibility`](v3-1-2-plugins-inputs-unix.md#v3.1.2-plugins-inputs-unix-ecs_compatibility) option if you want to ensure that these fields are compatible with [ECS](ecs://docs/reference/index.md).
+This plugin adds extra fields about the event’s source. Configure the [`ecs_compatibility`\]\(([^:]+)://reference/index.md).
 
 These fields are added after the event has been decoded by the appropriate codec, and will not overwrite existing values.
 
@@ -77,7 +77,7 @@ If you never want to timeout, use -1.
     * `v1`, `v8`: uses fields that are compatible with ECS, such as `[host][name]`
 
 
-Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)][Elastic Common Schema (ECS)](ecs://docs/reference/index.md)). See [Compatibility with the Elastic Common Schema (ECS)](v3-1-2-plugins-inputs-unix.md#v3.1.2-plugins-inputs-unix-ecs) for detailed information.
+Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)][Elastic Common Schema (ECS)\]\(([^:]+)://reference/index.md)). See [Compatibility with the Elastic Common Schema (ECS)](v3-1-2-plugins-inputs-unix.md#v3.1.2-plugins-inputs-unix-ecs) for detailed information.
 
 **Sample output: ECS enabled**
 

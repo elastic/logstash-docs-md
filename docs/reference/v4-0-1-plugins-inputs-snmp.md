@@ -126,7 +126,7 @@ Also see [Common options](v4-0-1-plugins-inputs-snmp.md#v4.0.1-plugins-inputs-sn
     * Otherwise, the default value is `disabled`.
 
 
-Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)][Elastic Common Schema (ECS)](ecs://docs/reference/index.md)).
+Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)][Elastic Common Schema (ECS)\]\(([^:]+)://reference/index.md)).
 
 
 ### `get` [v4.0.1-plugins-inputs-snmp-get]

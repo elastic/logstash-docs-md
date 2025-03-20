@@ -258,7 +258,7 @@ You may also configure multiple paths. See an example on the [Logstash configura
 * The default value for this setting is "2 weeks".
 * If a number is specified then it is interpreted as **days** and can be decimal e.g. 0.5 is 12 hours.
 
-The sincedb record now has a last active timestamp associated with it. If no changes are detected in a tracked file in the last N days its sincedb tracking record expires and will not be persisted. This option helps protect against the inode recycling problem. Filebeat has a [FAQ about inode recycling](beats://docs/reference/filebeat/faq.md).
+The sincedb record now has a last active timestamp associated with it. If no changes are detected in a tracked file in the last N days its sincedb tracking record expires and will not be persisted. This option helps protect against the inode recycling problem. Filebeat has a [FAQ about inode recycling\]\(([^:]+)://reference/filebeat/faq.md).
 
 
 ### `sincedb_path` [v4.1.6-plugins-inputs-file-sincedb_path]

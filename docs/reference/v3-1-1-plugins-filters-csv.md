@@ -114,7 +114,7 @@ Example:
     * `v1`: uses the value in `target` as field name
 
 
-Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)][Elastic Common Schema (ECS)](ecs://docs/reference/index.md)). See [Event Metadata and the Elastic Common Schema (ECS)](v3-1-1-plugins-filters-csv.md#v3.1.1-plugins-filters-csv-ecs_metadata) for detailed information.
+Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)][Elastic Common Schema (ECS)\]\(([^:]+)://reference/index.md)). See [Event Metadata and the Elastic Common Schema (ECS)](v3-1-1-plugins-filters-csv.md#v3.1.1-plugins-filters-csv-ecs_metadata) for detailed information.
 
 
 ### `quote_char` [v3.1.1-plugins-filters-csv-quote_char]

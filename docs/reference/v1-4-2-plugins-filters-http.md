@@ -110,7 +110,7 @@ If set to `"json"` the body will be serialized as JSON. Otherwise it is sent as 
     * Otherwise, the default value is `disabled`.
 
 
-Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)][Elastic Common Schema (ECS)](ecs://docs/reference/index.md)). The value of this setting affects the *default* value of [`target_body`](v1-4-2-plugins-filters-http.md#v1.4.2-plugins-filters-http-target_body) and [`target_headers`](v1-4-2-plugins-filters-http.md#v1.4.2-plugins-filters-http-target_headers).
+Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)][Elastic Common Schema (ECS)\]\(([^:]+)://reference/index.md)). The value of this setting affects the *default* value of [`target_body`](v1-4-2-plugins-filters-http.md#v1.4.2-plugins-filters-http-target_body) and [`target_headers`](v1-4-2-plugins-filters-http.md#v1.4.2-plugins-filters-http-target_headers).
 
 
 ### `headers` [v1.4.2-plugins-filters-http-headers]
