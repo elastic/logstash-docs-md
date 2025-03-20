@@ -50,7 +50,7 @@ Events that *fail* ingest pipeline processing will be tagged with `_ingest_pipel
 ### Requirements and upgrade guidance [v8.16.1-plugins-filters-elastic_integration-requirements]
 
 * This plugin requires Java 17 minimum with {{ls}} `8.x` versions and Java 21 minimum with {{ls}} `9.x` versions.
-* When you upgrade the {{stack}}, upgrade {{ls}} (or this plugin specifically) *before* you upgrade {{kib}}. (Note that this requirement is a departure from the typical {{stack}} [installation order](docs-content://get-started/installing-elastic-stack.md#install-order-elastic-stack).)
+* When you upgrade the {{stack}}, upgrade {{ls}} (or this plugin specifically) *before* you upgrade {{kib}}. (Note that this requirement is a departure from the typical {{stack}} [installation order](docs-content://get-started/the-stack.md#installation-order).)
 
     The {{es}}-{{ls}}-{{kib}} installation order recommended here ensures the best experience with {{agent}}-managed pipelines, and embeds functionality from a version of {{es}} Ingest Node that is compatible with the plugin version (`major`.`minor`).
 

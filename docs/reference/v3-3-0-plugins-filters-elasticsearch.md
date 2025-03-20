@@ -211,7 +211,7 @@ Basic Auth - password
 * Value type is [string](logstash://reference/configuration-file-structure.md#string)
 * There is no default value for this setting.
 
-Elasticsearch query string. Read the Elasticsearch query string documentation. for more info at: [/elasticsearch/docs/reference/query-languages/query-dsl-query-string-query.md#query-string-syntax](elasticsearch://reference/query-languages/query-dsl-query-string-query.md#query-string-syntax)
+Elasticsearch query string. Read the Elasticsearch query string documentation. for more info at: [/elasticsearch/docs/reference/query-languages/query-dsl-query-string-query.md#query-string-syntax](elasticsearch://reference/query-languages/query-dsl/query-dsl-query-string-query.md#query-string-syntax)
 
 
 ### `query_template` [v3.3.0-plugins-filters-elasticsearch-query_template]

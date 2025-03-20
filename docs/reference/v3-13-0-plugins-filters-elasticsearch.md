@@ -284,7 +284,7 @@ Set the address of a forward HTTP proxy. An empty string is treated as if proxy 
 * Value type is [string](logstash://reference/configuration-file-structure.md#string)
 * There is no default value for this setting.
 
-Elasticsearch query string. More information is available in the [Elasticsearch query string documentation](elasticsearch://reference/query-languages/query-dsl-query-string-query.md#query-string-syntax).
+Elasticsearch query string. More information is available in the [Elasticsearch query string documentation](elasticsearch://reference/query-languages/query-dsl/query-dsl-query-string-query.md#query-string-syntax).
 
 
 ### `query_template` [v3.13.0-plugins-filters-elasticsearch-query_template]
