@@ -11,7 +11,7 @@ mapped_pages:
 * Released on: 2025-01-08
 * [Changelog](https://github.com/elastic/logstash-filter-elastic_integration/blob/v8.17.0/CHANGELOG.md)
 
-For other versions, see the [Versioned plugin docs](https://www.elastic.co/guide/en/logstash-versioned-plugins/current/filter-elastic_integration-index.md).
+For other versions, see the [Versioned plugin docs](/vpr/filter-elastic_integration-index.md).
 
 ## Getting help [_getting_help_137]
 
@@ -29,7 +29,7 @@ Use of this plugin requires an active Elastic Enterprise [subscription](https://
 Use this filter to process Elastic integrations powered by {{es}} Ingest Node in {{ls}}.
 
 ::::{admonition} Extending Elastic integrations with {ls}
-This plugin can help you take advantage of the extensive, built-in capabilities of [Elastic {{integrations}}](https://docs.elastic.co/en/integrations)—​such as managing data collection, transformation, and visualization—​and then use {{ls}} for additional data processing and output options. For more info about extending Elastic integrations with {{ls}}, check out [Using {{ls}} with Elastic Integrations](https://www.elastic.co/guide/en/logstash/current/ea-integrations.html).
+This plugin can help you take advantage of the extensive, built-in capabilities of [Elastic {{integrations}}](https://docs.elastic.co/en/integrations)—​such as managing data collection, transformation, and visualization—​and then use {{ls}} for additional data processing and output options. For more info about extending Elastic integrations with {{ls}}, check out [Using {{ls}} with Elastic Integrations](logstash://reference/ea-integrations.md).
 
 ::::
 
@@ -56,12 +56,12 @@ Events that *fail* ingest pipeline processing will be tagged with `_ingest_pipel
 
 ### Using `filter-elastic_integration` with `output-elasticsearch` [plugins-filters-elastic_integration-es-tips]
 
-Elastic {{integrations}} are designed to work with [data streams](https://www.elastic.co/guide/en/logstash/current/plugins-outputs-elasticsearch.html#plugins-outputs-elasticsearch-data-streams) and [ECS-compatible](https://www.elastic.co/guide/en/logstash/current/plugins-outputs-elasticsearch.html#_compatibility_with_the_elastic_common_schema_ecs) output. Be sure that these features are enabled in the [`output-elasticsearch`](https://www.elastic.co/guide/en/logstash/current/plugins-outputs-elasticsearch.html) plugin.
+Elastic {{integrations}} are designed to work with [data streams](https://www.elastic.co/guide/en/logstash/current/plugins-outputs-elasticsearch.html#plugins-outputs-elasticsearch-data-streams) and [ECS-compatible](https://www.elastic.co/guide/en/logstash/current/plugins-outputs-elasticsearch.html#_compatibility_with_the_elastic_common_schema_ecs) output. Be sure that these features are enabled in the [`output-elasticsearch`](logstash://reference/plugins-outputs-elasticsearch.md) plugin.
 
 * Set [`data-stream`](https://www.elastic.co/guide/en/logstash/current/plugins-outputs-elasticsearch.html#plugins-outputs-elasticsearch-data_stream) to `true`.<br> (Check out [Data streams](https://www.elastic.co/guide/en/logstash/current/plugins-outputs-elasticsearch.html#plugins-outputs-elasticsearch-data-streams) for additional data streams settings.)
 * Set [`ecs-compatibility`](https://www.elastic.co/guide/en/logstash/current/plugins-outputs-elasticsearch.html#plugins-outputs-elasticsearch-ecs_compatibility) to `v1` or `v8`.
 
-Check out the [`output-elasticsearch` plugin](https://www.elastic.co/guide/en/logstash/current/plugins-outputs-elasticsearch.html) docs for additional settings.
+Check out the [`output-elasticsearch` plugin](logstash://reference/plugins-outputs-elasticsearch.md) docs for additional settings.
 
 
 
@@ -285,7 +285,7 @@ Cloud Id, from the Elastic Cloud web console.
 
 When connecting with a Cloud Id, communication to {{es}} is secured with SSL.
 
-For more details, check out the [Logstash-to-Cloud documentation](https://www.elastic.co/guide/en/logstash/current/connecting-to-cloud.html).
+For more details, check out the [Logstash-to-Cloud documentation](logstash://reference/connecting-to-cloud.md).
 
 
 ### `geoip_database_directory` [plugins-filters-elastic_integration-geoip_database_directory]
@@ -509,17 +509,17 @@ These configuration options are supported by all filter plugins:
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`add_field`](plugins-filters-elastic_integration.md#plugins-filters-elastic_integration-add_field) | [hash](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#hash) | No |
-| [`add_tag`](plugins-filters-elastic_integration.md#plugins-filters-elastic_integration-add_tag) | [array](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#array) | No |
-| [`enable_metric`](plugins-filters-elastic_integration.md#plugins-filters-elastic_integration-enable_metric) | [boolean](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#boolean) | No |
-| [`id`](plugins-filters-elastic_integration.md#plugins-filters-elastic_integration-id) | [string](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#string) | No |
-| [`periodic_flush`](plugins-filters-elastic_integration.md#plugins-filters-elastic_integration-periodic_flush) | [boolean](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#boolean) | No |
-| [`remove_field`](plugins-filters-elastic_integration.md#plugins-filters-elastic_integration-remove_field) | [array](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#array) | No |
-| [`remove_tag`](plugins-filters-elastic_integration.md#plugins-filters-elastic_integration-remove_tag) | [array](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#array) | No |
+| [`add_field`](plugins-filters-elastic_integration.md#plugins-filters-elastic_integration-add_field) | [hash](logstash://reference/configuration-file-structure.md#hash) | No |
+| [`add_tag`](plugins-filters-elastic_integration.md#plugins-filters-elastic_integration-add_tag) | [array](logstash://reference/configuration-file-structure.md#array) | No |
+| [`enable_metric`](plugins-filters-elastic_integration.md#plugins-filters-elastic_integration-enable_metric) | [boolean](logstash://reference/configuration-file-structure.md#boolean) | No |
+| [`id`](plugins-filters-elastic_integration.md#plugins-filters-elastic_integration-id) | [string](logstash://reference/configuration-file-structure.md#string) | No |
+| [`periodic_flush`](plugins-filters-elastic_integration.md#plugins-filters-elastic_integration-periodic_flush) | [boolean](logstash://reference/configuration-file-structure.md#boolean) | No |
+| [`remove_field`](plugins-filters-elastic_integration.md#plugins-filters-elastic_integration-remove_field) | [array](logstash://reference/configuration-file-structure.md#array) | No |
+| [`remove_tag`](plugins-filters-elastic_integration.md#plugins-filters-elastic_integration-remove_tag) | [array](logstash://reference/configuration-file-structure.md#array) | No |
 
 ### `add_field` [plugins-filters-elastic_integration-add_field]
 
-* Value type is [hash](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#hash)
+* Value type is [hash](logstash://reference/configuration-file-structure.md#hash)
 * Default value is `{}`
 
 If this filter is successful, add any arbitrary fields to this event. Field names can be dynamic and include parts of the event using the `%{{field}}`.
@@ -551,7 +551,7 @@ If the event has field `"somefield" == "hello"` this filter, on success, would a
 
 ### `add_tag` [plugins-filters-elastic_integration-add_tag]
 
-* Value type is [array](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#array)
+* Value type is [array](logstash://reference/configuration-file-structure.md#array)
 * Default value is `[]`
 
 If this filter is successful, add arbitrary tags to the event. Tags can be dynamic and include parts of the event using the `%{{field}}` syntax.
@@ -580,7 +580,7 @@ If the event has field `"somefield" == "hello"` this filter, on success, would a
 
 ### `enable_metric` [plugins-filters-elastic_integration-enable_metric]
 
-* Value type is [boolean](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#boolean)
+* Value type is [boolean](logstash://reference/configuration-file-structure.md#boolean)
 * Default value is `true`
 
 Disable or enable metric logging for this specific plugin instance. By default we record all the metrics we can, but you can disable metrics collection for a specific plugin.
@@ -588,7 +588,7 @@ Disable or enable metric logging for this specific plugin instance. By default w
 
 ### `id` [plugins-filters-elastic_integration-id]
 
-* Value type is [string](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#string)
+* Value type is [string](logstash://reference/configuration-file-structure.md#string)
 * There is no default value for this setting.
 
 Add a unique `ID` to the plugin configuration. If no ID is specified, Logstash will generate one. It is strongly recommended to set this ID in your configuration. This is particularly useful when you have two or more plugins of the same type, for example, if you have 2 elastic_integration filters. Adding a named ID in this case will help in monitoring Logstash when using the monitoring APIs.
@@ -609,7 +609,7 @@ Variable substitution in the `id` field only supports environment variables and 
 
 ### `periodic_flush` [plugins-filters-elastic_integration-periodic_flush]
 
-* Value type is [boolean](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#boolean)
+* Value type is [boolean](logstash://reference/configuration-file-structure.md#boolean)
 * Default value is `false`
 
 Call the filter flush method at regular interval. Optional.
@@ -617,7 +617,7 @@ Call the filter flush method at regular interval. Optional.
 
 ### `remove_field` [plugins-filters-elastic_integration-remove_field]
 
-* Value type is [array](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#array)
+* Value type is [array](logstash://reference/configuration-file-structure.md#array)
 * Default value is `[]`
 
 If this filter is successful, remove arbitrary fields from this event. Fields names can be dynamic and include parts of the event using the `%{{field}}` Example:
@@ -644,7 +644,7 @@ If the event has field `"somefield" == "hello"` this filter, on success, would r
 
 ### `remove_tag` [plugins-filters-elastic_integration-remove_tag]
 
-* Value type is [array](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#array)
+* Value type is [array](logstash://reference/configuration-file-structure.md#array)
 * Default value is `[]`
 
 If this filter is successful, remove arbitrary tags from the event. Tags can be dynamic and include parts of the event using the `%{{field}}` syntax.

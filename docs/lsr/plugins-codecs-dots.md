@@ -11,7 +11,7 @@ mapped_pages:
 * Released on: 2017-11-07
 * [Changelog](https://github.com/logstash-plugins/logstash-codec-dots/blob/v3.0.6/CHANGELOG.md)
 
-For other versions, see the [Versioned plugin docs](https://www.elastic.co/guide/en/logstash-versioned-plugins/current/codec-dots-index.md).
+For other versions, see the [Versioned plugin docs](/vpr/codec-dots-index.md).
 
 ## Getting help [_getting_help_178]
 

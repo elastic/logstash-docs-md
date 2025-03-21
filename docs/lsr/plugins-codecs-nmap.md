@@ -11,11 +11,11 @@ mapped_pages:
 * Released on: 2022-11-16
 * [Changelog](https://github.com/logstash-plugins/logstash-codec-nmap/blob/v0.0.22/CHANGELOG.md)
 
-For other versions, see the [Versioned plugin docs](https://www.elastic.co/guide/en/logstash-versioned-plugins/current/codec-nmap-index.md).
+For other versions, see the [Versioned plugin docs](/vpr/codec-nmap-index.md).
 
 ## Installation [_installation_70]
 
-For plugins not bundled by default, it is easy to install by running `bin/logstash-plugin install logstash-codec-nmap`. See [Working with plugins](https://www.elastic.co/guide/en/logstash/current/working-with-plugins.html) for more details.
+For plugins not bundled by default, it is easy to install by running `bin/logstash-plugin install logstash-codec-nmap`. See [Working with plugins](logstash://reference/working-with-plugins.md) for more details.
 
 
 ## Getting help [_getting_help_194]

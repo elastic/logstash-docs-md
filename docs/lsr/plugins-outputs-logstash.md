@@ -12,7 +12,7 @@ mapped_pages:
 * Released on: 2024-12-10
 * [Changelog](https://github.com/logstash-plugins/logstash-integration-logstash/blob/v1.0.4/CHANGELOG.md)
 
-For other versions, see the [Versioned plugin docs](https://www.elastic.co/guide/en/logstash-versioned-plugins/current/output-logstash-index.md).
+For other versions, see the [Versioned plugin docs](/vpr/output-logstash-index.md).
 
 ## Getting help [_getting_help_92]
 
@@ -21,7 +21,7 @@ For questions about the plugin, open a topic in the [Discuss](http://discuss.ela
 
 ## Description [_description_91]
 
-Send events to a [Logstash input plugin](https://www.elastic.co/guide/en/logstash/current/plugins-inputs-logstash.html) in a pipeline that may be in another process or on another host. You must have a TCP route to the port (defaults to 9800) on an interface that the downstream input is bound to.
+Send events to a [Logstash input plugin](logstash://reference/plugins-inputs-logstash.md) in a pipeline that may be in another process or on another host. You must have a TCP route to the port (defaults to 9800) on an interface that the downstream input is bound to.
 
 ::::{note} 
 Sending events to *any* destination other than a `logstash-input` plugin is neither advised nor supported. We will maintain cross-compatibility with any two supported versions of output/input pair and reserve the right to change details such as protocol and encoding.
@@ -37,7 +37,7 @@ Sending events to *any* destination other than a `logstash-input` plugin is neit
 
 ### Configuration Concepts [plugins-outputs-logstash-config-connecting]
 
-Configure this output plugin to connect to a [Logstash input plugin](https://www.elastic.co/guide/en/logstash/current/plugins-inputs-logstash.html) by specifying its `hosts`. Depending on the downstream plugin’s configuration, you may need to also configure the target port, SSL, and/or credentials.
+Configure this output plugin to connect to a [Logstash input plugin](logstash://reference/plugins-inputs-logstash.md) by specifying its `hosts`. Depending on the downstream plugin’s configuration, you may need to also configure the target port, SSL, and/or credentials.
 
 
 ### Security: SSL Trust [plugins-outputs-logstash-config-ssl-trust]
@@ -117,7 +117,7 @@ Host can be any of IPv4, IPv6 (in enclosed bracket) or host name, examples:
 * `"[2001:0db8:85a3:0000:0000:8a2e:0370:7334]"`
 * `"[2001:0db8:85a3:0000:0000:8a2e:0370:7334]:9804"`
 
-Plugin balances incoming load among the `hosts`. For more information, visit [Logstash integration plugin](https://www.elastic.co/guide/en/logstash/current/plugins-integrations-logstash.html) *Load Balancing* section.
+Plugin balances incoming load among the `hosts`. For more information, visit [Logstash integration plugin](logstash://reference/plugins-integrations-logstash.md) *Load Balancing* section.
 
 When connecting, communication to downstream input {{ls}} is secured with SSL unless configured otherwise.
 
@@ -264,12 +264,12 @@ These configuration options are supported by all output plugins:
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`enable_metric`](plugins-outputs-logstash.md#plugins-outputs-logstash-enable_metric) | [boolean](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#boolean) | No |
-| [`id`](plugins-outputs-logstash.md#plugins-outputs-logstash-id) | [string](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#string) | No |
+| [`enable_metric`](plugins-outputs-logstash.md#plugins-outputs-logstash-enable_metric) | [boolean](logstash://reference/configuration-file-structure.md#boolean) | No |
+| [`id`](plugins-outputs-logstash.md#plugins-outputs-logstash-id) | [string](logstash://reference/configuration-file-structure.md#string) | No |
 
 ### `enable_metric` [plugins-outputs-logstash-enable_metric]
 
-* Value type is [boolean](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#boolean)
+* Value type is [boolean](logstash://reference/configuration-file-structure.md#boolean)
 * Default value is `true`
 
 Disable or enable metric logging for this specific plugin instance. By default we record all the metrics we can, but you can disable metrics collection for a specific plugin.
@@ -277,7 +277,7 @@ Disable or enable metric logging for this specific plugin instance. By default w
 
 ### `id` [plugins-outputs-logstash-id]
 
-* Value type is [string](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#string)
+* Value type is [string](logstash://reference/configuration-file-structure.md#string)
 * There is no default value for this setting.
 
 Add a unique `ID` to the plugin configuration. If no ID is specified, Logstash will generate one. It is strongly recommended to set this ID in your configuration. This is particularly useful when you have two or more plugins of the same type. For example, if you have 2 logstash outputs. Adding a named ID in this case will help in monitoring Logstash when using the monitoring APIs.

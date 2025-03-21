@@ -12,7 +12,7 @@ mapped_pages:
 * Released on: 2024-07-26
 * [Changelog](https://github.com/logstash-plugins/logstash-integration-aws/blob/v7.1.8/CHANGELOG.md)
 
-For other versions, see the [Versioned plugin docs](https://www.elastic.co/guide/en/logstash-versioned-plugins/current/output-sns-index.md).
+For other versions, see the [Versioned plugin docs](/vpr/output-sns-index.md).
 
 ## Getting help [_getting_help_109]
 
@@ -39,7 +39,7 @@ This plugin looks for the following fields on events it receives:
 
 ## Upgrading to 2.0.0 [_upgrading_to_2_0_0]
 
-This plugin used to have a `format` option for controlling the encoding of messages prior to being sent to SNS. This plugin now uses the logstash standard [codec](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#codec) option for encoding instead. If you want the same *plain* format as the v0/1 codec (`format => "plain"`) use `codec => "s3_plain"`.
+This plugin used to have a `format` option for controlling the encoding of messages prior to being sent to SNS. This plugin now uses the logstash standard [codec](logstash://reference/configuration-file-structure.md#codec) option for encoding instead. If you want the same *plain* format as the v0/1 codec (`format => "plain"`) use `codec => "s3_plain"`.
 
 
 ## Sns Output Configuration Options [plugins-outputs-sns-options]
@@ -154,13 +154,13 @@ These configuration options are supported by all output plugins:
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`codec`](plugins-outputs-sns.md#plugins-outputs-sns-codec) | [codec](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#codec) | No |
-| [`enable_metric`](plugins-outputs-sns.md#plugins-outputs-sns-enable_metric) | [boolean](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#boolean) | No |
-| [`id`](plugins-outputs-sns.md#plugins-outputs-sns-id) | [string](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#string) | No |
+| [`codec`](plugins-outputs-sns.md#plugins-outputs-sns-codec) | [codec](logstash://reference/configuration-file-structure.md#codec) | No |
+| [`enable_metric`](plugins-outputs-sns.md#plugins-outputs-sns-enable_metric) | [boolean](logstash://reference/configuration-file-structure.md#boolean) | No |
+| [`id`](plugins-outputs-sns.md#plugins-outputs-sns-id) | [string](logstash://reference/configuration-file-structure.md#string) | No |
 
 ### `codec` [plugins-outputs-sns-codec]
 
-* Value type is [codec](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#codec)
+* Value type is [codec](logstash://reference/configuration-file-structure.md#codec)
 * Default value is `"plain"`
 
 The codec used for output data. Output codecs are a convenient method for encoding your data before it leaves the output without needing a separate filter in your Logstash pipeline.
@@ -168,7 +168,7 @@ The codec used for output data. Output codecs are a convenient method for encodi
 
 ### `enable_metric` [plugins-outputs-sns-enable_metric]
 
-* Value type is [boolean](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#boolean)
+* Value type is [boolean](logstash://reference/configuration-file-structure.md#boolean)
 * Default value is `true`
 
 Disable or enable metric logging for this specific plugin instance. By default we record all the metrics we can, but you can disable metrics collection for a specific plugin.
@@ -176,7 +176,7 @@ Disable or enable metric logging for this specific plugin instance. By default w
 
 ### `id` [plugins-outputs-sns-id]
 
-* Value type is [string](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#string)
+* Value type is [string](logstash://reference/configuration-file-structure.md#string)
 * There is no default value for this setting.
 
 Add a unique `ID` to the plugin configuration. If no ID is specified, Logstash will generate one. It is strongly recommended to set this ID in your configuration. This is particularly useful when you have two or more plugins of the same type. For example, if you have 2 sns outputs. Adding a named ID in this case will help in monitoring Logstash when using the monitoring APIs.

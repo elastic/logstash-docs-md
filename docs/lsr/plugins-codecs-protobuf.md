@@ -11,11 +11,11 @@ mapped_pages:
 * Released on: 2023-09-20
 * [Changelog](https://github.com/logstash-plugins/logstash-codec-protobuf/blob/v1.3.0/CHANGELOG.md)
 
-For other versions, see the [Versioned plugin docs](https://www.elastic.co/guide/en/logstash-versioned-plugins/current/codec-protobuf-index.md).
+For other versions, see the [Versioned plugin docs](/vpr/codec-protobuf-index.md).
 
 ## Installation [_installation_71]
 
-For plugins not bundled by default, it is easy to install by running `bin/logstash-plugin install logstash-codec-protobuf`. See [Working with plugins](https://www.elastic.co/guide/en/logstash/current/working-with-plugins.html) for more details.
+For plugins not bundled by default, it is easy to install by running `bin/logstash-plugin install logstash-codec-protobuf`. See [Working with plugins](logstash://reference/working-with-plugins.md) for more details.
 
 
 ## Getting help [_getting_help_196]

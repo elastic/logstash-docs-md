@@ -11,7 +11,7 @@ mapped_pages:
 * Released on: 2024-09-06
 * [Changelog](https://github.com/logstash-plugins/logstash-codec-json_lines/blob/v3.2.2/CHANGELOG.md)
 
-For other versions, see the [Versioned plugin docs](https://www.elastic.co/guide/en/logstash-versioned-plugins/current/codec-json_lines-index.md).
+For other versions, see the [Versioned plugin docs](/vpr/codec-json_lines-index.md).
 
 ## Getting help [_getting_help_189]
 

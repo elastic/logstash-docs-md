@@ -11,7 +11,7 @@ mapped_pages:
 * Released on: 2019-09-12
 * [Changelog](https://github.com/logstash-plugins/logstash-filter-prune/blob/v3.0.4/CHANGELOG.md)
 
-For other versions, see the [Versioned plugin docs](https://www.elastic.co/guide/en/logstash-versioned-plugins/current/filter-prune-index.md).
+For other versions, see the [Versioned plugin docs](/vpr/filter-prune-index.md).
 
 ## Getting help [_getting_help_156]
 
@@ -22,7 +22,7 @@ For questions about the plugin, open a topic in the [Discuss](http://discuss.ela
 
 The prune filter is for removing fields from events based on whitelists or blacklist of field names or their values (names and values can also be regular expressions).
 
-This can e.g. be useful if you have a [json](https://www.elastic.co/guide/en/logstash/current/plugins-filters-json.html) or [kv](https://www.elastic.co/guide/en/logstash/current/plugins-filters-kv.html) filter that creates a number of fields with names that you don’t necessarily know the names of beforehand, and you only want to keep a subset of them.
+This can e.g. be useful if you have a [json](logstash://reference/plugins-filters-json.md) or [kv](logstash://reference/plugins-filters-kv.md) filter that creates a number of fields with names that you don’t necessarily know the names of beforehand, and you only want to keep a subset of them.
 
 Usage help: To specify a exact field name or value use the regular expression syntax `^some_name_or_value$`. Example usage: Input data `{ "msg":"hello world", "msg_short":"hw" }`
 
@@ -153,17 +153,17 @@ These configuration options are supported by all filter plugins:
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`add_field`](plugins-filters-prune.md#plugins-filters-prune-add_field) | [hash](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#hash) | No |
-| [`add_tag`](plugins-filters-prune.md#plugins-filters-prune-add_tag) | [array](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#array) | No |
-| [`enable_metric`](plugins-filters-prune.md#plugins-filters-prune-enable_metric) | [boolean](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#boolean) | No |
-| [`id`](plugins-filters-prune.md#plugins-filters-prune-id) | [string](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#string) | No |
-| [`periodic_flush`](plugins-filters-prune.md#plugins-filters-prune-periodic_flush) | [boolean](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#boolean) | No |
-| [`remove_field`](plugins-filters-prune.md#plugins-filters-prune-remove_field) | [array](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#array) | No |
-| [`remove_tag`](plugins-filters-prune.md#plugins-filters-prune-remove_tag) | [array](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#array) | No |
+| [`add_field`](plugins-filters-prune.md#plugins-filters-prune-add_field) | [hash](logstash://reference/configuration-file-structure.md#hash) | No |
+| [`add_tag`](plugins-filters-prune.md#plugins-filters-prune-add_tag) | [array](logstash://reference/configuration-file-structure.md#array) | No |
+| [`enable_metric`](plugins-filters-prune.md#plugins-filters-prune-enable_metric) | [boolean](logstash://reference/configuration-file-structure.md#boolean) | No |
+| [`id`](plugins-filters-prune.md#plugins-filters-prune-id) | [string](logstash://reference/configuration-file-structure.md#string) | No |
+| [`periodic_flush`](plugins-filters-prune.md#plugins-filters-prune-periodic_flush) | [boolean](logstash://reference/configuration-file-structure.md#boolean) | No |
+| [`remove_field`](plugins-filters-prune.md#plugins-filters-prune-remove_field) | [array](logstash://reference/configuration-file-structure.md#array) | No |
+| [`remove_tag`](plugins-filters-prune.md#plugins-filters-prune-remove_tag) | [array](logstash://reference/configuration-file-structure.md#array) | No |
 
 ### `add_field` [plugins-filters-prune-add_field]
 
-* Value type is [hash](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#hash)
+* Value type is [hash](logstash://reference/configuration-file-structure.md#hash)
 * Default value is `{}`
 
 If this filter is successful, add any arbitrary fields to this event. Field names can be dynamic and include parts of the event using the `%{{field}}`.
@@ -195,7 +195,7 @@ If the event has field `"somefield" == "hello"` this filter, on success, would a
 
 ### `add_tag` [plugins-filters-prune-add_tag]
 
-* Value type is [array](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#array)
+* Value type is [array](logstash://reference/configuration-file-structure.md#array)
 * Default value is `[]`
 
 If this filter is successful, add arbitrary tags to the event. Tags can be dynamic and include parts of the event using the `%{{field}}` syntax.
@@ -224,7 +224,7 @@ If the event has field `"somefield" == "hello"` this filter, on success, would a
 
 ### `enable_metric` [plugins-filters-prune-enable_metric]
 
-* Value type is [boolean](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#boolean)
+* Value type is [boolean](logstash://reference/configuration-file-structure.md#boolean)
 * Default value is `true`
 
 Disable or enable metric logging for this specific plugin instance. By default we record all the metrics we can, but you can disable metrics collection for a specific plugin.
@@ -232,7 +232,7 @@ Disable or enable metric logging for this specific plugin instance. By default w
 
 ### `id` [plugins-filters-prune-id]
 
-* Value type is [string](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#string)
+* Value type is [string](logstash://reference/configuration-file-structure.md#string)
 * There is no default value for this setting.
 
 Add a unique `ID` to the plugin configuration. If no ID is specified, Logstash will generate one. It is strongly recommended to set this ID in your configuration. This is particularly useful when you have two or more plugins of the same type, for example, if you have 2 prune filters. Adding a named ID in this case will help in monitoring Logstash when using the monitoring APIs.
@@ -253,7 +253,7 @@ Variable substitution in the `id` field only supports environment variables and 
 
 ### `periodic_flush` [plugins-filters-prune-periodic_flush]
 
-* Value type is [boolean](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#boolean)
+* Value type is [boolean](logstash://reference/configuration-file-structure.md#boolean)
 * Default value is `false`
 
 Call the filter flush method at regular interval. Optional.
@@ -261,7 +261,7 @@ Call the filter flush method at regular interval. Optional.
 
 ### `remove_field` [plugins-filters-prune-remove_field]
 
-* Value type is [array](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#array)
+* Value type is [array](logstash://reference/configuration-file-structure.md#array)
 * Default value is `[]`
 
 If this filter is successful, remove arbitrary fields from this event. Fields names can be dynamic and include parts of the event using the `%{{field}}` Example:
@@ -288,7 +288,7 @@ If the event has field `"somefield" == "hello"` this filter, on success, would r
 
 ### `remove_tag` [plugins-filters-prune-remove_tag]
 
-* Value type is [array](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#array)
+* Value type is [array](logstash://reference/configuration-file-structure.md#array)
 * Default value is `[]`
 
 If this filter is successful, remove arbitrary tags from the event. Tags can be dynamic and include parts of the event using the `%{{field}}` syntax.

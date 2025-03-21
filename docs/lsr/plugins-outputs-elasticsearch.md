@@ -11,7 +11,7 @@ mapped_pages:
 * Released on: 2025-01-14
 * [Changelog](https://github.com/logstash-plugins/logstash-output-elasticsearch/blob/v12.0.1/CHANGELOG.md)
 
-For other versions, see the [Versioned plugin docs](https://www.elastic.co/guide/en/logstash-versioned-plugins/current/output-elasticsearch-index.md).
+For other versions, see the [Versioned plugin docs](/vpr/output-elasticsearch-index.md).
 
 ## Getting help [_getting_help_74]
 
@@ -184,7 +184,7 @@ Note that 409 exceptions are no longer retried. Please set a higher `retry_on_co
 
 ## DLQ Policy [plugins-outputs-elasticsearch-dlq-policy]
 
-Mapping (404) errors from Elasticsearch can lead to data loss. Unfortunately mapping errors cannot be handled without human intervention and without looking at the field that caused the mapping mismatch. If the DLQ is enabled, the original events causing the mapping errors are stored in a file that can be processed at a later time. Often times, the offending field can be removed and re-indexed to Elasticsearch. If the DLQ is not enabled, and a mapping error happens, the problem is logged as a warning, and the event is dropped. See [dead-letter-queue (DLQ)](https://www.elastic.co/guide/en/logstash/current/dead-letter-queues.html) for more information about processing events in the DLQ. The list of error codes accepted for DLQ could be customized with [`dlq_custom_codes`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-dlq_custom_codes) but should be used only in motivated cases.
+Mapping (404) errors from Elasticsearch can lead to data loss. Unfortunately mapping errors cannot be handled without human intervention and without looking at the field that caused the mapping mismatch. If the DLQ is enabled, the original events causing the mapping errors are stored in a file that can be processed at a later time. Often times, the offending field can be removed and re-indexed to Elasticsearch. If the DLQ is not enabled, and a mapping error happens, the problem is logged as a warning, and the event is dropped. See [dead-letter-queue (DLQ)](logstash://reference/dead-letter-queues.md) for more information about processing events in the DLQ. The list of error codes accepted for DLQ could be customized with [`dlq_custom_codes`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-dlq_custom_codes) but should be used only in motivated cases.
 
 
 ## {{ilm-cap}} ({{ilm-init}}) [plugins-outputs-elasticsearch-ilm]
@@ -370,7 +370,7 @@ The Elasticsearch action to perform. Valid actions are:
 * `delete`: deletes a document by id (An id is required for this action)
 * `create`: indexes a document, fails if a document by that id already exists in the index.
 * `update`: updates a document by id. Update has a special case where you can upsert — update a document if not already present. See the `doc_as_upsert` option. NOTE: This does not work and is not supported in Elasticsearch 1.x. Please upgrade to ES 2.x or greater to use this feature with Logstash!
-* A sprintf style string to change the action based on the content of the event. The value `%{[foo]}` would use the foo field for the action. If resolved action is not in [`index`, `delete`, `create`, `update`], the event will not be sent to {{es}}. Instead the event will be sent to the pipeline’s [dead-letter-queue (DLQ)](https://www.elastic.co/guide/en/logstash/current/dead-letter-queues.html) (if enabled), or it will be logged and dropped.
+* A sprintf style string to change the action based on the content of the event. The value `%{[foo]}` would use the foo field for the action. If resolved action is not in [`index`, `delete`, `create`, `update`], the event will not be sent to {{es}}. Instead the event will be sent to the pipeline’s [dead-letter-queue (DLQ)](logstash://reference/dead-letter-queues.md) (if enabled), or it will be logged and dropped.
 
 For more details on actions, check out the [Elasticsearch bulk API documentation](https://www.elastic.co/guide/en/elasticsearch/reference/current/docs-bulk.html).
 
@@ -409,7 +409,7 @@ The SHA-256 fingerprint of an SSL Certificate Authority to trust, such as the au
 
 Cloud authentication string ("<username>:<password>" format) is an alternative for the `user`/`password` pair.
 
-For more details, check out the [Logstash-to-Cloud documentation](https://www.elastic.co/guide/en/logstash/current/connecting-to-cloud.html).
+For more details, check out the [Logstash-to-Cloud documentation](logstash://reference/connecting-to-cloud.md).
 
 
 ### `cloud_id` [plugins-outputs-elasticsearch-cloud_id]
@@ -419,7 +419,7 @@ For more details, check out the [Logstash-to-Cloud documentation](https://www.el
 
 Cloud ID, from the Elastic Cloud web console. If set `hosts` should not be used.
 
-For more details, check out the [Logstash-to-Cloud documentation](https://www.elastic.co/guide/en/logstash/current/connecting-to-cloud.html).
+For more details, check out the [Logstash-to-Cloud documentation](logstash://reference/connecting-to-cloud.md).
 
 
 ### `compression_level` [plugins-outputs-elasticsearch-compression_level]
@@ -1211,12 +1211,12 @@ These configuration options are supported by all output plugins:
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`enable_metric`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-enable_metric) | [boolean](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#boolean) | No |
-| [`id`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-id) | [string](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#string) | No |
+| [`enable_metric`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-enable_metric) | [boolean](logstash://reference/configuration-file-structure.md#boolean) | No |
+| [`id`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-id) | [string](logstash://reference/configuration-file-structure.md#string) | No |
 
 ### `enable_metric` [plugins-outputs-elasticsearch-enable_metric]
 
-* Value type is [boolean](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#boolean)
+* Value type is [boolean](logstash://reference/configuration-file-structure.md#boolean)
 * Default value is `true`
 
 Disable or enable metric logging for this specific plugin instance. By default we record all the metrics we can, but you can disable metrics collection for a specific plugin.
@@ -1224,7 +1224,7 @@ Disable or enable metric logging for this specific plugin instance. By default w
 
 ### `id` [plugins-outputs-elasticsearch-id]
 
-* Value type is [string](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#string)
+* Value type is [string](logstash://reference/configuration-file-structure.md#string)
 * There is no default value for this setting.
 
 Add a unique `ID` to the plugin configuration. If no ID is specified, Logstash will generate one. It is strongly recommended to set this ID in your configuration. This is particularly useful when you have two or more plugins of the same type. For example, if you have 2 elasticsearch outputs. Adding a named ID in this case will help in monitoring Logstash when using the monitoring APIs.

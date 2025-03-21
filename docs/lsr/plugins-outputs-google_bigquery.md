@@ -11,11 +11,11 @@ mapped_pages:
 * Released on: 2024-09-16
 * [Changelog](https://github.com/logstash-plugins/logstash-output-google_bigquery/blob/v4.6.0/CHANGELOG.md)
 
-For other versions, see the [Versioned plugin docs](https://www.elastic.co/guide/en/logstash-versioned-plugins/current/output-google_bigquery-index.md).
+For other versions, see the [Versioned plugin docs](/vpr/output-google_bigquery-index.md).
 
 ## Installation [_installation_29]
 
-For plugins not bundled by default, it is easy to install by running `bin/logstash-plugin install logstash-output-google_bigquery`. See [Working with plugins](https://www.elastic.co/guide/en/logstash/current/working-with-plugins.html) for more details.
+For plugins not bundled by default, it is easy to install by running `bin/logstash-plugin install logstash-output-google_bigquery`. See [Working with plugins](logstash://reference/working-with-plugins.md) for more details.
 
 
 ## Getting help [_getting_help_80]
@@ -38,7 +38,7 @@ You must enable BigQuery on your Google Cloud account and create a dataset to ho
 
 You must also grant the service account this plugin uses access to the dataset.
 
-You can use [Logstash conditionals](https://www.elastic.co/guide/en/logstash/current/event-dependent-configuration.html) and multiple configuration blocks to upload events with different structures.
+You can use [Logstash conditionals](logstash://reference/event-dependent-configuration.md) and multiple configuration blocks to upload events with different structures.
 
 
 ### Usage [_usage_2]
@@ -67,7 +67,7 @@ output {
 ### Considerations [_considerations]
 
 * There is a small fee to insert data into BigQuery using the streaming API.
-* This plugin buffers events in-memory, so make sure the flush configurations are appropriate for your use-case and consider using [Logstash Persistent Queues](https://www.elastic.co/guide/en/logstash/current/persistent-queues.html).
+* This plugin buffers events in-memory, so make sure the flush configurations are appropriate for your use-case and consider using [Logstash Persistent Queues](logstash://reference/persistent-queues.md).
 * Events will be flushed when [`batch_size`](plugins-outputs-google_bigquery.md#plugins-outputs-google_bigquery-batch_size), [`batch_size_bytes`](plugins-outputs-google_bigquery.md#plugins-outputs-google_bigquery-batch_size_bytes), or [`flush_interval_secs`](plugins-outputs-google_bigquery.md#plugins-outputs-google_bigquery-flush_interval_secs) is met, whatever comes first. If you notice a delay in your processing or low throughput, try adjusting those settings.
 
 
@@ -379,13 +379,13 @@ These configuration options are supported by all output plugins:
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`codec`](plugins-outputs-google_bigquery.md#plugins-outputs-google_bigquery-codec) | [codec](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#codec) | No |
-| [`enable_metric`](plugins-outputs-google_bigquery.md#plugins-outputs-google_bigquery-enable_metric) | [boolean](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#boolean) | No |
-| [`id`](plugins-outputs-google_bigquery.md#plugins-outputs-google_bigquery-id) | [string](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#string) | No |
+| [`codec`](plugins-outputs-google_bigquery.md#plugins-outputs-google_bigquery-codec) | [codec](logstash://reference/configuration-file-structure.md#codec) | No |
+| [`enable_metric`](plugins-outputs-google_bigquery.md#plugins-outputs-google_bigquery-enable_metric) | [boolean](logstash://reference/configuration-file-structure.md#boolean) | No |
+| [`id`](plugins-outputs-google_bigquery.md#plugins-outputs-google_bigquery-id) | [string](logstash://reference/configuration-file-structure.md#string) | No |
 
 ### `codec` [plugins-outputs-google_bigquery-codec]
 
-* Value type is [codec](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#codec)
+* Value type is [codec](logstash://reference/configuration-file-structure.md#codec)
 * Default value is `"plain"`
 
 The codec used for output data. Output codecs are a convenient method for encoding your data before it leaves the output without needing a separate filter in your Logstash pipeline.
@@ -393,7 +393,7 @@ The codec used for output data. Output codecs are a convenient method for encodi
 
 ### `enable_metric` [plugins-outputs-google_bigquery-enable_metric]
 
-* Value type is [boolean](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#boolean)
+* Value type is [boolean](logstash://reference/configuration-file-structure.md#boolean)
 * Default value is `true`
 
 Disable or enable metric logging for this specific plugin instance. By default we record all the metrics we can, but you can disable metrics collection for a specific plugin.
@@ -401,7 +401,7 @@ Disable or enable metric logging for this specific plugin instance. By default w
 
 ### `id` [plugins-outputs-google_bigquery-id]
 
-* Value type is [string](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#string)
+* Value type is [string](logstash://reference/configuration-file-structure.md#string)
 * There is no default value for this setting.
 
 Add a unique `ID` to the plugin configuration. If no ID is specified, Logstash will generate one. It is strongly recommended to set this ID in your configuration. This is particularly useful when you have two or more plugins of the same type. For example, if you have 2 google_bigquery outputs. Adding a named ID in this case will help in monitoring Logstash when using the monitoring APIs.

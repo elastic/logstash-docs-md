@@ -11,7 +11,7 @@ mapped_pages:
 * Released on: 2021-07-27
 * [Changelog](https://github.com/logstash-plugins/logstash-codec-plain/blob/v3.1.0/CHANGELOG.md)
 
-For other versions, see the [Versioned plugin docs](https://www.elastic.co/guide/en/logstash-versioned-plugins/current/codec-plain-index.md).
+For other versions, see the [Versioned plugin docs](/vpr/codec-plain-index.md).
 
 ## Getting help [_getting_help_195]
 

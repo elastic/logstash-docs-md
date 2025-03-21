@@ -12,7 +12,7 @@ mapped_pages:
 
 ## Installation [_installation_25]
 
-For plugins not bundled by default, it is easy to install by running `bin/logstash-plugin install logstash-output-dynatrace`. See [Working with plugins](https://www.elastic.co/guide/en/logstash/current/working-with-plugins.html) for more details.
+For plugins not bundled by default, it is easy to install by running `bin/logstash-plugin install logstash-output-dynatrace`. See [Working with plugins](logstash://reference/working-with-plugins.md) for more details.
 
 
 ## Description [_description_70]

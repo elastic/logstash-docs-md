@@ -11,7 +11,7 @@ mapped_pages:
 * Released on: 2024-12-18
 * [Changelog](https://github.com/logstash-plugins/logstash-input-elasticsearch/blob/v5.0.0/CHANGELOG.md)
 
-For other versions, see the [Versioned plugin docs](https://www.elastic.co/guide/en/logstash-versioned-plugins/current/input-elasticsearch-index.md).
+For other versions, see the [Versioned plugin docs](/vpr/input-elasticsearch-index.md).
 
 ## Getting help [_getting_help_15]
 
@@ -136,7 +136,7 @@ As of version `5.0.0` of this plugin, a number of previously deprecated settings
 | [`ssl_truststore_type`](plugins-inputs-elasticsearch.md#plugins-inputs-elasticsearch-ssl_truststore_type) | [string](introduction.md#string) | No |
 | [`ssl_verification_mode`](plugins-inputs-elasticsearch.md#plugins-inputs-elasticsearch-ssl_verification_mode) | [string](introduction.md#string), one of `["full", "none"]` | No |
 | [`socket_timeout_seconds`](plugins-inputs-elasticsearch.md#plugins-inputs-elasticsearch-socket_timeout_seconds) | [number](introduction.md#number) | No |
-| [`target`](plugins-inputs-elasticsearch.md#plugins-inputs-elasticsearch-target) | [field reference](https://www.elastic.co/guide/en/logstash/current/field-references-deepdive.html) | No |
+| [`target`](plugins-inputs-elasticsearch.md#plugins-inputs-elasticsearch-target) | [field reference](logstash://reference/field-references-deepdive.md) | No |
 | [`retries`](plugins-inputs-elasticsearch.md#plugins-inputs-elasticsearch-retries) | [number](introduction.md#number) | No |
 | [`user`](plugins-inputs-elasticsearch.md#plugins-inputs-elasticsearch-user) | [string](introduction.md#string) | No |
 
@@ -170,7 +170,7 @@ The SHA-256 fingerprint of an SSL Certificate Authority to trust, such as the au
 
 Cloud authentication string ("<username>:<password>" format) is an alternative for the `user`/`password` pair.
 
-For more info, check out the [Logstash-to-Cloud documentation](https://www.elastic.co/guide/en/logstash/current/connecting-to-cloud.html).
+For more info, check out the [Logstash-to-Cloud documentation](logstash://reference/connecting-to-cloud.md).
 
 
 ### `cloud_id` [plugins-inputs-elasticsearch-cloud_id]
@@ -180,7 +180,7 @@ For more info, check out the [Logstash-to-Cloud documentation](https://www.elast
 
 Cloud ID, from the Elastic Cloud web console. If set `hosts` should not be used.
 
-For more info, check out the [Logstash-to-Cloud documentation](https://www.elastic.co/guide/en/logstash/current/connecting-to-cloud.html).
+For more info, check out the [Logstash-to-Cloud documentation](logstash://reference/connecting-to-cloud.md).
 
 
 ### `connect_timeout_seconds` [plugins-inputs-elasticsearch-connect_timeout_seconds]
@@ -570,7 +570,7 @@ The maximum amount of time, in seconds, to wait on an incomplete response from E
 
 ### `target` [plugins-inputs-elasticsearch-target]
 
-* Value type is [field reference](https://www.elastic.co/guide/en/logstash/current/field-references-deepdive.html)
+* Value type is [field reference](logstash://reference/field-references-deepdive.md)
 * There is no default value for this setting.
 
 Without a `target`, events are created from each hit’s `_source` at the root level. When the `target` is set to a field reference, the `_source` of the hit is placed in the target field instead.
@@ -607,16 +607,16 @@ These configuration options are supported by all input plugins:
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`add_field`](plugins-inputs-elasticsearch.md#plugins-inputs-elasticsearch-add_field) | [hash](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#hash) | No |
-| [`codec`](plugins-inputs-elasticsearch.md#plugins-inputs-elasticsearch-codec) | [codec](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#codec) | No |
-| [`enable_metric`](plugins-inputs-elasticsearch.md#plugins-inputs-elasticsearch-enable_metric) | [boolean](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#boolean) | No |
-| [`id`](plugins-inputs-elasticsearch.md#plugins-inputs-elasticsearch-id) | [string](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#string) | No |
-| [`tags`](plugins-inputs-elasticsearch.md#plugins-inputs-elasticsearch-tags) | [array](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#array) | No |
-| [`type`](plugins-inputs-elasticsearch.md#plugins-inputs-elasticsearch-type) | [string](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#string) | No |
+| [`add_field`](plugins-inputs-elasticsearch.md#plugins-inputs-elasticsearch-add_field) | [hash](logstash://reference/configuration-file-structure.md#hash) | No |
+| [`codec`](plugins-inputs-elasticsearch.md#plugins-inputs-elasticsearch-codec) | [codec](logstash://reference/configuration-file-structure.md#codec) | No |
+| [`enable_metric`](plugins-inputs-elasticsearch.md#plugins-inputs-elasticsearch-enable_metric) | [boolean](logstash://reference/configuration-file-structure.md#boolean) | No |
+| [`id`](plugins-inputs-elasticsearch.md#plugins-inputs-elasticsearch-id) | [string](logstash://reference/configuration-file-structure.md#string) | No |
+| [`tags`](plugins-inputs-elasticsearch.md#plugins-inputs-elasticsearch-tags) | [array](logstash://reference/configuration-file-structure.md#array) | No |
+| [`type`](plugins-inputs-elasticsearch.md#plugins-inputs-elasticsearch-type) | [string](logstash://reference/configuration-file-structure.md#string) | No |
 
 ### `add_field` [plugins-inputs-elasticsearch-add_field]
 
-* Value type is [hash](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#hash)
+* Value type is [hash](logstash://reference/configuration-file-structure.md#hash)
 * Default value is `{}`
 
 Add a field to an event
@@ -624,7 +624,7 @@ Add a field to an event
 
 ### `codec` [plugins-inputs-elasticsearch-codec]
 
-* Value type is [codec](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#codec)
+* Value type is [codec](logstash://reference/configuration-file-structure.md#codec)
 * Default value is `"json"`
 
 The codec used for input data. Input codecs are a convenient method for decoding your data before it enters the input, without needing a separate filter in your Logstash pipeline.
@@ -632,7 +632,7 @@ The codec used for input data. Input codecs are a convenient method for decoding
 
 ### `enable_metric` [plugins-inputs-elasticsearch-enable_metric]
 
-* Value type is [boolean](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#boolean)
+* Value type is [boolean](logstash://reference/configuration-file-structure.md#boolean)
 * Default value is `true`
 
 Disable or enable metric logging for this specific plugin instance by default we record all the metrics we can, but you can disable metrics collection for a specific plugin.
@@ -640,7 +640,7 @@ Disable or enable metric logging for this specific plugin instance by default we
 
 ### `id` [plugins-inputs-elasticsearch-id]
 
-* Value type is [string](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#string)
+* Value type is [string](logstash://reference/configuration-file-structure.md#string)
 * There is no default value for this setting.
 
 Add a unique `ID` to the plugin configuration. If no ID is specified, Logstash will generate one. It is strongly recommended to set this ID in your configuration. This is particularly useful when you have two or more plugins of the same type, for example, if you have 2 elasticsearch inputs. Adding a named ID in this case will help in monitoring Logstash when using the monitoring APIs.
@@ -661,7 +661,7 @@ Variable substitution in the `id` field only supports environment variables and 
 
 ### `tags` [plugins-inputs-elasticsearch-tags]
 
-* Value type is [array](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#array)
+* Value type is [array](logstash://reference/configuration-file-structure.md#array)
 * There is no default value for this setting.
 
 Add any number of arbitrary tags to your event.
@@ -671,7 +671,7 @@ This can help with processing later.
 
 ### `type` [plugins-inputs-elasticsearch-type]
 
-* Value type is [string](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#string)
+* Value type is [string](logstash://reference/configuration-file-structure.md#string)
 * There is no default value for this setting.
 
 Add a `type` field to all events handled by this input.

@@ -11,7 +11,7 @@ mapped_pages:
 * Released on: 2021-08-12
 * [Changelog](https://github.com/logstash-plugins/logstash-codec-graphite/blob/v3.0.6/CHANGELOG.md)
 
-For other versions, see the [Versioned plugin docs](https://www.elastic.co/guide/en/logstash-versioned-plugins/current/codec-graphite-index.md).
+For other versions, see the [Versioned plugin docs](/vpr/codec-graphite-index.md).
 
 ## Getting help [_getting_help_183]
 

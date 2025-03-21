@@ -11,7 +11,7 @@ mapped_pages:
 * Released on: 2024-10-22
 * [Changelog](https://github.com/logstash-plugins/logstash-codec-cef/blob/v6.2.8/CHANGELOG.md)
 
-For other versions, see the [Versioned plugin docs](https://www.elastic.co/guide/en/logstash-versioned-plugins/current/codec-cef-index.md).
+For other versions, see the [Versioned plugin docs](/vpr/codec-cef-index.md).
 
 ## Getting help [_getting_help_173]
 

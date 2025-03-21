@@ -11,7 +11,7 @@ mapped_pages:
 * Released on: 2024-07-26
 * [Changelog](https://github.com/logstash-plugins/logstash-integration-aws/blob/v7.1.8/CHANGELOG.md)
 
-For other versions, see the [Versioned plugin docs](https://www.elastic.co/guide/en/logstash-versioned-plugins/current/integration-aws-index.md).
+For other versions, see the [Versioned plugin docs](/vpr/integration-aws-index.md).
 
 ## Getting help [_getting_help]
 
@@ -22,14 +22,14 @@ For questions about the plugin, open a topic in the [Discuss](http://discuss.ela
 
 The AWS Integration Plugin provides integrated plugins for working with Amazon Web Services:
 
-* [Cloudfront Codec Plugin](https://www.elastic.co/guide/en/logstash/current/plugins-codecs-cloudfront.html)
-* [Cloudtrail Codec Plugin](https://www.elastic.co/guide/en/logstash/current/plugins-codecs-cloudtrail.html)
-* [Cloudwatch Input Plugin](https://www.elastic.co/guide/en/logstash/current/plugins-inputs-cloudwatch.html)
-* [S3 Input Plugin](https://www.elastic.co/guide/en/logstash/current/plugins-inputs-s3.html)
-* [Sqs Input Plugin](https://www.elastic.co/guide/en/logstash/current/plugins-inputs-sqs.html)
-* [Cloudwatch Output Plugin](https://www.elastic.co/guide/en/logstash/current/plugins-outputs-cloudwatch.html)
-* [S3 Output Plugin](https://www.elastic.co/guide/en/logstash/current/plugins-outputs-s3.html)
-* [Sns Output Plugin](https://www.elastic.co/guide/en/logstash/current/plugins-outputs-sns.html)
-* [Sqs Output Plugin](https://www.elastic.co/guide/en/logstash/current/plugins-outputs-sqs.html)
+* [Cloudfront Codec Plugin](logstash://reference/plugins-codecs-cloudfront.md)
+* [Cloudtrail Codec Plugin](logstash://reference/plugins-codecs-cloudtrail.md)
+* [Cloudwatch Input Plugin](logstash://reference/plugins-inputs-cloudwatch.md)
+* [S3 Input Plugin](logstash://reference/plugins-inputs-s3.md)
+* [Sqs Input Plugin](logstash://reference/plugins-inputs-sqs.md)
+* [Cloudwatch Output Plugin](logstash://reference/plugins-outputs-cloudwatch.md)
+* [S3 Output Plugin](logstash://reference/plugins-outputs-s3.md)
+* [Sns Output Plugin](logstash://reference/plugins-outputs-sns.md)
+* [Sqs Output Plugin](logstash://reference/plugins-outputs-sqs.md)
 
 

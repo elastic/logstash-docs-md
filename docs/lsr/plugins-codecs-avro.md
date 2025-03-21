@@ -11,7 +11,7 @@ mapped_pages:
 * Released on: 2023-10-16
 * [Changelog](https://github.com/logstash-plugins/logstash-codec-avro/blob/v3.4.1/CHANGELOG.md)
 
-For other versions, see the [Versioned plugin docs](https://www.elastic.co/guide/en/logstash-versioned-plugins/current/codec-avro-index.md).
+For other versions, see the [Versioned plugin docs](/vpr/codec-avro-index.md).
 
 ## Getting help [_getting_help_172]
 

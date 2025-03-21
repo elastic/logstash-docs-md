@@ -11,7 +11,7 @@ mapped_pages:
 * Released on: 2021-08-19
 * [Changelog](https://github.com/logstash-plugins/logstash-codec-es_bulk/blob/v3.1.0/CHANGELOG.md)
 
-For other versions, see the [Versioned plugin docs](https://www.elastic.co/guide/en/logstash-versioned-plugins/current/codec-es_bulk-index.md).
+For other versions, see the [Versioned plugin docs](/vpr/codec-es_bulk-index.md).
 
 ## Getting help [_getting_help_181]
 
@@ -27,7 +27,7 @@ Encoding is not supported at this time as the Elasticsearch output submits Logst
 
 ## Codec settings in the `logstash-input-http` plugin [plugins-codecs-es_bulk-codec-settings]
 
-The [input-http](https://www.elastic.co/guide/en/logstash/current/plugins-inputs-http.html) plugin has two configuration options for codecs: `codec` and `additional_codecs`.
+The [input-http](logstash://reference/plugins-inputs-http.md) plugin has two configuration options for codecs: `codec` and `additional_codecs`.
 
 Values in `additional_codecs` are prioritized over those specified in the `codec` option. That is, the default `codec` is applied only if no codec for the request’s content-type is found in the `additional_codecs` setting.
 

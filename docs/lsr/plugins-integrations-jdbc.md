@@ -11,7 +11,7 @@ mapped_pages:
 * Released on: 2024-12-23
 * [Changelog](https://github.com/logstash-plugins/logstash-integration-jdbc/blob/v5.5.2/CHANGELOG.md)
 
-For other versions, see the [Versioned plugin docs](https://www.elastic.co/guide/en/logstash-versioned-plugins/current/integration-jdbc-index.md).
+For other versions, see the [Versioned plugin docs](/vpr/integration-jdbc-index.md).
 
 ## Getting help [_getting_help_3]
 
@@ -22,8 +22,8 @@ For questions about the plugin, open a topic in the [Discuss](http://discuss.ela
 
 The JDBC Integration Plugin provides integrated plugins for working with databases that provide JDBC drivers:
 
-* [JDBC Input Plugin](https://www.elastic.co/guide/en/logstash/current/plugins-inputs-jdbc.html)
-* [JDBC Static Filter Plugin](https://www.elastic.co/guide/en/logstash/current/plugins-filters-jdbc_static.html)
-* [JDBC Streaming Filter Plugin](https://www.elastic.co/guide/en/logstash/current/plugins-filters-jdbc_streaming.html)
+* [JDBC Input Plugin](logstash://reference/plugins-inputs-jdbc.md)
+* [JDBC Static Filter Plugin](logstash://reference/plugins-filters-jdbc_static.md)
+* [JDBC Streaming Filter Plugin](logstash://reference/plugins-filters-jdbc_streaming.md)
 
 

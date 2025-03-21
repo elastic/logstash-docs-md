@@ -11,7 +11,7 @@ mapped_pages:
 * Released on: 2024-03-19
 * [Changelog](https://github.com/logstash-plugins/logstash-filter-fingerprint/blob/v3.4.4/CHANGELOG.md)
 
-For other versions, see the [Versioned plugin docs](https://www.elastic.co/guide/en/logstash-versioned-plugins/current/filter-fingerprint-index.md).
+For other versions, see the [Versioned plugin docs](/vpr/filter-fingerprint-index.md).
 
 ## Getting help [_getting_help_141]
 
@@ -25,7 +25,7 @@ Create consistent hashes (fingerprints) of one or more fields and store the resu
 You can use this plugin to create consistent document ids when events are inserted into Elasticsearch. This approach means that existing documents can be updated instead of creating new documents.
 
 ::::{note} 
-When the `method` option is set to `UUID` the result won’t be a consistent hash but a random [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier). To generate UUIDs, prefer the [uuid filter](https://www.elastic.co/guide/en/logstash/current/plugins-filters-uuid.html).
+When the `method` option is set to `UUID` the result won’t be a consistent hash but a random [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier). To generate UUIDs, prefer the [uuid filter](logstash://reference/plugins-filters-uuid.md).
 ::::
 
 
@@ -189,17 +189,17 @@ These configuration options are supported by all filter plugins:
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`add_field`](plugins-filters-fingerprint.md#plugins-filters-fingerprint-add_field) | [hash](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#hash) | No |
-| [`add_tag`](plugins-filters-fingerprint.md#plugins-filters-fingerprint-add_tag) | [array](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#array) | No |
-| [`enable_metric`](plugins-filters-fingerprint.md#plugins-filters-fingerprint-enable_metric) | [boolean](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#boolean) | No |
-| [`id`](plugins-filters-fingerprint.md#plugins-filters-fingerprint-id) | [string](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#string) | No |
-| [`periodic_flush`](plugins-filters-fingerprint.md#plugins-filters-fingerprint-periodic_flush) | [boolean](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#boolean) | No |
-| [`remove_field`](plugins-filters-fingerprint.md#plugins-filters-fingerprint-remove_field) | [array](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#array) | No |
-| [`remove_tag`](plugins-filters-fingerprint.md#plugins-filters-fingerprint-remove_tag) | [array](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#array) | No |
+| [`add_field`](plugins-filters-fingerprint.md#plugins-filters-fingerprint-add_field) | [hash](logstash://reference/configuration-file-structure.md#hash) | No |
+| [`add_tag`](plugins-filters-fingerprint.md#plugins-filters-fingerprint-add_tag) | [array](logstash://reference/configuration-file-structure.md#array) | No |
+| [`enable_metric`](plugins-filters-fingerprint.md#plugins-filters-fingerprint-enable_metric) | [boolean](logstash://reference/configuration-file-structure.md#boolean) | No |
+| [`id`](plugins-filters-fingerprint.md#plugins-filters-fingerprint-id) | [string](logstash://reference/configuration-file-structure.md#string) | No |
+| [`periodic_flush`](plugins-filters-fingerprint.md#plugins-filters-fingerprint-periodic_flush) | [boolean](logstash://reference/configuration-file-structure.md#boolean) | No |
+| [`remove_field`](plugins-filters-fingerprint.md#plugins-filters-fingerprint-remove_field) | [array](logstash://reference/configuration-file-structure.md#array) | No |
+| [`remove_tag`](plugins-filters-fingerprint.md#plugins-filters-fingerprint-remove_tag) | [array](logstash://reference/configuration-file-structure.md#array) | No |
 
 ### `add_field` [plugins-filters-fingerprint-add_field]
 
-* Value type is [hash](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#hash)
+* Value type is [hash](logstash://reference/configuration-file-structure.md#hash)
 * Default value is `{}`
 
 If this filter is successful, add any arbitrary fields to this event. Field names can be dynamic and include parts of the event using the `%{{field}}`.
@@ -231,7 +231,7 @@ If the event has field `"somefield" == "hello"` this filter, on success, would a
 
 ### `add_tag` [plugins-filters-fingerprint-add_tag]
 
-* Value type is [array](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#array)
+* Value type is [array](logstash://reference/configuration-file-structure.md#array)
 * Default value is `[]`
 
 If this filter is successful, add arbitrary tags to the event. Tags can be dynamic and include parts of the event using the `%{{field}}` syntax.
@@ -260,7 +260,7 @@ If the event has field `"somefield" == "hello"` this filter, on success, would a
 
 ### `enable_metric` [plugins-filters-fingerprint-enable_metric]
 
-* Value type is [boolean](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#boolean)
+* Value type is [boolean](logstash://reference/configuration-file-structure.md#boolean)
 * Default value is `true`
 
 Disable or enable metric logging for this specific plugin instance. By default we record all the metrics we can, but you can disable metrics collection for a specific plugin.
@@ -268,7 +268,7 @@ Disable or enable metric logging for this specific plugin instance. By default w
 
 ### `id` [plugins-filters-fingerprint-id]
 
-* Value type is [string](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#string)
+* Value type is [string](logstash://reference/configuration-file-structure.md#string)
 * There is no default value for this setting.
 
 Add a unique `ID` to the plugin configuration. If no ID is specified, Logstash will generate one. It is strongly recommended to set this ID in your configuration. This is particularly useful when you have two or more plugins of the same type, for example, if you have 2 fingerprint filters. Adding a named ID in this case will help in monitoring Logstash when using the monitoring APIs.
@@ -289,7 +289,7 @@ Variable substitution in the `id` field only supports environment variables and 
 
 ### `periodic_flush` [plugins-filters-fingerprint-periodic_flush]
 
-* Value type is [boolean](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#boolean)
+* Value type is [boolean](logstash://reference/configuration-file-structure.md#boolean)
 * Default value is `false`
 
 Call the filter flush method at regular interval. Optional.
@@ -297,7 +297,7 @@ Call the filter flush method at regular interval. Optional.
 
 ### `remove_field` [plugins-filters-fingerprint-remove_field]
 
-* Value type is [array](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#array)
+* Value type is [array](logstash://reference/configuration-file-structure.md#array)
 * Default value is `[]`
 
 If this filter is successful, remove arbitrary fields from this event. Fields names can be dynamic and include parts of the event using the `%{{field}}` Example:
@@ -324,7 +324,7 @@ If the event has field `"somefield" == "hello"` this filter, on success, would r
 
 ### `remove_tag` [plugins-filters-fingerprint-remove_tag]
 
-* Value type is [array](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#array)
+* Value type is [array](logstash://reference/configuration-file-structure.md#array)
 * Default value is `[]`
 
 If this filter is successful, remove arbitrary tags from the event. Tags can be dynamic and include parts of the event using the `%{{field}}` syntax.

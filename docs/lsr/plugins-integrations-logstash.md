@@ -11,7 +11,7 @@ mapped_pages:
 * Released on: 2024-12-10
 * [Changelog](https://github.com/logstash-plugins/logstash-integration-logstash/blob/v1.0.4/CHANGELOG.md)
 
-For other versions, see the [Versioned plugin docs](https://www.elastic.co/guide/en/logstash-versioned-plugins/current/integration-logstash-index.md).
+For other versions, see the [Versioned plugin docs](/vpr/integration-logstash-index.md).
 
 ## Getting help [_getting_help_5]
 
@@ -22,8 +22,8 @@ For questions about the plugin, open a topic in the [Discuss](http://discuss.ela
 
 The Logstash Integration Plugin provides integrated plugins for sending events from one Logstash to another instance(s):
 
-* [Logstash output plugin](https://www.elastic.co/guide/en/logstash/current/plugins-outputs-logstash.html)
-* [Logstash input plugin](https://www.elastic.co/guide/en/logstash/current/plugins-inputs-logstash.html)
+* [Logstash output plugin](logstash://reference/plugins-outputs-logstash.md)
+* [Logstash input plugin](logstash://reference/plugins-inputs-logstash.md)
 
 ### High-level concepts [plugins-integrations-logstash-concepts]
 

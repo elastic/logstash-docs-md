@@ -12,7 +12,7 @@ mapped_pages:
 * Released on: 2024-12-10
 * [Changelog](https://github.com/logstash-plugins/logstash-integration-logstash/blob/v1.0.4/CHANGELOG.md)
 
-For other versions, see the [Versioned plugin docs](https://www.elastic.co/guide/en/logstash-versioned-plugins/current/input-logstash-index.md).
+For other versions, see the [Versioned plugin docs](/vpr/input-logstash-index.md).
 
 ## Getting help [_getting_help_37]
 
@@ -21,7 +21,7 @@ For questions about the plugin, open a topic in the [Discuss](http://discuss.ela
 
 ## Description [_description_36]
 
-Listen for events that are sent by a [Logstash output plugin](https://www.elastic.co/guide/en/logstash/current/plugins-outputs-logstash.html) in a pipeline that may be in another process or on another host. The upstream output must have a TCP route to the port (defaults to 9800) on an interface that this plugin is bound to.
+Listen for events that are sent by a [Logstash output plugin](logstash://reference/plugins-outputs-logstash.md) in a pipeline that may be in another process or on another host. The upstream output must have a TCP route to the port (defaults to 9800) on an interface that this plugin is bound to.
 
 ::::{note} 
 Sending events to this input by *any* means other than `plugins-outputs-logstash` is neither advised nor supported. We will maintain cross-compatibility with any two supported versions of output/input pair and reserve the right to change details such as protocol and encoding.
@@ -223,15 +223,15 @@ These configuration options are supported by all input plugins:
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`add_field`](plugins-inputs-logstash.md#plugins-inputs-logstash-add_field) | [hash](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#hash) | No |
-| [`enable_metric`](plugins-inputs-logstash.md#plugins-inputs-logstash-enable_metric) | [boolean](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#boolean) | No |
-| [`id`](plugins-inputs-logstash.md#plugins-inputs-logstash-id) | [string](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#string) | No |
-| [`tags`](plugins-inputs-logstash.md#plugins-inputs-logstash-tags) | [array](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#array) | No |
-| [`type`](plugins-inputs-logstash.md#plugins-inputs-logstash-type) | [string](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#string) | No |
+| [`add_field`](plugins-inputs-logstash.md#plugins-inputs-logstash-add_field) | [hash](logstash://reference/configuration-file-structure.md#hash) | No |
+| [`enable_metric`](plugins-inputs-logstash.md#plugins-inputs-logstash-enable_metric) | [boolean](logstash://reference/configuration-file-structure.md#boolean) | No |
+| [`id`](plugins-inputs-logstash.md#plugins-inputs-logstash-id) | [string](logstash://reference/configuration-file-structure.md#string) | No |
+| [`tags`](plugins-inputs-logstash.md#plugins-inputs-logstash-tags) | [array](logstash://reference/configuration-file-structure.md#array) | No |
+| [`type`](plugins-inputs-logstash.md#plugins-inputs-logstash-type) | [string](logstash://reference/configuration-file-structure.md#string) | No |
 
 ### `add_field` [plugins-inputs-logstash-add_field]
 
-* Value type is [hash](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#hash)
+* Value type is [hash](logstash://reference/configuration-file-structure.md#hash)
 * Default value is `{}`
 
 Add a field to an event
@@ -239,7 +239,7 @@ Add a field to an event
 
 ### `enable_metric` [plugins-inputs-logstash-enable_metric]
 
-* Value type is [boolean](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#boolean)
+* Value type is [boolean](logstash://reference/configuration-file-structure.md#boolean)
 * Default value is `true`
 
 Disable or enable metric logging for this specific plugin instance by default we record all the metrics we can, but you can disable metrics collection for a specific plugin.
@@ -247,7 +247,7 @@ Disable or enable metric logging for this specific plugin instance by default we
 
 ### `id` [plugins-inputs-logstash-id]
 
-* Value type is [string](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#string)
+* Value type is [string](logstash://reference/configuration-file-structure.md#string)
 * There is no default value for this setting.
 
 Add a unique `ID` to the plugin configuration. If no ID is specified, Logstash will generate one. It is strongly recommended to set this ID in your configuration. This is particularly useful when you have two or more plugins of the same type, for example, if you have 2 logstash inputs. Adding a named ID in this case will help in monitoring Logstash when using the monitoring APIs.
@@ -268,7 +268,7 @@ Variable substitution in the `id` field only supports environment variables and 
 
 ### `tags` [plugins-inputs-logstash-tags]
 
-* Value type is [array](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#array)
+* Value type is [array](logstash://reference/configuration-file-structure.md#array)
 * There is no default value for this setting.
 
 Add any number of arbitrary tags to your event.
@@ -278,7 +278,7 @@ This can help with processing later.
 
 ### `type` [plugins-inputs-logstash-type]
 
-* Value type is [string](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#string)
+* Value type is [string](logstash://reference/configuration-file-structure.md#string)
 * There is no default value for this setting.
 
 Add a `type` field to all events handled by this input.

@@ -11,7 +11,7 @@ mapped_pages:
 * Released on: 2024-06-25
 * [Changelog](https://github.com/logstash-plugins/logstash-codec-fluent/blob/v3.4.3/CHANGELOG.md)
 
-For other versions, see the [Versioned plugin docs](https://www.elastic.co/guide/en/logstash-versioned-plugins/current/codec-fluent-index.md).
+For other versions, see the [Versioned plugin docs](/vpr/codec-fluent-index.md).
 
 ## Getting help [_getting_help_182]
 

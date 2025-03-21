@@ -11,7 +11,7 @@ mapped_pages:
 * Released on: 2024-04-25
 * [Changelog](https://github.com/logstash-plugins/logstash-codec-multiline/blob/v3.1.2/CHANGELOG.md)
 
-For other versions, see the [Versioned plugin docs](https://www.elastic.co/guide/en/logstash-versioned-plugins/current/codec-multiline-index.md).
+For other versions, see the [Versioned plugin docs](/vpr/codec-multiline-index.md).
 
 ## Getting help [_getting_help_192]
 
@@ -23,7 +23,7 @@ For questions about the plugin, open a topic in the [Discuss](http://discuss.ela
 The multiline codec will collapse multiline messages and merge them into a single event.
 
 ::::{important} 
-If you are using a Logstash input plugin that supports multiple hosts, such as the [beats input plugin](https://www.elastic.co/guide/en/logstash/current/plugins-inputs-beats.html), you should not use the multiline codec to handle multiline events. Doing so may result in the mixing of streams and corrupted event data. In this situation, you need to handle multiline events before sending the event data to Logstash.
+If you are using a Logstash input plugin that supports multiple hosts, such as the [beats input plugin](logstash://reference/plugins-inputs-beats.md), you should not use the multiline codec to handle multiline events. Doing so may result in the mixing of streams and corrupted event data. In this situation, you need to handle multiline events before sending the event data to Logstash.
 ::::
 
 

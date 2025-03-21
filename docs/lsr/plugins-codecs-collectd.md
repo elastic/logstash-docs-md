@@ -11,7 +11,7 @@ mapped_pages:
 * Released on: 2021-08-04
 * [Changelog](https://github.com/logstash-plugins/logstash-codec-collectd/blob/v3.1.0/CHANGELOG.md)
 
-For other versions, see the [Versioned plugin docs](https://www.elastic.co/guide/en/logstash-versioned-plugins/current/codec-collectd-index.md).
+For other versions, see the [Versioned plugin docs](/vpr/codec-collectd-index.md).
 
 ## Getting help [_getting_help_176]
 

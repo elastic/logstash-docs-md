@@ -12,7 +12,7 @@ mapped_pages:
 
 ## Installation [_installation_67]
 
-You can easily install plugins that are not bundled by default. Run `bin/logstash-plugin install logstash-filter-wurfl_device_detection`. See [Working with plugins](https://www.elastic.co/guide/en/logstash/current/working-with-plugins.html) for more details.
+You can easily install plugins that are not bundled by default. Run `bin/logstash-plugin install logstash-filter-wurfl_device_detection`. See [Working with plugins](logstash://reference/working-with-plugins.md) for more details.
 
 
 ## Description [_description_168]

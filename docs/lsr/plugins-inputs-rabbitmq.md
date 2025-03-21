@@ -12,7 +12,7 @@ mapped_pages:
 * Released on: 2024-09-16
 * [Changelog](https://github.com/logstash-plugins/logstash-integration-rabbitmq/blob/v7.4.0/CHANGELOG.md)
 
-For other versions, see the [Versioned plugin docs](https://www.elastic.co/guide/en/logstash-versioned-plugins/current/input-rabbitmq-index.md).
+For other versions, see the [Versioned plugin docs](/vpr/input-rabbitmq-index.md).
 
 ## Getting help [_getting_help_43]
 
@@ -359,16 +359,16 @@ These configuration options are supported by all input plugins:
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`add_field`](plugins-inputs-rabbitmq.md#plugins-inputs-rabbitmq-add_field) | [hash](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#hash) | No |
-| [`codec`](plugins-inputs-rabbitmq.md#plugins-inputs-rabbitmq-codec) | [codec](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#codec) | No |
-| [`enable_metric`](plugins-inputs-rabbitmq.md#plugins-inputs-rabbitmq-enable_metric) | [boolean](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#boolean) | No |
-| [`id`](plugins-inputs-rabbitmq.md#plugins-inputs-rabbitmq-id) | [string](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#string) | No |
-| [`tags`](plugins-inputs-rabbitmq.md#plugins-inputs-rabbitmq-tags) | [array](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#array) | No |
-| [`type`](plugins-inputs-rabbitmq.md#plugins-inputs-rabbitmq-type) | [string](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#string) | No |
+| [`add_field`](plugins-inputs-rabbitmq.md#plugins-inputs-rabbitmq-add_field) | [hash](logstash://reference/configuration-file-structure.md#hash) | No |
+| [`codec`](plugins-inputs-rabbitmq.md#plugins-inputs-rabbitmq-codec) | [codec](logstash://reference/configuration-file-structure.md#codec) | No |
+| [`enable_metric`](plugins-inputs-rabbitmq.md#plugins-inputs-rabbitmq-enable_metric) | [boolean](logstash://reference/configuration-file-structure.md#boolean) | No |
+| [`id`](plugins-inputs-rabbitmq.md#plugins-inputs-rabbitmq-id) | [string](logstash://reference/configuration-file-structure.md#string) | No |
+| [`tags`](plugins-inputs-rabbitmq.md#plugins-inputs-rabbitmq-tags) | [array](logstash://reference/configuration-file-structure.md#array) | No |
+| [`type`](plugins-inputs-rabbitmq.md#plugins-inputs-rabbitmq-type) | [string](logstash://reference/configuration-file-structure.md#string) | No |
 
 ### `add_field` [plugins-inputs-rabbitmq-add_field]
 
-* Value type is [hash](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#hash)
+* Value type is [hash](logstash://reference/configuration-file-structure.md#hash)
 * Default value is `{}`
 
 Add a field to an event
@@ -376,7 +376,7 @@ Add a field to an event
 
 ### `codec` [plugins-inputs-rabbitmq-codec]
 
-* Value type is [codec](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#codec)
+* Value type is [codec](logstash://reference/configuration-file-structure.md#codec)
 * Default value is `"json"`
 
 The codec used for input data. Input codecs are a convenient method for decoding your data before it enters the input, without needing a separate filter in your Logstash pipeline.
@@ -384,7 +384,7 @@ The codec used for input data. Input codecs are a convenient method for decoding
 
 ### `enable_metric` [plugins-inputs-rabbitmq-enable_metric]
 
-* Value type is [boolean](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#boolean)
+* Value type is [boolean](logstash://reference/configuration-file-structure.md#boolean)
 * Default value is `true`
 
 Disable or enable metric logging for this specific plugin instance by default we record all the metrics we can, but you can disable metrics collection for a specific plugin.
@@ -392,7 +392,7 @@ Disable or enable metric logging for this specific plugin instance by default we
 
 ### `id` [plugins-inputs-rabbitmq-id]
 
-* Value type is [string](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#string)
+* Value type is [string](logstash://reference/configuration-file-structure.md#string)
 * There is no default value for this setting.
 
 Add a unique `ID` to the plugin configuration. If no ID is specified, Logstash will generate one. It is strongly recommended to set this ID in your configuration. This is particularly useful when you have two or more plugins of the same type, for example, if you have 2 rabbitmq inputs. Adding a named ID in this case will help in monitoring Logstash when using the monitoring APIs.
@@ -413,7 +413,7 @@ Variable substitution in the `id` field only supports environment variables and 
 
 ### `tags` [plugins-inputs-rabbitmq-tags]
 
-* Value type is [array](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#array)
+* Value type is [array](logstash://reference/configuration-file-structure.md#array)
 * There is no default value for this setting.
 
 Add any number of arbitrary tags to your event.
@@ -423,7 +423,7 @@ This can help with processing later.
 
 ### `type` [plugins-inputs-rabbitmq-type]
 
-* Value type is [string](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#string)
+* Value type is [string](logstash://reference/configuration-file-structure.md#string)
 * There is no default value for this setting.
 
 Add a `type` field to all events handled by this input.

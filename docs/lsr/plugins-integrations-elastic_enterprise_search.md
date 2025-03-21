@@ -11,7 +11,7 @@ mapped_pages:
 * Released on: 2023-11-07
 * [Changelog](https://github.com/logstash-plugins/logstash-integration-elastic_enterprise_search/blob/v3.0.0/CHANGELOG.md)
 
-For other versions, see the [Versioned plugin docs](https://www.elastic.co/guide/en/logstash-versioned-plugins/current/integration-elastic_enterprise_search-index.md).
+For other versions, see the [Versioned plugin docs](/vpr/integration-elastic_enterprise_search-index.md).
 
 ## Getting help [_getting_help_2]
 
@@ -22,7 +22,7 @@ For questions about the plugin, open a topic in the [Discuss](http://discuss.ela
 
 The Elastic Enterprise Search integration plugin provides integrated plugins for working with [Elastic App Search](https://www.elastic.co/app-search) and [Elastic Workplace Search](https://www.elastic.co/workplace-search) services:
 
-* [Elastic App Search output plugin](https://www.elastic.co/guide/en/logstash/current/plugins-outputs-elastic_app_search.html)
-* [Elastic Workplace Search output plugin](https://www.elastic.co/guide/en/logstash/current/plugins-outputs-elastic_workplace_search.html)
+* [Elastic App Search output plugin](logstash://reference/plugins-outputs-elastic_app_search.md)
+* [Elastic Workplace Search output plugin](logstash://reference/plugins-outputs-elastic_workplace_search.md)
 
 
