@@ -166,7 +166,7 @@ The currently supported formats are YAML, JSON, and CSV. Format selection is bas
     * Otherwise, the default value is `disabled`.
 
 
-Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)](https://www.elastic.co/guide/en/ecs/{{ecs_version}}). The value of this setting affects the *default* value of [`target`](plugins-filters-translate.md#plugins-filters-translate-target).
+Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)](https://www.elastic.co/guide/en/ecs/current). The value of this setting affects the *default* value of [`target`](plugins-filters-translate.md#plugins-filters-translate-target).
 
 
 ### `exact` [plugins-filters-translate-exact]
@@ -507,7 +507,7 @@ Call the filter flush method at regular interval. Optional.
 * Value type is [array](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#array)
 * Default value is `[]`
 
-If this filter is successful, remove arbitrary fields from this event. Fields names can be dynamic and include parts of the event using the %{{field}} Example:
+If this filter is successful, remove arbitrary fields from this event. Fields names can be dynamic and include parts of the event using the `%{{field}}` Example:
 
 ```json
     filter {

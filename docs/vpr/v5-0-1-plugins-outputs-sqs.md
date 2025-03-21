@@ -54,7 +54,7 @@ Typically, you should setup an IAM policy, create a user and apply the IAM polic
 
 ## Batch Publishing [_batch_publishing_17]
 
-This output publishes messages to SQS in batches in order to optimize event throughput and increase performance. This is done using the [`SendMessageBatch`](http://docs.aws.amazon.com/AWSSimpleQueueService/latest/APIReference/API_SendMessageBatch.html) API. When publishing messages to SQS in batches, the following service limits must be respected (see [Limits in Amazon SQS](http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/limits-messages.html))):
+This output publishes messages to SQS in batches in order to optimize event throughput and increase performance. This is done using the [`SendMessageBatch`](http://docs.aws.amazon.com/AWSSimpleQueueService/latest/APIReference/API_SendMessageBatch.html) API. When publishing messages to SQS in batches, the following service limits must be respected (see [Limits in Amazon SQS](http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/limits-messages.html)):
 
 * The maximum allowed individual message size is 256KiB.
 * The maximum total payload size (i.e. the sum of the sizes of all individual messages within a batch) is also 256KiB.

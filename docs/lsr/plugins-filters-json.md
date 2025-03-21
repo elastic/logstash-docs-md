@@ -62,7 +62,7 @@ Also see [Common options](plugins-filters-json.md#plugins-filters-json-common-op
     * `v1`: Elastic Common Schema compliant behavior (warns when `target` isn’t set)
 
 
-Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)](https://www.elastic.co/guide/en/ecs/{{ecs_version}}). See [Event Metadata and the Elastic Common Schema (ECS)](plugins-filters-json.md#plugins-filters-json-ecs_metadata) for detailed information.
+Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)](https://www.elastic.co/guide/en/ecs/current). See [Event Metadata and the Elastic Common Schema (ECS)](plugins-filters-json.md#plugins-filters-json-ecs_metadata) for detailed information.
 
 
 ### `skip_on_invalid_json` [plugins-filters-json-skip_on_invalid_json]
@@ -249,7 +249,7 @@ Call the filter flush method at regular interval. Optional.
 * Value type is [array](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#array)
 * Default value is `[]`
 
-If this filter is successful, remove arbitrary fields from this event. Fields names can be dynamic and include parts of the event using the %{{field}} Example:
+If this filter is successful, remove arbitrary fields from this event. Fields names can be dynamic and include parts of the event using the `%{{field}}` Example:
 
 ```json
     filter {

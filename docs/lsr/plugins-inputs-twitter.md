@@ -57,7 +57,7 @@ Sample event fields generated:
 
 ## Compatibility with the Elastic Common Schema (ECS) [plugins-inputs-twitter-ecs]
 
-Twitter streams are very specific and do not map easily to the [Elastic Common Schema (ECS)](https://www.elastic.co/guide/en/ecs/{{ecs_version}}). We recommend setting a [`target`](plugins-inputs-twitter.md#plugins-inputs-twitter-target) when [ECS compatibility mode](plugins-inputs-twitter.md#plugins-inputs-twitter-ecs_compatibility) is enabled. The plugin issues a warning in the log when a `target` isn’t set.
+Twitter streams are very specific and do not map easily to the [Elastic Common Schema (ECS)](https://www.elastic.co/guide/en/ecs/current). We recommend setting a [`target`](plugins-inputs-twitter.md#plugins-inputs-twitter-target) when [ECS compatibility mode](plugins-inputs-twitter.md#plugins-inputs-twitter-ecs_compatibility) is enabled. The plugin issues a warning in the log when a `target` isn’t set.
 
 
 ## Twitter Input Configuration Options [plugins-inputs-twitter-options]
@@ -124,7 +124,7 @@ If you don’t have one of these, you can create one by registering a new applic
     * Otherwise, the default value is `disabled`.
 
 
-Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)](https://www.elastic.co/guide/en/ecs/{{ecs_version}}).
+Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)](https://www.elastic.co/guide/en/ecs/current).
 
 
 ### `follows` [plugins-inputs-twitter-follows]

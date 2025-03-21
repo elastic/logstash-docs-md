@@ -31,7 +31,7 @@ http://docs.amazonwebservices.com/sns/latest/api/
 This plugin looks for the following fields on events it receives:
 
 * `sns` - If no ARN is found in the configuration file, this will be used as the ARN to publish.
-* `sns_subject` - The subject line that should be used. Optional. The "%{{host}}" will be used if `sns_subject` is not present. The subject will be truncated to 100 characters. If `sns_subject` is set to a non-string value a JSON version of that value will be saved.
+* `sns_subject` - The subject line that should be used. Optional. The `"%{{host}}"` will be used if `sns_subject` is not present. The subject will be truncated to 100 characters. If `sns_subject` is set to a non-string value a JSON version of that value will be saved.
 * `sns_message` - Optional string of message to be sent. If this is set to a non-string value it will be encoded with the specified `codec`. If this is not set the entire event will be encoded with the codec. with the @message truncated so that the length of the JSON fits in `32768` bytes.
 
 

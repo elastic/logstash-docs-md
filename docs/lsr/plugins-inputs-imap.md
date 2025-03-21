@@ -105,7 +105,7 @@ For multipart messages, use the first part that has this content-type as the eve
     * Otherwise, the default value is `disabled`.
 
 
-Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)](https://www.elastic.co/guide/en/ecs/{{ecs_version}}). The value of this setting affects the *default* value of [`headers_target`](plugins-inputs-imap.md#plugins-inputs-imap-headers_target) and [`attachments_target`](plugins-inputs-imap.md#plugins-inputs-imap-attachments_target).
+Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)](https://www.elastic.co/guide/en/ecs/current). The value of this setting affects the *default* value of [`headers_target`](plugins-inputs-imap.md#plugins-inputs-imap-headers_target) and [`attachments_target`](plugins-inputs-imap.md#plugins-inputs-imap-attachments_target).
 
 
 ### `expunge` [plugins-inputs-imap-expunge]

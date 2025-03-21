@@ -88,7 +88,7 @@ output {
     * `v1`,`v8`: Elastic Common Schema compliant behavior (`[event][original]` is also added)
 
 
-Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)](https://www.elastic.co/guide/en/ecs/{{ecs_version}}).
+Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)](https://www.elastic.co/guide/en/ecs/current).
 
 
 ### `encoding` [plugins-codecs-avro-encoding]

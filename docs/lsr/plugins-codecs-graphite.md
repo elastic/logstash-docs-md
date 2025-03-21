@@ -38,7 +38,7 @@ This codec will encode and decode Graphite formated lines.
 * Value type is [array](introduction.md#array)
 * Default value is `["%{[^}]+}"]`
 
-Exclude regex matched metric names, by default exclude unresolved %{{field}} strings
+Exclude regex matched metric names, by default exclude unresolved `%{{field}}` strings
 
 
 ### `fields_are_metrics` [plugins-codecs-graphite-fields_are_metrics]

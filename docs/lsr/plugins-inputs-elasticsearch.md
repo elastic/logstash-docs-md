@@ -280,7 +280,7 @@ If document metadata storage is requested by enabling the `docinfo` option, this
     * Otherwise, the default value is `disabled`
 
 
-Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)](https://www.elastic.co/guide/en/ecs/{{ecs_version}}).
+Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)](https://www.elastic.co/guide/en/ecs/current).
 
 
 ### `hosts` [plugins-inputs-elasticsearch-hosts]

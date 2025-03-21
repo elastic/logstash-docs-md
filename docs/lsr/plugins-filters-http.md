@@ -124,7 +124,7 @@ If set to `"json"` and the [`body`](plugins-filters-http.md#plugins-filters-http
     * Otherwise, the default value is `disabled`.
 
 
-Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)](https://www.elastic.co/guide/en/ecs/{{ecs_version}}). The value of this setting affects the *default* value of [`target_body`](plugins-filters-http.md#plugins-filters-http-target_body) and [`target_headers`](plugins-filters-http.md#plugins-filters-http-target_headers).
+Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)](https://www.elastic.co/guide/en/ecs/current). The value of this setting affects the *default* value of [`target_body`](plugins-filters-http.md#plugins-filters-http-target_body) and [`target_headers`](plugins-filters-http.md#plugins-filters-http-target_headers).
 
 
 ### `headers` [plugins-filters-http-headers]
@@ -567,7 +567,7 @@ Call the filter flush method at regular interval. Optional.
 * Value type is [array](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#array)
 * Default value is `[]`
 
-If this filter is successful, remove arbitrary fields from this event. Fields names can be dynamic and include parts of the event using the %{{field}} Example:
+If this filter is successful, remove arbitrary fields from this event. Fields names can be dynamic and include parts of the event using the `%{{field}}` Example:
 
 ```json
     filter {

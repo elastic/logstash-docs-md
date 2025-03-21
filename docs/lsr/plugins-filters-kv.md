@@ -141,7 +141,7 @@ A hash specifying the default keys and their values which should be added to the
     * `v1`: Elastic Common Schema compliant behavior (warns when `target` isn’t set)
 
 
-Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)](https://www.elastic.co/guide/en/ecs/{{ecs_version}}). See [Event Metadata and the Elastic Common Schema (ECS)](plugins-filters-kv.md#plugins-filters-kv-ecs_metadata) for detailed information.
+Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)](https://www.elastic.co/guide/en/ecs/current). See [Event Metadata and the Elastic Common Schema (ECS)](plugins-filters-kv.md#plugins-filters-kv-ecs_metadata) for detailed information.
 
 
 ### `exclude_keys` [plugins-filters-kv-exclude_keys]
@@ -631,7 +631,7 @@ Call the filter flush method at regular interval. Optional.
 * Value type is [array](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#array)
 * Default value is `[]`
 
-If this filter is successful, remove arbitrary fields from this event. Fields names can be dynamic and include parts of the event using the %{{field}} Example:
+If this filter is successful, remove arbitrary fields from this event. Fields names can be dynamic and include parts of the event using the `%{{field}}` Example:
 
 ```json
     filter {

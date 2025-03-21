@@ -25,7 +25,7 @@ By default, each event is assumed to be one line. If you want to join lines, you
 
 ## Compatibility with the Elastic Common Schema (ECS) [plugins-inputs-pipe-ecs]
 
-This plugin adds extra fields about the event’s source. Configure the [`ecs_compatibility`](plugins-inputs-pipe.md#plugins-inputs-pipe-ecs_compatibility) option if you want to ensure that these fields are compatible with [ECS](https://www.elastic.co/guide/en/ecs/{{ecs_version}}).
+This plugin adds extra fields about the event’s source. Configure the [`ecs_compatibility`](plugins-inputs-pipe.md#plugins-inputs-pipe-ecs_compatibility) option if you want to ensure that these fields are compatible with [ECS](https://www.elastic.co/guide/en/ecs/current).
 
 These fields are added after the event has been decoded by the appropriate codec, and will not overwrite existing values.
 
@@ -76,7 +76,7 @@ input {
     * `v1`, `v8`: uses fields that are compatible with ECS, such as `[host][name]`
 
 
-Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)](https://www.elastic.co/guide/en/ecs/{{ecs_version}}). See [Compatibility with the Elastic Common Schema (ECS)](plugins-inputs-pipe.md#plugins-inputs-pipe-ecs) for detailed information.
+Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)](https://www.elastic.co/guide/en/ecs/current). See [Compatibility with the Elastic Common Schema (ECS)](plugins-inputs-pipe.md#plugins-inputs-pipe-ecs) for detailed information.
 
 ***Sample output: ECS enabled***
 

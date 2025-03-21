@@ -441,7 +441,7 @@ This represents the value of the subscriber name for a durable subscribtion, and
     * Otherwise, the default value is `disabled`.
 
 
-Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)](https://www.elastic.co/guide/en/ecs/{{ecs_version}}). The value of this setting affects the *default* value of [`headers_target`](plugins-inputs-jms.md#plugins-inputs-jms-headers_target) and [`properties_target`](plugins-inputs-jms.md#plugins-inputs-jms-properties_target).
+Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)](https://www.elastic.co/guide/en/ecs/current). The value of this setting affects the *default* value of [`headers_target`](plugins-inputs-jms.md#plugins-inputs-jms-headers_target) and [`properties_target`](plugins-inputs-jms.md#plugins-inputs-jms-properties_target).
 
 
 ### `factory` [plugins-inputs-jms-factory]

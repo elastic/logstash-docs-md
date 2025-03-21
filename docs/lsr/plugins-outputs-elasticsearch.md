@@ -557,7 +557,7 @@ This sets the document type to write events to. Generally you should try to writ
     * Otherwise, the default value is `disabled`.
 
 
-Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)](https://www.elastic.co/guide/en/ecs/{{ecs_version}}), including the installation of ECS-compatible index templates. The value of this setting affects the *default* values of:
+Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)](https://www.elastic.co/guide/en/ecs/current), including the installation of ECS-compatible index templates. The value of this setting affects the *default* values of:
 
 * [`index`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-index)
 * [`template_name`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-template_name)

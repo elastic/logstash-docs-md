@@ -65,7 +65,7 @@ Also see [Common options](plugins-inputs-syslog.md#plugins-inputs-syslog-common-
     * Otherwise, the default value is `disabled`.
 
 
-Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)](https://www.elastic.co/guide/en/ecs/{{ecs_version}}).
+Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)](https://www.elastic.co/guide/en/ecs/current).
 
 
 ### `facility_labels` [plugins-inputs-syslog-facility_labels]
@@ -165,7 +165,7 @@ input {
 * Value type is [string](introduction.md#string)
 * There is no default value for this setting.
 
-Specify a time zone canonical ID to be used for date parsing. The valid IDs are listed on the [Joda.org available time zones page]([http://joda-time.sourceforge.net/timezones.html](http://joda-time.sourceforge.net/timezones.md)). This is useful in case the time zone cannot be extracted from the value, and is not the platform default. If this is not specified the platform default will be used. Canonical ID is good as it takes care of daylight saving time for you. For example, `America/Los_Angeles` or `Europe/Paris` are valid IDs.
+Specify a time zone canonical ID to be used for date parsing. The valid IDs are listed on the [Joda.org available time zones page](http://joda-time.sourceforge.net/timezones.html). This is useful in case the time zone cannot be extracted from the value, and is not the platform default. If this is not specified the platform default will be used. Canonical ID is good as it takes care of daylight saving time for you. For example, `America/Los_Angeles` or `Europe/Paris` are valid IDs.
 
 
 ### `use_labels` [plugins-inputs-syslog-use_labels]

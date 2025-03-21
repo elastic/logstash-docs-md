@@ -120,7 +120,7 @@ Define a set of datatype conversions to be applied to columns. Possible conversi
     * Otherwise, the default value is `disabled`
 
 
-Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)](https://www.elastic.co/guide/en/ecs/{{ecs_version}}).
+Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)](https://www.elastic.co/guide/en/ecs/current).
 
 
 ### `include_headers` [plugins-codecs-csv-include_headers]

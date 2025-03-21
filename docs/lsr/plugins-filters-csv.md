@@ -110,7 +110,7 @@ Example:
     * `v1`: uses the value in `target` as field name
 
 
-Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)](https://www.elastic.co/guide/en/ecs/{{ecs_version}}). See [Event Metadata and the Elastic Common Schema (ECS)](plugins-filters-csv.md#plugins-filters-csv-ecs_metadata) for detailed information.
+Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)](https://www.elastic.co/guide/en/ecs/current). See [Event Metadata and the Elastic Common Schema (ECS)](plugins-filters-csv.md#plugins-filters-csv-ecs_metadata) for detailed information.
 
 
 ### `quote_char` [plugins-filters-csv-quote_char]
@@ -289,7 +289,7 @@ Call the filter flush method at regular interval. Optional.
 * Value type is [array](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#array)
 * Default value is `[]`
 
-If this filter is successful, remove arbitrary fields from this event. Fields names can be dynamic and include parts of the event using the %{{field}} Example:
+If this filter is successful, remove arbitrary fields from this event. Fields names can be dynamic and include parts of the event using the `%{{field}}` Example:
 
 ```json
     filter {

@@ -105,7 +105,7 @@ Also see [Common options](plugins-inputs-snmp.md#plugins-inputs-snmp-common-opti
     * Otherwise, the default value is `disabled`.
 
 
-Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)](https://www.elastic.co/guide/en/ecs/{{ecs_version}}).
+Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)](https://www.elastic.co/guide/en/ecs/current).
 
 
 ### `get` [plugins-inputs-snmp-get]

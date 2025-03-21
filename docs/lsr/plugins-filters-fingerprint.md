@@ -133,7 +133,7 @@ When set to `true` and `method` isn’t `UUID` or `PUNCTUATION`, the plugin conc
     * `v1`: uses `[event][hash]` fields that are compatible with Elastic Common Schema
 
 
-Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)](https://www.elastic.co/guide/en/ecs/{{ecs_version}}). See [Event Metadata and the Elastic Common Schema (ECS)](plugins-filters-fingerprint.md#plugins-filters-fingerprint-ecs_metadata) for detailed information.
+Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)](https://www.elastic.co/guide/en/ecs/current). See [Event Metadata and the Elastic Common Schema (ECS)](plugins-filters-fingerprint.md#plugins-filters-fingerprint-ecs_metadata) for detailed information.
 
 
 ### `key` [plugins-filters-fingerprint-key]
@@ -298,7 +298,7 @@ Call the filter flush method at regular interval. Optional.
 * Value type is [array](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#array)
 * Default value is `[]`
 
-If this filter is successful, remove arbitrary fields from this event. Fields names can be dynamic and include parts of the event using the %{{field}} Example:
+If this filter is successful, remove arbitrary fields from this event. Fields names can be dynamic and include parts of the event using the `%{{field}}` Example:
 
 ```json
     filter {

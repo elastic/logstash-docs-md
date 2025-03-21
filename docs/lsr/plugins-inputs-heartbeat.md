@@ -76,7 +76,7 @@ How many times to iterate. This is typically used only for testing purposes.
     * Otherwise, the default value is `disabled`.
 
 
-Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)](https://www.elastic.co/guide/en/ecs/{{ecs_version}}). Refer to [Elastic Common Schema (ECS)](plugins-inputs-heartbeat.md#plugins-inputs-heartbeat-ecs) in this topic for detailed information.
+Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)](https://www.elastic.co/guide/en/ecs/current). Refer to [Elastic Common Schema (ECS)](plugins-inputs-heartbeat.md#plugins-inputs-heartbeat-ecs) in this topic for detailed information.
 
 
 ### `interval` [plugins-inputs-heartbeat-interval]

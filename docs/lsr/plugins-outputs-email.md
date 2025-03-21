@@ -237,7 +237,7 @@ How Logstash should send the email, either via SMTP or by invoking sendmail.
 * Value type is [path](introduction.md#path)
 * There is no default value for this setting.
 
-Path of a [Mustache templating]([https://mustache.github.io/](https://mustache.github.io/)) file used for email templating. See example in test fixture. Can be used with `body` to send multi-part emails. Takes precedence over `htmlBody`.
+Path of a [Mustache templating](https://mustache.github.io/) file used for email templating. See example in test fixture. Can be used with `body` to send multi-part emails. Takes precedence over `htmlBody`.
 
 
 

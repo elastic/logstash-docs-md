@@ -48,7 +48,7 @@ This will execute `echo` command every 30 seconds.
 
 ## Compatibility with the Elastic Common Schema (ECS) [plugins-inputs-exec-ecs]
 
-This plugin adds metadata about the event’s source, and can be configured to do so in an [ECS-compatible](https://www.elastic.co/guide/en/ecs/{{ecs_version}}) way with [`ecs_compatibility`](plugins-inputs-exec.md#plugins-inputs-exec-ecs_compatibility). This metadata is added after the event has been decoded by the appropriate codec, and will not overwrite existing values.
+This plugin adds metadata about the event’s source, and can be configured to do so in an [ECS-compatible](https://www.elastic.co/guide/en/ecs/current) way with [`ecs_compatibility`](plugins-inputs-exec.md#plugins-inputs-exec-ecs_compatibility). This metadata is added after the event has been decoded by the appropriate codec, and will not overwrite existing values.
 
 | ECS Disabled | ECS v1 , v8 | Description |
 | --- | --- | --- |
@@ -92,7 +92,7 @@ Command to run. For example, `uptime`
     * `v1`, `v8`: uses fields that are compatible with ECS, such as `[host][name]`
 
 
-Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)](https://www.elastic.co/guide/en/ecs/{{ecs_version}}). See [Compatibility with the Elastic Common Schema (ECS)](plugins-inputs-exec.md#plugins-inputs-exec-ecs) for detailed information.
+Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)](https://www.elastic.co/guide/en/ecs/current). See [Compatibility with the Elastic Common Schema (ECS)](plugins-inputs-exec.md#plugins-inputs-exec-ecs) for detailed information.
 
 ***Sample output: ECS enabled***
 

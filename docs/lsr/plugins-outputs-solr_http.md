@@ -56,7 +56,7 @@ Also see [Common options](plugins-outputs-solr_http.md#plugins-outputs-solr_http
 * Value type is [string](introduction.md#string)
 * Default value is `nil`
 
-Solr document ID for events. You’d typically have a variable here, like *%{{foo}}* so you can assign your own IDs
+Solr document ID for events. You’d typically have a variable here, like `%{{foo}}` so you can assign your own IDs
 
 
 ### `flush_size` [plugins-outputs-solr_http-flush_size]

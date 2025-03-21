@@ -123,7 +123,7 @@ Apply specific codecs for specific content types. The default codec will be appl
     * `v1`,`v8`: headers added under `[@metadata][http][header]`. Some are copied to structured ECS fields `http`, `url`, `user_agent` and `host`
 
 
-Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)](https://www.elastic.co/guide/en/ecs/{{ecs_version}}). See [Event Metadata and the Elastic Common Schema (ECS)](plugins-inputs-http.md#plugins-inputs-http-ecs_metadata) for detailed information.
+Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)](https://www.elastic.co/guide/en/ecs/current). See [Event Metadata and the Elastic Common Schema (ECS)](plugins-inputs-http.md#plugins-inputs-http-ecs_metadata) for detailed information.
 
 ***Sample output: ECS disabled***
 

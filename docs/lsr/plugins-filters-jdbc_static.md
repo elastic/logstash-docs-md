@@ -237,7 +237,7 @@ For loader performance reasons, the loading mechanism uses a CSV style file with
 
 ## Compatibility with the Elastic Common Schema (ECS) [plugins-filters-jdbc_static-ecs]
 
-This plugin is compatible with the [Elastic Common Schema (ECS)](https://www.elastic.co/guide/en/ecs/{{ecs_version}}). It behaves the same regardless of ECS compatibility, except giving a warning when ECS is enabled and `target` isn’t set.
+This plugin is compatible with the [Elastic Common Schema (ECS)](https://www.elastic.co/guide/en/ecs/current). It behaves the same regardless of ECS compatibility, except giving a warning when ECS is enabled and `target` isn’t set.
 
 ::::{tip} 
 Set the `target` option to avoid potential schema conflicts.
@@ -615,7 +615,7 @@ Call the filter flush method at regular interval. Optional.
 * Value type is [array](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#array)
 * Default value is `[]`
 
-If this filter is successful, remove arbitrary fields from this event. Fields names can be dynamic and include parts of the event using the %{{field}} Example:
+If this filter is successful, remove arbitrary fields from this event. Fields names can be dynamic and include parts of the event using the `%{{field}}` Example:
 
 ```json
     filter {

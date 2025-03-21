@@ -22,7 +22,7 @@ Read messages as events over the network via udp. The only required configuratio
 
 ### Event Metadata and the Elastic Common Schema (ECS) [plugins-inputs-udp-ecs_metadata]
 
-This plugin adds a field containing the source IP address of the UDP packet. By default, the IP address is stored in the host field. When [Elastic Common Schema (ECS)](https://www.elastic.co/guide/en/ecs/{{ecs_version}}) is enabled (in [`ecs_compatibility`](plugins-inputs-udp.md#plugins-inputs-udp-ecs_compatibility)), the source IP address is stored in the [host][ip] field.
+This plugin adds a field containing the source IP address of the UDP packet. By default, the IP address is stored in the host field. When [Elastic Common Schema (ECS)](https://www.elastic.co/guide/en/ecs/current) is enabled (in [`ecs_compatibility`](plugins-inputs-udp.md#plugins-inputs-udp-ecs_compatibility)), the source IP address is stored in the [host][ip] field.
 
 You can customize the field name using the [`source_ip_fieldname`](plugins-inputs-udp.md#plugins-inputs-udp-source_ip_fieldname). See [`ecs_compatibility`](plugins-inputs-udp.md#plugins-inputs-udp-ecs_compatibility) for more information.
 
@@ -69,7 +69,7 @@ The maximum packet size to read from the network
     * Otherwise, the default value is `disabled`.
 
 
-Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)](https://www.elastic.co/guide/en/ecs/{{ecs_version}}).
+Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)](https://www.elastic.co/guide/en/ecs/current).
 
 The value of this setting affects the placement of a TCP connection’s metadata on events.
 

@@ -53,7 +53,7 @@ Also see [Common options](plugins-filters-syslog_pri.md#plugins-filters-syslog_p
     * Otherwise, the default value is `disabled`.
 
 
-Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)](https://www.elastic.co/guide/en/ecs/{{ecs_version}}). The value of this setting affects the *default* value of [`syslog_pri_field_name`](plugins-filters-syslog_pri.md#plugins-filters-syslog_pri-syslog_pri_field_name).
+Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)](https://www.elastic.co/guide/en/ecs/current). The value of this setting affects the *default* value of [`syslog_pri_field_name`](plugins-filters-syslog_pri.md#plugins-filters-syslog_pri-syslog_pri_field_name).
 
 
 ### `facility_labels` [plugins-filters-syslog_pri-facility_labels]
@@ -210,7 +210,7 @@ Call the filter flush method at regular interval. Optional.
 * Value type is [array](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#array)
 * Default value is `[]`
 
-If this filter is successful, remove arbitrary fields from this event. Fields names can be dynamic and include parts of the event using the %{{field}} Example:
+If this filter is successful, remove arbitrary fields from this event. Fields names can be dynamic and include parts of the event using the `%{{field}}` Example:
 
 ```json
     filter {

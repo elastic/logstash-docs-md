@@ -29,7 +29,7 @@ Encoding behavior
 
 ## Compatibility with the Elastic Common Schema (ECS) [plugins-codecs-line-ecs]
 
-This plugin is compatible with the [Elastic Common Schema (ECS)](https://www.elastic.co/guide/en/ecs/{{ecs_version}}). No additional configuration is required.
+This plugin is compatible with the [Elastic Common Schema (ECS)](https://www.elastic.co/guide/en/ecs/current). No additional configuration is required.
 
 
 ## Line codec configuration options [plugins-codecs-line-options]

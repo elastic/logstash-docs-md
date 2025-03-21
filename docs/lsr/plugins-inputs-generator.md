@@ -27,7 +27,7 @@ An event is generated first
 
 ## Compatibility with the Elastic Common Schema (ECS) [plugins-inputs-generator-ecs]
 
-This plugin uses different field names depending on whether [ECS-compatibility](https://www.elastic.co/guide/en/ecs/{{ecs_version}}) in enabled (see also [`ecs_compatibility`](plugins-inputs-generator.md#plugins-inputs-generator-ecs_compatibility)).
+This plugin uses different field names depending on whether [ECS-compatibility](https://www.elastic.co/guide/en/ecs/current) in enabled (see also [`ecs_compatibility`](plugins-inputs-generator.md#plugins-inputs-generator-ecs_compatibility)).
 
 | ECS Disabled | ECS v1, v8 | Description |
 | --- | --- | --- |
@@ -70,7 +70,7 @@ The default, `0`, means generate an unlimited number of events.
     * `v1`, `v8`: uses fields that are compatible with ECS, such as `[host][name]`
 
 
-Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)](https://www.elastic.co/guide/en/ecs/{{ecs_version}}). See [Compatibility with the Elastic Common Schema (ECS)](plugins-inputs-generator.md#plugins-inputs-generator-ecs) for detailed information.
+Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)](https://www.elastic.co/guide/en/ecs/current). See [Compatibility with the Elastic Common Schema (ECS)](plugins-inputs-generator.md#plugins-inputs-generator-ecs) for detailed information.
 
 ***Sample output: ECS enabled***
 
