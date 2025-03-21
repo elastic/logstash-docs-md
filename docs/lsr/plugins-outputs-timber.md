@@ -65,7 +65,7 @@ Also see [Common options](plugins-outputs-timber.md#plugins-outputs-timber-commo
 * Value type is [string](introduction.md#string)
 * There is no default value for this setting.
 
-Your Timber.io API key. You can obtain your API by creating an app in the [Timber console]([https://app.timber.io](https://app.timber.io)).
+Your Timber.io API key. You can obtain your API by creating an app in the [Timber console](https://app.timber.io).
 
 
 ### `cacert` [plugins-outputs-timber-cacert]

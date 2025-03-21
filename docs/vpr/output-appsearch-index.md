@@ -17,6 +17,6 @@ Versioned plugin documentation is not available for plugins released prior to Lo
 |     |     |
 | --- | --- |
 | Version | Release Date |
-| [v1.0.0.beta1](/reference/v1-0-0-beta1-plugins-outputs-appsearch.md) | 2018-10-23 |
+| [v1.0.0.beta1](/vpr/v1-0-0-beta1-plugins-outputs-appsearch.md) | 2018-10-23 |
 
 

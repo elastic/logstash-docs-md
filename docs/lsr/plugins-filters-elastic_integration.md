@@ -29,7 +29,7 @@ Use of this plugin requires an active Elastic Enterprise [subscription](https://
 Use this filter to process Elastic integrations powered by {{es}} Ingest Node in {{ls}}.
 
 ::::{admonition} Extending Elastic integrations with {ls}
-This plugin can help you take advantage of the extensive, built-in capabilities of [Elastic {{integrations}}](https://docs.elastic.co/en/integrations)—​such as managing data collection, transformation, and visualization—​and then use {{ls}} for additional data processing and output options. For more info about extending Elastic integrations with {{ls}}, check out [Using {{ls}} with Elastic Integrations](logstash://reference/ea-integrations.md).
+This plugin can help you take advantage of the extensive, built-in capabilities of [Elastic {{integrations}}](https://docs.elastic.co/en/integrations)—​such as managing data collection, transformation, and visualization—​and then use {{ls}} for additional data processing and output options. For more info about extending Elastic integrations with {{ls}}, check out [Using {{ls}} with Elastic Integrations](logstash://reference/using-logstash-with-elastic-integrations.md).
 
 ::::
 

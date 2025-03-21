@@ -97,7 +97,7 @@ To define the filter, you specify three main sections: local_db_objects, loaders
         add_field => { user_lastname => "%{[user][0][lastname]}" }
         remove_field => ["server", "user"]
         staging_directory => "/tmp/logstash/jdbc_static/import_data"
-        loader_schedule => "* */2 * * *" # run loaders every 2 hours
+        loader_schedule => "* */2 * * *"
         jdbc_user => "logstash"
         jdbc_password => "example"
         jdbc_driver_class => "org.postgresql.Driver"

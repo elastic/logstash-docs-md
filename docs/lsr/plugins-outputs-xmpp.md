@@ -52,7 +52,7 @@ Also see [Common options](plugins-outputs-xmpp.md#plugins-outputs-xmpp-common-op
 * Value type is [string](introduction.md#string)
 * There is no default value for this setting.
 
-The xmpp server to connect to. This is optional. If you omit this setting, the host on the user/identity is used. (foo.com for [user@foo.com](mailto:user@foo.com))
+The xmpp server to connect to. This is optional. If you omit this setting, the host on the user/identity is used. (foo.com for `user@foo.com`)
 
 
 ### `message` [plugins-outputs-xmpp-message]

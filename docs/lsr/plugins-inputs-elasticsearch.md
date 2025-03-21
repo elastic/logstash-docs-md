@@ -136,7 +136,6 @@ As of version `5.0.0` of this plugin, a number of previously deprecated settings
 | [`ssl_truststore_type`](plugins-inputs-elasticsearch.md#plugins-inputs-elasticsearch-ssl_truststore_type) | [string](introduction.md#string) | No |
 | [`ssl_verification_mode`](plugins-inputs-elasticsearch.md#plugins-inputs-elasticsearch-ssl_verification_mode) | [string](introduction.md#string), one of `["full", "none"]` | No |
 | [`socket_timeout_seconds`](plugins-inputs-elasticsearch.md#plugins-inputs-elasticsearch-socket_timeout_seconds) | [number](introduction.md#number) | No |
-| [`target`](plugins-inputs-elasticsearch.md#plugins-inputs-elasticsearch-target) | [field reference](logstash://reference/field-references-deepdive.md) | No |
 | [`retries`](plugins-inputs-elasticsearch.md#plugins-inputs-elasticsearch-retries) | [number](introduction.md#number) | No |
 | [`user`](plugins-inputs-elasticsearch.md#plugins-inputs-elasticsearch-user) | [string](introduction.md#string) | No |
 
@@ -570,7 +569,7 @@ The maximum amount of time, in seconds, to wait on an incomplete response from E
 
 ### `target` [plugins-inputs-elasticsearch-target]
 
-* Value type is [field reference](logstash://reference/field-references-deepdive.md)
+* Value type is field reference.
 * There is no default value for this setting.
 
 Without a `target`, events are created from each hit’s `_source` at the root level. When the `target` is set to a field reference, the `_source` of the hit is placed in the target field instead.

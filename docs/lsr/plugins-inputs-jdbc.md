@@ -205,7 +205,6 @@ This plugin supports the following configuration options plus the [Common option
 | [`statement_filepath`](plugins-inputs-jdbc.md#plugins-inputs-jdbc-statement_filepath) | a valid filesystem path | No |
 | [`statement_retry_attempts`](plugins-inputs-jdbc.md#plugins-inputs-jdbc-statement_retry_attempts) | [number](introduction.md#number) | No |
 | [`statement_retry_attempts_wait_time`](plugins-inputs-jdbc.md#plugins-inputs-jdbc-statement_retry_attempts_wait_time) | [number](introduction.md#number) | No |
-| [`target`](plugins-inputs-jdbc.md#plugins-inputs-jdbc-target) | [field reference](logstash://reference/field-references-deepdive.md) | No |
 | [`tracking_column`](plugins-inputs-jdbc.md#plugins-inputs-jdbc-tracking_column) | [string](introduction.md#string) | No |
 | [`tracking_column_type`](plugins-inputs-jdbc.md#plugins-inputs-jdbc-tracking_column_type) | [string](introduction.md#string), one of `["numeric", "timestamp"]` | No |
 | [`use_column_value`](plugins-inputs-jdbc.md#plugins-inputs-jdbc-use_column_value) | [boolean](introduction.md#boolean) | No |
@@ -570,7 +569,7 @@ Number of seconds to sleep between statement execution attempts.
 
 ### `target` [plugins-inputs-jdbc-target]
 
-* Value type is [field reference](logstash://reference/field-references-deepdive.md)
+* Value type is .field reference.
 * There is no default value for this setting.
 
 Without a `target`, events are created from each row column at the root level. When the `target` is set to a field reference, the column of each row is placed in the target field instead.

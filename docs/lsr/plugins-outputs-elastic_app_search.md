@@ -59,7 +59,7 @@ Also see [Common options](plugins-outputs-elastic_app_search.md#plugins-outputs-
 * Value type is [password](introduction.md#password)
 * There is no default value
 
-The private API Key with write permissions. Visit the App Search API keys reference [page]([https://www.elastic.co/guide/en/app-search/current/authentication.html#authentication-api-keys](https://www.elastic.co/guide/en/app-search/current/authentication.md#authentication-api-keys)) for more information.
+The private API Key with write permissions. Visit the App Search API keys reference [page](https://www.elastic.co/guide/en/app-search/current/authentication.html#authentication-api-keys) for more information.
 
 
 ### `document_id` [plugins-outputs-elastic_app_search-document_id]
