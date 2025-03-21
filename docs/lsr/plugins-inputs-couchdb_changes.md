@@ -1,5 +1,7 @@
 ---
 navigation_title: "couchdb_changes"
+mapped_pages:
+  - https://www.elastic.co/guide/en/logstash/current/plugins-inputs-couchdb_changes.html
 ---
 
 # Couchdb_changes input plugin [plugins-inputs-couchdb_changes]

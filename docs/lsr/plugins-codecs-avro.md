@@ -1,5 +1,7 @@
 ---
 navigation_title: "avro"
+mapped_pages:
+  - https://www.elastic.co/guide/en/logstash/current/plugins-codecs-avro.html
 ---
 
 # Avro codec plugin [plugins-codecs-avro]

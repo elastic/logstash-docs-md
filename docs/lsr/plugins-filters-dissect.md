@@ -1,5 +1,7 @@
 ---
 navigation_title: "dissect"
+mapped_pages:
+  - https://www.elastic.co/guide/en/logstash/current/plugins-filters-dissect.html
 ---
 
 # Dissect filter plugin [plugins-filters-dissect]

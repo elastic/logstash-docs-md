@@ -1,5 +1,7 @@
 ---
 navigation_title: "boundary"
+mapped_pages:
+  - https://www.elastic.co/guide/en/logstash/current/plugins-outputs-boundary.html
 ---
 
 # Boundary output plugin [plugins-outputs-boundary]

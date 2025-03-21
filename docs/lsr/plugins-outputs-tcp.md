@@ -1,5 +1,7 @@
 ---
 navigation_title: "tcp"
+mapped_pages:
+  - https://www.elastic.co/guide/en/logstash/current/plugins-outputs-tcp.html
 ---
 
 # Tcp output plugin [plugins-outputs-tcp]

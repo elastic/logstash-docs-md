@@ -1,5 +1,7 @@
 ---
 navigation_title: "mongodb"
+mapped_pages:
+  - https://www.elastic.co/guide/en/logstash/current/plugins-outputs-mongodb.html
 ---
 
 # Mongodb output plugin [plugins-outputs-mongodb]

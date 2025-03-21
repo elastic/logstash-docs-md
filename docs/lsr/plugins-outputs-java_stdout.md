@@ -1,5 +1,7 @@
 ---
 navigation_title: "java_stdout"
+mapped_pages:
+  - https://www.elastic.co/guide/en/logstash/current/plugins-outputs-java_stdout.html
 ---
 
 # Java_stdout output plugin [plugins-outputs-java_stdout]

@@ -1,5 +1,7 @@
 ---
 navigation_title: "gzip_lines"
+mapped_pages:
+  - https://www.elastic.co/guide/en/logstash/current/plugins-codecs-gzip_lines.html
 ---
 
 # Gzip_lines codec plugin [plugins-codecs-gzip_lines]

@@ -1,5 +1,7 @@
 ---
 navigation_title: "ruby"
+mapped_pages:
+  - https://www.elastic.co/guide/en/logstash/current/plugins-filters-ruby.html
 ---
 
 # Ruby filter plugin [plugins-filters-ruby]

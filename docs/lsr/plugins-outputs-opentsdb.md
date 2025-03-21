@@ -1,5 +1,7 @@
 ---
 navigation_title: "opentsdb"
+mapped_pages:
+  - https://www.elastic.co/guide/en/logstash/current/plugins-outputs-opentsdb.html
 ---
 
 # Opentsdb output plugin [plugins-outputs-opentsdb]

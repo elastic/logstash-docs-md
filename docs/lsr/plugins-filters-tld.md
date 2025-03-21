@@ -1,5 +1,7 @@
 ---
 navigation_title: "tld"
+mapped_pages:
+  - https://www.elastic.co/guide/en/logstash/current/plugins-filters-tld.html
 ---
 
 # Tld filter plugin [plugins-filters-tld]

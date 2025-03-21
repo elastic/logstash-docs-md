@@ -1,5 +1,7 @@
 ---
 navigation_title: "stomp"
+mapped_pages:
+  - https://www.elastic.co/guide/en/logstash/current/plugins-inputs-stomp.html
 ---
 
 # Stomp input plugin [plugins-inputs-stomp]

@@ -1,5 +1,7 @@
 ---
 navigation_title: "metricize"
+mapped_pages:
+  - https://www.elastic.co/guide/en/logstash/current/plugins-filters-metricize.html
 ---
 
 # Metricize filter plugin [plugins-filters-metricize]

@@ -1,5 +1,7 @@
 ---
 navigation_title: "range"
+mapped_pages:
+  - https://www.elastic.co/guide/en/logstash/current/plugins-filters-range.html
 ---
 
 # Range filter plugin [plugins-filters-range]

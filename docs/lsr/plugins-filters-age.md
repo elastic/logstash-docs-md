@@ -1,5 +1,7 @@
 ---
 navigation_title: "age"
+mapped_pages:
+  - https://www.elastic.co/guide/en/logstash/current/plugins-filters-age.html
 ---
 
 # Age filter plugin [plugins-filters-age]

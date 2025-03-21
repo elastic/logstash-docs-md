@@ -1,5 +1,7 @@
 ---
 navigation_title: "sqs"
+mapped_pages:
+  - https://www.elastic.co/guide/en/logstash/current/plugins-inputs-sqs.html
 ---
 
 # Sqs input plugin [plugins-inputs-sqs]

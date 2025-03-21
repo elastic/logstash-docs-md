@@ -1,5 +1,7 @@
 ---
 navigation_title: "csv"
+mapped_pages:
+  - https://www.elastic.co/guide/en/logstash/current/plugins-outputs-csv.html
 ---
 
 # Csv output plugin [plugins-outputs-csv]

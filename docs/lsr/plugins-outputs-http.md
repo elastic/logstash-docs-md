@@ -1,5 +1,7 @@
 ---
 navigation_title: "http"
+mapped_pages:
+  - https://www.elastic.co/guide/en/logstash/current/plugins-outputs-http.html
 ---
 
 # Http output plugin [plugins-outputs-http]

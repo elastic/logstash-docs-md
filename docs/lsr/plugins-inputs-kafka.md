@@ -1,5 +1,7 @@
 ---
 navigation_title: "kafka"
+mapped_pages:
+  - https://www.elastic.co/guide/en/logstash/current/plugins-inputs-kafka.html
 ---
 
 # Kafka input plugin [plugins-inputs-kafka]

@@ -1,5 +1,7 @@
 ---
 navigation_title: "juggernaut"
+mapped_pages:
+  - https://www.elastic.co/guide/en/logstash/current/plugins-outputs-juggernaut.html
 ---
 
 # Juggernaut output plugin [plugins-outputs-juggernaut]

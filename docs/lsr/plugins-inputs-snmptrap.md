@@ -1,5 +1,7 @@
 ---
 navigation_title: "snmptrap"
+mapped_pages:
+  - https://www.elastic.co/guide/en/logstash/current/plugins-inputs-snmptrap.html
 ---
 
 # SNMP trap input plugin [plugins-inputs-snmptrap]

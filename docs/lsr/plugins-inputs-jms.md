@@ -1,5 +1,7 @@
 ---
 navigation_title: "jms"
+mapped_pages:
+  - https://www.elastic.co/guide/en/logstash/current/plugins-inputs-jms.html
 ---
 
 # Jms input plugin [plugins-inputs-jms]

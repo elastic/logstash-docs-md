@@ -1,5 +1,7 @@
 ---
 navigation_title: "rabbitmq"
+mapped_pages:
+  - https://www.elastic.co/guide/en/logstash/current/plugins-outputs-rabbitmq.html
 ---
 
 # Rabbitmq output plugin [plugins-outputs-rabbitmq]

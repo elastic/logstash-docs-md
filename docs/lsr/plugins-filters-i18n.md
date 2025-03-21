@@ -1,5 +1,7 @@
 ---
 navigation_title: "i18n"
+mapped_pages:
+  - https://www.elastic.co/guide/en/logstash/current/plugins-filters-i18n.html
 ---
 
 # I18n filter plugin [plugins-filters-i18n]

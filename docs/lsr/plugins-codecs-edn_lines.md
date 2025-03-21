@@ -1,5 +1,7 @@
 ---
 navigation_title: "edn_lines"
+mapped_pages:
+  - https://www.elastic.co/guide/en/logstash/current/plugins-codecs-edn_lines.html
 ---
 
 # Edn_lines codec plugin [plugins-codecs-edn_lines]

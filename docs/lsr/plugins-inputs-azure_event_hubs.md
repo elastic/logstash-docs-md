@@ -1,5 +1,7 @@
 ---
 navigation_title: "azure_event_hubs"
+mapped_pages:
+  - https://www.elastic.co/guide/en/logstash/current/plugins-inputs-azure_event_hubs.html
 ---
 
 # Azure Event Hubs plugin [plugins-inputs-azure_event_hubs]

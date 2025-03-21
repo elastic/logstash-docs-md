@@ -1,5 +1,7 @@
 ---
 navigation_title: "salesforce"
+mapped_pages:
+  - https://www.elastic.co/guide/en/logstash/current/plugins-inputs-salesforce.html
 ---
 
 # Salesforce input plugin [plugins-inputs-salesforce]

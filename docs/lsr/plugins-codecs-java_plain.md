@@ -1,5 +1,7 @@
 ---
 navigation_title: "java_plain"
+mapped_pages:
+  - https://www.elastic.co/guide/en/logstash/current/plugins-codecs-java_plain.html
 ---
 
 # Java_plain codec plugin [plugins-codecs-java_plain]

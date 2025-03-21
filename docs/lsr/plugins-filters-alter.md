@@ -1,5 +1,7 @@
 ---
 navigation_title: "alter"
+mapped_pages:
+  - https://www.elastic.co/guide/en/logstash/current/plugins-filters-alter.html
 ---
 
 # Alter filter plugin [plugins-filters-alter]

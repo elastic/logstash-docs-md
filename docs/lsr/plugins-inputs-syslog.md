@@ -1,5 +1,7 @@
 ---
 navigation_title: "syslog"
+mapped_pages:
+  - https://www.elastic.co/guide/en/logstash/current/plugins-inputs-syslog.html
 ---
 
 # Syslog input plugin [plugins-inputs-syslog]

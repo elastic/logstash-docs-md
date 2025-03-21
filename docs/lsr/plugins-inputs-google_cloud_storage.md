@@ -1,5 +1,7 @@
 ---
 navigation_title: "google_cloud_storage"
+mapped_pages:
+  - https://www.elastic.co/guide/en/logstash/current/plugins-inputs-google_cloud_storage.html
 ---
 
 # Google Cloud Storage Input Plugin [plugins-inputs-google_cloud_storage]

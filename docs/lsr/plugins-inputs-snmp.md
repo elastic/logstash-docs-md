@@ -1,5 +1,7 @@
 ---
 navigation_title: "snmp"
+mapped_pages:
+  - https://www.elastic.co/guide/en/logstash/current/plugins-inputs-snmp.html
 ---
 
 # SNMP input plugin [plugins-inputs-snmp]

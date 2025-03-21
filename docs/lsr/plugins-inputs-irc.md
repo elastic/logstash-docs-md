@@ -1,5 +1,7 @@
 ---
 navigation_title: "irc"
+mapped_pages:
+  - https://www.elastic.co/guide/en/logstash/current/plugins-inputs-irc.html
 ---
 
 # Irc input plugin [plugins-inputs-irc]

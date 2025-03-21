@@ -1,5 +1,7 @@
 ---
 navigation_title: "json"
+mapped_pages:
+  - https://www.elastic.co/guide/en/logstash/current/plugins-codecs-json.html
 ---
 
 # Json codec plugin [plugins-codecs-json]

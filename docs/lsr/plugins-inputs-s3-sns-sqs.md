@@ -1,5 +1,7 @@
 ---
 navigation_title: "s3-sns-sqs"
+mapped_pages:
+  - https://www.elastic.co/guide/en/logstash/current/plugins-inputs-s3-sns-sqs.html
 ---
 
 # S3 via SNS/SQS plugin [plugins-inputs-s3-sns-sqs]

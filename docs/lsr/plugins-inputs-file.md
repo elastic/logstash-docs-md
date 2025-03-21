@@ -1,5 +1,7 @@
 ---
 navigation_title: "file"
+mapped_pages:
+  - https://www.elastic.co/guide/en/logstash/current/plugins-inputs-file.html
 ---
 
 # File input plugin [plugins-inputs-file]

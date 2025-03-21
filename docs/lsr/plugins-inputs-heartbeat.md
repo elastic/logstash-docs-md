@@ -1,5 +1,7 @@
 ---
 navigation_title: "heartbeat"
+mapped_pages:
+  - https://www.elastic.co/guide/en/logstash/current/plugins-inputs-heartbeat.html
 ---
 
 # Heartbeat input plugin [plugins-inputs-heartbeat]

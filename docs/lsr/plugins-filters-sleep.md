@@ -1,5 +1,7 @@
 ---
 navigation_title: "sleep"
+mapped_pages:
+  - https://www.elastic.co/guide/en/logstash/current/plugins-filters-sleep.html
 ---
 
 # Sleep filter plugin [plugins-filters-sleep]

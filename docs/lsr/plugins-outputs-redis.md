@@ -1,5 +1,7 @@
 ---
 navigation_title: "redis"
+mapped_pages:
+  - https://www.elastic.co/guide/en/logstash/current/plugins-outputs-redis.html
 ---
 
 # Redis output plugin [plugins-outputs-redis]

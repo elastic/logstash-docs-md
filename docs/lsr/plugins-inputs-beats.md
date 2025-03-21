@@ -1,5 +1,7 @@
 ---
 navigation_title: "beats"
+mapped_pages:
+  - https://www.elastic.co/guide/en/logstash/current/plugins-inputs-beats.html
 ---
 
 # Beats input plugin [plugins-inputs-beats]

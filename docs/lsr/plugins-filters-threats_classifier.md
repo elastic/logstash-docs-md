@@ -1,5 +1,7 @@
 ---
 navigation_title: "threats_classifier"
+mapped_pages:
+  - https://www.elastic.co/guide/en/logstash/current/plugins-filters-threats_classifier.html
 ---
 
 # Threats_classifier filter plugin [plugins-filters-threats_classifier]

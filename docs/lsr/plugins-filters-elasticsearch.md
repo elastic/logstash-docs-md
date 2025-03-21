@@ -1,5 +1,7 @@
 ---
 navigation_title: "elasticsearch"
+mapped_pages:
+  - https://www.elastic.co/guide/en/logstash/current/plugins-filters-elasticsearch.html
 ---
 
 # Elasticsearch filter plugin [plugins-filters-elasticsearch]

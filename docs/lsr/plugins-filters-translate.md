@@ -1,5 +1,7 @@
 ---
 navigation_title: "translate"
+mapped_pages:
+  - https://www.elastic.co/guide/en/logstash/current/plugins-filters-translate.html
 ---
 
 # Translate filter plugin [plugins-filters-translate]

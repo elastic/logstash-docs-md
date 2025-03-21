@@ -1,5 +1,7 @@
 ---
 navigation_title: "date"
+mapped_pages:
+  - https://www.elastic.co/guide/en/logstash/current/plugins-filters-date.html
 ---
 
 # Date filter plugin [plugins-filters-date]

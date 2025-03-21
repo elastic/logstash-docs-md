@@ -1,5 +1,7 @@
 ---
 navigation_title: "jdbc"
+mapped_pages:
+  - https://www.elastic.co/guide/en/logstash/current/plugins-integrations-jdbc.html
 ---
 
 # JDBC Integration Plugin [plugins-integrations-jdbc]

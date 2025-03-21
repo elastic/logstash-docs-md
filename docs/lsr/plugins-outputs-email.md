@@ -1,5 +1,7 @@
 ---
 navigation_title: "email"
+mapped_pages:
+  - https://www.elastic.co/guide/en/logstash/current/plugins-outputs-email.html
 ---
 
 # Email output plugin [plugins-outputs-email]

@@ -1,5 +1,7 @@
 ---
 navigation_title: "cidr"
+mapped_pages:
+  - https://www.elastic.co/guide/en/logstash/current/plugins-filters-cidr.html
 ---
 
 # Cidr filter plugin [plugins-filters-cidr]

@@ -1,5 +1,7 @@
 ---
 navigation_title: "gelf"
+mapped_pages:
+  - https://www.elastic.co/guide/en/logstash/current/plugins-outputs-gelf.html
 ---
 
 # Gelf output plugin [plugins-outputs-gelf]

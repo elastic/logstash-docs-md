@@ -1,5 +1,7 @@
 ---
 navigation_title: "github"
+mapped_pages:
+  - https://www.elastic.co/guide/en/logstash/current/plugins-inputs-github.html
 ---
 
 # Github input plugin [plugins-inputs-github]

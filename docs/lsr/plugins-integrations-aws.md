@@ -1,5 +1,7 @@
 ---
 navigation_title: "aws"
+mapped_pages:
+  - https://www.elastic.co/guide/en/logstash/current/plugins-integrations-aws.html
 ---
 
 # AWS Integration Plugin [plugins-integrations-aws]

@@ -1,5 +1,7 @@
 ---
 navigation_title: "sqs"
+mapped_pages:
+  - https://www.elastic.co/guide/en/logstash/current/plugins-outputs-sqs.html
 ---
 
 # Sqs output plugin [plugins-outputs-sqs]

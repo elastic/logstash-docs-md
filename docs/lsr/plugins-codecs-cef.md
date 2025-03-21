@@ -1,5 +1,7 @@
 ---
 navigation_title: "cef"
+mapped_pages:
+  - https://www.elastic.co/guide/en/logstash/current/plugins-codecs-cef.html
 ---
 
 # Cef codec plugin [plugins-codecs-cef]

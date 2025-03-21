@@ -1,5 +1,7 @@
 ---
 navigation_title: "cloudfront"
+mapped_pages:
+  - https://www.elastic.co/guide/en/logstash/current/plugins-codecs-cloudfront.html
 ---
 
 # Cloudfront codec plugin [plugins-codecs-cloudfront]

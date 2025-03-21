@@ -1,5 +1,7 @@
 ---
 navigation_title: "pipe"
+mapped_pages:
+  - https://www.elastic.co/guide/en/logstash/current/plugins-inputs-pipe.html
 ---
 
 # Pipe input plugin [plugins-inputs-pipe]

@@ -1,5 +1,7 @@
 ---
 navigation_title: "zabbix"
+mapped_pages:
+  - https://www.elastic.co/guide/en/logstash/current/plugins-outputs-zabbix.html
 ---
 
 # Zabbix output plugin [plugins-outputs-zabbix]

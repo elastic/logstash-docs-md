@@ -1,5 +1,7 @@
 ---
 navigation_title: "meetup"
+mapped_pages:
+  - https://www.elastic.co/guide/en/logstash/current/plugins-inputs-meetup.html
 ---
 
 # Meetup input plugin [plugins-inputs-meetup]

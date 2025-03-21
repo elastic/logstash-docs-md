@@ -1,5 +1,7 @@
 ---
 navigation_title: "dynatrace"
+mapped_pages:
+  - https://www.elastic.co/guide/en/logstash/current/plugins-outputs-dynatrace.html
 ---
 
 # Dynatrace plugin [plugins-outputs-dynatrace]

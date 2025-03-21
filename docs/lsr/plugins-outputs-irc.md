@@ -1,5 +1,7 @@
 ---
 navigation_title: "irc"
+mapped_pages:
+  - https://www.elastic.co/guide/en/logstash/current/plugins-outputs-irc.html
 ---
 
 # Irc output plugin [plugins-outputs-irc]

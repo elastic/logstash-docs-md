@@ -1,5 +1,7 @@
 ---
 navigation_title: "useragent"
+mapped_pages:
+  - https://www.elastic.co/guide/en/logstash/current/plugins-filters-useragent.html
 ---
 
 # Useragent filter plugin [plugins-filters-useragent]

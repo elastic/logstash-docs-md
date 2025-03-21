@@ -1,5 +1,7 @@
 ---
 navigation_title: "urldecode"
+mapped_pages:
+  - https://www.elastic.co/guide/en/logstash/current/plugins-filters-urldecode.html
 ---
 
 # Urldecode filter plugin [plugins-filters-urldecode]

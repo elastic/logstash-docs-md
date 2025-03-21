@@ -1,5 +1,7 @@
 ---
 navigation_title: "imap"
+mapped_pages:
+  - https://www.elastic.co/guide/en/logstash/current/plugins-inputs-imap.html
 ---
 
 # Imap input plugin [plugins-inputs-imap]

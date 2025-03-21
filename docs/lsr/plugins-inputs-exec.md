@@ -1,5 +1,7 @@
 ---
 navigation_title: "exec"
+mapped_pages:
+  - https://www.elastic.co/guide/en/logstash/current/plugins-inputs-exec.html
 ---
 
 # Exec input plugin [plugins-inputs-exec]

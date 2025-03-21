@@ -1,5 +1,7 @@
 ---
 navigation_title: "nagios_nsca"
+mapped_pages:
+  - https://www.elastic.co/guide/en/logstash/current/plugins-outputs-nagios_nsca.html
 ---
 
 # Nagios_nsca output plugin [plugins-outputs-nagios_nsca]

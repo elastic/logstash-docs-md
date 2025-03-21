@@ -1,5 +1,7 @@
 ---
 navigation_title: "json_encode"
+mapped_pages:
+  - https://www.elastic.co/guide/en/logstash/current/plugins-filters-json_encode.html
 ---
 
 # Json_encode filter plugin [plugins-filters-json_encode]

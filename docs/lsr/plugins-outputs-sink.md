@@ -1,5 +1,7 @@
 ---
 navigation_title: "sink"
+mapped_pages:
+  - https://www.elastic.co/guide/en/logstash/current/plugins-outputs-sink.html
 ---
 
 # Sink output plugin [plugins-outputs-sink]

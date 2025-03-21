@@ -1,5 +1,7 @@
 ---
 navigation_title: "uuid"
+mapped_pages:
+  - https://www.elastic.co/guide/en/logstash/current/plugins-filters-uuid.html
 ---
 
 # Uuid filter plugin [plugins-filters-uuid]

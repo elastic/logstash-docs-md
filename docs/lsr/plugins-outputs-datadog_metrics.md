@@ -1,5 +1,7 @@
 ---
 navigation_title: "datadog_metrics"
+mapped_pages:
+  - https://www.elastic.co/guide/en/logstash/current/plugins-outputs-datadog_metrics.html
 ---
 
 # Datadog_metrics output plugin [plugins-outputs-datadog_metrics]

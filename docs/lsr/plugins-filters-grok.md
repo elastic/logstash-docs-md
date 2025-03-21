@@ -1,5 +1,7 @@
 ---
 navigation_title: "grok"
+mapped_pages:
+  - https://www.elastic.co/guide/en/logstash/current/plugins-filters-grok.html
 ---
 
 # Grok filter plugin [plugins-filters-grok]

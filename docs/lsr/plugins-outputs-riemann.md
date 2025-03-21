@@ -1,5 +1,7 @@
 ---
 navigation_title: "riemann"
+mapped_pages:
+  - https://www.elastic.co/guide/en/logstash/current/plugins-outputs-riemann.html
 ---
 
 # Riemann output plugin [plugins-outputs-riemann]

@@ -1,5 +1,7 @@
 ---
 navigation_title: "kafka"
+mapped_pages:
+  - https://www.elastic.co/guide/en/logstash/current/plugins-integrations-kafka.html
 ---
 
 # Kafka Integration Plugin [plugins-integrations-kafka]

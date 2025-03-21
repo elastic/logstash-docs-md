@@ -1,5 +1,7 @@
 ---
 navigation_title: "pagerduty"
+mapped_pages:
+  - https://www.elastic.co/guide/en/logstash/current/plugins-outputs-pagerduty.html
 ---
 
 # Pagerduty output plugin [plugins-outputs-pagerduty]

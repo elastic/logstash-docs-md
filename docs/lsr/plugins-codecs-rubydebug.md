@@ -1,5 +1,7 @@
 ---
 navigation_title: "rubydebug"
+mapped_pages:
+  - https://www.elastic.co/guide/en/logstash/current/plugins-codecs-rubydebug.html
 ---
 
 # Rubydebug codec plugin [plugins-codecs-rubydebug]

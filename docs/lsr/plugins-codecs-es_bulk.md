@@ -1,5 +1,7 @@
 ---
 navigation_title: "es_bulk"
+mapped_pages:
+  - https://www.elastic.co/guide/en/logstash/current/plugins-codecs-es_bulk.html
 ---
 
 # Es_bulk codec plugin [plugins-codecs-es_bulk]

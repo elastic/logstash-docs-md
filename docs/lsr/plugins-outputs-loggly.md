@@ -1,5 +1,7 @@
 ---
 navigation_title: "loggly"
+mapped_pages:
+  - https://www.elastic.co/guide/en/logstash/current/plugins-outputs-loggly.html
 ---
 
 # Loggly output plugin [plugins-outputs-loggly]

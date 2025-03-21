@@ -1,5 +1,7 @@
 ---
 navigation_title: "jdots"
+mapped_pages:
+  - https://www.elastic.co/guide/en/logstash/current/plugins-codecs-jdots.html
 ---
 
 # Jdots codec plugin [plugins-codecs-jdots]

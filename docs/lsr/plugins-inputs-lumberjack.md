@@ -1,5 +1,7 @@
 ---
 navigation_title: "lumberjack"
+mapped_pages:
+  - https://www.elastic.co/guide/en/logstash/current/plugins-inputs-lumberjack.html
 ---
 
 # Lumberjack input plugin [plugins-inputs-lumberjack]

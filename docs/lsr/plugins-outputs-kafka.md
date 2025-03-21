@@ -1,5 +1,7 @@
 ---
 navigation_title: "kafka"
+mapped_pages:
+  - https://www.elastic.co/guide/en/logstash/current/plugins-outputs-kafka.html
 ---
 
 # Kafka output plugin [plugins-outputs-kafka]

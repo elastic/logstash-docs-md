@@ -1,5 +1,7 @@
 ---
 navigation_title: "kinesis"
+mapped_pages:
+  - https://www.elastic.co/guide/en/logstash/current/plugins-inputs-kinesis.html
 ---
 
 # Kinesis input plugin [plugins-inputs-kinesis]

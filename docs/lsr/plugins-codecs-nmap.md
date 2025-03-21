@@ -1,5 +1,7 @@
 ---
 navigation_title: "nmap"
+mapped_pages:
+  - https://www.elastic.co/guide/en/logstash/current/plugins-codecs-nmap.html
 ---
 
 # Nmap codec plugin [plugins-codecs-nmap]

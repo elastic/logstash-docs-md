@@ -1,5 +1,7 @@
 ---
 navigation_title: "java_generator"
+mapped_pages:
+  - https://www.elastic.co/guide/en/logstash/current/plugins-inputs-java_generator.html
 ---
 
 # Java_generator input plugin [plugins-inputs-java_generator]

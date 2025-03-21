@@ -1,5 +1,7 @@
 ---
 navigation_title: "csv"
+mapped_pages:
+  - https://www.elastic.co/guide/en/logstash/current/plugins-filters-csv.html
 ---
 
 # Csv filter plugin [plugins-filters-csv]

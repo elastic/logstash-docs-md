@@ -1,5 +1,7 @@
 ---
 navigation_title: "varnishlog"
+mapped_pages:
+  - https://www.elastic.co/guide/en/logstash/current/plugins-inputs-varnishlog.html
 ---
 
 # Varnishlog input plugin [plugins-inputs-varnishlog]

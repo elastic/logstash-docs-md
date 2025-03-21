@@ -1,5 +1,7 @@
 ---
 navigation_title: "websocket"
+mapped_pages:
+  - https://www.elastic.co/guide/en/logstash/current/plugins-inputs-websocket.html
 ---
 
 # Websocket input plugin [plugins-inputs-websocket]

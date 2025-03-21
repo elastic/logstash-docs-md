@@ -1,5 +1,7 @@
 ---
 navigation_title: "redmine"
+mapped_pages:
+  - https://www.elastic.co/guide/en/logstash/current/plugins-outputs-redmine.html
 ---
 
 # Redmine output plugin [plugins-outputs-redmine]

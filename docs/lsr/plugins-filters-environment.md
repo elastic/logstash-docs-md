@@ -1,5 +1,7 @@
 ---
 navigation_title: "environment"
+mapped_pages:
+  - https://www.elastic.co/guide/en/logstash/current/plugins-filters-environment.html
 ---
 
 # Environment filter plugin [plugins-filters-environment]

@@ -1,5 +1,7 @@
 ---
 navigation_title: "unix"
+mapped_pages:
+  - https://www.elastic.co/guide/en/logstash/current/plugins-inputs-unix.html
 ---
 
 # Unix input plugin [plugins-inputs-unix]

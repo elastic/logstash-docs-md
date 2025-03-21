@@ -1,5 +1,7 @@
 ---
 navigation_title: "mutate"
+mapped_pages:
+  - https://www.elastic.co/guide/en/logstash/current/plugins-filters-mutate.html
 ---
 
 # Mutate filter plugin [plugins-filters-mutate]

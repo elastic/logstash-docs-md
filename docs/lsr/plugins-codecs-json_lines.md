@@ -1,5 +1,7 @@
 ---
 navigation_title: "json_lines"
+mapped_pages:
+  - https://www.elastic.co/guide/en/logstash/current/plugins-codecs-json_lines.html
 ---
 
 # Json_lines codec plugin [plugins-codecs-json_lines]

@@ -1,5 +1,7 @@
 ---
 navigation_title: "clone"
+mapped_pages:
+  - https://www.elastic.co/guide/en/logstash/current/plugins-filters-clone.html
 ---
 
 # Clone filter plugin [plugins-filters-clone]

@@ -1,5 +1,7 @@
 ---
 navigation_title: "jdbc_static"
+mapped_pages:
+  - https://www.elastic.co/guide/en/logstash/current/plugins-filters-jdbc_static.html
 ---
 
 # Jdbc_static filter plugin [plugins-filters-jdbc_static]

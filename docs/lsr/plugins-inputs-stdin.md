@@ -1,5 +1,7 @@
 ---
 navigation_title: "stdin"
+mapped_pages:
+  - https://www.elastic.co/guide/en/logstash/current/plugins-inputs-stdin.html
 ---
 
 # Stdin input plugin [plugins-inputs-stdin]

@@ -1,5 +1,7 @@
 ---
 navigation_title: "de_dot"
+mapped_pages:
+  - https://www.elastic.co/guide/en/logstash/current/plugins-filters-de_dot.html
 ---
 
 # De_dot filter plugin [plugins-filters-de_dot]

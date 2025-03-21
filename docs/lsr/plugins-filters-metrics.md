@@ -1,5 +1,7 @@
 ---
 navigation_title: "metrics"
+mapped_pages:
+  - https://www.elastic.co/guide/en/logstash/current/plugins-filters-metrics.html
 ---
 
 # Metrics filter plugin [plugins-filters-metrics]

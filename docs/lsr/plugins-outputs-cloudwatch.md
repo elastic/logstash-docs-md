@@ -1,5 +1,7 @@
 ---
 navigation_title: "cloudwatch"
+mapped_pages:
+  - https://www.elastic.co/guide/en/logstash/current/plugins-outputs-cloudwatch.html
 ---
 
 # Cloudwatch output plugin [plugins-outputs-cloudwatch]

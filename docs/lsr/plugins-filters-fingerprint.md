@@ -1,5 +1,7 @@
 ---
 navigation_title: "fingerprint"
+mapped_pages:
+  - https://www.elastic.co/guide/en/logstash/current/plugins-filters-fingerprint.html
 ---
 
 # Fingerprint filter plugin [plugins-filters-fingerprint]

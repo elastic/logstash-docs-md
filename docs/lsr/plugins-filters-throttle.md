@@ -1,5 +1,7 @@
 ---
 navigation_title: "throttle"
+mapped_pages:
+  - https://www.elastic.co/guide/en/logstash/current/plugins-filters-throttle.html
 ---
 
 # Throttle filter plugin [plugins-filters-throttle]

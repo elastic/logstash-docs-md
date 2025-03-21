@@ -1,5 +1,7 @@
 ---
 navigation_title: "java_uuid"
+mapped_pages:
+  - https://www.elastic.co/guide/en/logstash/current/plugins-filters-java_uuid.html
 ---
 
 # Java_uuid filter plugin [plugins-filters-java_uuid]

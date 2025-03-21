@@ -1,5 +1,7 @@
 ---
 navigation_title: "elastic_serverless_forwarder"
+mapped_pages:
+  - https://www.elastic.co/guide/en/logstash/current/plugins-inputs-elastic_serverless_forwarder.html
 ---
 
 # Elastic Serverless Forwarder input plugin [plugins-inputs-elastic_serverless_forwarder]

@@ -1,5 +1,7 @@
 ---
 navigation_title: "google_cloud_storage"
+mapped_pages:
+  - https://www.elastic.co/guide/en/logstash/current/plugins-outputs-google_cloud_storage.html
 ---
 
 # Google Cloud Storage output plugin [plugins-outputs-google_cloud_storage]

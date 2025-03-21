@@ -1,5 +1,7 @@
 ---
 navigation_title: "bytes"
+mapped_pages:
+  - https://www.elastic.co/guide/en/logstash/current/plugins-filters-bytes.html
 ---
 
 # Bytes filter plugin [plugins-filters-bytes]

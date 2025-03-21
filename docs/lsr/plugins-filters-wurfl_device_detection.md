@@ -1,5 +1,7 @@
 ---
 navigation_title: "wurfl_device_detection"
+mapped_pages:
+  - https://www.elastic.co/guide/en/logstash/current/plugins-filters-wurfl_device_detection.html
 ---
 
 # Wurfl_device_detection filter plugin [plugins-filters-wurfl_device_detection]

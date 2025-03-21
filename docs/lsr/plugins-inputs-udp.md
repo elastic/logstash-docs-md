@@ -1,5 +1,7 @@
 ---
 navigation_title: "udp"
+mapped_pages:
+  - https://www.elastic.co/guide/en/logstash/current/plugins-inputs-udp.html
 ---
 
 # Udp input plugin [plugins-inputs-udp]

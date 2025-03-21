@@ -1,5 +1,7 @@
 ---
 navigation_title: "generator"
+mapped_pages:
+  - https://www.elastic.co/guide/en/logstash/current/plugins-inputs-generator.html
 ---
 
 # Generator input plugin [plugins-inputs-generator]

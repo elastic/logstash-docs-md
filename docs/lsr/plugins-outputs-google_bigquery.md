@@ -1,5 +1,7 @@
 ---
 navigation_title: "google_bigquery"
+mapped_pages:
+  - https://www.elastic.co/guide/en/logstash/current/plugins-outputs-google_bigquery.html
 ---
 
 # Google BigQuery output plugin [plugins-outputs-google_bigquery]

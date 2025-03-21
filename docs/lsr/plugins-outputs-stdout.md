@@ -1,5 +1,7 @@
 ---
 navigation_title: "stdout"
+mapped_pages:
+  - https://www.elastic.co/guide/en/logstash/current/plugins-outputs-stdout.html
 ---
 
 # Stdout output plugin [plugins-outputs-stdout]

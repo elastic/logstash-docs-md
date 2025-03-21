@@ -1,5 +1,7 @@
 ---
 navigation_title: "prune"
+mapped_pages:
+  - https://www.elastic.co/guide/en/logstash/current/plugins-filters-prune.html
 ---
 
 # Prune filter plugin [plugins-filters-prune]

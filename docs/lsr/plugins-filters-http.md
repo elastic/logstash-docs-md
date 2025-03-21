@@ -1,5 +1,7 @@
 ---
 navigation_title: "http"
+mapped_pages:
+  - https://www.elastic.co/guide/en/logstash/current/plugins-filters-http.html
 ---
 
 # HTTP filter plugin [plugins-filters-http]

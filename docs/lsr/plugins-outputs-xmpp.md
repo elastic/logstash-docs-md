@@ -1,5 +1,7 @@
 ---
 navigation_title: "xmpp"
+mapped_pages:
+  - https://www.elastic.co/guide/en/logstash/current/plugins-outputs-xmpp.html
 ---
 
 # Xmpp output plugin [plugins-outputs-xmpp]

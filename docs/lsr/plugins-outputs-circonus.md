@@ -1,5 +1,7 @@
 ---
 navigation_title: "circonus"
+mapped_pages:
+  - https://www.elastic.co/guide/en/logstash/current/plugins-outputs-circonus.html
 ---
 
 # Circonus output plugin [plugins-outputs-circonus]

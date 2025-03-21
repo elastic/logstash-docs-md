@@ -1,5 +1,7 @@
 ---
 navigation_title: "msgpack"
+mapped_pages:
+  - https://www.elastic.co/guide/en/logstash/current/plugins-codecs-msgpack.html
 ---
 
 # Msgpack codec plugin [plugins-codecs-msgpack]

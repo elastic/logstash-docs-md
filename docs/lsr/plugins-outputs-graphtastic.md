@@ -1,5 +1,7 @@
 ---
 navigation_title: "graphtastic"
+mapped_pages:
+  - https://www.elastic.co/guide/en/logstash/current/plugins-outputs-graphtastic.html
 ---
 
 # Graphtastic output plugin [plugins-outputs-graphtastic]

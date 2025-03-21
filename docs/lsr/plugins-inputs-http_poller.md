@@ -1,5 +1,7 @@
 ---
 navigation_title: "http_poller"
+mapped_pages:
+  - https://www.elastic.co/guide/en/logstash/current/plugins-inputs-http_poller.html
 ---
 
 # Http_poller input plugin [plugins-inputs-http_poller]

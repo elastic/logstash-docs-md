@@ -1,5 +1,7 @@
 ---
 navigation_title: "sqlite"
+mapped_pages:
+  - https://www.elastic.co/guide/en/logstash/current/plugins-inputs-sqlite.html
 ---
 
 # Sqlite input plugin [plugins-inputs-sqlite]

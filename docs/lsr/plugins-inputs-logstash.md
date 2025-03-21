@@ -1,5 +1,7 @@
 ---
 navigation_title: "logstash"
+mapped_pages:
+  - https://www.elastic.co/guide/en/logstash/current/plugins-inputs-logstash.html
 ---
 
 # Logstash input plugin [plugins-inputs-logstash]

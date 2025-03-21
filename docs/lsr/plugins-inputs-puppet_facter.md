@@ -1,5 +1,7 @@
 ---
 navigation_title: "puppet_facter"
+mapped_pages:
+  - https://www.elastic.co/guide/en/logstash/current/plugins-inputs-puppet_facter.html
 ---
 
 # Puppet_facter input plugin [plugins-inputs-puppet_facter]

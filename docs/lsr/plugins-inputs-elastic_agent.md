@@ -1,5 +1,7 @@
 ---
 navigation_title: "elastic_agent"
+mapped_pages:
+  - https://www.elastic.co/guide/en/logstash/current/plugins-inputs-elastic_agent.html
 ---
 
 # Elastic Agent input plugin [plugins-inputs-elastic_agent]

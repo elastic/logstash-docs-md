@@ -1,5 +1,7 @@
 ---
 navigation_title: "dns"
+mapped_pages:
+  - https://www.elastic.co/guide/en/logstash/current/plugins-filters-dns.html
 ---
 
 # Dns filter plugin [plugins-filters-dns]

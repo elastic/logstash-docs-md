@@ -1,5 +1,7 @@
 ---
 navigation_title: "java_stdin"
+mapped_pages:
+  - https://www.elastic.co/guide/en/logstash/current/plugins-inputs-java_stdin.html
 ---
 
 # Java_stdin input plugin [plugins-inputs-java_stdin]

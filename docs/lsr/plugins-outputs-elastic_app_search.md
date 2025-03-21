@@ -1,5 +1,7 @@
 ---
 navigation_title: "elastic_app_search"
+mapped_pages:
+  - https://www.elastic.co/guide/en/logstash/current/plugins-outputs-elastic_app_search.html
 ---
 
 # Elastic App Search output plugin [plugins-outputs-elastic_app_search]

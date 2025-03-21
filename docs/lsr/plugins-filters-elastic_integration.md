@@ -1,5 +1,7 @@
 ---
 navigation_title: "elastic_integration"
+mapped_pages:
+  - https://www.elastic.co/guide/en/logstash/current/plugins-filters-elastic_integration.html
 ---
 
 # Elastic Integration filter plugin [plugins-filters-elastic_integration]

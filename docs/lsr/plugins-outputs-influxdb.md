@@ -1,5 +1,7 @@
 ---
 navigation_title: "influxdb"
+mapped_pages:
+  - https://www.elastic.co/guide/en/logstash/current/plugins-outputs-influxdb.html
 ---
 
 # Influxdb output plugin [plugins-outputs-influxdb]

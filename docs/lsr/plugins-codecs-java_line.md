@@ -1,5 +1,7 @@
 ---
 navigation_title: "java_line"
+mapped_pages:
+  - https://www.elastic.co/guide/en/logstash/current/plugins-codecs-java_line.html
 ---
 
 # Java_line codec plugin [plugins-codecs-java_line]

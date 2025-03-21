@@ -1,5 +1,7 @@
 ---
 navigation_title: "ganglia"
+mapped_pages:
+  - https://www.elastic.co/guide/en/logstash/current/plugins-outputs-ganglia.html
 ---
 
 # Ganglia output plugin [plugins-outputs-ganglia]

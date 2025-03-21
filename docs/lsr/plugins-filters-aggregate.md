@@ -1,5 +1,7 @@
 ---
 navigation_title: "aggregate"
+mapped_pages:
+  - https://www.elastic.co/guide/en/logstash/current/plugins-filters-aggregate.html
 ---
 
 # Aggregate filter plugin [plugins-filters-aggregate]

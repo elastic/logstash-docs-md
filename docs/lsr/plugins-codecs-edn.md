@@ -1,5 +1,7 @@
 ---
 navigation_title: "edn"
+mapped_pages:
+  - https://www.elastic.co/guide/en/logstash/current/plugins-codecs-edn.html
 ---
 
 # Edn codec plugin [plugins-codecs-edn]

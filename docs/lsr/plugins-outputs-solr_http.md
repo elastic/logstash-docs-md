@@ -1,5 +1,7 @@
 ---
 navigation_title: "solr_http"
+mapped_pages:
+  - https://www.elastic.co/guide/en/logstash/current/plugins-outputs-solr_http.html
 ---
 
 # Solr_http output plugin [plugins-outputs-solr_http]
