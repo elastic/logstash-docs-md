@@ -5,4 +5,4 @@ mapped_pages:
 
 # Logstash Versioned Plugin Reference
 
-Just a placeholder for a top index page.
+Looking for a specific version of the Logstash plugin docs? You’ve come to the right place. This section contains all available versions of the Logstash integration plugin docs.

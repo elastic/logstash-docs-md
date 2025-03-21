@@ -188,7 +188,7 @@ Also see [Common options](plugins-filters-ruby.md#plugins-filters-ruby-common-op
 * There is no default value for this setting.
 * This setting cannot be used together with `path`.
 
-The code to execute for every event. You will have an `event` variable available that is the event itself. See the [Event API](introduction.md#event-api) for more information.
+The code to execute for every event. You will have an `event` variable available that is the event itself. See the [Event API](logstash://reference/event-api.md#event-api) for more information.
 
 
 ### `init` [plugins-filters-ruby-init]

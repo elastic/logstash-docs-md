@@ -1,7 +1,6 @@
 project: 'Logstash core plugins reference'
 
 toc:
-  - file: index.md
   - file: introduction.md
   - file: plugin-integrations.md
     children:
