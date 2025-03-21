@@ -54,7 +54,7 @@ The address of the opentsdb server.
 * Value type is [array](introduction.md#array)
 * There is no default value for this setting.
 
-The metric(s) to use. This supports dynamic strings like %{{source_host}} for metric names and also for values. This is an array field with key of the metric name, value of the metric value, and multiple tag,values . Example:
+The metric(s) to use. This supports dynamic strings like `%{{source_host}}` for metric names and also for values. This is an array field with key of the metric name, value of the metric value, and multiple tag,values . Example:
 
 ```ruby
     [

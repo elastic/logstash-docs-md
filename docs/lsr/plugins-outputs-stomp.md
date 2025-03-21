@@ -69,9 +69,9 @@ Example: "/topic/logstash"
 * Value type is [hash](introduction.md#hash)
 * There is no default value for this setting.
 
-Custom headers to send with each message. Supports string expansion, meaning %{{foo}} values will expand to the field value.
+Custom headers to send with each message. Supports string expansion, meaning `%{{foo}}` values will expand to the field value.
 
-Example: headers ⇒ ["amq-msg-type", "text", "host", "%{{host}}"]
+Example: `headers ⇒ ["amq-msg-type", "text", "host", "%{{host}}"]`
 
 
 ### `host` [plugins-outputs-stomp-host]

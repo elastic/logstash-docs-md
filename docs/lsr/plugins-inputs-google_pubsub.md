@@ -23,7 +23,7 @@ For questions about the plugin, open a topic in the [Discuss](http://discuss.ela
 
 ## Description [_description_22]
 
-Author: Eric Johnson <[erjohnso@google.com](mailto:erjohnso@google.com)> Date: 2016-06-01
+Author: Eric Johnson `<erjohnso@google.com>` Date: 2016-06-01
 
 Copyright 2016 Google Inc.
 

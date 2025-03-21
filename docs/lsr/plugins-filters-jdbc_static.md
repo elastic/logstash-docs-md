@@ -90,7 +90,6 @@ To define the filter, you specify three main sections: local_db_objects, loaders
             }
           }
         ]
-        # using add_field here to add & rename values to the event root
         add_field => { server_name => "%{[server][0][description]}" } <7>
         add_field => { user_firstname => "%{[user][0][firstname]}" }
         add_field => { user_lastname => "%{[user][0][lastname]}" }

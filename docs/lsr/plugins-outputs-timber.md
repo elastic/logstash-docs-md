@@ -147,7 +147,7 @@ If you’d like to use an HTTP proxy . This supports multiple configuration synt
 * Value type is [number](introduction.md#number)
 * Default value is `60`
 
-This module makes it easy to add a very fully configured HTTP client to logstash based on [Manticore]([https://github.com/cheald/manticore](https://github.com/cheald/manticore)). For an example of its usage see [https://github.com/logstash-plugins/logstash-input-http_poller](https://github.com/logstash-plugins/logstash-input-http_poller) Timeout (in seconds) for the entire request
+This module makes it easy to add a very fully configured HTTP client to logstash based on [Manticore](https://github.com/cheald/manticore). For an example of its usage see [https://github.com/logstash-plugins/logstash-input-http_poller](https://github.com/logstash-plugins/logstash-input-http_poller) Timeout (in seconds) for the entire request
 
 
 ### `socket_timeout` [plugins-outputs-timber-socket_timeout]

@@ -50,7 +50,7 @@ Also see [Common options](plugins-outputs-graphite.md#plugins-outputs-graphite-c
 * Value type is [array](introduction.md#array)
 * Default value is `["%{[^}]+}"]`
 
-Exclude regex matched metric names, by default exclude unresolved %{{field}} strings.
+Exclude regex matched metric names, by default exclude unresolved `%{{field}}` strings.
 
 
 ### `fields_are_metrics` [plugins-outputs-graphite-fields_are_metrics]
@@ -82,7 +82,7 @@ Include only regex matched metric names.
 * Value type is [hash](introduction.md#hash)
 * Default value is `{}`
 
-The metric(s) to use. This supports dynamic strings like %{{host}} for metric names and also for values. This is a hash field with key being the metric name, value being the metric value. Example:
+The metric(s) to use. This supports dynamic strings like `%{{host}}` for metric names and also for values. This is a hash field with key being the metric name, value being the metric value. Example:
 
 ```ruby
     metrics => { "%{host}/uptime" => "%{uptime_1m}" }

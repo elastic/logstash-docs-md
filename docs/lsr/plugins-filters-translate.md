@@ -225,7 +225,7 @@ When the value that you need to perform enrichment on is a variable sized array 
 
 For a dictionary of:
 
-```csv
+```txt
   100,Yuki
   101,Rupert
   102,Ahmed

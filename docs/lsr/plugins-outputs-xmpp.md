@@ -85,7 +85,7 @@ if muc/multi-user-chat required, give the name of the room that you want to join
 * Value type is [string](introduction.md#string)
 * There is no default value for this setting.
 
-The user or resource ID, like [foo@example.com](mailto:foo@example.com).
+The user or resource ID, like `foo@example.com`.
 
 
 ### `users` [plugins-outputs-xmpp-users]

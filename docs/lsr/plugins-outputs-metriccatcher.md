@@ -126,7 +126,7 @@ The port to connect on your MetricCatcher
 * Value type is [hash](introduction.md#hash)
 * There is no default value for this setting.
 
-The metrics to send. This supports dynamic strings like %{{host}} for metric names and also for values. This is a hash field with key of the metric name, value of the metric value. Example:
+The metrics to send. This supports dynamic strings like `%{{host}}` for metric names and also for values. This is a hash field with key of the metric name, value of the metric value. Example:
 
 ```ruby
   timer => { "%{host}.apache.response_time => "%{response_time}" }
