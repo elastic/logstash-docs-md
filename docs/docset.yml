@@ -7,8 +7,8 @@ cross_links:
   - integration-docs
   - logstash
 toc:
-  - toc: vpr
   - toc: lsr
+  - toc: vpr
 subs:
   logstash-ref:   "https://www.elastic.co/guide/en/logstash/current"
   esf:   "Elastic Serverless Forwarder"

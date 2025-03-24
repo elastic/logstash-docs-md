@@ -38,7 +38,7 @@ The following input plugins are available below. For a list of Elastic supported
 | [kinesis](plugins-inputs-kinesis.md) | Receives events through an AWS Kinesis stream | [logstash-input-kinesis](https://github.com/logstash-plugins/logstash-input-kinesis) |
 | [logstash](plugins-inputs-logstash.md) | Reads from {{ls}} output of another {{ls}} instance | [logstash-integration-logstash](https://github.com/logstash-plugins/logstash-integration-logstash) |
 | [log4j](plugins-inputs-log4j.md) | Reads events over a TCP socket from a Log4j `SocketAppender` object | [logstash-input-log4j](https://github.com/logstash-plugins/logstash-input-log4j) |
-| [lumberjack](plugins-inputs-lumberjack.md) | Receives events using the Lumberjack protocl | [logstash-input-lumberjack](https://github.com/logstash-plugins/logstash-input-lumberjack) |
+| [lumberjack](plugins-inputs-lumberjack.md) | Receives events using the Lumberjack protocol | [logstash-input-lumberjack](https://github.com/logstash-plugins/logstash-input-lumberjack) |
 | [meetup](plugins-inputs-meetup.md) | Captures the output of command line tools as an event | [logstash-input-meetup](https://github.com/logstash-plugins/logstash-input-meetup) |
 | [pipe](plugins-inputs-pipe.md) | Streams events from a long-running command pipe | [logstash-input-pipe](https://github.com/logstash-plugins/logstash-input-pipe) |
 | [puppet_facter](plugins-inputs-puppet_facter.md) | Receives facts from a Puppet server | [logstash-input-puppet_facter](https://github.com/logstash-plugins/logstash-input-puppet_facter) |
