@@ -24,8 +24,8 @@ For questions about the plugin, open a topic in the [Discuss](http://discuss.ela
 
 The JDBC Integration Plugin provides integrated plugins for working with databases that provide JDBC drivers:
 
-* [JDBC Input Plugin](logstash://reference/plugins-inputs-jdbc.md)
-* [JDBC Static Filter Plugin](logstash://reference/plugins-filters-jdbc_static.md)
+* [JDBC Input Plugin](/lsr/plugins-inputs-jdbc.md)
+* [JDBC Static Filter Plugin](/lsr/plugins-filters-jdbc_static.md)
 * [JDBC Streaming Filter Plugin](logstash://reference/plugins-filters-jdbc_streaming.md)
 
 
