@@ -99,7 +99,7 @@ Basic Authentication is not a substitute for SSL, as it provides neither secrecy
 
 Here are some tips for configuring the {{esf}} input to work with the elasticsearch output:
 
-* Set the `document_id` in the output configuration when you use the {{esf}}  input with an [Elasticsearch output plugin](logstash://reference/plugins-outputs-elasticsearch.md).
+* Set the `document_id` in the output configuration when you use the {{esf}}  input with an [Elasticsearch output plugin](/lsr/plugins-outputs-elasticsearch.md).
 
     ```ruby
     output {

@@ -32,7 +32,7 @@ When using any method other than *UUID*, *PUNCTUATION* or *MURMUR3* you must set
 
 
 ::::{note}
-When the `target` option is set to `UUID` the result won’t be a consistent hash but a random [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier). To generate UUIDs, prefer the [uuid filter](logstash://reference/plugins-filters-uuid.md).
+When the `target` option is set to `UUID` the result won’t be a consistent hash but a random [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier). To generate UUIDs, prefer the [uuid filter](/lsr/plugins-filters-uuid.md).
 ::::
 
 

@@ -24,6 +24,6 @@ For questions about the plugin, open a topic in the [Discuss](http://discuss.ela
 
 The Elastic EnterpriseSearch Integration Plugin provides integrated plugins for working with AppSearch service:
 
-* [AppSearch Output Plugin](logstash://reference/plugins-outputs-elastic_app_search.md)
+* [AppSearch Output Plugin](/lsr/plugins-outputs-elastic_app_search.md)
 
 

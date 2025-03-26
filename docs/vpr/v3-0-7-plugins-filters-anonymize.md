@@ -25,7 +25,7 @@ For questions about the plugin, open a topic in the [Discuss](http://discuss.ela
 ::::{admonition} Deprecated in 3.0.3.
 :class: warning
 
-We recommend that you use the [fingerprint filter plugin](logstash://reference/plugins-filters-fingerprint.md) instead.
+We recommend that you use the [fingerprint filter plugin](/lsr/plugins-filters-fingerprint.md) instead.
 ::::
 
 

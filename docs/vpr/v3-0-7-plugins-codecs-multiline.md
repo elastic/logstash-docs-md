@@ -25,7 +25,7 @@ For questions about the plugin, open a topic in the [Discuss](http://discuss.ela
 The multiline codec will collapse multiline messages and merge them into a single event.
 
 ::::{important}
-If you are using a Logstash input plugin that supports multiple hosts, such as the [beats input plugin](logstash://reference/plugins-inputs-beats.md) input plugin, you should not use the multiline codec to handle multiline events. Doing so may result in the mixing of streams and corrupted event data. In this situation, you need to handle multiline events before sending the event data to Logstash.
+If you are using a Logstash input plugin that supports multiple hosts, such as the [beats input plugin](/lsr/plugins-inputs-beats.md) input plugin, you should not use the multiline codec to handle multiline events. Doing so may result in the mixing of streams and corrupted event data. In this situation, you need to handle multiline events before sending the event data to Logstash.
 ::::
 
 

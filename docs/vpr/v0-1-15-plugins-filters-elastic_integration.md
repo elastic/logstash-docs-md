@@ -54,12 +54,12 @@ This plugin requires minimum Java 17 and Logstash 8.7.0 versions.
 
 ### Using `filter-elastic_integration` with `output-elasticsearch` [v0.1.15-plugins-filters-elastic_integration-es-tips]
 
-Elastic {{integrations}} are designed to work with [data streams](logstash://reference/plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-data-streams) and [ECS-compatible](logstash://reference/plugins-outputs-elasticsearch.md#_compatibility_with_the_elastic_common_schema_ecs) output. Be sure that these features are enabled in the [`output-elasticsearch`](logstash://reference/plugins-outputs-elasticsearch.md) plugin.
+Elastic {{integrations}} are designed to work with [data streams](/lsr/plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-data-streams) and [ECS-compatible](/lsr/plugins-outputs-elasticsearch.md#_compatibility_with_the_elastic_common_schema_ecs) output. Be sure that these features are enabled in the [`output-elasticsearch`](/lsr/plugins-outputs-elasticsearch.md) plugin.
 
-* Set [`data-stream`](logstash://reference/plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-data_stream) to `true`.<br> (Check out [Data streams](logstash://reference/plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-data-streams) for additional data streams settings.)
-* Set [`ecs-compatibility`](logstash://reference/plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-ecs_compatibility) to `v1` or `v8`.
+* Set [`data-stream`](/lsr/plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-data_stream) to `true`.<br> (Check out [Data streams](/lsr/plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-data-streams) for additional data streams settings.)
+* Set [`ecs-compatibility`](/lsr/plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-ecs_compatibility) to `v1` or `v8`.
 
-Check out the [`output-elasticsearch` plugin](logstash://reference/plugins-outputs-elasticsearch.md) docs for additional settings.
+Check out the [`output-elasticsearch` plugin](/lsr/plugins-outputs-elasticsearch.md) docs for additional settings.
 
 
 

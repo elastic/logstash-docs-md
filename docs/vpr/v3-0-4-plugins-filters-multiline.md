@@ -125,7 +125,7 @@ Negate the regexp pattern (*if not matched*)
 * Value type is [string](logstash://reference/configuration-file-structure.md#string)
 * There is no default value for this setting.
 
-The expression to match. The same matching engine as the [grok filter](logstash://reference/plugins-filters-grok.md) is used, so the expression can contain a plain regular expression or one that also contains grok patterns.
+The expression to match. The same matching engine as the [grok filter](/lsr/plugins-filters-grok.md) is used, so the expression can contain a plain regular expression or one that also contains grok patterns.
 
 
 ### `patterns_dir` [v3.0.4-plugins-filters-multiline-patterns_dir]

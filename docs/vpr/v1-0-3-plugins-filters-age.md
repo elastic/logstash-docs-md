@@ -24,7 +24,7 @@ For questions about the plugin, open a topic in the [Discuss](http://discuss.ela
 
 A simple filter for calculating the age of an event.
 
-This filter calculates the age of an event by subtracting the event timestamp from the current timestamp. You can use this plugin with the [`drop` filter plugin](logstash://reference/plugins-filters-drop.md) to drop Logstash events that are older than some threshold.
+This filter calculates the age of an event by subtracting the event timestamp from the current timestamp. You can use this plugin with the [`drop` filter plugin](/lsr/plugins-filters-drop.md) to drop Logstash events that are older than some threshold.
 
 ```ruby
 filter {

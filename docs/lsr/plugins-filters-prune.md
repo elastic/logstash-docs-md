@@ -22,7 +22,7 @@ For questions about the plugin, open a topic in the [Discuss](http://discuss.ela
 
 The prune filter is for removing fields from events based on whitelists or blacklist of field names or their values (names and values can also be regular expressions).
 
-This can e.g. be useful if you have a [json](plugins-filters-json.md) or [kv](logstash://reference/plugins-filters-kv.md) filter that creates a number of fields with names that you don’t necessarily know the names of beforehand, and you only want to keep a subset of them.
+This can e.g. be useful if you have a [json](plugins-filters-json.md) or [kv](plugins-filters-kv.md) filter that creates a number of fields with names that you don’t necessarily know the names of beforehand, and you only want to keep a subset of them.
 
 Usage help: To specify a exact field name or value use the regular expression syntax `^some_name_or_value$`. Example usage: Input data `{ "msg":"hello world", "msg_short":"hw" }`
 

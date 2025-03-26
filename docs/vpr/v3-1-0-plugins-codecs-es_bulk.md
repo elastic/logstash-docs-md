@@ -29,7 +29,7 @@ Encoding is not supported at this time as the Elasticsearch output submits Logst
 
 ## Codec settings in the `logstash-input-http` plugin [v3.1.0-plugins-codecs-es_bulk-codec-settings]
 
-The [input-http](logstash://reference/plugins-inputs-http.md) plugin has two configuration options for codecs: `codec` and `additional_codecs`.
+The [input-http](/lsr/plugins-inputs-http.md) plugin has two configuration options for codecs: `codec` and `additional_codecs`.
 
 Values in `additional_codecs` are prioritized over those specified in the `codec` option. That is, the default `codec` is applied only if no codec for the request’s content-type is found in the `additional_codecs` setting.
 

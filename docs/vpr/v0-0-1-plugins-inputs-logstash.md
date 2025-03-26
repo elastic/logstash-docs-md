@@ -23,10 +23,10 @@ For questions about the plugin, open a topic in the [Discuss](http://discuss.ela
 
 ## Description [_description_705]
 
-Listen for events that are sent by a [logstash output plugin](logstash://reference/plugins-outputs-logstash.md) in a pipeline that may be in another process or on another host. The upstream output must have a TCP route to the port on an interface that this plugin is bound to.
+Listen for events that are sent by a [logstash output plugin](/lsr/plugins-outputs-logstash.md) in a pipeline that may be in another process or on another host. The upstream output must have a TCP route to the port on an interface that this plugin is bound to.
 
 ::::{note}
-Sending events to this input by *any* means other than [logstash output plugin](logstash://reference/plugins-outputs-logstash.md) is neither advised nor supported. We will maintain cross-compatibility with any two supported versions of output/input pair and reserve the right to change details such as protocol and encoding.
+Sending events to this input by *any* means other than [logstash output plugin](/lsr/plugins-outputs-logstash.md) is neither advised nor supported. We will maintain cross-compatibility with any two supported versions of output/input pair and reserve the right to change details such as protocol and encoding.
 ::::
 
 
@@ -66,7 +66,7 @@ Client-certificate verification does *not* verify identity claims on the present
 
 ### Security: Credentials [v0.0.1-plugins-inputs-logstash-config-credentials]
 
-You can also configure this plugin to require a specific username/password be provided by configuring [`username`](v0-0-1-plugins-inputs-logstash.md#v0.0.1-plugins-inputs-logstash-username) and [`password`](v0-0-1-plugins-inputs-logstash.md#v0.0.1-plugins-inputs-logstash-password). Doing so requires connecting [logstash output plugin](logstash://reference/plugins-outputs-logstash.md) clients to provide matching [`username`](v0-0-1-plugins-inputs-logstash.md#v0.0.1-plugins-inputs-logstash-username) and [`password`](v0-0-1-plugins-inputs-logstash.md#v0.0.1-plugins-inputs-logstash-password).
+You can also configure this plugin to require a specific username/password be provided by configuring [`username`](v0-0-1-plugins-inputs-logstash.md#v0.0.1-plugins-inputs-logstash-username) and [`password`](v0-0-1-plugins-inputs-logstash.md#v0.0.1-plugins-inputs-logstash-password). Doing so requires connecting [logstash output plugin](/lsr/plugins-outputs-logstash.md) clients to provide matching [`username`](v0-0-1-plugins-inputs-logstash.md#v0.0.1-plugins-inputs-logstash-username) and [`password`](v0-0-1-plugins-inputs-logstash.md#v0.0.1-plugins-inputs-logstash-password).
 
 ::::{note}
 when SSL is disabled, data and credentials will be received in clear-text.
@@ -210,7 +210,7 @@ A password or passphrase of the [`ssl_key`](v0-0-1-plugins-inputs-logstash.md#v0
 * Value type is [string](logstash://reference/configuration-file-structure.md#string)
 * There is no default value for this setting.
 
-Username for password-based authentication. When this input plugin is configured with a `username`, it also requires a [`password`](v0-0-1-plugins-inputs-logstash.md#v0.0.1-plugins-inputs-logstash-password), and any upstream [logstash output plugin](logstash://reference/plugins-outputs-logstash.md) must also be configured with a matching `username`/`password` pair.
+Username for password-based authentication. When this input plugin is configured with a `username`, it also requires a [`password`](v0-0-1-plugins-inputs-logstash.md#v0.0.1-plugins-inputs-logstash-password), and any upstream [logstash output plugin](/lsr/plugins-outputs-logstash.md) must also be configured with a matching `username`/`password` pair.
 
 ::::{note}
 when SSL is disabled, credentials will be transmitted in clear-text.

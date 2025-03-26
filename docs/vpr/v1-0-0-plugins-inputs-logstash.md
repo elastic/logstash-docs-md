@@ -23,7 +23,7 @@ For questions about the plugin, open a topic in the [Discuss](http://discuss.ela
 
 ## Description [_description_700]
 
-Listen for events that are sent by a [Logstash output plugin](logstash://reference/plugins-outputs-logstash.md) in a pipeline that may be in another process or on another host. The upstream output must have a TCP route to the port (defaults to 9800) on an interface that this plugin is bound to.
+Listen for events that are sent by a [Logstash output plugin](/lsr/plugins-outputs-logstash.md) in a pipeline that may be in another process or on another host. The upstream output must have a TCP route to the port (defaults to 9800) on an interface that this plugin is bound to.
 
 ::::{note}
 Sending events to this input by *any* means other than `plugins-outputs-logstash` is neither advised nor supported. We will maintain cross-compatibility with any two supported versions of output/input pair and reserve the right to change details such as protocol and encoding.
