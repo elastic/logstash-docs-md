@@ -22,7 +22,7 @@ For questions about the plugin, open a topic in the [Discuss](http://discuss.ela
 
 The Elastic Enterprise Search integration plugin provides integrated plugins for working with [Elastic App Search](https://www.elastic.co/app-search) and [Elastic Workplace Search](https://www.elastic.co/workplace-search) services:
 
-* [Elastic App Search output plugin](logstash://reference/plugins-outputs-elastic_app_search.md)
-* [Elastic Workplace Search output plugin](logstash://reference/plugins-outputs-elastic_workplace_search.md)
+* [Elastic App Search output plugin](plugins-outputs-elastic_app_search.md)
+* [Elastic Workplace Search output plugin](plugins-outputs-elastic_workplace_search.md)
 
 

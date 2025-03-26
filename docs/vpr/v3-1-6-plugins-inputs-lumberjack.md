@@ -29,7 +29,7 @@ This input can be used to reliably and securely transport events between Logstas
 It can also be used to receive events from the deprecated [logstash-forwarder](https://github.com/elastic/logstash-forwarder) tool that has been replaced by [Filebeat](https://github.com/elastic/beats/tree/master/filebeat).
 
 ::::{note}
-Consider using the [Beats input plugin](lsr/plugins-inputs-beats.md) instead. The Beats input implements the Lumberjack protocol v1 and v2.
+Consider using the [Beats input plugin](/lsr/plugins-inputs-beats.md) instead. The Beats input implements the Lumberjack protocol v1 and v2.
 ::::
 
 
