@@ -52,7 +52,7 @@ If ILM is not being used, set `index` to `%{[@metadata][beat]}-%{[@metadata][ver
 
 
 ::::{important}
-If you are shipping events that span multiple lines, you need to use the [configuration options available in Filebeat\]\(([^:]+)://reference/filebeat/multiline-examples.md) to handle multiline events before sending the event data to Logstash. You cannot use the [Multiline codec plugin](logstash://reference/plugins-codecs-multiline.md) to handle multiline events. Doing so will result in the failure to start Logstash.
+If you are shipping events that span multiple lines, you need to use the [configuration options available in Filebeat\]\(([^:]+)://reference/filebeat/multiline-examples.md) to handle multiline events before sending the event data to Logstash. You cannot use the [Multiline codec plugin](/lsr/plugins-codecs-multiline.md) to handle multiline events. Doing so will result in the failure to start Logstash.
 ::::
 
 

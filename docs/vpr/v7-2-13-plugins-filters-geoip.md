@@ -205,7 +205,7 @@ When this plugin is run with [`ecs_compatibility`](v7-2-13-plugins-filters-geoip
 
 When using a City database, the enrichment is aborted if no latitude/longitude pair is available.
 
-The `location` field combines the latitude and longitude into a structure called [GeoJSON](https://datatracker.ietf.org/doc/html/rfc7946). When you are using a default [`target`](v7-2-13-plugins-filters-geoip.md#v7.2.13-plugins-filters-geoip-target), the templates provided by the [elasticsearch output](logstash://reference/plugins-outputs-elasticsearch.md) map the field to an [Elasticsearch Geo_point datatype](elasticsearch://reference/elasticsearch/mapping-reference/geo-point.md).
+The `location` field combines the latitude and longitude into a structure called [GeoJSON](https://datatracker.ietf.org/doc/html/rfc7946). When you are using a default [`target`](v7-2-13-plugins-filters-geoip.md#v7.2.13-plugins-filters-geoip-target), the templates provided by the [elasticsearch output](/lsr/plugins-outputs-elasticsearch.md) map the field to an [Elasticsearch Geo_point datatype](elasticsearch://reference/elasticsearch/mapping-reference/geo-point.md).
 
 As this field is a `geo_point` *and* it is still valid GeoJSON, you get the awesomeness of Elasticsearch’s geospatial query, facet and filter functions and the flexibility of having GeoJSON for all other applications (like Kibana’s map visualization).
 

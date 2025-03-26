@@ -26,6 +26,6 @@ The JDBC Integration Plugin provides integrated plugins for working with databas
 
 * [JDBC Input Plugin](/lsr/plugins-inputs-jdbc.md)
 * [JDBC Static Filter Plugin](/lsr/plugins-filters-jdbc_static.md)
-* [JDBC Streaming Filter Plugin](logstash://reference/plugins-filters-jdbc_streaming.md)
+* [JDBC Streaming Filter Plugin](/lsr/plugins-filters-jdbc_streaming.md)
 
 

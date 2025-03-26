@@ -24,8 +24,8 @@ For questions about the plugin, open a topic in the [Discuss](http://discuss.ela
 
 The Kafka Integration Plugin provides integrated plugins for working with the [Kafka](https://kafka.apache.org/) distributed streaming platform.
 
-* [Kafka Input Plugin](/lsr/plugins)
-* [Kafka Output Plugin](/lsr/pluginsd)
+* [Kafka Input Plugin](/lsr/plugins-inputs-kafka.md)
+* [Kafka Output Plugin](/lsr/plugins-outputs-kafka.md)
 
 This plugin uses Kafka Client 3.4.1. For broker compatibility, see the official [Kafka compatibility reference](https://cwiki.apache.org/confluence/display/KAFKA/Compatibility+Matrix). If the linked compatibility wiki is not up-to-date, please contact Kafka support/community to confirm compatibility.
 
