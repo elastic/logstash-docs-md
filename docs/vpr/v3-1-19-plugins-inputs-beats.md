@@ -49,7 +49,7 @@ The Beats shipper automatically sets the `type` field on the event. You cannot o
 
 
 ::::{important}
-If you are shipping events that span multiple lines, you need to use the configuration options available in Filebeat to handle multiline events before sending the event data to Logstash. You cannot use the [multiline codec plugin](logstash://reference/plugins-codecs-multiline.md) codec to handle multiline events. Doing so may result in the mixing of streams and corrupted event data.
+If you are shipping events that span multiple lines, you need to use the configuration options available in Filebeat to handle multiline events before sending the event data to Logstash. You cannot use the [multiline codec plugin](/lsr/plugins-codecs-multiline.md) codec to handle multiline events. Doing so may result in the mixing of streams and corrupted event data.
 ::::
 
 

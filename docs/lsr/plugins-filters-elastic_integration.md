@@ -56,12 +56,12 @@ Events that *fail* ingest pipeline processing will be tagged with `_ingest_pipel
 
 ### Using `filter-elastic_integration` with `output-elasticsearch` [plugins-filters-elastic_integration-es-tips]
 
-Elastic {{integrations}} are designed to work with [data streams](https://www.elastic.co/guide/en/logstash/current/plugins-outputs-elasticsearch.html#plugins-outputs-elasticsearch-data-streams) and [ECS-compatible](https://www.elastic.co/guide/en/logstash/current/plugins-outputs-elasticsearch.html#_compatibility_with_the_elastic_common_schema_ecs) output. Be sure that these features are enabled in the [`output-elasticsearch`](logstash://reference/plugins-outputs-elasticsearch.md) plugin.
+Elastic {{integrations}} are designed to work with [data streams](https://www.elastic.co/guide/en/logstash/current/plugins-outputs-elasticsearch.html#plugins-outputs-elasticsearch-data-streams) and [ECS-compatible](https://www.elastic.co/guide/en/logstash/current/plugins-outputs-elasticsearch.html#_compatibility_with_the_elastic_common_schema_ecs) output. Be sure that these features are enabled in the [`output-elasticsearch`](plugins-outputs-elasticsearch.md) plugin.
 
 * Set [`data-stream`](https://www.elastic.co/guide/en/logstash/current/plugins-outputs-elasticsearch.html#plugins-outputs-elasticsearch-data_stream) to `true`.<br> (Check out [Data streams](https://www.elastic.co/guide/en/logstash/current/plugins-outputs-elasticsearch.html#plugins-outputs-elasticsearch-data-streams) for additional data streams settings.)
 * Set [`ecs-compatibility`](https://www.elastic.co/guide/en/logstash/current/plugins-outputs-elasticsearch.html#plugins-outputs-elasticsearch-ecs_compatibility) to `v1` or `v8`.
 
-Check out the [`output-elasticsearch` plugin](logstash://reference/plugins-outputs-elasticsearch.md) docs for additional settings.
+Check out the [`output-elasticsearch` plugin](plugins-outputs-elasticsearch.md) docs for additional settings.
 
 
 

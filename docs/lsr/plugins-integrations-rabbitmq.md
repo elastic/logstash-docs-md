@@ -22,7 +22,7 @@ For questions about the plugin, open a topic in the [Discuss](http://discuss.ela
 
 The RabbitMQ Integration Plugin provides integrated plugins for working with [RabbitMQ](http://www.rabbitmq.com/).
 
-* [RabbitMQ Input Plugin](logstash://reference/plugins-inputs-rabbitmq.md)
-* [RabbitMQ Output Plugin](logstash://reference/plugins-outputs-rabbitmq.md)
+* [RabbitMQ Input Plugin](plugins-inputs-rabbitmq.md)
+* [RabbitMQ Output Plugin](plugins-outputs-rabbitmq.md)
 
 

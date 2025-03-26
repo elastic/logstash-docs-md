@@ -34,7 +34,7 @@ If you need help building patterns to match your logs, you will find the [http:/
 
 ### Grok or Dissect? Or both? [_grok_or_dissect_or_both_3]
 
-The [`dissect`](logstash://reference/plugins-filters-dissect.md) filter plugin is another way to extract unstructured event data into fields using delimiters.
+The [`dissect`](/lsr/plugins-filters-dissect.md) filter plugin is another way to extract unstructured event data into fields using delimiters.
 
 Dissect differs from Grok in that it does not use regular expressions and is faster. Dissect works well when data is reliably repeated. Grok is a better choice when the structure of your text varies from line to line.
 

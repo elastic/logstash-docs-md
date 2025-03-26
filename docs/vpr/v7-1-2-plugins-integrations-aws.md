@@ -24,14 +24,14 @@ For questions about the plugin, open a topic in the [Discuss](http://discuss.ela
 
 The AWS Integration Plugin provides integrated plugins for working with Amazon Web Services:
 
-* [Cloudfront Codec Plugin](logstash://reference/plugins-codecs-cloudfront.md)
-* [Cloudtrail Codec Plugin](logstash://reference/plugins-codecs-cloudtrail.md)
-* [Cloudwatch Input Plugin](logstash://reference/plugins-inputs-cloudwatch.md)
-* [S3 Input Plugin](logstash://reference/plugins-inputs-s3.md)
-* [Sqs Input Plugin](logstash://reference/plugins-inputs-sqs.md)
-* [Cloudwatch Output Plugin](logstash://reference/plugins-outputs-cloudwatch.md)
-* [S3 Output Plugin](logstash://reference/plugins-outputs-s3.md)
-* [Sns Output Plugin](logstash://reference/plugins-outputs-sns.md)
-* [Sqs Output Plugin](logstash://reference/plugins-outputs-sqs.md)
+* [Cloudfront Codec Plugin](/lsr/plugins-codecs-cloudfront.md)
+* [Cloudtrail Codec Plugin](/lsr/plugins-codecs-cloudtrail.md)
+* [Cloudwatch Input Plugin](/lsr/plugins-inputs-cloudwatch.md)
+* [S3 Input Plugin](/lsr/plugins-inputs-s3.md)
+* [Sqs Input Plugin](/lsr/plugins-inputs-sqs.md)
+* [Cloudwatch Output Plugin](/lsr/plugins-outputs-cloudwatch.md)
+* [S3 Output Plugin](/lsr/plugins-outputs-s3.md)
+* [Sns Output Plugin](/lsr/plugins-outputs-sns.md)
+* [Sqs Output Plugin](/lsr/plugins-outputs-sqs.md)
 
 

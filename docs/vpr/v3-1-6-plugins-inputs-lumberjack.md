@@ -24,12 +24,12 @@ For questions about the plugin, open a topic in the [Discuss](http://discuss.ela
 
 Receive events using the Lumberjack protocol.
 
-This input can be used to reliably and securely transport events between Logstash instances. To do so, use the [lumberjack output plugin](logstash://reference/plugins-outputs-lumberjack.md) in the sending Logstash instance(s).
+This input can be used to reliably and securely transport events between Logstash instances. To do so, use the [lumberjack output plugin](/lsr/plugins-outputs-lumberjack.md) in the sending Logstash instance(s).
 
 It can also be used to receive events from the deprecated [logstash-forwarder](https://github.com/elastic/logstash-forwarder) tool that has been replaced by [Filebeat](https://github.com/elastic/beats/tree/master/filebeat).
 
 ::::{note}
-Consider using the [Beats input plugin](logstash://reference/plugins-inputs-beats.md) instead. The Beats input implements the Lumberjack protocol v1 and v2.
+Consider using the [Beats input plugin](/lsr/plugins-inputs-beats.md) instead. The Beats input implements the Lumberjack protocol v1 and v2.
 ::::
 
 

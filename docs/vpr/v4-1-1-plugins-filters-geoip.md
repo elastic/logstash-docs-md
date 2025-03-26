@@ -24,7 +24,7 @@ For questions about the plugin, open a topic in the [Discuss](http://discuss.ela
 
 The GeoIP filter adds information about the geographical location of IP addresses, based on data from the Maxmind GeoLite2 database. Commercial databases from Maxmind are also supported in this plugin.
 
-A `[geoip][location]` field is created if the GeoIP lookup returns a latitude and longitude. The field is stored in [GeoJSON](http://geojson.org/geojson-spec.html) format. Additionally, the default Elasticsearch template provided with the [`elasticsearch` output](logstash://reference/plugins-outputs-elasticsearch.md) maps the `[geoip][location]` field to an [Elasticsearch geo_point](http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/mapping-geo-point-type.html#_mapping_options).
+A `[geoip][location]` field is created if the GeoIP lookup returns a latitude and longitude. The field is stored in [GeoJSON](http://geojson.org/geojson-spec.html) format. Additionally, the default Elasticsearch template provided with the [`elasticsearch` output](/lsr/plugins-outputs-elasticsearch.md) maps the `[geoip][location]` field to an [Elasticsearch geo_point](http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/mapping-geo-point-type.html#_mapping_options).
 
 As this field is a `geo_point` *and* it is still valid GeoJSON, you get the awesomeness of Elasticsearch’s geospatial query, facet and filter functions and the flexibility of having GeoJSON for all other applications (like Kibana’s map visualization).
 

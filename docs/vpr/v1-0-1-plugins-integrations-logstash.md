@@ -24,8 +24,8 @@ For questions about the plugin, open a topic in the [Discuss](http://discuss.ela
 
 The Logstash Integration Plugin provides integrated plugins for sending events from one Logstash to another instance(s):
 
-* [Logstash output plugin](logstash://reference/plugins-outputs-logstash.md)
-* [Logstash input plugin](logstash://reference/plugins-inputs-logstash.md)
+* [Logstash output plugin](/lsr/plugins-outputs-logstash.md)
+* [Logstash input plugin](/lsr/plugins-inputs-logstash.md)
 
 ### High-level concepts [v1.0.1-plugins-integrations-logstash-concepts]
 

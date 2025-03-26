@@ -24,7 +24,7 @@ For questions about the plugin, open a topic in the [Discuss](http://discuss.ela
 
 The Elastic Enterprise Search integration plugin provides integrated plugins for working with App Search and Workplace Search services:
 
-* [App Search Output Plugin](logstash://reference/plugins-outputs-elastic_app_search.md)
+* [App Search Output Plugin](/lsr/plugins-outputs-elastic_app_search.md)
 * Workplace Search Output Plugin
 
 

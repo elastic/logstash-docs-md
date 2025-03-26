@@ -24,7 +24,7 @@ For questions about the plugin, open a topic in the [Discuss](http://discuss.ela
 
 The uuid filter allows you to generate a [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier) and add it as a field to each processed event.
 
-This is useful if you need to generate a string that’s unique for every event, even if the same input is processed multiple times. If you want to generate strings that are identical each time a event with a given content is processed (i.e. a hash) you should use the [fingerprint filter](logstash://reference/plugins-filters-fingerprint.md) instead.
+This is useful if you need to generate a string that’s unique for every event, even if the same input is processed multiple times. If you want to generate strings that are identical each time a event with a given content is processed (i.e. a hash) you should use the [fingerprint filter](/lsr/plugins-filters-fingerprint.md) instead.
 
 The generated UUIDs follow the version 4 definition in [RFC 4122](https://tools.ietf.org/html/rfc4122)) and will be represented as a standard hexadecimal string format, e.g. "e08806fe-02af-406c-bbde-8a5ae4475e57".
 

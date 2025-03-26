@@ -23,7 +23,7 @@ For questions about the plugin, open a topic in the [Discuss](http://discuss.ela
 
 ## Description [_description_1415]
 
-Send events to a [Logstash input plugin](logstash://reference/plugins-inputs-logstash.md) in a pipeline that may be in another process or on another host. You must have a TCP route to the port (defaults to 9800) on an interface that the downstream input is bound to.
+Send events to a [Logstash input plugin](/lsr/plugins-inputs-logstash.md) in a pipeline that may be in another process or on another host. You must have a TCP route to the port (defaults to 9800) on an interface that the downstream input is bound to.
 
 ::::{note}
 Sending events to *any* destination other than a `logstash-input` plugin is neither advised nor supported. We will maintain cross-compatibility with any two supported versions of output/input pair and reserve the right to change details such as protocol and encoding.
@@ -39,7 +39,7 @@ Sending events to *any* destination other than a `logstash-input` plugin is neit
 
 ### Configuration Concepts [v0.0.5-plugins-outputs-logstash-config-connecting]
 
-Configure this output plugin to connect to a [Logstash input plugin](logstash://reference/plugins-inputs-logstash.md) by specifying its `hosts`. Depending on the downstream plugin’s configuration, you may need to also configure the target port, SSL, and/or credentials.
+Configure this output plugin to connect to a [Logstash input plugin](/lsr/plugins-inputs-logstash.md) by specifying its `hosts`. Depending on the downstream plugin’s configuration, you may need to also configure the target port, SSL, and/or credentials.
 
 
 ### Security: SSL Trust [v0.0.5-plugins-outputs-logstash-config-ssl-trust]

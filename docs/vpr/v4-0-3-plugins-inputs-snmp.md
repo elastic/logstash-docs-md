@@ -32,7 +32,7 @@ Current 1.x versions of the `input-snmp` plugin are bundled with {{ls}} by defau
 
 Be aware of behavioral and mapping differences between current stand-alone plugins and the new versions included in the `integration-snmp`.
 
-Before you install the new integration, be aware of [behavioral and mapping differences](logstash://reference/plugins-integrations-snmp.md#plugins-integrations-snmp-migration) between current stand-alone plugins and the new versions included in `integration-snmp`.
+Before you install the new integration, be aware of [behavioral and mapping differences](/lsr/plugins-integrations-snmp.md#plugins-integrations-snmp-migration) between current stand-alone plugins and the new versions included in `integration-snmp`.
 
 ::::
 
@@ -47,7 +47,7 @@ The SNMP input plugin supports SNMP v1, v2c, and v3 over UDP and TCP transport p
 ::::{admonition} Migrating to `logstash-integration-snmp` from stand-alone `input-snmp`
 The `logstash-input-snmp` plugin is now a component of the `logstash-integration-snmp` plugin. This integrated plugin package provides better alignment in snmp processing, better resource management, easier package maintenance, and a smaller installation footprint.
 
-Before you install the new integration, be aware of [behavioral and mapping differences](logstash://reference/plugins-integrations-snmp.md#plugins-integrations-snmp-migration) between current stand-alone plugins and the new versions included in `integration-snmp`.
+Before you install the new integration, be aware of [behavioral and mapping differences](/lsr/plugins-integrations-snmp.md#plugins-integrations-snmp-migration) between current stand-alone plugins and the new versions included in `integration-snmp`.
 
 ::::
 
@@ -67,7 +67,7 @@ Because SNMP data has specific field names based on OIDs, we recommend setting a
 
 ## Importing MIBs [v4.0.3-plugins-inputs-snmp-import-mibs]
 
-This plugin already includes the IETF MIBs (management information bases), and you do not need to import them. If you need additional MIBs, you need to import them. Check out [Importing MIBs](logstash://reference/plugins-integrations-snmp.md#plugins-integrations-snmp-import-mibs) for info.
+This plugin already includes the IETF MIBs (management information bases), and you do not need to import them. If you need additional MIBs, you need to import them. Check out [Importing MIBs](/lsr/plugins-integrations-snmp.md#plugins-integrations-snmp-import-mibs) for info.
 
 
 ## SNMP Input Configuration Options [v4.0.3-plugins-inputs-snmp-options]
