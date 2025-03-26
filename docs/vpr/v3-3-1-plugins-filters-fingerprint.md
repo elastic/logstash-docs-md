@@ -27,7 +27,7 @@ Create consistent hashes (fingerprints) of one or more fields and store the resu
 You can use this plugin to create consistent document ids when  events are inserted into Elasticsearch. This approach means that existing documents can be updated instead of creating new documents.
 
 ::::{note}
-When the `method` option is set to `UUID` the result won’t be a consistent hash but a random [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier). To generate UUIDs, prefer the [uuid filter](logstash://reference/plugins-filters-uuid.md).
+When the `method` option is set to `UUID` the result won’t be a consistent hash but a random [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier). To generate UUIDs, prefer the [uuid filter](/lsr/plugins
 ::::
 
 

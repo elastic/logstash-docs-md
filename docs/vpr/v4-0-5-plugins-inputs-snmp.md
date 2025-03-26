@@ -23,7 +23,7 @@ For questions about the plugin, open a topic in the [Discuss](http://discuss.ela
 ::::{admonition} Migrating to `logstash-integration-snmp` from stand-alone `input-snmp`
 The `logstash-input-snmp` plugin is now a component of the `logstash-integration-snmp` plugin which is bundled with {{ls}} 8.15.0 by default. This integrated plugin package provides better alignment in snmp processing, better resource management, easier package maintenance, and a smaller installation footprint.
 
-Before you upgrade to {{ls}} 8.15.0, be aware of [behavioral and mapping differences](logstash://reference/plugins-integrations-snmp.md#plugins-integrations-snmp-migration) between current stand-alone plugins and the new versions included in `integration-snmp`.
+Before you upgrade to {{ls}} 8.15.0, be aware of [behavioral and mapping differences](/lsr/plugins-integrations-snmp.md#plugins-integrations-snmp-migration) between current stand-alone plugins and the new versions included in `integration-snmp`.
 
 ::::
 
@@ -50,7 +50,7 @@ Because SNMP data has specific field names based on OIDs, we recommend setting a
 
 ## Importing MIBs [v4.0.5-plugins-inputs-snmp-import-mibs]
 
-This plugin already includes the IETF MIBs (management information bases), and you do not need to import them. If you need additional MIBs, you need to import them. Check out [Importing MIBs](logstash://reference/plugins-integrations-snmp.md#plugins-integrations-snmp-import-mibs) for info.
+This plugin already includes the IETF MIBs (management information bases), and you do not need to import them. If you need additional MIBs, you need to import them. Check out [Importing MIBs](/lsr/plugins-integrations-snmp.md#plugins-integrations-snmp-import-mibs) for info.
 
 
 ## SNMP Input Configuration Options [v4.0.5-plugins-inputs-snmp-options]

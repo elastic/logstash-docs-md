@@ -23,7 +23,7 @@ For questions about the plugin, open a topic in the [Discuss](http://discuss.ela
 ::::{admonition} Migrating to `logstash-integration-snmp` from stand-alone `input-snmptrap`
 The `logstash-input-snmptrap` plugin is now a component of the `logstash-integration-snmp` plugin which is bundled with {{ls}} 8.15.0 by default. This integrated plugin package provides better alignment in snmp processing, better resource management, easier package maintenance, and a smaller installation footprint.
 
-Before you upgrade to {{ls}} 8.15.0, be aware of [behavioral and mapping differences](logstash://reference/plugins-integrations-snmp.md#plugins-integrations-snmp-migration) between current stand-alone plugins and the new versions included in `integration-snmp`. If you need to maintain current mappings for the `input-snmptrap` plugin, you have options to [preserve existing behavior](logstash://reference/plugins-integrations-snmp.md#plugins-integrations-snmp-input-snmptrap-compat).
+Before you upgrade to {{ls}} 8.15.0, be aware of [behavioral and mapping differences](/lsr/plugins-integrations-snmp.md#plugins-integrations-snmp-migration) between current stand-alone plugins and the new versions included in `integration-snmp`. If you need to maintain current mappings for the `input-snmptrap` plugin, you have options to [preserve existing behavior](/lsr/plugins-integrations-snmp.md#plugins-integrations-snmp-input-snmptrap-compat).
 
 ::::
 
@@ -71,7 +71,7 @@ This plugin also adds the trap PDU metadata to each event. The value is stored i
 
 ## Importing MIBs [v4.0.6-plugins-inputs-snmptrap-import-mibs]
 
-This plugin already includes the IETF MIBs (management information bases), and you do not need to import them. If you need additional MIBs, you need to import them. Check out [Importing MIBs](logstash://reference/plugins-integrations-snmp.md#plugins-integrations-snmp-import-mibs) for info.
+This plugin already includes the IETF MIBs (management information bases), and you do not need to import them. If you need additional MIBs, you need to import them. Check out [Importing MIBs](/lsr/plugins-integrations-snmp.md#plugins-integrations-snmp-import-mibs) for info.
 
 
 ## SNMP Trap Input Configuration Options [v4.0.6-plugins-inputs-snmptrap-options]

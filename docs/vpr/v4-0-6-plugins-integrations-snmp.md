@@ -23,7 +23,7 @@ For questions about the plugin, open a topic in the [Discuss](http://discuss.ela
 The new `logstash-integration-snmp` plugin is available and bundled with {{ls}} 8.15.0 (and later) by default. This plugin combines our classic `logstash-input-snmp` and `logstash-input-snmptrap` plugins into a single Ruby gem at v4.0.0 and later. Earlier versions of the stand-alone plugins that were bundled with {{ls}} by default will be replaced by the 4.0.0+ version contained in this new integration.
 
 ::::{important}
-Before you upgrade to {{ls}} 8.15.0 that includes this new integration by default, be aware of [behavioral and mapping differences](logstash://reference/plugins-integrations-snmp.md#plugins-integrations-snmp-migration) between stand-alone plugins and the new versions included in `integration-snmp`. If you need to maintain current mappings for the `input-snmptrap` plugin, you have options to [preserve existing behavior](logstash://reference/plugins-integrations-snmp.md#plugins-integrations-snmp-input-snmptrap-compat).
+Before you upgrade to {{ls}} 8.15.0 that includes this new integration by default, be aware of [behavioral and mapping differences](/lsr/plugins-integrations-snmp.md#plugins-integrations-snmp-migration) between stand-alone plugins and the new versions included in `integration-snmp`. If you need to maintain current mappings for the `input-snmptrap` plugin, you have options to [preserve existing behavior](/lsr/plugins-integrations-snmp.md#plugins-integrations-snmp-input-snmptrap-compat).
 ::::
 
 
@@ -35,8 +35,8 @@ Before you upgrade to {{ls}} 8.15.0 that includes this new integration by defaul
 
 The SNMP integration plugin includes:
 
-* [SNMP input plugin](logstash://reference/plugins-inputs-snmp.md)
-* [Snmptrap input plugin](logstash://reference/plugins-inputs-snmptrap.md)
+* [SNMP input plugin](/lsr/plugins-inputs-snmp.md)
+* [Snmptrap input plugin](/lsr/plugins-inputs-snmptrap.md)
 
 The new `logstash-integration-snmp` plugin combines the `logstash-input-snmp` and `logstash-input-snmptrap` plugins into one integrated plugin that encompasses the capabilities of both. This integrated plugin package provides better alignment in snmp processing, better resource management, easier package maintenance, and a smaller installation footprint.
 
