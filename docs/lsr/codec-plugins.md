@@ -1,3 +1,8 @@
+---
+mapped_pages:
+  - https://www.elastic.co/guide/en/logstash/current/codec-plugins.html
+---
+
 # Codec plugins [codec-plugins]
 
 A codec plugin changes the data representation of an event. Codecs are essentially stream filters that can operate as part of an input or output.

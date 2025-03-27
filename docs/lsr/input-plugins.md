@@ -1,3 +1,8 @@
+---
+mapped_pages:
+  - https://www.elastic.co/guide/en/logstash/current/input-plugins.html
+---
+
 # Input plugins [input-plugins]
 
 An input plugin enables a specific source of events to be read by Logstash.

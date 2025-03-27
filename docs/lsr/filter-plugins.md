@@ -1,3 +1,8 @@
+---
+mapped_pages:
+  - https://www.elastic.co/guide/en/logstash/current/filter-plugins.html
+---
+
 # Filter plugins [filter-plugins]
 
 A filter plugin performs intermediary processing on an event. Filters are often applied conditionally depending on the characteristics of the event.
