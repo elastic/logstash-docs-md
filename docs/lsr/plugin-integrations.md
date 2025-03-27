@@ -1,3 +1,8 @@
+---
+mapped_pages:
+  - https://www.elastic.co/guide/en/logstash/current/plugin-integrations.html
+---
+
 # Integration plugins [plugin-integrations]
 
 Integration plugins combine related plugins—​inputs, outputs, and sometimes filters and codecs—​into one package.
