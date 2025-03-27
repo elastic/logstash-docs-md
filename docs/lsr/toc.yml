@@ -1,7 +1,7 @@
 project: 'Logstash core plugins reference'
 
 toc:
-  - file: introduction.md
+  - file: index.md
   - file: plugin-integrations.md
     children:
       - file: plugins-integrations-aws.md
@@ -209,3 +209,4 @@ toc:
       - file: plugins-codecs-plain.md
       - file: plugins-codecs-protobuf.md
       - file: plugins-codecs-rubydebug.md
+  - file: value-types.md

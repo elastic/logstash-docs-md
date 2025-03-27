@@ -1,11 +1,6 @@
-# Logstash Plugins [introduction]
+# Plugin value types [plugin-value-types]
 
-Logstash has a rich collection of input, filter, codec, and output plugins. Check out the [Elastic Support Matrix](https://www.elastic.co/support/matrix#matrix_logstash_plugins) to see which plugins are supported at various levels.
-
-
-## Value types [plugin-value-types]
-
-A plugin can require that the value for a setting be a certain type, such as boolean, list, or hash. The following value types are supported.
+A plugin can require that the value for a setting be a certain type, such as boolean, list, or hash. These value types are supported.
 
 ## Array [array]
 
@@ -18,7 +13,7 @@ Example:
 ```
 
 
-### Lists [list]
+## Lists [list]
 
 Not a type in and of itself, but a property types can have. This makes it possible to type check multiple values. Plugin authors can enable list checking by specifying `:list => true` when declaring an argument.
 
@@ -32,7 +27,7 @@ Example:
 This example configures `path`, which is a `string` to be a list that contains an element for each of the three strings. It also will configure the `uris` parameter to be a list of URIs, failing if any of the URIs provided are not valid.
 
 
-### Boolean [boolean]
+## Boolean [boolean]
 
 A boolean must be either `true` or `false`. Note that the `true` and `false` keywords are not enclosed in quotes.
 
@@ -43,7 +38,7 @@ Example:
 ```
 
 
-### Bytes [bytes]
+## Bytes [bytes]
 
 A bytes field is a string field that represents a valid unit of bytes. It is a convenient way to declare specific sizes in your plugin options. Both SI (k M G T P E Z Y) and Binary (Ki Mi Gi Ti Pi Ei Zi Yi) units are supported. Binary units are in base-1024 and SI units are in base-1000. This field is case-insensitive and accepts space between the value and the unit. If no unit is specified, the integer string represents the number of bytes.
 
@@ -57,7 +52,7 @@ Examples:
 ```
 
 
-### Codec [codec]
+## Codec [codec]
 
 A codec is the name of Logstash codec used to represent the data. Codecs can be used in both inputs and outputs.
 
@@ -72,7 +67,7 @@ Example:
 ```
 
 
-### Hash [hash]
+## Hash [hash]
 
 A hash is a collection of key value pairs specified in the format `"field1" => "value1"`. Note that multiple key value entries are separated by spaces rather than commas.
 
@@ -89,7 +84,7 @@ match => { "field1" => "value1" "field2" => "value2" }
 ```
 
 
-### Number [number]
+## Number [number]
 
 Numbers must be valid numeric values (floating point or integer).
 
@@ -100,7 +95,7 @@ Example:
 ```
 
 
-### Password [password]
+## Password [password]
 
 A password is a string with a single value that is not logged or printed.
 
@@ -111,7 +106,7 @@ Example:
 ```
 
 
-### URI [uri]
+## URI [uri]
 
 A URI can be anything from a full URL like *http://elastic.co/* to a simple identifier like *foobar*. If the URI contains a password such as *http://user:pass@example.net* the password portion of the URI will not be logged or printed.
 
@@ -122,7 +117,7 @@ Example:
 ```
 
 
-### Path [path]
+## Path [path]
 
 A path is a string that represents a valid operating system path.
 
@@ -133,11 +128,11 @@ Example:
 ```
 
 
-### String [string]
+## String [string]
 
 A string must be a single character sequence. Note that string values are enclosed in quotes, either double or single.
 
-### Escape sequences [_escape_sequences]
+## Escape sequences [_escape_sequences]
 
 By default, escape sequences are not enabled. If you wish to use escape sequences in quoted strings, you will need to set `config.support_escapes: true` in your `logstash.yml`. When `true`, quoted strings (double and single) will have this transformation:
 
@@ -159,7 +154,7 @@ Example:
 ```
 
 
-### Field reference [field-reference]
+## Field reference [field-reference]
 
 A Field Reference is a special [String](#string) value representing the path to a field in an event, such as `@timestamp` or `[@timestamp]` to reference a top-level field, or `[client][ip]` to access a nested field. The *Field References Deep Dive* provides detailed information about the structure of Field References. When provided as a configuration option, Field References need to be quoted and special characters must be escaped following the same rules as [String](#string).
 
