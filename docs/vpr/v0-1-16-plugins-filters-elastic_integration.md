@@ -183,7 +183,7 @@ This filter can run {{es}} Ingest Node pipelines that are *wholly* comprised of 
 | `uppercase` | *none* |
 | `uri_parts` | *none* |
 | `urldecode` | *none* |
-| `user_agent` | side-loading a custom regex file is not supported; the processor will use the default user agent definitions as specified in [Elasticsearch processor definition](elasticsearch://reference/ingestion-tools/enrich-processor/user-agent-processor.md) |
+| `user_agent` | side-loading a custom regex file is not supported; the processor will use the default user agent definitions as specified in [Elasticsearch processor definition](elasticsearch://reference/enrich-processor/user-agent-processor.md) |
 | Redact | `redact` | *none* |
 | GeoIp | `geoip` | requires MaxMind GeoIP2 databases, which may be provided by Logstash’s Geoip Database Management *OR* configured using [`geoip_database_directory`](v0-1-16-plugins-filters-elastic_integration.md#v0.1.16-plugins-filters-elastic_integration-geoip_database_directory) |
 
