@@ -173,4 +173,4 @@ input { # comments can appear at the end of a line, too
 
 ::::{note}
 Comments containing environment variable `${var}` references in `config.string` are still evaluated. Remove the `$` sign to avoid pipeline loading failures.
-:::
+::::
