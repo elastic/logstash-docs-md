@@ -43,8 +43,8 @@ This plugin supports the following configuration options plus the [Common option
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`command`](plugins-inputs-pipe.md#plugins-inputs-pipe-command) | [string](introduction.md#string) | Yes |
-| [`ecs_compatibility`](plugins-inputs-pipe.md#plugins-inputs-pipe-ecs_compatibility) | [string](introduction.md#string) | No |
+| [`command`](plugins-inputs-pipe.md#plugins-inputs-pipe-command) | [string](value-types.md#string) | Yes |
+| [`ecs_compatibility`](plugins-inputs-pipe.md#plugins-inputs-pipe-ecs_compatibility) | [string](value-types.md#string) | No |
 
 Also see [Common options](plugins-inputs-pipe.md#plugins-inputs-pipe-common-options) for a list of options supported by all input plugins.
 
@@ -53,7 +53,7 @@ Also see [Common options](plugins-inputs-pipe.md#plugins-inputs-pipe-common-opti
 ### `command` [plugins-inputs-pipe-command]
 
 * This is a required setting.
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 Command to run and read events from, one line at a time.
@@ -71,7 +71,7 @@ input {
 
 ### `ecs_compatibility` [plugins-inputs-pipe-ecs_compatibility]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Supported values are:
 
     * `disabled`: uses backwards compatible field names, such as `[host]`

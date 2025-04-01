@@ -45,12 +45,12 @@ This plugin supports the following configuration options plus the [Common option
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`count`](plugins-inputs-heartbeat.md#plugins-inputs-heartbeat-count) | [number](introduction.md#number) | No |
-| [`ecs_compatibility`](plugins-inputs-heartbeat.md#plugins-inputs-heartbeat-ecs_compatibility) | [string](introduction.md#string) | No |
-| [`interval`](plugins-inputs-heartbeat.md#plugins-inputs-heartbeat-interval) | [number](introduction.md#number) | No |
-| [`message`](plugins-inputs-heartbeat.md#plugins-inputs-heartbeat-message) | [string](introduction.md#string) | No |
-| [`sequence`](plugins-inputs-heartbeat.md#plugins-inputs-heartbeat-sequence) | [string](introduction.md#string) one of `["none", "epoch", "sequence"]` | No |
-| [`threads`](plugins-inputs-heartbeat.md#plugins-inputs-heartbeat-threads) | [number](introduction.md#number) | No |
+| [`count`](plugins-inputs-heartbeat.md#plugins-inputs-heartbeat-count) | [number](value-types.md#number) | No |
+| [`ecs_compatibility`](plugins-inputs-heartbeat.md#plugins-inputs-heartbeat-ecs_compatibility) | [string](value-types.md#string) | No |
+| [`interval`](plugins-inputs-heartbeat.md#plugins-inputs-heartbeat-interval) | [number](value-types.md#number) | No |
+| [`message`](plugins-inputs-heartbeat.md#plugins-inputs-heartbeat-message) | [string](value-types.md#string) | No |
+| [`sequence`](plugins-inputs-heartbeat.md#plugins-inputs-heartbeat-sequence) | [string](value-types.md#string) one of `["none", "epoch", "sequence"]` | No |
+| [`threads`](plugins-inputs-heartbeat.md#plugins-inputs-heartbeat-threads) | [number](value-types.md#number) | No |
 
 Also see [Common options](plugins-inputs-heartbeat.md#plugins-inputs-heartbeat-common-options) for a list of options supported by all input plugins.
 
@@ -58,7 +58,7 @@ Also see [Common options](plugins-inputs-heartbeat.md#plugins-inputs-heartbeat-c
 
 ### `count` [plugins-inputs-heartbeat-count]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `-1`
 
 How many times to iterate. This is typically used only for testing purposes.
@@ -66,7 +66,7 @@ How many times to iterate. This is typically used only for testing purposes.
 
 ### `ecs_compatibility` [plugins-inputs-heartbeat-ecs_compatibility]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Supported values are:
 
     * `disabled`: `clock` counter field added at root level
@@ -83,7 +83,7 @@ Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)](ht
 
 ### `interval` [plugins-inputs-heartbeat-interval]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `60`
 
 Set how frequently messages should be sent.
@@ -93,7 +93,7 @@ The default, `60`, means send a message every 60 seconds.
 
 ### `message` [plugins-inputs-heartbeat-message]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"ok"`
 
 The message string to use in the event.
@@ -131,7 +131,7 @@ If `sequence` is defined, it takes precedence over `message` configuration. If `
 
 ### `threads` [plugins-inputs-heartbeat-threads]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `1`
 
 

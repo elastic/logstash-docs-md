@@ -71,10 +71,10 @@ This plugin supports the following configuration options plus the [Common option
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`source`](plugins-filters-bytes.md#plugins-filters-bytes-source) | [string](introduction.md#string) | No |
-| [`target`](plugins-filters-bytes.md#plugins-filters-bytes-target) | [string](introduction.md#string) | Yes |
-| [`conversion_method`](plugins-filters-bytes.md#plugins-filters-bytes-conversion_method) | [string](introduction.md#string) | No |
-| [`source`](plugins-filters-bytes.md#plugins-filters-bytes-decimal_separator) | [string](introduction.md#string) | No |
+| [`source`](plugins-filters-bytes.md#plugins-filters-bytes-source) | [string](value-types.md#string) | No |
+| [`target`](plugins-filters-bytes.md#plugins-filters-bytes-target) | [string](value-types.md#string) | Yes |
+| [`conversion_method`](plugins-filters-bytes.md#plugins-filters-bytes-conversion_method) | [string](value-types.md#string) | No |
+| [`source`](plugins-filters-bytes.md#plugins-filters-bytes-decimal_separator) | [string](value-types.md#string) | No |
 
 Also see [Common options](plugins-filters-bytes.md#plugins-filters-bytes-common-options) for a list of options supported by all filter plugins.
 
@@ -82,7 +82,7 @@ Also see [Common options](plugins-filters-bytes.md#plugins-filters-bytes-common-
 
 ### `source` [plugins-filters-bytes-source]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `message`
 
 Name of the source field that contains the storage size
@@ -90,14 +90,14 @@ Name of the source field that contains the storage size
 
 ### `target` [plugins-filters-bytes-target]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 
 Name of the target field that will contain the storage size in bytes
 
 
 ### `conversion_method` [plugins-filters-bytes-conversion_method]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Value can be any of: `binary`, `metric`
 * Default value is `binary`
 
@@ -106,7 +106,7 @@ Which conversion method to use when converting to bytes. `binary` uses `1K = 102
 
 ### `source` [plugins-filters-bytes-decimal_separator]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `.`
 
 Separator, if any, used as the decimal. This value is only used if the plugin cannot guess the decimal separator by looking at the string in the `source` field.

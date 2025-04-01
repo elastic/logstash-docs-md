@@ -27,17 +27,17 @@ This codec will encode and decode Graphite formated lines.
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`exclude_metrics`](plugins-codecs-graphite.md#plugins-codecs-graphite-exclude_metrics) | [array](introduction.md#array) | No |
-| [`fields_are_metrics`](plugins-codecs-graphite.md#plugins-codecs-graphite-fields_are_metrics) | [boolean](introduction.md#boolean) | No |
-| [`include_metrics`](plugins-codecs-graphite.md#plugins-codecs-graphite-include_metrics) | [array](introduction.md#array) | No |
-| [`metrics`](plugins-codecs-graphite.md#plugins-codecs-graphite-metrics) | [hash](introduction.md#hash) | No |
-| [`metrics_format`](plugins-codecs-graphite.md#plugins-codecs-graphite-metrics_format) | [string](introduction.md#string) | No |
+| [`exclude_metrics`](plugins-codecs-graphite.md#plugins-codecs-graphite-exclude_metrics) | [array](value-types.md#array) | No |
+| [`fields_are_metrics`](plugins-codecs-graphite.md#plugins-codecs-graphite-fields_are_metrics) | [boolean](value-types.md#boolean) | No |
+| [`include_metrics`](plugins-codecs-graphite.md#plugins-codecs-graphite-include_metrics) | [array](value-types.md#array) | No |
+| [`metrics`](plugins-codecs-graphite.md#plugins-codecs-graphite-metrics) | [hash](value-types.md#hash) | No |
+| [`metrics_format`](plugins-codecs-graphite.md#plugins-codecs-graphite-metrics_format) | [string](value-types.md#string) | No |
 
  
 
 ### `exclude_metrics` [plugins-codecs-graphite-exclude_metrics]
 
-* Value type is [array](introduction.md#array)
+* Value type is [array](value-types.md#array)
 * Default value is `["%{[^}]+}"]`
 
 Exclude regex matched metric names, by default exclude unresolved `%{{field}}` strings
@@ -45,7 +45,7 @@ Exclude regex matched metric names, by default exclude unresolved `%{{field}}` s
 
 ### `fields_are_metrics` [plugins-codecs-graphite-fields_are_metrics]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 Indicate that the event @fields should be treated as metrics and will be sent as is to graphite
@@ -53,7 +53,7 @@ Indicate that the event @fields should be treated as metrics and will be sent as
 
 ### `include_metrics` [plugins-codecs-graphite-include_metrics]
 
-* Value type is [array](introduction.md#array)
+* Value type is [array](value-types.md#array)
 * Default value is `[".*"]`
 
 Include only regex matched metric names
@@ -61,7 +61,7 @@ Include only regex matched metric names
 
 ### `metrics` [plugins-codecs-graphite-metrics]
 
-* Value type is [hash](introduction.md#hash)
+* Value type is [hash](value-types.md#hash)
 * Default value is `{}`
 
 The metric(s) to use. This supports dynamic strings like `%{{host}}` for metric names and also for values. This is a hash field with key of the metric name, value of the metric value. Example:
@@ -75,7 +75,7 @@ The value will be coerced to a floating point value. Values which cannot be coer
 
 ### `metrics_format` [plugins-codecs-graphite-metrics_format]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"*"`
 
 Defines format of the metric string. The placeholder `*` will be replaced with the name of the actual metric. This supports dynamic strings like `%{{host}}`.

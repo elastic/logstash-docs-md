@@ -31,10 +31,10 @@ This plugin supports the following configuration options plus the [Common option
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`fields`](plugins-filters-de_dot.md#plugins-filters-de_dot-fields) | [array](introduction.md#array) | No |
-| [`nested`](plugins-filters-de_dot.md#plugins-filters-de_dot-nested) | [boolean](introduction.md#boolean) | No |
-| [`recursive`](plugins-filters-de_dot.md#plugins-filters-de_dot-recursive) | [boolean](introduction.md#boolean) | No |
-| [`separator`](plugins-filters-de_dot.md#plugins-filters-de_dot-separator) | [string](introduction.md#string) | No |
+| [`fields`](plugins-filters-de_dot.md#plugins-filters-de_dot-fields) | [array](value-types.md#array) | No |
+| [`nested`](plugins-filters-de_dot.md#plugins-filters-de_dot-nested) | [boolean](value-types.md#boolean) | No |
+| [`recursive`](plugins-filters-de_dot.md#plugins-filters-de_dot-recursive) | [boolean](value-types.md#boolean) | No |
+| [`separator`](plugins-filters-de_dot.md#plugins-filters-de_dot-separator) | [string](value-types.md#string) | No |
 
 Also see [Common options](plugins-filters-de_dot.md#plugins-filters-de_dot-common-options) for a list of options supported by all filter plugins.
 
@@ -42,7 +42,7 @@ Also see [Common options](plugins-filters-de_dot.md#plugins-filters-de_dot-commo
 
 ### `fields` [plugins-filters-de_dot-fields]
 
-* Value type is [array](introduction.md#array)
+* Value type is [array](value-types.md#array)
 * There is no default value for this setting.
 
 The `fields` array should contain a list of known fields to act on. If undefined, all top-level fields will be checked.  Sub-fields must be manually specified in the array.  For example: `["field.suffix","[foo][bar.suffix]"]` will result in "field_suffix" and nested or sub field ["foo"]["bar_suffix"]
@@ -55,7 +55,7 @@ This is an expensive operation.
 
 ### `nested` [plugins-filters-de_dot-nested]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 If `nested` is *true*, then create sub-fields instead of replacing dots with a different separator.
@@ -63,7 +63,7 @@ If `nested` is *true*, then create sub-fields instead of replacing dots with a d
 
 ### `recursive` [plugins-filters-de_dot-recursive]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 If `recursive` is *true*, then recursively check sub-fields. It is recommended you only use this when setting specific fields, as this is an expensive operation.
@@ -71,7 +71,7 @@ If `recursive` is *true*, then recursively check sub-fields. It is recommended y
 
 ### `separator` [plugins-filters-de_dot-separator]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"_"`
 
 Replace dots with this value.

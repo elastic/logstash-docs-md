@@ -29,9 +29,9 @@ This plugin supports the following configuration options plus the [Common option
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`every`](plugins-filters-sleep.md#plugins-filters-sleep-every) | [string](introduction.md#string) | No |
-| [`replay`](plugins-filters-sleep.md#plugins-filters-sleep-replay) | [boolean](introduction.md#boolean) | No |
-| [`time`](plugins-filters-sleep.md#plugins-filters-sleep-time) | [string](introduction.md#string) | No |
+| [`every`](plugins-filters-sleep.md#plugins-filters-sleep-every) | [string](value-types.md#string) | No |
+| [`replay`](plugins-filters-sleep.md#plugins-filters-sleep-replay) | [boolean](value-types.md#boolean) | No |
+| [`time`](plugins-filters-sleep.md#plugins-filters-sleep-time) | [string](value-types.md#string) | No |
 
 Also see [Common options](plugins-filters-sleep.md#plugins-filters-sleep-common-options) for a list of options supported by all filter plugins.
 
@@ -39,7 +39,7 @@ Also see [Common options](plugins-filters-sleep.md#plugins-filters-sleep-common-
 
 ### `every` [plugins-filters-sleep-every]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `1`
 
 Sleep on every N’th. This option is ignored in replay mode.
@@ -58,7 +58,7 @@ Example:
 
 ### `replay` [plugins-filters-sleep-replay]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 Enable replay mode.
@@ -85,7 +85,7 @@ The above will sleep in such a way that it will perform replay 2-times faster th
 
 ### `time` [plugins-filters-sleep-time]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 The length of time to sleep, in seconds, for every event.

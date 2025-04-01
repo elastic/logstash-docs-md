@@ -78,24 +78,24 @@ This plugin supports the following configuration options plus the [Common option
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`access_key_id`](plugins-inputs-sqs.md#plugins-inputs-sqs-access_key_id) | [string](introduction.md#string) | No |
-| [`additional_settings`](plugins-inputs-sqs.md#plugins-inputs-sqs-additional_settings) | [hash](introduction.md#hash) | No |
-| [`aws_credentials_file`](plugins-inputs-sqs.md#plugins-inputs-sqs-aws_credentials_file) | [string](introduction.md#string) | No |
-| [`endpoint`](plugins-inputs-sqs.md#plugins-inputs-sqs-endpoint) | [string](introduction.md#string) | No |
-| [`id_field`](plugins-inputs-sqs.md#plugins-inputs-sqs-id_field) | [string](introduction.md#string) | No |
-| [`md5_field`](plugins-inputs-sqs.md#plugins-inputs-sqs-md5_field) | [string](introduction.md#string) | No |
-| [`polling_frequency`](plugins-inputs-sqs.md#plugins-inputs-sqs-polling_frequency) | [number](introduction.md#number) | No |
-| [`proxy_uri`](plugins-inputs-sqs.md#plugins-inputs-sqs-proxy_uri) | [string](introduction.md#string) | No |
-| [`queue`](plugins-inputs-sqs.md#plugins-inputs-sqs-queue) | [string](introduction.md#string) | Yes |
-| [`queue_owner_aws_account_id`](plugins-inputs-sqs.md#plugins-inputs-sqs-queue_owner_aws_account_id) | [string](introduction.md#string) | No |
-| [`region`](plugins-inputs-sqs.md#plugins-inputs-sqs-region) | [string](introduction.md#string) | No |
-| [`role_arn`](plugins-inputs-sqs.md#plugins-inputs-sqs-role_arn) | [string](introduction.md#string) | No |
-| [`role_session_name`](plugins-inputs-sqs.md#plugins-inputs-sqs-role_session_name) | [string](introduction.md#string) | No |
-| [`secret_access_key`](plugins-inputs-sqs.md#plugins-inputs-sqs-secret_access_key) | [string](introduction.md#string) | No |
-| [`sent_timestamp_field`](plugins-inputs-sqs.md#plugins-inputs-sqs-sent_timestamp_field) | [string](introduction.md#string) | No |
-| [`session_token`](plugins-inputs-sqs.md#plugins-inputs-sqs-session_token) | [string](introduction.md#string) | No |
-| [`threads`](plugins-inputs-sqs.md#plugins-inputs-sqs-threads) | [number](introduction.md#number) | No |
-| [`use_aws_bundled_ca`](plugins-inputs-sqs.md#plugins-inputs-sqs-use_aws_bundled_ca) | [boolean](introduction.md#boolean) | No |
+| [`access_key_id`](plugins-inputs-sqs.md#plugins-inputs-sqs-access_key_id) | [string](value-types.md#string) | No |
+| [`additional_settings`](plugins-inputs-sqs.md#plugins-inputs-sqs-additional_settings) | [hash](value-types.md#hash) | No |
+| [`aws_credentials_file`](plugins-inputs-sqs.md#plugins-inputs-sqs-aws_credentials_file) | [string](value-types.md#string) | No |
+| [`endpoint`](plugins-inputs-sqs.md#plugins-inputs-sqs-endpoint) | [string](value-types.md#string) | No |
+| [`id_field`](plugins-inputs-sqs.md#plugins-inputs-sqs-id_field) | [string](value-types.md#string) | No |
+| [`md5_field`](plugins-inputs-sqs.md#plugins-inputs-sqs-md5_field) | [string](value-types.md#string) | No |
+| [`polling_frequency`](plugins-inputs-sqs.md#plugins-inputs-sqs-polling_frequency) | [number](value-types.md#number) | No |
+| [`proxy_uri`](plugins-inputs-sqs.md#plugins-inputs-sqs-proxy_uri) | [string](value-types.md#string) | No |
+| [`queue`](plugins-inputs-sqs.md#plugins-inputs-sqs-queue) | [string](value-types.md#string) | Yes |
+| [`queue_owner_aws_account_id`](plugins-inputs-sqs.md#plugins-inputs-sqs-queue_owner_aws_account_id) | [string](value-types.md#string) | No |
+| [`region`](plugins-inputs-sqs.md#plugins-inputs-sqs-region) | [string](value-types.md#string) | No |
+| [`role_arn`](plugins-inputs-sqs.md#plugins-inputs-sqs-role_arn) | [string](value-types.md#string) | No |
+| [`role_session_name`](plugins-inputs-sqs.md#plugins-inputs-sqs-role_session_name) | [string](value-types.md#string) | No |
+| [`secret_access_key`](plugins-inputs-sqs.md#plugins-inputs-sqs-secret_access_key) | [string](value-types.md#string) | No |
+| [`sent_timestamp_field`](plugins-inputs-sqs.md#plugins-inputs-sqs-sent_timestamp_field) | [string](value-types.md#string) | No |
+| [`session_token`](plugins-inputs-sqs.md#plugins-inputs-sqs-session_token) | [string](value-types.md#string) | No |
+| [`threads`](plugins-inputs-sqs.md#plugins-inputs-sqs-threads) | [number](value-types.md#number) | No |
+| [`use_aws_bundled_ca`](plugins-inputs-sqs.md#plugins-inputs-sqs-use_aws_bundled_ca) | [boolean](value-types.md#boolean) | No |
 
 Also see [Common options](plugins-inputs-sqs.md#plugins-inputs-sqs-common-options) for a list of options supported by all input plugins.
 
@@ -103,7 +103,7 @@ Also see [Common options](plugins-inputs-sqs.md#plugins-inputs-sqs-common-option
 
 ### `access_key_id` [plugins-inputs-sqs-access_key_id]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 This plugin uses the AWS SDK and supports several ways to get credentials, which will be tried in this order:
@@ -117,7 +117,7 @@ This plugin uses the AWS SDK and supports several ways to get credentials, which
 
 ### `additional_settings` [plugins-inputs-sqs-additional_settings]
 
-* Value type is [hash](introduction.md#hash)
+* Value type is [hash](value-types.md#hash)
 * Default value is `{}`
 
 Key-value pairs of settings and corresponding values used to parametrize the connection to SQS. See full list in [the AWS SDK documentation](https://docs.aws.amazon.com/sdk-for-ruby/v3/api/Aws/SQS/Client.md). Example:
@@ -139,7 +139,7 @@ Key-value pairs of settings and corresponding values used to parametrize the con
 
 ### `aws_credentials_file` [plugins-inputs-sqs-aws_credentials_file]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 Path to YAML file containing a hash of AWS credentials. This file will only be loaded if `access_key_id` and `secret_access_key` aren’t set. The contents of the file should look like this:
@@ -152,7 +152,7 @@ Path to YAML file containing a hash of AWS credentials. This file will only be l
 
 ### `endpoint` [plugins-inputs-sqs-endpoint]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 The endpoint to connect to. By default it is constructed using the value of `region`. This is useful when connecting to S3 compatible services, but beware that these aren’t guaranteed to work correctly with the AWS SDK.
@@ -160,7 +160,7 @@ The endpoint to connect to. By default it is constructed using the value of `reg
 
 ### `id_field` [plugins-inputs-sqs-id_field]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 Name of the event field in which to store the SQS message ID
@@ -168,7 +168,7 @@ Name of the event field in which to store the SQS message ID
 
 ### `md5_field` [plugins-inputs-sqs-md5_field]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 Name of the event field in which to store the SQS message MD5 checksum
@@ -176,7 +176,7 @@ Name of the event field in which to store the SQS message MD5 checksum
 
 ### `polling_frequency` [plugins-inputs-sqs-polling_frequency]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `20`
 
 Polling frequency, default is 20 seconds
@@ -184,7 +184,7 @@ Polling frequency, default is 20 seconds
 
 ### `proxy_uri` [plugins-inputs-sqs-proxy_uri]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 URI to proxy server if required
@@ -193,7 +193,7 @@ URI to proxy server if required
 ### `queue` [plugins-inputs-sqs-queue]
 
 * This is a required setting.
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 Name of the SQS Queue name to pull messages from. Note that this is just the name of the queue, not the URL or ARN.
@@ -201,7 +201,7 @@ Name of the SQS Queue name to pull messages from. Note that this is just the nam
 
 ### `queue_owner_aws_account_id` [plugins-inputs-sqs-queue_owner_aws_account_id]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 ID of the AWS account owning the queue if you want to use a [cross-account queue](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-basic-examples-of-sqs-policies.md#grant-two-permissions-to-one-account) with embedded policy. Note that AWS SDK only support numerical account ID and not account aliases.
@@ -209,7 +209,7 @@ ID of the AWS account owning the queue if you want to use a [cross-account queue
 
 ### `region` [plugins-inputs-sqs-region]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"us-east-1"`
 
 The AWS Region
@@ -217,7 +217,7 @@ The AWS Region
 
 ### `role_arn` [plugins-inputs-sqs-role_arn]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 The AWS IAM Role to assume, if any. This is used to generate temporary credentials, typically for cross-account access. See the [AssumeRole API documentation](https://docs.aws.amazon.com/STS/latest/APIReference/API_AssumeRole.md) for more information.
@@ -225,7 +225,7 @@ The AWS IAM Role to assume, if any. This is used to generate temporary credentia
 
 ### `role_session_name` [plugins-inputs-sqs-role_session_name]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"logstash"`
 
 Session name to use when assuming an IAM role.
@@ -233,7 +233,7 @@ Session name to use when assuming an IAM role.
 
 ### `secret_access_key` [plugins-inputs-sqs-secret_access_key]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 The AWS Secret Access Key
@@ -241,7 +241,7 @@ The AWS Secret Access Key
 
 ### `sent_timestamp_field` [plugins-inputs-sqs-sent_timestamp_field]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 Name of the event field in which to store the SQS message Sent Timestamp
@@ -249,7 +249,7 @@ Name of the event field in which to store the SQS message Sent Timestamp
 
 ### `session_token` [plugins-inputs-sqs-session_token]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 The AWS Session token for temporary credential
@@ -257,13 +257,13 @@ The AWS Session token for temporary credential
 
 ### `threads` [plugins-inputs-sqs-threads]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `1`
 
 
 ### `use_aws_bundled_ca` [plugins-inputs-sqs-use_aws_bundled_ca]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 Use bundled CA certificates that ship with AWS SDK to verify SSL peer certificates. For cases where the default certificates are unavailable, e.g. Windows, you can set this to `true`.

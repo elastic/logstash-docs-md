@@ -90,27 +90,27 @@ This plugin supports the following configuration options plus the [Common option
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`cache_expiration`](plugins-filters-jdbc_streaming.md#plugins-filters-jdbc_streaming-cache_expiration) | [number](introduction.md#number) | No |
-| [`cache_size`](plugins-filters-jdbc_streaming.md#plugins-filters-jdbc_streaming-cache_size) | [number](introduction.md#number) | No |
-| [`default_hash`](plugins-filters-jdbc_streaming.md#plugins-filters-jdbc_streaming-default_hash) | [hash](introduction.md#hash) | No |
-| [`jdbc_connection_string`](plugins-filters-jdbc_streaming.md#plugins-filters-jdbc_streaming-jdbc_connection_string) | [string](introduction.md#string) | Yes |
-| [`jdbc_driver_class`](plugins-filters-jdbc_streaming.md#plugins-filters-jdbc_streaming-jdbc_driver_class) | [string](introduction.md#string) | Yes |
+| [`cache_expiration`](plugins-filters-jdbc_streaming.md#plugins-filters-jdbc_streaming-cache_expiration) | [number](value-types.md#number) | No |
+| [`cache_size`](plugins-filters-jdbc_streaming.md#plugins-filters-jdbc_streaming-cache_size) | [number](value-types.md#number) | No |
+| [`default_hash`](plugins-filters-jdbc_streaming.md#plugins-filters-jdbc_streaming-default_hash) | [hash](value-types.md#hash) | No |
+| [`jdbc_connection_string`](plugins-filters-jdbc_streaming.md#plugins-filters-jdbc_streaming-jdbc_connection_string) | [string](value-types.md#string) | Yes |
+| [`jdbc_driver_class`](plugins-filters-jdbc_streaming.md#plugins-filters-jdbc_streaming-jdbc_driver_class) | [string](value-types.md#string) | Yes |
 | [`jdbc_driver_library`](plugins-filters-jdbc_streaming.md#plugins-filters-jdbc_streaming-jdbc_driver_library) | a valid filesystem path | No |
-| [`jdbc_password`](plugins-filters-jdbc_streaming.md#plugins-filters-jdbc_streaming-jdbc_password) | [password](introduction.md#password) | No |
-| [`jdbc_user`](plugins-filters-jdbc_streaming.md#plugins-filters-jdbc_streaming-jdbc_user) | [string](introduction.md#string) | No |
-| [`jdbc_validate_connection`](plugins-filters-jdbc_streaming.md#plugins-filters-jdbc_streaming-jdbc_validate_connection) | [boolean](introduction.md#boolean) | No |
-| [`jdbc_validation_timeout`](plugins-filters-jdbc_streaming.md#plugins-filters-jdbc_streaming-jdbc_validation_timeout) | [number](introduction.md#number) | No |
-| [`parameters`](plugins-filters-jdbc_streaming.md#plugins-filters-jdbc_streaming-parameters) | [hash](introduction.md#hash) | No |
-| [`prepared_statement_bind_values`](plugins-filters-jdbc_streaming.md#plugins-filters-jdbc_streaming-prepared_statement_bind_values) | [array](introduction.md#array) | No |
-| [`prepared_statement_name`](plugins-filters-jdbc_streaming.md#plugins-filters-jdbc_streaming-prepared_statement_name) | [string](introduction.md#string) | No |
-| [`prepared_statement_warn_on_constant_usage`](plugins-filters-jdbc_streaming.md#plugins-filters-jdbc_streaming-prepared_statement_warn_on_constant_usage) | [boolean](introduction.md#boolean) | No |
-| [`sequel_opts`](plugins-filters-jdbc_streaming.md#plugins-filters-jdbc_streaming-sequel_opts) | [hash](introduction.md#hash) | No |
-| [`statement`](plugins-filters-jdbc_streaming.md#plugins-filters-jdbc_streaming-statement) | [string](introduction.md#string) | Yes |
-| [`tag_on_default_use`](plugins-filters-jdbc_streaming.md#plugins-filters-jdbc_streaming-tag_on_default_use) | [array](introduction.md#array) | No |
-| [`tag_on_failure`](plugins-filters-jdbc_streaming.md#plugins-filters-jdbc_streaming-tag_on_failure) | [array](introduction.md#array) | No |
-| [`target`](plugins-filters-jdbc_streaming.md#plugins-filters-jdbc_streaming-target) | [string](introduction.md#string) | Yes |
-| [`use_cache`](plugins-filters-jdbc_streaming.md#plugins-filters-jdbc_streaming-use_cache) | [boolean](introduction.md#boolean) | No |
-| [`use_prepared_statements`](plugins-filters-jdbc_streaming.md#plugins-filters-jdbc_streaming-use_prepared_statements) | [boolean](introduction.md#boolean) | No |
+| [`jdbc_password`](plugins-filters-jdbc_streaming.md#plugins-filters-jdbc_streaming-jdbc_password) | [password](value-types.md#password) | No |
+| [`jdbc_user`](plugins-filters-jdbc_streaming.md#plugins-filters-jdbc_streaming-jdbc_user) | [string](value-types.md#string) | No |
+| [`jdbc_validate_connection`](plugins-filters-jdbc_streaming.md#plugins-filters-jdbc_streaming-jdbc_validate_connection) | [boolean](value-types.md#boolean) | No |
+| [`jdbc_validation_timeout`](plugins-filters-jdbc_streaming.md#plugins-filters-jdbc_streaming-jdbc_validation_timeout) | [number](value-types.md#number) | No |
+| [`parameters`](plugins-filters-jdbc_streaming.md#plugins-filters-jdbc_streaming-parameters) | [hash](value-types.md#hash) | No |
+| [`prepared_statement_bind_values`](plugins-filters-jdbc_streaming.md#plugins-filters-jdbc_streaming-prepared_statement_bind_values) | [array](value-types.md#array) | No |
+| [`prepared_statement_name`](plugins-filters-jdbc_streaming.md#plugins-filters-jdbc_streaming-prepared_statement_name) | [string](value-types.md#string) | No |
+| [`prepared_statement_warn_on_constant_usage`](plugins-filters-jdbc_streaming.md#plugins-filters-jdbc_streaming-prepared_statement_warn_on_constant_usage) | [boolean](value-types.md#boolean) | No |
+| [`sequel_opts`](plugins-filters-jdbc_streaming.md#plugins-filters-jdbc_streaming-sequel_opts) | [hash](value-types.md#hash) | No |
+| [`statement`](plugins-filters-jdbc_streaming.md#plugins-filters-jdbc_streaming-statement) | [string](value-types.md#string) | Yes |
+| [`tag_on_default_use`](plugins-filters-jdbc_streaming.md#plugins-filters-jdbc_streaming-tag_on_default_use) | [array](value-types.md#array) | No |
+| [`tag_on_failure`](plugins-filters-jdbc_streaming.md#plugins-filters-jdbc_streaming-tag_on_failure) | [array](value-types.md#array) | No |
+| [`target`](plugins-filters-jdbc_streaming.md#plugins-filters-jdbc_streaming-target) | [string](value-types.md#string) | Yes |
+| [`use_cache`](plugins-filters-jdbc_streaming.md#plugins-filters-jdbc_streaming-use_cache) | [boolean](value-types.md#boolean) | No |
+| [`use_prepared_statements`](plugins-filters-jdbc_streaming.md#plugins-filters-jdbc_streaming-use_prepared_statements) | [boolean](value-types.md#boolean) | No |
 
 Also see [Common options](plugins-filters-jdbc_streaming.md#plugins-filters-jdbc_streaming-common-options) for a list of options supported by all filter plugins.
 
@@ -118,7 +118,7 @@ Also see [Common options](plugins-filters-jdbc_streaming.md#plugins-filters-jdbc
 
 ### `cache_expiration` [plugins-filters-jdbc_streaming-cache_expiration]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `5.0`
 
 The minimum number of seconds any entry should remain in the cache. Defaults to 5 seconds.
@@ -128,7 +128,7 @@ A numeric value. You can use decimals for example: `cache_expiration => 0.25`. I
 
 ### `cache_size` [plugins-filters-jdbc_streaming-cache_size]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `500`
 
 The maximum number of cache entries that will be stored. Defaults to 500 entries. The least recently used entry will be evicted.
@@ -136,7 +136,7 @@ The maximum number of cache entries that will be stored. Defaults to 500 entries
 
 ### `default_hash` [plugins-filters-jdbc_streaming-default_hash]
 
-* Value type is [hash](introduction.md#hash)
+* Value type is [hash](value-types.md#hash)
 * Default value is `{}`
 
 Define a default object to use when lookup fails to return a matching row. Ensure that the key names of this object match the columns from the statement.
@@ -145,7 +145,7 @@ Define a default object to use when lookup fails to return a matching row. Ensur
 ### `jdbc_connection_string` [plugins-filters-jdbc_streaming-jdbc_connection_string]
 
 * This is a required setting.
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 JDBC connection string
@@ -154,7 +154,7 @@ JDBC connection string
 ### `jdbc_driver_class` [plugins-filters-jdbc_streaming-jdbc_driver_class]
 
 * This is a required setting.
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 JDBC driver class to load, for example "oracle.jdbc.OracleDriver" or "org.apache.derby.jdbc.ClientDriver"
@@ -162,7 +162,7 @@ JDBC driver class to load, for example "oracle.jdbc.OracleDriver" or "org.apache
 
 ### `jdbc_driver_library` [plugins-filters-jdbc_streaming-jdbc_driver_library]
 
-* Value type is [path](introduction.md#path)
+* Value type is [path](value-types.md#path)
 * There is no default value for this setting.
 
 JDBC driver library path to third party driver library.
@@ -170,7 +170,7 @@ JDBC driver library path to third party driver library.
 
 ### `jdbc_password` [plugins-filters-jdbc_streaming-jdbc_password]
 
-* Value type is [password](introduction.md#password)
+* Value type is [password](value-types.md#password)
 * There is no default value for this setting.
 
 JDBC password
@@ -178,7 +178,7 @@ JDBC password
 
 ### `jdbc_user` [plugins-filters-jdbc_streaming-jdbc_user]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 JDBC user
@@ -186,7 +186,7 @@ JDBC user
 
 ### `jdbc_validate_connection` [plugins-filters-jdbc_streaming-jdbc_validate_connection]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 Connection pool configuration. Validate connection before use.
@@ -194,7 +194,7 @@ Connection pool configuration. Validate connection before use.
 
 ### `jdbc_validation_timeout` [plugins-filters-jdbc_streaming-jdbc_validation_timeout]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `3600`
 
 Connection pool configuration. How often to validate a connection (in seconds).
@@ -202,7 +202,7 @@ Connection pool configuration. How often to validate a connection (in seconds).
 
 ### `parameters` [plugins-filters-jdbc_streaming-parameters]
 
-* Value type is [hash](introduction.md#hash)
+* Value type is [hash](value-types.md#hash)
 * Default value is `{}`
 
 Hash of query parameter, for example `{ "id" => "id_field" }`.
@@ -210,7 +210,7 @@ Hash of query parameter, for example `{ "id" => "id_field" }`.
 
 ### `prepared_statement_bind_values` [plugins-filters-jdbc_streaming-prepared_statement_bind_values]
 
-* Value type is [array](introduction.md#array)
+* Value type is [array](value-types.md#array)
 * Default value is `[]`
 
 Array of bind values for the prepared statement. Use field references and constants. See the section on [prepared_statements](plugins-filters-jdbc_streaming.md#plugins-filters-jdbc_streaming-prepared_statements) for more info.
@@ -218,7 +218,7 @@ Array of bind values for the prepared statement. Use field references and consta
 
 ### `prepared_statement_name` [plugins-filters-jdbc_streaming-prepared_statement_name]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `""`
 
 Name given to the prepared statement. It must be unique in your config and in the database. You need to supply this if `use_prepared_statements` is true.
@@ -226,7 +226,7 @@ Name given to the prepared statement. It must be unique in your config and in th
 
 ### `prepared_statement_warn_on_constant_usage` [plugins-filters-jdbc_streaming-prepared_statement_warn_on_constant_usage]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `true`
 
 A flag that controls whether a warning is logged if, in `prepared_statement_bind_values`, a String constant is detected that might be intended as a field reference.
@@ -234,7 +234,7 @@ A flag that controls whether a warning is logged if, in `prepared_statement_bind
 
 ### `sequel_opts` [plugins-filters-jdbc_streaming-sequel_opts]
 
-* Value type is [hash](introduction.md#hash)
+* Value type is [hash](value-types.md#hash)
 * Default value is `{}`
 
 General/Vendor-specific Sequel configuration options
@@ -247,7 +247,7 @@ examples of vendor-specific options can be found in this documentation page: [ht
 ### `statement` [plugins-filters-jdbc_streaming-statement]
 
 * This is a required setting.
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 Statement to execute. To use parameters, use named parameter syntax, for example "SELECT * FROM MYTABLE WHERE ID = :id".
@@ -255,7 +255,7 @@ Statement to execute. To use parameters, use named parameter syntax, for example
 
 ### `tag_on_default_use` [plugins-filters-jdbc_streaming-tag_on_default_use]
 
-* Value type is [array](introduction.md#array)
+* Value type is [array](value-types.md#array)
 * Default value is `["_jdbcstreamingdefaultsused"]`
 
 Append values to the `tags` field if no record was found and default values were used.
@@ -263,7 +263,7 @@ Append values to the `tags` field if no record was found and default values were
 
 ### `tag_on_failure` [plugins-filters-jdbc_streaming-tag_on_failure]
 
-* Value type is [array](introduction.md#array)
+* Value type is [array](value-types.md#array)
 * Default value is `["_jdbcstreamingfailure"]`
 
 Append values to the `tags` field if sql error occurred.
@@ -272,7 +272,7 @@ Append values to the `tags` field if sql error occurred.
 ### `target` [plugins-filters-jdbc_streaming-target]
 
 * This is a required setting.
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 Define the target field to store the extracted result(s). Field is overwritten if exists.
@@ -280,7 +280,7 @@ Define the target field to store the extracted result(s). Field is overwritten i
 
 ### `use_cache` [plugins-filters-jdbc_streaming-use_cache]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `true`
 
 Enable or disable caching, boolean true or false. Defaults to true.
@@ -288,7 +288,7 @@ Enable or disable caching, boolean true or false. Defaults to true.
 
 ### `use_prepared_statements` [plugins-filters-jdbc_streaming-use_prepared_statements]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 When set to `true`, enables prepare statement usage

@@ -34,15 +34,15 @@ This plugin supports the following configuration options plus the [Common option
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`bucket`](plugins-outputs-riak.md#plugins-outputs-riak-bucket) | [array](introduction.md#array) | No |
-| [`bucket_props`](plugins-outputs-riak.md#plugins-outputs-riak-bucket_props) | [hash](introduction.md#hash) | No |
-| [`enable_search`](plugins-outputs-riak.md#plugins-outputs-riak-enable_search) | [boolean](introduction.md#boolean) | No |
-| [`enable_ssl`](plugins-outputs-riak.md#plugins-outputs-riak-enable_ssl) | [boolean](introduction.md#boolean) | No |
-| [`indices`](plugins-outputs-riak.md#plugins-outputs-riak-indices) | [array](introduction.md#array) | No |
-| [`key_name`](plugins-outputs-riak.md#plugins-outputs-riak-key_name) | [string](introduction.md#string) | No |
-| [`nodes`](plugins-outputs-riak.md#plugins-outputs-riak-nodes) | [hash](introduction.md#hash) | No |
-| [`proto`](plugins-outputs-riak.md#plugins-outputs-riak-proto) | [string](introduction.md#string), one of `["http", "pb"]` | No |
-| [`ssl_opts`](plugins-outputs-riak.md#plugins-outputs-riak-ssl_opts) | [hash](introduction.md#hash) | No |
+| [`bucket`](plugins-outputs-riak.md#plugins-outputs-riak-bucket) | [array](value-types.md#array) | No |
+| [`bucket_props`](plugins-outputs-riak.md#plugins-outputs-riak-bucket_props) | [hash](value-types.md#hash) | No |
+| [`enable_search`](plugins-outputs-riak.md#plugins-outputs-riak-enable_search) | [boolean](value-types.md#boolean) | No |
+| [`enable_ssl`](plugins-outputs-riak.md#plugins-outputs-riak-enable_ssl) | [boolean](value-types.md#boolean) | No |
+| [`indices`](plugins-outputs-riak.md#plugins-outputs-riak-indices) | [array](value-types.md#array) | No |
+| [`key_name`](plugins-outputs-riak.md#plugins-outputs-riak-key_name) | [string](value-types.md#string) | No |
+| [`nodes`](plugins-outputs-riak.md#plugins-outputs-riak-nodes) | [hash](value-types.md#hash) | No |
+| [`proto`](plugins-outputs-riak.md#plugins-outputs-riak-proto) | [string](value-types.md#string), one of `["http", "pb"]` | No |
+| [`ssl_opts`](plugins-outputs-riak.md#plugins-outputs-riak-ssl_opts) | [hash](value-types.md#hash) | No |
 
 Also see [Common options](plugins-outputs-riak.md#plugins-outputs-riak-common-options) for a list of options supported by all output plugins.
 
@@ -50,7 +50,7 @@ Also see [Common options](plugins-outputs-riak.md#plugins-outputs-riak-common-op
 
 ### `bucket` [plugins-outputs-riak-bucket]
 
-* Value type is [array](introduction.md#array)
+* Value type is [array](value-types.md#array)
 * Default value is `["logstash-%{+YYYY.MM.dd}"]`
 
 The bucket name to write events to Expansion is supported here as values are passed through event.sprintf Multiple buckets can be specified here but any bucket-specific settings defined apply to ALL the buckets.
@@ -58,7 +58,7 @@ The bucket name to write events to Expansion is supported here as values are pas
 
 ### `bucket_props` [plugins-outputs-riak-bucket_props]
 
-* Value type is [hash](introduction.md#hash)
+* Value type is [hash](value-types.md#hash)
 * There is no default value for this setting.
 
 Bucket properties (NYI) Logstash hash of properties for the bucket i.e.
@@ -82,7 +82,7 @@ Properties will be passed as-is
 
 ### `enable_search` [plugins-outputs-riak-enable_search]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 Search Enable search on the bucket defined above
@@ -90,7 +90,7 @@ Search Enable search on the bucket defined above
 
 ### `enable_ssl` [plugins-outputs-riak-enable_ssl]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 SSL Enable SSL
@@ -98,7 +98,7 @@ SSL Enable SSL
 
 ### `indices` [plugins-outputs-riak-indices]
 
-* Value type is [array](introduction.md#array)
+* Value type is [array](value-types.md#array)
 * There is no default value for this setting.
 
 Indices Array of fields to add 2i on e.g.
@@ -112,7 +112,7 @@ Off by default as not everyone runs eleveldb
 
 ### `key_name` [plugins-outputs-riak-key_name]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 The event key name variables are valid here.
@@ -122,7 +122,7 @@ Choose this carefully. Best to let riak decide.
 
 ### `nodes` [plugins-outputs-riak-nodes]
 
-* Value type is [hash](introduction.md#hash)
+* Value type is [hash](value-types.md#hash)
 * Default value is `{"localhost"=>"8098"}`
 
 The nodes of your Riak cluster This can be a single host or a Logstash hash of node/port pairs e.g
@@ -145,7 +145,7 @@ The protocol to use HTTP or ProtoBuf Applies to ALL backends listed above No mix
 
 ### `ssl_opts` [plugins-outputs-riak-ssl_opts]
 
-* Value type is [hash](introduction.md#hash)
+* Value type is [hash](value-types.md#hash)
 * There is no default value for this setting.
 
 Options for SSL connections. Only applied if SSL is enabled. Logstash hash that maps to the riak-client options here: [https://github.com/basho/riak-ruby-client/wiki/Connecting-to-Riak](https://github.com/basho/riak-ruby-client/wiki/Connecting-to-Riak).

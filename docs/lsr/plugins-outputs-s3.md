@@ -87,37 +87,37 @@ This plugin supports the following configuration options plus the [Common option
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`access_key_id`](plugins-outputs-s3.md#plugins-outputs-s3-access_key_id) | [string](introduction.md#string) | No |
-| [`additional_settings`](plugins-outputs-s3.md#plugins-outputs-s3-additional_settings) | [hash](introduction.md#hash) | No |
-| [`aws_credentials_file`](plugins-outputs-s3.md#plugins-outputs-s3-aws_credentials_file) | [string](introduction.md#string) | No |
-| [`bucket`](plugins-outputs-s3.md#plugins-outputs-s3-bucket) | [string](introduction.md#string) | Yes |
-| [`canned_acl`](plugins-outputs-s3.md#plugins-outputs-s3-canned_acl) | [string](introduction.md#string), one of `["private", "public-read", "public-read-write", "authenticated-read", "aws-exec-read", "bucket-owner-read", "bucket-owner-full-control", "log-delivery-write"]` | No |
-| [`encoding`](plugins-outputs-s3.md#plugins-outputs-s3-encoding) | [string](introduction.md#string), one of `["none", "gzip"]` | No |
-| [`endpoint`](plugins-outputs-s3.md#plugins-outputs-s3-endpoint) | [string](introduction.md#string) | No |
-| [`prefix`](plugins-outputs-s3.md#plugins-outputs-s3-prefix) | [string](introduction.md#string) | No |
-| [`proxy_uri`](plugins-outputs-s3.md#plugins-outputs-s3-proxy_uri) | [string](introduction.md#string) | No |
-| [`region`](plugins-outputs-s3.md#plugins-outputs-s3-region) | [string](introduction.md#string) | No |
-| [`restore`](plugins-outputs-s3.md#plugins-outputs-s3-restore) | [boolean](introduction.md#boolean) | No |
-| [`retry_count`](plugins-outputs-s3.md#plugins-outputs-s3-retry_count) | [number](introduction.md#number) | No |
-| [`retry_delay`](plugins-outputs-s3.md#plugins-outputs-s3-retry_delay) | [number](introduction.md#number) | No |
-| [`role_arn`](plugins-outputs-s3.md#plugins-outputs-s3-role_arn) | [string](introduction.md#string) | No |
-| [`role_session_name`](plugins-outputs-s3.md#plugins-outputs-s3-role_session_name) | [string](introduction.md#string) | No |
-| [`rotation_strategy`](plugins-outputs-s3.md#plugins-outputs-s3-rotation_strategy) | [string](introduction.md#string), one of `["size_and_time", "size", "time"]` | No |
-| [`secret_access_key`](plugins-outputs-s3.md#plugins-outputs-s3-secret_access_key) | [string](introduction.md#string) | No |
-| [`server_side_encryption`](plugins-outputs-s3.md#plugins-outputs-s3-server_side_encryption) | [boolean](introduction.md#boolean) | No |
-| [`server_side_encryption_algorithm`](plugins-outputs-s3.md#plugins-outputs-s3-server_side_encryption_algorithm) | [string](introduction.md#string), one of `["AES256", "aws:kms"]` | No |
-| [`session_token`](plugins-outputs-s3.md#plugins-outputs-s3-session_token) | [string](introduction.md#string) | No |
-| [`signature_version`](plugins-outputs-s3.md#plugins-outputs-s3-signature_version) | [string](introduction.md#string), one of `["v2", "v4"]` | No |
-| [`size_file`](plugins-outputs-s3.md#plugins-outputs-s3-size_file) | [number](introduction.md#number) | No |
-| [`ssekms_key_id`](plugins-outputs-s3.md#plugins-outputs-s3-ssekms_key_id) | [string](introduction.md#string) | No |
-| [`storage_class`](plugins-outputs-s3.md#plugins-outputs-s3-storage_class) | [string](introduction.md#string), one of `["STANDARD", "REDUCED_REDUNDANCY", "STANDARD_IA", "ONEZONE_IA", "INTELLIGENT_TIERING", "GLACIER", "DEEP_ARCHIVE", "OUTPOSTS", "GLACIER_IR", "SNOW", "EXPRESS_ONEZONE"]` | No |
-| [`temporary_directory`](plugins-outputs-s3.md#plugins-outputs-s3-temporary_directory) | [string](introduction.md#string) | No |
-| [`time_file`](plugins-outputs-s3.md#plugins-outputs-s3-time_file) | [number](introduction.md#number) | No |
-| [`upload_multipart_threshold`](plugins-outputs-s3.md#plugins-outputs-s3-upload_multipart_threshold) | [number](introduction.md#number) | No |
-| [`upload_queue_size`](plugins-outputs-s3.md#plugins-outputs-s3-upload_queue_size) | [number](introduction.md#number) | No |
-| [`upload_workers_count`](plugins-outputs-s3.md#plugins-outputs-s3-upload_workers_count) | [number](introduction.md#number) | No |
-| [`use_aws_bundled_ca`](plugins-outputs-s3.md#plugins-outputs-s3-use_aws_bundled_ca) | [boolean](introduction.md#boolean) | No |
-| [`validate_credentials_on_root_bucket`](plugins-outputs-s3.md#plugins-outputs-s3-validate_credentials_on_root_bucket) | [boolean](introduction.md#boolean) | No |
+| [`access_key_id`](plugins-outputs-s3.md#plugins-outputs-s3-access_key_id) | [string](value-types.md#string) | No |
+| [`additional_settings`](plugins-outputs-s3.md#plugins-outputs-s3-additional_settings) | [hash](value-types.md#hash) | No |
+| [`aws_credentials_file`](plugins-outputs-s3.md#plugins-outputs-s3-aws_credentials_file) | [string](value-types.md#string) | No |
+| [`bucket`](plugins-outputs-s3.md#plugins-outputs-s3-bucket) | [string](value-types.md#string) | Yes |
+| [`canned_acl`](plugins-outputs-s3.md#plugins-outputs-s3-canned_acl) | [string](value-types.md#string), one of `["private", "public-read", "public-read-write", "authenticated-read", "aws-exec-read", "bucket-owner-read", "bucket-owner-full-control", "log-delivery-write"]` | No |
+| [`encoding`](plugins-outputs-s3.md#plugins-outputs-s3-encoding) | [string](value-types.md#string), one of `["none", "gzip"]` | No |
+| [`endpoint`](plugins-outputs-s3.md#plugins-outputs-s3-endpoint) | [string](value-types.md#string) | No |
+| [`prefix`](plugins-outputs-s3.md#plugins-outputs-s3-prefix) | [string](value-types.md#string) | No |
+| [`proxy_uri`](plugins-outputs-s3.md#plugins-outputs-s3-proxy_uri) | [string](value-types.md#string) | No |
+| [`region`](plugins-outputs-s3.md#plugins-outputs-s3-region) | [string](value-types.md#string) | No |
+| [`restore`](plugins-outputs-s3.md#plugins-outputs-s3-restore) | [boolean](value-types.md#boolean) | No |
+| [`retry_count`](plugins-outputs-s3.md#plugins-outputs-s3-retry_count) | [number](value-types.md#number) | No |
+| [`retry_delay`](plugins-outputs-s3.md#plugins-outputs-s3-retry_delay) | [number](value-types.md#number) | No |
+| [`role_arn`](plugins-outputs-s3.md#plugins-outputs-s3-role_arn) | [string](value-types.md#string) | No |
+| [`role_session_name`](plugins-outputs-s3.md#plugins-outputs-s3-role_session_name) | [string](value-types.md#string) | No |
+| [`rotation_strategy`](plugins-outputs-s3.md#plugins-outputs-s3-rotation_strategy) | [string](value-types.md#string), one of `["size_and_time", "size", "time"]` | No |
+| [`secret_access_key`](plugins-outputs-s3.md#plugins-outputs-s3-secret_access_key) | [string](value-types.md#string) | No |
+| [`server_side_encryption`](plugins-outputs-s3.md#plugins-outputs-s3-server_side_encryption) | [boolean](value-types.md#boolean) | No |
+| [`server_side_encryption_algorithm`](plugins-outputs-s3.md#plugins-outputs-s3-server_side_encryption_algorithm) | [string](value-types.md#string), one of `["AES256", "aws:kms"]` | No |
+| [`session_token`](plugins-outputs-s3.md#plugins-outputs-s3-session_token) | [string](value-types.md#string) | No |
+| [`signature_version`](plugins-outputs-s3.md#plugins-outputs-s3-signature_version) | [string](value-types.md#string), one of `["v2", "v4"]` | No |
+| [`size_file`](plugins-outputs-s3.md#plugins-outputs-s3-size_file) | [number](value-types.md#number) | No |
+| [`ssekms_key_id`](plugins-outputs-s3.md#plugins-outputs-s3-ssekms_key_id) | [string](value-types.md#string) | No |
+| [`storage_class`](plugins-outputs-s3.md#plugins-outputs-s3-storage_class) | [string](value-types.md#string), one of `["STANDARD", "REDUCED_REDUNDANCY", "STANDARD_IA", "ONEZONE_IA", "INTELLIGENT_TIERING", "GLACIER", "DEEP_ARCHIVE", "OUTPOSTS", "GLACIER_IR", "SNOW", "EXPRESS_ONEZONE"]` | No |
+| [`temporary_directory`](plugins-outputs-s3.md#plugins-outputs-s3-temporary_directory) | [string](value-types.md#string) | No |
+| [`time_file`](plugins-outputs-s3.md#plugins-outputs-s3-time_file) | [number](value-types.md#number) | No |
+| [`upload_multipart_threshold`](plugins-outputs-s3.md#plugins-outputs-s3-upload_multipart_threshold) | [number](value-types.md#number) | No |
+| [`upload_queue_size`](plugins-outputs-s3.md#plugins-outputs-s3-upload_queue_size) | [number](value-types.md#number) | No |
+| [`upload_workers_count`](plugins-outputs-s3.md#plugins-outputs-s3-upload_workers_count) | [number](value-types.md#number) | No |
+| [`use_aws_bundled_ca`](plugins-outputs-s3.md#plugins-outputs-s3-use_aws_bundled_ca) | [boolean](value-types.md#boolean) | No |
+| [`validate_credentials_on_root_bucket`](plugins-outputs-s3.md#plugins-outputs-s3-validate_credentials_on_root_bucket) | [boolean](value-types.md#boolean) | No |
 
 Also see [Common options](plugins-outputs-s3.md#plugins-outputs-s3-common-options) for a list of options supported by all output plugins.
 
@@ -125,7 +125,7 @@ Also see [Common options](plugins-outputs-s3.md#plugins-outputs-s3-common-option
 
 ### `access_key_id` [plugins-outputs-s3-access_key_id]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 This plugin uses the AWS SDK and supports several ways to get credentials, which will be tried in this order:
@@ -139,7 +139,7 @@ This plugin uses the AWS SDK and supports several ways to get credentials, which
 
 ### `additional_settings` [plugins-outputs-s3-additional_settings]
 
-* Value type is [hash](introduction.md#hash)
+* Value type is [hash](value-types.md#hash)
 * Default value is `{}`
 
 Key-value pairs of settings and corresponding values used to parametrize the connection to S3. See full list in [the AWS SDK documentation](https://docs.aws.amazon.com/sdk-for-ruby/v3/api/Aws/S3/Client.md). Example:
@@ -162,7 +162,7 @@ Key-value pairs of settings and corresponding values used to parametrize the con
 
 ### `aws_credentials_file` [plugins-outputs-s3-aws_credentials_file]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 Path to YAML file containing a hash of AWS credentials. This file will only be loaded if `access_key_id` and `secret_access_key` aren’t set. The contents of the file should look like this:
@@ -176,7 +176,7 @@ Path to YAML file containing a hash of AWS credentials. This file will only be l
 ### `bucket` [plugins-outputs-s3-bucket]
 
 * This is a required setting.
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 S3 bucket
@@ -200,7 +200,7 @@ Specify the content encoding. Supports ("gzip"). Defaults to "none"
 
 ### `endpoint` [plugins-outputs-s3-endpoint]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 The endpoint to connect to. By default it is constructed using the value of `region`. This is useful when connecting to S3 compatible services, but beware that these aren’t guaranteed to work correctly with the AWS SDK. The endpoint should be an HTTP or HTTPS URL, e.g. [https://example.com](https://example.com)
@@ -208,7 +208,7 @@ The endpoint to connect to. By default it is constructed using the value of `reg
 
 ### `prefix` [plugins-outputs-s3-prefix]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `""`
 
 Specify a prefix to the uploaded filename to simulate directories on S3. Prefix does not require leading slash. This option supports [Logstash interpolation](https://www.elastic.co/guide/en/logstash/current/event-dependent-configuration.html#sprintf). For example, files can be prefixed with the event date using `prefix = "%{+YYYY}/%{+MM}/%{+dd}"`.
@@ -221,7 +221,7 @@ Take care when you are using interpolated strings in prefixes. This has the pote
 
 ### `proxy_uri` [plugins-outputs-s3-proxy_uri]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 URI to proxy server if required
@@ -229,7 +229,7 @@ URI to proxy server if required
 
 ### `region` [plugins-outputs-s3-region]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"us-east-1"`
 
 The AWS Region
@@ -237,7 +237,7 @@ The AWS Region
 
 ### `restore` [plugins-outputs-s3-restore]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `true`
 
 Used to enable recovery after crash/abnormal termination. Temporary log files will be recovered and uploaded.
@@ -245,7 +245,7 @@ Used to enable recovery after crash/abnormal termination. Temporary log files wi
 
 ### `retry_count` [plugins-outputs-s3-retry_count]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `Infinity`
 
 Allows to limit number of retries when S3 uploading fails.
@@ -253,7 +253,7 @@ Allows to limit number of retries when S3 uploading fails.
 
 ### `retry_delay` [plugins-outputs-s3-retry_delay]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `1`
 
 Delay (in seconds) to wait between consecutive retries on upload failures.
@@ -261,7 +261,7 @@ Delay (in seconds) to wait between consecutive retries on upload failures.
 
 ### `role_arn` [plugins-outputs-s3-role_arn]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 The AWS IAM Role to assume, if any. This is used to generate temporary credentials, typically for cross-account access. See the [AssumeRole API documentation](https://docs.aws.amazon.com/STS/latest/APIReference/API_AssumeRole.md) for more information.
@@ -269,7 +269,7 @@ The AWS IAM Role to assume, if any. This is used to generate temporary credentia
 
 ### `role_session_name` [plugins-outputs-s3-role_session_name]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"logstash"`
 
 Session name to use when assuming an IAM role.
@@ -289,7 +289,7 @@ The default strategy checks both size and time. The first value to match trigger
 
 ### `secret_access_key` [plugins-outputs-s3-secret_access_key]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 The AWS Secret Access Key
@@ -297,7 +297,7 @@ The AWS Secret Access Key
 
 ### `server_side_encryption` [plugins-outputs-s3-server_side_encryption]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 Specifies whether or not to use S3’s server side encryption. Defaults to no encryption.
@@ -313,7 +313,7 @@ Specifies what type of encryption to use when SSE is enabled.
 
 ### `session_token` [plugins-outputs-s3-session_token]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 The AWS Session token for temporary credential
@@ -329,7 +329,7 @@ The version of the S3 signature hash to use. Normally uses the internal client d
 
 ### `size_file` [plugins-outputs-s3-size_file]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `5242880`
 
 Set the file size in bytes. When the number of bytes exceeds the `size_file` value, a new file is created. If you use tags, Logstash generates a specific size file for every tag.
@@ -337,7 +337,7 @@ Set the file size in bytes. When the number of bytes exceeds the `size_file` val
 
 ### `ssekms_key_id` [plugins-outputs-s3-ssekms_key_id]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 The key to use when specified along with server_side_encryption ⇒ aws:kms. If server_side_encryption ⇒ aws:kms is set but this is not default KMS key is used. [http://docs.aws.amazon.com/AmazonS3/latest/dev/UsingKMSEncryption.html](http://docs.aws.amazon.com/AmazonS3/latest/dev/UsingKMSEncryption.md)
@@ -353,7 +353,7 @@ Specifies what S3 storage class to use when uploading the file. More information
 
 ### `temporary_directory` [plugins-outputs-s3-temporary_directory]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"/tmp/logstash"`
 
 Set the directory where logstash will store the tmp files before sending it to S3 default to the current OS temporary directory in linux /tmp/logstash
@@ -361,7 +361,7 @@ Set the directory where logstash will store the tmp files before sending it to S
 
 ### `time_file` [plugins-outputs-s3-time_file]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `15`
 
 Set the time, in MINUTES, to close the current sub_time_section of bucket. If [`rotation_strategy`](plugins-outputs-s3.md#plugins-outputs-s3-rotation_strategy) is set to `time` or `size_and_time`, then `time_file` cannot be set to 0. Otherwise, the plugin raises a configuration error.
@@ -369,7 +369,7 @@ Set the time, in MINUTES, to close the current sub_time_section of bucket. If [`
 
 ### `upload_multipart_threshold` [plugins-outputs-s3-upload_multipart_threshold]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `15728640`
 
 Files larger than this number are uploaded using the S3 multipart APIs
@@ -377,7 +377,7 @@ Files larger than this number are uploaded using the S3 multipart APIs
 
 ### `upload_queue_size` [plugins-outputs-s3-upload_queue_size]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `4`
 
 Number of items we can keep in the local queue before uploading them
@@ -385,7 +385,7 @@ Number of items we can keep in the local queue before uploading them
 
 ### `upload_workers_count` [plugins-outputs-s3-upload_workers_count]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `4`
 
 Specify how many workers to use to upload the files to S3
@@ -393,7 +393,7 @@ Specify how many workers to use to upload the files to S3
 
 ### `use_aws_bundled_ca` [plugins-outputs-s3-use_aws_bundled_ca]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 Use bundled CA certificates that ship with AWS SDK to verify SSL peer certificates. For cases where the default certificates are unavailable, e.g. Windows, you can set this to `true`.
@@ -401,7 +401,7 @@ Use bundled CA certificates that ship with AWS SDK to verify SSL peer certificat
 
 ### `validate_credentials_on_root_bucket` [plugins-outputs-s3-validate_credentials_on_root_bucket]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `true`
 
 The common use case is to define permissions on the root bucket and give Logstash full access to write logs. In some circumstances, you need more granular permissions on the subfolder. This allows you to disable the check at startup.

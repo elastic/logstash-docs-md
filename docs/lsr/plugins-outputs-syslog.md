@@ -38,25 +38,25 @@ This plugin supports the following configuration options plus the [Common option
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`appname`](plugins-outputs-syslog.md#plugins-outputs-syslog-appname) | [string](introduction.md#string) | No |
-| [`facility`](plugins-outputs-syslog.md#plugins-outputs-syslog-facility) | [string](introduction.md#string) | No |
-| [`host`](plugins-outputs-syslog.md#plugins-outputs-syslog-host) | [string](introduction.md#string) | Yes |
-| [`message`](plugins-outputs-syslog.md#plugins-outputs-syslog-message) | [string](introduction.md#string) | No |
-| [`msgid`](plugins-outputs-syslog.md#plugins-outputs-syslog-msgid) | [string](introduction.md#string) | No |
-| [`port`](plugins-outputs-syslog.md#plugins-outputs-syslog-port) | [number](introduction.md#number) | Yes |
-| [`priority`](plugins-outputs-syslog.md#plugins-outputs-syslog-priority) | [string](introduction.md#string) | No |
-| [`procid`](plugins-outputs-syslog.md#plugins-outputs-syslog-procid) | [string](introduction.md#string) | No |
-| [`protocol`](plugins-outputs-syslog.md#plugins-outputs-syslog-protocol) | [string](introduction.md#string), one of `["tcp", "udp", "ssl-tcp"]` | No |
-| [`reconnect_interval`](plugins-outputs-syslog.md#plugins-outputs-syslog-reconnect_interval) | [number](introduction.md#number) | No |
-| [`rfc`](plugins-outputs-syslog.md#plugins-outputs-syslog-rfc) | [string](introduction.md#string), one of `["rfc3164", "rfc5424"]` | No |
-| [`severity`](plugins-outputs-syslog.md#plugins-outputs-syslog-severity) | [string](introduction.md#string) | No |
-| [`sourcehost`](plugins-outputs-syslog.md#plugins-outputs-syslog-sourcehost) | [string](introduction.md#string) | No |
+| [`appname`](plugins-outputs-syslog.md#plugins-outputs-syslog-appname) | [string](value-types.md#string) | No |
+| [`facility`](plugins-outputs-syslog.md#plugins-outputs-syslog-facility) | [string](value-types.md#string) | No |
+| [`host`](plugins-outputs-syslog.md#plugins-outputs-syslog-host) | [string](value-types.md#string) | Yes |
+| [`message`](plugins-outputs-syslog.md#plugins-outputs-syslog-message) | [string](value-types.md#string) | No |
+| [`msgid`](plugins-outputs-syslog.md#plugins-outputs-syslog-msgid) | [string](value-types.md#string) | No |
+| [`port`](plugins-outputs-syslog.md#plugins-outputs-syslog-port) | [number](value-types.md#number) | Yes |
+| [`priority`](plugins-outputs-syslog.md#plugins-outputs-syslog-priority) | [string](value-types.md#string) | No |
+| [`procid`](plugins-outputs-syslog.md#plugins-outputs-syslog-procid) | [string](value-types.md#string) | No |
+| [`protocol`](plugins-outputs-syslog.md#plugins-outputs-syslog-protocol) | [string](value-types.md#string), one of `["tcp", "udp", "ssl-tcp"]` | No |
+| [`reconnect_interval`](plugins-outputs-syslog.md#plugins-outputs-syslog-reconnect_interval) | [number](value-types.md#number) | No |
+| [`rfc`](plugins-outputs-syslog.md#plugins-outputs-syslog-rfc) | [string](value-types.md#string), one of `["rfc3164", "rfc5424"]` | No |
+| [`severity`](plugins-outputs-syslog.md#plugins-outputs-syslog-severity) | [string](value-types.md#string) | No |
+| [`sourcehost`](plugins-outputs-syslog.md#plugins-outputs-syslog-sourcehost) | [string](value-types.md#string) | No |
 | [`ssl_cacert`](plugins-outputs-syslog.md#plugins-outputs-syslog-ssl_cacert) | a valid filesystem path | No |
 | [`ssl_cert`](plugins-outputs-syslog.md#plugins-outputs-syslog-ssl_cert) | a valid filesystem path | No |
 | [`ssl_key`](plugins-outputs-syslog.md#plugins-outputs-syslog-ssl_key) | a valid filesystem path | No |
-| [`ssl_key_passphrase`](plugins-outputs-syslog.md#plugins-outputs-syslog-ssl_key_passphrase) | [password](introduction.md#password) | No |
-| [`ssl_verify`](plugins-outputs-syslog.md#plugins-outputs-syslog-ssl_verify) | [boolean](introduction.md#boolean) | No |
-| [`use_labels`](plugins-outputs-syslog.md#plugins-outputs-syslog-use_labels) | [boolean](introduction.md#boolean) | No |
+| [`ssl_key_passphrase`](plugins-outputs-syslog.md#plugins-outputs-syslog-ssl_key_passphrase) | [password](value-types.md#password) | No |
+| [`ssl_verify`](plugins-outputs-syslog.md#plugins-outputs-syslog-ssl_verify) | [boolean](value-types.md#boolean) | No |
+| [`use_labels`](plugins-outputs-syslog.md#plugins-outputs-syslog-use_labels) | [boolean](value-types.md#boolean) | No |
 
 Also see [Common options](plugins-outputs-syslog.md#plugins-outputs-syslog-common-options) for a list of options supported by all output plugins.
 
@@ -64,7 +64,7 @@ Also see [Common options](plugins-outputs-syslog.md#plugins-outputs-syslog-commo
 
 ### `appname` [plugins-outputs-syslog-appname]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"LOGSTASH"`
 
 application name for syslog message. The new value can include `%{{foo}}` strings to help you build a new value from other parts of the event.
@@ -72,7 +72,7 @@ application name for syslog message. The new value can include `%{{foo}}` string
 
 ### `facility` [plugins-outputs-syslog-facility]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"user-level"`
 
 facility label for syslog message default fallback to user-level as in rfc3164 The new value can include `%{{foo}}` strings to help you build a new value from other parts of the event.
@@ -81,7 +81,7 @@ facility label for syslog message default fallback to user-level as in rfc3164 T
 ### `host` [plugins-outputs-syslog-host]
 
 * This is a required setting.
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 syslog server address to connect to
@@ -89,7 +89,7 @@ syslog server address to connect to
 
 ### `message` [plugins-outputs-syslog-message]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"%{{message}}"`
 
 message text to log. The new value can include `%{{foo}}` strings to help you build a new value from other parts of the event.
@@ -97,7 +97,7 @@ message text to log. The new value can include `%{{foo}}` strings to help you bu
 
 ### `msgid` [plugins-outputs-syslog-msgid]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"-"`
 
 message id for syslog message. The new value can include `%{{foo}}` strings to help you build a new value from other parts of the event.
@@ -106,7 +106,7 @@ message id for syslog message. The new value can include `%{{foo}}` strings to h
 ### `port` [plugins-outputs-syslog-port]
 
 * This is a required setting.
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * There is no default value for this setting.
 
 syslog server port to connect to
@@ -114,7 +114,7 @@ syslog server port to connect to
 
 ### `priority` [plugins-outputs-syslog-priority]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"%{{syslog_pri}}"`
 
 syslog priority The new value can include `%{{foo}}` strings to help you build a new value from other parts of the event.
@@ -122,7 +122,7 @@ syslog priority The new value can include `%{{foo}}` strings to help you build a
 
 ### `procid` [plugins-outputs-syslog-procid]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"-"`
 
 process id for syslog message. The new value can include `%{{foo}}` strings to help you build a new value from other parts of the event.
@@ -138,7 +138,7 @@ syslog server protocol. you can choose between udp, tcp and ssl/tls over tcp
 
 ### `reconnect_interval` [plugins-outputs-syslog-reconnect_interval]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `1`
 
 when connection fails, retry interval in sec.
@@ -154,7 +154,7 @@ syslog message format: you can choose between rfc3164 or rfc5424
 
 ### `severity` [plugins-outputs-syslog-severity]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"notice"`
 
 severity label for syslog message default fallback to notice as in rfc3164 The new value can include `%{{foo}}` strings to help you build a new value from other parts of the event.
@@ -162,7 +162,7 @@ severity label for syslog message default fallback to notice as in rfc3164 The n
 
 ### `sourcehost` [plugins-outputs-syslog-sourcehost]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"%{{host}}"`
 
 source host for syslog message. The new value can include `%{{foo}}` strings to help you build a new value from other parts of the event.
@@ -170,7 +170,7 @@ source host for syslog message. The new value can include `%{{foo}}` strings to 
 
 ### `ssl_cacert` [plugins-outputs-syslog-ssl_cacert]
 
-* Value type is [path](introduction.md#path)
+* Value type is [path](value-types.md#path)
 * There is no default value for this setting.
 
 The SSL CA certificate, chainfile or CA path. The system CA path is automatically included.
@@ -178,7 +178,7 @@ The SSL CA certificate, chainfile or CA path. The system CA path is automaticall
 
 ### `ssl_cert` [plugins-outputs-syslog-ssl_cert]
 
-* Value type is [path](introduction.md#path)
+* Value type is [path](value-types.md#path)
 * There is no default value for this setting.
 
 SSL certificate path
@@ -186,7 +186,7 @@ SSL certificate path
 
 ### `ssl_key` [plugins-outputs-syslog-ssl_key]
 
-* Value type is [path](introduction.md#path)
+* Value type is [path](value-types.md#path)
 * There is no default value for this setting.
 
 SSL key path
@@ -194,7 +194,7 @@ SSL key path
 
 ### `ssl_key_passphrase` [plugins-outputs-syslog-ssl_key_passphrase]
 
-* Value type is [password](introduction.md#password)
+* Value type is [password](value-types.md#password)
 * Default value is `nil`
 
 SSL key passphrase
@@ -202,7 +202,7 @@ SSL key passphrase
 
 ### `ssl_verify` [plugins-outputs-syslog-ssl_verify]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 Verify the identity of the other end of the SSL connection against the CA.
@@ -210,7 +210,7 @@ Verify the identity of the other end of the SSL connection against the CA.
 
 ### `use_labels` [plugins-outputs-syslog-use_labels]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `true`
 
 use label parsing for severity and facility levels use priority field if set to false

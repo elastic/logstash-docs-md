@@ -48,15 +48,15 @@ This plugin supports the following configuration options plus the [Common option
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`access_key_id`](plugins-outputs-sns.md#plugins-outputs-sns-access_key_id) | [string](introduction.md#string) | No |
-| [`arn`](plugins-outputs-sns.md#plugins-outputs-sns-arn) | [string](introduction.md#string) | No |
-| [`aws_credentials_file`](plugins-outputs-sns.md#plugins-outputs-sns-aws_credentials_file) | [string](introduction.md#string) | No |
-| [`proxy_uri`](plugins-outputs-sns.md#plugins-outputs-sns-proxy_uri) | [string](introduction.md#string) | No |
-| [`publish_boot_message_arn`](plugins-outputs-sns.md#plugins-outputs-sns-publish_boot_message_arn) | [string](introduction.md#string) | No |
-| [`region`](plugins-outputs-sns.md#plugins-outputs-sns-region) | [string](introduction.md#string), one of `["us-east-1", "us-east-2", "us-west-1", "us-west-2", "eu-central-1", "eu-west-1", "eu-west-2", "ap-southeast-1", "ap-southeast-2", "ap-northeast-1", "ap-northeast-2", "sa-east-1", "us-gov-west-1", "cn-north-1", "ap-south-1", "ca-central-1"]` | No |
-| [`secret_access_key`](plugins-outputs-sns.md#plugins-outputs-sns-secret_access_key) | [string](introduction.md#string) | No |
-| [`session_token`](plugins-outputs-sns.md#plugins-outputs-sns-session_token) | [string](introduction.md#string) | No |
-| [`use_aws_bundled_ca`](plugins-outputs-sns.md#plugins-outputs-sns-use_aws_bundled_ca) | [boolean](introduction.md#boolean) | No |
+| [`access_key_id`](plugins-outputs-sns.md#plugins-outputs-sns-access_key_id) | [string](value-types.md#string) | No |
+| [`arn`](plugins-outputs-sns.md#plugins-outputs-sns-arn) | [string](value-types.md#string) | No |
+| [`aws_credentials_file`](plugins-outputs-sns.md#plugins-outputs-sns-aws_credentials_file) | [string](value-types.md#string) | No |
+| [`proxy_uri`](plugins-outputs-sns.md#plugins-outputs-sns-proxy_uri) | [string](value-types.md#string) | No |
+| [`publish_boot_message_arn`](plugins-outputs-sns.md#plugins-outputs-sns-publish_boot_message_arn) | [string](value-types.md#string) | No |
+| [`region`](plugins-outputs-sns.md#plugins-outputs-sns-region) | [string](value-types.md#string), one of `["us-east-1", "us-east-2", "us-west-1", "us-west-2", "eu-central-1", "eu-west-1", "eu-west-2", "ap-southeast-1", "ap-southeast-2", "ap-northeast-1", "ap-northeast-2", "sa-east-1", "us-gov-west-1", "cn-north-1", "ap-south-1", "ca-central-1"]` | No |
+| [`secret_access_key`](plugins-outputs-sns.md#plugins-outputs-sns-secret_access_key) | [string](value-types.md#string) | No |
+| [`session_token`](plugins-outputs-sns.md#plugins-outputs-sns-session_token) | [string](value-types.md#string) | No |
+| [`use_aws_bundled_ca`](plugins-outputs-sns.md#plugins-outputs-sns-use_aws_bundled_ca) | [boolean](value-types.md#boolean) | No |
 
 Also see [Common options](plugins-outputs-sns.md#plugins-outputs-sns-common-options) for a list of options supported by all output plugins.
 
@@ -64,7 +64,7 @@ Also see [Common options](plugins-outputs-sns.md#plugins-outputs-sns-common-opti
 
 ### `access_key_id` [plugins-outputs-sns-access_key_id]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 This plugin uses the AWS SDK and supports several ways to get credentials, which will be tried in this order:
@@ -78,7 +78,7 @@ This plugin uses the AWS SDK and supports several ways to get credentials, which
 
 ### `arn` [plugins-outputs-sns-arn]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 Optional ARN to send messages to. If you do not set this you must include the `sns` field in your events to set the ARN on a per-message basis!
@@ -86,7 +86,7 @@ Optional ARN to send messages to. If you do not set this you must include the `s
 
 ### `aws_credentials_file` [plugins-outputs-sns-aws_credentials_file]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 Path to YAML file containing a hash of AWS credentials. This file will only be loaded if `access_key_id` and `secret_access_key` aren’t set. The contents of the file should look like this:
@@ -99,7 +99,7 @@ Path to YAML file containing a hash of AWS credentials. This file will only be l
 
 ### `proxy_uri` [plugins-outputs-sns-proxy_uri]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 URI to proxy server if required
@@ -107,7 +107,7 @@ URI to proxy server if required
 
 ### `publish_boot_message_arn` [plugins-outputs-sns-publish_boot_message_arn]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 When an ARN for an SNS topic is specified here, the message "Logstash successfully booted" will be sent to it when this plugin is registered.
@@ -125,7 +125,7 @@ The AWS Region
 
 ### `secret_access_key` [plugins-outputs-sns-secret_access_key]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 The AWS Secret Access Key
@@ -133,7 +133,7 @@ The AWS Secret Access Key
 
 ### `session_token` [plugins-outputs-sns-session_token]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 The AWS Session token for temporary credential
@@ -141,7 +141,7 @@ The AWS Session token for temporary credential
 
 ### `use_aws_bundled_ca` [plugins-outputs-sns-use_aws_bundled_ca]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 Use bundled CA certificates that ship with AWS SDK to verify SSL peer certificates. For cases where the default certificates are unavailable, e.g. Windows, you can set this to `true`.

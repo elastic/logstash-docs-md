@@ -36,14 +36,14 @@ This plugin supports the following configuration options plus the [Common option
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`batch_number`](plugins-outputs-graphtastic.md#plugins-outputs-graphtastic-batch_number) | [number](introduction.md#number) | No |
-| [`context`](plugins-outputs-graphtastic.md#plugins-outputs-graphtastic-context) | [string](introduction.md#string) | No |
-| [`error_file`](plugins-outputs-graphtastic.md#plugins-outputs-graphtastic-error_file) | [string](introduction.md#string) | No |
-| [`host`](plugins-outputs-graphtastic.md#plugins-outputs-graphtastic-host) | [string](introduction.md#string) | No |
-| [`integration`](plugins-outputs-graphtastic.md#plugins-outputs-graphtastic-integration) | [string](introduction.md#string), one of `["udp", "tcp", "rmi", "rest"]` | No |
-| [`metrics`](plugins-outputs-graphtastic.md#plugins-outputs-graphtastic-metrics) | [hash](introduction.md#hash) | No |
-| [`port`](plugins-outputs-graphtastic.md#plugins-outputs-graphtastic-port) | [number](introduction.md#number) | No |
-| [`retries`](plugins-outputs-graphtastic.md#plugins-outputs-graphtastic-retries) | [number](introduction.md#number) | No |
+| [`batch_number`](plugins-outputs-graphtastic.md#plugins-outputs-graphtastic-batch_number) | [number](value-types.md#number) | No |
+| [`context`](plugins-outputs-graphtastic.md#plugins-outputs-graphtastic-context) | [string](value-types.md#string) | No |
+| [`error_file`](plugins-outputs-graphtastic.md#plugins-outputs-graphtastic-error_file) | [string](value-types.md#string) | No |
+| [`host`](plugins-outputs-graphtastic.md#plugins-outputs-graphtastic-host) | [string](value-types.md#string) | No |
+| [`integration`](plugins-outputs-graphtastic.md#plugins-outputs-graphtastic-integration) | [string](value-types.md#string), one of `["udp", "tcp", "rmi", "rest"]` | No |
+| [`metrics`](plugins-outputs-graphtastic.md#plugins-outputs-graphtastic-metrics) | [hash](value-types.md#hash) | No |
+| [`port`](plugins-outputs-graphtastic.md#plugins-outputs-graphtastic-port) | [number](value-types.md#number) | No |
+| [`retries`](plugins-outputs-graphtastic.md#plugins-outputs-graphtastic-retries) | [number](value-types.md#number) | No |
 
 Also see [Common options](plugins-outputs-graphtastic.md#plugins-outputs-graphtastic-common-options) for a list of options supported by all output plugins.
 
@@ -51,7 +51,7 @@ Also see [Common options](plugins-outputs-graphtastic.md#plugins-outputs-graphta
 
 ### `batch_number` [plugins-outputs-graphtastic-batch_number]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `60`
 
 the number of metrics to send to GraphTastic at one time. 60 seems to be the perfect amount for UDP, with default packet size.
@@ -59,7 +59,7 @@ the number of metrics to send to GraphTastic at one time. 60 seems to be the per
 
 ### `context` [plugins-outputs-graphtastic-context]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"graphtastic"`
 
 if using rest as your end point you need to also provide the application url it defaults to localhost/graphtastic.  You can customize the application url by changing the name of the .war file.  There are other ways to change the application context, but they vary depending on the Application Server in use. Please consult your application server documentation for more on application contexts.
@@ -67,7 +67,7 @@ if using rest as your end point you need to also provide the application url it 
 
 ### `error_file` [plugins-outputs-graphtastic-error_file]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `""`
 
 setting allows you to specify where we save errored transactions this makes the most sense at this point - will need to decide on how we reintegrate these error metrics NOT IMPLEMENTED!
@@ -75,7 +75,7 @@ setting allows you to specify where we save errored transactions this makes the 
 
 ### `host` [plugins-outputs-graphtastic-host]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"127.0.0.1"`
 
 host for the graphtastic server - defaults to 127.0.0.1
@@ -91,7 +91,7 @@ options are udp(fastest - default) - rmi(faster) - rest(fast) - tcp(don’t use 
 
 ### `metrics` [plugins-outputs-graphtastic-metrics]
 
-* Value type is [hash](introduction.md#hash)
+* Value type is [hash](value-types.md#hash)
 * Default value is `{}`
 
 metrics hash - you will provide a name for your metric and the metric data as key value pairs.  so for example:
@@ -114,7 +114,7 @@ you can also use the dynamic fields for the key value as well as the actual valu
 
 ### `port` [plugins-outputs-graphtastic-port]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * There is no default value for this setting.
 
 port for the graphtastic instance - defaults to 1199 for RMI, 1299 for TCP, 1399 for UDP, and 8080 for REST
@@ -122,7 +122,7 @@ port for the graphtastic instance - defaults to 1199 for RMI, 1299 for TCP, 1399
 
 ### `retries` [plugins-outputs-graphtastic-retries]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `1`
 
 number of attempted retry after send error - currently only way to integrate errored transactions - should try and save to a file or later consumption either by graphtastic utility or by this program after connectivity is ensured to be established.

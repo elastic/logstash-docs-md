@@ -37,17 +37,17 @@ This plugin supports the following configuration options plus the [Common option
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`ecs_compatibility`](plugins-inputs-syslog.md#plugins-inputs-syslog-ecs_compatibility) | [string](introduction.md#string) | No |
-| [`facility_labels`](plugins-inputs-syslog.md#plugins-inputs-syslog-facility_labels) | [array](introduction.md#array) | No |
-| [`grok_pattern`](plugins-inputs-syslog.md#plugins-inputs-syslog-grok_pattern) | [string](introduction.md#string) | No |
-| [`host`](plugins-inputs-syslog.md#plugins-inputs-syslog-host) | [string](introduction.md#string) | No |
-| [`locale`](plugins-inputs-syslog.md#plugins-inputs-syslog-locale) | [string](introduction.md#string) | No |
-| [`port`](plugins-inputs-syslog.md#plugins-inputs-syslog-port) | [number](introduction.md#number) | No |
-| [`proxy_protocol`](plugins-inputs-syslog.md#plugins-inputs-syslog-proxy_protocol) | [boolean](introduction.md#boolean) | No |
-| [`severity_labels`](plugins-inputs-syslog.md#plugins-inputs-syslog-severity_labels) | [array](introduction.md#array) | No |
-| [`syslog_field`](plugins-inputs-syslog.md#plugins-inputs-syslog-syslog_field) | [string](introduction.md#string) | No |
-| [`timezone`](plugins-inputs-syslog.md#plugins-inputs-syslog-timezone) | [string](introduction.md#string) | No |
-| [`use_labels`](plugins-inputs-syslog.md#plugins-inputs-syslog-use_labels) | [boolean](introduction.md#boolean) | No |
+| [`ecs_compatibility`](plugins-inputs-syslog.md#plugins-inputs-syslog-ecs_compatibility) | [string](value-types.md#string) | No |
+| [`facility_labels`](plugins-inputs-syslog.md#plugins-inputs-syslog-facility_labels) | [array](value-types.md#array) | No |
+| [`grok_pattern`](plugins-inputs-syslog.md#plugins-inputs-syslog-grok_pattern) | [string](value-types.md#string) | No |
+| [`host`](plugins-inputs-syslog.md#plugins-inputs-syslog-host) | [string](value-types.md#string) | No |
+| [`locale`](plugins-inputs-syslog.md#plugins-inputs-syslog-locale) | [string](value-types.md#string) | No |
+| [`port`](plugins-inputs-syslog.md#plugins-inputs-syslog-port) | [number](value-types.md#number) | No |
+| [`proxy_protocol`](plugins-inputs-syslog.md#plugins-inputs-syslog-proxy_protocol) | [boolean](value-types.md#boolean) | No |
+| [`severity_labels`](plugins-inputs-syslog.md#plugins-inputs-syslog-severity_labels) | [array](value-types.md#array) | No |
+| [`syslog_field`](plugins-inputs-syslog.md#plugins-inputs-syslog-syslog_field) | [string](value-types.md#string) | No |
+| [`timezone`](plugins-inputs-syslog.md#plugins-inputs-syslog-timezone) | [string](value-types.md#string) | No |
+| [`use_labels`](plugins-inputs-syslog.md#plugins-inputs-syslog-use_labels) | [boolean](value-types.md#boolean) | No |
 
 Also see [Common options](plugins-inputs-syslog.md#plugins-inputs-syslog-common-options) for a list of options supported by all input plugins.
 
@@ -55,7 +55,7 @@ Also see [Common options](plugins-inputs-syslog.md#plugins-inputs-syslog-common-
 
 ### `ecs_compatibility` [plugins-inputs-syslog-ecs_compatibility]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Supported values are:
 
     * `disabled`: does not use ECS-compatible field names (for example, `priority` for syslog priority)
@@ -72,7 +72,7 @@ Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)](ht
 
 ### `facility_labels` [plugins-inputs-syslog-facility_labels]
 
-* Value type is [array](introduction.md#array)
+* Value type is [array](value-types.md#array)
 * Default value is `["kernel", "user-level", "mail", "system", "security/authorization", "syslogd", "line printer", "network news", "UUCP", "clock", "security/authorization", "FTP", "NTP", "log audit", "log alert", "clock", "local0", "local1", "local2", "local3", "local4", "local5", "local6", "local7"]`
 
 Labels for facility levels defined in RFC3164.
@@ -84,7 +84,7 @@ Provide a zero-indexed array with all of your facility labels *in order*. If a l
 
 ### `grok_pattern` [plugins-inputs-syslog-grok_pattern]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"<%{POSINT:priority}>%{{SYSLOGLINE}}"`
 * Default value depends on whether [`ecs_compatibility`](plugins-inputs-syslog.md#plugins-inputs-syslog-ecs_compatibility) is enabled:
 
@@ -101,7 +101,7 @@ The grok pattern must provide a `timestamp` field. If the `timestamp` field is o
 
 ### `host` [plugins-inputs-syslog-host]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"0.0.0.0"`
 
 The address to listen on.
@@ -109,7 +109,7 @@ The address to listen on.
 
 ### `locale` [plugins-inputs-syslog-locale]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 Specify a locale to be used for date parsing using either IETF-BCP47 or POSIX language tag. Simple examples are `en`,`en-US` for BCP47 or `en_US` for POSIX. If not specified, the platform default will be used.
@@ -119,7 +119,7 @@ The locale is mostly necessary to be set for parsing month names (pattern with M
 
 ### `port` [plugins-inputs-syslog-port]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `514`
 
 The port to listen on. Remember that ports less than 1024 (privileged ports) may require root to use.
@@ -127,7 +127,7 @@ The port to listen on. Remember that ports less than 1024 (privileged ports) may
 
 ### `proxy_protocol` [plugins-inputs-syslog-proxy_protocol]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 Proxy protocol support, only v1 is supported at this time [http://www.haproxy.org/download/1.5/doc/proxy-protocol.txt](http://www.haproxy.org/download/1.5/doc/proxy-protocol.txt)
@@ -135,7 +135,7 @@ Proxy protocol support, only v1 is supported at this time [http://www.haproxy.or
 
 ### `severity_labels` [plugins-inputs-syslog-severity_labels]
 
-* Value type is [array](introduction.md#array)
+* Value type is [array](value-types.md#array)
 * Default value is `["Emergency", "Alert", "Critical", "Error", "Warning", "Notice", "Informational", "Debug"]`
 
 Labels for severity levels defined in RFC3164.
@@ -145,7 +145,7 @@ Provide a zero-indexed array with all of your severity labels *in order*. If a l
 
 ### `syslog_field` [plugins-inputs-syslog-syslog_field]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"message"`
 
 Codecs process the data before the rest of the data is parsed. Some codecs, like CEF, put the syslog data into another field after pre-processing the data.  Use this option in conjunction with the `grok_pattern` configuration to allow the syslog input plugin to fully parse the syslog data in this case.
@@ -164,7 +164,7 @@ input {
 
 ### `timezone` [plugins-inputs-syslog-timezone]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 Specify a time zone canonical ID to be used for date parsing. The valid IDs are listed on the [Joda.org available time zones page](http://joda-time.sourceforge.net/timezones.html). This is useful in case the time zone cannot be extracted from the value, and is not the platform default. If this is not specified the platform default will be used. Canonical ID is good as it takes care of daylight saving time for you. For example, `America/Los_Angeles` or `Europe/Paris` are valid IDs.
@@ -172,7 +172,7 @@ Specify a time zone canonical ID to be used for date parsing. The valid IDs are 
 
 ### `use_labels` [plugins-inputs-syslog-use_labels]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `true`
 
 Use label parsing for severity and facility levels.

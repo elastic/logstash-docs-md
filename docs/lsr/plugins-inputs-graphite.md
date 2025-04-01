@@ -38,16 +38,16 @@ This plugin supports the following configuration options plus the [Common option
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`host`](plugins-inputs-graphite.md#plugins-inputs-graphite-host) | [string](introduction.md#string) | No |
-| [`mode`](plugins-inputs-graphite.md#plugins-inputs-graphite-mode) | [string](introduction.md#string), one of `["server", "client"]` | No |
-| [`port`](plugins-inputs-graphite.md#plugins-inputs-graphite-port) | [number](introduction.md#number) | Yes |
-| [`proxy_protocol`](plugins-inputs-graphite.md#plugins-inputs-graphite-proxy_protocol) | [boolean](introduction.md#boolean) | No |
+| [`host`](plugins-inputs-graphite.md#plugins-inputs-graphite-host) | [string](value-types.md#string) | No |
+| [`mode`](plugins-inputs-graphite.md#plugins-inputs-graphite-mode) | [string](value-types.md#string), one of `["server", "client"]` | No |
+| [`port`](plugins-inputs-graphite.md#plugins-inputs-graphite-port) | [number](value-types.md#number) | Yes |
+| [`proxy_protocol`](plugins-inputs-graphite.md#plugins-inputs-graphite-proxy_protocol) | [boolean](value-types.md#boolean) | No |
 | [`ssl_cert`](plugins-inputs-graphite.md#plugins-inputs-graphite-ssl_cert) | a valid filesystem path | No |
-| [`ssl_enable`](plugins-inputs-graphite.md#plugins-inputs-graphite-ssl_enable) | [boolean](introduction.md#boolean) | No |
-| [`ssl_extra_chain_certs`](plugins-inputs-graphite.md#plugins-inputs-graphite-ssl_extra_chain_certs) | [array](introduction.md#array) | No |
+| [`ssl_enable`](plugins-inputs-graphite.md#plugins-inputs-graphite-ssl_enable) | [boolean](value-types.md#boolean) | No |
+| [`ssl_extra_chain_certs`](plugins-inputs-graphite.md#plugins-inputs-graphite-ssl_extra_chain_certs) | [array](value-types.md#array) | No |
 | [`ssl_key`](plugins-inputs-graphite.md#plugins-inputs-graphite-ssl_key) | a valid filesystem path | No |
-| [`ssl_key_passphrase`](plugins-inputs-graphite.md#plugins-inputs-graphite-ssl_key_passphrase) | [password](introduction.md#password) | No |
-| [`ssl_verify`](plugins-inputs-graphite.md#plugins-inputs-graphite-ssl_verify) | [boolean](introduction.md#boolean) | No |
+| [`ssl_key_passphrase`](plugins-inputs-graphite.md#plugins-inputs-graphite-ssl_key_passphrase) | [password](value-types.md#password) | No |
+| [`ssl_verify`](plugins-inputs-graphite.md#plugins-inputs-graphite-ssl_verify) | [boolean](value-types.md#boolean) | No |
 
 Also see [Common options](plugins-inputs-graphite.md#plugins-inputs-graphite-common-options) for a list of options supported by all input plugins.
 
@@ -56,13 +56,13 @@ Also see [Common options](plugins-inputs-graphite.md#plugins-inputs-graphite-com
 ### `data_timeout`  (DEPRECATED) [plugins-inputs-graphite-data_timeout]
 
 * DEPRECATED WARNING: This configuration item is deprecated and may not be available in future versions.
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `-1`
 
 
 ### `host` [plugins-inputs-graphite-host]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"0.0.0.0"`
 
 Read events over a TCP socket.
@@ -83,7 +83,7 @@ Mode to operate in. `server` listens for client connections, `client` connects t
 ### `port` [plugins-inputs-graphite-port]
 
 * This is a required setting.
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * There is no default value for this setting.
 
 When mode is `server`, the port to listen on. When mode is `client`, the port to connect to.
@@ -91,7 +91,7 @@ When mode is `server`, the port to listen on. When mode is `client`, the port to
 
 ### `proxy_protocol` [plugins-inputs-graphite-proxy_protocol]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 Proxy protocol support, only v1 is supported at this time [http://www.haproxy.org/download/1.5/doc/proxy-protocol.txt](http://www.haproxy.org/download/1.5/doc/proxy-protocol.txt)
@@ -100,7 +100,7 @@ Proxy protocol support, only v1 is supported at this time [http://www.haproxy.or
 ### `ssl_cacert`  (DEPRECATED) [plugins-inputs-graphite-ssl_cacert]
 
 * DEPRECATED WARNING: This configuration item is deprecated and may not be available in future versions.
-* Value type is [path](introduction.md#path)
+* Value type is [path](value-types.md#path)
 * There is no default value for this setting.
 
 The SSL CA certificate, chainfile or CA path. The system CA path is automatically included.
@@ -108,7 +108,7 @@ The SSL CA certificate, chainfile or CA path. The system CA path is automaticall
 
 ### `ssl_cert` [plugins-inputs-graphite-ssl_cert]
 
-* Value type is [path](introduction.md#path)
+* Value type is [path](value-types.md#path)
 * There is no default value for this setting.
 
 SSL certificate path
@@ -116,7 +116,7 @@ SSL certificate path
 
 ### `ssl_enable` [plugins-inputs-graphite-ssl_enable]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 Enable SSL (must be set for other `ssl_` options to take effect).
@@ -124,7 +124,7 @@ Enable SSL (must be set for other `ssl_` options to take effect).
 
 ### `ssl_extra_chain_certs` [plugins-inputs-graphite-ssl_extra_chain_certs]
 
-* Value type is [array](introduction.md#array)
+* Value type is [array](value-types.md#array)
 * Default value is `[]`
 
 An Array of extra X509 certificates to be added to the certificate chain. Useful when the CA chain is not necessary in the system store.
@@ -132,7 +132,7 @@ An Array of extra X509 certificates to be added to the certificate chain. Useful
 
 ### `ssl_key` [plugins-inputs-graphite-ssl_key]
 
-* Value type is [path](introduction.md#path)
+* Value type is [path](value-types.md#path)
 * There is no default value for this setting.
 
 SSL key path
@@ -140,7 +140,7 @@ SSL key path
 
 ### `ssl_key_passphrase` [plugins-inputs-graphite-ssl_key_passphrase]
 
-* Value type is [password](introduction.md#password)
+* Value type is [password](value-types.md#password)
 * Default value is `nil`
 
 SSL key passphrase
@@ -148,7 +148,7 @@ SSL key passphrase
 
 ### `ssl_verify` [plugins-inputs-graphite-ssl_verify]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `true`
 
 Verify the identity of the other end of the SSL connection against the CA. For input, sets the field `sslsubject` to that of the client certificate.

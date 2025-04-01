@@ -51,13 +51,13 @@ This plugin supports the following configuration options plus the [Common option
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`host`](plugins-outputs-nagios_nsca.md#plugins-outputs-nagios_nsca-host) | [string](introduction.md#string) | No |
-| [`message_format`](plugins-outputs-nagios_nsca.md#plugins-outputs-nagios_nsca-message_format) | [string](introduction.md#string) | No |
-| [`nagios_host`](plugins-outputs-nagios_nsca.md#plugins-outputs-nagios_nsca-nagios_host) | [string](introduction.md#string) | No |
-| [`nagios_service`](plugins-outputs-nagios_nsca.md#plugins-outputs-nagios_nsca-nagios_service) | [string](introduction.md#string) | No |
-| [`nagios_status`](plugins-outputs-nagios_nsca.md#plugins-outputs-nagios_nsca-nagios_status) | [string](introduction.md#string) | Yes |
-| [`port`](plugins-outputs-nagios_nsca.md#plugins-outputs-nagios_nsca-port) | [number](introduction.md#number) | No |
-| [`send_nsca_bin`](plugins-outputs-nagios_nsca.md#plugins-outputs-nagios_nsca-send_nsca_bin) | [string](introduction.md#string) | No |
+| [`host`](plugins-outputs-nagios_nsca.md#plugins-outputs-nagios_nsca-host) | [string](value-types.md#string) | No |
+| [`message_format`](plugins-outputs-nagios_nsca.md#plugins-outputs-nagios_nsca-message_format) | [string](value-types.md#string) | No |
+| [`nagios_host`](plugins-outputs-nagios_nsca.md#plugins-outputs-nagios_nsca-nagios_host) | [string](value-types.md#string) | No |
+| [`nagios_service`](plugins-outputs-nagios_nsca.md#plugins-outputs-nagios_nsca-nagios_service) | [string](value-types.md#string) | No |
+| [`nagios_status`](plugins-outputs-nagios_nsca.md#plugins-outputs-nagios_nsca-nagios_status) | [string](value-types.md#string) | Yes |
+| [`port`](plugins-outputs-nagios_nsca.md#plugins-outputs-nagios_nsca-port) | [number](value-types.md#number) | No |
+| [`send_nsca_bin`](plugins-outputs-nagios_nsca.md#plugins-outputs-nagios_nsca-send_nsca_bin) | [string](value-types.md#string) | No |
 | [`send_nsca_config`](plugins-outputs-nagios_nsca.md#plugins-outputs-nagios_nsca-send_nsca_config) | a valid filesystem path | No |
 
 Also see [Common options](plugins-outputs-nagios_nsca.md#plugins-outputs-nagios_nsca-common-options) for a list of options supported by all output plugins.
@@ -66,7 +66,7 @@ Also see [Common options](plugins-outputs-nagios_nsca.md#plugins-outputs-nagios_
 
 ### `host` [plugins-outputs-nagios_nsca-host]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"localhost"`
 
 The nagios host or IP to send logs to. It should have a NSCA daemon running.
@@ -74,7 +74,7 @@ The nagios host or IP to send logs to. It should have a NSCA daemon running.
 
 ### `message_format` [plugins-outputs-nagios_nsca-message_format]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"%{@timestamp} %{{host}}: %{{message}}"`
 
 The format to use when writing events to nagios. This value supports any string and can include `%{{name}}` and other dynamic strings.
@@ -82,7 +82,7 @@ The format to use when writing events to nagios. This value supports any string 
 
 ### `nagios_host` [plugins-outputs-nagios_nsca-nagios_host]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"%{{host}}"`
 
 The nagios *host* you want to submit a passive check result to. This parameter accepts interpolation, e.g. you can use `@source_host` or other logstash internal variables.
@@ -90,7 +90,7 @@ The nagios *host* you want to submit a passive check result to. This parameter a
 
 ### `nagios_service` [plugins-outputs-nagios_nsca-nagios_service]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"LOGSTASH"`
 
 The nagios *service* you want to submit a passive check result to. This parameter accepts interpolation, e.g. you can use `@source_host` or other logstash internal variables.
@@ -99,7 +99,7 @@ The nagios *service* you want to submit a passive check result to. This paramete
 ### `nagios_status` [plugins-outputs-nagios_nsca-nagios_status]
 
 * This is a required setting.
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 The status to send to nagios. Should be 0 = OK, 1 = WARNING, 2 = CRITICAL, 3 = UNKNOWN
@@ -107,7 +107,7 @@ The status to send to nagios. Should be 0 = OK, 1 = WARNING, 2 = CRITICAL, 3 = U
 
 ### `port` [plugins-outputs-nagios_nsca-port]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `5667`
 
 The port where the NSCA daemon on the nagios host listens.
@@ -115,7 +115,7 @@ The port where the NSCA daemon on the nagios host listens.
 
 ### `send_nsca_bin` [plugins-outputs-nagios_nsca-send_nsca_bin]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"/usr/sbin/send_nsca"`
 
 The path to the *send_nsca* binary on the local host.
@@ -123,7 +123,7 @@ The path to the *send_nsca* binary on the local host.
 
 ### `send_nsca_config` [plugins-outputs-nagios_nsca-send_nsca_config]
 
-* Value type is [path](introduction.md#path)
+* Value type is [path](value-types.md#path)
 * There is no default value for this setting.
 
 The path to the send_nsca config file on the local host. Leave blank if you don’t want to provide a config file.

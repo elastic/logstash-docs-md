@@ -36,10 +36,10 @@ This plugin supports the following configuration options plus the [Common option
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`host`](plugins-inputs-xmpp.md#plugins-inputs-xmpp-host) | [string](introduction.md#string) | No |
-| [`password`](plugins-inputs-xmpp.md#plugins-inputs-xmpp-password) | [password](introduction.md#password) | Yes |
-| [`rooms`](plugins-inputs-xmpp.md#plugins-inputs-xmpp-rooms) | [array](introduction.md#array) | No |
-| [`user`](plugins-inputs-xmpp.md#plugins-inputs-xmpp-user) | [string](introduction.md#string) | Yes |
+| [`host`](plugins-inputs-xmpp.md#plugins-inputs-xmpp-host) | [string](value-types.md#string) | No |
+| [`password`](plugins-inputs-xmpp.md#plugins-inputs-xmpp-password) | [password](value-types.md#password) | Yes |
+| [`rooms`](plugins-inputs-xmpp.md#plugins-inputs-xmpp-rooms) | [array](value-types.md#array) | No |
+| [`user`](plugins-inputs-xmpp.md#plugins-inputs-xmpp-user) | [string](value-types.md#string) | Yes |
 
 Also see [Common options](plugins-inputs-xmpp.md#plugins-inputs-xmpp-common-options) for a list of options supported by all input plugins.
 
@@ -47,7 +47,7 @@ Also see [Common options](plugins-inputs-xmpp.md#plugins-inputs-xmpp-common-opti
 
 ### `host` [plugins-inputs-xmpp-host]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 The xmpp server to connect to. This is optional. If you omit this setting, the host on the user/identity is used. (`foo.com` for `user@foo.com`)
@@ -56,7 +56,7 @@ The xmpp server to connect to. This is optional. If you omit this setting, the h
 ### `password` [plugins-inputs-xmpp-password]
 
 * This is a required setting.
-* Value type is [password](introduction.md#password)
+* Value type is [password](value-types.md#password)
 * There is no default value for this setting.
 
 The xmpp password for the user/identity.
@@ -64,7 +64,7 @@ The xmpp password for the user/identity.
 
 ### `rooms` [plugins-inputs-xmpp-rooms]
 
-* Value type is [array](introduction.md#array)
+* Value type is [array](value-types.md#array)
 * There is no default value for this setting.
 
 if muc/multi-user-chat required, give the name of the room that you want to join: `room@conference.domain/nick`
@@ -73,7 +73,7 @@ if muc/multi-user-chat required, give the name of the room that you want to join
 ### `user` [plugins-inputs-xmpp-user]
 
 * This is a required setting.
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 The user or resource ID, like `foo@example.com`.

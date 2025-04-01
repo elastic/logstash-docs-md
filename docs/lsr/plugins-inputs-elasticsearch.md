@@ -100,44 +100,44 @@ As of version `5.0.0` of this plugin, a number of previously deprecated settings
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`api_key`](plugins-inputs-elasticsearch.md#plugins-inputs-elasticsearch-api_key) | [password](introduction.md#password) | No |
-| [`ca_trusted_fingerprint`](plugins-inputs-elasticsearch.md#plugins-inputs-elasticsearch-ca_trusted_fingerprint) | [string](introduction.md#string) | No |
-| [`cloud_auth`](plugins-inputs-elasticsearch.md#plugins-inputs-elasticsearch-cloud_auth) | [password](introduction.md#password) | No |
-| [`cloud_id`](plugins-inputs-elasticsearch.md#plugins-inputs-elasticsearch-cloud_id) | [string](introduction.md#string) | No |
-| [`connect_timeout_seconds`](plugins-inputs-elasticsearch.md#plugins-inputs-elasticsearch-connect_timeout_seconds) | [number](introduction.md#number) | No |
-| [`custom_headers`](plugins-inputs-elasticsearch.md#plugins-inputs-elasticsearch-custom_headers) | [hash](introduction.md#hash) | No |
-| [`docinfo`](plugins-inputs-elasticsearch.md#plugins-inputs-elasticsearch-docinfo) | [boolean](introduction.md#boolean) | No |
-| [`docinfo_fields`](plugins-inputs-elasticsearch.md#plugins-inputs-elasticsearch-docinfo_fields) | [array](introduction.md#array) | No |
-| [`docinfo_target`](plugins-inputs-elasticsearch.md#plugins-inputs-elasticsearch-docinfo_target) | [string](introduction.md#string) | No |
-| [`ecs_compatibility`](plugins-inputs-elasticsearch.md#plugins-inputs-elasticsearch-ecs_compatibility) | [string](introduction.md#string) | No |
-| [`hosts`](plugins-inputs-elasticsearch.md#plugins-inputs-elasticsearch-hosts) | [array](introduction.md#array) | No |
-| [`index`](plugins-inputs-elasticsearch.md#plugins-inputs-elasticsearch-index) | [string](introduction.md#string) | No |
-| [`password`](plugins-inputs-elasticsearch.md#plugins-inputs-elasticsearch-password) | [password](introduction.md#password) | No |
-| [`proxy`](plugins-inputs-elasticsearch.md#plugins-inputs-elasticsearch-proxy) | [uri](introduction.md#uri) | No |
-| [`query`](plugins-inputs-elasticsearch.md#plugins-inputs-elasticsearch-query) | [string](introduction.md#string) | No |
-| [`response_type`](plugins-inputs-elasticsearch.md#plugins-inputs-elasticsearch-response_type) | [string](introduction.md#string), one of `["hits","aggregations"]` | No |
-| [`request_timeout_seconds`](plugins-inputs-elasticsearch.md#plugins-inputs-elasticsearch-request_timeout_seconds) | [number](introduction.md#number) | No |
-| [`schedule`](plugins-inputs-elasticsearch.md#plugins-inputs-elasticsearch-schedule) | [string](introduction.md#string) | No |
-| [`scroll`](plugins-inputs-elasticsearch.md#plugins-inputs-elasticsearch-scroll) | [string](introduction.md#string) | No |
-| [`search_api`](plugins-inputs-elasticsearch.md#plugins-inputs-elasticsearch-search_api) | [string](introduction.md#string), one of `["auto", "search_after", "scroll"]` | No |
-| [`size`](plugins-inputs-elasticsearch.md#plugins-inputs-elasticsearch-size) | [number](introduction.md#number) | No |
-| [`slices`](plugins-inputs-elasticsearch.md#plugins-inputs-elasticsearch-slices) | [number](introduction.md#number) | No |
-| [`ssl_certificate`](plugins-inputs-elasticsearch.md#plugins-inputs-elasticsearch-ssl_certificate) | [path](introduction.md#path) | No |
-| [`ssl_certificate_authorities`](plugins-inputs-elasticsearch.md#plugins-inputs-elasticsearch-ssl_certificate_authorities) | list of [path](introduction.md#path) | No |
-| [`ssl_cipher_suites`](plugins-inputs-elasticsearch.md#plugins-inputs-elasticsearch-ssl_cipher_suites) | list of [string](introduction.md#string) | No |
-| [`ssl_enabled`](plugins-inputs-elasticsearch.md#plugins-inputs-elasticsearch-ssl_enabled) | [boolean](introduction.md#boolean) | No |
-| [`ssl_key`](plugins-inputs-elasticsearch.md#plugins-inputs-elasticsearch-ssl_key) | [path](introduction.md#path) | No |
-| [`ssl_keystore_password`](plugins-inputs-elasticsearch.md#plugins-inputs-elasticsearch-ssl_keystore_password) | [password](introduction.md#password) | No |
-| [`ssl_keystore_path`](plugins-inputs-elasticsearch.md#plugins-inputs-elasticsearch-ssl_keystore_path) | [path](introduction.md#path) | No |
-| [`ssl_keystore_type`](plugins-inputs-elasticsearch.md#plugins-inputs-elasticsearch-ssl_keystore_type) | [string](introduction.md#string) | No |
-| [`ssl_supported_protocols`](plugins-inputs-elasticsearch.md#plugins-inputs-elasticsearch-ssl_supported_protocols) | [string](introduction.md#string) | No |
-| [`ssl_truststore_password`](plugins-inputs-elasticsearch.md#plugins-inputs-elasticsearch-ssl_truststore_password) | [password](introduction.md#password) | No |
-| [`ssl_truststore_path`](plugins-inputs-elasticsearch.md#plugins-inputs-elasticsearch-ssl_truststore_path) | [path](introduction.md#path) | No |
-| [`ssl_truststore_type`](plugins-inputs-elasticsearch.md#plugins-inputs-elasticsearch-ssl_truststore_type) | [string](introduction.md#string) | No |
-| [`ssl_verification_mode`](plugins-inputs-elasticsearch.md#plugins-inputs-elasticsearch-ssl_verification_mode) | [string](introduction.md#string), one of `["full", "none"]` | No |
-| [`socket_timeout_seconds`](plugins-inputs-elasticsearch.md#plugins-inputs-elasticsearch-socket_timeout_seconds) | [number](introduction.md#number) | No |
-| [`retries`](plugins-inputs-elasticsearch.md#plugins-inputs-elasticsearch-retries) | [number](introduction.md#number) | No |
-| [`user`](plugins-inputs-elasticsearch.md#plugins-inputs-elasticsearch-user) | [string](introduction.md#string) | No |
+| [`api_key`](plugins-inputs-elasticsearch.md#plugins-inputs-elasticsearch-api_key) | [password](value-types.md#password) | No |
+| [`ca_trusted_fingerprint`](plugins-inputs-elasticsearch.md#plugins-inputs-elasticsearch-ca_trusted_fingerprint) | [string](value-types.md#string) | No |
+| [`cloud_auth`](plugins-inputs-elasticsearch.md#plugins-inputs-elasticsearch-cloud_auth) | [password](value-types.md#password) | No |
+| [`cloud_id`](plugins-inputs-elasticsearch.md#plugins-inputs-elasticsearch-cloud_id) | [string](value-types.md#string) | No |
+| [`connect_timeout_seconds`](plugins-inputs-elasticsearch.md#plugins-inputs-elasticsearch-connect_timeout_seconds) | [number](value-types.md#number) | No |
+| [`custom_headers`](plugins-inputs-elasticsearch.md#plugins-inputs-elasticsearch-custom_headers) | [hash](value-types.md#hash) | No |
+| [`docinfo`](plugins-inputs-elasticsearch.md#plugins-inputs-elasticsearch-docinfo) | [boolean](value-types.md#boolean) | No |
+| [`docinfo_fields`](plugins-inputs-elasticsearch.md#plugins-inputs-elasticsearch-docinfo_fields) | [array](value-types.md#array) | No |
+| [`docinfo_target`](plugins-inputs-elasticsearch.md#plugins-inputs-elasticsearch-docinfo_target) | [string](value-types.md#string) | No |
+| [`ecs_compatibility`](plugins-inputs-elasticsearch.md#plugins-inputs-elasticsearch-ecs_compatibility) | [string](value-types.md#string) | No |
+| [`hosts`](plugins-inputs-elasticsearch.md#plugins-inputs-elasticsearch-hosts) | [array](value-types.md#array) | No |
+| [`index`](plugins-inputs-elasticsearch.md#plugins-inputs-elasticsearch-index) | [string](value-types.md#string) | No |
+| [`password`](plugins-inputs-elasticsearch.md#plugins-inputs-elasticsearch-password) | [password](value-types.md#password) | No |
+| [`proxy`](plugins-inputs-elasticsearch.md#plugins-inputs-elasticsearch-proxy) | [uri](value-types.md#uri) | No |
+| [`query`](plugins-inputs-elasticsearch.md#plugins-inputs-elasticsearch-query) | [string](value-types.md#string) | No |
+| [`response_type`](plugins-inputs-elasticsearch.md#plugins-inputs-elasticsearch-response_type) | [string](value-types.md#string), one of `["hits","aggregations"]` | No |
+| [`request_timeout_seconds`](plugins-inputs-elasticsearch.md#plugins-inputs-elasticsearch-request_timeout_seconds) | [number](value-types.md#number) | No |
+| [`schedule`](plugins-inputs-elasticsearch.md#plugins-inputs-elasticsearch-schedule) | [string](value-types.md#string) | No |
+| [`scroll`](plugins-inputs-elasticsearch.md#plugins-inputs-elasticsearch-scroll) | [string](value-types.md#string) | No |
+| [`search_api`](plugins-inputs-elasticsearch.md#plugins-inputs-elasticsearch-search_api) | [string](value-types.md#string), one of `["auto", "search_after", "scroll"]` | No |
+| [`size`](plugins-inputs-elasticsearch.md#plugins-inputs-elasticsearch-size) | [number](value-types.md#number) | No |
+| [`slices`](plugins-inputs-elasticsearch.md#plugins-inputs-elasticsearch-slices) | [number](value-types.md#number) | No |
+| [`ssl_certificate`](plugins-inputs-elasticsearch.md#plugins-inputs-elasticsearch-ssl_certificate) | [path](value-types.md#path) | No |
+| [`ssl_certificate_authorities`](plugins-inputs-elasticsearch.md#plugins-inputs-elasticsearch-ssl_certificate_authorities) | list of [path](value-types.md#path) | No |
+| [`ssl_cipher_suites`](plugins-inputs-elasticsearch.md#plugins-inputs-elasticsearch-ssl_cipher_suites) | list of [string](value-types.md#string) | No |
+| [`ssl_enabled`](plugins-inputs-elasticsearch.md#plugins-inputs-elasticsearch-ssl_enabled) | [boolean](value-types.md#boolean) | No |
+| [`ssl_key`](plugins-inputs-elasticsearch.md#plugins-inputs-elasticsearch-ssl_key) | [path](value-types.md#path) | No |
+| [`ssl_keystore_password`](plugins-inputs-elasticsearch.md#plugins-inputs-elasticsearch-ssl_keystore_password) | [password](value-types.md#password) | No |
+| [`ssl_keystore_path`](plugins-inputs-elasticsearch.md#plugins-inputs-elasticsearch-ssl_keystore_path) | [path](value-types.md#path) | No |
+| [`ssl_keystore_type`](plugins-inputs-elasticsearch.md#plugins-inputs-elasticsearch-ssl_keystore_type) | [string](value-types.md#string) | No |
+| [`ssl_supported_protocols`](plugins-inputs-elasticsearch.md#plugins-inputs-elasticsearch-ssl_supported_protocols) | [string](value-types.md#string) | No |
+| [`ssl_truststore_password`](plugins-inputs-elasticsearch.md#plugins-inputs-elasticsearch-ssl_truststore_password) | [password](value-types.md#password) | No |
+| [`ssl_truststore_path`](plugins-inputs-elasticsearch.md#plugins-inputs-elasticsearch-ssl_truststore_path) | [path](value-types.md#path) | No |
+| [`ssl_truststore_type`](plugins-inputs-elasticsearch.md#plugins-inputs-elasticsearch-ssl_truststore_type) | [string](value-types.md#string) | No |
+| [`ssl_verification_mode`](plugins-inputs-elasticsearch.md#plugins-inputs-elasticsearch-ssl_verification_mode) | [string](value-types.md#string), one of `["full", "none"]` | No |
+| [`socket_timeout_seconds`](plugins-inputs-elasticsearch.md#plugins-inputs-elasticsearch-socket_timeout_seconds) | [number](value-types.md#number) | No |
+| [`retries`](plugins-inputs-elasticsearch.md#plugins-inputs-elasticsearch-retries) | [number](value-types.md#number) | No |
+| [`user`](plugins-inputs-elasticsearch.md#plugins-inputs-elasticsearch-user) | [string](value-types.md#string) | No |
 
 Also see [Common options](plugins-inputs-elasticsearch.md#plugins-inputs-elasticsearch-common-options) for a list of options supported by all input plugins.
 
@@ -145,7 +145,7 @@ Also see [Common options](plugins-inputs-elasticsearch.md#plugins-inputs-elastic
 
 ### `api_key` [plugins-inputs-elasticsearch-api_key]
 
-* Value type is [password](introduction.md#password)
+* Value type is [password](value-types.md#password)
 * There is no default value for this setting.
 
 Authenticate using Elasticsearch API key. Note that this option also requires enabling the [`ssl_enabled`](plugins-inputs-elasticsearch.md#plugins-inputs-elasticsearch-ssl_enabled) option.
@@ -155,7 +155,7 @@ Format is `id:api_key` where `id` and `api_key` are as returned by the Elasticse
 
 ### `ca_trusted_fingerprint` [plugins-inputs-elasticsearch-ca_trusted_fingerprint]
 
-* Value type is [string](introduction.md#string), and must contain exactly 64 hexadecimal characters.
+* Value type is [string](value-types.md#string), and must contain exactly 64 hexadecimal characters.
 * There is no default value for this setting.
 * Use of this option *requires* Logstash 8.3+
 
@@ -164,7 +164,7 @@ The SHA-256 fingerprint of an SSL Certificate Authority to trust, such as the au
 
 ### `cloud_auth` [plugins-inputs-elasticsearch-cloud_auth]
 
-* Value type is [password](introduction.md#password)
+* Value type is [password](value-types.md#password)
 * There is no default value for this setting.
 
 Cloud authentication string ("<username>:<password>" format) is an alternative for the `user`/`password` pair.
@@ -174,7 +174,7 @@ For more info, check out the [Logstash-to-Cloud documentation](logstash://refere
 
 ### `cloud_id` [plugins-inputs-elasticsearch-cloud_id]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 Cloud ID, from the Elastic Cloud web console. If set `hosts` should not be used.
@@ -184,7 +184,7 @@ For more info, check out the [Logstash-to-Cloud documentation](logstash://refere
 
 ### `connect_timeout_seconds` [plugins-inputs-elasticsearch-connect_timeout_seconds]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `10`
 
 The maximum amount of time, in seconds, to wait while establishing a connection to Elasticsearch. Connect timeouts tend to occur when Elasticsearch or an intermediate proxy is overloaded with requests and has exhausted its connection pool.
@@ -192,7 +192,7 @@ The maximum amount of time, in seconds, to wait while establishing a connection 
 
 ### `custom_headers` [plugins-inputs-elasticsearch-custom_headers]
 
-* Value type is [hash](introduction.md#hash)
+* Value type is [hash](value-types.md#hash)
 * Default value is empty
 
 Pass a set of key value pairs as the headers sent in each request to an elasticsearch node. The headers will be used for any kind of request. These custom headers will override any headers previously set by the plugin such as the User Agent or Authorization headers.
@@ -200,7 +200,7 @@ Pass a set of key value pairs as the headers sent in each request to an elastics
 
 ### `docinfo` [plugins-inputs-elasticsearch-docinfo]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 If set, include Elasticsearch document information such as index, type, and the id in the event.
@@ -249,7 +249,7 @@ Example
 
 ### `docinfo_fields` [plugins-inputs-elasticsearch-docinfo_fields]
 
-* Value type is [array](introduction.md#array)
+* Value type is [array](value-types.md#array)
 * Default value is `["_index", "_type", "_id"]`
 
 If document metadata storage is requested by enabling the `docinfo` option, this option lists the metadata fields to save in the current event. See [Meta-Fields](https://www.elastic.co/guide/en/elasticsearch/reference/current/mapping-fields.html) in the Elasticsearch documentation for more information.
@@ -257,7 +257,7 @@ If document metadata storage is requested by enabling the `docinfo` option, this
 
 ### `docinfo_target` [plugins-inputs-elasticsearch-docinfo_target]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value depends on whether [`ecs_compatibility`](plugins-inputs-elasticsearch.md#plugins-inputs-elasticsearch-ecs_compatibility) is enabled:
 
     * ECS Compatibility disabled: `"@metadata"`
@@ -269,7 +269,7 @@ If document metadata storage is requested by enabling the `docinfo` option, this
 
 ### `ecs_compatibility` [plugins-inputs-elasticsearch-ecs_compatibility]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Supported values are:
 
     * `disabled`: CSV data added at root level
@@ -286,7 +286,7 @@ Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)](ht
 
 ### `hosts` [plugins-inputs-elasticsearch-hosts]
 
-* Value type is [array](introduction.md#array)
+* Value type is [array](value-types.md#array)
 * There is no default value for this setting.
 
 List of one or more Elasticsearch hosts to use for querying. Each host can be either IP, HOST, IP:port, or HOST:port. The port defaults to 9200.
@@ -294,7 +294,7 @@ List of one or more Elasticsearch hosts to use for querying. Each host can be ei
 
 ### `index` [plugins-inputs-elasticsearch-index]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"logstash-*"`
 
 The index or alias to search. Check out [Multi Indices documentation](https://www.elastic.co/guide/en/elasticsearch/reference/current/api-conventions.html#api-multi-index) in the Elasticsearch documentation for info on referencing multiple indices.
@@ -302,7 +302,7 @@ The index or alias to search. Check out [Multi Indices documentation](https://ww
 
 ### `password` [plugins-inputs-elasticsearch-password]
 
-* Value type is [password](introduction.md#password)
+* Value type is [password](value-types.md#password)
 * There is no default value for this setting.
 
 The password to use together with the username in the `user` option when authenticating to the Elasticsearch server. If set to an empty string authentication will be disabled.
@@ -310,7 +310,7 @@ The password to use together with the username in the `user` option when authent
 
 ### `proxy` [plugins-inputs-elasticsearch-proxy]
 
-* Value type is [uri](introduction.md#uri)
+* Value type is [uri](value-types.md#uri)
 * There is no default value for this setting.
 
 Set the address of a forward HTTP proxy. An empty string is treated as if proxy was not set, this is useful when using environment variables e.g. `proxy => '${LS_PROXY:}'`.
@@ -318,7 +318,7 @@ Set the address of a forward HTTP proxy. An empty string is treated as if proxy 
 
 ### `query` [plugins-inputs-elasticsearch-query]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `'{ "sort": [ "_doc" ] }'`
 
 The query to be executed. Read the [Elasticsearch query DSL documentation](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl.html) for more information.
@@ -336,7 +336,7 @@ Which part of the result to transform into Logstash events when processing the r
 
 ### `request_timeout_seconds` [plugins-inputs-elasticsearch-request_timeout_seconds]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `60`
 
 The maximum amount of time, in seconds, for a single request to Elasticsearch. Request timeouts tend to occur when an individual page of data is very large, such as when it contains large-payload documents and/or the [`size`](plugins-inputs-elasticsearch.md#plugins-inputs-elasticsearch-size) has been specified as a large value.
@@ -344,7 +344,7 @@ The maximum amount of time, in seconds, for a single request to Elasticsearch. R
 
 ### `retries` [plugins-inputs-elasticsearch-retries]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `0`
 
 The number of times to re-run the query after the first failure. If the query fails after all retries, it logs an error message. The default is 0 (no retry). This value should be equal to or greater than zero.
@@ -357,7 +357,7 @@ Partial failures - such as errors in a subset of all slices - can result in the 
 
 ### `schedule` [plugins-inputs-elasticsearch-schedule]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 Schedule of when to periodically run statement, in Cron format for example: "* * * * *" (execute query every minute, on the minute)
@@ -367,7 +367,7 @@ There is no schedule by default. If no schedule is given, then the statement is 
 
 ### `scroll` [plugins-inputs-elasticsearch-scroll]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"1m"`
 
 This parameter controls the keepalive time in seconds of the scrolling request and initiates the scrolling process. The timeout applies per round trip (i.e. between the previous scroll request, to the next).
@@ -387,7 +387,7 @@ With `auto` the plugin uses the `search_after` parameter for Elasticsearch versi
 
 ### `size` [plugins-inputs-elasticsearch-size]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `1000`
 
 This allows you to set the maximum number of hits returned per scroll.
@@ -395,7 +395,7 @@ This allows you to set the maximum number of hits returned per scroll.
 
 ### `slices` [plugins-inputs-elasticsearch-slices]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * There is no default value.
 * Sensible values range from 2 to about 8.
 
@@ -413,7 +413,7 @@ If the `slices` parameter is left unset, the plugin will *not* inject slice inst
 
 ### `ssl_certificate` [plugins-inputs-elasticsearch-ssl_certificate]
 
-* Value type is [path](introduction.md#path)
+* Value type is [path](value-types.md#path)
 * There is no default value for this setting.
 
 SSL certificate to use to authenticate the client. This certificate should be an OpenSSL-style X.509 certificate file.
@@ -426,7 +426,7 @@ This setting can be used only if [`ssl_key`](plugins-inputs-elasticsearch.md#plu
 
 ### `ssl_certificate_authorities` [plugins-inputs-elasticsearch-ssl_certificate_authorities]
 
-* Value type is a list of [path](introduction.md#path)
+* Value type is a list of [path](value-types.md#path)
 * There is no default value for this setting
 
 The `.cer` or `.pem` files to validate the server’s certificate.
@@ -439,7 +439,7 @@ You cannot use this setting and [`ssl_truststore_path`](plugins-inputs-elasticse
 
 ### `ssl_cipher_suites` [plugins-inputs-elasticsearch-ssl_cipher_suites]
 
-* Value type is a list of [string](introduction.md#string)
+* Value type is a list of [string](value-types.md#string)
 * There is no default value for this setting
 
 The list of cipher suites to use, listed by priorities. Supported cipher suites vary depending on the Java and protocol versions.
@@ -447,7 +447,7 @@ The list of cipher suites to use, listed by priorities. Supported cipher suites 
 
 ### `ssl_enabled` [plugins-inputs-elasticsearch-ssl_enabled]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * There is no default value for this setting.
 
 Enable SSL/TLS secured communication to Elasticsearch cluster. Leaving this unspecified will use whatever scheme is specified in the URLs listed in [`hosts`](plugins-inputs-elasticsearch.md#plugins-inputs-elasticsearch-hosts) or extracted from the [`cloud_id`](plugins-inputs-elasticsearch.md#plugins-inputs-elasticsearch-cloud_id). If no explicit protocol is specified plain HTTP will be used.
@@ -457,7 +457,7 @@ When not explicitly set, SSL will be automatically enabled if any of the specifi
 
 ### `ssl_key` [plugins-inputs-elasticsearch-ssl_key]
 
-* Value type is [path](introduction.md#path)
+* Value type is [path](value-types.md#path)
 * There is no default value for this setting.
 
 OpenSSL-style RSA private key that corresponds to the [`ssl_certificate`](plugins-inputs-elasticsearch.md#plugins-inputs-elasticsearch-ssl_certificate).
@@ -470,7 +470,7 @@ This setting can be used only if [`ssl_certificate`](plugins-inputs-elasticsearc
 
 ### `ssl_keystore_password` [plugins-inputs-elasticsearch-ssl_keystore_password]
 
-* Value type is [password](introduction.md#password)
+* Value type is [password](value-types.md#password)
 * There is no default value for this setting.
 
 Set the keystore password
@@ -478,7 +478,7 @@ Set the keystore password
 
 ### `ssl_keystore_path` [plugins-inputs-elasticsearch-ssl_keystore_path]
 
-* Value type is [path](introduction.md#path)
+* Value type is [path](value-types.md#path)
 * There is no default value for this setting.
 
 The keystore used to present a certificate to the server. It can be either `.jks` or `.p12`
@@ -499,7 +499,7 @@ The format of the keystore file. It must be either `jks` or `pkcs12`.
 
 ### `ssl_supported_protocols` [plugins-inputs-elasticsearch-ssl_supported_protocols]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Allowed values are: `'TLSv1.1'`, `'TLSv1.2'`, `'TLSv1.3'`
 * Default depends on the JDK being used. With up-to-date Logstash, the default is `['TLSv1.2', 'TLSv1.3']`. `'TLSv1.1'` is not considered secure and is only provided for legacy applications.
 
@@ -515,7 +515,7 @@ If you configure the plugin to use `'TLSv1.1'` on any recent JVM, such as the on
 
 ### `ssl_truststore_password` [plugins-inputs-elasticsearch-ssl_truststore_password]
 
-* Value type is [password](introduction.md#password)
+* Value type is [password](value-types.md#password)
 * There is no default value for this setting.
 
 Set the truststore password.
@@ -523,7 +523,7 @@ Set the truststore password.
 
 ### `ssl_truststore_path` [plugins-inputs-elasticsearch-ssl_truststore_path]
 
-* Value type is [path](introduction.md#path)
+* Value type is [path](value-types.md#path)
 * There is no default value for this setting.
 
 The truststore to validate the server’s certificate. It can be either .jks or .p12.
@@ -561,7 +561,7 @@ Setting certificate verification to `none` disables many security benefits of SS
 
 ### `socket_timeout_seconds` [plugins-inputs-elasticsearch-socket_timeout_seconds]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `60`
 
 The maximum amount of time, in seconds, to wait on an incomplete response from Elasticsearch while no additional data has been appended. Socket timeouts usually occur while waiting for the first byte of a response, such as when executing a particularly complex query.
@@ -579,7 +579,7 @@ This option can be useful to avoid populating unknown fields when a downstream s
 
 ### `user` [plugins-inputs-elasticsearch-user]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 The username to use together with the password in the `password` option when authenticating to the Elasticsearch server. If set to an empty string authentication will be disabled.

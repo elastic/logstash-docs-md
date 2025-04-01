@@ -59,13 +59,13 @@ This plugin supports the following configuration options plus the [Common option
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`multi_value`](plugins-outputs-zabbix.md#plugins-outputs-zabbix-multi_value) | [array](introduction.md#array) | No |
-| [`timeout`](plugins-outputs-zabbix.md#plugins-outputs-zabbix-timeout) | [number](introduction.md#number) | No |
-| [`zabbix_host`](plugins-outputs-zabbix.md#plugins-outputs-zabbix-zabbix_host) | [string](introduction.md#string) | Yes |
-| [`zabbix_key`](plugins-outputs-zabbix.md#plugins-outputs-zabbix-zabbix_key) | [string](introduction.md#string) | No |
-| [`zabbix_server_host`](plugins-outputs-zabbix.md#plugins-outputs-zabbix-zabbix_server_host) | [string](introduction.md#string) | No |
-| [`zabbix_server_port`](plugins-outputs-zabbix.md#plugins-outputs-zabbix-zabbix_server_port) | [number](introduction.md#number) | No |
-| [`zabbix_value`](plugins-outputs-zabbix.md#plugins-outputs-zabbix-zabbix_value) | [string](introduction.md#string) | No |
+| [`multi_value`](plugins-outputs-zabbix.md#plugins-outputs-zabbix-multi_value) | [array](value-types.md#array) | No |
+| [`timeout`](plugins-outputs-zabbix.md#plugins-outputs-zabbix-timeout) | [number](value-types.md#number) | No |
+| [`zabbix_host`](plugins-outputs-zabbix.md#plugins-outputs-zabbix-zabbix_host) | [string](value-types.md#string) | Yes |
+| [`zabbix_key`](plugins-outputs-zabbix.md#plugins-outputs-zabbix-zabbix_key) | [string](value-types.md#string) | No |
+| [`zabbix_server_host`](plugins-outputs-zabbix.md#plugins-outputs-zabbix-zabbix_server_host) | [string](value-types.md#string) | No |
+| [`zabbix_server_port`](plugins-outputs-zabbix.md#plugins-outputs-zabbix-zabbix_server_port) | [number](value-types.md#number) | No |
+| [`zabbix_value`](plugins-outputs-zabbix.md#plugins-outputs-zabbix-zabbix_value) | [string](value-types.md#string) | No |
 
 Also see [Common options](plugins-outputs-zabbix.md#plugins-outputs-zabbix-common-options) for a list of options supported by all output plugins.
 
@@ -73,7 +73,7 @@ Also see [Common options](plugins-outputs-zabbix.md#plugins-outputs-zabbix-commo
 
 ### `multi_value` [plugins-outputs-zabbix-multi_value]
 
-* Value type is [array](introduction.md#array)
+* Value type is [array](value-types.md#array)
 * There is no default value for this setting.
 
 Use the `multi_value` directive to send multiple key/value pairs. This can be thought of as an array, like:
@@ -87,7 +87,7 @@ This directive cannot be used in conjunction with the single-value directives `z
 
 ### `timeout` [plugins-outputs-zabbix-timeout]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `1`
 
 The number of seconds to wait before giving up on a connection to the Zabbix server. This number should be very small, otherwise delays in delivery of other outputs could result.
@@ -96,7 +96,7 @@ The number of seconds to wait before giving up on a connection to the Zabbix ser
 ### `zabbix_host` [plugins-outputs-zabbix-zabbix_host]
 
 * This is a required setting.
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 The field name which holds the Zabbix host name. This can be a sub-field of the @metadata field.
@@ -104,7 +104,7 @@ The field name which holds the Zabbix host name. This can be a sub-field of the 
 
 ### `zabbix_key` [plugins-outputs-zabbix-zabbix_key]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 A single field name which holds the value you intend to use as the Zabbix item key. This can be a sub-field of the @metadata field. This directive will be ignored if using `multi_value`
@@ -117,7 +117,7 @@ A single field name which holds the value you intend to use as the Zabbix item k
 
 ### `zabbix_server_host` [plugins-outputs-zabbix-zabbix_server_host]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"localhost"`
 
 The IP or resolvable hostname where the Zabbix server is running
@@ -125,7 +125,7 @@ The IP or resolvable hostname where the Zabbix server is running
 
 ### `zabbix_server_port` [plugins-outputs-zabbix-zabbix_server_port]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `10051`
 
 The port on which the Zabbix server is running
@@ -133,7 +133,7 @@ The port on which the Zabbix server is running
 
 ### `zabbix_value` [plugins-outputs-zabbix-zabbix_value]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"message"`
 
 The field name which holds the value you want to send. This directive will be ignored if using `multi_value`

@@ -183,19 +183,19 @@ This plugin supports the following configuration options plus the [Common option
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`config_mode`](plugins-inputs-azure_event_hubs.md#plugins-inputs-azure_event_hubs-config_mode) | [string](introduction.md#string), (`basic` or `advanced`) | No |
-| [`event_hubs`](plugins-inputs-azure_event_hubs.md#plugins-inputs-azure_event_hubs-event_hubs) | [array](introduction.md#array) | Yes, when `config_mode => advanced` |
-| [`event_hub_connections`](plugins-inputs-azure_event_hubs.md#plugins-inputs-azure_event_hubs-event_hub_connections) | [array](introduction.md#array) | Yes, when `config_mode => basic` |
-| [`event_hub_connection`](plugins-inputs-azure_event_hubs.md#plugins-inputs-azure_event_hubs-event_hub_connection) | [string](introduction.md#string) | Yes, when `config_mode => advanced` |
-| [`checkpoint_interval`](plugins-inputs-azure_event_hubs.md#plugins-inputs-azure_event_hubs-checkpoint_interval) | [number](introduction.md#number) | No |
-| [`consumer_group`](plugins-inputs-azure_event_hubs.md#plugins-inputs-azure_event_hubs-consumer_group) | [string](introduction.md#string) | No |
-| [`decorate_events`](plugins-inputs-azure_event_hubs.md#plugins-inputs-azure_event_hubs-decorate_events) | [boolean](introduction.md#boolean) | No |
-| [`initial_position`](plugins-inputs-azure_event_hubs.md#plugins-inputs-azure_event_hubs-initial_position) | [string](introduction.md#string), (`beginning`, `end`, or `look_back`) | No |
-| [`initial_position_look_back`](plugins-inputs-azure_event_hubs.md#plugins-inputs-azure_event_hubs-initial_position_look_back) | [number](introduction.md#number) | No, unless `initial_position => look_back` |
-| [`max_batch_size`](plugins-inputs-azure_event_hubs.md#plugins-inputs-azure_event_hubs-max_batch_size) | [number](introduction.md#number) | No |
-| [`storage_connection`](plugins-inputs-azure_event_hubs.md#plugins-inputs-azure_event_hubs-storage_connection) | [string](introduction.md#string) | No |
-| [`storage_container`](plugins-inputs-azure_event_hubs.md#plugins-inputs-azure_event_hubs-storage_container) | [string](introduction.md#string) | No |
-| [`threads`](plugins-inputs-azure_event_hubs.md#plugins-inputs-azure_event_hubs-threads) | [number](introduction.md#number) | No |
+| [`config_mode`](plugins-inputs-azure_event_hubs.md#plugins-inputs-azure_event_hubs-config_mode) | [string](value-types.md#string), (`basic` or `advanced`) | No |
+| [`event_hubs`](plugins-inputs-azure_event_hubs.md#plugins-inputs-azure_event_hubs-event_hubs) | [array](value-types.md#array) | Yes, when `config_mode => advanced` |
+| [`event_hub_connections`](plugins-inputs-azure_event_hubs.md#plugins-inputs-azure_event_hubs-event_hub_connections) | [array](value-types.md#array) | Yes, when `config_mode => basic` |
+| [`event_hub_connection`](plugins-inputs-azure_event_hubs.md#plugins-inputs-azure_event_hubs-event_hub_connection) | [string](value-types.md#string) | Yes, when `config_mode => advanced` |
+| [`checkpoint_interval`](plugins-inputs-azure_event_hubs.md#plugins-inputs-azure_event_hubs-checkpoint_interval) | [number](value-types.md#number) | No |
+| [`consumer_group`](plugins-inputs-azure_event_hubs.md#plugins-inputs-azure_event_hubs-consumer_group) | [string](value-types.md#string) | No |
+| [`decorate_events`](plugins-inputs-azure_event_hubs.md#plugins-inputs-azure_event_hubs-decorate_events) | [boolean](value-types.md#boolean) | No |
+| [`initial_position`](plugins-inputs-azure_event_hubs.md#plugins-inputs-azure_event_hubs-initial_position) | [string](value-types.md#string), (`beginning`, `end`, or `look_back`) | No |
+| [`initial_position_look_back`](plugins-inputs-azure_event_hubs.md#plugins-inputs-azure_event_hubs-initial_position_look_back) | [number](value-types.md#number) | No, unless `initial_position => look_back` |
+| [`max_batch_size`](plugins-inputs-azure_event_hubs.md#plugins-inputs-azure_event_hubs-max_batch_size) | [number](value-types.md#number) | No |
+| [`storage_connection`](plugins-inputs-azure_event_hubs.md#plugins-inputs-azure_event_hubs-storage_connection) | [string](value-types.md#string) | No |
+| [`storage_container`](plugins-inputs-azure_event_hubs.md#plugins-inputs-azure_event_hubs-storage_container) | [string](value-types.md#string) | No |
+| [`threads`](plugins-inputs-azure_event_hubs.md#plugins-inputs-azure_event_hubs-threads) | [number](value-types.md#number) | No |
 
 Also see [Common options](plugins-inputs-azure_event_hubs.md#plugins-inputs-azure_event_hubs-common-options) for a list of options supported by all input plugins.
 
@@ -206,7 +206,7 @@ All Event Hubs options are common to both basic and advanced configurations, wit
 
 ### `config_mode` [plugins-inputs-azure_event_hubs-config_mode]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Valid entries are `basic` or `advanced`
 * Default value is `basic`
 
@@ -221,7 +221,7 @@ azure_event_hubs {
 
 ### `event_hubs` [plugins-inputs-azure_event_hubs-event_hubs]
 
-* Value type is [array](introduction.md#array)
+* Value type is [array](value-types.md#array)
 * No default value
 * Ignored for basic configuration
 * Required for advanced configuration
@@ -248,7 +248,7 @@ azure_event_hubs {
 
 ### `event_hub_connections` [plugins-inputs-azure_event_hubs-event_hub_connections]
 
-* Value type is [array](introduction.md#array)
+* Value type is [array](value-types.md#array)
 * No default value
 * Required for basic configuration
 
@@ -265,7 +265,7 @@ azure_event_hubs {
 
 ### `event_hub_connection` [plugins-inputs-azure_event_hubs-event_hub_connection]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * No default value
 * Valid only for advanced configuration
 
@@ -285,7 +285,7 @@ azure_event_hubs {
 
 ### `checkpoint_interval` [plugins-inputs-azure_event_hubs-checkpoint_interval]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `5` seconds
 * Set to `0` to disable.
 
@@ -303,7 +303,7 @@ azure_event_hubs {
 
 ### `consumer_group` [plugins-inputs-azure_event_hubs-consumer_group]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `$Default`
 
 Consumer group used to read the Event Hub(s). Create a consumer group specifically for Logstash. Then ensure that all instances of Logstash use that consumer group so that they can work together properly.
@@ -318,7 +318,7 @@ azure_event_hubs {
 
 ### `decorate_events` [plugins-inputs-azure_event_hubs-decorate_events]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 Adds metadata about the Event Hub, including Event Hub name, consumer_group, processor_host, partition, offset, sequence, timestamp, and event_size.
@@ -333,7 +333,7 @@ azure_event_hubs {
 
 ### `initial_position` [plugins-inputs-azure_event_hubs-initial_position]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Valid arguments are `beginning`, `end`, `look_back`
 * Default value is `beginning`
 
@@ -355,7 +355,7 @@ azure_event_hubs {
 
 ### `initial_position_look_back` [plugins-inputs-azure_event_hubs-initial_position_look_back]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `86400`
 * Used only if `initial_position` is set to `look-back`
 
@@ -372,7 +372,7 @@ azure_event_hubs {
 
 ### `max_batch_size` [plugins-inputs-azure_event_hubs-max_batch_size]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `125`
 
 Maximum number of events retrieved and processed together. A checkpoint is created after each batch. Increasing this value may help with performance, but requires more memory.
@@ -387,7 +387,7 @@ azure_event_hubs {
 
 ### `storage_connection` [plugins-inputs-azure_event_hubs-storage_connection]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * No default value
 
 Connection string for blob account storage. Blob account storage persists the offsets between restarts, and ensures that multiple instances of Logstash process different partitions. When this value is set, restarts resume where processing left off. When this value is not set, the `initial_position` value is used on every restart.
@@ -404,7 +404,7 @@ azure_event_hubs {
 
 ### `storage_container` [plugins-inputs-azure_event_hubs-storage_container]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Defaults to the Event Hub name if not defined
 
 Name of the storage container used to persist offsets and allow multiple instances of Logstash to work together.
@@ -440,7 +440,7 @@ azure_event_hubs {
 
 ### `threads` [plugins-inputs-azure_event_hubs-threads]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Minimum value is `2`
 * Default value is `16`
 

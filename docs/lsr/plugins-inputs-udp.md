@@ -36,14 +36,14 @@ This plugin supports the following configuration options plus the [Common option
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`buffer_size`](plugins-inputs-udp.md#plugins-inputs-udp-buffer_size) | [number](introduction.md#number) | No |
-| [`ecs_compatibility`](plugins-inputs-udp.md#plugins-inputs-udp-ecs_compatibility) | [string](introduction.md#string) | No |
-| [`host`](plugins-inputs-udp.md#plugins-inputs-udp-host) | [string](introduction.md#string) | No |
-| [`port`](plugins-inputs-udp.md#plugins-inputs-udp-port) | [number](introduction.md#number) | Yes |
-| [`queue_size`](plugins-inputs-udp.md#plugins-inputs-udp-queue_size) | [number](introduction.md#number) | No |
-| [`receive_buffer_bytes`](plugins-inputs-udp.md#plugins-inputs-udp-receive_buffer_bytes) | [number](introduction.md#number) | No |
-| [`source_ip_fieldname`](plugins-inputs-udp.md#plugins-inputs-udp-source_ip_fieldname) | [string](introduction.md#string) | No |
-| [`workers`](plugins-inputs-udp.md#plugins-inputs-udp-workers) | [number](introduction.md#number) | No |
+| [`buffer_size`](plugins-inputs-udp.md#plugins-inputs-udp-buffer_size) | [number](value-types.md#number) | No |
+| [`ecs_compatibility`](plugins-inputs-udp.md#plugins-inputs-udp-ecs_compatibility) | [string](value-types.md#string) | No |
+| [`host`](plugins-inputs-udp.md#plugins-inputs-udp-host) | [string](value-types.md#string) | No |
+| [`port`](plugins-inputs-udp.md#plugins-inputs-udp-port) | [number](value-types.md#number) | Yes |
+| [`queue_size`](plugins-inputs-udp.md#plugins-inputs-udp-queue_size) | [number](value-types.md#number) | No |
+| [`receive_buffer_bytes`](plugins-inputs-udp.md#plugins-inputs-udp-receive_buffer_bytes) | [number](value-types.md#number) | No |
+| [`source_ip_fieldname`](plugins-inputs-udp.md#plugins-inputs-udp-source_ip_fieldname) | [string](value-types.md#string) | No |
+| [`workers`](plugins-inputs-udp.md#plugins-inputs-udp-workers) | [number](value-types.md#number) | No |
 
 Also see [Common options](plugins-inputs-udp.md#plugins-inputs-udp-common-options) for a list of options supported by all input plugins.
 
@@ -51,7 +51,7 @@ Also see [Common options](plugins-inputs-udp.md#plugins-inputs-udp-common-option
 
 ### `buffer_size` [plugins-inputs-udp-buffer_size]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `65536`
 
 The maximum packet size to read from the network
@@ -59,7 +59,7 @@ The maximum packet size to read from the network
 
 ### `ecs_compatibility` [plugins-inputs-udp-ecs_compatibility]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Supported values are:
 
     * `disabled`: unstructured connection metadata added at root level
@@ -82,7 +82,7 @@ The value of this setting affects the placement of a TCP connection’s metadata
 
 ### `host` [plugins-inputs-udp-host]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"0.0.0.0"`
 
 The address which logstash will listen on.
@@ -91,7 +91,7 @@ The address which logstash will listen on.
 ### `port` [plugins-inputs-udp-port]
 
 * This is a required setting.
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * There is no default value for this setting.
 
 The port which logstash will listen on. Remember that ports less than 1024 (privileged ports) may require root or elevated privileges to use.
@@ -99,7 +99,7 @@ The port which logstash will listen on. Remember that ports less than 1024 (priv
 
 ### `queue_size` [plugins-inputs-udp-queue_size]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `2000`
 
 This is the number of unprocessed UDP packets you can hold in memory before packets will start dropping.
@@ -107,7 +107,7 @@ This is the number of unprocessed UDP packets you can hold in memory before pack
 
 ### `receive_buffer_bytes` [plugins-inputs-udp-receive_buffer_bytes]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * There is no default value for this setting.
 
 The socket receive buffer size in bytes. If option is not set, the operating system default is used. The operating system will use the max allowed value if receive_buffer_bytes is larger than allowed. Consult your operating system documentation if you need to increase this max allowed value.
@@ -115,7 +115,7 @@ The socket receive buffer size in bytes. If option is not set, the operating sys
 
 ### `source_ip_fieldname` [plugins-inputs-udp-source_ip_fieldname]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value could be `"host"` or `[host][ip]` depending on the value of [`ecs_compatibility`](plugins-inputs-udp.md#plugins-inputs-udp-ecs_compatibility)
 
 The name of the field where the source IP address will be stored. See [Event Metadata and the Elastic Common Schema (ECS)](plugins-inputs-udp.md#plugins-inputs-udp-ecs_metadata) for more information on how ECS compatibility settings affect these defaults.
@@ -133,7 +133,7 @@ Example:
 
 ### `workers` [plugins-inputs-udp-workers]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `2`
 
 Number of threads processing packets

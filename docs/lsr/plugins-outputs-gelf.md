@@ -36,18 +36,18 @@ This plugin supports the following configuration options plus the [Common option
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`chunksize`](plugins-outputs-gelf.md#plugins-outputs-gelf-chunksize) | [number](introduction.md#number) | No |
-| [`custom_fields`](plugins-outputs-gelf.md#plugins-outputs-gelf-custom_fields) | [hash](introduction.md#hash) | No |
-| [`full_message`](plugins-outputs-gelf.md#plugins-outputs-gelf-full_message) | [string](introduction.md#string) | No |
-| [`host`](plugins-outputs-gelf.md#plugins-outputs-gelf-host) | [string](introduction.md#string) | Yes |
-| [`ignore_metadata`](plugins-outputs-gelf.md#plugins-outputs-gelf-ignore_metadata) | [array](introduction.md#array) | No |
-| [`level`](plugins-outputs-gelf.md#plugins-outputs-gelf-level) | [array](introduction.md#array) | No |
-| [`port`](plugins-outputs-gelf.md#plugins-outputs-gelf-port) | [number](introduction.md#number) | No |
-| [`protocol`](plugins-outputs-gelf.md#plugins-outputs-gelf-protocol) | [string](introduction.md#string) | No |
-| [`sender`](plugins-outputs-gelf.md#plugins-outputs-gelf-sender) | [string](introduction.md#string) | No |
-| [`ship_metadata`](plugins-outputs-gelf.md#plugins-outputs-gelf-ship_metadata) | [boolean](introduction.md#boolean) | No |
-| [`ship_tags`](plugins-outputs-gelf.md#plugins-outputs-gelf-ship_tags) | [boolean](introduction.md#boolean) | No |
-| [`short_message`](plugins-outputs-gelf.md#plugins-outputs-gelf-short_message) | [string](introduction.md#string) | No |
+| [`chunksize`](plugins-outputs-gelf.md#plugins-outputs-gelf-chunksize) | [number](value-types.md#number) | No |
+| [`custom_fields`](plugins-outputs-gelf.md#plugins-outputs-gelf-custom_fields) | [hash](value-types.md#hash) | No |
+| [`full_message`](plugins-outputs-gelf.md#plugins-outputs-gelf-full_message) | [string](value-types.md#string) | No |
+| [`host`](plugins-outputs-gelf.md#plugins-outputs-gelf-host) | [string](value-types.md#string) | Yes |
+| [`ignore_metadata`](plugins-outputs-gelf.md#plugins-outputs-gelf-ignore_metadata) | [array](value-types.md#array) | No |
+| [`level`](plugins-outputs-gelf.md#plugins-outputs-gelf-level) | [array](value-types.md#array) | No |
+| [`port`](plugins-outputs-gelf.md#plugins-outputs-gelf-port) | [number](value-types.md#number) | No |
+| [`protocol`](plugins-outputs-gelf.md#plugins-outputs-gelf-protocol) | [string](value-types.md#string) | No |
+| [`sender`](plugins-outputs-gelf.md#plugins-outputs-gelf-sender) | [string](value-types.md#string) | No |
+| [`ship_metadata`](plugins-outputs-gelf.md#plugins-outputs-gelf-ship_metadata) | [boolean](value-types.md#boolean) | No |
+| [`ship_tags`](plugins-outputs-gelf.md#plugins-outputs-gelf-ship_tags) | [boolean](value-types.md#boolean) | No |
+| [`short_message`](plugins-outputs-gelf.md#plugins-outputs-gelf-short_message) | [string](value-types.md#string) | No |
 
 Also see [Common options](plugins-outputs-gelf.md#plugins-outputs-gelf-common-options) for a list of options supported by all output plugins.
 
@@ -55,7 +55,7 @@ Also see [Common options](plugins-outputs-gelf.md#plugins-outputs-gelf-common-op
 
 ### `chunksize` [plugins-outputs-gelf-chunksize]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `1420`
 
 The chunksize. You usually don’t need to change this.
@@ -63,7 +63,7 @@ The chunksize. You usually don’t need to change this.
 
 ### `custom_fields` [plugins-outputs-gelf-custom_fields]
 
-* Value type is [hash](introduction.md#hash)
+* Value type is [hash](value-types.md#hash)
 * Default value is `{}`
 
 The GELF custom field mappings. GELF supports arbitrary attributes as custom fields. This exposes that. Exclude the `_` portion of the field name e.g. `custom_fields => ['foo_field', 'some_value']` sets `_foo_field` = `some_value`.
@@ -71,7 +71,7 @@ The GELF custom field mappings. GELF supports arbitrary attributes as custom fie
 
 ### `full_message` [plugins-outputs-gelf-full_message]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"%{{message}}"`
 
 The GELF full message. Dynamic values like `%{{foo}}` are permitted here.
@@ -80,7 +80,7 @@ The GELF full message. Dynamic values like `%{{foo}}` are permitted here.
 ### `host` [plugins-outputs-gelf-host]
 
 * This is a required setting.
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 Graylog2 server IP address or hostname.
@@ -88,7 +88,7 @@ Graylog2 server IP address or hostname.
 
 ### `ignore_metadata` [plugins-outputs-gelf-ignore_metadata]
 
-* Value type is [array](introduction.md#array)
+* Value type is [array](value-types.md#array)
 * Default value is `["@timestamp", "@version", "severity", "host", "source_host", "source_path", "short_message"]`
 
 Ignore these fields when `ship_metadata` is set. Typically this lists the fields used in dynamic values for GELF fields.
@@ -96,7 +96,7 @@ Ignore these fields when `ship_metadata` is set. Typically this lists the fields
 
 ### `level` [plugins-outputs-gelf-level]
 
-* Value type is [array](introduction.md#array)
+* Value type is [array](value-types.md#array)
 * Default value is `["%{{severity}}", "INFO"]`
 
 The GELF message level. Dynamic values like `%{{level}}` are permitted here; useful if you want to parse the *log level* from an event and use that as the GELF level/severity.
@@ -106,7 +106,7 @@ Values here can be integers [0..7] inclusive or any of "debug", "info", "warn", 
 
 ### `port` [plugins-outputs-gelf-port]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `12201`
 
 Graylog2 server port number.
@@ -116,7 +116,7 @@ Graylog2 server port number.
 
 By default, this plugin outputs via the UDP transfer protocol, but can be configured to use TCP instead.
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"UDP"`
 
 Values here can be either "TCP" or "UDP".
@@ -124,7 +124,7 @@ Values here can be either "TCP" or "UDP".
 
 ### `sender` [plugins-outputs-gelf-sender]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"%{{host}}"`
 
 Allow overriding of the GELF `sender` field. This is useful if you want to use something other than the event’s source host as the "sender" of an event. A common case for this is using the application name instead of the hostname.
@@ -132,7 +132,7 @@ Allow overriding of the GELF `sender` field. This is useful if you want to use s
 
 ### `ship_metadata` [plugins-outputs-gelf-ship_metadata]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `true`
 
 Should Logstash ship metadata within event object? This will cause Logstash to ship any fields in the event (such as those created by grok) in the GELF messages. These will be sent as underscored "additional fields".
@@ -140,7 +140,7 @@ Should Logstash ship metadata within event object? This will cause Logstash to s
 
 ### `ship_tags` [plugins-outputs-gelf-ship_tags]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `true`
 
 Ship tags within events. This will cause Logstash to ship the tags of an event as the field `\_tags`.
@@ -148,7 +148,7 @@ Ship tags within events. This will cause Logstash to ship the tags of an event a
 
 ### `short_message` [plugins-outputs-gelf-short_message]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"short_message"`
 
 The GELF short message field name. If the field does not exist or is empty, the event message is taken instead.

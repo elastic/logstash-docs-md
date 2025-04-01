@@ -31,8 +31,8 @@ This plugin supports the following configuration options plus the [Common option
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`fields`](plugins-filters-truncate.md#plugins-filters-truncate-fields) | [string](introduction.md#string) | No |
-| [`length_bytes`](plugins-filters-truncate.md#plugins-filters-truncate-length_bytes) | [number](introduction.md#number) | Yes |
+| [`fields`](plugins-filters-truncate.md#plugins-filters-truncate-fields) | [string](value-types.md#string) | No |
+| [`length_bytes`](plugins-filters-truncate.md#plugins-filters-truncate-length_bytes) | [number](value-types.md#number) | Yes |
 
 Also see [Common options](plugins-filters-truncate.md#plugins-filters-truncate-common-options) for a list of options supported by all filter plugins.
 
@@ -40,7 +40,7 @@ Also see [Common options](plugins-filters-truncate.md#plugins-filters-truncate-c
 
 ### `fields` [plugins-filters-truncate-fields]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 A list of fieldrefs to truncate if they are too long.
@@ -57,7 +57,7 @@ Special behaviors for non-string fields:
 ### `length_bytes` [plugins-filters-truncate-length_bytes]
 
 * This is a required setting.
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * There is no default value for this setting.
 
 Fields over this length will be truncated to this length.

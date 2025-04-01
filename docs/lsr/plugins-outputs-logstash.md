@@ -77,18 +77,18 @@ This plugin supports the following configuration options plus the [Common option
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`hosts`](plugins-outputs-logstash.md#plugins-outputs-logstash-hosts) | list of [string](introduction.md#string) | Yes |
-| [`password`](plugins-outputs-logstash.md#plugins-outputs-logstash-password) | [password](introduction.md#password) | No |
-| [`ssl_enabled`](plugins-outputs-logstash.md#plugins-outputs-logstash-ssl_enabled) | [boolean](introduction.md#boolean) | No |
-| [`ssl_certificate`](plugins-outputs-logstash.md#plugins-outputs-logstash-ssl_certificate) | [path](introduction.md#path) | No |
-| [`ssl_certificate_authorities`](plugins-outputs-logstash.md#plugins-outputs-logstash-ssl_certificate_authorities) | list of [path](introduction.md#path) | No |
-| [`ssl_key`](plugins-outputs-logstash.md#plugins-outputs-logstash-ssl_key) | [path](introduction.md#path) | No |
-| [`ssl_keystore_path`](plugins-outputs-logstash.md#plugins-outputs-logstash-ssl_keystore_path) | [path](introduction.md#path) | No |
-| [`ssl_keystore_password`](plugins-outputs-logstash.md#plugins-outputs-logstash-ssl_keystore_password) | [password](introduction.md#password) | No |
-| [`ssl_truststore_path`](plugins-outputs-logstash.md#plugins-outputs-logstash-ssl_truststore_path) | [path](introduction.md#path) | No |
-| [`ssl_truststore_password`](plugins-outputs-logstash.md#plugins-outputs-logstash-ssl_truststore_password) | [password](introduction.md#password) | No |
-| [`ssl_verification_mode`](plugins-outputs-logstash.md#plugins-outputs-logstash-ssl_verification_mode) | [string](introduction.md#string), one of `["full", "none"]` | No |
-| [`username`](plugins-outputs-logstash.md#plugins-outputs-logstash-username) | [string](introduction.md#string) | No |
+| [`hosts`](plugins-outputs-logstash.md#plugins-outputs-logstash-hosts) | list of [string](value-types.md#string) | Yes |
+| [`password`](plugins-outputs-logstash.md#plugins-outputs-logstash-password) | [password](value-types.md#password) | No |
+| [`ssl_enabled`](plugins-outputs-logstash.md#plugins-outputs-logstash-ssl_enabled) | [boolean](value-types.md#boolean) | No |
+| [`ssl_certificate`](plugins-outputs-logstash.md#plugins-outputs-logstash-ssl_certificate) | [path](value-types.md#path) | No |
+| [`ssl_certificate_authorities`](plugins-outputs-logstash.md#plugins-outputs-logstash-ssl_certificate_authorities) | list of [path](value-types.md#path) | No |
+| [`ssl_key`](plugins-outputs-logstash.md#plugins-outputs-logstash-ssl_key) | [path](value-types.md#path) | No |
+| [`ssl_keystore_path`](plugins-outputs-logstash.md#plugins-outputs-logstash-ssl_keystore_path) | [path](value-types.md#path) | No |
+| [`ssl_keystore_password`](plugins-outputs-logstash.md#plugins-outputs-logstash-ssl_keystore_password) | [password](value-types.md#password) | No |
+| [`ssl_truststore_path`](plugins-outputs-logstash.md#plugins-outputs-logstash-ssl_truststore_path) | [path](value-types.md#path) | No |
+| [`ssl_truststore_password`](plugins-outputs-logstash.md#plugins-outputs-logstash-ssl_truststore_password) | [password](value-types.md#password) | No |
+| [`ssl_verification_mode`](plugins-outputs-logstash.md#plugins-outputs-logstash-ssl_verification_mode) | [string](value-types.md#string), one of `["full", "none"]` | No |
+| [`username`](plugins-outputs-logstash.md#plugins-outputs-logstash-username) | [string](value-types.md#string) | No |
 
 Also see [Common options](plugins-outputs-logstash.md#plugins-outputs-logstash-common-options) for a list of options supported by all output plugins.
 
@@ -96,7 +96,7 @@ Also see [Common options](plugins-outputs-logstash.md#plugins-outputs-logstash-c
 
 ### `hosts` [plugins-outputs-logstash-hosts]
 
-* Value type is list of [string](introduction.md#string)
+* Value type is list of [string](value-types.md#string)
 * There is no default value for this setting.
 * Constraints:
 
@@ -137,7 +137,7 @@ when using SSL, the server that responds must present a certificated with identi
 
 ### `password` [plugins-outputs-logstash-password]
 
-* Value type is [password](introduction.md#password)
+* Value type is [password](value-types.md#password)
 * There is no default value for this setting.
 * Required when [`username`](plugins-outputs-logstash.md#plugins-outputs-logstash-username) is configured.
 
@@ -148,7 +148,7 @@ When the downstream input plugin is configured with a `username` and `password`,
 
 ### `ssl_enabled` [plugins-outputs-logstash-ssl_enabled]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `true`
 
 Logstash-to-Logstash communication is secured by default. When the downstream input plugin disables SSL, it must also be disabled here.
@@ -158,7 +158,7 @@ You can disable SSL with `+ssl_enabled => false+`. When disabled, setting any `s
 
 ### `ssl_certificate` [plugins-outputs-logstash-ssl_certificate]
 
-* Value type is [path](introduction.md#path)
+* Value type is [path](value-types.md#path)
 * There is no default value for this setting.
 * When present, [`ssl_key`](plugins-outputs-logstash.md#plugins-outputs-logstash-ssl_key) is also required.
 * Cannot be combined with configurations that disable SSL.
@@ -168,7 +168,7 @@ Path to a PEM-encoded certificate or certificate chain with which to identify th
 
 ### `ssl_certificate_authorities` [plugins-outputs-logstash-ssl_certificate_authorities]
 
-* Value type is a [path](introduction.md#path)
+* Value type is a [path](value-types.md#path)
 * There is no default value for this setting.
 * Cannot be combined with configurations that disable SSL.
 * Cannot be combined with [`+ssl_verification_mode => none+`](plugins-outputs-logstash.md#plugins-outputs-logstash-ssl_verification_mode).
@@ -178,7 +178,7 @@ One or more PEM-encoded files defining certificate authorities for use in downst
 
 ### `ssl_key` [plugins-outputs-logstash-ssl_key]
 
-* Value type is [path](introduction.md#path)
+* Value type is [path](value-types.md#path)
 * There is no default value for this setting.
 * Required when connection identity is configured with [`ssl_certificate`](plugins-outputs-logstash.md#plugins-outputs-logstash-ssl_certificate)
 * Cannot be combined with configurations that disable SSL.
@@ -188,7 +188,7 @@ A path to an PEM-encoded *unencrypted* PKCS8 SSL certificate key.
 
 ### `ssl_keystore_path` [plugins-outputs-logstash-ssl_keystore_path]
 
-* Value type is [path](introduction.md#path)
+* Value type is [path](value-types.md#path)
 * There is no default value for this setting.
 * When present, [`ssl_keystore_password`](plugins-outputs-logstash.md#plugins-outputs-logstash-ssl_keystore_password) is also required.
 * Cannot be combined with configurations that disable SSL.
@@ -198,7 +198,7 @@ A path to a JKS- or PKCS12-formatted keystore with which to identify this plugin
 
 ### `ssl_keystore_password` [plugins-outputs-logstash-ssl_keystore_password]
 
-* Value type is [password](introduction.md#password)
+* Value type is [password](value-types.md#password)
 * There is no default value for this setting.
 * Required when connection identity is configured with [`ssl_keystore_path`](plugins-outputs-logstash.md#plugins-outputs-logstash-ssl_keystore_path)
 * Cannot be combined with configurations that disable SSL.
@@ -208,7 +208,7 @@ Password for the [`ssl_keystore_path`](plugins-outputs-logstash.md#plugins-outpu
 
 ### `ssl_truststore_path` [plugins-outputs-logstash-ssl_truststore_path]
 
-* Value type is [path](introduction.md#path)
+* Value type is [path](value-types.md#path)
 * There is no default value for this setting.
 * When present, [`ssl_truststore_path`](plugins-outputs-logstash.md#plugins-outputs-logstash-ssl_truststore_path) is also required.
 * Cannot be combined with configurations that disable SSL.
@@ -219,7 +219,7 @@ A path to a JKS- or PKCS12-formatted truststore with which to validate the ident
 
 ### `ssl_truststore_password` [plugins-outputs-logstash-ssl_truststore_password]
 
-* Value type is [password](introduction.md#password)
+* Value type is [password](value-types.md#password)
 * There is no default value for this setting.
 * Required when connection identity is configured with [`ssl_truststore_path`](plugins-outputs-logstash.md#plugins-outputs-logstash-ssl_truststore_path)
 * Cannot be combined with configurations that disable SSL.
@@ -229,7 +229,7 @@ Password for the [`ssl_truststore_path`](plugins-outputs-logstash.md#plugins-out
 
 ### `ssl_verification_mode` [plugins-outputs-logstash-ssl_verification_mode]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * The supported modes are:
 
     * `full`: verifies that a certificate provided by the client has an identity claim matching [`hosts`](plugins-outputs-logstash.md#plugins-outputs-logstash-hosts), is signed by a trusted authority (CA), is within its valid date range, and that the client has possession of the associated key.
@@ -243,7 +243,7 @@ When communicating over SSL, this setting controls how the downstream input’s 
 
 ### `username` [plugins-outputs-logstash-username]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 * When present, [`password`](plugins-outputs-logstash.md#plugins-outputs-logstash-password) is also required.
 

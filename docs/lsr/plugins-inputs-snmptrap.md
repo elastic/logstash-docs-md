@@ -78,21 +78,21 @@ This plugin supports the following configuration options plus the [Common option
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`community`](plugins-inputs-snmptrap.md#plugins-inputs-snmptrap-community) | [array](introduction.md#array) | No |
-| [`ecs_compatibility`](plugins-inputs-snmptrap.md#plugins-inputs-snmptrap-ecs_compatibility) | [string](introduction.md#string) | No |
-| [`host`](plugins-inputs-snmptrap.md#plugins-inputs-snmptrap-host) | [string](introduction.md#string) | No |
-| [`mib_paths`](plugins-inputs-snmptrap.md#plugins-inputs-snmptrap-mib_paths) | [path](introduction.md#path) | No |
-| [`oid_mapping_format`](plugins-inputs-snmptrap.md#plugins-inputs-snmptrap-oid_mapping_format) | [string](introduction.md#string), one of `["default", "ruby_snmp", "dotted_string"]` | No |
-| [`oid_map_field_values`](plugins-inputs-snmptrap.md#plugins-inputs-snmptrap-oid_map_field_values) | [boolean](introduction.md#boolean) | Yes |
-| [`oid_path_length`](plugins-inputs-snmptrap.md#plugins-inputs-snmptrap-oid_path_length) | [number](introduction.md#number) | No |
-| [`oid_root_skip`](plugins-inputs-snmptrap.md#plugins-inputs-snmptrap-oid_root_skip) | [number](introduction.md#number) | No |
-| [`port`](plugins-inputs-snmptrap.md#plugins-inputs-snmptrap-port) | [number](introduction.md#number) | No |
-| [`supported_transports`](plugins-inputs-snmptrap.md#plugins-inputs-snmptrap-supported_transports) | [string](introduction.md#string) | No |
-| [`supported_versions`](plugins-inputs-snmptrap.md#plugins-inputs-snmptrap-supported_versions) | [string](introduction.md#string) | No |
-| [`target`](plugins-inputs-snmptrap.md#plugins-inputs-snmptrap-target) | [string](introduction.md#string) | No |
-| [`threads`](plugins-inputs-snmptrap.md#plugins-inputs-snmptrap-threads) | [number](introduction.md#number) | No |
-| [`use_provided_mibs`](plugins-inputs-snmptrap.md#plugins-inputs-snmptrap-use_provided_mibs) | [boolean](introduction.md#boolean) | No |
-| [`yamlmibdir`](plugins-inputs-snmptrap.md#plugins-inputs-snmptrap-yamlmibdir) | [string](introduction.md#string) | *Deprecated* |
+| [`community`](plugins-inputs-snmptrap.md#plugins-inputs-snmptrap-community) | [array](value-types.md#array) | No |
+| [`ecs_compatibility`](plugins-inputs-snmptrap.md#plugins-inputs-snmptrap-ecs_compatibility) | [string](value-types.md#string) | No |
+| [`host`](plugins-inputs-snmptrap.md#plugins-inputs-snmptrap-host) | [string](value-types.md#string) | No |
+| [`mib_paths`](plugins-inputs-snmptrap.md#plugins-inputs-snmptrap-mib_paths) | [path](value-types.md#path) | No |
+| [`oid_mapping_format`](plugins-inputs-snmptrap.md#plugins-inputs-snmptrap-oid_mapping_format) | [string](value-types.md#string), one of `["default", "ruby_snmp", "dotted_string"]` | No |
+| [`oid_map_field_values`](plugins-inputs-snmptrap.md#plugins-inputs-snmptrap-oid_map_field_values) | [boolean](value-types.md#boolean) | Yes |
+| [`oid_path_length`](plugins-inputs-snmptrap.md#plugins-inputs-snmptrap-oid_path_length) | [number](value-types.md#number) | No |
+| [`oid_root_skip`](plugins-inputs-snmptrap.md#plugins-inputs-snmptrap-oid_root_skip) | [number](value-types.md#number) | No |
+| [`port`](plugins-inputs-snmptrap.md#plugins-inputs-snmptrap-port) | [number](value-types.md#number) | No |
+| [`supported_transports`](plugins-inputs-snmptrap.md#plugins-inputs-snmptrap-supported_transports) | [string](value-types.md#string) | No |
+| [`supported_versions`](plugins-inputs-snmptrap.md#plugins-inputs-snmptrap-supported_versions) | [string](value-types.md#string) | No |
+| [`target`](plugins-inputs-snmptrap.md#plugins-inputs-snmptrap-target) | [string](value-types.md#string) | No |
+| [`threads`](plugins-inputs-snmptrap.md#plugins-inputs-snmptrap-threads) | [number](value-types.md#number) | No |
+| [`use_provided_mibs`](plugins-inputs-snmptrap.md#plugins-inputs-snmptrap-use_provided_mibs) | [boolean](value-types.md#boolean) | No |
+| [`yamlmibdir`](plugins-inputs-snmptrap.md#plugins-inputs-snmptrap-yamlmibdir) | [string](value-types.md#string) | *Deprecated* |
 
 
 ## SNMPv3 Authentication Options [_snmpv3_authentication_options_3]
@@ -101,12 +101,12 @@ This plugin supports the following SNMPv3 authentication options.
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`auth_pass`](plugins-inputs-snmptrap.md#plugins-inputs-snmptrap-auth_pass) | [password](introduction.md#password) | No |
-| [`auth_protocol`](plugins-inputs-snmptrap.md#plugins-inputs-snmptrap-auth_protocol) | [string](introduction.md#string), one of `["md5", "sha", "sha2", "hmac128sha224", "hmac192sha256", "hmac256sha384", "hmac384sha512"]` | No |
-| [`priv_pass`](plugins-inputs-snmptrap.md#plugins-inputs-snmptrap-priv_pass) | [password](introduction.md#password) | No |
-| [`priv_protocol`](plugins-inputs-snmptrap.md#plugins-inputs-snmptrap-priv_protocol) | [string](introduction.md#string), one of `["des", "3des", "aes", "aes128", "aes192", "aes256"]` | No |
-| [`security_level`](plugins-inputs-snmptrap.md#plugins-inputs-snmptrap-security_level) | [string](introduction.md#string), one of `["noAuthNoPriv", "authNoPriv", "authPriv"]` | No |
-| [`security_name`](plugins-inputs-snmptrap.md#plugins-inputs-snmptrap-security_name) | [string](introduction.md#string) | No |
+| [`auth_pass`](plugins-inputs-snmptrap.md#plugins-inputs-snmptrap-auth_pass) | [password](value-types.md#password) | No |
+| [`auth_protocol`](plugins-inputs-snmptrap.md#plugins-inputs-snmptrap-auth_protocol) | [string](value-types.md#string), one of `["md5", "sha", "sha2", "hmac128sha224", "hmac192sha256", "hmac256sha384", "hmac384sha512"]` | No |
+| [`priv_pass`](plugins-inputs-snmptrap.md#plugins-inputs-snmptrap-priv_pass) | [password](value-types.md#password) | No |
+| [`priv_protocol`](plugins-inputs-snmptrap.md#plugins-inputs-snmptrap-priv_protocol) | [string](value-types.md#string), one of `["des", "3des", "aes", "aes128", "aes192", "aes256"]` | No |
+| [`security_level`](plugins-inputs-snmptrap.md#plugins-inputs-snmptrap-security_level) | [string](value-types.md#string), one of `["noAuthNoPriv", "authNoPriv", "authPriv"]` | No |
+| [`security_name`](plugins-inputs-snmptrap.md#plugins-inputs-snmptrap-security_name) | [string](value-types.md#string) | No |
 
 
 ## SNMP Trap Input Configuration Options [_snmp_trap_input_configuration_options]
@@ -115,7 +115,7 @@ Also see [Common options](plugins-inputs-snmptrap.md#plugins-inputs-snmptrap-com
 
 ### `community` [plugins-inputs-snmptrap-community]
 
-* Value type is [array](introduction.md#array)
+* Value type is [array](value-types.md#array)
 * Default value is `["public"]`
 
 The SNMPv1 and SNMPv2c communities to listen for. To allow any community, set this config value to empty `community => []`.
@@ -145,7 +145,7 @@ input {
 
 ### `ecs_compatibility` [plugins-inputs-snmptrap-ecs_compatibility]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Supported values are:
 
     * `disabled`: does not use ECS-compatible field names (fields might be set at the root of the event)
@@ -162,7 +162,7 @@ Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)](ht
 
 ### `host` [plugins-inputs-snmptrap-host]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"0.0.0.0"`
 
 The address to listen on.
@@ -170,7 +170,7 @@ The address to listen on.
 
 ### `mib_paths` [plugins-inputs-snmptrap-mib_paths]
 
-* Value type is [path](introduction.md#path)
+* Value type is [path](value-types.md#path)
 * There is no default value for this setting
 
 The `mib_paths` option specifies the location of one or more imported MIB files. The value can be either a dir path containing the imported MIB (`.dic`, `.yaml`) files or a file path to a single MIB file.
@@ -186,7 +186,7 @@ Defines the mapping textual representation of an OID in the Logstash event: * `d
 
 ### `oid_map_field_values` [plugins-inputs-snmptrap-oid_map_field_values]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 Defines if the Logstash event fields values, which types are `OID`, are mapped using the configured OID textual representation set on the [`oid_mapping_format`](plugins-inputs-snmptrap.md#plugins-inputs-snmptrap-oid_mapping_format) option.
@@ -194,7 +194,7 @@ Defines if the Logstash event fields values, which types are `OID`, are mapped u
 
 ### `oid_root_skip` [plugins-inputs-snmptrap-oid_root_skip]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `0`
 
 The `oid_root_skip` option specifies the number of OID root digits to ignore in the event field name. For example, in a numeric OID like "1.3.6.1.2.1.1.1.0" the first 5 digits could be ignored by setting `oid_root_skip => 5` which would result in a field name "1.1.1.0". Similarly when a MIB is used an OID such "1.3.6.1.2.mib-2.system.sysDescr.0" would become "mib-2.system.sysDescr.0"
@@ -205,7 +205,7 @@ The `oid_root_skip` option specifies the number of OID root digits to ignore in 
 
 ### `oid_path_length` [plugins-inputs-snmptrap-oid_path_length]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `0`
 
 The `oid_path_length` option specifies the number of OID root digits to retain in the event field name. For example, in a numeric OID like "1.3.6.1.2.1.1.1.0" the last 2 digits could be retained by setting `oid_path_length => 2` which would result in a field name "1.0". Similarly when a MIB is used an OID such "1.3.6.1.2.mib-2.system.sysDescr.0" would become "sysDescr.0"
@@ -216,7 +216,7 @@ The `oid_path_length` option specifies the number of OID root digits to retain i
 
 ### `port` [plugins-inputs-snmptrap-port]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `1062`
 
 The port to listen on. Remember that ports less than 1024 (privileged ports) may require root to use. hence the default of 1062.
@@ -224,7 +224,7 @@ The port to listen on. Remember that ports less than 1024 (privileged ports) may
 
 ### `supported_transports` [plugins-inputs-snmptrap-supported_transports]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Allowed values are: `tcp`, `udp`
 * Default value is `["udp"]`
 
@@ -235,7 +235,7 @@ SNMP was originally designed for use with UDP as transport protocol and is the o
 
 ### `supported_versions` [plugins-inputs-snmptrap-supported_versions]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Allowed values are: `1`, `2c`, `3`
 * Default value is `["1", "2c"]`
 
@@ -244,7 +244,7 @@ The supported SNMP protocol versions to listen on. SNMP messages for versions th
 
 ### `target` [plugins-inputs-snmptrap-target]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting
 
 The name of the field under which SNMP payloads are assigned. If not specified data will be stored in the root of the event.
@@ -254,7 +254,7 @@ Setting a target is recommended when [`ecs_compatibility`](plugins-inputs-snmptr
 
 ### `threads` [plugins-inputs-snmptrap-threads]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is 75% of the number of CPU cores
 
 The number of threads to use for processing the received SNMP trap messages.
@@ -262,7 +262,7 @@ The number of threads to use for processing the received SNMP trap messages.
 
 ### `use_provided_mibs` [plugins-inputs-snmptrap-use_provided_mibs]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `true`
 
 This plugin provides all IETF MIBs (management information bases), publicly available in the [libsmi](https://www.ibr.cs.tu-bs.de/projects/libsmi) version `0.5.0`. When enabled, it automatically loads the bundled MIBs and provides mapping of the numeric OIDs to MIB field names in the resulting event.
@@ -277,7 +277,7 @@ Replaced by [`mib_paths`](plugins-inputs-snmptrap.md#plugins-inputs-snmptrap-mib
 ::::
 
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 directory of YAML MIB maps  (same format ruby-snmp uses)
@@ -290,7 +290,7 @@ A ***single user*** can be configured. Multiple snmptrap input declarations will
 
 ### `auth_pass` [plugins-inputs-snmptrap-auth_pass]
 
-* Value type is [password](introduction.md#password)
+* Value type is [password](value-types.md#password)
 * There is no default value for this setting
 
 The `auth_pass` option specifies the SNMPv3 authentication passphrase or password.
@@ -307,7 +307,7 @@ The `auth_protocol` option specifies the SNMPv3 authentication protocol or type
 
 ### `priv_pass` [plugins-inputs-snmptrap-priv_pass]
 
-* Value type is [password](introduction.md#password)
+* Value type is [password](value-types.md#password)
 * There is no default value for this setting
 
 The `priv_pass` option specifies the SNMPv3 encryption password.
@@ -332,7 +332,7 @@ The `security_level` option specifies the SNMPv3 security level between Authenti
 
 ### `security_name` [plugins-inputs-snmptrap-security_name]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting
 
 The `security_name` option specifies the SNMPv3 security name or user name.

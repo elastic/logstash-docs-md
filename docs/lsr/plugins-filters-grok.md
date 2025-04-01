@@ -171,19 +171,19 @@ This plugin supports the following configuration options plus the [Common option
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`break_on_match`](plugins-filters-grok.md#plugins-filters-grok-break_on_match) | [boolean](introduction.md#boolean) | No |
-| [`ecs_compatibility`](plugins-filters-grok.md#plugins-filters-grok-ecs_compatibility) | [string](introduction.md#string) | No |
-| [`keep_empty_captures`](plugins-filters-grok.md#plugins-filters-grok-keep_empty_captures) | [boolean](introduction.md#boolean) | No |
-| [`match`](plugins-filters-grok.md#plugins-filters-grok-match) | [hash](introduction.md#hash) | No |
-| [`named_captures_only`](plugins-filters-grok.md#plugins-filters-grok-named_captures_only) | [boolean](introduction.md#boolean) | No |
-| [`overwrite`](plugins-filters-grok.md#plugins-filters-grok-overwrite) | [array](introduction.md#array) | No |
-| [`pattern_definitions`](plugins-filters-grok.md#plugins-filters-grok-pattern_definitions) | [hash](introduction.md#hash) | No |
-| [`patterns_dir`](plugins-filters-grok.md#plugins-filters-grok-patterns_dir) | [array](introduction.md#array) | No |
-| [`patterns_files_glob`](plugins-filters-grok.md#plugins-filters-grok-patterns_files_glob) | [string](introduction.md#string) | No |
-| [`tag_on_failure`](plugins-filters-grok.md#plugins-filters-grok-tag_on_failure) | [array](introduction.md#array) | No |
-| [`tag_on_timeout`](plugins-filters-grok.md#plugins-filters-grok-tag_on_timeout) | [string](introduction.md#string) | No |
-| [`timeout_millis`](plugins-filters-grok.md#plugins-filters-grok-timeout_millis) | [number](introduction.md#number) | No |
-| [`timeout_scope`](plugins-filters-grok.md#plugins-filters-grok-timeout_scope) | [string](introduction.md#string) | No |
+| [`break_on_match`](plugins-filters-grok.md#plugins-filters-grok-break_on_match) | [boolean](value-types.md#boolean) | No |
+| [`ecs_compatibility`](plugins-filters-grok.md#plugins-filters-grok-ecs_compatibility) | [string](value-types.md#string) | No |
+| [`keep_empty_captures`](plugins-filters-grok.md#plugins-filters-grok-keep_empty_captures) | [boolean](value-types.md#boolean) | No |
+| [`match`](plugins-filters-grok.md#plugins-filters-grok-match) | [hash](value-types.md#hash) | No |
+| [`named_captures_only`](plugins-filters-grok.md#plugins-filters-grok-named_captures_only) | [boolean](value-types.md#boolean) | No |
+| [`overwrite`](plugins-filters-grok.md#plugins-filters-grok-overwrite) | [array](value-types.md#array) | No |
+| [`pattern_definitions`](plugins-filters-grok.md#plugins-filters-grok-pattern_definitions) | [hash](value-types.md#hash) | No |
+| [`patterns_dir`](plugins-filters-grok.md#plugins-filters-grok-patterns_dir) | [array](value-types.md#array) | No |
+| [`patterns_files_glob`](plugins-filters-grok.md#plugins-filters-grok-patterns_files_glob) | [string](value-types.md#string) | No |
+| [`tag_on_failure`](plugins-filters-grok.md#plugins-filters-grok-tag_on_failure) | [array](value-types.md#array) | No |
+| [`tag_on_timeout`](plugins-filters-grok.md#plugins-filters-grok-tag_on_timeout) | [string](value-types.md#string) | No |
+| [`timeout_millis`](plugins-filters-grok.md#plugins-filters-grok-timeout_millis) | [number](value-types.md#number) | No |
+| [`timeout_scope`](plugins-filters-grok.md#plugins-filters-grok-timeout_scope) | [string](value-types.md#string) | No |
 
 Also see [Common options](plugins-filters-grok.md#plugins-filters-grok-common-options) for a list of options supported by all filter plugins.
 
@@ -191,7 +191,7 @@ Also see [Common options](plugins-filters-grok.md#plugins-filters-grok-common-op
 
 ### `break_on_match` [plugins-filters-grok-break_on_match]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `true`
 
 Break on first match. The first successful match by grok will result in the filter being finished. If you want grok to try all patterns (maybe you are parsing different things), then set this to false.
@@ -199,7 +199,7 @@ Break on first match. The first successful match by grok will result in the filt
 
 ### `ecs_compatibility` [plugins-filters-grok-ecs_compatibility]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Supported values are:
 
     * `disabled`: the plugin will load legacy (built-in) pattern definitions
@@ -216,7 +216,7 @@ Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)](ht
 
 ### `keep_empty_captures` [plugins-filters-grok-keep_empty_captures]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 If `true`, keep empty captures as event fields.
@@ -224,7 +224,7 @@ If `true`, keep empty captures as event fields.
 
 ### `match` [plugins-filters-grok-match]
 
-* Value type is [hash](introduction.md#hash)
+* Value type is [hash](value-types.md#hash)
 * Default value is `{}`
 
 A hash that defines the mapping of *where to look*, and with which patterns.
@@ -289,7 +289,7 @@ However, if one pattern depends on a field created by a previous pattern, separa
 
 ### `named_captures_only` [plugins-filters-grok-named_captures_only]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `true`
 
 If `true`, only store named captures from grok.
@@ -297,7 +297,7 @@ If `true`, only store named captures from grok.
 
 ### `overwrite` [plugins-filters-grok-overwrite]
 
-* Value type is [array](introduction.md#array)
+* Value type is [array](value-types.md#array)
 * Default value is `[]`
 
 The fields to overwrite.
@@ -331,7 +331,7 @@ If you are using a field reference in `overwrite`, you must use the field refere
 
 ### `pattern_definitions` [plugins-filters-grok-pattern_definitions]
 
-* Value type is [hash](introduction.md#hash)
+* Value type is [hash](value-types.md#hash)
 * Default value is `{}`
 
 A hash of pattern-name and pattern tuples defining custom patterns to be used by the current filter. Patterns matching existing names will override the pre-existing definition. Think of this as inline patterns available just for this definition of grok
@@ -339,7 +339,7 @@ A hash of pattern-name and pattern tuples defining custom patterns to be used by
 
 ### `patterns_dir` [plugins-filters-grok-patterns_dir]
 
-* Value type is [array](introduction.md#array)
+* Value type is [array](value-types.md#array)
 * Default value is `[]`
 
 Logstash ships by default with a bunch of patterns, so you don’t necessarily need to define this yourself unless you are adding additional patterns. You can point to multiple pattern directories using this setting. Note that Grok will read all files in the directory matching the patterns_files_glob and assume it’s a pattern file (including any tilde backup files).
@@ -365,7 +365,7 @@ The patterns are loaded when the pipeline is created.
 
 ### `patterns_files_glob` [plugins-filters-grok-patterns_files_glob]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"*"`
 
 Glob pattern, used to select the pattern files in the directories specified by patterns_dir
@@ -373,7 +373,7 @@ Glob pattern, used to select the pattern files in the directories specified by p
 
 ### `tag_on_failure` [plugins-filters-grok-tag_on_failure]
 
-* Value type is [array](introduction.md#array)
+* Value type is [array](value-types.md#array)
 * Default value is `["_grokparsefailure"]`
 
 Append values to the `tags` field when there has been no successful match
@@ -381,7 +381,7 @@ Append values to the `tags` field when there has been no successful match
 
 ### `tag_on_timeout` [plugins-filters-grok-tag_on_timeout]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"_groktimeout"`
 
 Tag to apply if a grok regexp times out.
@@ -389,7 +389,7 @@ Tag to apply if a grok regexp times out.
 
 ### `target` [plugins-filters-grok-target]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting
 
 Define target namespace for placing matches.
@@ -397,7 +397,7 @@ Define target namespace for placing matches.
 
 ### `timeout_millis` [plugins-filters-grok-timeout_millis]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `30000`
 
 Attempt to terminate regexps after this amount of time. This applies per pattern if multiple patterns are applied This will never timeout early, but may take a little longer to timeout. Actual timeout is approximate based on a 250ms quantization. Set to 0 to disable timeouts
@@ -405,7 +405,7 @@ Attempt to terminate regexps after this amount of time. This applies per pattern
 
 ### `timeout_scope` [plugins-filters-grok-timeout_scope]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"pattern"`
 * Supported values are `"pattern"` and `"event"`
 

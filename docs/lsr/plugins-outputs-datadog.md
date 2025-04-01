@@ -36,14 +36,14 @@ This plugin supports the following configuration options plus the [Common option
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`alert_type`](plugins-outputs-datadog.md#plugins-outputs-datadog-alert_type) | [string](introduction.md#string), one of `["info", "error", "warning", "success"]` | No |
-| [`api_key`](plugins-outputs-datadog.md#plugins-outputs-datadog-api_key) | [password](introduction.md#password) | Yes |
-| [`date_happened`](plugins-outputs-datadog.md#plugins-outputs-datadog-date_happened) | [string](introduction.md#string) | No |
-| [`dd_tags`](plugins-outputs-datadog.md#plugins-outputs-datadog-dd_tags) | [array](introduction.md#array) | No |
-| [`priority`](plugins-outputs-datadog.md#plugins-outputs-datadog-priority) | [string](introduction.md#string), one of `["normal", "low"]` | No |
-| [`source_type_name`](plugins-outputs-datadog.md#plugins-outputs-datadog-source_type_name) | [string](introduction.md#string), one of `["nagios", "hudson", "jenkins", "user", "my apps", "feed", "chef", "puppet", "git", "bitbucket", "fabric", "capistrano"]` | No |
-| [`text`](plugins-outputs-datadog.md#plugins-outputs-datadog-text) | [string](introduction.md#string) | No |
-| [`title`](plugins-outputs-datadog.md#plugins-outputs-datadog-title) | [string](introduction.md#string) | No |
+| [`alert_type`](plugins-outputs-datadog.md#plugins-outputs-datadog-alert_type) | [string](value-types.md#string), one of `["info", "error", "warning", "success"]` | No |
+| [`api_key`](plugins-outputs-datadog.md#plugins-outputs-datadog-api_key) | [password](value-types.md#password) | Yes |
+| [`date_happened`](plugins-outputs-datadog.md#plugins-outputs-datadog-date_happened) | [string](value-types.md#string) | No |
+| [`dd_tags`](plugins-outputs-datadog.md#plugins-outputs-datadog-dd_tags) | [array](value-types.md#array) | No |
+| [`priority`](plugins-outputs-datadog.md#plugins-outputs-datadog-priority) | [string](value-types.md#string), one of `["normal", "low"]` | No |
+| [`source_type_name`](plugins-outputs-datadog.md#plugins-outputs-datadog-source_type_name) | [string](value-types.md#string), one of `["nagios", "hudson", "jenkins", "user", "my apps", "feed", "chef", "puppet", "git", "bitbucket", "fabric", "capistrano"]` | No |
+| [`text`](plugins-outputs-datadog.md#plugins-outputs-datadog-text) | [string](value-types.md#string) | No |
+| [`title`](plugins-outputs-datadog.md#plugins-outputs-datadog-title) | [string](value-types.md#string) | No |
 
 Also see [Common options](plugins-outputs-datadog.md#plugins-outputs-datadog-common-options) for a list of options supported by all output plugins.
 
@@ -60,7 +60,7 @@ Alert type
 ### `api_key` [plugins-outputs-datadog-api_key]
 
 * This is a required setting.
-* Value type is [password](introduction.md#password)
+* Value type is [password](value-types.md#password)
 * There is no default value for this setting.
 
 Your DatadogHQ API key
@@ -68,7 +68,7 @@ Your DatadogHQ API key
 
 ### `date_happened` [plugins-outputs-datadog-date_happened]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 Date Happened
@@ -76,7 +76,7 @@ Date Happened
 
 ### `dd_tags` [plugins-outputs-datadog-dd_tags]
 
-* Value type is [array](introduction.md#array)
+* Value type is [array](value-types.md#array)
 * There is no default value for this setting.
 
 Tags Set any custom tags for this event Default are the Logstash tags if any
@@ -100,7 +100,7 @@ Source type name
 
 ### `text` [plugins-outputs-datadog-text]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"%{{message}}"`
 
 Text
@@ -108,7 +108,7 @@ Text
 
 ### `title` [plugins-outputs-datadog-title]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"Logstash event for %{{host}}"`
 
 Title

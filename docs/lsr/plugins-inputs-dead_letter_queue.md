@@ -40,12 +40,12 @@ This plugin supports the following configuration options plus the [Common option
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`clean_consumed`](plugins-inputs-dead_letter_queue.md#plugins-inputs-dead_letter_queue-clean_consumed) | [boolean](introduction.md#boolean) | No |
-| [`commit_offsets`](plugins-inputs-dead_letter_queue.md#plugins-inputs-dead_letter_queue-commit_offsets) | [boolean](introduction.md#boolean) | No |
+| [`clean_consumed`](plugins-inputs-dead_letter_queue.md#plugins-inputs-dead_letter_queue-clean_consumed) | [boolean](value-types.md#boolean) | No |
+| [`commit_offsets`](plugins-inputs-dead_letter_queue.md#plugins-inputs-dead_letter_queue-commit_offsets) | [boolean](value-types.md#boolean) | No |
 | [`path`](plugins-inputs-dead_letter_queue.md#plugins-inputs-dead_letter_queue-path) | a valid filesystem path | Yes |
-| [`pipeline_id`](plugins-inputs-dead_letter_queue.md#plugins-inputs-dead_letter_queue-pipeline_id) | [string](introduction.md#string) | No |
-| [`sincedb_path`](plugins-inputs-dead_letter_queue.md#plugins-inputs-dead_letter_queue-sincedb_path) | [string](introduction.md#string) | No |
-| [`start_timestamp`](plugins-inputs-dead_letter_queue.md#plugins-inputs-dead_letter_queue-start_timestamp) | [string](introduction.md#string) | No |
+| [`pipeline_id`](plugins-inputs-dead_letter_queue.md#plugins-inputs-dead_letter_queue-pipeline_id) | [string](value-types.md#string) | No |
+| [`sincedb_path`](plugins-inputs-dead_letter_queue.md#plugins-inputs-dead_letter_queue-sincedb_path) | [string](value-types.md#string) | No |
+| [`start_timestamp`](plugins-inputs-dead_letter_queue.md#plugins-inputs-dead_letter_queue-start_timestamp) | [string](value-types.md#string) | No |
 
 Also see [Common options](plugins-inputs-dead_letter_queue.md#plugins-inputs-dead_letter_queue-common-options) for a list of options supported by all input plugins.
 
@@ -53,7 +53,7 @@ Also see [Common options](plugins-inputs-dead_letter_queue.md#plugins-inputs-dea
 
 ### `clean_consumed` [plugins-inputs-dead_letter_queue-clean_consumed]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 When set to `true`, this option deletes the DLQ segments that have been read. This feature requires that `commit_offsets` is set to `true`. If not, you’ll get a configuration error. This feature is available in Logstash 8.4.0 and later. If this setting is `true` and and you are using a Logstash version older than 8.4.0, then you’ll get a configuration error.
@@ -61,7 +61,7 @@ When set to `true`, this option deletes the DLQ segments that have been read. Th
 
 ### `commit_offsets` [plugins-inputs-dead_letter_queue-commit_offsets]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `true`
 
 Specifies whether this input should commit offsets as it processes the events. Typically you specify `false` when you want to iterate multiple times over the events in the dead letter queue, but don’t want to save state. This is when you are exploring the events in the dead letter queue.
@@ -70,7 +70,7 @@ Specifies whether this input should commit offsets as it processes the events. T
 ### `path` [plugins-inputs-dead_letter_queue-path]
 
 * This is a required setting.
-* Value type is [path](introduction.md#path)
+* Value type is [path](value-types.md#path)
 * There is no default value for this setting.
 
 Path to the dead letter queue directory that was created by a Logstash instance. This is the path from which "dead" events are read and is typically configured in the original Logstash instance with the setting `path.dead_letter_queue`.
@@ -78,7 +78,7 @@ Path to the dead letter queue directory that was created by a Logstash instance.
 
 ### `pipeline_id` [plugins-inputs-dead_letter_queue-pipeline_id]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"main"`
 
 ID of the pipeline whose events you want to read from.
@@ -86,7 +86,7 @@ ID of the pipeline whose events you want to read from.
 
 ### `sincedb_path` [plugins-inputs-dead_letter_queue-sincedb_path]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 Path of the sincedb database file (keeps track of the current position of dead letter queue) that will be written to disk. The default will write sincedb files to `<path.data>/plugins/inputs/dead_letter_queue`.
@@ -99,7 +99,7 @@ This value must be a file path and not a directory path.
 
 ### `start_timestamp` [plugins-inputs-dead_letter_queue-start_timestamp]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 Timestamp in ISO8601 format from when you want to start processing the events from. For example, `2017-04-04T23:40:37`.

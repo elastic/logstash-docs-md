@@ -41,12 +41,12 @@ When ECS compatibility is disabled, the metadata is stored in the `[@metadata]` 
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`ecs_compatibility`](plugins-codecs-es_bulk.md#plugins-codecs-es_bulk-ecs_compatibility) | [string](introduction.md#string) | No |
-| [`target`](plugins-codecs-es_bulk.md#plugins-codecs-es_bulk-target) | [string](introduction.md#string) | No |
+| [`ecs_compatibility`](plugins-codecs-es_bulk.md#plugins-codecs-es_bulk-ecs_compatibility) | [string](value-types.md#string) | No |
+| [`target`](plugins-codecs-es_bulk.md#plugins-codecs-es_bulk-target) | [string](value-types.md#string) | No |
 
 ### `ecs_compatibility` [plugins-codecs-es_bulk-ecs_compatibility]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Supported values are:
 
     * `disabled`: unstructured metadata added at @metadata
@@ -58,7 +58,7 @@ Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)](ht
 
 ### `target` [plugins-codecs-es_bulk-target]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 Define the target field for placing the values. If this setting is not set, the data will be stored at the root (top level) of the event.

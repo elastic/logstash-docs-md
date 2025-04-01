@@ -39,22 +39,22 @@ This plugin supports the following configuration options plus the [Common option
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`always_reconnect`](plugins-inputs-couchdb_changes.md#plugins-inputs-couchdb_changes-always_reconnect) | [boolean](introduction.md#boolean) | No |
+| [`always_reconnect`](plugins-inputs-couchdb_changes.md#plugins-inputs-couchdb_changes-always_reconnect) | [boolean](value-types.md#boolean) | No |
 | [`ca_file`](plugins-inputs-couchdb_changes.md#plugins-inputs-couchdb_changes-ca_file) | a valid filesystem path | No |
-| [`db`](plugins-inputs-couchdb_changes.md#plugins-inputs-couchdb_changes-db) | [string](introduction.md#string) | Yes |
-| [`heartbeat`](plugins-inputs-couchdb_changes.md#plugins-inputs-couchdb_changes-heartbeat) | [number](introduction.md#number) | No |
-| [`host`](plugins-inputs-couchdb_changes.md#plugins-inputs-couchdb_changes-host) | [string](introduction.md#string) | No |
-| [`ignore_attachments`](plugins-inputs-couchdb_changes.md#plugins-inputs-couchdb_changes-ignore_attachments) | [boolean](introduction.md#boolean) | No |
-| [`initial_sequence`](plugins-inputs-couchdb_changes.md#plugins-inputs-couchdb_changes-initial_sequence) | [number](introduction.md#number) | No |
-| [`keep_id`](plugins-inputs-couchdb_changes.md#plugins-inputs-couchdb_changes-keep_id) | [boolean](introduction.md#boolean) | No |
-| [`keep_revision`](plugins-inputs-couchdb_changes.md#plugins-inputs-couchdb_changes-keep_revision) | [boolean](introduction.md#boolean) | No |
-| [`password`](plugins-inputs-couchdb_changes.md#plugins-inputs-couchdb_changes-password) | [password](introduction.md#password) | No |
-| [`port`](plugins-inputs-couchdb_changes.md#plugins-inputs-couchdb_changes-port) | [number](introduction.md#number) | No |
-| [`reconnect_delay`](plugins-inputs-couchdb_changes.md#plugins-inputs-couchdb_changes-reconnect_delay) | [number](introduction.md#number) | No |
-| [`secure`](plugins-inputs-couchdb_changes.md#plugins-inputs-couchdb_changes-secure) | [boolean](introduction.md#boolean) | No |
-| [`sequence_path`](plugins-inputs-couchdb_changes.md#plugins-inputs-couchdb_changes-sequence_path) | [string](introduction.md#string) | No |
-| [`timeout`](plugins-inputs-couchdb_changes.md#plugins-inputs-couchdb_changes-timeout) | [number](introduction.md#number) | No |
-| [`username`](plugins-inputs-couchdb_changes.md#plugins-inputs-couchdb_changes-username) | [string](introduction.md#string) | No |
+| [`db`](plugins-inputs-couchdb_changes.md#plugins-inputs-couchdb_changes-db) | [string](value-types.md#string) | Yes |
+| [`heartbeat`](plugins-inputs-couchdb_changes.md#plugins-inputs-couchdb_changes-heartbeat) | [number](value-types.md#number) | No |
+| [`host`](plugins-inputs-couchdb_changes.md#plugins-inputs-couchdb_changes-host) | [string](value-types.md#string) | No |
+| [`ignore_attachments`](plugins-inputs-couchdb_changes.md#plugins-inputs-couchdb_changes-ignore_attachments) | [boolean](value-types.md#boolean) | No |
+| [`initial_sequence`](plugins-inputs-couchdb_changes.md#plugins-inputs-couchdb_changes-initial_sequence) | [number](value-types.md#number) | No |
+| [`keep_id`](plugins-inputs-couchdb_changes.md#plugins-inputs-couchdb_changes-keep_id) | [boolean](value-types.md#boolean) | No |
+| [`keep_revision`](plugins-inputs-couchdb_changes.md#plugins-inputs-couchdb_changes-keep_revision) | [boolean](value-types.md#boolean) | No |
+| [`password`](plugins-inputs-couchdb_changes.md#plugins-inputs-couchdb_changes-password) | [password](value-types.md#password) | No |
+| [`port`](plugins-inputs-couchdb_changes.md#plugins-inputs-couchdb_changes-port) | [number](value-types.md#number) | No |
+| [`reconnect_delay`](plugins-inputs-couchdb_changes.md#plugins-inputs-couchdb_changes-reconnect_delay) | [number](value-types.md#number) | No |
+| [`secure`](plugins-inputs-couchdb_changes.md#plugins-inputs-couchdb_changes-secure) | [boolean](value-types.md#boolean) | No |
+| [`sequence_path`](plugins-inputs-couchdb_changes.md#plugins-inputs-couchdb_changes-sequence_path) | [string](value-types.md#string) | No |
+| [`timeout`](plugins-inputs-couchdb_changes.md#plugins-inputs-couchdb_changes-timeout) | [number](value-types.md#number) | No |
+| [`username`](plugins-inputs-couchdb_changes.md#plugins-inputs-couchdb_changes-username) | [string](value-types.md#string) | No |
 
 Also see [Common options](plugins-inputs-couchdb_changes.md#plugins-inputs-couchdb_changes-common-options) for a list of options supported by all input plugins.
 
@@ -62,7 +62,7 @@ Also see [Common options](plugins-inputs-couchdb_changes.md#plugins-inputs-couch
 
 ### `always_reconnect` [plugins-inputs-couchdb_changes-always_reconnect]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `true`
 
 Reconnect flag.  When true, always try to reconnect after a failure
@@ -70,7 +70,7 @@ Reconnect flag.  When true, always try to reconnect after a failure
 
 ### `ca_file` [plugins-inputs-couchdb_changes-ca_file]
 
-* Value type is [path](introduction.md#path)
+* Value type is [path](value-types.md#path)
 * There is no default value for this setting.
 
 Path to a CA certificate file, used to validate certificates
@@ -79,7 +79,7 @@ Path to a CA certificate file, used to validate certificates
 ### `db` [plugins-inputs-couchdb_changes-db]
 
 * This is a required setting.
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 The CouchDB db to connect to. Required parameter.
@@ -87,7 +87,7 @@ The CouchDB db to connect to. Required parameter.
 
 ### `heartbeat` [plugins-inputs-couchdb_changes-heartbeat]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `1000`
 
 Logstash connects to CouchDB’s _changes with feed=continuous The heartbeat is how often (in milliseconds) Logstash will ping CouchDB to ensure the connection is maintained.  Changing this setting is not recommended unless you know what you are doing.
@@ -95,7 +95,7 @@ Logstash connects to CouchDB’s _changes with feed=continuous The heartbeat is 
 
 ### `host` [plugins-inputs-couchdb_changes-host]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"localhost"`
 
 IP or hostname of your CouchDB instance
@@ -103,7 +103,7 @@ IP or hostname of your CouchDB instance
 
 ### `ignore_attachments` [plugins-inputs-couchdb_changes-ignore_attachments]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `true`
 
 Future feature! Until implemented, changing this from the default will not do anything.
@@ -113,7 +113,7 @@ Ignore attachments associated with CouchDB documents.
 
 ### `initial_sequence` [plugins-inputs-couchdb_changes-initial_sequence]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * There is no default value for this setting.
 
 If unspecified, Logstash will attempt to read the last sequence number from the `sequence_path` file.  If that is empty or non-existent, it will begin with 0 (the beginning).
@@ -123,7 +123,7 @@ If you specify this value, it is anticipated that you will only be doing so for 
 
 ### `keep_id` [plugins-inputs-couchdb_changes-keep_id]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 Preserve the CouchDB document id "_id" value in the output.
@@ -131,7 +131,7 @@ Preserve the CouchDB document id "_id" value in the output.
 
 ### `keep_revision` [plugins-inputs-couchdb_changes-keep_revision]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 Preserve the CouchDB document revision "_rev" value in the output.
@@ -139,7 +139,7 @@ Preserve the CouchDB document revision "_rev" value in the output.
 
 ### `password` [plugins-inputs-couchdb_changes-password]
 
-* Value type is [password](introduction.md#password)
+* Value type is [password](value-types.md#password)
 * Default value is `nil`
 
 Password, if authentication is needed to connect to CouchDB
@@ -147,7 +147,7 @@ Password, if authentication is needed to connect to CouchDB
 
 ### `port` [plugins-inputs-couchdb_changes-port]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `5984`
 
 Port of your CouchDB instance.
@@ -155,7 +155,7 @@ Port of your CouchDB instance.
 
 ### `reconnect_delay` [plugins-inputs-couchdb_changes-reconnect_delay]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `10`
 
 Reconnect delay: time between reconnect attempts, in seconds.
@@ -163,7 +163,7 @@ Reconnect delay: time between reconnect attempts, in seconds.
 
 ### `secure` [plugins-inputs-couchdb_changes-secure]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 Connect to CouchDB’s _changes feed securely (via https) Default: false (via http)
@@ -171,7 +171,7 @@ Connect to CouchDB’s _changes feed securely (via https) Default: false (via ht
 
 ### `sequence_path` [plugins-inputs-couchdb_changes-sequence_path]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 File path where the last sequence number in the _changes stream is stored. If unset it will write to `$HOME/.couchdb_seq`
@@ -179,7 +179,7 @@ File path where the last sequence number in the _changes stream is stored. If un
 
 ### `timeout` [plugins-inputs-couchdb_changes-timeout]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * There is no default value for this setting.
 
 Timeout: Number of milliseconds to wait for new data before terminating the connection.  If a timeout is set it will disable the heartbeat configuration option.
@@ -187,7 +187,7 @@ Timeout: Number of milliseconds to wait for new data before terminating the conn
 
 ### `username` [plugins-inputs-couchdb_changes-username]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `nil`
 
 Username, if authentication is needed to connect to CouchDB

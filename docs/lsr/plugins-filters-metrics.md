@@ -133,13 +133,13 @@ This plugin supports the following configuration options plus the [Common option
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`clear_interval`](plugins-filters-metrics.md#plugins-filters-metrics-clear_interval) | [number](introduction.md#number) | No |
-| [`flush_interval`](plugins-filters-metrics.md#plugins-filters-metrics-flush_interval) | [number](introduction.md#number) | No |
-| [`ignore_older_than`](plugins-filters-metrics.md#plugins-filters-metrics-ignore_older_than) | [number](introduction.md#number) | No |
-| [`meter`](plugins-filters-metrics.md#plugins-filters-metrics-meter) | [array](introduction.md#array) | No |
-| [`percentiles`](plugins-filters-metrics.md#plugins-filters-metrics-percentiles) | [array](introduction.md#array) | No |
-| [`rates`](plugins-filters-metrics.md#plugins-filters-metrics-rates) | [array](introduction.md#array) | No |
-| [`timer`](plugins-filters-metrics.md#plugins-filters-metrics-timer) | [hash](introduction.md#hash) | No |
+| [`clear_interval`](plugins-filters-metrics.md#plugins-filters-metrics-clear_interval) | [number](value-types.md#number) | No |
+| [`flush_interval`](plugins-filters-metrics.md#plugins-filters-metrics-flush_interval) | [number](value-types.md#number) | No |
+| [`ignore_older_than`](plugins-filters-metrics.md#plugins-filters-metrics-ignore_older_than) | [number](value-types.md#number) | No |
+| [`meter`](plugins-filters-metrics.md#plugins-filters-metrics-meter) | [array](value-types.md#array) | No |
+| [`percentiles`](plugins-filters-metrics.md#plugins-filters-metrics-percentiles) | [array](value-types.md#array) | No |
+| [`rates`](plugins-filters-metrics.md#plugins-filters-metrics-rates) | [array](value-types.md#array) | No |
+| [`timer`](plugins-filters-metrics.md#plugins-filters-metrics-timer) | [hash](value-types.md#hash) | No |
 
 Also see [Common options](plugins-filters-metrics.md#plugins-filters-metrics-common-options) for a list of options supported by all filter plugins.
 
@@ -147,7 +147,7 @@ Also see [Common options](plugins-filters-metrics.md#plugins-filters-metrics-com
 
 ### `clear_interval` [plugins-filters-metrics-clear_interval]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `-1`
 
 The clear interval, when all counters are reset.
@@ -157,7 +157,7 @@ If set to -1, the default value, the metrics will never be cleared. Otherwise, s
 
 ### `flush_interval` [plugins-filters-metrics-flush_interval]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `5`
 
 The flush interval, when the metrics event is created. Must be a multiple of 5s.
@@ -165,7 +165,7 @@ The flush interval, when the metrics event is created. Must be a multiple of 5s.
 
 ### `ignore_older_than` [plugins-filters-metrics-ignore_older_than]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `0`
 
 Don’t track events that have `@timestamp` older than some number of seconds.
@@ -185,7 +185,7 @@ filter {
 
 ### `meter` [plugins-filters-metrics-meter]
 
-* Value type is [array](introduction.md#array)
+* Value type is [array](value-types.md#array)
 * Default value is `[]`
 
 syntax: `meter => [ "name of metric", "name of metric" ]`
@@ -193,7 +193,7 @@ syntax: `meter => [ "name of metric", "name of metric" ]`
 
 ### `percentiles` [plugins-filters-metrics-percentiles]
 
-* Value type is [array](introduction.md#array)
+* Value type is [array](value-types.md#array)
 * Default value is `[1, 5, 10, 90, 95, 99, 100]`
 
 The percentiles that should be measured and emitted for timer values.
@@ -201,7 +201,7 @@ The percentiles that should be measured and emitted for timer values.
 
 ### `rates` [plugins-filters-metrics-rates]
 
-* Value type is [array](introduction.md#array)
+* Value type is [array](value-types.md#array)
 * Default value is `[1, 5, 15]`
 
 The rates that should be measured, in minutes. Possible values are 1, 5, and 15.
@@ -209,7 +209,7 @@ The rates that should be measured, in minutes. Possible values are 1, 5, and 15.
 
 ### `timer` [plugins-filters-metrics-timer]
 
-* Value type is [hash](introduction.md#hash)
+* Value type is [hash](value-types.md#hash)
 * Default value is `{}`
 
 syntax: `timer => [ "name of metric", "%{{time_value}}" ]`

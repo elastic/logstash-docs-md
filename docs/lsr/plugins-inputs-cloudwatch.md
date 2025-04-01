@@ -113,24 +113,24 @@ This plugin supports the following configuration options plus the [Common option
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`access_key_id`](plugins-inputs-cloudwatch.md#plugins-inputs-cloudwatch-access_key_id) | [string](introduction.md#string) | No |
-| [`aws_credentials_file`](plugins-inputs-cloudwatch.md#plugins-inputs-cloudwatch-aws_credentials_file) | [string](introduction.md#string) | No |
-| [`combined`](plugins-inputs-cloudwatch.md#plugins-inputs-cloudwatch-combined) | [boolean](introduction.md#boolean) | No |
-| [`endpoint`](plugins-inputs-cloudwatch.md#plugins-inputs-cloudwatch-endpoint) | [string](introduction.md#string) | No |
-| [`filters`](plugins-inputs-cloudwatch.md#plugins-inputs-cloudwatch-filters) | [array](introduction.md#array) | See [note](plugins-inputs-cloudwatch.md#plugins-inputs-cloudwatch-filters) |
-| [`interval`](plugins-inputs-cloudwatch.md#plugins-inputs-cloudwatch-interval) | [number](introduction.md#number) | No |
-| [`metrics`](plugins-inputs-cloudwatch.md#plugins-inputs-cloudwatch-metrics) | [array](introduction.md#array) | No |
-| [`namespace`](plugins-inputs-cloudwatch.md#plugins-inputs-cloudwatch-namespace) | [string](introduction.md#string) | No |
-| [`period`](plugins-inputs-cloudwatch.md#plugins-inputs-cloudwatch-period) | [number](introduction.md#number) | No |
-| [`proxy_uri`](plugins-inputs-cloudwatch.md#plugins-inputs-cloudwatch-proxy_uri) | [string](introduction.md#string) | No |
-| [`region`](plugins-inputs-cloudwatch.md#plugins-inputs-cloudwatch-region) | [string](introduction.md#string) | No |
-| [`role_arn`](plugins-inputs-cloudwatch.md#plugins-inputs-cloudwatch-role_arn) | [string](introduction.md#string) | No |
-| [`role_session_name`](plugins-inputs-cloudwatch.md#plugins-inputs-cloudwatch-role_session_name) | [string](introduction.md#string) | No |
-| [`secret_access_key`](plugins-inputs-cloudwatch.md#plugins-inputs-cloudwatch-secret_access_key) | [string](introduction.md#string) | No |
-| [`session_token`](plugins-inputs-cloudwatch.md#plugins-inputs-cloudwatch-session_token) | [string](introduction.md#string) | No |
-| [`statistics`](plugins-inputs-cloudwatch.md#plugins-inputs-cloudwatch-statistics) | [array](introduction.md#array) | No |
-| [`use_aws_bundled_ca`](plugins-inputs-cloudwatch.md#plugins-inputs-cloudwatch-use_aws_bundled_ca) | [boolean](introduction.md#boolean) | No |
-| [`use_ssl`](plugins-inputs-cloudwatch.md#plugins-inputs-cloudwatch-use_ssl) | [boolean](introduction.md#boolean) | No |
+| [`access_key_id`](plugins-inputs-cloudwatch.md#plugins-inputs-cloudwatch-access_key_id) | [string](value-types.md#string) | No |
+| [`aws_credentials_file`](plugins-inputs-cloudwatch.md#plugins-inputs-cloudwatch-aws_credentials_file) | [string](value-types.md#string) | No |
+| [`combined`](plugins-inputs-cloudwatch.md#plugins-inputs-cloudwatch-combined) | [boolean](value-types.md#boolean) | No |
+| [`endpoint`](plugins-inputs-cloudwatch.md#plugins-inputs-cloudwatch-endpoint) | [string](value-types.md#string) | No |
+| [`filters`](plugins-inputs-cloudwatch.md#plugins-inputs-cloudwatch-filters) | [array](value-types.md#array) | See [note](plugins-inputs-cloudwatch.md#plugins-inputs-cloudwatch-filters) |
+| [`interval`](plugins-inputs-cloudwatch.md#plugins-inputs-cloudwatch-interval) | [number](value-types.md#number) | No |
+| [`metrics`](plugins-inputs-cloudwatch.md#plugins-inputs-cloudwatch-metrics) | [array](value-types.md#array) | No |
+| [`namespace`](plugins-inputs-cloudwatch.md#plugins-inputs-cloudwatch-namespace) | [string](value-types.md#string) | No |
+| [`period`](plugins-inputs-cloudwatch.md#plugins-inputs-cloudwatch-period) | [number](value-types.md#number) | No |
+| [`proxy_uri`](plugins-inputs-cloudwatch.md#plugins-inputs-cloudwatch-proxy_uri) | [string](value-types.md#string) | No |
+| [`region`](plugins-inputs-cloudwatch.md#plugins-inputs-cloudwatch-region) | [string](value-types.md#string) | No |
+| [`role_arn`](plugins-inputs-cloudwatch.md#plugins-inputs-cloudwatch-role_arn) | [string](value-types.md#string) | No |
+| [`role_session_name`](plugins-inputs-cloudwatch.md#plugins-inputs-cloudwatch-role_session_name) | [string](value-types.md#string) | No |
+| [`secret_access_key`](plugins-inputs-cloudwatch.md#plugins-inputs-cloudwatch-secret_access_key) | [string](value-types.md#string) | No |
+| [`session_token`](plugins-inputs-cloudwatch.md#plugins-inputs-cloudwatch-session_token) | [string](value-types.md#string) | No |
+| [`statistics`](plugins-inputs-cloudwatch.md#plugins-inputs-cloudwatch-statistics) | [array](value-types.md#array) | No |
+| [`use_aws_bundled_ca`](plugins-inputs-cloudwatch.md#plugins-inputs-cloudwatch-use_aws_bundled_ca) | [boolean](value-types.md#boolean) | No |
+| [`use_ssl`](plugins-inputs-cloudwatch.md#plugins-inputs-cloudwatch-use_ssl) | [boolean](value-types.md#boolean) | No |
 
 Also see [Common options](plugins-inputs-cloudwatch.md#plugins-inputs-cloudwatch-common-options) for a list of options supported by all input plugins.
 
@@ -138,7 +138,7 @@ Also see [Common options](plugins-inputs-cloudwatch.md#plugins-inputs-cloudwatch
 
 ### `access_key_id` [plugins-inputs-cloudwatch-access_key_id]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 This plugin uses the AWS SDK and supports several ways to get credentials, which will be tried in this order:
@@ -152,7 +152,7 @@ This plugin uses the AWS SDK and supports several ways to get credentials, which
 
 ### `aws_credentials_file` [plugins-inputs-cloudwatch-aws_credentials_file]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 Path to YAML file containing a hash of AWS credentials. This file will only be loaded if `access_key_id` and `secret_access_key` aren’t set. The contents of the file should look like this:
@@ -165,7 +165,7 @@ Path to YAML file containing a hash of AWS credentials. This file will only be l
 
 ### `combined` [plugins-inputs-cloudwatch-combined]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 Use this for namespaces that need to combine the dimensions like S3 and SNS.
@@ -173,7 +173,7 @@ Use this for namespaces that need to combine the dimensions like S3 and SNS.
 
 ### `endpoint` [plugins-inputs-cloudwatch-endpoint]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 The endpoint to connect to. By default it is constructed using the value of `region`. This is useful when connecting to S3 compatible services, but beware that these aren’t guaranteed to work correctly with the AWS SDK.
@@ -182,7 +182,7 @@ The endpoint to connect to. By default it is constructed using the value of `reg
 ### `filters` [plugins-inputs-cloudwatch-filters]
 
 * This setting can be required or optional. See note below.
-* Value type is [array](introduction.md#array)
+* Value type is [array](value-types.md#array)
 * There is no default value for this setting.
 
 ::::{note} 
@@ -201,7 +201,7 @@ Each namespace uniquely support certain dimensions. Please consult the documenta
 
 ### `interval` [plugins-inputs-cloudwatch-interval]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `900`
 
 Set how frequently CloudWatch should be queried
@@ -211,7 +211,7 @@ The default, `900`, means check every 15 minutes. Setting this value too low (ge
 
 ### `metrics` [plugins-inputs-cloudwatch-metrics]
 
-* Value type is [array](introduction.md#array)
+* Value type is [array](value-types.md#array)
 * Default value is `["CPUUtilization", "DiskReadOps", "DiskWriteOps", "NetworkIn", "NetworkOut"]`
 
 Specify the metrics to fetch for the namespace. The defaults are AWS/EC2 specific. See [http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/aws-namespaces.html](http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/aws-namespaces.md) for the available metrics for other namespaces.
@@ -219,7 +219,7 @@ Specify the metrics to fetch for the namespace. The defaults are AWS/EC2 specifi
 
 ### `namespace` [plugins-inputs-cloudwatch-namespace]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"AWS/EC2"`
 
 If undefined, LogStash will complain, even if codec is unused. The service namespace of the metrics to fetch.
@@ -229,7 +229,7 @@ The default is for the EC2 service. See [http://docs.aws.amazon.com/AmazonCloudW
 
 ### `period` [plugins-inputs-cloudwatch-period]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `300`
 
 Set the granularity of the returned datapoints.
@@ -239,7 +239,7 @@ Must be at least 60 seconds and in multiples of 60.
 
 ### `proxy_uri` [plugins-inputs-cloudwatch-proxy_uri]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 URI to proxy server if required
@@ -247,7 +247,7 @@ URI to proxy server if required
 
 ### `region` [plugins-inputs-cloudwatch-region]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"us-east-1"`
 
 The AWS Region
@@ -255,7 +255,7 @@ The AWS Region
 
 ### `role_arn` [plugins-inputs-cloudwatch-role_arn]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 The AWS IAM Role to assume, if any. This is used to generate temporary credentials, typically for cross-account access. See the [AssumeRole API documentation](https://docs.aws.amazon.com/STS/latest/APIReference/API_AssumeRole.md) for more information.
@@ -263,7 +263,7 @@ The AWS IAM Role to assume, if any. This is used to generate temporary credentia
 
 ### `role_session_name` [plugins-inputs-cloudwatch-role_session_name]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"logstash"`
 
 Session name to use when assuming an IAM role.
@@ -271,7 +271,7 @@ Session name to use when assuming an IAM role.
 
 ### `secret_access_key` [plugins-inputs-cloudwatch-secret_access_key]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 The AWS Secret Access Key
@@ -279,7 +279,7 @@ The AWS Secret Access Key
 
 ### `session_token` [plugins-inputs-cloudwatch-session_token]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 The AWS Session token for temporary credential
@@ -287,7 +287,7 @@ The AWS Session token for temporary credential
 
 ### `statistics` [plugins-inputs-cloudwatch-statistics]
 
-* Value type is [array](introduction.md#array)
+* Value type is [array](value-types.md#array)
 * Default value is `["SampleCount", "Average", "Minimum", "Maximum", "Sum"]`
 
 Specify the statistics to fetch for each namespace
@@ -295,7 +295,7 @@ Specify the statistics to fetch for each namespace
 
 ### `use_aws_bundled_ca` [plugins-inputs-cloudwatch-use_aws_bundled_ca]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 Use bundled CA certificates that ship with AWS SDK to verify SSL peer certificates. For cases where the default certificates are unavailable, e.g. Windows, you can set this to `true`.
@@ -303,7 +303,7 @@ Use bundled CA certificates that ship with AWS SDK to verify SSL peer certificat
 
 ### `use_ssl` [plugins-inputs-cloudwatch-use_ssl]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `true`
 
 Make sure we require the V1 classes when including this module. require *aws-sdk* will load v2 classes. Should we require (true) or disable (false) using SSL for communicating with the AWS API The AWS SDK for Ruby defaults to SSL so we preserve that

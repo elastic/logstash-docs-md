@@ -35,27 +35,27 @@ This plugin supports the following configuration options plus the [Common option
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`arguments`](plugins-outputs-rabbitmq.md#plugins-outputs-rabbitmq-arguments) | [array](introduction.md#array) | No |
-| [`automatic_recovery`](plugins-outputs-rabbitmq.md#plugins-outputs-rabbitmq-automatic_recovery) | [boolean](introduction.md#boolean) | No |
-| [`connect_retry_interval`](plugins-outputs-rabbitmq.md#plugins-outputs-rabbitmq-connect_retry_interval) | [number](introduction.md#number) | No |
-| [`connection_timeout`](plugins-outputs-rabbitmq.md#plugins-outputs-rabbitmq-connection_timeout) | [number](introduction.md#number) | No |
-| [`durable`](plugins-outputs-rabbitmq.md#plugins-outputs-rabbitmq-durable) | [boolean](introduction.md#boolean) | No |
-| [`exchange`](plugins-outputs-rabbitmq.md#plugins-outputs-rabbitmq-exchange) | [string](introduction.md#string) | Yes |
-| [`exchange_type`](plugins-outputs-rabbitmq.md#plugins-outputs-rabbitmq-exchange_type) | [string](introduction.md#string), one of `["fanout", "direct", "topic", "x-consistent-hash", "x-modulus-hash"]` | Yes |
-| [`heartbeat`](plugins-outputs-rabbitmq.md#plugins-outputs-rabbitmq-heartbeat) | [number](introduction.md#number) | No |
-| [`host`](plugins-outputs-rabbitmq.md#plugins-outputs-rabbitmq-host) | [string](introduction.md#string) | Yes |
-| [`key`](plugins-outputs-rabbitmq.md#plugins-outputs-rabbitmq-key) | [string](introduction.md#string) | No |
-| [`message_properties`](plugins-outputs-rabbitmq.md#plugins-outputs-rabbitmq-message_properties) | [hash](introduction.md#hash) | No |
-| [`passive`](plugins-outputs-rabbitmq.md#plugins-outputs-rabbitmq-passive) | [boolean](introduction.md#boolean) | No |
-| [`password`](plugins-outputs-rabbitmq.md#plugins-outputs-rabbitmq-password) | [password](introduction.md#password) | No |
-| [`persistent`](plugins-outputs-rabbitmq.md#plugins-outputs-rabbitmq-persistent) | [boolean](introduction.md#boolean) | No |
-| [`port`](plugins-outputs-rabbitmq.md#plugins-outputs-rabbitmq-port) | [number](introduction.md#number) | No |
-| [`ssl`](plugins-outputs-rabbitmq.md#plugins-outputs-rabbitmq-ssl) | [boolean](introduction.md#boolean) | No |
-| [`ssl_certificate_password`](plugins-outputs-rabbitmq.md#plugins-outputs-rabbitmq-ssl_certificate_password) | [string](introduction.md#string) | No |
+| [`arguments`](plugins-outputs-rabbitmq.md#plugins-outputs-rabbitmq-arguments) | [array](value-types.md#array) | No |
+| [`automatic_recovery`](plugins-outputs-rabbitmq.md#plugins-outputs-rabbitmq-automatic_recovery) | [boolean](value-types.md#boolean) | No |
+| [`connect_retry_interval`](plugins-outputs-rabbitmq.md#plugins-outputs-rabbitmq-connect_retry_interval) | [number](value-types.md#number) | No |
+| [`connection_timeout`](plugins-outputs-rabbitmq.md#plugins-outputs-rabbitmq-connection_timeout) | [number](value-types.md#number) | No |
+| [`durable`](plugins-outputs-rabbitmq.md#plugins-outputs-rabbitmq-durable) | [boolean](value-types.md#boolean) | No |
+| [`exchange`](plugins-outputs-rabbitmq.md#plugins-outputs-rabbitmq-exchange) | [string](value-types.md#string) | Yes |
+| [`exchange_type`](plugins-outputs-rabbitmq.md#plugins-outputs-rabbitmq-exchange_type) | [string](value-types.md#string), one of `["fanout", "direct", "topic", "x-consistent-hash", "x-modulus-hash"]` | Yes |
+| [`heartbeat`](plugins-outputs-rabbitmq.md#plugins-outputs-rabbitmq-heartbeat) | [number](value-types.md#number) | No |
+| [`host`](plugins-outputs-rabbitmq.md#plugins-outputs-rabbitmq-host) | [string](value-types.md#string) | Yes |
+| [`key`](plugins-outputs-rabbitmq.md#plugins-outputs-rabbitmq-key) | [string](value-types.md#string) | No |
+| [`message_properties`](plugins-outputs-rabbitmq.md#plugins-outputs-rabbitmq-message_properties) | [hash](value-types.md#hash) | No |
+| [`passive`](plugins-outputs-rabbitmq.md#plugins-outputs-rabbitmq-passive) | [boolean](value-types.md#boolean) | No |
+| [`password`](plugins-outputs-rabbitmq.md#plugins-outputs-rabbitmq-password) | [password](value-types.md#password) | No |
+| [`persistent`](plugins-outputs-rabbitmq.md#plugins-outputs-rabbitmq-persistent) | [boolean](value-types.md#boolean) | No |
+| [`port`](plugins-outputs-rabbitmq.md#plugins-outputs-rabbitmq-port) | [number](value-types.md#number) | No |
+| [`ssl`](plugins-outputs-rabbitmq.md#plugins-outputs-rabbitmq-ssl) | [boolean](value-types.md#boolean) | No |
+| [`ssl_certificate_password`](plugins-outputs-rabbitmq.md#plugins-outputs-rabbitmq-ssl_certificate_password) | [string](value-types.md#string) | No |
 | [`ssl_certificate_path`](plugins-outputs-rabbitmq.md#plugins-outputs-rabbitmq-ssl_certificate_path) | a valid filesystem path | No |
-| [`ssl_version`](plugins-outputs-rabbitmq.md#plugins-outputs-rabbitmq-ssl_version) | [string](introduction.md#string) | No |
-| [`user`](plugins-outputs-rabbitmq.md#plugins-outputs-rabbitmq-user) | [string](introduction.md#string) | No |
-| [`vhost`](plugins-outputs-rabbitmq.md#plugins-outputs-rabbitmq-vhost) | [string](introduction.md#string) | No |
+| [`ssl_version`](plugins-outputs-rabbitmq.md#plugins-outputs-rabbitmq-ssl_version) | [string](value-types.md#string) | No |
+| [`user`](plugins-outputs-rabbitmq.md#plugins-outputs-rabbitmq-user) | [string](value-types.md#string) | No |
+| [`vhost`](plugins-outputs-rabbitmq.md#plugins-outputs-rabbitmq-vhost) | [string](value-types.md#string) | No |
 
 Also see [Common options](plugins-outputs-rabbitmq.md#plugins-outputs-rabbitmq-common-options) for a list of options supported by all output plugins.
 
@@ -63,7 +63,7 @@ Also see [Common options](plugins-outputs-rabbitmq.md#plugins-outputs-rabbitmq-c
 
 ### `arguments` [plugins-outputs-rabbitmq-arguments]
 
-* Value type is [array](introduction.md#array)
+* Value type is [array](value-types.md#array)
 * Default value is `{}`
 
 Extra queue arguments as an array. To make a RabbitMQ queue mirrored, use: `{"x-ha-policy" => "all"}`
@@ -71,7 +71,7 @@ Extra queue arguments as an array. To make a RabbitMQ queue mirrored, use: `{"x-
 
 ### `automatic_recovery` [plugins-outputs-rabbitmq-automatic_recovery]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `true`
 
 Set this to automatically recover from a broken connection. You almost certainly don’t want to override this!!!
@@ -79,7 +79,7 @@ Set this to automatically recover from a broken connection. You almost certainly
 
 ### `connect_retry_interval` [plugins-outputs-rabbitmq-connect_retry_interval]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `1`
 
 Time in seconds to wait before retrying a connection
@@ -87,7 +87,7 @@ Time in seconds to wait before retrying a connection
 
 ### `connection_timeout` [plugins-outputs-rabbitmq-connection_timeout]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * There is no default value for this setting.
 
 The default connection timeout in milliseconds. If not specified the timeout is infinite.
@@ -95,7 +95,7 @@ The default connection timeout in milliseconds. If not specified the timeout is 
 
 ### `durable` [plugins-outputs-rabbitmq-durable]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `true`
 
 Is this exchange durable? (aka; Should it survive a broker restart?)
@@ -104,7 +104,7 @@ Is this exchange durable? (aka; Should it survive a broker restart?)
 ### `exchange` [plugins-outputs-rabbitmq-exchange]
 
 * This is a required setting.
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 The name of the exchange
@@ -121,7 +121,7 @@ The exchange type (fanout, topic, direct)
 
 ### `heartbeat` [plugins-outputs-rabbitmq-heartbeat]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * There is no default value for this setting.
 
 Heartbeat delay in seconds. If unspecified no heartbeats will be sent
@@ -130,7 +130,7 @@ Heartbeat delay in seconds. If unspecified no heartbeats will be sent
 ### `host` [plugins-outputs-rabbitmq-host]
 
 * This is a required setting.
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 Common functionality for the rabbitmq input/output RabbitMQ server address(es) host can either be a single host, or a list of hosts i.e. host ⇒ "localhost" or host ⇒ ["host01", "host02]
@@ -140,7 +140,7 @@ if multiple hosts are provided on the initial connection and any subsequent reco
 
 ### `key` [plugins-outputs-rabbitmq-key]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"logstash"`
 
 The default codec for this plugin is JSON. You can override this to suit your particular needs however. Key to route to by default. Defaults to *logstash*
@@ -150,7 +150,7 @@ The default codec for this plugin is JSON. You can override this to suit your pa
 
 ### `message_properties` [plugins-outputs-rabbitmq-message_properties]
 
-* Value type is [hash](introduction.md#hash)
+* Value type is [hash](value-types.md#hash)
 * Default value is `{}`
 
 Add properties to be set per-message here, such as *content_type*, *priority*. Values can be [`sprintf` templates](https://www.elastic.co/guide/en/logstash/current/event-dependent-configuration.html#sprintf), whose value for each message will be populated from the event.
@@ -167,7 +167,7 @@ Example:
 
 ### `passive` [plugins-outputs-rabbitmq-passive]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 Passive queue creation? Useful for checking queue existance without modifying server state
@@ -175,7 +175,7 @@ Passive queue creation? Useful for checking queue existance without modifying se
 
 ### `password` [plugins-outputs-rabbitmq-password]
 
-* Value type is [password](introduction.md#password)
+* Value type is [password](value-types.md#password)
 * Default value is `"guest"`
 
 RabbitMQ password
@@ -183,7 +183,7 @@ RabbitMQ password
 
 ### `persistent` [plugins-outputs-rabbitmq-persistent]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `true`
 
 Should RabbitMQ persist messages to disk?
@@ -191,7 +191,7 @@ Should RabbitMQ persist messages to disk?
 
 ### `port` [plugins-outputs-rabbitmq-port]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `5672`
 
 RabbitMQ port to connect on
@@ -199,7 +199,7 @@ RabbitMQ port to connect on
 
 ### `ssl` [plugins-outputs-rabbitmq-ssl]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * There is no default value for this setting.
 
 Enable or disable SSL. Note that by default remote certificate verification is off. Specify ssl_certificate_path and ssl_certificate_password if you need certificate verification
@@ -207,7 +207,7 @@ Enable or disable SSL. Note that by default remote certificate verification is o
 
 ### `ssl_certificate_password` [plugins-outputs-rabbitmq-ssl_certificate_password]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 Password for the encrypted PKCS12 (.p12) certificate file specified in ssl_certificate_path
@@ -215,7 +215,7 @@ Password for the encrypted PKCS12 (.p12) certificate file specified in ssl_certi
 
 ### `ssl_certificate_path` [plugins-outputs-rabbitmq-ssl_certificate_path]
 
-* Value type is [path](introduction.md#path)
+* Value type is [path](value-types.md#path)
 * There is no default value for this setting.
 
 Path to an SSL certificate in PKCS12 (.p12) format used for verifying the remote host
@@ -223,7 +223,7 @@ Path to an SSL certificate in PKCS12 (.p12) format used for verifying the remote
 
 ### `ssl_version` [plugins-outputs-rabbitmq-ssl_version]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"TLSv1.2"`
 
 Version of the SSL protocol to use.
@@ -231,7 +231,7 @@ Version of the SSL protocol to use.
 
 ### `user` [plugins-outputs-rabbitmq-user]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"guest"`
 
 RabbitMQ username
@@ -239,7 +239,7 @@ RabbitMQ username
 
 ### `vhost` [plugins-outputs-rabbitmq-vhost]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"/"`
 
 The vhost (virtual host) to use. If you don’t know what this is, leave the default. With the exception of the default vhost ("/"), names of vhosts should not begin with a forward slash.

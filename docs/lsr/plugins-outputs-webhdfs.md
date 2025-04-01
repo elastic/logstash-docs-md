@@ -66,29 +66,29 @@ This plugin supports the following configuration options plus the [Common option
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`compression`](plugins-outputs-webhdfs.md#plugins-outputs-webhdfs-compression) | [string](introduction.md#string), one of `["none", "snappy", "gzip"]` | No |
-| [`flush_size`](plugins-outputs-webhdfs.md#plugins-outputs-webhdfs-flush_size) | [number](introduction.md#number) | No |
-| [`host`](plugins-outputs-webhdfs.md#plugins-outputs-webhdfs-host) | [string](introduction.md#string) | Yes |
-| [`idle_flush_time`](plugins-outputs-webhdfs.md#plugins-outputs-webhdfs-idle_flush_time) | [number](introduction.md#number) | No |
-| [`kerberos_keytab`](plugins-outputs-webhdfs.md#plugins-outputs-webhdfs-kerberos_keytab) | [string](introduction.md#string) | No |
-| [`open_timeout`](plugins-outputs-webhdfs.md#plugins-outputs-webhdfs-open_timeout) | [number](introduction.md#number) | No |
-| [`path`](plugins-outputs-webhdfs.md#plugins-outputs-webhdfs-path) | [string](introduction.md#string) | Yes |
-| [`port`](plugins-outputs-webhdfs.md#plugins-outputs-webhdfs-port) | [number](introduction.md#number) | No |
-| [`read_timeout`](plugins-outputs-webhdfs.md#plugins-outputs-webhdfs-read_timeout) | [number](introduction.md#number) | No |
-| [`retry_interval`](plugins-outputs-webhdfs.md#plugins-outputs-webhdfs-retry_interval) | [number](introduction.md#number) | No |
-| [`retry_known_errors`](plugins-outputs-webhdfs.md#plugins-outputs-webhdfs-retry_known_errors) | [boolean](introduction.md#boolean) | No |
-| [`retry_times`](plugins-outputs-webhdfs.md#plugins-outputs-webhdfs-retry_times) | [number](introduction.md#number) | No |
-| [`single_file_per_thread`](plugins-outputs-webhdfs.md#plugins-outputs-webhdfs-single_file_per_thread) | [boolean](introduction.md#boolean) | No |
-| [`snappy_bufsize`](plugins-outputs-webhdfs.md#plugins-outputs-webhdfs-snappy_bufsize) | [number](introduction.md#number) | No |
-| [`snappy_format`](plugins-outputs-webhdfs.md#plugins-outputs-webhdfs-snappy_format) | [string](introduction.md#string), one of `["stream", "file"]` | No |
-| [`ssl_cert`](plugins-outputs-webhdfs.md#plugins-outputs-webhdfs-ssl_cert) | [string](introduction.md#string) | No |
-| [`ssl_key`](plugins-outputs-webhdfs.md#plugins-outputs-webhdfs-ssl_key) | [string](introduction.md#string) | No |
-| [`standby_host`](plugins-outputs-webhdfs.md#plugins-outputs-webhdfs-standby_host) | [string](introduction.md#string) | No |
-| [`standby_port`](plugins-outputs-webhdfs.md#plugins-outputs-webhdfs-standby_port) | [number](introduction.md#number) | No |
-| [`use_httpfs`](plugins-outputs-webhdfs.md#plugins-outputs-webhdfs-use_httpfs) | [boolean](introduction.md#boolean) | No |
-| [`use_kerberos_auth`](plugins-outputs-webhdfs.md#plugins-outputs-webhdfs-use_kerberos_auth) | [boolean](introduction.md#boolean) | No |
-| [`use_ssl_auth`](plugins-outputs-webhdfs.md#plugins-outputs-webhdfs-use_ssl_auth) | [boolean](introduction.md#boolean) | No |
-| [`user`](plugins-outputs-webhdfs.md#plugins-outputs-webhdfs-user) | [string](introduction.md#string) | Yes |
+| [`compression`](plugins-outputs-webhdfs.md#plugins-outputs-webhdfs-compression) | [string](value-types.md#string), one of `["none", "snappy", "gzip"]` | No |
+| [`flush_size`](plugins-outputs-webhdfs.md#plugins-outputs-webhdfs-flush_size) | [number](value-types.md#number) | No |
+| [`host`](plugins-outputs-webhdfs.md#plugins-outputs-webhdfs-host) | [string](value-types.md#string) | Yes |
+| [`idle_flush_time`](plugins-outputs-webhdfs.md#plugins-outputs-webhdfs-idle_flush_time) | [number](value-types.md#number) | No |
+| [`kerberos_keytab`](plugins-outputs-webhdfs.md#plugins-outputs-webhdfs-kerberos_keytab) | [string](value-types.md#string) | No |
+| [`open_timeout`](plugins-outputs-webhdfs.md#plugins-outputs-webhdfs-open_timeout) | [number](value-types.md#number) | No |
+| [`path`](plugins-outputs-webhdfs.md#plugins-outputs-webhdfs-path) | [string](value-types.md#string) | Yes |
+| [`port`](plugins-outputs-webhdfs.md#plugins-outputs-webhdfs-port) | [number](value-types.md#number) | No |
+| [`read_timeout`](plugins-outputs-webhdfs.md#plugins-outputs-webhdfs-read_timeout) | [number](value-types.md#number) | No |
+| [`retry_interval`](plugins-outputs-webhdfs.md#plugins-outputs-webhdfs-retry_interval) | [number](value-types.md#number) | No |
+| [`retry_known_errors`](plugins-outputs-webhdfs.md#plugins-outputs-webhdfs-retry_known_errors) | [boolean](value-types.md#boolean) | No |
+| [`retry_times`](plugins-outputs-webhdfs.md#plugins-outputs-webhdfs-retry_times) | [number](value-types.md#number) | No |
+| [`single_file_per_thread`](plugins-outputs-webhdfs.md#plugins-outputs-webhdfs-single_file_per_thread) | [boolean](value-types.md#boolean) | No |
+| [`snappy_bufsize`](plugins-outputs-webhdfs.md#plugins-outputs-webhdfs-snappy_bufsize) | [number](value-types.md#number) | No |
+| [`snappy_format`](plugins-outputs-webhdfs.md#plugins-outputs-webhdfs-snappy_format) | [string](value-types.md#string), one of `["stream", "file"]` | No |
+| [`ssl_cert`](plugins-outputs-webhdfs.md#plugins-outputs-webhdfs-ssl_cert) | [string](value-types.md#string) | No |
+| [`ssl_key`](plugins-outputs-webhdfs.md#plugins-outputs-webhdfs-ssl_key) | [string](value-types.md#string) | No |
+| [`standby_host`](plugins-outputs-webhdfs.md#plugins-outputs-webhdfs-standby_host) | [string](value-types.md#string) | No |
+| [`standby_port`](plugins-outputs-webhdfs.md#plugins-outputs-webhdfs-standby_port) | [number](value-types.md#number) | No |
+| [`use_httpfs`](plugins-outputs-webhdfs.md#plugins-outputs-webhdfs-use_httpfs) | [boolean](value-types.md#boolean) | No |
+| [`use_kerberos_auth`](plugins-outputs-webhdfs.md#plugins-outputs-webhdfs-use_kerberos_auth) | [boolean](value-types.md#boolean) | No |
+| [`use_ssl_auth`](plugins-outputs-webhdfs.md#plugins-outputs-webhdfs-use_ssl_auth) | [boolean](value-types.md#boolean) | No |
+| [`user`](plugins-outputs-webhdfs.md#plugins-outputs-webhdfs-user) | [string](value-types.md#string) | Yes |
 
 Also see [Common options](plugins-outputs-webhdfs.md#plugins-outputs-webhdfs-common-options) for a list of options supported by all output plugins.
 
@@ -104,7 +104,7 @@ Compress output. One of [*none*, *snappy*, *gzip*]
 
 ### `flush_size` [plugins-outputs-webhdfs-flush_size]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `500`
 
 Sending data to webhdfs if event count is above, even if `store_interval_in_secs` is not reached.
@@ -113,7 +113,7 @@ Sending data to webhdfs if event count is above, even if `store_interval_in_secs
 ### `host` [plugins-outputs-webhdfs-host]
 
 * This is a required setting.
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 The server name for webhdfs/httpfs connections.
@@ -121,7 +121,7 @@ The server name for webhdfs/httpfs connections.
 
 ### `idle_flush_time` [plugins-outputs-webhdfs-idle_flush_time]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `1`
 
 Sending data to webhdfs in x seconds intervals.
@@ -129,7 +129,7 @@ Sending data to webhdfs in x seconds intervals.
 
 ### `kerberos_keytab` [plugins-outputs-webhdfs-kerberos_keytab]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 Set kerberos keytab file. Note that the gssapi library needs to be available to use this.
@@ -137,7 +137,7 @@ Set kerberos keytab file. Note that the gssapi library needs to be available to 
 
 ### `open_timeout` [plugins-outputs-webhdfs-open_timeout]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `30`
 
 WebHdfs open timeout, default 30s.
@@ -146,7 +146,7 @@ WebHdfs open timeout, default 30s.
 ### `path` [plugins-outputs-webhdfs-path]
 
 * This is a required setting.
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 The path to the file to write to. Event fields can be used here, as well as date fields in the joda time format, e.g.: `/user/logstash/dt=%{+YYYY-MM-dd}/%{@source_host}-%{+HH}.log`
@@ -154,7 +154,7 @@ The path to the file to write to. Event fields can be used here, as well as date
 
 ### `port` [plugins-outputs-webhdfs-port]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `50070`
 
 The server port for webhdfs/httpfs connections.
@@ -162,7 +162,7 @@ The server port for webhdfs/httpfs connections.
 
 ### `read_timeout` [plugins-outputs-webhdfs-read_timeout]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `30`
 
 The WebHdfs read timeout, default 30s.
@@ -170,7 +170,7 @@ The WebHdfs read timeout, default 30s.
 
 ### `retry_interval` [plugins-outputs-webhdfs-retry_interval]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `0.5`
 
 How long should we wait between retries.
@@ -178,7 +178,7 @@ How long should we wait between retries.
 
 ### `retry_known_errors` [plugins-outputs-webhdfs-retry_known_errors]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `true`
 
 Retry some known webhdfs errors. These may be caused by race conditions when appending to same file, etc.
@@ -186,7 +186,7 @@ Retry some known webhdfs errors. These may be caused by race conditions when app
 
 ### `retry_times` [plugins-outputs-webhdfs-retry_times]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `5`
 
 How many times should we retry. If retry_times is exceeded, an error will be logged and the event will be discarded.
@@ -194,7 +194,7 @@ How many times should we retry. If retry_times is exceeded, an error will be log
 
 ### `single_file_per_thread` [plugins-outputs-webhdfs-single_file_per_thread]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 Avoid appending to same file in multiple threads. This solves some problems with multiple logstash output threads and locked file leases in webhdfs. If this option is set to true, %{[@metadata][thread_id]} needs to be used in path config settting.
@@ -202,7 +202,7 @@ Avoid appending to same file in multiple threads. This solves some problems with
 
 ### `snappy_bufsize` [plugins-outputs-webhdfs-snappy_bufsize]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `32768`
 
 Set snappy chunksize. Only neccessary for stream format. Defaults to 32k. Max is 65536 @see [http://code.google.com/p/snappy/source/browse/trunk/framing_format.txt](http://code.google.com/p/snappy/source/browse/trunk/framing_format.txt)
@@ -218,7 +218,7 @@ Set snappy format. One of "stream", "file". Set to stream to be hive compatible.
 
 ### `ssl_cert` [plugins-outputs-webhdfs-ssl_cert]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 Set ssl cert file.
@@ -226,7 +226,7 @@ Set ssl cert file.
 
 ### `ssl_key` [plugins-outputs-webhdfs-ssl_key]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 Set ssl key file.
@@ -234,7 +234,7 @@ Set ssl key file.
 
 ### `standby_host` [plugins-outputs-webhdfs-standby_host]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `false`
 
 Standby namenode for ha hdfs.
@@ -242,7 +242,7 @@ Standby namenode for ha hdfs.
 
 ### `standby_port` [plugins-outputs-webhdfs-standby_port]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `50070`
 
 Standby namenode port for ha hdfs.
@@ -250,7 +250,7 @@ Standby namenode port for ha hdfs.
 
 ### `use_httpfs` [plugins-outputs-webhdfs-use_httpfs]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 Use httpfs mode if set to true, else webhdfs.
@@ -258,7 +258,7 @@ Use httpfs mode if set to true, else webhdfs.
 
 ### `use_kerberos_auth` [plugins-outputs-webhdfs-use_kerberos_auth]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 Set kerberos authentication.
@@ -266,7 +266,7 @@ Set kerberos authentication.
 
 ### `use_ssl_auth` [plugins-outputs-webhdfs-use_ssl_auth]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 Set ssl authentication. Note that the openssl library needs to be available to use this.
@@ -275,7 +275,7 @@ Set ssl authentication. Note that the openssl library needs to be available to u
 ### `user` [plugins-outputs-webhdfs-user]
 
 * This is a required setting.
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 The Username for webhdfs.

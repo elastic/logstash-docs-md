@@ -67,10 +67,10 @@ This plugin supports the following configuration options plus the [Common option
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`command`](plugins-inputs-exec.md#plugins-inputs-exec-command) | [string](introduction.md#string) | Yes |
-| [`ecs_compatibility`](plugins-inputs-exec.md#plugins-inputs-exec-ecs_compatibility) | [string](introduction.md#string) | No |
-| [`interval`](plugins-inputs-exec.md#plugins-inputs-exec-interval) | [number](introduction.md#number) | No |
-| [`schedule`](plugins-inputs-exec.md#plugins-inputs-exec-schedule) | [string](introduction.md#string) | No |
+| [`command`](plugins-inputs-exec.md#plugins-inputs-exec-command) | [string](value-types.md#string) | Yes |
+| [`ecs_compatibility`](plugins-inputs-exec.md#plugins-inputs-exec-ecs_compatibility) | [string](value-types.md#string) | No |
+| [`interval`](plugins-inputs-exec.md#plugins-inputs-exec-interval) | [number](value-types.md#number) | No |
+| [`schedule`](plugins-inputs-exec.md#plugins-inputs-exec-schedule) | [string](value-types.md#string) | No |
 
 Also see [Common options](plugins-inputs-exec.md#plugins-inputs-exec-common-options) for a list of options supported by all input plugins.
 
@@ -79,7 +79,7 @@ Also see [Common options](plugins-inputs-exec.md#plugins-inputs-exec-common-opti
 ### `command` [plugins-inputs-exec-command]
 
 * This is a required setting.
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 Command to run. For example, `uptime`
@@ -87,7 +87,7 @@ Command to run. For example, `uptime`
 
 ### `ecs_compatibility` [plugins-inputs-exec-ecs_compatibility]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Supported values are:
 
     * `disabled`: uses backwards compatible field names, such as `[host]`
@@ -139,7 +139,7 @@ Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)](ht
 
 ### `interval` [plugins-inputs-exec-interval]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * There is no default value for this setting.
 
 Interval to run the command. Value is in seconds.
@@ -149,7 +149,7 @@ Either `interval` or `schedule` option must be defined.
 
 ### `schedule` [plugins-inputs-exec-schedule]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 Schedule of when to periodically run command.

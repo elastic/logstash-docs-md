@@ -66,10 +66,10 @@ This plugin supports the following configuration options plus the [Common option
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`drop_original_event`](plugins-filters-metricize.md#plugins-filters-metricize-drop_original_event) | [boolean](introduction.md#boolean) | No |
-| [`metric_field_name`](plugins-filters-metricize.md#plugins-filters-metricize-metric_field_name) | [string](introduction.md#string) | No |
-| [`metrics`](plugins-filters-metricize.md#plugins-filters-metricize-metrics) | [array](introduction.md#array) | Yes |
-| [`value_field_name`](plugins-filters-metricize.md#plugins-filters-metricize-value_field_name) | [string](introduction.md#string) | No |
+| [`drop_original_event`](plugins-filters-metricize.md#plugins-filters-metricize-drop_original_event) | [boolean](value-types.md#boolean) | No |
+| [`metric_field_name`](plugins-filters-metricize.md#plugins-filters-metricize-metric_field_name) | [string](value-types.md#string) | No |
+| [`metrics`](plugins-filters-metricize.md#plugins-filters-metricize-metrics) | [array](value-types.md#array) | Yes |
+| [`value_field_name`](plugins-filters-metricize.md#plugins-filters-metricize-value_field_name) | [string](value-types.md#string) | No |
 
 Also see [Common options](plugins-filters-metricize.md#plugins-filters-metricize-common-options) for a list of options supported by all filter plugins.
 
@@ -77,7 +77,7 @@ Also see [Common options](plugins-filters-metricize.md#plugins-filters-metricize
 
 ### `drop_original_event` [plugins-filters-metricize-drop_original_event]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 Flag indicating whether the original event should be dropped or not.
@@ -85,7 +85,7 @@ Flag indicating whether the original event should be dropped or not.
 
 ### `metric_field_name` [plugins-filters-metricize-metric_field_name]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"metric"`
 
 Name of the field the metric name will be written to.
@@ -94,7 +94,7 @@ Name of the field the metric name will be written to.
 ### `metrics` [plugins-filters-metricize-metrics]
 
 * This is a required setting.
-* Value type is [array](introduction.md#array)
+* Value type is [array](value-types.md#array)
 * There is no default value for this setting.
 
 A new matrics event will be created for each metric field in this list. All fields in this list will be removed from generated events.
@@ -102,7 +102,7 @@ A new matrics event will be created for each metric field in this list. All fiel
 
 ### `value_field_name` [plugins-filters-metricize-value_field_name]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"value"`
 
 Name of the field the metric value will be written to.

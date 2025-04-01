@@ -102,22 +102,22 @@ This says that any line ending with a backslash should be combined with the foll
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`auto_flush_interval`](plugins-codecs-multiline.md#plugins-codecs-multiline-auto_flush_interval) | [number](introduction.md#number) | No |
-| [`charset`](plugins-codecs-multiline.md#plugins-codecs-multiline-charset) | [string](introduction.md#string), one of `["ASCII-8BIT", "UTF-8", "US-ASCII", "Big5", "Big5-HKSCS", "Big5-UAO", "CP949", "Emacs-Mule", "EUC-JP", "EUC-KR", "EUC-TW", "GB2312", "GB18030", "GBK", "ISO-8859-1", "ISO-8859-2", "ISO-8859-3", "ISO-8859-4", "ISO-8859-5", "ISO-8859-6", "ISO-8859-7", "ISO-8859-8", "ISO-8859-9", "ISO-8859-10", "ISO-8859-11", "ISO-8859-13", "ISO-8859-14", "ISO-8859-15", "ISO-8859-16", "KOI8-R", "KOI8-U", "Shift_JIS", "UTF-16BE", "UTF-16LE", "UTF-32BE", "UTF-32LE", "Windows-31J", "Windows-1250", "Windows-1251", "Windows-1252", "IBM437", "IBM737", "IBM775", "CP850", "IBM852", "CP852", "IBM855", "CP855", "IBM857", "IBM860", "IBM861", "IBM862", "IBM863", "IBM864", "IBM865", "IBM866", "IBM869", "Windows-1258", "GB1988", "macCentEuro", "macCroatian", "macCyrillic", "macGreek", "macIceland", "macRoman", "macRomania", "macThai", "macTurkish", "macUkraine", "CP950", "CP951", "IBM037", "stateless-ISO-2022-JP", "eucJP-ms", "CP51932", "EUC-JIS-2004", "GB12345", "ISO-2022-JP", "ISO-2022-JP-2", "CP50220", "CP50221", "Windows-1256", "Windows-1253", "Windows-1255", "Windows-1254", "TIS-620", "Windows-874", "Windows-1257", "MacJapanese", "UTF-7", "UTF8-MAC", "UTF-16", "UTF-32", "UTF8-DoCoMo", "SJIS-DoCoMo", "UTF8-KDDI", "SJIS-KDDI", "ISO-2022-JP-KDDI", "stateless-ISO-2022-JP-KDDI", "UTF8-SoftBank", "SJIS-SoftBank", "BINARY", "CP437", "CP737", "CP775", "IBM850", "CP857", "CP860", "CP861", "CP862", "CP863", "CP864", "CP865", "CP866", "CP869", "CP1258", "Big5-HKSCS:2008", "ebcdic-cp-us", "eucJP", "euc-jp-ms", "EUC-JISX0213", "eucKR", "eucTW", "EUC-CN", "eucCN", "CP936", "ISO2022-JP", "ISO2022-JP2", "ISO8859-1", "ISO8859-2", "ISO8859-3", "ISO8859-4", "ISO8859-5", "ISO8859-6", "CP1256", "ISO8859-7", "CP1253", "ISO8859-8", "CP1255", "ISO8859-9", "CP1254", "ISO8859-10", "ISO8859-11", "CP874", "ISO8859-13", "CP1257", "ISO8859-14", "ISO8859-15", "ISO8859-16", "CP878", "MacJapan", "ASCII", "ANSI_X3.4-1968", "646", "CP65000", "CP65001", "UTF-8-MAC", "UTF-8-HFS", "UCS-2BE", "UCS-4BE", "UCS-4LE", "CP932", "csWindows31J", "SJIS", "PCK", "CP1250", "CP1251", "CP1252", "external", "locale"]` | No |
-| [`ecs_compatibility`](plugins-codecs-multiline.md#plugins-codecs-multiline-ecs_compatibility) | [string](introduction.md#string) | No |
-| [`max_bytes`](plugins-codecs-multiline.md#plugins-codecs-multiline-max_bytes) | [bytes](introduction.md#bytes) | No |
-| [`max_lines`](plugins-codecs-multiline.md#plugins-codecs-multiline-max_lines) | [number](introduction.md#number) | No |
-| [`multiline_tag`](plugins-codecs-multiline.md#plugins-codecs-multiline-multiline_tag) | [string](introduction.md#string) | No |
-| [`negate`](plugins-codecs-multiline.md#plugins-codecs-multiline-negate) | [boolean](introduction.md#boolean) | No |
-| [`pattern`](plugins-codecs-multiline.md#plugins-codecs-multiline-pattern) | [string](introduction.md#string) | Yes |
-| [`patterns_dir`](plugins-codecs-multiline.md#plugins-codecs-multiline-patterns_dir) | [array](introduction.md#array) | No |
-| [`what`](plugins-codecs-multiline.md#plugins-codecs-multiline-what) | [string](introduction.md#string), one of `["previous", "next"]` | Yes |
+| [`auto_flush_interval`](plugins-codecs-multiline.md#plugins-codecs-multiline-auto_flush_interval) | [number](value-types.md#number) | No |
+| [`charset`](plugins-codecs-multiline.md#plugins-codecs-multiline-charset) | [string](value-types.md#string), one of `["ASCII-8BIT", "UTF-8", "US-ASCII", "Big5", "Big5-HKSCS", "Big5-UAO", "CP949", "Emacs-Mule", "EUC-JP", "EUC-KR", "EUC-TW", "GB2312", "GB18030", "GBK", "ISO-8859-1", "ISO-8859-2", "ISO-8859-3", "ISO-8859-4", "ISO-8859-5", "ISO-8859-6", "ISO-8859-7", "ISO-8859-8", "ISO-8859-9", "ISO-8859-10", "ISO-8859-11", "ISO-8859-13", "ISO-8859-14", "ISO-8859-15", "ISO-8859-16", "KOI8-R", "KOI8-U", "Shift_JIS", "UTF-16BE", "UTF-16LE", "UTF-32BE", "UTF-32LE", "Windows-31J", "Windows-1250", "Windows-1251", "Windows-1252", "IBM437", "IBM737", "IBM775", "CP850", "IBM852", "CP852", "IBM855", "CP855", "IBM857", "IBM860", "IBM861", "IBM862", "IBM863", "IBM864", "IBM865", "IBM866", "IBM869", "Windows-1258", "GB1988", "macCentEuro", "macCroatian", "macCyrillic", "macGreek", "macIceland", "macRoman", "macRomania", "macThai", "macTurkish", "macUkraine", "CP950", "CP951", "IBM037", "stateless-ISO-2022-JP", "eucJP-ms", "CP51932", "EUC-JIS-2004", "GB12345", "ISO-2022-JP", "ISO-2022-JP-2", "CP50220", "CP50221", "Windows-1256", "Windows-1253", "Windows-1255", "Windows-1254", "TIS-620", "Windows-874", "Windows-1257", "MacJapanese", "UTF-7", "UTF8-MAC", "UTF-16", "UTF-32", "UTF8-DoCoMo", "SJIS-DoCoMo", "UTF8-KDDI", "SJIS-KDDI", "ISO-2022-JP-KDDI", "stateless-ISO-2022-JP-KDDI", "UTF8-SoftBank", "SJIS-SoftBank", "BINARY", "CP437", "CP737", "CP775", "IBM850", "CP857", "CP860", "CP861", "CP862", "CP863", "CP864", "CP865", "CP866", "CP869", "CP1258", "Big5-HKSCS:2008", "ebcdic-cp-us", "eucJP", "euc-jp-ms", "EUC-JISX0213", "eucKR", "eucTW", "EUC-CN", "eucCN", "CP936", "ISO2022-JP", "ISO2022-JP2", "ISO8859-1", "ISO8859-2", "ISO8859-3", "ISO8859-4", "ISO8859-5", "ISO8859-6", "CP1256", "ISO8859-7", "CP1253", "ISO8859-8", "CP1255", "ISO8859-9", "CP1254", "ISO8859-10", "ISO8859-11", "CP874", "ISO8859-13", "CP1257", "ISO8859-14", "ISO8859-15", "ISO8859-16", "CP878", "MacJapan", "ASCII", "ANSI_X3.4-1968", "646", "CP65000", "CP65001", "UTF-8-MAC", "UTF-8-HFS", "UCS-2BE", "UCS-4BE", "UCS-4LE", "CP932", "csWindows31J", "SJIS", "PCK", "CP1250", "CP1251", "CP1252", "external", "locale"]` | No |
+| [`ecs_compatibility`](plugins-codecs-multiline.md#plugins-codecs-multiline-ecs_compatibility) | [string](value-types.md#string) | No |
+| [`max_bytes`](plugins-codecs-multiline.md#plugins-codecs-multiline-max_bytes) | [bytes](value-types.md#bytes) | No |
+| [`max_lines`](plugins-codecs-multiline.md#plugins-codecs-multiline-max_lines) | [number](value-types.md#number) | No |
+| [`multiline_tag`](plugins-codecs-multiline.md#plugins-codecs-multiline-multiline_tag) | [string](value-types.md#string) | No |
+| [`negate`](plugins-codecs-multiline.md#plugins-codecs-multiline-negate) | [boolean](value-types.md#boolean) | No |
+| [`pattern`](plugins-codecs-multiline.md#plugins-codecs-multiline-pattern) | [string](value-types.md#string) | Yes |
+| [`patterns_dir`](plugins-codecs-multiline.md#plugins-codecs-multiline-patterns_dir) | [array](value-types.md#array) | No |
+| [`what`](plugins-codecs-multiline.md#plugins-codecs-multiline-what) | [string](value-types.md#string), one of `["previous", "next"]` | Yes |
 
  
 
 ### `auto_flush_interval` [plugins-codecs-multiline-auto_flush_interval]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * There is no default value for this setting.
 
 The accumulation of multiple lines will be converted to an event when either a matching new line is seen or there has been no new data appended for this many seconds. No default.  If unset, no auto_flush. Units: seconds
@@ -137,7 +137,7 @@ This only affects "plain" format logs since JSON is `UTF-8` already.
 
 ### `ecs_compatibility` [plugins-codecs-multiline-ecs_compatibility]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Supported values are:
 
     * `disabled`: plugin only sets the `message` field
@@ -154,7 +154,7 @@ Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)](ht
 
 ### `max_bytes` [plugins-codecs-multiline-max_bytes]
 
-* Value type is [bytes](introduction.md#bytes)
+* Value type is [bytes](value-types.md#bytes)
 * Default value is `"10 MiB"`
 
 The accumulation of events can make logstash exit with an out of memory error if event boundaries are not correctly defined. This settings make sure to flush multiline events after reaching a number of bytes, it is used in combination max_lines.
@@ -162,7 +162,7 @@ The accumulation of events can make logstash exit with an out of memory error if
 
 ### `max_lines` [plugins-codecs-multiline-max_lines]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `500`
 
 The accumulation of events can make logstash exit with an out of memory error if event boundaries are not correctly defined. This settings make sure to flush multiline events after reaching a number of lines, it is used in combination max_bytes.
@@ -170,7 +170,7 @@ The accumulation of events can make logstash exit with an out of memory error if
 
 ### `multiline_tag` [plugins-codecs-multiline-multiline_tag]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"multiline"`
 
 Tag multiline events with a given tag. This tag will only be added to events that actually have multiple lines in them.
@@ -178,7 +178,7 @@ Tag multiline events with a given tag. This tag will only be added to events tha
 
 ### `negate` [plugins-codecs-multiline-negate]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 Negate the regexp pattern (*if not matched*).
@@ -187,7 +187,7 @@ Negate the regexp pattern (*if not matched*).
 ### `pattern` [plugins-codecs-multiline-pattern]
 
 * This is a required setting.
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 The regular expression to match.
@@ -195,7 +195,7 @@ The regular expression to match.
 
 ### `patterns_dir` [plugins-codecs-multiline-patterns_dir]
 
-* Value type is [array](introduction.md#array)
+* Value type is [array](value-types.md#array)
 * Default value is `[]`
 
 Logstash ships by default with a bunch of patterns, so you don’t necessarily need to define this yourself unless you are adding additional patterns.

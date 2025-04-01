@@ -31,9 +31,9 @@ This plugin supports the following configuration options plus the [Common option
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`command`](plugins-outputs-pipe.md#plugins-outputs-pipe-command) | [string](introduction.md#string) | Yes |
-| [`message_format`](plugins-outputs-pipe.md#plugins-outputs-pipe-message_format) | [string](introduction.md#string) | No |
-| [`ttl`](plugins-outputs-pipe.md#plugins-outputs-pipe-ttl) | [number](introduction.md#number) | No |
+| [`command`](plugins-outputs-pipe.md#plugins-outputs-pipe-command) | [string](value-types.md#string) | Yes |
+| [`message_format`](plugins-outputs-pipe.md#plugins-outputs-pipe-message_format) | [string](value-types.md#string) | No |
+| [`ttl`](plugins-outputs-pipe.md#plugins-outputs-pipe-ttl) | [number](value-types.md#number) | No |
 
 Also see [Common options](plugins-outputs-pipe.md#plugins-outputs-pipe-common-options) for a list of options supported by all output plugins.
 
@@ -42,7 +42,7 @@ Also see [Common options](plugins-outputs-pipe.md#plugins-outputs-pipe-common-op
 ### `command` [plugins-outputs-pipe-command]
 
 * This is a required setting.
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 Command line to launch and pipe to
@@ -50,7 +50,7 @@ Command line to launch and pipe to
 
 ### `message_format` [plugins-outputs-pipe-message_format]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 The format to use when writing events to the pipe. This value supports any string and can include `%{{name}}` and other dynamic strings.
@@ -60,7 +60,7 @@ If this setting is omitted, the full json representation of the event will be wr
 
 ### `ttl` [plugins-outputs-pipe-ttl]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `10`
 
 Close pipe that hasn’t been used for TTL seconds. -1 or 0 means never close.

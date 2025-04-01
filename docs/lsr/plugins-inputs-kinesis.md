@@ -25,7 +25,7 @@ For questions about the plugin, open a topic in the [Discuss](http://discuss.ela
 
 ## Description [_description_35]
 
-You can use this plugin to receive events through [AWS Kinesis](http://docs.aws.amazon.com/kinesis/latest/dev/introduction.md). This plugin uses the [Java Kinesis Client Library](http://docs.aws.amazon.com/kinesis/latest/dev/kinesis-record-processor-implementation-app-java.md). The documentation at [https://github.com/awslabs/amazon-kinesis-client](https://github.com/awslabs/amazon-kinesis-client) will be useful.
+You can use this plugin to receive events through [AWS Kinesis](http://docs.aws.amazon.com/kinesis/latest/dev/introduction.html). This plugin uses the [Java Kinesis Client Library](http://docs.aws.amazon.com/kinesis/latest/dev/kinesis-record-processor-implementation-app-java.html). The documentation at [https://github.com/awslabs/amazon-kinesis-client](https://github.com/awslabs/amazon-kinesis-client) will be useful.
 
 AWS credentials can be specified either through environment variables, or an IAM instance role. The library uses a DynamoDB table for worker coordination, so you’ll need to grant access to that as well as to the Kinesis stream. The DynamoDB table has the same name as the `application_name` configuration option, which defaults to "logstash".
 
@@ -74,18 +74,18 @@ This plugin supports the following configuration options plus the [Common option
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`application_name`](plugins-inputs-kinesis.md#plugins-inputs-kinesis-application_name) | [string](introduction.md#string) | No |
-| [`checkpoint_interval_seconds`](plugins-inputs-kinesis.md#plugins-inputs-kinesis-checkpoint_interval_seconds) | [number](introduction.md#number) | No |
-| [`http_proxy`](plugins-inputs-kinesis.md#plugins-inputs-kinesis-http_proxy) | [password](introduction.md#password) | No |
-| [`initial_position_in_stream`](plugins-inputs-kinesis.md#plugins-inputs-kinesis-initial_position_in_stream) | [string](introduction.md#string) | No |
-| [`kinesis_stream_name`](plugins-inputs-kinesis.md#plugins-inputs-kinesis-kinesis_stream_name) | [string](introduction.md#string) | Yes |
-| [`metrics`](plugins-inputs-kinesis.md#plugins-inputs-kinesis-metrics) | [string](introduction.md#string), one of `[nil, "cloudwatch"]` | No |
-| [`non_proxy_hosts`](plugins-inputs-kinesis.md#plugins-inputs-kinesis-non_proxy_hosts) | [string](introduction.md#string) | No |
-| [`profile`](plugins-inputs-kinesis.md#plugins-inputs-kinesis-profile) | [string](introduction.md#string) | No |
-| [`region`](plugins-inputs-kinesis.md#plugins-inputs-kinesis-region) | [string](introduction.md#string) | No |
-| [`role_arn`](plugins-inputs-kinesis.md#plugins-inputs-kinesis-role_arn) | [string](introduction.md#string) | No |
-| [`role_session_name`](plugins-inputs-kinesis.md#plugins-inputs-kinesis-role_session_name) | [string](introduction.md#string) | No |
-| [`additional_settings`](plugins-inputs-kinesis.md#plugins-inputs-kinesis-additional_settings) | [string](introduction.md#string) | No |
+| [`application_name`](plugins-inputs-kinesis.md#plugins-inputs-kinesis-application_name) | [string](value-types.md#string) | No |
+| [`checkpoint_interval_seconds`](plugins-inputs-kinesis.md#plugins-inputs-kinesis-checkpoint_interval_seconds) | [number](value-types.md#number) | No |
+| [`http_proxy`](plugins-inputs-kinesis.md#plugins-inputs-kinesis-http_proxy) | [password](value-types.md#password) | No |
+| [`initial_position_in_stream`](plugins-inputs-kinesis.md#plugins-inputs-kinesis-initial_position_in_stream) | [string](value-types.md#string) | No |
+| [`kinesis_stream_name`](plugins-inputs-kinesis.md#plugins-inputs-kinesis-kinesis_stream_name) | [string](value-types.md#string) | Yes |
+| [`metrics`](plugins-inputs-kinesis.md#plugins-inputs-kinesis-metrics) | [string](value-types.md#string), one of `[nil, "cloudwatch"]` | No |
+| [`non_proxy_hosts`](plugins-inputs-kinesis.md#plugins-inputs-kinesis-non_proxy_hosts) | [string](value-types.md#string) | No |
+| [`profile`](plugins-inputs-kinesis.md#plugins-inputs-kinesis-profile) | [string](value-types.md#string) | No |
+| [`region`](plugins-inputs-kinesis.md#plugins-inputs-kinesis-region) | [string](value-types.md#string) | No |
+| [`role_arn`](plugins-inputs-kinesis.md#plugins-inputs-kinesis-role_arn) | [string](value-types.md#string) | No |
+| [`role_session_name`](plugins-inputs-kinesis.md#plugins-inputs-kinesis-role_session_name) | [string](value-types.md#string) | No |
+| [`additional_settings`](plugins-inputs-kinesis.md#plugins-inputs-kinesis-additional_settings) | [string](value-types.md#string) | No |
 
 Also see [Common options](plugins-inputs-kinesis.md#plugins-inputs-kinesis-common-options) for a list of options supported by all input plugins.
 
@@ -93,7 +93,7 @@ Also see [Common options](plugins-inputs-kinesis.md#plugins-inputs-kinesis-commo
 
 ### `application_name` [plugins-inputs-kinesis-application_name]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"logstash"`
 
 The application name used for the dynamodb coordination table. Must be unique for this kinesis stream.
@@ -101,7 +101,7 @@ The application name used for the dynamodb coordination table. Must be unique fo
 
 ### `checkpoint_interval_seconds` [plugins-inputs-kinesis-checkpoint_interval_seconds]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `60`
 
 How many seconds between worker checkpoints to dynamodb.
@@ -109,7 +109,7 @@ How many seconds between worker checkpoints to dynamodb.
 
 ### `http_proxy` [plugins-inputs-kinesis-http_proxy]
 
-* Value type is [password](introduction.md#password)
+* Value type is [password](value-types.md#password)
 * There is no default value for this setting.
 
 Proxy support for Kinesis, DynamoDB, and CloudWatch (if enabled).
@@ -117,7 +117,7 @@ Proxy support for Kinesis, DynamoDB, and CloudWatch (if enabled).
 
 ### `initial_position_in_stream` [plugins-inputs-kinesis-initial_position_in_stream]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"TRIM_HORIZON"`
 
 The value for initialPositionInStream. Accepts "TRIM_HORIZON" or "LATEST".
@@ -126,7 +126,7 @@ The value for initialPositionInStream. Accepts "TRIM_HORIZON" or "LATEST".
 ### `kinesis_stream_name` [plugins-inputs-kinesis-kinesis_stream_name]
 
 * This is a required setting.
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 The kinesis stream name.
@@ -142,7 +142,7 @@ Worker metric tracking. By default this is disabled, set it to "cloudwatch" to e
 
 ### `non_proxy_hosts` [plugins-inputs-kinesis-non_proxy_hosts]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 Hosts that should be excluded from proxying, separated by the "|" (pipe) character.
@@ -150,7 +150,7 @@ Hosts that should be excluded from proxying, separated by the "|" (pipe) charact
 
 ### `profile` [plugins-inputs-kinesis-profile]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 The AWS profile name for authentication. This ensures that the `~/.aws/credentials` AWS auth provider is used. By default this is empty and the default chain will be used.
@@ -158,7 +158,7 @@ The AWS profile name for authentication. This ensures that the `~/.aws/credentia
 
 ### `region` [plugins-inputs-kinesis-region]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"us-east-1"`
 
 The AWS region for Kinesis, DynamoDB, and CloudWatch (if enabled)
@@ -166,7 +166,7 @@ The AWS region for Kinesis, DynamoDB, and CloudWatch (if enabled)
 
 ### `role_arn` [plugins-inputs-kinesis-role_arn]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 The AWS role to assume. This can be used, for example, to access a Kinesis stream in a different AWS account. This role will be assumed after the default credentials or profile credentials are created. By default this is empty and a role will not be assumed.
@@ -174,7 +174,7 @@ The AWS role to assume. This can be used, for example, to access a Kinesis strea
 
 ### `role_session_name` [plugins-inputs-kinesis-role_session_name]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `logstash`
 
 Session name to use when assuming an IAM role. This is recorded in CloudTrail logs for example.
@@ -182,7 +182,7 @@ Session name to use when assuming an IAM role. This is recorded in CloudTrail lo
 
 ### `additional_settings` [plugins-inputs-kinesis-additional_settings]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting
 
 The KCL provides several configuration options which can be set in [KinesisClientLibConfiguration](https://github.com/awslabs/amazon-kinesis-client/blob/master/amazon-kinesis-client-multilang/src/main/java/software/amazon/kinesis/coordinator/KinesisClientLibConfiguration.java). These options are configured via various function calls that all begin with `with`. Some of these functions take complex types, which are not supported. However, you may invoke any one of the `withX()` functions that take a primitive by providing key-value pairs in `snake_case`.

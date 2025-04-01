@@ -81,22 +81,22 @@ This plugin supports the following configuration options plus the [Common option
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`bucket`](plugins-outputs-google_cloud_storage.md#plugins-outputs-google_cloud_storage-bucket) | [string](introduction.md#string) | Yes |
-| [`date_pattern`](plugins-outputs-google_cloud_storage.md#plugins-outputs-google_cloud_storage-date_pattern) | [string](introduction.md#string) | No |
-| [`flush_interval_secs`](plugins-outputs-google_cloud_storage.md#plugins-outputs-google_cloud_storage-flush_interval_secs) | [number](introduction.md#number) | No |
-| [`gzip`](plugins-outputs-google_cloud_storage.md#plugins-outputs-google_cloud_storage-gzip) | [boolean](introduction.md#boolean) | No |
-| [`gzip_content_encoding`](plugins-outputs-google_cloud_storage.md#plugins-outputs-google_cloud_storage-gzip_content_encoding) | [boolean](introduction.md#boolean) | No |
-| [`include_hostname`](plugins-outputs-google_cloud_storage.md#plugins-outputs-google_cloud_storage-include_hostname) | [boolean](introduction.md#boolean) | No |
-| [`include_uuid`](plugins-outputs-google_cloud_storage.md#plugins-outputs-google_cloud_storage-include_uuid) | [boolean](introduction.md#boolean) | No |
-| [`json_key_file`](plugins-outputs-google_cloud_storage.md#plugins-outputs-google_cloud_storage-json_key_file) | [string](introduction.md#string) | No |
-| [`key_password`](plugins-outputs-google_cloud_storage.md#plugins-outputs-google_cloud_storage-key_password) | [string](introduction.md#string) | *Deprecated* |
-| [`log_file_prefix`](plugins-outputs-google_cloud_storage.md#plugins-outputs-google_cloud_storage-log_file_prefix) | [string](introduction.md#string) | No |
-| [`max_concurrent_uploads`](plugins-outputs-google_cloud_storage.md#plugins-outputs-google_cloud_storage-max_concurrent_uploads) | [number](introduction.md#number) | No |
-| [`max_file_size_kbytes`](plugins-outputs-google_cloud_storage.md#plugins-outputs-google_cloud_storage-max_file_size_kbytes) | [number](introduction.md#number) | No |
-| [`output_format`](plugins-outputs-google_cloud_storage.md#plugins-outputs-google_cloud_storage-output_format) | [string](introduction.md#string), one of `["json", "plain", nil]` | *Deprecated* |
-| [`service_account`](plugins-outputs-google_cloud_storage.md#plugins-outputs-google_cloud_storage-service_account) | [string](introduction.md#string) | *Deprecated* |
-| [`temp_directory`](plugins-outputs-google_cloud_storage.md#plugins-outputs-google_cloud_storage-temp_directory) | [string](introduction.md#string) | No |
-| [`uploader_interval_secs`](plugins-outputs-google_cloud_storage.md#plugins-outputs-google_cloud_storage-uploader_interval_secs) | [number](introduction.md#number) | No |
+| [`bucket`](plugins-outputs-google_cloud_storage.md#plugins-outputs-google_cloud_storage-bucket) | [string](value-types.md#string) | Yes |
+| [`date_pattern`](plugins-outputs-google_cloud_storage.md#plugins-outputs-google_cloud_storage-date_pattern) | [string](value-types.md#string) | No |
+| [`flush_interval_secs`](plugins-outputs-google_cloud_storage.md#plugins-outputs-google_cloud_storage-flush_interval_secs) | [number](value-types.md#number) | No |
+| [`gzip`](plugins-outputs-google_cloud_storage.md#plugins-outputs-google_cloud_storage-gzip) | [boolean](value-types.md#boolean) | No |
+| [`gzip_content_encoding`](plugins-outputs-google_cloud_storage.md#plugins-outputs-google_cloud_storage-gzip_content_encoding) | [boolean](value-types.md#boolean) | No |
+| [`include_hostname`](plugins-outputs-google_cloud_storage.md#plugins-outputs-google_cloud_storage-include_hostname) | [boolean](value-types.md#boolean) | No |
+| [`include_uuid`](plugins-outputs-google_cloud_storage.md#plugins-outputs-google_cloud_storage-include_uuid) | [boolean](value-types.md#boolean) | No |
+| [`json_key_file`](plugins-outputs-google_cloud_storage.md#plugins-outputs-google_cloud_storage-json_key_file) | [string](value-types.md#string) | No |
+| [`key_password`](plugins-outputs-google_cloud_storage.md#plugins-outputs-google_cloud_storage-key_password) | [string](value-types.md#string) | *Deprecated* |
+| [`log_file_prefix`](plugins-outputs-google_cloud_storage.md#plugins-outputs-google_cloud_storage-log_file_prefix) | [string](value-types.md#string) | No |
+| [`max_concurrent_uploads`](plugins-outputs-google_cloud_storage.md#plugins-outputs-google_cloud_storage-max_concurrent_uploads) | [number](value-types.md#number) | No |
+| [`max_file_size_kbytes`](plugins-outputs-google_cloud_storage.md#plugins-outputs-google_cloud_storage-max_file_size_kbytes) | [number](value-types.md#number) | No |
+| [`output_format`](plugins-outputs-google_cloud_storage.md#plugins-outputs-google_cloud_storage-output_format) | [string](value-types.md#string), one of `["json", "plain", nil]` | *Deprecated* |
+| [`service_account`](plugins-outputs-google_cloud_storage.md#plugins-outputs-google_cloud_storage-service_account) | [string](value-types.md#string) | *Deprecated* |
+| [`temp_directory`](plugins-outputs-google_cloud_storage.md#plugins-outputs-google_cloud_storage-temp_directory) | [string](value-types.md#string) | No |
+| [`uploader_interval_secs`](plugins-outputs-google_cloud_storage.md#plugins-outputs-google_cloud_storage-uploader_interval_secs) | [number](value-types.md#number) | No |
 
 Also see [Common options](plugins-outputs-google_cloud_storage.md#plugins-outputs-google_cloud_storage-common-options) for a list of options supported by all output plugins.
 
@@ -105,7 +105,7 @@ Also see [Common options](plugins-outputs-google_cloud_storage.md#plugins-output
 ### `bucket` [plugins-outputs-google_cloud_storage-bucket]
 
 * This is a required setting.
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 GCS bucket name, without "gs://" or any other prefix.
@@ -113,7 +113,7 @@ GCS bucket name, without "gs://" or any other prefix.
 
 ### `date_pattern` [plugins-outputs-google_cloud_storage-date_pattern]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"%Y-%m-%dT%H:00"`
 
 Time pattern for log file, defaults to hourly files. Must Time.strftime patterns: www.ruby-doc.org/core-2.0/Time.html#method-i-strftime
@@ -121,7 +121,7 @@ Time pattern for log file, defaults to hourly files. Must Time.strftime patterns
 
 ### `flush_interval_secs` [plugins-outputs-google_cloud_storage-flush_interval_secs]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `2`
 
 Flush interval in seconds for flushing writes to log files. 0 will flush on every message.
@@ -129,7 +129,7 @@ Flush interval in seconds for flushing writes to log files. 0 will flush on ever
 
 ### `gzip` [plugins-outputs-google_cloud_storage-gzip]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 Gzip output stream when writing events to log files, set `Content-Type` to `application/gzip` instead of `text/plain`, and use file suffix `.log.gz` instead of `.log`.
@@ -142,7 +142,7 @@ Added in 3.3.0.
 ::::
 
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 Gzip output stream when writing events to log files and set `Content-Encoding` to `gzip`. This will upload your files as `gzip` saving network and storage costs, but they will be transparently decompressed when you read them from the storage bucket.
@@ -159,7 +159,7 @@ Added in 3.1.0.
 ::::
 
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `true`
 
 Should the hostname be included in the file name? You may want to turn this off for privacy reasons or if you are running multiple instances of Logstash and need to match the files you create with a simple glob such as if you wanted to import files to BigQuery.
@@ -172,7 +172,7 @@ Added in 3.1.0.
 ::::
 
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 Adds a UUID to the end of a file name. You may want to enable this feature so files don’t clobber one another if you’re running multiple instances of Logstash or if you expect frequent node restarts.
@@ -180,7 +180,7 @@ Adds a UUID to the end of a file name. You may want to enable this feature so fi
 
 ### `json_key_file` [plugins-outputs-google_cloud_storage-json_key_file]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `nil`
 
 The plugin can use [Application Default Credentials (ADC)](https://cloud.google.com/docs/authentication/production), if it’s running on Compute Engine, Kubernetes Engine, App Engine, or Cloud Functions.
@@ -190,7 +190,7 @@ Outside of Google Cloud, you will need create a Service Account JSON key file th
 
 ### `key_password` [plugins-outputs-google_cloud_storage-key_password]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"notasecret"`
 
 ***Deprecated*** this feature is no longer used, the setting is now a part of [`json_key_file`](plugins-outputs-google_cloud_storage.md#plugins-outputs-google_cloud_storage-json_key_file).
@@ -198,7 +198,7 @@ Outside of Google Cloud, you will need create a Service Account JSON key file th
 
 ### `log_file_prefix` [plugins-outputs-google_cloud_storage-log_file_prefix]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"logstash_gcs"`
 
 Log file prefix. Log file will follow the format: <prefix>_hostname_date<.part?>.log
@@ -206,7 +206,7 @@ Log file prefix. Log file will follow the format: <prefix>_hostname_date<.part?>
 
 ### `max_concurrent_uploads` [plugins-outputs-google_cloud_storage-max_concurrent_uploads]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `5`
 
 Sets the maximum number of concurrent uploads to Cloud Storage at a time. Uploads are I/O bound so it makes sense to tune this paramater with regards to the network bandwidth available and the latency between your server and Cloud Storage.
@@ -214,7 +214,7 @@ Sets the maximum number of concurrent uploads to Cloud Storage at a time. Upload
 
 ### `max_file_size_kbytes` [plugins-outputs-google_cloud_storage-max_file_size_kbytes]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `10000`
 
 Sets max file size in kbytes. 0 disable max file check.
@@ -238,7 +238,7 @@ Note: if you want to use a codec you MUST not set this value.
 ### `service_account` [plugins-outputs-google_cloud_storage-service_account]
 
 * This is a required setting.
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 ***Deprecated*** this feature is no longer used, the setting is now a part of [`json_key_file`](plugins-outputs-google_cloud_storage.md#plugins-outputs-google_cloud_storage-json_key_file).
@@ -246,7 +246,7 @@ Note: if you want to use a codec you MUST not set this value.
 
 ### `temp_directory` [plugins-outputs-google_cloud_storage-temp_directory]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `""`
 
 Directory where temporary files are stored. Defaults to /tmp/logstash-gcs-<random-suffix>
@@ -254,7 +254,7 @@ Directory where temporary files are stored. Defaults to /tmp/logstash-gcs-<rando
 
 ### `uploader_interval_secs` [plugins-outputs-google_cloud_storage-uploader_interval_secs]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `60`
 
 Uploader interval when uploading new files to GCS. Adjust time based on your time pattern (for example, for hourly files, this interval can be around one hour).

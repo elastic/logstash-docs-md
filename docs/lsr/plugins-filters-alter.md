@@ -39,9 +39,9 @@ This plugin supports the following configuration options plus the [Common option
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`coalesce`](plugins-filters-alter.md#plugins-filters-alter-coalesce) | [array](introduction.md#array) | No |
-| [`condrewrite`](plugins-filters-alter.md#plugins-filters-alter-condrewrite) | [array](introduction.md#array) | No |
-| [`condrewriteother`](plugins-filters-alter.md#plugins-filters-alter-condrewriteother) | [array](introduction.md#array) | No |
+| [`coalesce`](plugins-filters-alter.md#plugins-filters-alter-coalesce) | [array](value-types.md#array) | No |
+| [`condrewrite`](plugins-filters-alter.md#plugins-filters-alter-condrewrite) | [array](value-types.md#array) | No |
+| [`condrewriteother`](plugins-filters-alter.md#plugins-filters-alter-condrewriteother) | [array](value-types.md#array) | No |
 
 Also see [Common options](plugins-filters-alter.md#plugins-filters-alter-common-options) for a list of options supported by all filter plugins.
 
@@ -49,7 +49,7 @@ Also see [Common options](plugins-filters-alter.md#plugins-filters-alter-common-
 
 ### `coalesce` [plugins-filters-alter-coalesce]
 
-* Value type is [array](introduction.md#array)
+* Value type is [array](value-types.md#array)
 * There is no default value for this setting.
 
 Sets the value of field_name to the first nonnull expression among its arguments.
@@ -69,7 +69,7 @@ Example:
 
 ### `condrewrite` [plugins-filters-alter-condrewrite]
 
-* Value type is [array](introduction.md#array)
+* Value type is [array](value-types.md#array)
 * There is no default value for this setting.
 
 Change the content of the field to the specified value if the actual content is equal to the expected one.
@@ -91,7 +91,7 @@ Example:
 
 ### `condrewriteother` [plugins-filters-alter-condrewriteother]
 
-* Value type is [array](introduction.md#array)
+* Value type is [array](value-types.md#array)
 * There is no default value for this setting.
 
 Change the content of the field to the specified value if the content of another field is equal to the expected one.

@@ -104,31 +104,31 @@ To mitigate dropped packets, make sure to increase the Linux kernel receive buff
 | Setting | Input type | Required |
 | --- | --- | --- |
 | [`cache_save_path`](plugins-codecs-netflow.md#plugins-codecs-netflow-cache_save_path) | a valid filesystem path | No |
-| [`cache_ttl`](plugins-codecs-netflow.md#plugins-codecs-netflow-cache_ttl) | [number](introduction.md#number) | No |
-| [`include_flowset_id`](plugins-codecs-netflow.md#plugins-codecs-netflow-include_flowset_id) | [boolean](introduction.md#boolean) | No |
+| [`cache_ttl`](plugins-codecs-netflow.md#plugins-codecs-netflow-cache_ttl) | [number](value-types.md#number) | No |
+| [`include_flowset_id`](plugins-codecs-netflow.md#plugins-codecs-netflow-include_flowset_id) | [boolean](value-types.md#boolean) | No |
 | [`ipfix_definitions`](plugins-codecs-netflow.md#plugins-codecs-netflow-ipfix_definitions) | a valid filesystem path | No |
 | [`netflow_definitions`](plugins-codecs-netflow.md#plugins-codecs-netflow-netflow_definitions) | a valid filesystem path | No |
-| [`target`](plugins-codecs-netflow.md#plugins-codecs-netflow-target) | [string](introduction.md#string) | No |
-| [`versions`](plugins-codecs-netflow.md#plugins-codecs-netflow-versions) | [array](introduction.md#array) | No |
+| [`target`](plugins-codecs-netflow.md#plugins-codecs-netflow-target) | [string](value-types.md#string) | No |
+| [`versions`](plugins-codecs-netflow.md#plugins-codecs-netflow-versions) | [array](value-types.md#array) | No |
 
  
 
 ### `cache_save_path` [plugins-codecs-netflow-cache_save_path]
 
-* Value type is [path](introduction.md#path)
+* Value type is [path](value-types.md#path)
 * There is no default value for this setting.
 
 Enables the template cache and saves it in the specified directory. This minimizes data loss after Logstash restarts because the codec doesn’t have to wait for the arrival of templates, but instead reload already received templates received during previous runs.
 
 Template caches are saved as:
 
-* [path](introduction.md#path)/netflow_templates.cache for Netflow v9 templates.
-* [path](introduction.md#path)/ipfix_templates.cache for IPFIX templates.
+* [path](value-types.md#path)/netflow_templates.cache for Netflow v9 templates.
+* [path](value-types.md#path)/ipfix_templates.cache for IPFIX templates.
 
 
 ### `cache_ttl` [plugins-codecs-netflow-cache_ttl]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `4000`
 
 Netflow v9/v10 template cache TTL (seconds)
@@ -136,7 +136,7 @@ Netflow v9/v10 template cache TTL (seconds)
 
 ### `include_flowset_id` [plugins-codecs-netflow-include_flowset_id]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 Only makes sense for ipfix, v9 already includes this Setting to true will include the flowset_id in events Allows you to work with sequences, for instance with the aggregate filter
@@ -144,7 +144,7 @@ Only makes sense for ipfix, v9 already includes this Setting to true will includ
 
 ### `ipfix_definitions` [plugins-codecs-netflow-ipfix_definitions]
 
-* Value type is [path](introduction.md#path)
+* Value type is [path](value-types.md#path)
 * There is no default value for this setting.
 
 Override YAML file containing IPFIX field definitions
@@ -167,7 +167,7 @@ See [https://github.com/logstash-plugins/logstash-codec-netflow/blob/master/lib/
 
 ### `netflow_definitions` [plugins-codecs-netflow-netflow_definitions]
 
-* Value type is [path](introduction.md#path)
+* Value type is [path](value-types.md#path)
 * There is no default value for this setting.
 
 Override YAML file containing Netflow field definitions
@@ -190,7 +190,7 @@ See [https://github.com/logstash-plugins/logstash-codec-netflow/blob/master/lib/
 
 ### `target` [plugins-codecs-netflow-target]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"netflow"`
 
 Specify into what field you want the Netflow data.
@@ -198,7 +198,7 @@ Specify into what field you want the Netflow data.
 
 ### `versions` [plugins-codecs-netflow-versions]
 
-* Value type is [array](introduction.md#array)
+* Value type is [array](value-types.md#array)
 * Default value is `[5, 9, 10]`
 
 Specify which Netflow versions you will accept.

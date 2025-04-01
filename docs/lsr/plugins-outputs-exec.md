@@ -54,8 +54,8 @@ This plugin supports the following configuration options plus the [Common option
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`command`](plugins-outputs-exec.md#plugins-outputs-exec-command) | [string](introduction.md#string) | Yes |
-| [`quiet`](plugins-outputs-exec.md#plugins-outputs-exec-quiet) | [boolean](introduction.md#boolean) | No |
+| [`command`](plugins-outputs-exec.md#plugins-outputs-exec-command) | [string](value-types.md#string) | Yes |
+| [`quiet`](plugins-outputs-exec.md#plugins-outputs-exec-quiet) | [boolean](value-types.md#boolean) | No |
 
 Also see [Common options](plugins-outputs-exec.md#plugins-outputs-exec-common-options) for a list of options supported by all output plugins.
 
@@ -64,7 +64,7 @@ Also see [Common options](plugins-outputs-exec.md#plugins-outputs-exec-common-op
 ### `command` [plugins-outputs-exec-command]
 
 * This is a required setting.
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 Command line to execute via subprocess. Use `dtach` or `screen` to make it non blocking. This value can include `%{{name}}` and other dynamic strings.
@@ -72,7 +72,7 @@ Command line to execute via subprocess. Use `dtach` or `screen` to make it non b
 
 ### `quiet` [plugins-outputs-exec-quiet]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 display the result of the command to the terminal

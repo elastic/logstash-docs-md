@@ -134,19 +134,19 @@ This plugin supports the following configuration options plus the [Common option
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`project_id`](plugins-outputs-google_pubsub.md#plugins-outputs-google_pubsub-project_id) | [string](introduction.md#string) | Yes |
-| [`topic`](plugins-outputs-google_pubsub.md#plugins-outputs-google_pubsub-topic) | [string](introduction.md#string) | Yes |
-| [`json_key_file`](plugins-outputs-google_pubsub.md#plugins-outputs-google_pubsub-json_key_file) | [path](introduction.md#path) | No |
-| [`delay_threshold_secs`](plugins-outputs-google_pubsub.md#plugins-outputs-google_pubsub-delay_threshold_secs) | [number](introduction.md#number) | No |
-| [`message_count_threshold`](plugins-outputs-google_pubsub.md#plugins-outputs-google_pubsub-message_count_threshold) | [number](introduction.md#number) | No |
-| [`request_byte_threshold`](plugins-outputs-google_pubsub.md#plugins-outputs-google_pubsub-request_byte_threshold) | [bytes](introduction.md#bytes) | No |
-| [`attributes`](plugins-outputs-google_pubsub.md#plugins-outputs-google_pubsub-attributes) | [hash](introduction.md#hash) | No |
+| [`project_id`](plugins-outputs-google_pubsub.md#plugins-outputs-google_pubsub-project_id) | [string](value-types.md#string) | Yes |
+| [`topic`](plugins-outputs-google_pubsub.md#plugins-outputs-google_pubsub-topic) | [string](value-types.md#string) | Yes |
+| [`json_key_file`](plugins-outputs-google_pubsub.md#plugins-outputs-google_pubsub-json_key_file) | [path](value-types.md#path) | No |
+| [`delay_threshold_secs`](plugins-outputs-google_pubsub.md#plugins-outputs-google_pubsub-delay_threshold_secs) | [number](value-types.md#number) | No |
+| [`message_count_threshold`](plugins-outputs-google_pubsub.md#plugins-outputs-google_pubsub-message_count_threshold) | [number](value-types.md#number) | No |
+| [`request_byte_threshold`](plugins-outputs-google_pubsub.md#plugins-outputs-google_pubsub-request_byte_threshold) | [bytes](value-types.md#bytes) | No |
+| [`attributes`](plugins-outputs-google_pubsub.md#plugins-outputs-google_pubsub-attributes) | [hash](value-types.md#hash) | No |
 
 Also see [Common options](plugins-outputs-google_pubsub.md#plugins-outputs-google_pubsub-common-options) for a list of options supported by all input plugins.
 
 ### `project_id` [plugins-outputs-google_pubsub-project_id]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 Google Cloud Project ID (name, not number).
@@ -154,7 +154,7 @@ Google Cloud Project ID (name, not number).
 
 ### `topic` [plugins-outputs-google_pubsub-topic]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 Google Cloud Pub/Sub Topic. You must create the topic manually before running this plugin.
@@ -162,7 +162,7 @@ Google Cloud Pub/Sub Topic. You must create the topic manually before running th
 
 ### `json_key_file` [plugins-outputs-google_pubsub-json_key_file]
 
-* Value type is [path](introduction.md#path)
+* Value type is [path](value-types.md#path)
 * There is no default value for this setting.
 
 The path to the key to authenticate your user to the bucket. This service user *must* have the `pubsub.topics.publish` permission so it can publish to the topic.
@@ -172,7 +172,7 @@ If Logstash is running within Google Compute Engine and no `json_key_file` is de
 
 ### `delay_threshold_secs` [plugins-outputs-google_pubsub-delay_threshold_secs]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default is: `5`
 
 Send the batch once this delay has passed, from the time the first message is queued. Must be greater than 0.
@@ -180,7 +180,7 @@ Send the batch once this delay has passed, from the time the first message is qu
 
 ### `message_count_threshold` [plugins-outputs-google_pubsub-message_count_threshold]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default is: `100`
 
 Once this many messages are queued, send all the messages in a single call, even if the delay threshold hasn’t elapsed yet. Must be < 1000. A value of 0 will cause messages to instantly be sent but will reduce total throughput due to overhead.
@@ -188,7 +188,7 @@ Once this many messages are queued, send all the messages in a single call, even
 
 ### `request_byte_threshold` [plugins-outputs-google_pubsub-request_byte_threshold]
 
-* Value type is [bytes](introduction.md#bytes)
+* Value type is [bytes](value-types.md#bytes)
 * Default is: `1000000`
 
 Once the number of bytes in the batched request reaches this threshold, send all of the messages in a single call, even if neither the delay or message count thresholds have been exceeded yet. This includes full message payload size, including any attributes set.
@@ -196,7 +196,7 @@ Once the number of bytes in the batched request reaches this threshold, send all
 
 ### `attributes` [plugins-outputs-google_pubsub-attributes]
 
-* Value type is [hash](introduction.md#hash)
+* Value type is [hash](value-types.md#hash)
 * Default is: `{}`
 
 Attributes to add to the message in key: value formats. Keys and values MUST be strings.

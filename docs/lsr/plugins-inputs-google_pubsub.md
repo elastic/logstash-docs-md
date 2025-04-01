@@ -148,12 +148,12 @@ This plugin supports the following configuration options plus the [Common option
 | Setting | Input type | Required |
 | --- | --- | --- |
 | [`json_key_file`](plugins-inputs-google_pubsub.md#plugins-inputs-google_pubsub-json_key_file) | a valid filesystem path | No |
-| [`max_messages`](plugins-inputs-google_pubsub.md#plugins-inputs-google_pubsub-max_messages) | [number](introduction.md#number) | Yes |
-| [`project_id`](plugins-inputs-google_pubsub.md#plugins-inputs-google_pubsub-project_id) | [string](introduction.md#string) | Yes |
-| [`subscription`](plugins-inputs-google_pubsub.md#plugins-inputs-google_pubsub-subscription) | [string](introduction.md#string) | Yes |
-| [`topic`](plugins-inputs-google_pubsub.md#plugins-inputs-google_pubsub-topic) | [string](introduction.md#string) | Yes |
-| [`include_metadata`](plugins-inputs-google_pubsub.md#plugins-inputs-google_pubsub-include_metadata) | [boolean](introduction.md#boolean) | No |
-| [`create_subscription`](plugins-inputs-google_pubsub.md#plugins-inputs-google_pubsub-create_subscription) | [boolean](introduction.md#boolean) | No |
+| [`max_messages`](plugins-inputs-google_pubsub.md#plugins-inputs-google_pubsub-max_messages) | [number](value-types.md#number) | Yes |
+| [`project_id`](plugins-inputs-google_pubsub.md#plugins-inputs-google_pubsub-project_id) | [string](value-types.md#string) | Yes |
+| [`subscription`](plugins-inputs-google_pubsub.md#plugins-inputs-google_pubsub-subscription) | [string](value-types.md#string) | Yes |
+| [`topic`](plugins-inputs-google_pubsub.md#plugins-inputs-google_pubsub-topic) | [string](value-types.md#string) | Yes |
+| [`include_metadata`](plugins-inputs-google_pubsub.md#plugins-inputs-google_pubsub-include_metadata) | [boolean](value-types.md#boolean) | No |
+| [`create_subscription`](plugins-inputs-google_pubsub.md#plugins-inputs-google_pubsub-create_subscription) | [boolean](value-types.md#boolean) | No |
 
 Also see [Common options](plugins-inputs-google_pubsub.md#plugins-inputs-google_pubsub-common-options) for a list of options supported by all input plugins.
 
@@ -161,7 +161,7 @@ Also see [Common options](plugins-inputs-google_pubsub.md#plugins-inputs-google_
 
 ### `json_key_file` [plugins-inputs-google_pubsub-json_key_file]
 
-* Value type is [path](introduction.md#path)
+* Value type is [path](value-types.md#path)
 * There is no default value for this setting.
 
 If logstash is running within Google Compute Engine, the plugin will use GCE’s Application Default Credentials. Outside of GCE, you will need to specify a Service Account JSON key file.
@@ -170,7 +170,7 @@ If logstash is running within Google Compute Engine, the plugin will use GCE’s
 ### `max_messages` [plugins-inputs-google_pubsub-max_messages]
 
 * This is a required setting.
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `5`
 
 The maximum number of messages returned per request. The Pub/Sub system may return fewer than the number specified.
@@ -179,7 +179,7 @@ The maximum number of messages returned per request. The Pub/Sub system may retu
 ### `project_id` [plugins-inputs-google_pubsub-project_id]
 
 * This is a required setting.
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 Google Cloud Project ID (name, not number).
@@ -188,14 +188,14 @@ Google Cloud Project ID (name, not number).
 ### `subscription` [plugins-inputs-google_pubsub-subscription]
 
 * This is a required setting.
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 
 ### `topic` [plugins-inputs-google_pubsub-topic]
 
 * This is a required setting.
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 Google Cloud Pub/Sub Topic and Subscription. Note that the topic must be created manually with Cloud Logging pre-configured export to PubSub configured to use the defined topic. The subscription will be created automatically by the plugin.
@@ -203,7 +203,7 @@ Google Cloud Pub/Sub Topic and Subscription. Note that the topic must be created
 
 ### `include_metadata` [plugins-inputs-google_pubsub-include_metadata]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`.
 
 If set true, will include the full message data in the `[@metadata][pubsub_message]` field.
@@ -216,7 +216,7 @@ Added in 1.2.0.
 ::::
 
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`.
 
 If true, the plugin will try to create the subscription before publishing. Note: this requires additional permissions to be granted to the client and is *not* recommended for most use-cases.

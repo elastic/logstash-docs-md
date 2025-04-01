@@ -40,15 +40,15 @@ This plugin supports the following configuration options plus the [Common option
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`create_if_deleted`](plugins-outputs-file.md#plugins-outputs-file-create_if_deleted) | [boolean](introduction.md#boolean) | No |
-| [`dir_mode`](plugins-outputs-file.md#plugins-outputs-file-dir_mode) | [number](introduction.md#number) | No |
-| [`file_mode`](plugins-outputs-file.md#plugins-outputs-file-file_mode) | [number](introduction.md#number) | No |
-| [`filename_failure`](plugins-outputs-file.md#plugins-outputs-file-filename_failure) | [string](introduction.md#string) | No |
-| [`flush_interval`](plugins-outputs-file.md#plugins-outputs-file-flush_interval) | [number](introduction.md#number) | No |
-| [`gzip`](plugins-outputs-file.md#plugins-outputs-file-gzip) | [boolean](introduction.md#boolean) | No |
-| [`path`](plugins-outputs-file.md#plugins-outputs-file-path) | [string](introduction.md#string) | Yes |
-| [`stale_cleanup_interval`](plugins-outputs-file.md#plugins-outputs-file-stale_cleanup_interval) | [number](introduction.md#number) | No |
-| [`write_behavior`](plugins-outputs-file.md#plugins-outputs-file-write_behavior) | [string](introduction.md#string) | No |
+| [`create_if_deleted`](plugins-outputs-file.md#plugins-outputs-file-create_if_deleted) | [boolean](value-types.md#boolean) | No |
+| [`dir_mode`](plugins-outputs-file.md#plugins-outputs-file-dir_mode) | [number](value-types.md#number) | No |
+| [`file_mode`](plugins-outputs-file.md#plugins-outputs-file-file_mode) | [number](value-types.md#number) | No |
+| [`filename_failure`](plugins-outputs-file.md#plugins-outputs-file-filename_failure) | [string](value-types.md#string) | No |
+| [`flush_interval`](plugins-outputs-file.md#plugins-outputs-file-flush_interval) | [number](value-types.md#number) | No |
+| [`gzip`](plugins-outputs-file.md#plugins-outputs-file-gzip) | [boolean](value-types.md#boolean) | No |
+| [`path`](plugins-outputs-file.md#plugins-outputs-file-path) | [string](value-types.md#string) | Yes |
+| [`stale_cleanup_interval`](plugins-outputs-file.md#plugins-outputs-file-stale_cleanup_interval) | [number](value-types.md#number) | No |
+| [`write_behavior`](plugins-outputs-file.md#plugins-outputs-file-write_behavior) | [string](value-types.md#string) | No |
 
 Also see [Common options](plugins-outputs-file.md#plugins-outputs-file-common-options) for a list of options supported by all output plugins.
 
@@ -56,7 +56,7 @@ Also see [Common options](plugins-outputs-file.md#plugins-outputs-file-common-op
 
 ### `create_if_deleted` [plugins-outputs-file-create_if_deleted]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `true`
 
 If the configured file is deleted, but an event is handled by the plugin, the plugin will recreate the file. Default ⇒ true
@@ -64,7 +64,7 @@ If the configured file is deleted, but an event is handled by the plugin, the pl
 
 ### `dir_mode` [plugins-outputs-file-dir_mode]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `-1`
 
 Dir access mode to use. Note that due to the bug in jruby system umask is ignored on linux: [https://github.com/jruby/jruby/issues/3426](https://github.com/jruby/jruby/issues/3426) Setting it to -1 uses default OS value. Example: `"dir_mode" => 0750`
@@ -72,7 +72,7 @@ Dir access mode to use. Note that due to the bug in jruby system umask is ignore
 
 ### `file_mode` [plugins-outputs-file-file_mode]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `-1`
 
 File access mode to use. Note that due to the bug in jruby system umask is ignored on linux: [https://github.com/jruby/jruby/issues/3426](https://github.com/jruby/jruby/issues/3426) Setting it to -1 uses default OS value. Example: `"file_mode" => 0640`
@@ -80,7 +80,7 @@ File access mode to use. Note that due to the bug in jruby system umask is ignor
 
 ### `filename_failure` [plugins-outputs-file-filename_failure]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"_filepath_failures"`
 
 If the generated path is invalid, the events will be saved into this file and inside the defined path.
@@ -88,7 +88,7 @@ If the generated path is invalid, the events will be saved into this file and in
 
 ### `flush_interval` [plugins-outputs-file-flush_interval]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `2`
 
 Flush interval (in seconds) for flushing writes to log files. 0 will flush on every message.
@@ -96,7 +96,7 @@ Flush interval (in seconds) for flushing writes to log files. 0 will flush on ev
 
 ### `gzip` [plugins-outputs-file-gzip]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 Gzip the output stream before writing to disk.
@@ -105,7 +105,7 @@ Gzip the output stream before writing to disk.
 ### `path` [plugins-outputs-file-path]
 
 * This is a required setting.
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 The path to the file to write. Event fields can be used here, like `/var/log/logstash/%{{host}}/%{{application}}` One may also utilize the path option for date-based log rotation via the joda time format. This will use the event timestamp. E.g.: `path => "./test-%{+YYYY-MM-dd}.txt"` to create `./test-2013-05-29.txt`
@@ -115,7 +115,7 @@ If you use an absolute path you cannot start with a dynamic string. E.g: `/%{{my
 
 ### `stale_cleanup_interval` [plugins-outputs-file-stale_cleanup_interval]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `10`
 
 Defines the interval, in seconds, between the stale files cleanup runs. The stale files cleanup cycle closes inactive files (i.e files not written to since the last cycle).
@@ -123,7 +123,7 @@ Defines the interval, in seconds, between the stale files cleanup runs. The stal
 
 ### `write_behavior` [plugins-outputs-file-write_behavior]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `append`
 
 If `append`, the file will be opened for appending and each new event will be written at the end of the file. If `overwrite`, the file will be truncated before writing and only the most recent event will appear in the file.

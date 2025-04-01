@@ -45,12 +45,12 @@ This plugin supports the following configuration options plus the [Common option
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`data_timeout`](plugins-inputs-unix.md#plugins-inputs-unix-data_timeout) | [number](introduction.md#number) | No |
-| [`ecs_compatibility`](plugins-inputs-unix.md#plugins-inputs-unix-ecs_compatibility) | [string](introduction.md#string) | No |
-| [`force_unlink`](plugins-inputs-unix.md#plugins-inputs-unix-force_unlink) | [boolean](introduction.md#boolean) | No |
-| [`mode`](plugins-inputs-unix.md#plugins-inputs-unix-mode) | [string](introduction.md#string), one of `["server", "client"]` | No |
-| [`path`](plugins-inputs-unix.md#plugins-inputs-unix-path) | [string](introduction.md#string) | Yes |
-| [`socket_not_present_retry_interval_seconds`](plugins-inputs-unix.md#plugins-inputs-unix-socket_not_present_retry_interval_seconds) | [number](introduction.md#number) | Yes |
+| [`data_timeout`](plugins-inputs-unix.md#plugins-inputs-unix-data_timeout) | [number](value-types.md#number) | No |
+| [`ecs_compatibility`](plugins-inputs-unix.md#plugins-inputs-unix-ecs_compatibility) | [string](value-types.md#string) | No |
+| [`force_unlink`](plugins-inputs-unix.md#plugins-inputs-unix-force_unlink) | [boolean](value-types.md#boolean) | No |
+| [`mode`](plugins-inputs-unix.md#plugins-inputs-unix-mode) | [string](value-types.md#string), one of `["server", "client"]` | No |
+| [`path`](plugins-inputs-unix.md#plugins-inputs-unix-path) | [string](value-types.md#string) | Yes |
+| [`socket_not_present_retry_interval_seconds`](plugins-inputs-unix.md#plugins-inputs-unix-socket_not_present_retry_interval_seconds) | [number](value-types.md#number) | Yes |
 
 Also see [Common options](plugins-inputs-unix.md#plugins-inputs-unix-common-options) for a list of options supported by all input plugins.
 
@@ -58,7 +58,7 @@ Also see [Common options](plugins-inputs-unix.md#plugins-inputs-unix-common-opti
 
 ### `data_timeout` [plugins-inputs-unix-data_timeout]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `-1`
 
 The *read* timeout in seconds. If a particular connection is idle for more than this timeout period, we will assume it is dead and close it.
@@ -68,7 +68,7 @@ If you never want to timeout, use -1.
 
 ### `ecs_compatibility` [plugins-inputs-unix-ecs_compatibility]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Supported values are:
 
     * `disabled`: uses backwards compatible field names, such as `[host]`
@@ -106,7 +106,7 @@ Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)](ht
 
 ### `force_unlink` [plugins-inputs-unix-force_unlink]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 Remove socket file in case of EADDRINUSE failure
@@ -123,7 +123,7 @@ Mode to operate in. `server` listens for client connections, `client` connects t
 ### `path` [plugins-inputs-unix-path]
 
 * This is a required setting.
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 When mode is `server`, the path to listen on. When mode is `client`, the path to connect to.
@@ -132,7 +132,7 @@ When mode is `server`, the path to listen on. When mode is `client`, the path to
 ### `socket_not_present_retry_interval_seconds` [plugins-inputs-unix-socket_not_present_retry_interval_seconds]
 
 * This is a required setting.
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `5`
 
 Amount of time in seconds to wait if the socket file is not present, before retrying. Only positive values are allowed.

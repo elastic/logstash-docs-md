@@ -56,7 +56,7 @@ This plugin supports the following configuration options plus the [Common option
 | Setting | Input type | Required |
 | --- | --- | --- |
 | [`commandfile`](plugins-outputs-nagios.md#plugins-outputs-nagios-commandfile) | <<,>> | No |
-| [`nagios_level`](plugins-outputs-nagios.md#plugins-outputs-nagios-nagios_level) | [string](introduction.md#string), one of `["0", "1", "2", "3"]` | No |
+| [`nagios_level`](plugins-outputs-nagios.md#plugins-outputs-nagios-nagios_level) | [string](value-types.md#string), one of `["0", "1", "2", "3"]` | No |
 
 Also see [Common options](plugins-outputs-nagios.md#plugins-outputs-nagios-common-options) for a list of options supported by all output plugins.
 
@@ -64,7 +64,7 @@ Also see [Common options](plugins-outputs-nagios.md#plugins-outputs-nagios-commo
 
 ### `commandfile` [plugins-outputs-nagios-commandfile]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"/var/lib/nagios3/rw/nagios.cmd"`
 
 The full path to your Nagios command file.

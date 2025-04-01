@@ -40,8 +40,8 @@ This plugin supports the following configuration options plus the [Common option
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`clones`](plugins-filters-clone.md#plugins-filters-clone-clones) | [array](introduction.md#array) | Yes |
-| [`ecs_compatibility`](plugins-filters-clone.md#plugins-filters-clone-ecs_compatibility) | [string](introduction.md#string) | No |
+| [`clones`](plugins-filters-clone.md#plugins-filters-clone-clones) | [array](value-types.md#array) | Yes |
+| [`ecs_compatibility`](plugins-filters-clone.md#plugins-filters-clone-ecs_compatibility) | [string](value-types.md#string) | No |
 
 Also see [Common options](plugins-filters-clone.md#plugins-filters-clone-common-options) for a list of options supported by all filter plugins.
 
@@ -50,7 +50,7 @@ Also see [Common options](plugins-filters-clone.md#plugins-filters-clone-common-
 ### `clones` [plugins-filters-clone-clones]
 
 * This is a required setting.
-* Value type is [array](introduction.md#array)
+* Value type is [array](value-types.md#array)
 * There is no default value for this setting.
 * a new clone will be created with a `type` of the given value in this list when ECS is disabled
 * a new clone will be created with a `tags` of the given value in this list when ECS is enabled
@@ -60,7 +60,7 @@ Note: setting an empty array will not create any clones. A warning message is lo
 
 ### `ecs_compatibility` [plugins-filters-clone-ecs_compatibility]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Supported values are:
 
     * `disabled`: does not use ECS-compatible field names

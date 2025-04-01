@@ -57,9 +57,9 @@ This plugin supports the following configuration options plus the [Common option
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`field`](plugins-filters-split.md#plugins-filters-split-field) | [string](introduction.md#string) | No |
-| [`target`](plugins-filters-split.md#plugins-filters-split-target) | [string](introduction.md#string) | No |
-| [`terminator`](plugins-filters-split.md#plugins-filters-split-terminator) | [string](introduction.md#string) | No |
+| [`field`](plugins-filters-split.md#plugins-filters-split-field) | [string](value-types.md#string) | No |
+| [`target`](plugins-filters-split.md#plugins-filters-split-target) | [string](value-types.md#string) | No |
+| [`terminator`](plugins-filters-split.md#plugins-filters-split-terminator) | [string](value-types.md#string) | No |
 
 Also see [Common options](plugins-filters-split.md#plugins-filters-split-common-options) for a list of options supported by all filter plugins.
 
@@ -67,7 +67,7 @@ Also see [Common options](plugins-filters-split.md#plugins-filters-split-common-
 
 ### `field` [plugins-filters-split-field]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"message"`
 
 The field which value is split by the terminator. Can be a multiline message or the ID of an array. Nested arrays are referenced like: "[object_id][array_id]"
@@ -75,7 +75,7 @@ The field which value is split by the terminator. Can be a multiline message or 
 
 ### `target` [plugins-filters-split-target]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 The field within the new event which the value is split into. If not set, the target field defaults to split field name.
@@ -83,7 +83,7 @@ The field within the new event which the value is split into. If not set, the ta
 
 ### `terminator` [plugins-filters-split-terminator]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"\n"`
 
 The string to split on. This is usually a line terminator, but can be any string. If you are splitting a JSON array into multiple events, you can ignore this field.

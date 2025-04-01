@@ -164,12 +164,12 @@ This plugin supports the following configuration options plus the [Common option
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`after_count`](plugins-filters-throttle.md#plugins-filters-throttle-after_count) | [number](introduction.md#number) | No |
-| [`before_count`](plugins-filters-throttle.md#plugins-filters-throttle-before_count) | [number](introduction.md#number) | No |
-| [`key`](plugins-filters-throttle.md#plugins-filters-throttle-key) | [string](introduction.md#string) | Yes |
-| [`max_age`](plugins-filters-throttle.md#plugins-filters-throttle-max_age) | [number](introduction.md#number) | No |
-| [`max_counters`](plugins-filters-throttle.md#plugins-filters-throttle-max_counters) | [number](introduction.md#number) | No |
-| [`period`](plugins-filters-throttle.md#plugins-filters-throttle-period) | [string](introduction.md#string) | No |
+| [`after_count`](plugins-filters-throttle.md#plugins-filters-throttle-after_count) | [number](value-types.md#number) | No |
+| [`before_count`](plugins-filters-throttle.md#plugins-filters-throttle-before_count) | [number](value-types.md#number) | No |
+| [`key`](plugins-filters-throttle.md#plugins-filters-throttle-key) | [string](value-types.md#string) | Yes |
+| [`max_age`](plugins-filters-throttle.md#plugins-filters-throttle-max_age) | [number](value-types.md#number) | No |
+| [`max_counters`](plugins-filters-throttle.md#plugins-filters-throttle-max_counters) | [number](value-types.md#number) | No |
+| [`period`](plugins-filters-throttle.md#plugins-filters-throttle-period) | [string](value-types.md#string) | No |
 
 Also see [Common options](plugins-filters-throttle.md#plugins-filters-throttle-common-options) for a list of options supported by all filter plugins.
 
@@ -177,7 +177,7 @@ Also see [Common options](plugins-filters-throttle.md#plugins-filters-throttle-c
 
 ### `after_count` [plugins-filters-throttle-after_count]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `-1`
 
 Events greater than this count will be throttled.  Setting this value to -1, the default, will cause no events to be throttled based on the upper bound.
@@ -185,7 +185,7 @@ Events greater than this count will be throttled.  Setting this value to -1, the
 
 ### `before_count` [plugins-filters-throttle-before_count]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `-1`
 
 Events less than this count will be throttled.  Setting this value to -1, the default, will cause no events to be throttled based on the lower bound.
@@ -194,7 +194,7 @@ Events less than this count will be throttled.  Setting this value to -1, the de
 ### `key` [plugins-filters-throttle-key]
 
 * This is a required setting.
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 The key used to identify events.  Events with the same key are grouped together. Field substitutions are allowed, so you can combine multiple fields.
@@ -202,7 +202,7 @@ The key used to identify events.  Events with the same key are grouped together.
 
 ### `max_age` [plugins-filters-throttle-max_age]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `3600`
 
 The maximum age of a timeslot.  Higher values allow better tracking of an asynchronous flow of events, but require more memory.  As a rule of thumb you should set this value to at least twice the period.  Or set this value to period + maximum time offset between unordered events with the same key.  Values below the specified period give unexpected results if unordered events are processed simultaneously.
@@ -210,7 +210,7 @@ The maximum age of a timeslot.  Higher values allow better tracking of an asynch
 
 ### `max_counters` [plugins-filters-throttle-max_counters]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `100000`
 
 The maximum number of counters to store before decreasing the maximum age of a timeslot. Setting this value to -1 will prevent an upper bound with no constraint on the number of counters.  This configuration value should only be used as a memory control mechanism and can cause early counter expiration if the value is reached. It is recommended to leave the default value and ensure that your key is selected such that it limits the number of counters required (i.e. don’t use UUID as the key).
@@ -218,7 +218,7 @@ The maximum number of counters to store before decreasing the maximum age of a t
 
 ### `period` [plugins-filters-throttle-period]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"60"`
 
 The period in seconds after the first occurrence of an event until a new timeslot is created.  This period is tracked per unique key and per timeslot. Field substitutions are allowed in this value.  This allows you to specify that certain kinds of events throttle for a specific period of time.

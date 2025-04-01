@@ -45,7 +45,7 @@ This plugin supports the following configuration options plus the [Common option
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`target`](plugins-filters-age.md#plugins-filters-age-target) | [string](introduction.md#string) | No |
+| [`target`](plugins-filters-age.md#plugins-filters-age-target) | [string](value-types.md#string) | No |
 
 Also see [Common options](plugins-filters-age.md#plugins-filters-age-common-options) for a list of options supported by all filter plugins.
 
@@ -53,7 +53,7 @@ Also see [Common options](plugins-filters-age.md#plugins-filters-age-common-opti
 
 ### `target` [plugins-filters-age-target]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"[@metadata][age]"`
 
 Define the target field for the event age, in seconds.

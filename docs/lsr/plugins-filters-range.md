@@ -36,8 +36,8 @@ This plugin supports the following configuration options plus the [Common option
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`negate`](plugins-filters-range.md#plugins-filters-range-negate) | [boolean](introduction.md#boolean) | No |
-| [`ranges`](plugins-filters-range.md#plugins-filters-range-ranges) | [array](introduction.md#array) | No |
+| [`negate`](plugins-filters-range.md#plugins-filters-range-negate) | [boolean](value-types.md#boolean) | No |
+| [`ranges`](plugins-filters-range.md#plugins-filters-range-ranges) | [array](value-types.md#array) | No |
 
 Also see [Common options](plugins-filters-range.md#plugins-filters-range-common-options) for a list of options supported by all filter plugins.
 
@@ -45,7 +45,7 @@ Also see [Common options](plugins-filters-range.md#plugins-filters-range-common-
 
 ### `negate` [plugins-filters-range-negate]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 Negate the range match logic, events should be outsize of the specified range to match.
@@ -53,7 +53,7 @@ Negate the range match logic, events should be outsize of the specified range to
 
 ### `ranges` [plugins-filters-range-ranges]
 
-* Value type is [array](introduction.md#array)
+* Value type is [array](value-types.md#array)
 * Default value is `[]`
 
 An array of field, min, max, action tuples. Example:

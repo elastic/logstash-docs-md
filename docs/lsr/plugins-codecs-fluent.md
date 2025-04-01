@@ -50,14 +50,14 @@ Fluent uses second-precision for events, so you will not see sub-second precisio
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`nanosecond_precision`](plugins-codecs-fluent.md#plugins-codecs-fluent-nanosecond_precision) | [boolean](introduction.md#boolean) | No |
-| [`target`](plugins-codecs-fluent.md#plugins-codecs-fluent-target) | [string](introduction.md#string) | No |
+| [`nanosecond_precision`](plugins-codecs-fluent.md#plugins-codecs-fluent-nanosecond_precision) | [boolean](value-types.md#boolean) | No |
+| [`target`](plugins-codecs-fluent.md#plugins-codecs-fluent-target) | [string](value-types.md#string) | No |
 
  
 
 ### `nanosecond_precision` [plugins-codecs-fluent-nanosecond_precision]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 Enables sub-second level precision while encoding events.
@@ -65,7 +65,7 @@ Enables sub-second level precision while encoding events.
 
 ### `target` [plugins-codecs-fluent-target]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 Define the target field for placing the decoded values. If this setting is not set, data will be stored at the root (top level) of the event.

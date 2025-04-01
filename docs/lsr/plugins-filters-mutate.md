@@ -69,21 +69,21 @@ This plugin supports the following configuration options plus the [Common option
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`convert`](plugins-filters-mutate.md#plugins-filters-mutate-convert) | [hash](introduction.md#hash) | No |
-| [`copy`](plugins-filters-mutate.md#plugins-filters-mutate-copy) | [hash](introduction.md#hash) | No |
-| [`gsub`](plugins-filters-mutate.md#plugins-filters-mutate-gsub) | [array](introduction.md#array) | No |
-| [`join`](plugins-filters-mutate.md#plugins-filters-mutate-join) | [hash](introduction.md#hash) | No |
-| [`lowercase`](plugins-filters-mutate.md#plugins-filters-mutate-lowercase) | [array](introduction.md#array) | No |
-| [`merge`](plugins-filters-mutate.md#plugins-filters-mutate-merge) | [hash](introduction.md#hash) | No |
-| [`coerce`](plugins-filters-mutate.md#plugins-filters-mutate-coerce) | [hash](introduction.md#hash) | No |
-| [`rename`](plugins-filters-mutate.md#plugins-filters-mutate-rename) | [hash](introduction.md#hash) | No |
-| [`replace`](plugins-filters-mutate.md#plugins-filters-mutate-replace) | [hash](introduction.md#hash) | No |
-| [`split`](plugins-filters-mutate.md#plugins-filters-mutate-split) | [hash](introduction.md#hash) | No |
-| [`strip`](plugins-filters-mutate.md#plugins-filters-mutate-strip) | [array](introduction.md#array) | No |
-| [`update`](plugins-filters-mutate.md#plugins-filters-mutate-update) | [hash](introduction.md#hash) | No |
-| [`uppercase`](plugins-filters-mutate.md#plugins-filters-mutate-uppercase) | [array](introduction.md#array) | No |
-| [`capitalize`](plugins-filters-mutate.md#plugins-filters-mutate-capitalize) | [array](introduction.md#array) | No |
-| [`tag_on_failure`](plugins-filters-mutate.md#plugins-filters-mutate-tag_on_failure) | [string](introduction.md#string) | No |
+| [`convert`](plugins-filters-mutate.md#plugins-filters-mutate-convert) | [hash](value-types.md#hash) | No |
+| [`copy`](plugins-filters-mutate.md#plugins-filters-mutate-copy) | [hash](value-types.md#hash) | No |
+| [`gsub`](plugins-filters-mutate.md#plugins-filters-mutate-gsub) | [array](value-types.md#array) | No |
+| [`join`](plugins-filters-mutate.md#plugins-filters-mutate-join) | [hash](value-types.md#hash) | No |
+| [`lowercase`](plugins-filters-mutate.md#plugins-filters-mutate-lowercase) | [array](value-types.md#array) | No |
+| [`merge`](plugins-filters-mutate.md#plugins-filters-mutate-merge) | [hash](value-types.md#hash) | No |
+| [`coerce`](plugins-filters-mutate.md#plugins-filters-mutate-coerce) | [hash](value-types.md#hash) | No |
+| [`rename`](plugins-filters-mutate.md#plugins-filters-mutate-rename) | [hash](value-types.md#hash) | No |
+| [`replace`](plugins-filters-mutate.md#plugins-filters-mutate-replace) | [hash](value-types.md#hash) | No |
+| [`split`](plugins-filters-mutate.md#plugins-filters-mutate-split) | [hash](value-types.md#hash) | No |
+| [`strip`](plugins-filters-mutate.md#plugins-filters-mutate-strip) | [array](value-types.md#array) | No |
+| [`update`](plugins-filters-mutate.md#plugins-filters-mutate-update) | [hash](value-types.md#hash) | No |
+| [`uppercase`](plugins-filters-mutate.md#plugins-filters-mutate-uppercase) | [array](value-types.md#array) | No |
+| [`capitalize`](plugins-filters-mutate.md#plugins-filters-mutate-capitalize) | [array](value-types.md#array) | No |
+| [`tag_on_failure`](plugins-filters-mutate.md#plugins-filters-mutate-tag_on_failure) | [string](value-types.md#string) | No |
 
 Also see [Common options](plugins-filters-mutate.md#plugins-filters-mutate-common-options) for a list of options supported by all filter plugins.
 
@@ -91,7 +91,7 @@ Also see [Common options](plugins-filters-mutate.md#plugins-filters-mutate-commo
 
 ### `convert` [plugins-filters-mutate-convert]
 
-* Value type is [hash](introduction.md#hash)
+* Value type is [hash](value-types.md#hash)
 * There is no default value for this setting.
 
 Convert a field’s value to a different type, like turning a string to an integer. If the field value is an array, all members will be converted. If the field is a hash no action will be taken.
@@ -161,7 +161,7 @@ Example:
 
 ### `copy` [plugins-filters-mutate-copy]
 
-* Value type is [hash](introduction.md#hash)
+* Value type is [hash](value-types.md#hash)
 * There is no default value for this setting.
 
 Copy an existing field to another field. Existing target field will be overriden.
@@ -179,7 +179,7 @@ Example:
 
 ### `gsub` [plugins-filters-mutate-gsub]
 
-* Value type is [array](introduction.md#array)
+* Value type is [array](value-types.md#array)
 * There is no default value for this setting.
 
 Match a regular expression against a field value and replace all matches with a replacement string. Only fields that are strings or arrays of strings are supported. For other kinds of fields no action will be taken.
@@ -207,7 +207,7 @@ Example:
 
 ### `join` [plugins-filters-mutate-join]
 
-* Value type is [hash](introduction.md#hash)
+* Value type is [hash](value-types.md#hash)
 * There is no default value for this setting.
 
 Join an array with a separator character or string. Does nothing on non-array fields.
@@ -225,7 +225,7 @@ Example:
 
 ### `lowercase` [plugins-filters-mutate-lowercase]
 
-* Value type is [array](introduction.md#array)
+* Value type is [array](value-types.md#array)
 * There is no default value for this setting.
 
 Convert a string to its lowercase equivalent.
@@ -243,7 +243,7 @@ Example:
 
 ### `merge` [plugins-filters-mutate-merge]
 
-* Value type is [hash](introduction.md#hash)
+* Value type is [hash](value-types.md#hash)
 * There is no default value for this setting.
 
 Merge two fields of arrays or hashes. String fields will be automatically be converted into an array, so:
@@ -270,7 +270,7 @@ Example:
 
 ### `coerce` [plugins-filters-mutate-coerce]
 
-* Value type is [hash](introduction.md#hash)
+* Value type is [hash](value-types.md#hash)
 * There is no default value for this setting.
 
 Set the default value of a field that exists but is null
@@ -289,7 +289,7 @@ Example:
 
 ### `rename` [plugins-filters-mutate-rename]
 
-* Value type is [hash](introduction.md#hash)
+* Value type is [hash](value-types.md#hash)
 * There is no default value for this setting.
 
 Rename one or more fields.
@@ -314,7 +314,7 @@ Example:
 
 ### `replace` [plugins-filters-mutate-replace]
 
-* Value type is [hash](introduction.md#hash)
+* Value type is [hash](value-types.md#hash)
 * There is no default value for this setting.
 
 Replace the value of a field with a new value, or add the field if it doesn’t already exist. The new value can include `%{{foo}}` strings to help you build a new value from other parts of the event.
@@ -332,7 +332,7 @@ Example:
 
 ### `split` [plugins-filters-mutate-split]
 
-* Value type is [hash](introduction.md#hash)
+* Value type is [hash](value-types.md#hash)
 * There is no default value for this setting.
 
 Split a field to an array using a separator character or string. Only works on string fields.
@@ -350,7 +350,7 @@ Example:
 
 ### `strip` [plugins-filters-mutate-strip]
 
-* Value type is [array](introduction.md#array)
+* Value type is [array](value-types.md#array)
 * There is no default value for this setting.
 
 Strip whitespace from field. NOTE: this only works on leading and trailing whitespace.
@@ -368,7 +368,7 @@ Example:
 
 ### `update` [plugins-filters-mutate-update]
 
-* Value type is [hash](introduction.md#hash)
+* Value type is [hash](value-types.md#hash)
 * There is no default value for this setting.
 
 Update an existing field with a new value. If the field does not exist, then no action will be taken.
@@ -386,7 +386,7 @@ Example:
 
 ### `uppercase` [plugins-filters-mutate-uppercase]
 
-* Value type is [array](introduction.md#array)
+* Value type is [array](value-types.md#array)
 * There is no default value for this setting.
 
 Convert a string to its uppercase equivalent.
@@ -404,7 +404,7 @@ Example:
 
 ### `capitalize` [plugins-filters-mutate-capitalize]
 
-* Value type is [array](introduction.md#array)
+* Value type is [array](value-types.md#array)
 * There is no default value for this setting.
 
 Convert a string to its capitalized equivalent.
@@ -422,7 +422,7 @@ Example:
 
 ### `tag_on_failure` [plugins-filters-mutate-tag_on_failure]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * The default value for this setting is `_mutate_error`
 
 If a failure occurs during the application of this mutate filter, the rest of the operations are aborted and the provided tag is added to the event.

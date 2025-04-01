@@ -40,25 +40,25 @@ This plugin supports the following configuration options plus the [Common option
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`allow_time_override`](plugins-outputs-influxdb.md#plugins-outputs-influxdb-allow_time_override) | [boolean](introduction.md#boolean) | No |
-| [`coerce_values`](plugins-outputs-influxdb.md#plugins-outputs-influxdb-coerce_values) | [hash](introduction.md#hash) | No |
-| [`data_points`](plugins-outputs-influxdb.md#plugins-outputs-influxdb-data_points) | [hash](introduction.md#hash) | Yes |
-| [`db`](plugins-outputs-influxdb.md#plugins-outputs-influxdb-db) | [string](introduction.md#string) | No |
-| [`exclude_fields`](plugins-outputs-influxdb.md#plugins-outputs-influxdb-exclude_fields) | [array](introduction.md#array) | No |
-| [`flush_size`](plugins-outputs-influxdb.md#plugins-outputs-influxdb-flush_size) | [number](introduction.md#number) | No |
-| [`host`](plugins-outputs-influxdb.md#plugins-outputs-influxdb-host) | [string](introduction.md#string) | Yes |
-| [`idle_flush_time`](plugins-outputs-influxdb.md#plugins-outputs-influxdb-idle_flush_time) | [number](introduction.md#number) | No |
-| [`initial_delay`](plugins-outputs-influxdb.md#plugins-outputs-influxdb-initial_delay) | [number](introduction.md#number) | No |
-| [`max_retries`](plugins-outputs-influxdb.md#plugins-outputs-influxdb-max_retries) | [number](introduction.md#number) | No |
-| [`measurement`](plugins-outputs-influxdb.md#plugins-outputs-influxdb-measurement) | [string](introduction.md#string) | No |
-| [`password`](plugins-outputs-influxdb.md#plugins-outputs-influxdb-password) | [password](introduction.md#password) | No |
-| [`port`](plugins-outputs-influxdb.md#plugins-outputs-influxdb-port) | [number](introduction.md#number) | No |
-| [`retention_policy`](plugins-outputs-influxdb.md#plugins-outputs-influxdb-retention_policy) | [string](introduction.md#string) | No |
-| [`send_as_tags`](plugins-outputs-influxdb.md#plugins-outputs-influxdb-send_as_tags) | [array](introduction.md#array) | No |
-| [`ssl`](plugins-outputs-influxdb.md#plugins-outputs-influxdb-ssl) | [boolean](introduction.md#boolean) | No |
-| [`time_precision`](plugins-outputs-influxdb.md#plugins-outputs-influxdb-time_precision) | [string](introduction.md#string), one of `["n", "u", "ms", "s", "m", "h"]` | No |
-| [`use_event_fields_for_data_points`](plugins-outputs-influxdb.md#plugins-outputs-influxdb-use_event_fields_for_data_points) | [boolean](introduction.md#boolean) | No |
-| [`user`](plugins-outputs-influxdb.md#plugins-outputs-influxdb-user) | [string](introduction.md#string) | No |
+| [`allow_time_override`](plugins-outputs-influxdb.md#plugins-outputs-influxdb-allow_time_override) | [boolean](value-types.md#boolean) | No |
+| [`coerce_values`](plugins-outputs-influxdb.md#plugins-outputs-influxdb-coerce_values) | [hash](value-types.md#hash) | No |
+| [`data_points`](plugins-outputs-influxdb.md#plugins-outputs-influxdb-data_points) | [hash](value-types.md#hash) | Yes |
+| [`db`](plugins-outputs-influxdb.md#plugins-outputs-influxdb-db) | [string](value-types.md#string) | No |
+| [`exclude_fields`](plugins-outputs-influxdb.md#plugins-outputs-influxdb-exclude_fields) | [array](value-types.md#array) | No |
+| [`flush_size`](plugins-outputs-influxdb.md#plugins-outputs-influxdb-flush_size) | [number](value-types.md#number) | No |
+| [`host`](plugins-outputs-influxdb.md#plugins-outputs-influxdb-host) | [string](value-types.md#string) | Yes |
+| [`idle_flush_time`](plugins-outputs-influxdb.md#plugins-outputs-influxdb-idle_flush_time) | [number](value-types.md#number) | No |
+| [`initial_delay`](plugins-outputs-influxdb.md#plugins-outputs-influxdb-initial_delay) | [number](value-types.md#number) | No |
+| [`max_retries`](plugins-outputs-influxdb.md#plugins-outputs-influxdb-max_retries) | [number](value-types.md#number) | No |
+| [`measurement`](plugins-outputs-influxdb.md#plugins-outputs-influxdb-measurement) | [string](value-types.md#string) | No |
+| [`password`](plugins-outputs-influxdb.md#plugins-outputs-influxdb-password) | [password](value-types.md#password) | No |
+| [`port`](plugins-outputs-influxdb.md#plugins-outputs-influxdb-port) | [number](value-types.md#number) | No |
+| [`retention_policy`](plugins-outputs-influxdb.md#plugins-outputs-influxdb-retention_policy) | [string](value-types.md#string) | No |
+| [`send_as_tags`](plugins-outputs-influxdb.md#plugins-outputs-influxdb-send_as_tags) | [array](value-types.md#array) | No |
+| [`ssl`](plugins-outputs-influxdb.md#plugins-outputs-influxdb-ssl) | [boolean](value-types.md#boolean) | No |
+| [`time_precision`](plugins-outputs-influxdb.md#plugins-outputs-influxdb-time_precision) | [string](value-types.md#string), one of `["n", "u", "ms", "s", "m", "h"]` | No |
+| [`use_event_fields_for_data_points`](plugins-outputs-influxdb.md#plugins-outputs-influxdb-use_event_fields_for_data_points) | [boolean](value-types.md#boolean) | No |
+| [`user`](plugins-outputs-influxdb.md#plugins-outputs-influxdb-user) | [string](value-types.md#string) | No |
 
 Also see [Common options](plugins-outputs-influxdb.md#plugins-outputs-influxdb-common-options) for a list of options supported by all output plugins.
 
@@ -66,7 +66,7 @@ Also see [Common options](plugins-outputs-influxdb.md#plugins-outputs-influxdb-c
 
 ### `allow_time_override` [plugins-outputs-influxdb-allow_time_override]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 Allow the override of the `time` column in the event?
@@ -80,7 +80,7 @@ Note: ***`time` must be an epoch value in either seconds, milliseconds or micros
 
 ### `coerce_values` [plugins-outputs-influxdb-coerce_values]
 
-* Value type is [hash](introduction.md#hash)
+* Value type is [hash](value-types.md#hash)
 * Default value is `{}`
 
 Allow value coercion
@@ -93,7 +93,7 @@ currently supported datatypes are `integer` and `float`
 ### `data_points` [plugins-outputs-influxdb-data_points]
 
 * This is a required setting.
-* Value type is [hash](introduction.md#hash)
+* Value type is [hash](value-types.md#hash)
 * Default value is `{}`
 
 Hash of key/value pairs representing data points to send to the named database Example: `{'column1' => 'value1', 'column2' => 'value2'}`
@@ -103,7 +103,7 @@ Events for the same measurement will be batched together where possible Both key
 
 ### `db` [plugins-outputs-influxdb-db]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"statistics"`
 
 The database to write - supports sprintf formatting
@@ -111,7 +111,7 @@ The database to write - supports sprintf formatting
 
 ### `exclude_fields` [plugins-outputs-influxdb-exclude_fields]
 
-* Value type is [array](introduction.md#array)
+* Value type is [array](value-types.md#array)
 * Default value is `["@timestamp", "@version", "sequence", "message", "type"]`
 
 An array containing the names of fields from the event to exclude from the data points
@@ -123,7 +123,7 @@ This only applies when use_event_fields_for_data_points is true.
 
 ### `flush_size` [plugins-outputs-influxdb-flush_size]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `100`
 
 This setting controls how many events will be buffered before sending a batch of events. Note that these are only batched for the same measurement
@@ -132,7 +132,7 @@ This setting controls how many events will be buffered before sending a batch of
 ### `host` [plugins-outputs-influxdb-host]
 
 * This is a required setting.
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 The hostname or IP address to reach your InfluxDB instance
@@ -140,7 +140,7 @@ The hostname or IP address to reach your InfluxDB instance
 
 ### `idle_flush_time` [plugins-outputs-influxdb-idle_flush_time]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `1`
 
 The amount of time since last flush before a flush is forced.
@@ -152,7 +152,7 @@ This helps keep both fast and slow log streams moving along in near-real-time.
 
 ### `initial_delay` [plugins-outputs-influxdb-initial_delay]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `1`
 
 The amount of time in seconds to delay the initial retry on connection failure.
@@ -162,7 +162,7 @@ The delay will increase exponentially for each retry attempt (up to max_retries)
 
 ### `max_retries` [plugins-outputs-influxdb-max_retries]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `3`
 
 The number of time to retry recoverable errors before dropping the events.
@@ -172,7 +172,7 @@ A value of -1 will cause the plugin to retry indefinately. A value of 0 will cau
 
 ### `measurement` [plugins-outputs-influxdb-measurement]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"logstash"`
 
 Measurement name - supports sprintf formatting
@@ -180,7 +180,7 @@ Measurement name - supports sprintf formatting
 
 ### `password` [plugins-outputs-influxdb-password]
 
-* Value type is [password](introduction.md#password)
+* Value type is [password](value-types.md#password)
 * Default value is `nil`
 
 The password for the user who access to the named database
@@ -188,7 +188,7 @@ The password for the user who access to the named database
 
 ### `port` [plugins-outputs-influxdb-port]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `8086`
 
 The port for InfluxDB
@@ -196,7 +196,7 @@ The port for InfluxDB
 
 ### `retention_policy` [plugins-outputs-influxdb-retention_policy]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"autogen"`
 
 The retention policy to use
@@ -204,7 +204,7 @@ The retention policy to use
 
 ### `send_as_tags` [plugins-outputs-influxdb-send_as_tags]
 
-* Value type is [array](introduction.md#array)
+* Value type is [array](value-types.md#array)
 * Default value is `["host"]`
 
 An array containing the names of fields to send to Influxdb as tags instead of fields. Influxdb 0.9 convention is that values that do not change every request should be considered metadata and given as tags. Tags are only sent when present in `data_points` or if `use_event_fields_for_data_points` is `true`.
@@ -212,7 +212,7 @@ An array containing the names of fields to send to Influxdb as tags instead of f
 
 ### `ssl` [plugins-outputs-influxdb-ssl]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 Enable SSL/TLS secured communication to InfluxDB
@@ -230,7 +230,7 @@ only useful when overriding the time value
 
 ### `use_event_fields_for_data_points` [plugins-outputs-influxdb-use_event_fields_for_data_points]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 Automatically use fields from the event as the data points sent to Influxdb
@@ -238,7 +238,7 @@ Automatically use fields from the event as the data points sent to Influxdb
 
 ### `user` [plugins-outputs-influxdb-user]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `nil`
 
 The user who has access to the named database

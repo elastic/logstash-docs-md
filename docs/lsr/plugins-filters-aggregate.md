@@ -321,19 +321,19 @@ This plugin supports the following configuration options plus the [Common option
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`aggregate_maps_path`](plugins-filters-aggregate.md#plugins-filters-aggregate-aggregate_maps_path) | [string](introduction.md#string), a valid filesystem path | No |
-| [`code`](plugins-filters-aggregate.md#plugins-filters-aggregate-code) | [string](introduction.md#string) | Yes |
-| [`end_of_task`](plugins-filters-aggregate.md#plugins-filters-aggregate-end_of_task) | [boolean](introduction.md#boolean) | No |
-| [`inactivity_timeout`](plugins-filters-aggregate.md#plugins-filters-aggregate-inactivity_timeout) | [number](introduction.md#number) | No |
-| [`map_action`](plugins-filters-aggregate.md#plugins-filters-aggregate-map_action) | [string](introduction.md#string), one of `["create", "update", "create_or_update"]` | No |
-| [`push_map_as_event_on_timeout`](plugins-filters-aggregate.md#plugins-filters-aggregate-push_map_as_event_on_timeout) | [boolean](introduction.md#boolean) | No |
-| [`push_previous_map_as_event`](plugins-filters-aggregate.md#plugins-filters-aggregate-push_previous_map_as_event) | [boolean](introduction.md#boolean) | No |
-| [`task_id`](plugins-filters-aggregate.md#plugins-filters-aggregate-task_id) | [string](introduction.md#string) | Yes |
-| [`timeout`](plugins-filters-aggregate.md#plugins-filters-aggregate-timeout) | [number](introduction.md#number) | No |
-| [`timeout_code`](plugins-filters-aggregate.md#plugins-filters-aggregate-timeout_code) | [string](introduction.md#string) | No |
-| [`timeout_tags`](plugins-filters-aggregate.md#plugins-filters-aggregate-timeout_tags) | [array](introduction.md#array) | No |
-| [`timeout_task_id_field`](plugins-filters-aggregate.md#plugins-filters-aggregate-timeout_task_id_field) | [string](introduction.md#string) | No |
-| [`timeout_timestamp_field`](plugins-filters-aggregate.md#plugins-filters-aggregate-timeout_timestamp_field) | [string](introduction.md#string) | No |
+| [`aggregate_maps_path`](plugins-filters-aggregate.md#plugins-filters-aggregate-aggregate_maps_path) | [string](value-types.md#string), a valid filesystem path | No |
+| [`code`](plugins-filters-aggregate.md#plugins-filters-aggregate-code) | [string](value-types.md#string) | Yes |
+| [`end_of_task`](plugins-filters-aggregate.md#plugins-filters-aggregate-end_of_task) | [boolean](value-types.md#boolean) | No |
+| [`inactivity_timeout`](plugins-filters-aggregate.md#plugins-filters-aggregate-inactivity_timeout) | [number](value-types.md#number) | No |
+| [`map_action`](plugins-filters-aggregate.md#plugins-filters-aggregate-map_action) | [string](value-types.md#string), one of `["create", "update", "create_or_update"]` | No |
+| [`push_map_as_event_on_timeout`](plugins-filters-aggregate.md#plugins-filters-aggregate-push_map_as_event_on_timeout) | [boolean](value-types.md#boolean) | No |
+| [`push_previous_map_as_event`](plugins-filters-aggregate.md#plugins-filters-aggregate-push_previous_map_as_event) | [boolean](value-types.md#boolean) | No |
+| [`task_id`](plugins-filters-aggregate.md#plugins-filters-aggregate-task_id) | [string](value-types.md#string) | Yes |
+| [`timeout`](plugins-filters-aggregate.md#plugins-filters-aggregate-timeout) | [number](value-types.md#number) | No |
+| [`timeout_code`](plugins-filters-aggregate.md#plugins-filters-aggregate-timeout_code) | [string](value-types.md#string) | No |
+| [`timeout_tags`](plugins-filters-aggregate.md#plugins-filters-aggregate-timeout_tags) | [array](value-types.md#array) | No |
+| [`timeout_task_id_field`](plugins-filters-aggregate.md#plugins-filters-aggregate-timeout_task_id_field) | [string](value-types.md#string) | No |
+| [`timeout_timestamp_field`](plugins-filters-aggregate.md#plugins-filters-aggregate-timeout_timestamp_field) | [string](value-types.md#string) | No |
 
 Also see [Common options](plugins-filters-aggregate.md#plugins-filters-aggregate-common-options) for a list of options supported by all filter plugins.
 
@@ -341,7 +341,7 @@ Also see [Common options](plugins-filters-aggregate.md#plugins-filters-aggregate
 
 ### `aggregate_maps_path` [plugins-filters-aggregate-aggregate_maps_path]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 The path to file where aggregate maps are stored when Logstash stops and are loaded from when Logstash starts.
@@ -362,7 +362,7 @@ Example:
 ### `code` [plugins-filters-aggregate-code]
 
 * This is a required setting.
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 The code to execute to update aggregated map, using current event.
@@ -411,7 +411,7 @@ The parameter of the function `new_event_block.call` must be of type `LogStash::
 
 ### `end_of_task` [plugins-filters-aggregate-end_of_task]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 Tell the filter that task is ended, and therefore, to delete aggregate map after code execution.
@@ -419,7 +419,7 @@ Tell the filter that task is ended, and therefore, to delete aggregate map after
 
 ### `inactivity_timeout` [plugins-filters-aggregate-inactivity_timeout]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * There is no default value for this setting.
 
 The amount of seconds (since the last event) after which a task is considered as expired.
@@ -435,7 +435,7 @@ If *push_map_as_event_on_timeout* or *push_previous_map_as_event* is set to true
 
 ### `map_action` [plugins-filters-aggregate-map_action]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"create_or_update"`
 
 Tell the filter what to do with aggregate map.
@@ -449,7 +449,7 @@ Tell the filter what to do with aggregate map.
 
 ### `push_map_as_event_on_timeout` [plugins-filters-aggregate-push_map_as_event_on_timeout]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 When this option is enabled, each time a task timeout is detected, it pushes task aggregation map as a new Logstash event. This enables to detect and process task timeouts in Logstash, but also to manage tasks that have no explicit end event.
@@ -457,7 +457,7 @@ When this option is enabled, each time a task timeout is detected, it pushes tas
 
 ### `push_previous_map_as_event` [plugins-filters-aggregate-push_previous_map_as_event]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 When this option is enabled, each time aggregate plugin detects a new task id, it pushes previous aggregate map as a new Logstash event, and then creates a new empty map for the next task.
@@ -471,7 +471,7 @@ this option works fine only if tasks come one after the other. It means : all ta
 ### `task_id` [plugins-filters-aggregate-task_id]
 
 * This is a required setting.
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 The expression defining task ID to correlate logs.
@@ -491,7 +491,7 @@ Example:
 
 ### `timeout` [plugins-filters-aggregate-timeout]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `1800`
 
 The amount of seconds (since the first event) after which a task is considered as expired.
@@ -505,7 +505,7 @@ Timeout can be defined for each "task_id" pattern.
 
 ### `timeout_code` [plugins-filters-aggregate-timeout_code]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 The code to execute to complete timeout generated event, when `'push_map_as_event_on_timeout'` or `'push_previous_map_as_event'` is set to true. The code block will have access to the newly generated timeout event that is pre-populated with the aggregation map.
@@ -525,7 +525,7 @@ Example:
 
 ### `timeout_tags` [plugins-filters-aggregate-timeout_tags]
 
-* Value type is [array](introduction.md#array)
+* Value type is [array](value-types.md#array)
 * Default value is `[]`
 
 Defines tags to add when a timeout event is generated and yield
@@ -543,7 +543,7 @@ Example:
 
 ### `timeout_task_id_field` [plugins-filters-aggregate-timeout_task_id_field]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 This option indicates the timeout generated event’s field where the current "task_id" value will be set. This can help to correlate which tasks have been timed out.
@@ -563,7 +563,7 @@ Example:
 
 ### `timeout_timestamp_field` [plugins-filters-aggregate-timeout_timestamp_field]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 By default, timeout is computed using system time, where Logstash is running.

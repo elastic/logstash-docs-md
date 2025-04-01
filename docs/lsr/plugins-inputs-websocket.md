@@ -34,8 +34,8 @@ This plugin supports the following configuration options plus the [Common option
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`mode`](plugins-inputs-websocket.md#plugins-inputs-websocket-mode) | [string](introduction.md#string), one of `["client"]` | No |
-| [`url`](plugins-inputs-websocket.md#plugins-inputs-websocket-url) | [string](introduction.md#string) | Yes |
+| [`mode`](plugins-inputs-websocket.md#plugins-inputs-websocket-mode) | [string](value-types.md#string), one of `["client"]` | No |
+| [`url`](plugins-inputs-websocket.md#plugins-inputs-websocket-url) | [string](value-types.md#string) | Yes |
 
 Also see [Common options](plugins-inputs-websocket.md#plugins-inputs-websocket-common-options) for a list of options supported by all input plugins.
 
@@ -52,7 +52,7 @@ Select the plugin’s mode of operation. Right now only client mode is supported
 ### `url` [plugins-inputs-websocket-url]
 
 * This is a required setting.
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 The URL to connect to.

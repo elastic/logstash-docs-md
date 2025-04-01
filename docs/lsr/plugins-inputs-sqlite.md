@@ -89,9 +89,9 @@ This plugin supports the following configuration options plus the [Common option
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`batch`](plugins-inputs-sqlite.md#plugins-inputs-sqlite-batch) | [number](introduction.md#number) | No |
-| [`exclude_tables`](plugins-inputs-sqlite.md#plugins-inputs-sqlite-exclude_tables) | [array](introduction.md#array) | No |
-| [`path`](plugins-inputs-sqlite.md#plugins-inputs-sqlite-path) | [string](introduction.md#string) | Yes |
+| [`batch`](plugins-inputs-sqlite.md#plugins-inputs-sqlite-batch) | [number](value-types.md#number) | No |
+| [`exclude_tables`](plugins-inputs-sqlite.md#plugins-inputs-sqlite-exclude_tables) | [array](value-types.md#array) | No |
+| [`path`](plugins-inputs-sqlite.md#plugins-inputs-sqlite-path) | [string](value-types.md#string) | Yes |
 
 Also see [Common options](plugins-inputs-sqlite.md#plugins-inputs-sqlite-common-options) for a list of options supported by all input plugins.
 
@@ -99,7 +99,7 @@ Also see [Common options](plugins-inputs-sqlite.md#plugins-inputs-sqlite-common-
 
 ### `batch` [plugins-inputs-sqlite-batch]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `5`
 
 How many rows to fetch at a time from each `SELECT` call.
@@ -107,7 +107,7 @@ How many rows to fetch at a time from each `SELECT` call.
 
 ### `exclude_tables` [plugins-inputs-sqlite-exclude_tables]
 
-* Value type is [array](introduction.md#array)
+* Value type is [array](value-types.md#array)
 * Default value is `[]`
 
 Any tables to exclude by name. By default all tables are followed.
@@ -116,7 +116,7 @@ Any tables to exclude by name. By default all tables are followed.
 ### `path` [plugins-inputs-sqlite-path]
 
 * This is a required setting.
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 The path to the sqlite database file.

@@ -34,9 +34,9 @@ This plugin supports the following configuration options plus the [Common option
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`host`](plugins-outputs-opentsdb.md#plugins-outputs-opentsdb-host) | [string](introduction.md#string) | No |
-| [`metrics`](plugins-outputs-opentsdb.md#plugins-outputs-opentsdb-metrics) | [array](introduction.md#array) | Yes |
-| [`port`](plugins-outputs-opentsdb.md#plugins-outputs-opentsdb-port) | [number](introduction.md#number) | No |
+| [`host`](plugins-outputs-opentsdb.md#plugins-outputs-opentsdb-host) | [string](value-types.md#string) | No |
+| [`metrics`](plugins-outputs-opentsdb.md#plugins-outputs-opentsdb-metrics) | [array](value-types.md#array) | Yes |
+| [`port`](plugins-outputs-opentsdb.md#plugins-outputs-opentsdb-port) | [number](value-types.md#number) | No |
 
 Also see [Common options](plugins-outputs-opentsdb.md#plugins-outputs-opentsdb-common-options) for a list of options supported by all output plugins.
 
@@ -44,7 +44,7 @@ Also see [Common options](plugins-outputs-opentsdb.md#plugins-outputs-opentsdb-c
 
 ### `host` [plugins-outputs-opentsdb-host]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"localhost"`
 
 The address of the opentsdb server.
@@ -53,7 +53,7 @@ The address of the opentsdb server.
 ### `metrics` [plugins-outputs-opentsdb-metrics]
 
 * This is a required setting.
-* Value type is [array](introduction.md#array)
+* Value type is [array](value-types.md#array)
 * There is no default value for this setting.
 
 The metric(s) to use. This supports dynamic strings like `%{{source_host}}` for metric names and also for values. This is an array field with key of the metric name, value of the metric value, and multiple tag,values . Example:
@@ -74,7 +74,7 @@ The value will be coerced to a floating point value. Values which cannot be coer
 
 ### `port` [plugins-outputs-opentsdb-port]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `4242`
 
 The port to connect on your graphite server.

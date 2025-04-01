@@ -337,43 +337,43 @@ This plugin supports the following configuration options plus the [Common option
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`broker_url`](plugins-inputs-jms.md#plugins-inputs-jms-broker_url) | [string](introduction.md#string) | No |
-| [`destination`](plugins-inputs-jms.md#plugins-inputs-jms-destination) | [string](introduction.md#string) | Yes |
-| [`durable_subscriber`](plugins-inputs-jms.md#plugins-inputs-jms-durable_subscriber) | [boolean](introduction.md#boolean) | No |
-| [`durable_subscriber_client_id`](plugins-inputs-jms.md#plugins-inputs-jms-durable_subscriber_client_id) | [string](introduction.md#string) | No |
-| [`durable_subscriber_name`](plugins-inputs-jms.md#plugins-inputs-jms-durable_subscriber_name) | [string](introduction.md#string) | No |
-| [`ecs_compatibility`](plugins-inputs-jms.md#plugins-inputs-jms-ecs_compatibility) | [string](introduction.md#string) | No |
-| [`factory`](plugins-inputs-jms.md#plugins-inputs-jms-factory) | [string](introduction.md#string) | No |
-| [`factory_settings`](plugins-inputs-jms.md#plugins-inputs-jms-factory_settings) | [hash](introduction.md#hash) | No |
-| [`headers_target`](plugins-inputs-jms.md#plugins-inputs-jms-headers_target) | [string](introduction.md#string) | No |
-| [`include_body`](plugins-inputs-jms.md#plugins-inputs-jms-include_body) | [boolean](introduction.md#boolean) | No |
-| [`include_header`](plugins-inputs-jms.md#plugins-inputs-jms-include_header) | [boolean](introduction.md#boolean) | No |
-| [`include_headers`](plugins-inputs-jms.md#plugins-inputs-jms-include_headers) | [boolean](introduction.md#boolean) | No |
-| [`include_properties`](plugins-inputs-jms.md#plugins-inputs-jms-include_properties) | [boolean](introduction.md#boolean) | No |
-| [`interval`](plugins-inputs-jms.md#plugins-inputs-jms-interval) | [number](introduction.md#number) | No |
-| [`jndi_context`](plugins-inputs-jms.md#plugins-inputs-jms-jndi_context) | [hash](introduction.md#hash) | No |
-| [`jndi_name`](plugins-inputs-jms.md#plugins-inputs-jms-jndi_name) | [string](introduction.md#string) | No |
+| [`broker_url`](plugins-inputs-jms.md#plugins-inputs-jms-broker_url) | [string](value-types.md#string) | No |
+| [`destination`](plugins-inputs-jms.md#plugins-inputs-jms-destination) | [string](value-types.md#string) | Yes |
+| [`durable_subscriber`](plugins-inputs-jms.md#plugins-inputs-jms-durable_subscriber) | [boolean](value-types.md#boolean) | No |
+| [`durable_subscriber_client_id`](plugins-inputs-jms.md#plugins-inputs-jms-durable_subscriber_client_id) | [string](value-types.md#string) | No |
+| [`durable_subscriber_name`](plugins-inputs-jms.md#plugins-inputs-jms-durable_subscriber_name) | [string](value-types.md#string) | No |
+| [`ecs_compatibility`](plugins-inputs-jms.md#plugins-inputs-jms-ecs_compatibility) | [string](value-types.md#string) | No |
+| [`factory`](plugins-inputs-jms.md#plugins-inputs-jms-factory) | [string](value-types.md#string) | No |
+| [`factory_settings`](plugins-inputs-jms.md#plugins-inputs-jms-factory_settings) | [hash](value-types.md#hash) | No |
+| [`headers_target`](plugins-inputs-jms.md#plugins-inputs-jms-headers_target) | [string](value-types.md#string) | No |
+| [`include_body`](plugins-inputs-jms.md#plugins-inputs-jms-include_body) | [boolean](value-types.md#boolean) | No |
+| [`include_header`](plugins-inputs-jms.md#plugins-inputs-jms-include_header) | [boolean](value-types.md#boolean) | No |
+| [`include_headers`](plugins-inputs-jms.md#plugins-inputs-jms-include_headers) | [boolean](value-types.md#boolean) | No |
+| [`include_properties`](plugins-inputs-jms.md#plugins-inputs-jms-include_properties) | [boolean](value-types.md#boolean) | No |
+| [`interval`](plugins-inputs-jms.md#plugins-inputs-jms-interval) | [number](value-types.md#number) | No |
+| [`jndi_context`](plugins-inputs-jms.md#plugins-inputs-jms-jndi_context) | [hash](value-types.md#hash) | No |
+| [`jndi_name`](plugins-inputs-jms.md#plugins-inputs-jms-jndi_name) | [string](value-types.md#string) | No |
 | [`keystore`](plugins-inputs-jms.md#plugins-inputs-jms-keystore) | a valid filesystem path | No |
-| [`keystore_password`](plugins-inputs-jms.md#plugins-inputs-jms-keystore_password) | [password](introduction.md#password) | No |
-| [`oracle_aq_buffered_messages`](plugins-inputs-jms.md#plugins-inputs-jms-oracle_aq_buffered_messages) | [boolean](introduction.md#boolean) | No |
-| [`password`](plugins-inputs-jms.md#plugins-inputs-jms-password) | [string](introduction.md#string) | No |
-| [`properties_target`](plugins-inputs-jms.md#plugins-inputs-jms-properties_target) | [string](introduction.md#string) | No |
-| [`pub_sub`](plugins-inputs-jms.md#plugins-inputs-jms-pub_sub) | [boolean](introduction.md#boolean) | No |
-| [`require_jars`](plugins-inputs-jms.md#plugins-inputs-jms-require_jars) | [array](introduction.md#array) | No |
-| [`runner`](plugins-inputs-jms.md#plugins-inputs-jms-runner) | [string](introduction.md#string) | *Deprecated* |
-| [`selector`](plugins-inputs-jms.md#plugins-inputs-jms-selector) | [string](introduction.md#string) | No |
-| [`skip_headers`](plugins-inputs-jms.md#plugins-inputs-jms-skip_headers) | [array](introduction.md#array) | No |
-| [`skip_properties`](plugins-inputs-jms.md#plugins-inputs-jms-skip_properties) | [array](introduction.md#array) | No |
-| [`system_properties`](plugins-inputs-jms.md#plugins-inputs-jms-system_properties) | [hash](introduction.md#hash) | No |
-| [`target`](plugins-inputs-jms.md#plugins-inputs-jms-target) | [string](introduction.md#string) | No |
-| [`threads`](plugins-inputs-jms.md#plugins-inputs-jms-threads) | [number](introduction.md#number) | No |
-| [`timeout`](plugins-inputs-jms.md#plugins-inputs-jms-timeout) | [number](introduction.md#number) | No |
+| [`keystore_password`](plugins-inputs-jms.md#plugins-inputs-jms-keystore_password) | [password](value-types.md#password) | No |
+| [`oracle_aq_buffered_messages`](plugins-inputs-jms.md#plugins-inputs-jms-oracle_aq_buffered_messages) | [boolean](value-types.md#boolean) | No |
+| [`password`](plugins-inputs-jms.md#plugins-inputs-jms-password) | [string](value-types.md#string) | No |
+| [`properties_target`](plugins-inputs-jms.md#plugins-inputs-jms-properties_target) | [string](value-types.md#string) | No |
+| [`pub_sub`](plugins-inputs-jms.md#plugins-inputs-jms-pub_sub) | [boolean](value-types.md#boolean) | No |
+| [`require_jars`](plugins-inputs-jms.md#plugins-inputs-jms-require_jars) | [array](value-types.md#array) | No |
+| [`runner`](plugins-inputs-jms.md#plugins-inputs-jms-runner) | [string](value-types.md#string) | *Deprecated* |
+| [`selector`](plugins-inputs-jms.md#plugins-inputs-jms-selector) | [string](value-types.md#string) | No |
+| [`skip_headers`](plugins-inputs-jms.md#plugins-inputs-jms-skip_headers) | [array](value-types.md#array) | No |
+| [`skip_properties`](plugins-inputs-jms.md#plugins-inputs-jms-skip_properties) | [array](value-types.md#array) | No |
+| [`system_properties`](plugins-inputs-jms.md#plugins-inputs-jms-system_properties) | [hash](value-types.md#hash) | No |
+| [`target`](plugins-inputs-jms.md#plugins-inputs-jms-target) | [string](value-types.md#string) | No |
+| [`threads`](plugins-inputs-jms.md#plugins-inputs-jms-threads) | [number](value-types.md#number) | No |
+| [`timeout`](plugins-inputs-jms.md#plugins-inputs-jms-timeout) | [number](value-types.md#number) | No |
 | [`truststore`](plugins-inputs-jms.md#plugins-inputs-jms-truststore) | a valid filesystem path | No |
-| [`truststore_password`](plugins-inputs-jms.md#plugins-inputs-jms-truststore_password) | [password](introduction.md#password) | No |
-| [`use_jms_timestamp`](plugins-inputs-jms.md#plugins-inputs-jms-use_jms_timestamp) | [boolean](introduction.md#boolean) | No |
-| [`username`](plugins-inputs-jms.md#plugins-inputs-jms-username) | [string](introduction.md#string) | No |
-| [`yaml_file`](plugins-inputs-jms.md#plugins-inputs-jms-yaml_file) | [string](introduction.md#string) | No |
-| [`yaml_section`](plugins-inputs-jms.md#plugins-inputs-jms-yaml_section) | [string](introduction.md#string) | No |
+| [`truststore_password`](plugins-inputs-jms.md#plugins-inputs-jms-truststore_password) | [password](value-types.md#password) | No |
+| [`use_jms_timestamp`](plugins-inputs-jms.md#plugins-inputs-jms-use_jms_timestamp) | [boolean](value-types.md#boolean) | No |
+| [`username`](plugins-inputs-jms.md#plugins-inputs-jms-username) | [string](value-types.md#string) | No |
+| [`yaml_file`](plugins-inputs-jms.md#plugins-inputs-jms-yaml_file) | [string](value-types.md#string) | No |
+| [`yaml_section`](plugins-inputs-jms.md#plugins-inputs-jms-yaml_section) | [string](value-types.md#string) | No |
 
 Also see [Common options](plugins-inputs-jms.md#plugins-inputs-jms-common-options) for a list of options supported by all input plugins.
 
@@ -381,7 +381,7 @@ Also see [Common options](plugins-inputs-jms.md#plugins-inputs-jms-common-option
 
 ### `broker_url` [plugins-inputs-jms-broker_url]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 Url to use when connecting to the JMS provider. This is only relevant for non-JNDI configurations.
@@ -390,7 +390,7 @@ Url to use when connecting to the JMS provider. This is only relevant for non-JN
 ### `destination` [plugins-inputs-jms-destination]
 
 * This is a required setting.
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 Name of the destination queue or topic to use.
@@ -403,7 +403,7 @@ If the destination setting doesn’t appear to be working properly, try this for
 
 ### `durable_subscriber` [plugins-inputs-jms-durable_subscriber]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * This is `false` by default
 * Requires `pub_sub` to be true
 
@@ -415,7 +415,7 @@ Setting this value to `true` will make subscriptions to topics "durable", which 
 
 ### `durable_subscriber_client_id` [plugins-inputs-jms-durable_subscriber_client_id]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * If `durable_subscriber` is set, the default value for this setting is *Logstash*, otherwise this setting has no effect
 
 This represents the value of the client ID for a durable subscribtion, and is only used if `durable_subscriber` is set to `true`.
@@ -423,7 +423,7 @@ This represents the value of the client ID for a durable subscribtion, and is on
 
 ### `durable_subscriber_name` [plugins-inputs-jms-durable_subscriber_name]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * If `durable_subscriber` is set, the default value for this setting will be the same value as the `destination` setting, otherwise this setting has no effect.
 
 This represents the value of the subscriber name for a durable subscribtion, and is only used if `durable_subscriber` is set to `true`. Please consult your JMS Provider documentation for constraints and requirements for this setting.
@@ -431,7 +431,7 @@ This represents the value of the subscriber name for a durable subscribtion, and
 
 ### `ecs_compatibility` [plugins-inputs-jms-ecs_compatibility]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Supported values are:
 
     * `disabled`: does not use ECS-compatible field names (fields might be set at the root of the event)
@@ -448,7 +448,7 @@ Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)](ht
 
 ### `factory` [plugins-inputs-jms-factory]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 Full name (including package name) of Java connection factory used to create a connection with your JMS provider.
@@ -456,7 +456,7 @@ Full name (including package name) of Java connection factory used to create a c
 
 ### `factory_settings` [plugins-inputs-jms-factory_settings]
 
-* Value type is [hash](introduction.md#hash)
+* Value type is [hash](value-types.md#hash)
 * There is no default value for this setting.
 
 Hash of implementation specific configuration values to set on the connection factory of the JMS provider. Each JMS Provider will have its own set of parameters that can be used here. These parameters are mapped to `set` methods on the provided connection factory, and can be supplied in either *snake* or *camel* case. For example, a hash including `exclusive_consumer => true` would call `setExclusiveConsumer(true)` on the supplied connection factory. See your JMS provider documentation for implementation specific details.
@@ -464,7 +464,7 @@ Hash of implementation specific configuration values to set on the connection fa
 
 ### `headers_target` [plugins-inputs-jms-headers_target]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value depends on whether [`ecs_compatibility`](plugins-inputs-jms.md#plugins-inputs-jms-ecs_compatibility) is enabled:
 
     * ECS Compatibility disabled: no default value for this setting
@@ -476,7 +476,7 @@ The name of the field under which JMS headers will be added, if [`include_header
 
 ### `include_body` [plugins-inputs-jms-include_body]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `true`
 
 Include JMS Message Body in the event. Supports TextMessage, MapMessage and BytesMessage.
@@ -488,7 +488,7 @@ StreamMessage and ObjectMessage are not supported.
 
 ### `include_header` [plugins-inputs-jms-include_header]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * This option is deprecated
 
 Note: This option is deprecated and it will be removed in the next major version of Logstash. Use `include_headers` instead.
@@ -496,7 +496,7 @@ Note: This option is deprecated and it will be removed in the next major version
 
 ### `include_headers` [plugins-inputs-jms-include_headers]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `true`
 
 A JMS message has three parts:
@@ -526,7 +526,7 @@ Include standard JMS message header field values in the event. Example headers:
 
 ### `include_properties` [plugins-inputs-jms-include_properties]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `true`
 
 Include JMS Message Properties Field values in the event.
@@ -534,7 +534,7 @@ Include JMS Message Properties Field values in the event.
 
 ### `interval` [plugins-inputs-jms-interval]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `10`
 
 Polling interval in seconds. This is the time sleeping between asks to a consumed Queue. This parameter has non influence in the case of a subcribed Topic.
@@ -542,7 +542,7 @@ Polling interval in seconds. This is the time sleeping between asks to a consume
 
 ### `jndi_context` [plugins-inputs-jms-jndi_context]
 
-* Value type is [hash](introduction.md#hash)
+* Value type is [hash](value-types.md#hash)
 * There is no default value for this setting.
 
 Only used if using JNDI lookup. Key value pairs to determine how to connect the JMS message brokers if JNDI is being used. Consult your JMS provider documentation for the correct values to use here.
@@ -550,7 +550,7 @@ Only used if using JNDI lookup. Key value pairs to determine how to connect the 
 
 ### `jndi_name` [plugins-inputs-jms-jndi_name]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 Only used if using JNDI lookup. Name of JNDI entry at which the Factory can be found.
@@ -558,7 +558,7 @@ Only used if using JNDI lookup. Name of JNDI entry at which the Factory can be f
 
 ### `keystore` [plugins-inputs-jms-keystore]
 
-* Value type is [path](introduction.md#path)
+* Value type is [path](value-types.md#path)
 * There is no default value for this setting.
 
 If you need to use a custom keystore (`.jks`) specify it here. This does not work with .pem keys
@@ -566,7 +566,7 @@ If you need to use a custom keystore (`.jks`) specify it here. This does not wor
 
 ### `keystore_password` [plugins-inputs-jms-keystore_password]
 
-* Value type is [password](introduction.md#password)
+* Value type is [password](value-types.md#password)
 * There is no default value for this setting.
 
 Specify the keystore password here. Note, most .jks files created with keytool require a password
@@ -574,7 +574,7 @@ Specify the keystore password here. Note, most .jks files created with keytool r
 
 ### `oracle_aq_buffered_messages` [plugins-inputs-jms-oracle_aq_buffered_messages]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 Receive Oracle AQ buffered messages. In this mode persistent Oracle AQ JMS messages will not be received. Only for use with Oracle AQ
@@ -582,7 +582,7 @@ Receive Oracle AQ buffered messages. In this mode persistent Oracle AQ JMS messa
 
 ### `password` [plugins-inputs-jms-password]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 Password to use when connecting to the JMS provider.
@@ -590,7 +590,7 @@ Password to use when connecting to the JMS provider.
 
 ### `properties_target` [plugins-inputs-jms-properties_target]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value depends on whether [`ecs_compatibility`](plugins-inputs-jms.md#plugins-inputs-jms-ecs_compatibility) is enabled:
 
     * ECS Compatibility disabled: no default value for this setting
@@ -602,7 +602,7 @@ The name of the field under which JMS properties will be added, if [`include_pro
 
 ### `pub_sub` [plugins-inputs-jms-pub_sub]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 If pub-sub (topic) style should be used.  Note that if `pub_sub` is set to true, `threads` must be set to 1.
@@ -610,7 +610,7 @@ If pub-sub (topic) style should be used.  Note that if `pub_sub` is set to true,
 
 ### `require_jars` [plugins-inputs-jms-require_jars]
 
-* Value type is [array](introduction.md#array)
+* Value type is [array](value-types.md#array)
 * There is no default value for this setting.
 
 If you do not use an yaml configuration use either the factory or jndi_name. An optional array of Jar file names to load for the specified JMS provider. By using this option it is not necessary to put all the JMS Provider specific jar files into the java CLASSPATH prior to starting Logstash.
@@ -623,7 +623,7 @@ If you do not use an yaml configuration use either the factory or jndi_name. An 
 
 ### `selector` [plugins-inputs-jms-selector]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 JMS message selector. Use in conjunctions with message headers or properties to filter messages to be processed. Only messages that match the query specified here will be processed. Check with your JMS provider for the correct JMS message selector syntax.
@@ -631,7 +631,7 @@ JMS message selector. Use in conjunctions with message headers or properties to 
 
 ### `skip_headers` [plugins-inputs-jms-skip_headers]
 
-* Value type is [array](introduction.md#array)
+* Value type is [array](value-types.md#array)
 * There is no default value for this setting.
 
 If `include_headers` is set, a list of headers to skip processing on can be specified here.
@@ -639,7 +639,7 @@ If `include_headers` is set, a list of headers to skip processing on can be spec
 
 ### `skip_properties` [plugins-inputs-jms-skip_properties]
 
-* Value type is [array](introduction.md#array)
+* Value type is [array](value-types.md#array)
 * There is no default value for this setting.
 
 If `include_properties` is set, a list of properties to skip processing on can be specified here.
@@ -647,7 +647,7 @@ If `include_properties` is set, a list of properties to skip processing on can b
 
 ### `system_properties` [plugins-inputs-jms-system_properties]
 
-* Value type is [hash](introduction.md#hash)
+* Value type is [hash](value-types.md#hash)
 * There is no default value for this setting.
 
 Any System properties that the JMS provider requires can be set either in a Hash here, or in `jvm.options`
@@ -655,7 +655,7 @@ Any System properties that the JMS provider requires can be set either in a Hash
 
 ### `target` [plugins-inputs-jms-target]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 The name of the field to assign MapMessage data into. If not specified data will be stored in the root of the event.
@@ -668,7 +668,7 @@ For TextMessage and BytesMessage the `target` has no effect. Use the codec setti
 
 ### `threads` [plugins-inputs-jms-threads]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `1`
 
 ::::{note} 
@@ -679,7 +679,7 @@ If pub_sub is set to `true`, this value **must** be `1`. A configuration error w
 
 ### `timeout` [plugins-inputs-jms-timeout]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `60`
 
 Initial connection timeout in seconds.
@@ -687,7 +687,7 @@ Initial connection timeout in seconds.
 
 ### `truststore` [plugins-inputs-jms-truststore]
 
-* Value type is [path](introduction.md#path)
+* Value type is [path](value-types.md#path)
 * There is no default value for this setting.
 
 If you need to use a custom truststore (`.jks`) specify it here. This does not work with .pem certs.
@@ -695,7 +695,7 @@ If you need to use a custom truststore (`.jks`) specify it here. This does not w
 
 ### `truststore_password` [plugins-inputs-jms-truststore_password]
 
-* Value type is [password](introduction.md#password)
+* Value type is [password](value-types.md#password)
 * There is no default value for this setting.
 
 Specify the truststore password here.
@@ -705,7 +705,7 @@ Specify the truststore password here.
 
 ### `use_jms_timestamp` [plugins-inputs-jms-use_jms_timestamp]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 Convert the JMSTimestamp header field to the @timestamp value of the event
@@ -713,7 +713,7 @@ Convert the JMSTimestamp header field to the @timestamp value of the event
 
 ### `username` [plugins-inputs-jms-username]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 Username to use for connecting to JMS provider.
@@ -721,7 +721,7 @@ Username to use for connecting to JMS provider.
 
 ### `yaml_file` [plugins-inputs-jms-yaml_file]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 Yaml config file
@@ -729,7 +729,7 @@ Yaml config file
 
 ### `yaml_section` [plugins-inputs-jms-yaml_section]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 Yaml config file section name For some known examples, see [jms.yml examples](https://github.com/reidmorrison/jruby-jms/blob/master/examples/jms.yml).

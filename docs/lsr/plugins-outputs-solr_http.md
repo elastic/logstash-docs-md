@@ -44,10 +44,10 @@ This plugin supports the following configuration options plus the [Common option
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`document_id`](plugins-outputs-solr_http.md#plugins-outputs-solr_http-document_id) | [string](introduction.md#string) | No |
-| [`flush_size`](plugins-outputs-solr_http.md#plugins-outputs-solr_http-flush_size) | [number](introduction.md#number) | No |
-| [`idle_flush_time`](plugins-outputs-solr_http.md#plugins-outputs-solr_http-idle_flush_time) | [number](introduction.md#number) | No |
-| [`solr_url`](plugins-outputs-solr_http.md#plugins-outputs-solr_http-solr_url) | [string](introduction.md#string) | No |
+| [`document_id`](plugins-outputs-solr_http.md#plugins-outputs-solr_http-document_id) | [string](value-types.md#string) | No |
+| [`flush_size`](plugins-outputs-solr_http.md#plugins-outputs-solr_http-flush_size) | [number](value-types.md#number) | No |
+| [`idle_flush_time`](plugins-outputs-solr_http.md#plugins-outputs-solr_http-idle_flush_time) | [number](value-types.md#number) | No |
+| [`solr_url`](plugins-outputs-solr_http.md#plugins-outputs-solr_http-solr_url) | [string](value-types.md#string) | No |
 
 Also see [Common options](plugins-outputs-solr_http.md#plugins-outputs-solr_http-common-options) for a list of options supported by all output plugins.
 
@@ -55,7 +55,7 @@ Also see [Common options](plugins-outputs-solr_http.md#plugins-outputs-solr_http
 
 ### `document_id` [plugins-outputs-solr_http-document_id]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `nil`
 
 Solr document ID for events. You’d typically have a variable here, like `%{{foo}}` so you can assign your own IDs
@@ -63,7 +63,7 @@ Solr document ID for events. You’d typically have a variable here, like `%{{fo
 
 ### `flush_size` [plugins-outputs-solr_http-flush_size]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `100`
 
 Number of events to queue up before writing to Solr
@@ -71,7 +71,7 @@ Number of events to queue up before writing to Solr
 
 ### `idle_flush_time` [plugins-outputs-solr_http-idle_flush_time]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `1`
 
 Amount of time since the last flush before a flush is done even if the number of buffered events is smaller than flush_size
@@ -79,7 +79,7 @@ Amount of time since the last flush before a flush is done even if the number of
 
 ### `solr_url` [plugins-outputs-solr_http-solr_url]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"http://localhost:8983/solr"`
 
 URL used to connect to Solr

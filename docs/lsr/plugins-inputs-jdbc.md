@@ -173,42 +173,42 @@ This plugin supports the following configuration options plus the [Common option
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`clean_run`](plugins-inputs-jdbc.md#plugins-inputs-jdbc-clean_run) | [boolean](introduction.md#boolean) | No |
-| [`columns_charset`](plugins-inputs-jdbc.md#plugins-inputs-jdbc-columns_charset) | [hash](introduction.md#hash) | No |
-| [`connection_retry_attempts`](plugins-inputs-jdbc.md#plugins-inputs-jdbc-connection_retry_attempts) | [number](introduction.md#number) | No |
-| [`connection_retry_attempts_wait_time`](plugins-inputs-jdbc.md#plugins-inputs-jdbc-connection_retry_attempts_wait_time) | [number](introduction.md#number) | No |
-| [`jdbc_connection_string`](plugins-inputs-jdbc.md#plugins-inputs-jdbc-jdbc_connection_string) | [string](introduction.md#string) | Yes |
-| [`jdbc_default_timezone`](plugins-inputs-jdbc.md#plugins-inputs-jdbc-jdbc_default_timezone) | [string](introduction.md#string) | No |
-| [`jdbc_driver_class`](plugins-inputs-jdbc.md#plugins-inputs-jdbc-jdbc_driver_class) | [string](introduction.md#string) | Yes |
-| [`jdbc_driver_library`](plugins-inputs-jdbc.md#plugins-inputs-jdbc-jdbc_driver_library) | [string](introduction.md#string) | No |
-| [`jdbc_fetch_size`](plugins-inputs-jdbc.md#plugins-inputs-jdbc-jdbc_fetch_size) | [number](introduction.md#number) | No |
-| [`jdbc_page_size`](plugins-inputs-jdbc.md#plugins-inputs-jdbc-jdbc_page_size) | [number](introduction.md#number) | No |
-| [`jdbc_paging_enabled`](plugins-inputs-jdbc.md#plugins-inputs-jdbc-jdbc_paging_enabled) | [boolean](introduction.md#boolean) | No |
-| [`jdbc_paging_mode`](plugins-inputs-jdbc.md#plugins-inputs-jdbc-jdbc_paging_mode) | [string](introduction.md#string), one of `["auto", "explicit"]` | No |
-| [`jdbc_password`](plugins-inputs-jdbc.md#plugins-inputs-jdbc-jdbc_password) | [password](introduction.md#password) | No |
+| [`clean_run`](plugins-inputs-jdbc.md#plugins-inputs-jdbc-clean_run) | [boolean](value-types.md#boolean) | No |
+| [`columns_charset`](plugins-inputs-jdbc.md#plugins-inputs-jdbc-columns_charset) | [hash](value-types.md#hash) | No |
+| [`connection_retry_attempts`](plugins-inputs-jdbc.md#plugins-inputs-jdbc-connection_retry_attempts) | [number](value-types.md#number) | No |
+| [`connection_retry_attempts_wait_time`](plugins-inputs-jdbc.md#plugins-inputs-jdbc-connection_retry_attempts_wait_time) | [number](value-types.md#number) | No |
+| [`jdbc_connection_string`](plugins-inputs-jdbc.md#plugins-inputs-jdbc-jdbc_connection_string) | [string](value-types.md#string) | Yes |
+| [`jdbc_default_timezone`](plugins-inputs-jdbc.md#plugins-inputs-jdbc-jdbc_default_timezone) | [string](value-types.md#string) | No |
+| [`jdbc_driver_class`](plugins-inputs-jdbc.md#plugins-inputs-jdbc-jdbc_driver_class) | [string](value-types.md#string) | Yes |
+| [`jdbc_driver_library`](plugins-inputs-jdbc.md#plugins-inputs-jdbc-jdbc_driver_library) | [string](value-types.md#string) | No |
+| [`jdbc_fetch_size`](plugins-inputs-jdbc.md#plugins-inputs-jdbc-jdbc_fetch_size) | [number](value-types.md#number) | No |
+| [`jdbc_page_size`](plugins-inputs-jdbc.md#plugins-inputs-jdbc-jdbc_page_size) | [number](value-types.md#number) | No |
+| [`jdbc_paging_enabled`](plugins-inputs-jdbc.md#plugins-inputs-jdbc-jdbc_paging_enabled) | [boolean](value-types.md#boolean) | No |
+| [`jdbc_paging_mode`](plugins-inputs-jdbc.md#plugins-inputs-jdbc-jdbc_paging_mode) | [string](value-types.md#string), one of `["auto", "explicit"]` | No |
+| [`jdbc_password`](plugins-inputs-jdbc.md#plugins-inputs-jdbc-jdbc_password) | [password](value-types.md#password) | No |
 | [`jdbc_password_filepath`](plugins-inputs-jdbc.md#plugins-inputs-jdbc-jdbc_password_filepath) | a valid filesystem path | No |
-| [`jdbc_pool_timeout`](plugins-inputs-jdbc.md#plugins-inputs-jdbc-jdbc_pool_timeout) | [number](introduction.md#number) | No |
-| [`jdbc_user`](plugins-inputs-jdbc.md#plugins-inputs-jdbc-jdbc_user) | [string](introduction.md#string) | Yes |
-| [`jdbc_validate_connection`](plugins-inputs-jdbc.md#plugins-inputs-jdbc-jdbc_validate_connection) | [boolean](introduction.md#boolean) | No |
-| [`jdbc_validation_timeout`](plugins-inputs-jdbc.md#plugins-inputs-jdbc-jdbc_validation_timeout) | [number](introduction.md#number) | No |
-| [`last_run_metadata_path`](plugins-inputs-jdbc.md#plugins-inputs-jdbc-last_run_metadata_path) | [string](introduction.md#string) | No |
-| [`lowercase_column_names`](plugins-inputs-jdbc.md#plugins-inputs-jdbc-lowercase_column_names) | [boolean](introduction.md#boolean) | No |
-| [`parameters`](plugins-inputs-jdbc.md#plugins-inputs-jdbc-parameters) | [hash](introduction.md#hash) | No |
-| [`plugin_timezone`](plugins-inputs-jdbc.md#plugins-inputs-jdbc-plugin_timezone) | [string](introduction.md#string), one of `["local", "utc"]` | No |
-| [`prepared_statement_bind_values`](plugins-inputs-jdbc.md#plugins-inputs-jdbc-prepared_statement_bind_values) | [array](introduction.md#array) | No |
-| [`prepared_statement_name`](plugins-inputs-jdbc.md#plugins-inputs-jdbc-prepared_statement_name) | [string](introduction.md#string) | No |
-| [`record_last_run`](plugins-inputs-jdbc.md#plugins-inputs-jdbc-record_last_run) | [boolean](introduction.md#boolean) | No |
-| [`schedule`](plugins-inputs-jdbc.md#plugins-inputs-jdbc-schedule) | [string](introduction.md#string) | No |
-| [`sequel_opts`](plugins-inputs-jdbc.md#plugins-inputs-jdbc-sequel_opts) | [hash](introduction.md#hash) | No |
-| [`sql_log_level`](plugins-inputs-jdbc.md#plugins-inputs-jdbc-sql_log_level) | [string](introduction.md#string), one of `["fatal", "error", "warn", "info", "debug"]` | No |
-| [`statement`](plugins-inputs-jdbc.md#plugins-inputs-jdbc-statement) | [string](introduction.md#string) | No |
+| [`jdbc_pool_timeout`](plugins-inputs-jdbc.md#plugins-inputs-jdbc-jdbc_pool_timeout) | [number](value-types.md#number) | No |
+| [`jdbc_user`](plugins-inputs-jdbc.md#plugins-inputs-jdbc-jdbc_user) | [string](value-types.md#string) | Yes |
+| [`jdbc_validate_connection`](plugins-inputs-jdbc.md#plugins-inputs-jdbc-jdbc_validate_connection) | [boolean](value-types.md#boolean) | No |
+| [`jdbc_validation_timeout`](plugins-inputs-jdbc.md#plugins-inputs-jdbc-jdbc_validation_timeout) | [number](value-types.md#number) | No |
+| [`last_run_metadata_path`](plugins-inputs-jdbc.md#plugins-inputs-jdbc-last_run_metadata_path) | [string](value-types.md#string) | No |
+| [`lowercase_column_names`](plugins-inputs-jdbc.md#plugins-inputs-jdbc-lowercase_column_names) | [boolean](value-types.md#boolean) | No |
+| [`parameters`](plugins-inputs-jdbc.md#plugins-inputs-jdbc-parameters) | [hash](value-types.md#hash) | No |
+| [`plugin_timezone`](plugins-inputs-jdbc.md#plugins-inputs-jdbc-plugin_timezone) | [string](value-types.md#string), one of `["local", "utc"]` | No |
+| [`prepared_statement_bind_values`](plugins-inputs-jdbc.md#plugins-inputs-jdbc-prepared_statement_bind_values) | [array](value-types.md#array) | No |
+| [`prepared_statement_name`](plugins-inputs-jdbc.md#plugins-inputs-jdbc-prepared_statement_name) | [string](value-types.md#string) | No |
+| [`record_last_run`](plugins-inputs-jdbc.md#plugins-inputs-jdbc-record_last_run) | [boolean](value-types.md#boolean) | No |
+| [`schedule`](plugins-inputs-jdbc.md#plugins-inputs-jdbc-schedule) | [string](value-types.md#string) | No |
+| [`sequel_opts`](plugins-inputs-jdbc.md#plugins-inputs-jdbc-sequel_opts) | [hash](value-types.md#hash) | No |
+| [`sql_log_level`](plugins-inputs-jdbc.md#plugins-inputs-jdbc-sql_log_level) | [string](value-types.md#string), one of `["fatal", "error", "warn", "info", "debug"]` | No |
+| [`statement`](plugins-inputs-jdbc.md#plugins-inputs-jdbc-statement) | [string](value-types.md#string) | No |
 | [`statement_filepath`](plugins-inputs-jdbc.md#plugins-inputs-jdbc-statement_filepath) | a valid filesystem path | No |
-| [`statement_retry_attempts`](plugins-inputs-jdbc.md#plugins-inputs-jdbc-statement_retry_attempts) | [number](introduction.md#number) | No |
-| [`statement_retry_attempts_wait_time`](plugins-inputs-jdbc.md#plugins-inputs-jdbc-statement_retry_attempts_wait_time) | [number](introduction.md#number) | No |
-| [`tracking_column`](plugins-inputs-jdbc.md#plugins-inputs-jdbc-tracking_column) | [string](introduction.md#string) | No |
-| [`tracking_column_type`](plugins-inputs-jdbc.md#plugins-inputs-jdbc-tracking_column_type) | [string](introduction.md#string), one of `["numeric", "timestamp"]` | No |
-| [`use_column_value`](plugins-inputs-jdbc.md#plugins-inputs-jdbc-use_column_value) | [boolean](introduction.md#boolean) | No |
-| [`use_prepared_statements`](plugins-inputs-jdbc.md#plugins-inputs-jdbc-use_prepared_statements) | [boolean](introduction.md#boolean) | No |
+| [`statement_retry_attempts`](plugins-inputs-jdbc.md#plugins-inputs-jdbc-statement_retry_attempts) | [number](value-types.md#number) | No |
+| [`statement_retry_attempts_wait_time`](plugins-inputs-jdbc.md#plugins-inputs-jdbc-statement_retry_attempts_wait_time) | [number](value-types.md#number) | No |
+| [`tracking_column`](plugins-inputs-jdbc.md#plugins-inputs-jdbc-tracking_column) | [string](value-types.md#string) | No |
+| [`tracking_column_type`](plugins-inputs-jdbc.md#plugins-inputs-jdbc-tracking_column_type) | [string](value-types.md#string), one of `["numeric", "timestamp"]` | No |
+| [`use_column_value`](plugins-inputs-jdbc.md#plugins-inputs-jdbc-use_column_value) | [boolean](value-types.md#boolean) | No |
+| [`use_prepared_statements`](plugins-inputs-jdbc.md#plugins-inputs-jdbc-use_prepared_statements) | [boolean](value-types.md#boolean) | No |
 
 Also see [Common options](plugins-inputs-jdbc.md#plugins-inputs-jdbc-common-options) for a list of options supported by all input plugins.
 
@@ -216,7 +216,7 @@ Also see [Common options](plugins-inputs-jdbc.md#plugins-inputs-jdbc-common-opti
 
 ### `clean_run` [plugins-inputs-jdbc-clean_run]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 Whether the previous run state should be preserved
@@ -224,7 +224,7 @@ Whether the previous run state should be preserved
 
 ### `columns_charset` [plugins-inputs-jdbc-columns_charset]
 
-* Value type is [hash](introduction.md#hash)
+* Value type is [hash](value-types.md#hash)
 * Default value is `{}`
 
 The character encoding for specific columns. This option will override the `:charset` option for the specified columns.
@@ -246,7 +246,7 @@ this will only convert column0 that has ISO-8859-1 as an original encoding.
 
 ### `connection_retry_attempts` [plugins-inputs-jdbc-connection_retry_attempts]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `1`
 
 Maximum number of times to try connecting to database
@@ -254,7 +254,7 @@ Maximum number of times to try connecting to database
 
 ### `connection_retry_attempts_wait_time` [plugins-inputs-jdbc-connection_retry_attempts_wait_time]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `0.5`
 
 Number of seconds to sleep between connection attempts
@@ -263,7 +263,7 @@ Number of seconds to sleep between connection attempts
 ### `jdbc_connection_string` [plugins-inputs-jdbc-jdbc_connection_string]
 
 * This is a required setting.
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 JDBC connection string
@@ -271,7 +271,7 @@ JDBC connection string
 
 ### `jdbc_default_timezone` [plugins-inputs-jdbc-jdbc_default_timezone]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 
     * Value should be a canonical timezone or offset, such as `Europe/Paris` or `Etc/GMT+3`
     * Value *may* include square-bracketed extensions, such as `America/Denver[dst_enabled_on_overlap:true]`
@@ -306,7 +306,7 @@ Note: when specifying `plugin_timezone` and/or `jdbc_default_timezone`, offset a
 ### `jdbc_driver_class` [plugins-inputs-jdbc-jdbc_driver_class]
 
 * This is a required setting.
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 JDBC driver class to load, for example, "org.apache.derby.jdbc.ClientDriver"
@@ -319,7 +319,7 @@ Per [https://github.com/logstash-plugins/logstash-input-jdbc/issues/43](https://
 
 ### `jdbc_driver_library` [plugins-inputs-jdbc-jdbc_driver_library]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 JDBC driver library path to third party driver library. In case of multiple libraries being required you can pass them separated by a comma.
@@ -332,7 +332,7 @@ If not provided, Plugin will look for the driver class in the Logstash Java clas
 
 ### `jdbc_fetch_size` [plugins-inputs-jdbc-jdbc_fetch_size]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * There is no default value for this setting.
 
 JDBC fetch size. if not provided, respective driver’s default will be used
@@ -340,7 +340,7 @@ JDBC fetch size. if not provided, respective driver’s default will be used
 
 ### `jdbc_page_size` [plugins-inputs-jdbc-jdbc_page_size]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `100000`
 
 JDBC page size
@@ -348,7 +348,7 @@ JDBC page size
 
 ### `jdbc_paging_enabled` [plugins-inputs-jdbc-jdbc_paging_enabled]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 JDBC enable paging
@@ -400,7 +400,7 @@ This mode can be considered in the following situations:
 
 ### `jdbc_password` [plugins-inputs-jdbc-jdbc_password]
 
-* Value type is [password](introduction.md#password)
+* Value type is [password](value-types.md#password)
 * There is no default value for this setting.
 
 JDBC password
@@ -408,7 +408,7 @@ JDBC password
 
 ### `jdbc_password_filepath` [plugins-inputs-jdbc-jdbc_password_filepath]
 
-* Value type is [path](introduction.md#path)
+* Value type is [path](value-types.md#path)
 * There is no default value for this setting.
 
 JDBC password filename
@@ -416,7 +416,7 @@ JDBC password filename
 
 ### `jdbc_pool_timeout` [plugins-inputs-jdbc-jdbc_pool_timeout]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `5`
 
 Connection pool configuration. The amount of seconds to wait to acquire a connection before raising a PoolTimeoutError (default 5)
@@ -425,7 +425,7 @@ Connection pool configuration. The amount of seconds to wait to acquire a connec
 ### `jdbc_user` [plugins-inputs-jdbc-jdbc_user]
 
 * This is a required setting.
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 JDBC user
@@ -433,7 +433,7 @@ JDBC user
 
 ### `jdbc_validate_connection` [plugins-inputs-jdbc-jdbc_validate_connection]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 Connection pool configuration. Validate connection before use.
@@ -441,7 +441,7 @@ Connection pool configuration. Validate connection before use.
 
 ### `jdbc_validation_timeout` [plugins-inputs-jdbc-jdbc_validation_timeout]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `3600`
 
 Connection pool configuration. How often to validate a connection (in seconds)
@@ -449,7 +449,7 @@ Connection pool configuration. How often to validate a connection (in seconds)
 
 ### `last_run_metadata_path` [plugins-inputs-jdbc-last_run_metadata_path]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"<path.data>/plugins/inputs/jdbc/logstash_jdbc_last_run"`
 
 Path to file with last run time
@@ -459,7 +459,7 @@ In versions prior to 5.2.6 the metadata file was written to `$HOME/.logstash_jdb
 
 ### `lowercase_column_names` [plugins-inputs-jdbc-lowercase_column_names]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `true`
 
 Whether to force the lowercasing of identifier fields
@@ -467,7 +467,7 @@ Whether to force the lowercasing of identifier fields
 
 ### `parameters` [plugins-inputs-jdbc-parameters]
 
-* Value type is [hash](introduction.md#hash)
+* Value type is [hash](value-types.md#hash)
 * Default value is `{}`
 
 Hash of query parameter, for example `{ "target_id" => "321" }`
@@ -475,7 +475,7 @@ Hash of query parameter, for example `{ "target_id" => "321" }`
 
 ### `prepared_statement_bind_values` [plugins-inputs-jdbc-prepared_statement_bind_values]
 
-* Value type is [array](introduction.md#array)
+* Value type is [array](value-types.md#array)
 * Default value is `[]`
 
 Array of bind values for the prepared statement. `:sql_last_value` is a reserved predefined string
@@ -483,7 +483,7 @@ Array of bind values for the prepared statement. `:sql_last_value` is a reserved
 
 ### `prepared_statement_name` [plugins-inputs-jdbc-prepared_statement_name]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `""`
 
 Name given to the prepared statement. It must be unique in your config and in the database
@@ -491,7 +491,7 @@ Name given to the prepared statement. It must be unique in your config and in th
 
 ### `record_last_run` [plugins-inputs-jdbc-record_last_run]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `true`
 
 Whether to save state or not in [`last_run_metadata_path`](plugins-inputs-jdbc.md#plugins-inputs-jdbc-last_run_metadata_path)
@@ -499,7 +499,7 @@ Whether to save state or not in [`last_run_metadata_path`](plugins-inputs-jdbc.m
 
 ### `schedule` [plugins-inputs-jdbc-schedule]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 Schedule of when to periodically run statement, in Cron format for example: "* * * * *" (execute query every minute, on the minute)
@@ -509,7 +509,7 @@ There is no schedule by default. If no schedule is given, then the statement is 
 
 ### `sequel_opts` [plugins-inputs-jdbc-sequel_opts]
 
-* Value type is [hash](introduction.md#hash)
+* Value type is [hash](value-types.md#hash)
 * Default value is `{}`
 
 General/Vendor-specific Sequel configuration options.
@@ -529,7 +529,7 @@ Log level at which to log SQL queries, the accepted values are the common ones f
 
 ### `statement` [plugins-inputs-jdbc-statement]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 If undefined, Logstash will complain, even if codec is unused. Statement to execute
@@ -545,7 +545,7 @@ here, ":target_id" is a named parameter. You can configure named parameters with
 
 ### `statement_filepath` [plugins-inputs-jdbc-statement_filepath]
 
-* Value type is [path](introduction.md#path)
+* Value type is [path](value-types.md#path)
 * There is no default value for this setting.
 
 Path of file containing statement to execute
@@ -553,7 +553,7 @@ Path of file containing statement to execute
 
 ### `statement_retry_attempts` [plugins-inputs-jdbc-statement_retry_attempts]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `1`
 
 Maximum number of times to try executing a statement.
@@ -561,7 +561,7 @@ Maximum number of times to try executing a statement.
 
 ### `statement_retry_attempts_wait_time` [plugins-inputs-jdbc-statement_retry_attempts_wait_time]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `0.5`
 
 Number of seconds to sleep between statement execution attempts.
@@ -579,7 +579,7 @@ This option can be useful to avoid populating unknown fields when a downstream s
 
 ### `tracking_column` [plugins-inputs-jdbc-tracking_column]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 The column whose value is to be tracked if `use_column_value` is set to `true`
@@ -595,7 +595,7 @@ Type of tracking column. Currently only "numeric" and "timestamp"
 
 ### `use_column_value` [plugins-inputs-jdbc-use_column_value]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 When set to `true`, uses the defined [`tracking_column`](plugins-inputs-jdbc.md#plugins-inputs-jdbc-tracking_column) value as the `:sql_last_value`. When set to `false`, `:sql_last_value` reflects the last time the query was executed.
@@ -603,7 +603,7 @@ When set to `true`, uses the defined [`tracking_column`](plugins-inputs-jdbc.md#
 
 ### `use_prepared_statements` [plugins-inputs-jdbc-use_prepared_statements]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 When set to `true`, enables prepare statement usage

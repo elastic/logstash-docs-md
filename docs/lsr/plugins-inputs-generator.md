@@ -43,11 +43,11 @@ This plugin supports the following configuration options plus the [Common option
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`count`](plugins-inputs-generator.md#plugins-inputs-generator-count) | [number](introduction.md#number) | No |
-| [`ecs_compatibility`](plugins-inputs-generator.md#plugins-inputs-generator-ecs_compatibility) | [string](introduction.md#string) | No |
-| [`lines`](plugins-inputs-generator.md#plugins-inputs-generator-lines) | [array](introduction.md#array) | No |
-| [`message`](plugins-inputs-generator.md#plugins-inputs-generator-message) | [string](introduction.md#string) | No |
-| [`threads`](plugins-inputs-generator.md#plugins-inputs-generator-threads) | [number](introduction.md#number) | No |
+| [`count`](plugins-inputs-generator.md#plugins-inputs-generator-count) | [number](value-types.md#number) | No |
+| [`ecs_compatibility`](plugins-inputs-generator.md#plugins-inputs-generator-ecs_compatibility) | [string](value-types.md#string) | No |
+| [`lines`](plugins-inputs-generator.md#plugins-inputs-generator-lines) | [array](value-types.md#array) | No |
+| [`message`](plugins-inputs-generator.md#plugins-inputs-generator-message) | [string](value-types.md#string) | No |
+| [`threads`](plugins-inputs-generator.md#plugins-inputs-generator-threads) | [number](value-types.md#number) | No |
 
 Also see [Common options](plugins-inputs-generator.md#plugins-inputs-generator-common-options) for a list of options supported by all input plugins.
 
@@ -55,7 +55,7 @@ Also see [Common options](plugins-inputs-generator.md#plugins-inputs-generator-c
 
 ### `count` [plugins-inputs-generator-count]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `0`
 
 Set how many messages should be generated.
@@ -65,7 +65,7 @@ The default, `0`, means generate an unlimited number of events.
 
 ### `ecs_compatibility` [plugins-inputs-generator-ecs_compatibility]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Supported values are:
 
     * `disabled`: uses backwards compatible field names, such as `[host]`
@@ -101,7 +101,7 @@ Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)](ht
 
 ### `lines` [plugins-inputs-generator-lines]
 
-* Value type is [array](introduction.md#array)
+* Value type is [array](value-types.md#array)
 * There is no default value for this setting.
 
 The lines to emit, in order. This option cannot be used with the *message* setting.
@@ -127,7 +127,7 @@ The above will emit `line 1` then `line 2` then `line 3`, then `line 1`, etc…�
 
 ### `message` [plugins-inputs-generator-message]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"Hello world!"`
 
 The message string to use in the event.
@@ -139,7 +139,7 @@ Otherwise, this value will be used verbatim as the event message.
 
 ### `threads` [plugins-inputs-generator-threads]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `1`
 
 

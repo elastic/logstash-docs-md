@@ -31,16 +31,16 @@ This plugin supports the following configuration options plus the [Common option
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`create_if_deleted`](plugins-outputs-csv.md#plugins-outputs-csv-create_if_deleted) | [boolean](introduction.md#boolean) | No |
-| [`csv_options`](plugins-outputs-csv.md#plugins-outputs-csv-csv_options) | [hash](introduction.md#hash) | No |
-| [`dir_mode`](plugins-outputs-csv.md#plugins-outputs-csv-dir_mode) | [number](introduction.md#number) | No |
-| [`fields`](plugins-outputs-csv.md#plugins-outputs-csv-fields) | [array](introduction.md#array) | Yes |
-| [`file_mode`](plugins-outputs-csv.md#plugins-outputs-csv-file_mode) | [number](introduction.md#number) | No |
-| [`filename_failure`](plugins-outputs-csv.md#plugins-outputs-csv-filename_failure) | [string](introduction.md#string) | No |
-| [`flush_interval`](plugins-outputs-csv.md#plugins-outputs-csv-flush_interval) | [number](introduction.md#number) | No |
-| [`gzip`](plugins-outputs-csv.md#plugins-outputs-csv-gzip) | [boolean](introduction.md#boolean) | No |
-| [`path`](plugins-outputs-csv.md#plugins-outputs-csv-path) | [string](introduction.md#string) | Yes |
-| [`spreadsheet_safe`](plugins-outputs-csv.md#plugins-outputs-csv-spreadsheet_safe) | [boolean](introduction.md#boolean) | No |
+| [`create_if_deleted`](plugins-outputs-csv.md#plugins-outputs-csv-create_if_deleted) | [boolean](value-types.md#boolean) | No |
+| [`csv_options`](plugins-outputs-csv.md#plugins-outputs-csv-csv_options) | [hash](value-types.md#hash) | No |
+| [`dir_mode`](plugins-outputs-csv.md#plugins-outputs-csv-dir_mode) | [number](value-types.md#number) | No |
+| [`fields`](plugins-outputs-csv.md#plugins-outputs-csv-fields) | [array](value-types.md#array) | Yes |
+| [`file_mode`](plugins-outputs-csv.md#plugins-outputs-csv-file_mode) | [number](value-types.md#number) | No |
+| [`filename_failure`](plugins-outputs-csv.md#plugins-outputs-csv-filename_failure) | [string](value-types.md#string) | No |
+| [`flush_interval`](plugins-outputs-csv.md#plugins-outputs-csv-flush_interval) | [number](value-types.md#number) | No |
+| [`gzip`](plugins-outputs-csv.md#plugins-outputs-csv-gzip) | [boolean](value-types.md#boolean) | No |
+| [`path`](plugins-outputs-csv.md#plugins-outputs-csv-path) | [string](value-types.md#string) | Yes |
+| [`spreadsheet_safe`](plugins-outputs-csv.md#plugins-outputs-csv-spreadsheet_safe) | [boolean](value-types.md#boolean) | No |
 
 Also see [Common options](plugins-outputs-csv.md#plugins-outputs-csv-common-options) for a list of options supported by all output plugins.
 
@@ -48,7 +48,7 @@ Also see [Common options](plugins-outputs-csv.md#plugins-outputs-csv-common-opti
 
 ### `create_if_deleted` [plugins-outputs-csv-create_if_deleted]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `true`
 
 If the configured file is deleted, but an event is handled by the plugin, the plugin will recreate the file. Default ⇒ true
@@ -56,7 +56,7 @@ If the configured file is deleted, but an event is handled by the plugin, the pl
 
 ### `csv_options` [plugins-outputs-csv-csv_options]
 
-* Value type is [hash](introduction.md#hash)
+* Value type is [hash](value-types.md#hash)
 * Default value is `{}`
 
 Options for CSV output. This is passed directly to the Ruby stdlib to_csv function. Full documentation is available on the [Ruby CSV documentation page](http://ruby-doc.org/stdlib-2.0.0/libdoc/csv/rdoc/index.md). A typical use case would be to use alternative column or row separators eg: `csv_options => {"col_sep" => "\t" "row_sep" => "\r\n"}` gives tab separated data with windows line endings
@@ -64,7 +64,7 @@ Options for CSV output. This is passed directly to the Ruby stdlib to_csv functi
 
 ### `dir_mode` [plugins-outputs-csv-dir_mode]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `-1`
 
 Dir access mode to use. Note that due to the bug in jruby system umask is ignored on linux: [https://github.com/jruby/jruby/issues/3426](https://github.com/jruby/jruby/issues/3426) Setting it to -1 uses default OS value. Example: `"dir_mode" => 0750`
@@ -73,7 +73,7 @@ Dir access mode to use. Note that due to the bug in jruby system umask is ignore
 ### `fields` [plugins-outputs-csv-fields]
 
 * This is a required setting.
-* Value type is [array](introduction.md#array)
+* Value type is [array](value-types.md#array)
 * There is no default value for this setting.
 
 The field names from the event that should be written to the CSV file. Fields are written to the CSV in the same order as the array. If a field does not exist on the event, an empty string will be written. Supports field reference syntax eg: `fields => ["field1", "[nested][field]"]`.
@@ -81,7 +81,7 @@ The field names from the event that should be written to the CSV file. Fields ar
 
 ### `file_mode` [plugins-outputs-csv-file_mode]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `-1`
 
 File access mode to use. Note that due to the bug in jruby system umask is ignored on linux: [https://github.com/jruby/jruby/issues/3426](https://github.com/jruby/jruby/issues/3426) Setting it to -1 uses default OS value. Example: `"file_mode" => 0640`
@@ -89,7 +89,7 @@ File access mode to use. Note that due to the bug in jruby system umask is ignor
 
 ### `filename_failure` [plugins-outputs-csv-filename_failure]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"_filepath_failures"`
 
 If the generated path is invalid, the events will be saved into this file and inside the defined path.
@@ -97,7 +97,7 @@ If the generated path is invalid, the events will be saved into this file and in
 
 ### `flush_interval` [plugins-outputs-csv-flush_interval]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `2`
 
 Flush interval (in seconds) for flushing writes to log files. 0 will flush on every message.
@@ -105,7 +105,7 @@ Flush interval (in seconds) for flushing writes to log files. 0 will flush on ev
 
 ### `gzip` [plugins-outputs-csv-gzip]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 Gzip the output stream before writing to disk.
@@ -114,7 +114,7 @@ Gzip the output stream before writing to disk.
 ### `path` [plugins-outputs-csv-path]
 
 * This is a required setting.
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 This output writes events to files on disk. You can use fields from the event as parts of the filename and/or path.
@@ -137,7 +137,7 @@ If you use an absolute path you cannot start with a dynamic string. E.g: `/%{{my
 
 ### `spreadsheet_safe` [plugins-outputs-csv-spreadsheet_safe]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `true`
 
 Option to not escape/munge string values. Please note turning off this option may not make the values safe in your spreadsheet application

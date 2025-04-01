@@ -40,45 +40,45 @@ As of version `2.0.0` of this plugin, a number of previously deprecated settings
 | Setting | Input type | Required |
 | --- | --- | --- |
 | [`body`](plugins-filters-http.md#plugins-filters-http-body) | String, Array or Hash | No |
-| [`body_format`](plugins-filters-http.md#plugins-filters-http-body_format) | [string](introduction.md#string) | No |
-| [`ecs_compatibility`](plugins-filters-http.md#plugins-filters-http-ecs_compatibility) | [string](introduction.md#string) | No |
-| [`headers`](plugins-filters-http.md#plugins-filters-http-headers) | [hash](introduction.md#hash) | No |
-| [`query`](plugins-filters-http.md#plugins-filters-http-query) | [hash](introduction.md#hash) | No |
-| [`target_body`](plugins-filters-http.md#plugins-filters-http-target_body) | [string](introduction.md#string) | No |
-| [`target_headers`](plugins-filters-http.md#plugins-filters-http-target_headers) | [string](introduction.md#string) | No |
-| [`url`](plugins-filters-http.md#plugins-filters-http-url) | [string](introduction.md#string) | Yes |
-| [`verb`](plugins-filters-http.md#plugins-filters-http-verb) | [string](introduction.md#string) | No |
+| [`body_format`](plugins-filters-http.md#plugins-filters-http-body_format) | [string](value-types.md#string) | No |
+| [`ecs_compatibility`](plugins-filters-http.md#plugins-filters-http-ecs_compatibility) | [string](value-types.md#string) | No |
+| [`headers`](plugins-filters-http.md#plugins-filters-http-headers) | [hash](value-types.md#hash) | No |
+| [`query`](plugins-filters-http.md#plugins-filters-http-query) | [hash](value-types.md#hash) | No |
+| [`target_body`](plugins-filters-http.md#plugins-filters-http-target_body) | [string](value-types.md#string) | No |
+| [`target_headers`](plugins-filters-http.md#plugins-filters-http-target_headers) | [string](value-types.md#string) | No |
+| [`url`](plugins-filters-http.md#plugins-filters-http-url) | [string](value-types.md#string) | Yes |
+| [`verb`](plugins-filters-http.md#plugins-filters-http-verb) | [string](value-types.md#string) | No |
 
 There are also multiple configuration options related to the HTTP connectivity:
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`automatic_retries`](plugins-filters-http.md#plugins-filters-http-automatic_retries) | [number](introduction.md#number) | No |
-| [`connect_timeout`](plugins-filters-http.md#plugins-filters-http-connect_timeout) | [number](introduction.md#number) | No |
-| [`cookies`](plugins-filters-http.md#plugins-filters-http-cookies) | [boolean](introduction.md#boolean) | No |
-| [`follow_redirects`](plugins-filters-http.md#plugins-filters-http-follow_redirects) | [boolean](introduction.md#boolean) | No |
-| [`keepalive`](plugins-filters-http.md#plugins-filters-http-keepalive) | [boolean](introduction.md#boolean) | No |
-| [`password`](plugins-filters-http.md#plugins-filters-http-password) | [password](introduction.md#password) | No |
-| [`pool_max`](plugins-filters-http.md#plugins-filters-http-pool_max) | [number](introduction.md#number) | No |
-| [`pool_max_per_route`](plugins-filters-http.md#plugins-filters-http-pool_max_per_route) | [number](introduction.md#number) | No |
-| [`proxy`](plugins-filters-http.md#plugins-filters-http-proxy) | [string](introduction.md#string) | No |
-| [`request_timeout`](plugins-filters-http.md#plugins-filters-http-request_timeout) | [number](introduction.md#number) | No |
-| [`retry_non_idempotent`](plugins-filters-http.md#plugins-filters-http-retry_non_idempotent) | [boolean](introduction.md#boolean) | No |
-| [`socket_timeout`](plugins-filters-http.md#plugins-filters-http-socket_timeout) | [number](introduction.md#number) | No |
-| [`ssl_certificate`](plugins-filters-http.md#plugins-filters-http-ssl_certificate) | [path](introduction.md#path) | No |
-| [`ssl_certificate_authorities`](plugins-filters-http.md#plugins-filters-http-ssl_certificate_authorities) | list of [path](introduction.md#path) | No |
-| [`ssl_cipher_suites`](plugins-filters-http.md#plugins-filters-http-ssl_cipher_suites) | list of [string](introduction.md#string) | No |
-| [`ssl_enabled`](plugins-filters-http.md#plugins-filters-http-ssl_enabled) | [boolean](introduction.md#boolean) | No |
-| [`ssl_keystore_password`](plugins-filters-http.md#plugins-filters-http-ssl_keystore_password) | [password](introduction.md#password) | No |
-| [`ssl_keystore_path`](plugins-filters-http.md#plugins-filters-http-ssl_keystore_path) | [path](introduction.md#path) | No |
-| [`ssl_keystore_type`](plugins-filters-http.md#plugins-filters-http-ssl_keystore_type) | [string](introduction.md#string) | No |
-| [`ssl_supported_protocols`](plugins-filters-http.md#plugins-filters-http-ssl_supported_protocols) | [string](introduction.md#string) | No |
-| [`ssl_truststore_password`](plugins-filters-http.md#plugins-filters-http-ssl_truststore_password) | [password](introduction.md#password) | No |
-| [`ssl_truststore_path`](plugins-filters-http.md#plugins-filters-http-ssl_truststore_path) | [path](introduction.md#path) | No |
-| [`ssl_truststore_type`](plugins-filters-http.md#plugins-filters-http-ssl_truststore_type) | [string](introduction.md#string) | No |
-| [`ssl_verification_mode`](plugins-filters-http.md#plugins-filters-http-ssl_verification_mode) | [string](introduction.md#string), one of `["full", "none"]` | No |
-| [`user`](plugins-filters-http.md#plugins-filters-http-user) | [string](introduction.md#string) | no |
-| [`validate_after_inactivity`](plugins-filters-http.md#plugins-filters-http-validate_after_inactivity) | [number](introduction.md#number) | No |
+| [`automatic_retries`](plugins-filters-http.md#plugins-filters-http-automatic_retries) | [number](value-types.md#number) | No |
+| [`connect_timeout`](plugins-filters-http.md#plugins-filters-http-connect_timeout) | [number](value-types.md#number) | No |
+| [`cookies`](plugins-filters-http.md#plugins-filters-http-cookies) | [boolean](value-types.md#boolean) | No |
+| [`follow_redirects`](plugins-filters-http.md#plugins-filters-http-follow_redirects) | [boolean](value-types.md#boolean) | No |
+| [`keepalive`](plugins-filters-http.md#plugins-filters-http-keepalive) | [boolean](value-types.md#boolean) | No |
+| [`password`](plugins-filters-http.md#plugins-filters-http-password) | [password](value-types.md#password) | No |
+| [`pool_max`](plugins-filters-http.md#plugins-filters-http-pool_max) | [number](value-types.md#number) | No |
+| [`pool_max_per_route`](plugins-filters-http.md#plugins-filters-http-pool_max_per_route) | [number](value-types.md#number) | No |
+| [`proxy`](plugins-filters-http.md#plugins-filters-http-proxy) | [string](value-types.md#string) | No |
+| [`request_timeout`](plugins-filters-http.md#plugins-filters-http-request_timeout) | [number](value-types.md#number) | No |
+| [`retry_non_idempotent`](plugins-filters-http.md#plugins-filters-http-retry_non_idempotent) | [boolean](value-types.md#boolean) | No |
+| [`socket_timeout`](plugins-filters-http.md#plugins-filters-http-socket_timeout) | [number](value-types.md#number) | No |
+| [`ssl_certificate`](plugins-filters-http.md#plugins-filters-http-ssl_certificate) | [path](value-types.md#path) | No |
+| [`ssl_certificate_authorities`](plugins-filters-http.md#plugins-filters-http-ssl_certificate_authorities) | list of [path](value-types.md#path) | No |
+| [`ssl_cipher_suites`](plugins-filters-http.md#plugins-filters-http-ssl_cipher_suites) | list of [string](value-types.md#string) | No |
+| [`ssl_enabled`](plugins-filters-http.md#plugins-filters-http-ssl_enabled) | [boolean](value-types.md#boolean) | No |
+| [`ssl_keystore_password`](plugins-filters-http.md#plugins-filters-http-ssl_keystore_password) | [password](value-types.md#password) | No |
+| [`ssl_keystore_path`](plugins-filters-http.md#plugins-filters-http-ssl_keystore_path) | [path](value-types.md#path) | No |
+| [`ssl_keystore_type`](plugins-filters-http.md#plugins-filters-http-ssl_keystore_type) | [string](value-types.md#string) | No |
+| [`ssl_supported_protocols`](plugins-filters-http.md#plugins-filters-http-ssl_supported_protocols) | [string](value-types.md#string) | No |
+| [`ssl_truststore_password`](plugins-filters-http.md#plugins-filters-http-ssl_truststore_password) | [password](value-types.md#password) | No |
+| [`ssl_truststore_path`](plugins-filters-http.md#plugins-filters-http-ssl_truststore_path) | [path](value-types.md#path) | No |
+| [`ssl_truststore_type`](plugins-filters-http.md#plugins-filters-http-ssl_truststore_type) | [string](value-types.md#string) | No |
+| [`ssl_verification_mode`](plugins-filters-http.md#plugins-filters-http-ssl_verification_mode) | [string](value-types.md#string), one of `["full", "none"]` | No |
+| [`user`](plugins-filters-http.md#plugins-filters-http-user) | [string](value-types.md#string) | no |
+| [`validate_after_inactivity`](plugins-filters-http.md#plugins-filters-http-validate_after_inactivity) | [number](value-types.md#number) | No |
 
 Also see [Common options](plugins-filters-http.md#plugins-filters-http-common-options) for a list of options supported by all filter plugins.
 
@@ -86,7 +86,7 @@ Also see [Common options](plugins-filters-http.md#plugins-filters-http-common-op
 
 ### `body` [plugins-filters-http-body]
 
-* Value type can be a [string](introduction.md#string), [number](introduction.md#number), [array](introduction.md#array) or [hash](introduction.md#hash)
+* Value type can be a [string](value-types.md#string), [number](value-types.md#number), [array](value-types.md#array) or [hash](value-types.md#hash)
 * There is no default value
 
 The body of the HTTP request to be sent.
@@ -109,12 +109,12 @@ http {
 * Value type can be either `"json"` or `"text"`
 * Default value is `"text"`
 
-If set to `"json"` and the [`body`](plugins-filters-http.md#plugins-filters-http-body) is a type of [array](introduction.md#array) or [hash](introduction.md#hash), the body will be serialized as JSON. Otherwise it is sent as is.
+If set to `"json"` and the [`body`](plugins-filters-http.md#plugins-filters-http-body) is a type of [array](value-types.md#array) or [hash](value-types.md#hash), the body will be serialized as JSON. Otherwise it is sent as is.
 
 
 ### `ecs_compatibility` [plugins-filters-http-ecs_compatibility]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Supported values are:
 
     * `disabled`: does not use ECS-compatible field names (for example, response headers target `headers` field by default)
@@ -131,7 +131,7 @@ Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)](ht
 
 ### `headers` [plugins-filters-http-headers]
 
-* Value type is [hash](introduction.md#hash)
+* Value type is [hash](value-types.md#hash)
 * There is no default value
 
 The HTTP headers to be sent in the request. Both the names of the headers and their values can reference values from event fields.
@@ -139,7 +139,7 @@ The HTTP headers to be sent in the request. Both the names of the headers and th
 
 ### `query` [plugins-filters-http-query]
 
-* Value type is [hash](introduction.md#hash)
+* Value type is [hash](value-types.md#hash)
 * There is no default value
 
 Define the query string parameters (key-value pairs) to be sent in the HTTP request.
@@ -147,7 +147,7 @@ Define the query string parameters (key-value pairs) to be sent in the HTTP requ
 
 ### `target_body` [plugins-filters-http-target_body]
 
-* Value type is [hash](introduction.md#hash)
+* Value type is [hash](value-types.md#hash)
 * Default value depends on whether [`ecs_compatibility`](plugins-filters-http.md#plugins-filters-http-ecs_compatibility) is enabled:
 
     * ECS Compatibility disabled: `"[body]"
@@ -159,7 +159,7 @@ Define the target field for placing the body of the HTTP response.
 
 ### `target_headers` [plugins-filters-http-target_headers]
 
-* Value type is [hash](introduction.md#hash)
+* Value type is [hash](value-types.md#hash)
 * Default value depends on whether [`ecs_compatibility`](plugins-filters-http.md#plugins-filters-http-ecs_compatibility) is enabled:
 
     * ECS Compatibility disabled: `"[headers]"`
@@ -171,7 +171,7 @@ Define the target field for placing the headers of the HTTP response.
 
 ### `url` [plugins-filters-http-url]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value
 
 The URL to send the request to. The value can be fetched from event fields.
@@ -190,7 +190,7 @@ The verb to be used for the HTTP request.
 
 ### `automatic_retries` [plugins-filters-http-automatic_retries]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `1`
 
 How many times should the client retry a failing URL. We highly recommend NOT setting this value to zero if keepalive is enabled. Some servers incorrectly end keepalives early requiring a retry! Note: if `retry_non_idempotent` is set only GET, HEAD, PUT, DELETE, OPTIONS, and TRACE requests will be retried.
@@ -198,7 +198,7 @@ How many times should the client retry a failing URL. We highly recommend NOT se
 
 ### `connect_timeout` [plugins-filters-http-connect_timeout]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `10`
 
 Timeout (in seconds) to wait for a connection to be established. Default is `10s`
@@ -206,7 +206,7 @@ Timeout (in seconds) to wait for a connection to be established. Default is `10s
 
 ### `cookies` [plugins-filters-http-cookies]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `true`
 
 Enable cookie support. With this enabled the client will persist cookies across requests as a normal web browser would. Enabled by default
@@ -214,7 +214,7 @@ Enable cookie support. With this enabled the client will persist cookies across 
 
 ### `follow_redirects` [plugins-filters-http-follow_redirects]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `true`
 
 Should redirects be followed? Defaults to `true`
@@ -222,7 +222,7 @@ Should redirects be followed? Defaults to `true`
 
 ### `keepalive` [plugins-filters-http-keepalive]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `true`
 
 Turn this on to enable HTTP keepalive support. We highly recommend setting `automatic_retries` to at least one with this to fix interactions with broken keepalive implementations.
@@ -230,7 +230,7 @@ Turn this on to enable HTTP keepalive support. We highly recommend setting `auto
 
 ### `password` [plugins-filters-http-password]
 
-* Value type is [password](introduction.md#password)
+* Value type is [password](value-types.md#password)
 * There is no default value for this setting.
 
 Password to be used in conjunction with the username for HTTP authentication.
@@ -238,7 +238,7 @@ Password to be used in conjunction with the username for HTTP authentication.
 
 ### `pool_max` [plugins-filters-http-pool_max]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `50`
 
 Max number of concurrent connections. Defaults to `50`
@@ -246,7 +246,7 @@ Max number of concurrent connections. Defaults to `50`
 
 ### `pool_max_per_route` [plugins-filters-http-pool_max_per_route]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `25`
 
 Max number of concurrent connections to a single host. Defaults to `25`
@@ -254,7 +254,7 @@ Max number of concurrent connections to a single host. Defaults to `25`
 
 ### `proxy` [plugins-filters-http-proxy]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 If you’d like to use an HTTP proxy . This supports multiple configuration syntaxes:
@@ -266,7 +266,7 @@ If you’d like to use an HTTP proxy . This supports multiple configuration synt
 
 ### `request_timeout` [plugins-filters-http-request_timeout]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `60`
 
 Timeout (in seconds) for the entire request.
@@ -274,7 +274,7 @@ Timeout (in seconds) for the entire request.
 
 ### `retry_non_idempotent` [plugins-filters-http-retry_non_idempotent]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 If `automatic_retries` is enabled this will cause non-idempotent HTTP verbs (such as POST) to be retried.
@@ -282,7 +282,7 @@ If `automatic_retries` is enabled this will cause non-idempotent HTTP verbs (suc
 
 ### `socket_timeout` [plugins-filters-http-socket_timeout]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `10`
 
 Timeout (in seconds) to wait for data on the socket. Default is `10s`
@@ -290,7 +290,7 @@ Timeout (in seconds) to wait for data on the socket. Default is `10s`
 
 ### `ssl_certificate` [plugins-filters-http-ssl_certificate]
 
-* Value type is [path](introduction.md#path)
+* Value type is [path](value-types.md#path)
 * There is no default value for this setting.
 
 SSL certificate to use to authenticate the client. This certificate should be an OpenSSL-style X.509 certificate file.
@@ -303,7 +303,7 @@ This setting can be used only if [`ssl_key`](plugins-filters-http.md#plugins-fil
 
 ### `ssl_certificate_authorities` [plugins-filters-http-ssl_certificate_authorities]
 
-* Value type is a list of [path](introduction.md#path)
+* Value type is a list of [path](value-types.md#path)
 * There is no default value for this setting
 
 The .cer or .pem CA files to validate the server’s certificate.
@@ -311,7 +311,7 @@ The .cer or .pem CA files to validate the server’s certificate.
 
 ### `ssl_cipher_suites` [plugins-filters-http-ssl_cipher_suites]
 
-* Value type is a list of [string](introduction.md#string)
+* Value type is a list of [string](value-types.md#string)
 * There is no default value for this setting
 
 The list of cipher suites to use, listed by priorities. Supported cipher suites vary depending on the Java and protocol versions.
@@ -319,7 +319,7 @@ The list of cipher suites to use, listed by priorities. Supported cipher suites 
 
 ### `ssl_enabled` [plugins-filters-http-ssl_enabled]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `true`
 
 Enable SSL/TLS secured communication. It must be `true` for other `ssl_` options to take effect.
@@ -327,7 +327,7 @@ Enable SSL/TLS secured communication. It must be `true` for other `ssl_` options
 
 ### `ssl_key` [plugins-filters-http-ssl_key]
 
-* Value type is [path](introduction.md#path)
+* Value type is [path](value-types.md#path)
 * There is no default value for this setting.
 
 OpenSSL-style RSA private key that corresponds to the [`ssl_certificate`](plugins-filters-http.md#plugins-filters-http-ssl_certificate).
@@ -340,7 +340,7 @@ This setting can be used only if [`ssl_certificate`](plugins-filters-http.md#plu
 
 ### `ssl_keystore_password` [plugins-filters-http-ssl_keystore_password]
 
-* Value type is [password](introduction.md#password)
+* Value type is [password](value-types.md#password)
 * There is no default value for this setting.
 
 Set the keystore password
@@ -348,7 +348,7 @@ Set the keystore password
 
 ### `ssl_keystore_path` [plugins-filters-http-ssl_keystore_path]
 
-* Value type is [path](introduction.md#path)
+* Value type is [path](value-types.md#path)
 * There is no default value for this setting.
 
 The keystore used to present a certificate to the server. It can be either `.jks` or `.p12`
@@ -364,7 +364,7 @@ The format of the keystore file. It must be either `jks` or `pkcs12`.
 
 ### `ssl_supported_protocols` [plugins-filters-http-ssl_supported_protocols]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Allowed values are: `'TLSv1.1'`, `'TLSv1.2'`, `'TLSv1.3'`
 * Default depends on the JDK being used. With up-to-date Logstash, the default is `['TLSv1.2', 'TLSv1.3']`. `'TLSv1.1'` is not considered secure and is only provided for legacy applications.
 
@@ -380,7 +380,7 @@ If you configure the plugin to use `'TLSv1.1'` on any recent JVM, such as the on
 
 ### `ssl_truststore_password` [plugins-filters-http-ssl_truststore_password]
 
-* Value type is [password](introduction.md#password)
+* Value type is [password](value-types.md#password)
 * There is no default value for this setting.
 
 Set the truststore password
@@ -388,7 +388,7 @@ Set the truststore password
 
 ### `ssl_truststore_path` [plugins-filters-http-ssl_truststore_path]
 
-* Value type is [path](introduction.md#path)
+* Value type is [path](value-types.md#path)
 * There is no default value for this setting.
 
 The truststore to validate the server’s certificate. It can be either `.jks` or `.p12`.
@@ -404,7 +404,7 @@ The format of the truststore file. It must be either `jks` or `pkcs12`.
 
 ### `ssl_verification_mode` [plugins-filters-http-ssl_verification_mode]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Supported values are: `full`, `none`
 * Default value is `full`
 
@@ -415,7 +415,7 @@ The `none` setting performs no verification of the server’s certificate. This 
 
 ### `user` [plugins-filters-http-user]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 Username to use with HTTP authentication for ALL requests. Note that you can also set this per-URL. If you set this you must also set the `password` option.
@@ -423,7 +423,7 @@ Username to use with HTTP authentication for ALL requests. Note that you can als
 
 ### `validate_after_inactivity` [plugins-filters-http-validate_after_inactivity]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `200`
 
 How long to wait before checking for a stale connection to determine if a keepalive request is needed. Consider setting this value lower than the default, possibly to 0, if you get connection errors regularly.

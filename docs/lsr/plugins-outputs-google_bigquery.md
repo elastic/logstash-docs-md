@@ -86,26 +86,26 @@ This plugin supports the following configuration options plus the [Common option
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`batch_size`](plugins-outputs-google_bigquery.md#plugins-outputs-google_bigquery-batch_size) | [number](introduction.md#number) | No |
-| [`batch_size_bytes`](plugins-outputs-google_bigquery.md#plugins-outputs-google_bigquery-batch_size_bytes) | [number](introduction.md#number) | No |
-| [`csv_schema`](plugins-outputs-google_bigquery.md#plugins-outputs-google_bigquery-csv_schema) | [string](introduction.md#string) | No |
-| [`dataset`](plugins-outputs-google_bigquery.md#plugins-outputs-google_bigquery-dataset) | [string](introduction.md#string) | Yes |
-| [`date_pattern`](plugins-outputs-google_bigquery.md#plugins-outputs-google_bigquery-date_pattern) | [string](introduction.md#string) | No |
-| [`deleter_interval_secs`](plugins-outputs-google_bigquery.md#plugins-outputs-google_bigquery-deleter_interval_secs) | [number](introduction.md#number) | *Deprecated* |
-| [`error_directory`](plugins-outputs-google_bigquery.md#plugins-outputs-google_bigquery-error_directory) | [string](introduction.md#string) | Yes |
-| [`flush_interval_secs`](plugins-outputs-google_bigquery.md#plugins-outputs-google_bigquery-flush_interval_secs) | [number](introduction.md#number) | No |
-| [`ignore_unknown_values`](plugins-outputs-google_bigquery.md#plugins-outputs-google_bigquery-ignore_unknown_values) | [boolean](introduction.md#boolean) | No |
-| [`json_key_file`](plugins-outputs-google_bigquery.md#plugins-outputs-google_bigquery-json_key_file) | [string](introduction.md#string) | No |
-| [`json_schema`](plugins-outputs-google_bigquery.md#plugins-outputs-google_bigquery-json_schema) | [hash](introduction.md#hash) | No |
-| [`key_password`](plugins-outputs-google_bigquery.md#plugins-outputs-google_bigquery-key_password) | [string](introduction.md#string) | *Deprecated* |
-| [`project_id`](plugins-outputs-google_bigquery.md#plugins-outputs-google_bigquery-project_id) | [string](introduction.md#string) | Yes |
-| [`service_account`](plugins-outputs-google_bigquery.md#plugins-outputs-google_bigquery-service_account) | [string](introduction.md#string) | *Deprecated* |
-| [`skip_invalid_rows`](plugins-outputs-google_bigquery.md#plugins-outputs-google_bigquery-skip_invalid_rows) | [boolean](introduction.md#boolean) | No |
-| [`table_prefix`](plugins-outputs-google_bigquery.md#plugins-outputs-google_bigquery-table_prefix) | [string](introduction.md#string) | No |
-| [`table_separator`](plugins-outputs-google_bigquery.md#plugins-outputs-google_bigquery-table_separator) | [string](introduction.md#string) | No |
-| [`temp_directory`](plugins-outputs-google_bigquery.md#plugins-outputs-google_bigquery-temp_directory) | [string](introduction.md#string) | *Deprecated* |
-| [`temp_file_prefix`](plugins-outputs-google_bigquery.md#plugins-outputs-google_bigquery-temp_file_prefix) | [string](introduction.md#string) | *Deprecated* |
-| [`uploader_interval_secs`](plugins-outputs-google_bigquery.md#plugins-outputs-google_bigquery-uploader_interval_secs) | [number](introduction.md#number) | *Deprecated* |
+| [`batch_size`](plugins-outputs-google_bigquery.md#plugins-outputs-google_bigquery-batch_size) | [number](value-types.md#number) | No |
+| [`batch_size_bytes`](plugins-outputs-google_bigquery.md#plugins-outputs-google_bigquery-batch_size_bytes) | [number](value-types.md#number) | No |
+| [`csv_schema`](plugins-outputs-google_bigquery.md#plugins-outputs-google_bigquery-csv_schema) | [string](value-types.md#string) | No |
+| [`dataset`](plugins-outputs-google_bigquery.md#plugins-outputs-google_bigquery-dataset) | [string](value-types.md#string) | Yes |
+| [`date_pattern`](plugins-outputs-google_bigquery.md#plugins-outputs-google_bigquery-date_pattern) | [string](value-types.md#string) | No |
+| [`deleter_interval_secs`](plugins-outputs-google_bigquery.md#plugins-outputs-google_bigquery-deleter_interval_secs) | [number](value-types.md#number) | *Deprecated* |
+| [`error_directory`](plugins-outputs-google_bigquery.md#plugins-outputs-google_bigquery-error_directory) | [string](value-types.md#string) | Yes |
+| [`flush_interval_secs`](plugins-outputs-google_bigquery.md#plugins-outputs-google_bigquery-flush_interval_secs) | [number](value-types.md#number) | No |
+| [`ignore_unknown_values`](plugins-outputs-google_bigquery.md#plugins-outputs-google_bigquery-ignore_unknown_values) | [boolean](value-types.md#boolean) | No |
+| [`json_key_file`](plugins-outputs-google_bigquery.md#plugins-outputs-google_bigquery-json_key_file) | [string](value-types.md#string) | No |
+| [`json_schema`](plugins-outputs-google_bigquery.md#plugins-outputs-google_bigquery-json_schema) | [hash](value-types.md#hash) | No |
+| [`key_password`](plugins-outputs-google_bigquery.md#plugins-outputs-google_bigquery-key_password) | [string](value-types.md#string) | *Deprecated* |
+| [`project_id`](plugins-outputs-google_bigquery.md#plugins-outputs-google_bigquery-project_id) | [string](value-types.md#string) | Yes |
+| [`service_account`](plugins-outputs-google_bigquery.md#plugins-outputs-google_bigquery-service_account) | [string](value-types.md#string) | *Deprecated* |
+| [`skip_invalid_rows`](plugins-outputs-google_bigquery.md#plugins-outputs-google_bigquery-skip_invalid_rows) | [boolean](value-types.md#boolean) | No |
+| [`table_prefix`](plugins-outputs-google_bigquery.md#plugins-outputs-google_bigquery-table_prefix) | [string](value-types.md#string) | No |
+| [`table_separator`](plugins-outputs-google_bigquery.md#plugins-outputs-google_bigquery-table_separator) | [string](value-types.md#string) | No |
+| [`temp_directory`](plugins-outputs-google_bigquery.md#plugins-outputs-google_bigquery-temp_directory) | [string](value-types.md#string) | *Deprecated* |
+| [`temp_file_prefix`](plugins-outputs-google_bigquery.md#plugins-outputs-google_bigquery-temp_file_prefix) | [string](value-types.md#string) | *Deprecated* |
+| [`uploader_interval_secs`](plugins-outputs-google_bigquery.md#plugins-outputs-google_bigquery-uploader_interval_secs) | [number](value-types.md#number) | *Deprecated* |
 
 Also see [Common options](plugins-outputs-google_bigquery.md#plugins-outputs-google_bigquery-common-options) for a list of options supported by all output plugins.
 
@@ -118,7 +118,7 @@ Added in 4.0.0.
 ::::
 
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `128`
 
 The maximum number of messages to upload at a single time. This number must be < 10,000. Batching can increase performance and throughput to a point, but at the cost of per-request latency. Too few rows per request and the overhead of each request can make ingestion inefficient. Too many rows per request and the throughput may drop. BigQuery recommends using about 500 rows per request, but experimentation with representative data (schema and data sizes) will help you determine the ideal batch size.
@@ -131,7 +131,7 @@ Added in 4.0.0.
 ::::
 
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `1_000_000`
 
 An approximate number of bytes to upload as part of a batch. This number should be < 10MB or inserts may fail.
@@ -139,7 +139,7 @@ An approximate number of bytes to upload as part of a batch. This number should 
 
 ### `csv_schema` [plugins-outputs-google_bigquery-csv_schema]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `nil`
 
 Schema for log data. It must follow the format `name1:type1(,name2:type2)*`. For example, `path:STRING,status:INTEGER,score:FLOAT`.
@@ -148,7 +148,7 @@ Schema for log data. It must follow the format `name1:type1(,name2:type2)*`. For
 ### `dataset` [plugins-outputs-google_bigquery-dataset]
 
 * This is a required setting.
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 The BigQuery dataset the tables for the events will be added to.
@@ -156,7 +156,7 @@ The BigQuery dataset the tables for the events will be added to.
 
 ### `date_pattern` [plugins-outputs-google_bigquery-date_pattern]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"%Y-%m-%dT%H:00"`
 
 Time pattern for BigQuery table, defaults to hourly tables. Must Time.strftime patterns: www.ruby-doc.org/core-2.0/Time.html#method-i-strftime
@@ -171,7 +171,7 @@ Events are uploaded in real-time without being stored to disk.
 ::::
 
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 
 
 ### `error_directory` [plugins-outputs-google_bigquery-error_directory]
@@ -182,7 +182,7 @@ Added in 4.0.0.
 
 
 * This is a required setting.
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"/tmp/bigquery"`.
 
 The location to store events that could not be uploaded due to errors. By default if *any* message in an insert is invalid all will fail. You can use [`skip_invalid_rows`](plugins-outputs-google_bigquery.md#plugins-outputs-google_bigquery-skip_invalid_rows) to allow partial inserts.
@@ -196,7 +196,7 @@ Files names follow the pattern `[table name]-[UNIX timestamp].log`
 
 ### `flush_interval_secs` [plugins-outputs-google_bigquery-flush_interval_secs]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `5`
 
 Uploads all data this often even if other upload criteria aren’t met.
@@ -204,7 +204,7 @@ Uploads all data this often even if other upload criteria aren’t met.
 
 ### `ignore_unknown_values` [plugins-outputs-google_bigquery-ignore_unknown_values]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 Indicates if BigQuery should ignore values that are not represented in the table schema. If true, the extra values are discarded. If false, BigQuery will reject the records with extra fields and the job will fail. The default value is false.
@@ -230,7 +230,7 @@ Replaces [`key_password`](plugins-outputs-google_bigquery.md#plugins-outputs-goo
 ::::
 
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `nil`
 
 If Logstash is running within Google Compute Engine, the plugin can use GCE’s Application Default Credentials. Outside of GCE, you will need to specify a Service Account JSON key file.
@@ -238,7 +238,7 @@ If Logstash is running within Google Compute Engine, the plugin can use GCE’s 
 
 ### `json_schema` [plugins-outputs-google_bigquery-json_schema]
 
-* Value type is [hash](introduction.md#hash)
+* Value type is [hash](value-types.md#hash)
 * Default value is `nil`
 
 Schema for log data as a hash. These can include nested records, descriptions, and modes.
@@ -280,13 +280,13 @@ Replaced by `json_key_file` or by using ADC. See [`json_key_file`](plugins-outpu
 ::::
 
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 
 
 ### `project_id` [plugins-outputs-google_bigquery-project_id]
 
 * This is a required setting.
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 Google Cloud Project ID (number, not Project Name!).
@@ -301,7 +301,7 @@ Replaced by `json_key_file` or by using ADC. See [`json_key_file`](plugins-outpu
 ::::
 
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 
 
 ### `skip_invalid_rows` [plugins-outputs-google_bigquery-skip_invalid_rows]
@@ -311,7 +311,7 @@ Added in 4.1.0.
 ::::
 
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 Insert all valid rows of a request, even if invalid rows exist. The default value is false, which causes the entire request to fail if any invalid rows exist.
@@ -319,7 +319,7 @@ Insert all valid rows of a request, even if invalid rows exist. The default valu
 
 ### `table_prefix` [plugins-outputs-google_bigquery-table_prefix]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"logstash"`
 
 BigQuery table ID prefix to be used when creating new tables for log data. Table name will be `<table_prefix><table_separator><date>`
@@ -327,7 +327,7 @@ BigQuery table ID prefix to be used when creating new tables for log data. Table
 
 ### `table_separator` [plugins-outputs-google_bigquery-table_separator]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"_"`
 
 BigQuery table separator to be added between the table_prefix and the date suffix.
@@ -342,7 +342,7 @@ Events are uploaded in real-time without being stored to disk.
 ::::
 
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 
 
 ### `temp_file_prefix` [plugins-outputs-google_bigquery-temp_file_prefix]
@@ -354,7 +354,7 @@ Events are uploaded in real-time without being stored to disk
 ::::
 
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 
 
 ### `uploader_interval_secs` [plugins-outputs-google_bigquery-uploader_interval_secs]
@@ -366,7 +366,7 @@ This field is no longer used
 ::::
 
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `60`
 
 Uploader interval when uploading new files to BigQuery. Adjust time based on your time pattern (for example, for hourly files, this interval can be around one hour).

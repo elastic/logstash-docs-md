@@ -68,41 +68,41 @@ As of version `6.0.0` of this plugin, a number of previously deprecated settings
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`automatic_retries`](plugins-outputs-http.md#plugins-outputs-http-automatic_retries) | [number](introduction.md#number) | No |
-| [`connect_timeout`](plugins-outputs-http.md#plugins-outputs-http-connect_timeout) | [number](introduction.md#number) | No |
-| [`content_type`](plugins-outputs-http.md#plugins-outputs-http-content_type) | [string](introduction.md#string) | No |
-| [`cookies`](plugins-outputs-http.md#plugins-outputs-http-cookies) | [boolean](introduction.md#boolean) | No |
-| [`follow_redirects`](plugins-outputs-http.md#plugins-outputs-http-follow_redirects) | [boolean](introduction.md#boolean) | No |
-| [`format`](plugins-outputs-http.md#plugins-outputs-http-format) | [string](introduction.md#string), one of `["json", "json_batch", "form", "message"]` | No |
-| [`headers`](plugins-outputs-http.md#plugins-outputs-http-headers) | [hash](introduction.md#hash) | No |
-| [`http_compression`](plugins-outputs-http.md#plugins-outputs-http-http_compression) | [boolean](introduction.md#boolean) | No |
-| [`http_method`](plugins-outputs-http.md#plugins-outputs-http-http_method) | [string](introduction.md#string), one of `["put", "post", "patch", "delete", "get", "head"]` | Yes |
-| [`ignorable_codes`](plugins-outputs-http.md#plugins-outputs-http-ignorable_codes) | [number](introduction.md#number) | No |
-| [`keepalive`](plugins-outputs-http.md#plugins-outputs-http-keepalive) | [boolean](introduction.md#boolean) | No |
-| [`mapping`](plugins-outputs-http.md#plugins-outputs-http-mapping) | [hash](introduction.md#hash) | No |
-| [`message`](plugins-outputs-http.md#plugins-outputs-http-message) | [string](introduction.md#string) | No |
-| [`pool_max`](plugins-outputs-http.md#plugins-outputs-http-pool_max) | [number](introduction.md#number) | No |
-| [`pool_max_per_route`](plugins-outputs-http.md#plugins-outputs-http-pool_max_per_route) | [number](introduction.md#number) | No |
+| [`automatic_retries`](plugins-outputs-http.md#plugins-outputs-http-automatic_retries) | [number](value-types.md#number) | No |
+| [`connect_timeout`](plugins-outputs-http.md#plugins-outputs-http-connect_timeout) | [number](value-types.md#number) | No |
+| [`content_type`](plugins-outputs-http.md#plugins-outputs-http-content_type) | [string](value-types.md#string) | No |
+| [`cookies`](plugins-outputs-http.md#plugins-outputs-http-cookies) | [boolean](value-types.md#boolean) | No |
+| [`follow_redirects`](plugins-outputs-http.md#plugins-outputs-http-follow_redirects) | [boolean](value-types.md#boolean) | No |
+| [`format`](plugins-outputs-http.md#plugins-outputs-http-format) | [string](value-types.md#string), one of `["json", "json_batch", "form", "message"]` | No |
+| [`headers`](plugins-outputs-http.md#plugins-outputs-http-headers) | [hash](value-types.md#hash) | No |
+| [`http_compression`](plugins-outputs-http.md#plugins-outputs-http-http_compression) | [boolean](value-types.md#boolean) | No |
+| [`http_method`](plugins-outputs-http.md#plugins-outputs-http-http_method) | [string](value-types.md#string), one of `["put", "post", "patch", "delete", "get", "head"]` | Yes |
+| [`ignorable_codes`](plugins-outputs-http.md#plugins-outputs-http-ignorable_codes) | [number](value-types.md#number) | No |
+| [`keepalive`](plugins-outputs-http.md#plugins-outputs-http-keepalive) | [boolean](value-types.md#boolean) | No |
+| [`mapping`](plugins-outputs-http.md#plugins-outputs-http-mapping) | [hash](value-types.md#hash) | No |
+| [`message`](plugins-outputs-http.md#plugins-outputs-http-message) | [string](value-types.md#string) | No |
+| [`pool_max`](plugins-outputs-http.md#plugins-outputs-http-pool_max) | [number](value-types.md#number) | No |
+| [`pool_max_per_route`](plugins-outputs-http.md#plugins-outputs-http-pool_max_per_route) | [number](value-types.md#number) | No |
 | [`proxy`](plugins-outputs-http.md#plugins-outputs-http-proxy) | <<,>> | No |
-| [`request_timeout`](plugins-outputs-http.md#plugins-outputs-http-request_timeout) | [number](introduction.md#number) | No |
-| [`retry_failed`](plugins-outputs-http.md#plugins-outputs-http-retry_failed) | [boolean](introduction.md#boolean) | No |
-| [`retry_non_idempotent`](plugins-outputs-http.md#plugins-outputs-http-retry_non_idempotent) | [boolean](introduction.md#boolean) | No |
-| [`retryable_codes`](plugins-outputs-http.md#plugins-outputs-http-retryable_codes) | [number](introduction.md#number) | No |
-| [`socket_timeout`](plugins-outputs-http.md#plugins-outputs-http-socket_timeout) | [number](introduction.md#number) | No |
-| [`ssl_certificate`](plugins-outputs-http.md#plugins-outputs-http-ssl_certificate) | [path](introduction.md#path) | No |
-| [`ssl_certificate_authorities`](plugins-outputs-http.md#plugins-outputs-http-ssl_certificate_authorities) | list of [path](introduction.md#path) | No |
-| [`ssl_cipher_suites`](plugins-outputs-http.md#plugins-outputs-http-ssl_cipher_suites) | list of [string](introduction.md#string) | No |
-| [`ssl_enabled`](plugins-outputs-http.md#plugins-outputs-http-ssl_enabled) | [boolean](introduction.md#boolean) | No |
-| [`ssl_keystore_password`](plugins-outputs-http.md#plugins-outputs-http-ssl_keystore_password) | [password](introduction.md#password) | No |
-| [`ssl_keystore_path`](plugins-outputs-http.md#plugins-outputs-http-ssl_keystore_path) | [path](introduction.md#path) | No |
-| [`ssl_keystore_type`](plugins-outputs-http.md#plugins-outputs-http-ssl_keystore_type) | [string](introduction.md#string) | No |
-| [`ssl_supported_protocols`](plugins-outputs-http.md#plugins-outputs-http-ssl_supported_protocols) | [string](introduction.md#string) | No |
-| [`ssl_truststore_password`](plugins-outputs-http.md#plugins-outputs-http-ssl_truststore_password) | [password](introduction.md#password) | No |
-| [`ssl_truststore_path`](plugins-outputs-http.md#plugins-outputs-http-ssl_truststore_path) | [path](introduction.md#path) | No |
-| [`ssl_truststore_type`](plugins-outputs-http.md#plugins-outputs-http-ssl_truststore_type) | [string](introduction.md#string) | No |
-| [`ssl_verification_mode`](plugins-outputs-http.md#plugins-outputs-http-ssl_verification_mode) | [string](introduction.md#string), one of `["full", "none"]` | No |
-| [`url`](plugins-outputs-http.md#plugins-outputs-http-url) | [string](introduction.md#string) | Yes |
-| [`validate_after_inactivity`](plugins-outputs-http.md#plugins-outputs-http-validate_after_inactivity) | [number](introduction.md#number) | No |
+| [`request_timeout`](plugins-outputs-http.md#plugins-outputs-http-request_timeout) | [number](value-types.md#number) | No |
+| [`retry_failed`](plugins-outputs-http.md#plugins-outputs-http-retry_failed) | [boolean](value-types.md#boolean) | No |
+| [`retry_non_idempotent`](plugins-outputs-http.md#plugins-outputs-http-retry_non_idempotent) | [boolean](value-types.md#boolean) | No |
+| [`retryable_codes`](plugins-outputs-http.md#plugins-outputs-http-retryable_codes) | [number](value-types.md#number) | No |
+| [`socket_timeout`](plugins-outputs-http.md#plugins-outputs-http-socket_timeout) | [number](value-types.md#number) | No |
+| [`ssl_certificate`](plugins-outputs-http.md#plugins-outputs-http-ssl_certificate) | [path](value-types.md#path) | No |
+| [`ssl_certificate_authorities`](plugins-outputs-http.md#plugins-outputs-http-ssl_certificate_authorities) | list of [path](value-types.md#path) | No |
+| [`ssl_cipher_suites`](plugins-outputs-http.md#plugins-outputs-http-ssl_cipher_suites) | list of [string](value-types.md#string) | No |
+| [`ssl_enabled`](plugins-outputs-http.md#plugins-outputs-http-ssl_enabled) | [boolean](value-types.md#boolean) | No |
+| [`ssl_keystore_password`](plugins-outputs-http.md#plugins-outputs-http-ssl_keystore_password) | [password](value-types.md#password) | No |
+| [`ssl_keystore_path`](plugins-outputs-http.md#plugins-outputs-http-ssl_keystore_path) | [path](value-types.md#path) | No |
+| [`ssl_keystore_type`](plugins-outputs-http.md#plugins-outputs-http-ssl_keystore_type) | [string](value-types.md#string) | No |
+| [`ssl_supported_protocols`](plugins-outputs-http.md#plugins-outputs-http-ssl_supported_protocols) | [string](value-types.md#string) | No |
+| [`ssl_truststore_password`](plugins-outputs-http.md#plugins-outputs-http-ssl_truststore_password) | [password](value-types.md#password) | No |
+| [`ssl_truststore_path`](plugins-outputs-http.md#plugins-outputs-http-ssl_truststore_path) | [path](value-types.md#path) | No |
+| [`ssl_truststore_type`](plugins-outputs-http.md#plugins-outputs-http-ssl_truststore_type) | [string](value-types.md#string) | No |
+| [`ssl_verification_mode`](plugins-outputs-http.md#plugins-outputs-http-ssl_verification_mode) | [string](value-types.md#string), one of `["full", "none"]` | No |
+| [`url`](plugins-outputs-http.md#plugins-outputs-http-url) | [string](value-types.md#string) | Yes |
+| [`validate_after_inactivity`](plugins-outputs-http.md#plugins-outputs-http-validate_after_inactivity) | [number](value-types.md#number) | No |
 
 Also see [Common options](plugins-outputs-http.md#plugins-outputs-http-common-options) for a list of options supported by all output plugins.
 
@@ -110,7 +110,7 @@ Also see [Common options](plugins-outputs-http.md#plugins-outputs-http-common-op
 
 ### `automatic_retries` [plugins-outputs-http-automatic_retries]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `1`
 
 How many times should the client retry a failing URL. We recommend setting this option to a value other than zero if the [`keepalive` option](plugins-outputs-http.md#plugins-outputs-http-keepalive) is enabled. Some servers incorrectly end keepalives early, requiring a retry. See [Retry Policy](plugins-outputs-http.md#plugins-outputs-http-retry_policy) for more information.
@@ -118,7 +118,7 @@ How many times should the client retry a failing URL. We recommend setting this 
 
 ### `connect_timeout` [plugins-outputs-http-connect_timeout]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `10`
 
 Timeout (in seconds) to wait for a connection to be established. Default is `10s`
@@ -126,7 +126,7 @@ Timeout (in seconds) to wait for a connection to be established. Default is `10s
 
 ### `content_type` [plugins-outputs-http-content_type]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 Content type
@@ -140,7 +140,7 @@ If not specified, this defaults to the following:
 
 ### `cookies` [plugins-outputs-http-cookies]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `true`
 
 Enable cookie support. With this enabled the client will persist cookies across requests as a normal web browser would. Enabled by default
@@ -148,7 +148,7 @@ Enable cookie support. With this enabled the client will persist cookies across 
 
 ### `follow_redirects` [plugins-outputs-http-follow_redirects]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `true`
 
 Should redirects be followed? Defaults to `true`
@@ -172,7 +172,7 @@ Otherwise, the event is sent as json.
 
 ### `headers` [plugins-outputs-http-headers]
 
-* Value type is [hash](introduction.md#hash)
+* Value type is [hash](value-types.md#hash)
 * There is no default value for this setting.
 
 Custom headers to use format is `headers => ["X-My-Header", "%{{host}}"]`
@@ -180,7 +180,7 @@ Custom headers to use format is `headers => ["X-My-Header", "%{{host}}"]`
 
 ### `http_compression` [plugins-outputs-http-http_compression]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 Enable request compression support. With this enabled the plugin will compress http requests using gzip.
@@ -197,7 +197,7 @@ The HTTP Verb. One of "put", "post", "patch", "delete", "get", "head"
 
 ### `ignorable_codes` [plugins-outputs-http-ignorable_codes]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * There is no default value for this setting.
 
 If you would like to consider some non-2xx codes to be successes enumerate them here. Responses returning these codes will be considered successes
@@ -205,7 +205,7 @@ If you would like to consider some non-2xx codes to be successes enumerate them 
 
 ### `keepalive` [plugins-outputs-http-keepalive]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `true`
 
 Turn this on to enable HTTP keepalive support. We highly recommend setting `automatic_retries` to at least one with this to fix interactions with broken keepalive implementations.
@@ -213,7 +213,7 @@ Turn this on to enable HTTP keepalive support. We highly recommend setting `auto
 
 ### `mapping` [plugins-outputs-http-mapping]
 
-* Value type is [hash](introduction.md#hash)
+* Value type is [hash](value-types.md#hash)
 * There is no default value for this setting.
 
 This lets you choose the structure and parts of the event that are sent.
@@ -228,13 +228,13 @@ For example:
 
 ### `message` [plugins-outputs-http-message]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 
 ### `pool_max` [plugins-outputs-http-pool_max]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `50`
 
 Max number of concurrent connections. Defaults to `50`
@@ -242,7 +242,7 @@ Max number of concurrent connections. Defaults to `50`
 
 ### `pool_max_per_route` [plugins-outputs-http-pool_max_per_route]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `25`
 
 Max number of concurrent connections to a single host. Defaults to `25`
@@ -250,7 +250,7 @@ Max number of concurrent connections to a single host. Defaults to `25`
 
 ### `proxy` [plugins-outputs-http-proxy]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 If you’d like to use an HTTP proxy . This supports multiple configuration syntaxes:
@@ -262,7 +262,7 @@ If you’d like to use an HTTP proxy . This supports multiple configuration synt
 
 ### `request_timeout` [plugins-outputs-http-request_timeout]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `60`
 
 This module makes it easy to add a very fully configured HTTP client to logstash based on [Manticore](https://github.com/cheald/manticore). For an example of its usage see [https://github.com/logstash-plugins/logstash-input-http_poller](https://github.com/logstash-plugins/logstash-input-http_poller) Timeout (in seconds) for the entire request
@@ -270,7 +270,7 @@ This module makes it easy to add a very fully configured HTTP client to logstash
 
 ### `retry_failed` [plugins-outputs-http-retry_failed]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `true`
 
 Note that this option controls plugin-level retries only. It has no affect on library-level retries.
@@ -280,7 +280,7 @@ Set this option to `false` if you want to disable infinite retries for HTTP erro
 
 ### `retry_non_idempotent` [plugins-outputs-http-retry_non_idempotent]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 When this option is set to `false` and `automatic_retries` is enabled, GET, HEAD, PUT, DELETE, OPTIONS, and TRACE requests will be retried.
@@ -290,7 +290,7 @@ When set to `true` and `automatic_retries` is enabled, this will cause non-idemp
 
 ### `retryable_codes` [plugins-outputs-http-retryable_codes]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `[429, 500, 502, 503, 504]`
 
 If the plugin encounters these response codes, the plugin will retry indefinitely. See [Retry Policy](plugins-outputs-http.md#plugins-outputs-http-retry_policy) for more information.
@@ -298,7 +298,7 @@ If the plugin encounters these response codes, the plugin will retry indefinitel
 
 ### `socket_timeout` [plugins-outputs-http-socket_timeout]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `10`
 
 Timeout (in seconds) to wait for data on the socket. Default is `10s`
@@ -306,7 +306,7 @@ Timeout (in seconds) to wait for data on the socket. Default is `10s`
 
 ### `ssl_certificate` [plugins-outputs-http-ssl_certificate]
 
-* Value type is [path](introduction.md#path)
+* Value type is [path](value-types.md#path)
 * There is no default value for this setting.
 
 SSL certificate to use to authenticate the client. This certificate should be an OpenSSL-style X.509 certificate file.
@@ -319,7 +319,7 @@ This setting can be used only if [`ssl_key`](plugins-outputs-http.md#plugins-out
 
 ### `ssl_certificate_authorities` [plugins-outputs-http-ssl_certificate_authorities]
 
-* Value type is a list of [path](introduction.md#path)
+* Value type is a list of [path](value-types.md#path)
 * There is no default value for this setting
 
 The .cer or .pem CA files to validate the server’s certificate.
@@ -327,7 +327,7 @@ The .cer or .pem CA files to validate the server’s certificate.
 
 ### `ssl_cipher_suites` [plugins-outputs-http-ssl_cipher_suites]
 
-* Value type is a list of [string](introduction.md#string)
+* Value type is a list of [string](value-types.md#string)
 * There is no default value for this setting
 
 The list of cipher suites to use, listed by priorities. Supported cipher suites vary depending on the Java and protocol versions.
@@ -335,7 +335,7 @@ The list of cipher suites to use, listed by priorities. Supported cipher suites 
 
 ### `ssl_enabled` [plugins-outputs-http-ssl_enabled]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `true`
 
 Enable SSL/TLS secured communication. It must be `true` for other `ssl_` options to take effect.
@@ -343,7 +343,7 @@ Enable SSL/TLS secured communication. It must be `true` for other `ssl_` options
 
 ### `ssl_key` [plugins-outputs-http-ssl_key]
 
-* Value type is [path](introduction.md#path)
+* Value type is [path](value-types.md#path)
 * There is no default value for this setting.
 
 OpenSSL-style RSA private key that corresponds to the [`ssl_certificate`](plugins-outputs-http.md#plugins-outputs-http-ssl_certificate).
@@ -356,7 +356,7 @@ This setting can be used only if [`ssl_certificate`](plugins-outputs-http.md#plu
 
 ### `ssl_keystore_password` [plugins-outputs-http-ssl_keystore_password]
 
-* Value type is [password](introduction.md#password)
+* Value type is [password](value-types.md#password)
 * There is no default value for this setting.
 
 Set the keystore password
@@ -364,7 +364,7 @@ Set the keystore password
 
 ### `ssl_keystore_path` [plugins-outputs-http-ssl_keystore_path]
 
-* Value type is [path](introduction.md#path)
+* Value type is [path](value-types.md#path)
 * There is no default value for this setting.
 
 The keystore used to present a certificate to the server. It can be either `.jks` or `.p12`
@@ -380,7 +380,7 @@ The format of the keystore file. It must be either `jks` or `pkcs12`.
 
 ### `ssl_supported_protocols` [plugins-outputs-http-ssl_supported_protocols]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Allowed values are: `'TLSv1.1'`, `'TLSv1.2'`, `'TLSv1.3'`
 * Default depends on the JDK being used. With up-to-date Logstash, the default is `['TLSv1.2', 'TLSv1.3']`. `'TLSv1.1'` is not considered secure and is only provided for legacy applications.
 
@@ -396,7 +396,7 @@ If you configure the plugin to use `'TLSv1.1'` on any recent JVM, such as the on
 
 ### `ssl_truststore_password` [plugins-outputs-http-ssl_truststore_password]
 
-* Value type is [password](introduction.md#password)
+* Value type is [password](value-types.md#password)
 * There is no default value for this setting.
 
 Set the truststore password
@@ -404,7 +404,7 @@ Set the truststore password
 
 ### `ssl_truststore_path` [plugins-outputs-http-ssl_truststore_path]
 
-* Value type is [path](introduction.md#path)
+* Value type is [path](value-types.md#path)
 * There is no default value for this setting.
 
 The truststore to validate the server’s certificate. It can be either `.jks` or `.p12`.
@@ -420,7 +420,7 @@ The format of the truststore file. It must be either `jks` or `pkcs12`.
 
 ### `ssl_verification_mode` [plugins-outputs-http-ssl_verification_mode]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Supported values are: `full`, `none`
 * Default value is `full`
 
@@ -432,7 +432,7 @@ The `none` setting performs no verification of the server’s certificate. This 
 ### `url` [plugins-outputs-http-url]
 
 * This is a required setting.
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 URL to use
@@ -440,7 +440,7 @@ URL to use
 
 ### `validate_after_inactivity` [plugins-outputs-http-validate_after_inactivity]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `200`
 
 How long to wait before checking if the connection is stale before executing a request on a connection using keepalive. You may want to set this lower, possibly to 0 if you get connection errors regularly Quoting the Apache commons docs (this client is based Apache Commmons): *Defines period of inactivity in milliseconds after which persistent connections must be re-validated prior to being leased to the consumer. Non-positive value passed to this method disables connection validation. This check helps detect connections that have become stale (half-closed) while kept inactive in the pool.* See [these docs for more info](https://hc.apache.org/httpcomponents-client-ga/httpclient/apidocs/org/apache/http/impl/conn/PoolingHttpClientConnectionManager.md#setValidateAfterInactivity(int))

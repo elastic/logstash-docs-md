@@ -182,21 +182,21 @@ This plugin supports the following configuration options plus the [Common option
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`bucket_id`](plugins-inputs-google_cloud_storage.md#plugins-inputs-google_cloud_storage-bucket_id) | [string](introduction.md#string) | Yes |
-| [`json_key_file`](plugins-inputs-google_cloud_storage.md#plugins-inputs-google_cloud_storage-json_key_file) | [path](introduction.md#path) | No |
-| [`interval`](plugins-inputs-google_cloud_storage.md#plugins-inputs-google_cloud_storage-interval) | [number](introduction.md#number) | No |
-| [`file_matches`](plugins-inputs-google_cloud_storage.md#plugins-inputs-google_cloud_storage-file_matches) | [string](introduction.md#string) | No |
-| [`file_exclude`](plugins-inputs-google_cloud_storage.md#plugins-inputs-google_cloud_storage-file_exclude) | [string](introduction.md#string) | No |
-| [`metadata_key`](plugins-inputs-google_cloud_storage.md#plugins-inputs-google_cloud_storage-metadata_key) | [string](introduction.md#string) | No |
-| [`processed_db_path`](plugins-inputs-google_cloud_storage.md#plugins-inputs-google_cloud_storage-processed_db_path) | [path](introduction.md#path) | No |
-| [`delete`](plugins-inputs-google_cloud_storage.md#plugins-inputs-google_cloud_storage-delete) | [boolean](introduction.md#boolean) | No |
-| [`unpack_gzip`](plugins-inputs-google_cloud_storage.md#plugins-inputs-google_cloud_storage-unpack_gzip) | [boolean](introduction.md#boolean) | No |
+| [`bucket_id`](plugins-inputs-google_cloud_storage.md#plugins-inputs-google_cloud_storage-bucket_id) | [string](value-types.md#string) | Yes |
+| [`json_key_file`](plugins-inputs-google_cloud_storage.md#plugins-inputs-google_cloud_storage-json_key_file) | [path](value-types.md#path) | No |
+| [`interval`](plugins-inputs-google_cloud_storage.md#plugins-inputs-google_cloud_storage-interval) | [number](value-types.md#number) | No |
+| [`file_matches`](plugins-inputs-google_cloud_storage.md#plugins-inputs-google_cloud_storage-file_matches) | [string](value-types.md#string) | No |
+| [`file_exclude`](plugins-inputs-google_cloud_storage.md#plugins-inputs-google_cloud_storage-file_exclude) | [string](value-types.md#string) | No |
+| [`metadata_key`](plugins-inputs-google_cloud_storage.md#plugins-inputs-google_cloud_storage-metadata_key) | [string](value-types.md#string) | No |
+| [`processed_db_path`](plugins-inputs-google_cloud_storage.md#plugins-inputs-google_cloud_storage-processed_db_path) | [path](value-types.md#path) | No |
+| [`delete`](plugins-inputs-google_cloud_storage.md#plugins-inputs-google_cloud_storage-delete) | [boolean](value-types.md#boolean) | No |
+| [`unpack_gzip`](plugins-inputs-google_cloud_storage.md#plugins-inputs-google_cloud_storage-unpack_gzip) | [boolean](value-types.md#boolean) | No |
 
 Also see [Common options](plugins-inputs-google_cloud_storage.md#plugins-inputs-google_cloud_storage-common-options) for a list of options supported by all input plugins.
 
 ### `bucket_id` [plugins-inputs-google_cloud_storage-bucket_id]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 The bucket containing your log files.
@@ -204,7 +204,7 @@ The bucket containing your log files.
 
 ### `json_key_file` [plugins-inputs-google_cloud_storage-json_key_file]
 
-* Value type is [path](introduction.md#path)
+* Value type is [path](value-types.md#path)
 * There is no default value for this setting.
 
 The path to the key to authenticate your user to the bucket. This service user *should* have the `storage.objects.update` permission so it can create metadata on the object preventing it from being scanned multiple times.
@@ -214,7 +214,7 @@ If no key is provided the plugin will try to use the [default application creden
 
 ### `interval` [plugins-inputs-google_cloud_storage-interval]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default is: `60`
 
 The number of seconds between looking for new files in your bucket.
@@ -222,7 +222,7 @@ The number of seconds between looking for new files in your bucket.
 
 ### `file_matches` [plugins-inputs-google_cloud_storage-file_matches]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default is: `.*\.log(\.gz)?`
 
 A regex pattern to filter files. Only files with names matching this will be considered. All files match by default.
@@ -230,7 +230,7 @@ A regex pattern to filter files. Only files with names matching this will be con
 
 ### `file_exclude` [plugins-inputs-google_cloud_storage-file_exclude]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default is: `^$`
 
 Any files matching this regex are excluded from processing. No files are excluded by default.
@@ -238,7 +238,7 @@ Any files matching this regex are excluded from processing. No files are exclude
 
 ### `metadata_key` [plugins-inputs-google_cloud_storage-metadata_key]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default is: `x-goog-meta-ls-gcs-input`
 
 This key will be set on the objects after they’ve been processed by the plugin. That way you can stop the plugin and not upload files again or prevent them from being uploaded by setting the field manually.
@@ -251,7 +251,7 @@ the key is a flag, if a file was partially processed before Logstash exited some
 
 ### `processed_db_path` [plugins-inputs-google_cloud_storage-processed_db_path]
 
-* Value type is [path](introduction.md#path)
+* Value type is [path](value-types.md#path)
 * Default is: `LOGSTASH_DATA/plugins/inputs/google_cloud_storage/db`.
 
 If set, the plugin will store the list of processed files locally. This allows you to create a service account for the plugin that does not have write permissions. However, the data will not be shared across multiple running instances of Logstash.
@@ -259,7 +259,7 @@ If set, the plugin will store the list of processed files locally. This allows y
 
 ### `delete` [plugins-inputs-google_cloud_storage-delete]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default is: `false`
 
 Should the log file be deleted after its contents have been updated?
@@ -267,7 +267,7 @@ Should the log file be deleted after its contents have been updated?
 
 ### `unpack_gzip` [plugins-inputs-google_cloud_storage-unpack_gzip]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default is: `true`
 
 If set to `true`, files ending in `.gz` are decompressed before they’re parsed by the codec. The file will be skipped if it has the suffix, but can’t be opened as a gzip, e.g. if it has a bad magic number.

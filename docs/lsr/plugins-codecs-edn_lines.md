@@ -27,13 +27,13 @@ Reads and produces newline-delimited EDN format data.
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`target`](plugins-codecs-edn_lines.md#plugins-codecs-edn_lines-target) | [string](introduction.md#string) | No |
+| [`target`](plugins-codecs-edn_lines.md#plugins-codecs-edn_lines-target) | [string](value-types.md#string) | No |
 
  
 
 ### `target` [plugins-codecs-edn_lines-target]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 * The option is only relevant while decoding.
 

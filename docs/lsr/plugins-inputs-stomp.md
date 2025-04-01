@@ -34,14 +34,14 @@ This plugin supports the following configuration options plus the [Common option
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`destination`](plugins-inputs-stomp.md#plugins-inputs-stomp-destination) | [string](introduction.md#string) | Yes |
-| [`host`](plugins-inputs-stomp.md#plugins-inputs-stomp-host) | [string](introduction.md#string) | Yes |
-| [`password`](plugins-inputs-stomp.md#plugins-inputs-stomp-password) | [password](introduction.md#password) | No |
-| [`port`](plugins-inputs-stomp.md#plugins-inputs-stomp-port) | [number](introduction.md#number) | No |
-| [`reconnect`](plugins-inputs-stomp.md#plugins-inputs-stomp-reconnect) | [boolean](introduction.md#boolean) | No |
-| [`reconnect_interval`](plugins-inputs-stomp.md#plugins-inputs-stomp-reconnect_interval) | [number](introduction.md#number) | No |
-| [`user`](plugins-inputs-stomp.md#plugins-inputs-stomp-user) | [string](introduction.md#string) | No |
-| [`vhost`](plugins-inputs-stomp.md#plugins-inputs-stomp-vhost) | [string](introduction.md#string) | No |
+| [`destination`](plugins-inputs-stomp.md#plugins-inputs-stomp-destination) | [string](value-types.md#string) | Yes |
+| [`host`](plugins-inputs-stomp.md#plugins-inputs-stomp-host) | [string](value-types.md#string) | Yes |
+| [`password`](plugins-inputs-stomp.md#plugins-inputs-stomp-password) | [password](value-types.md#password) | No |
+| [`port`](plugins-inputs-stomp.md#plugins-inputs-stomp-port) | [number](value-types.md#number) | No |
+| [`reconnect`](plugins-inputs-stomp.md#plugins-inputs-stomp-reconnect) | [boolean](value-types.md#boolean) | No |
+| [`reconnect_interval`](plugins-inputs-stomp.md#plugins-inputs-stomp-reconnect_interval) | [number](value-types.md#number) | No |
+| [`user`](plugins-inputs-stomp.md#plugins-inputs-stomp-user) | [string](value-types.md#string) | No |
+| [`vhost`](plugins-inputs-stomp.md#plugins-inputs-stomp-vhost) | [string](value-types.md#string) | No |
 
 Also see [Common options](plugins-inputs-stomp.md#plugins-inputs-stomp-common-options) for a list of options supported by all input plugins.
 
@@ -50,7 +50,7 @@ Also see [Common options](plugins-inputs-stomp.md#plugins-inputs-stomp-common-op
 ### `destination` [plugins-inputs-stomp-destination]
 
 * This is a required setting.
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 The destination to read events from.
@@ -61,7 +61,7 @@ Example: `/topic/logstash`
 ### `host` [plugins-inputs-stomp-host]
 
 * This is a required setting.
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"localhost"`
 
 The address of the STOMP server.
@@ -69,7 +69,7 @@ The address of the STOMP server.
 
 ### `password` [plugins-inputs-stomp-password]
 
-* Value type is [password](introduction.md#password)
+* Value type is [password](value-types.md#password)
 * Default value is `""`
 
 The password to authenticate with.
@@ -77,7 +77,7 @@ The password to authenticate with.
 
 ### `port` [plugins-inputs-stomp-port]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `61613`
 
 The port to connet to on your STOMP server.
@@ -85,7 +85,7 @@ The port to connet to on your STOMP server.
 
 ### `reconnect` [plugins-inputs-stomp-reconnect]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `true`
 
 Auto reconnect
@@ -93,13 +93,13 @@ Auto reconnect
 
 ### `reconnect_interval` [plugins-inputs-stomp-reconnect_interval]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `30`
 
 
 ### `user` [plugins-inputs-stomp-user]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `""`
 
 The username to authenticate with.
@@ -107,7 +107,7 @@ The username to authenticate with.
 
 ### `vhost` [plugins-inputs-stomp-vhost]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `nil`
 
 The vhost to use

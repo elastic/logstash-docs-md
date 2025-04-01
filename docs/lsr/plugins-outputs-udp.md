@@ -33,10 +33,10 @@ This plugin supports the following configuration options plus the [Common option
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`host`](plugins-outputs-udp.md#plugins-outputs-udp-host) | [string](introduction.md#string) | Yes |
-| [`port`](plugins-outputs-udp.md#plugins-outputs-udp-port) | [string](introduction.md#string) | Yes |
-| [`retry_count`](plugins-outputs-udp.md#plugins-outputs-udp-retry_count) | [number](introduction.md#number) | No |
-| [`retry_backoff_ms`](plugins-outputs-udp.md#plugins-outputs-udp-retry_backoff_ms) | [number](introduction.md#number) | No |
+| [`host`](plugins-outputs-udp.md#plugins-outputs-udp-host) | [string](value-types.md#string) | Yes |
+| [`port`](plugins-outputs-udp.md#plugins-outputs-udp-port) | [string](value-types.md#string) | Yes |
+| [`retry_count`](plugins-outputs-udp.md#plugins-outputs-udp-retry_count) | [number](value-types.md#number) | No |
+| [`retry_backoff_ms`](plugins-outputs-udp.md#plugins-outputs-udp-retry_backoff_ms) | [number](value-types.md#number) | No |
 
 Also see [Common options](plugins-outputs-udp.md#plugins-outputs-udp-common-options) for a list of options supported by all output plugins.
 
@@ -45,7 +45,7 @@ Also see [Common options](plugins-outputs-udp.md#plugins-outputs-udp-common-opti
 ### `host` [plugins-outputs-udp-host]
 
 * This is a required setting.
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 The address to send messages to
@@ -54,7 +54,7 @@ The address to send messages to
 ### `port` [plugins-outputs-udp-port]
 
 * This is a required setting.
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 The port to send messages on. This can be dynamic using the `%{[target][port]}` syntax.
@@ -62,7 +62,7 @@ The port to send messages on. This can be dynamic using the `%{[target][port]}` 
 
 ### `retry_count` [plugins-outputs-udp-retry_count]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `0`
 
 The number of times to retry a failed UPD socket write
@@ -70,7 +70,7 @@ The number of times to retry a failed UPD socket write
 
 ### `retry_backoff_ms` [plugins-outputs-udp-retry_backoff_ms]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `10`
 
 The amount of time to wait in milliseconds before attempting to retry a failed UPD socket write

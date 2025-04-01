@@ -48,7 +48,7 @@ This plugin supports the following configuration options plus the [Common option
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`add_metadata_from_env`](plugins-filters-environment.md#plugins-filters-environment-add_metadata_from_env) | [hash](introduction.md#hash) | No |
+| [`add_metadata_from_env`](plugins-filters-environment.md#plugins-filters-environment-add_metadata_from_env) | [hash](value-types.md#hash) | No |
 
 Also see [Common options](plugins-filters-environment.md#plugins-filters-environment-common-options) for a list of options supported by all filter plugins.
 
@@ -56,7 +56,7 @@ Also see [Common options](plugins-filters-environment.md#plugins-filters-environ
 
 ### `add_metadata_from_env` [plugins-filters-environment-add_metadata_from_env]
 
-* Value type is [hash](introduction.md#hash)
+* Value type is [hash](value-types.md#hash)
 * Default value is `{}`
 
 Specify a hash of field names and the environment variable name with the value you want imported into Logstash. For example:

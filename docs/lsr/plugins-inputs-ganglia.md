@@ -29,8 +29,8 @@ This plugin supports the following configuration options plus the [Common option
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`host`](plugins-inputs-ganglia.md#plugins-inputs-ganglia-host) | [string](introduction.md#string) | No |
-| [`port`](plugins-inputs-ganglia.md#plugins-inputs-ganglia-port) | [number](introduction.md#number) | No |
+| [`host`](plugins-inputs-ganglia.md#plugins-inputs-ganglia-host) | [string](value-types.md#string) | No |
+| [`port`](plugins-inputs-ganglia.md#plugins-inputs-ganglia-port) | [number](value-types.md#number) | No |
 
 Also see [Common options](plugins-inputs-ganglia.md#plugins-inputs-ganglia-common-options) for a list of options supported by all input plugins.
 
@@ -38,7 +38,7 @@ Also see [Common options](plugins-inputs-ganglia.md#plugins-inputs-ganglia-commo
 
 ### `host` [plugins-inputs-ganglia-host]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"0.0.0.0"`
 
 The address to listen on
@@ -46,7 +46,7 @@ The address to listen on
 
 ### `port` [plugins-inputs-ganglia-port]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `8649`
 
 The port to listen on. Remember that ports less than 1024 (privileged ports) may require root to use.

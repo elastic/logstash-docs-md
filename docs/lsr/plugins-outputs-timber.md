@@ -44,17 +44,17 @@ This plugin supports the following configuration options plus the [Common option
 | [`cacert`](plugins-outputs-timber.md#plugins-outputs-timber-cacert) | a valid filesystem path | No |
 | [`client_cert`](plugins-outputs-timber.md#plugins-outputs-timber-client_cert) | a valid filesystem path | No |
 | [`client_key`](plugins-outputs-timber.md#plugins-outputs-timber-client_key) | a valid filesystem path | No |
-| [`connect_timeout`](plugins-outputs-timber.md#plugins-outputs-timber-connect_timeout) | [number](introduction.md#number) | No |
+| [`connect_timeout`](plugins-outputs-timber.md#plugins-outputs-timber-connect_timeout) | [number](value-types.md#number) | No |
 | [`keystore`](plugins-outputs-timber.md#plugins-outputs-timber-keystore) | a valid filesystem path | No |
-| [`keystore_password`](plugins-outputs-timber.md#plugins-outputs-timber-keystore_password) | [password](introduction.md#password) | No |
-| [`keystore_type`](plugins-outputs-timber.md#plugins-outputs-timber-keystore_type) | [string](introduction.md#string) | No |
-| [`pool_max`](plugins-outputs-timber.md#plugins-outputs-timber-pool_max) | [number](introduction.md#number) | No |
+| [`keystore_password`](plugins-outputs-timber.md#plugins-outputs-timber-keystore_password) | [password](value-types.md#password) | No |
+| [`keystore_type`](plugins-outputs-timber.md#plugins-outputs-timber-keystore_type) | [string](value-types.md#string) | No |
+| [`pool_max`](plugins-outputs-timber.md#plugins-outputs-timber-pool_max) | [number](value-types.md#number) | No |
 | [`proxy`](plugins-outputs-timber.md#plugins-outputs-timber-proxy) | <<,>> | No |
-| [`request_timeout`](plugins-outputs-timber.md#plugins-outputs-timber-request_timeout) | [number](introduction.md#number) | No |
-| [`socket_timeout`](plugins-outputs-timber.md#plugins-outputs-timber-socket_timeout) | [number](introduction.md#number) | No |
+| [`request_timeout`](plugins-outputs-timber.md#plugins-outputs-timber-request_timeout) | [number](value-types.md#number) | No |
+| [`socket_timeout`](plugins-outputs-timber.md#plugins-outputs-timber-socket_timeout) | [number](value-types.md#number) | No |
 | [`truststore`](plugins-outputs-timber.md#plugins-outputs-timber-truststore) | a valid filesystem path | No |
-| [`truststore_password`](plugins-outputs-timber.md#plugins-outputs-timber-truststore_password) | [password](introduction.md#password) | No |
-| [`truststore_type`](plugins-outputs-timber.md#plugins-outputs-timber-truststore_type) | [string](introduction.md#string) | No |
+| [`truststore_password`](plugins-outputs-timber.md#plugins-outputs-timber-truststore_password) | [password](value-types.md#password) | No |
+| [`truststore_type`](plugins-outputs-timber.md#plugins-outputs-timber-truststore_type) | [string](value-types.md#string) | No |
 
 Also see [Common options](plugins-outputs-timber.md#plugins-outputs-timber-common-options) for a list of options supported by all output plugins.
 
@@ -62,7 +62,7 @@ Also see [Common options](plugins-outputs-timber.md#plugins-outputs-timber-commo
 
 ### `api_key` [plugins-outputs-timber-api_key]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 Your Timber.io API key. You can obtain your API by creating an app in the [Timber console](https://app.timber.io).
@@ -70,7 +70,7 @@ Your Timber.io API key. You can obtain your API by creating an app in the [Timbe
 
 ### `cacert` [plugins-outputs-timber-cacert]
 
-* Value type is [path](introduction.md#path)
+* Value type is [path](value-types.md#path)
 * There is no default value for this setting.
 
 If you need to use a custom X.509 CA (.pem certs) specify the path to that here.
@@ -78,7 +78,7 @@ If you need to use a custom X.509 CA (.pem certs) specify the path to that here.
 
 ### `client_cert` [plugins-outputs-timber-client_cert]
 
-* Value type is [path](introduction.md#path)
+* Value type is [path](value-types.md#path)
 * There is no default value for this setting.
 
 If you’d like to use a client certificate (note, most people don’t want this) set the path to the x509 cert here
@@ -86,7 +86,7 @@ If you’d like to use a client certificate (note, most people don’t want this
 
 ### `client_key` [plugins-outputs-timber-client_key]
 
-* Value type is [path](introduction.md#path)
+* Value type is [path](value-types.md#path)
 * There is no default value for this setting.
 
 If you’re using a client certificate specify the path to the encryption key here
@@ -94,7 +94,7 @@ If you’re using a client certificate specify the path to the encryption key he
 
 ### `connect_timeout` [plugins-outputs-timber-connect_timeout]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `10`
 
 Timeout (in seconds) to wait for a connection to be established. Default is `10s`
@@ -102,7 +102,7 @@ Timeout (in seconds) to wait for a connection to be established. Default is `10s
 
 ### `keystore` [plugins-outputs-timber-keystore]
 
-* Value type is [path](introduction.md#path)
+* Value type is [path](value-types.md#path)
 * There is no default value for this setting.
 
 If you need to use a custom keystore (`.jks`) specify that here. This does not work with .pem keys!
@@ -110,7 +110,7 @@ If you need to use a custom keystore (`.jks`) specify that here. This does not w
 
 ### `keystore_password` [plugins-outputs-timber-keystore_password]
 
-* Value type is [password](introduction.md#password)
+* Value type is [password](value-types.md#password)
 * There is no default value for this setting.
 
 Specify the keystore password here. Note, most .jks files created with keytool require a password!
@@ -118,7 +118,7 @@ Specify the keystore password here. Note, most .jks files created with keytool r
 
 ### `keystore_type` [plugins-outputs-timber-keystore_type]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"JKS"`
 
 Specify the keystore type here. One of `JKS` or `PKCS12`. Default is `JKS`
@@ -126,7 +126,7 @@ Specify the keystore type here. One of `JKS` or `PKCS12`. Default is `JKS`
 
 ### `pool_max` [plugins-outputs-timber-pool_max]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `50`
 
 Max number of concurrent connections. Defaults to `50`
@@ -134,7 +134,7 @@ Max number of concurrent connections. Defaults to `50`
 
 ### `proxy` [plugins-outputs-timber-proxy]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 If you’d like to use an HTTP proxy . This supports multiple configuration syntaxes:
@@ -146,7 +146,7 @@ If you’d like to use an HTTP proxy . This supports multiple configuration synt
 
 ### `request_timeout` [plugins-outputs-timber-request_timeout]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `60`
 
 This module makes it easy to add a very fully configured HTTP client to logstash based on [Manticore](https://github.com/cheald/manticore). For an example of its usage see [https://github.com/logstash-plugins/logstash-input-http_poller](https://github.com/logstash-plugins/logstash-input-http_poller) Timeout (in seconds) for the entire request
@@ -154,7 +154,7 @@ This module makes it easy to add a very fully configured HTTP client to logstash
 
 ### `socket_timeout` [plugins-outputs-timber-socket_timeout]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `10`
 
 Timeout (in seconds) to wait for data on the socket. Default is `10s`
@@ -162,7 +162,7 @@ Timeout (in seconds) to wait for data on the socket. Default is `10s`
 
 ### `ssl_certificate_validation` [plugins-outputs-timber-ssl_certificate_validation]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `true`
 
 Set this to false to disable SSL/TLS certificate validation Note: setting this to false is generally considered insecure!
@@ -170,7 +170,7 @@ Set this to false to disable SSL/TLS certificate validation Note: setting this t
 
 ### `truststore` [plugins-outputs-timber-truststore]
 
-* Value type is [path](introduction.md#path)
+* Value type is [path](value-types.md#path)
 * There is no default value for this setting.
 
 If you need to use a custom truststore (`.jks`) specify that here. This does not work with .pem certs!
@@ -178,7 +178,7 @@ If you need to use a custom truststore (`.jks`) specify that here. This does not
 
 ### `truststore_password` [plugins-outputs-timber-truststore_password]
 
-* Value type is [password](introduction.md#password)
+* Value type is [password](value-types.md#password)
 * There is no default value for this setting.
 
 Specify the truststore password here. Note, most .jks files created with keytool require a password!
@@ -186,7 +186,7 @@ Specify the truststore password here. Note, most .jks files created with keytool
 
 ### `truststore_type` [plugins-outputs-timber-truststore_type]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"JKS"`
 
 Specify the truststore type here. One of `JKS` or `PKCS12`. Default is `JKS`

@@ -118,9 +118,9 @@ This plugin supports the following configuration options plus the [Common option
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`nb_thread`](plugins-inputs-jmx.md#plugins-inputs-jmx-nb_thread) | [number](introduction.md#number) | No |
-| [`path`](plugins-inputs-jmx.md#plugins-inputs-jmx-path) | [string](introduction.md#string) | Yes |
-| [`polling_frequency`](plugins-inputs-jmx.md#plugins-inputs-jmx-polling_frequency) | [number](introduction.md#number) | No |
+| [`nb_thread`](plugins-inputs-jmx.md#plugins-inputs-jmx-nb_thread) | [number](value-types.md#number) | No |
+| [`path`](plugins-inputs-jmx.md#plugins-inputs-jmx-path) | [string](value-types.md#string) | Yes |
+| [`polling_frequency`](plugins-inputs-jmx.md#plugins-inputs-jmx-polling_frequency) | [number](value-types.md#number) | No |
 
 Also see [Common options](plugins-inputs-jmx.md#plugins-inputs-jmx-common-options) for a list of options supported by all input plugins.
 
@@ -128,7 +128,7 @@ Also see [Common options](plugins-inputs-jmx.md#plugins-inputs-jmx-common-option
 
 ### `nb_thread` [plugins-inputs-jmx-nb_thread]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `4`
 
 Indicate number of thread launched to retrieve metrics
@@ -137,7 +137,7 @@ Indicate number of thread launched to retrieve metrics
 ### `path` [plugins-inputs-jmx-path]
 
 * This is a required setting.
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 Path where json conf files are stored
@@ -145,7 +145,7 @@ Path where json conf files are stored
 
 ### `polling_frequency` [plugins-inputs-jmx-polling_frequency]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `60`
 
 Indicate interval between two jmx metrics retrieval (in s)

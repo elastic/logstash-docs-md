@@ -43,12 +43,12 @@ This plugin supports the following configuration options plus the [Common option
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`congestion_threshold`](plugins-inputs-lumberjack.md#plugins-inputs-lumberjack-congestion_threshold) | [number](introduction.md#number) | No |
-| [`host`](plugins-inputs-lumberjack.md#plugins-inputs-lumberjack-host) | [string](introduction.md#string) | No |
-| [`port`](plugins-inputs-lumberjack.md#plugins-inputs-lumberjack-port) | [number](introduction.md#number) | Yes |
+| [`congestion_threshold`](plugins-inputs-lumberjack.md#plugins-inputs-lumberjack-congestion_threshold) | [number](value-types.md#number) | No |
+| [`host`](plugins-inputs-lumberjack.md#plugins-inputs-lumberjack-host) | [string](value-types.md#string) | No |
+| [`port`](plugins-inputs-lumberjack.md#plugins-inputs-lumberjack-port) | [number](value-types.md#number) | Yes |
 | [`ssl_certificate`](plugins-inputs-lumberjack.md#plugins-inputs-lumberjack-ssl_certificate) | a valid filesystem path | Yes |
 | [`ssl_key`](plugins-inputs-lumberjack.md#plugins-inputs-lumberjack-ssl_key) | a valid filesystem path | Yes |
-| [`ssl_key_passphrase`](plugins-inputs-lumberjack.md#plugins-inputs-lumberjack-ssl_key_passphrase) | [password](introduction.md#password) | No |
+| [`ssl_key_passphrase`](plugins-inputs-lumberjack.md#plugins-inputs-lumberjack-ssl_key_passphrase) | [password](value-types.md#password) | No |
 
 Also see [Common options](plugins-inputs-lumberjack.md#plugins-inputs-lumberjack-common-options) for a list of options supported by all input plugins.
 
@@ -56,7 +56,7 @@ Also see [Common options](plugins-inputs-lumberjack.md#plugins-inputs-lumberjack
 
 ### `congestion_threshold` [plugins-inputs-lumberjack-congestion_threshold]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `5`
 
 The number of seconds before we raise a timeout, this option is useful to control how much time to wait if something is blocking the pipeline.
@@ -64,7 +64,7 @@ The number of seconds before we raise a timeout, this option is useful to contro
 
 ### `host` [plugins-inputs-lumberjack-host]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"0.0.0.0"`
 
 The IP address to listen on.
@@ -73,7 +73,7 @@ The IP address to listen on.
 ### `port` [plugins-inputs-lumberjack-port]
 
 * This is a required setting.
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * There is no default value for this setting.
 
 The port to listen on.
@@ -82,7 +82,7 @@ The port to listen on.
 ### `ssl_certificate` [plugins-inputs-lumberjack-ssl_certificate]
 
 * This is a required setting.
-* Value type is [path](introduction.md#path)
+* Value type is [path](value-types.md#path)
 * There is no default value for this setting.
 
 SSL certificate to use.
@@ -91,7 +91,7 @@ SSL certificate to use.
 ### `ssl_key` [plugins-inputs-lumberjack-ssl_key]
 
 * This is a required setting.
-* Value type is [path](introduction.md#path)
+* Value type is [path](value-types.md#path)
 * There is no default value for this setting.
 
 SSL key to use.
@@ -99,7 +99,7 @@ SSL key to use.
 
 ### `ssl_key_passphrase` [plugins-inputs-lumberjack-ssl_key_passphrase]
 
-* Value type is [password](introduction.md#password)
+* Value type is [password](value-types.md#password)
 * There is no default value for this setting.
 
 SSL key passphrase to use.

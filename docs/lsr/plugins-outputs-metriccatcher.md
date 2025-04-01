@@ -50,14 +50,14 @@ This plugin supports the following configuration options plus the [Common option
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`biased`](plugins-outputs-metriccatcher.md#plugins-outputs-metriccatcher-biased) | [hash](introduction.md#hash) | No |
-| [`counter`](plugins-outputs-metriccatcher.md#plugins-outputs-metriccatcher-counter) | [hash](introduction.md#hash) | No |
-| [`gauge`](plugins-outputs-metriccatcher.md#plugins-outputs-metriccatcher-gauge) | [hash](introduction.md#hash) | No |
-| [`host`](plugins-outputs-metriccatcher.md#plugins-outputs-metriccatcher-host) | [string](introduction.md#string) | No |
-| [`meter`](plugins-outputs-metriccatcher.md#plugins-outputs-metriccatcher-meter) | [hash](introduction.md#hash) | No |
-| [`port`](plugins-outputs-metriccatcher.md#plugins-outputs-metriccatcher-port) | [number](introduction.md#number) | No |
-| [`timer`](plugins-outputs-metriccatcher.md#plugins-outputs-metriccatcher-timer) | [hash](introduction.md#hash) | No |
-| [`uniform`](plugins-outputs-metriccatcher.md#plugins-outputs-metriccatcher-uniform) | [hash](introduction.md#hash) | No |
+| [`biased`](plugins-outputs-metriccatcher.md#plugins-outputs-metriccatcher-biased) | [hash](value-types.md#hash) | No |
+| [`counter`](plugins-outputs-metriccatcher.md#plugins-outputs-metriccatcher-counter) | [hash](value-types.md#hash) | No |
+| [`gauge`](plugins-outputs-metriccatcher.md#plugins-outputs-metriccatcher-gauge) | [hash](value-types.md#hash) | No |
+| [`host`](plugins-outputs-metriccatcher.md#plugins-outputs-metriccatcher-host) | [string](value-types.md#string) | No |
+| [`meter`](plugins-outputs-metriccatcher.md#plugins-outputs-metriccatcher-meter) | [hash](value-types.md#hash) | No |
+| [`port`](plugins-outputs-metriccatcher.md#plugins-outputs-metriccatcher-port) | [number](value-types.md#number) | No |
+| [`timer`](plugins-outputs-metriccatcher.md#plugins-outputs-metriccatcher-timer) | [hash](value-types.md#hash) | No |
+| [`uniform`](plugins-outputs-metriccatcher.md#plugins-outputs-metriccatcher-uniform) | [hash](value-types.md#hash) | No |
 
 Also see [Common options](plugins-outputs-metriccatcher.md#plugins-outputs-metriccatcher-common-options) for a list of options supported by all output plugins.
 
@@ -65,7 +65,7 @@ Also see [Common options](plugins-outputs-metriccatcher.md#plugins-outputs-metri
 
 ### `biased` [plugins-outputs-metriccatcher-biased]
 
-* Value type is [hash](introduction.md#hash)
+* Value type is [hash](value-types.md#hash)
 * There is no default value for this setting.
 
 The metrics to send. This supports dynamic strings like `%{{host}}` for metric names and also for values. This is a hash field with key of the metric name, value of the metric value.
@@ -75,7 +75,7 @@ The value will be coerced to a floating point value. Values which cannot be coer
 
 ### `counter` [plugins-outputs-metriccatcher-counter]
 
-* Value type is [hash](introduction.md#hash)
+* Value type is [hash](value-types.md#hash)
 * There is no default value for this setting.
 
 The metrics to send. This supports dynamic strings like `%{{host}}` for metric names and also for values. This is a hash field with key of the metric name, value of the metric value. Example:
@@ -89,7 +89,7 @@ The value will be coerced to a floating point value. Values which cannot be coer
 
 ### `gauge` [plugins-outputs-metriccatcher-gauge]
 
-* Value type is [hash](introduction.md#hash)
+* Value type is [hash](value-types.md#hash)
 * There is no default value for this setting.
 
 The metrics to send. This supports dynamic strings like `%{{host}}` for metric names and also for values. This is a hash field with key of the metric name, value of the metric value.
@@ -99,7 +99,7 @@ The value will be coerced to a floating point value. Values which cannot be coer
 
 ### `host` [plugins-outputs-metriccatcher-host]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"localhost"`
 
 The address of the MetricCatcher
@@ -107,7 +107,7 @@ The address of the MetricCatcher
 
 ### `meter` [plugins-outputs-metriccatcher-meter]
 
-* Value type is [hash](introduction.md#hash)
+* Value type is [hash](value-types.md#hash)
 * There is no default value for this setting.
 
 The metrics to send. This supports dynamic strings like `%{{host}}` for metric names and also for values. This is a hash field with key of the metric name, value of the metric value.
@@ -117,7 +117,7 @@ The value will be coerced to a floating point value. Values which cannot be coer
 
 ### `port` [plugins-outputs-metriccatcher-port]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `1420`
 
 The port to connect on your MetricCatcher
@@ -125,7 +125,7 @@ The port to connect on your MetricCatcher
 
 ### `timer` [plugins-outputs-metriccatcher-timer]
 
-* Value type is [hash](introduction.md#hash)
+* Value type is [hash](value-types.md#hash)
 * There is no default value for this setting.
 
 The metrics to send. This supports dynamic strings like `%{{host}}` for metric names and also for values. This is a hash field with key of the metric name, value of the metric value. Example:
@@ -139,7 +139,7 @@ The value will be coerced to a floating point value. Values which cannot be coer
 
 ### `uniform` [plugins-outputs-metriccatcher-uniform]
 
-* Value type is [hash](introduction.md#hash)
+* Value type is [hash](value-types.md#hash)
 * There is no default value for this setting.
 
 The metrics to send. This supports dynamic strings like `%{{host}}` for metric names and also for values. This is a hash field with key of the metric name, value of the metric value.

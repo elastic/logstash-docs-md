@@ -34,15 +34,15 @@ This plugin supports the following configuration options plus the [Common option
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`bulk`](plugins-outputs-mongodb.md#plugins-outputs-mongodb-bulk) | [boolean](introduction.md#boolean) | No |
-| [`bulk_interval`](plugins-outputs-mongodb.md#plugins-outputs-mongodb-bulk_interval) | [number](introduction.md#number) | No |
-| [`bulk_size`](plugins-outputs-mongodb.md#plugins-outputs-mongodb-bulk_size) | [number](introduction.md#number) | No |
-| [`collection`](plugins-outputs-mongodb.md#plugins-outputs-mongodb-collection) | [string](introduction.md#string) | Yes |
-| [`database`](plugins-outputs-mongodb.md#plugins-outputs-mongodb-database) | [string](introduction.md#string) | Yes |
-| [`generateId`](plugins-outputs-mongodb.md#plugins-outputs-mongodb-generateId) | [boolean](introduction.md#boolean) | No |
-| [`isodate`](plugins-outputs-mongodb.md#plugins-outputs-mongodb-isodate) | [boolean](introduction.md#boolean) | No |
-| [`retry_delay`](plugins-outputs-mongodb.md#plugins-outputs-mongodb-retry_delay) | [number](introduction.md#number) | No |
-| [`uri`](plugins-outputs-mongodb.md#plugins-outputs-mongodb-uri) | [string](introduction.md#string) | Yes |
+| [`bulk`](plugins-outputs-mongodb.md#plugins-outputs-mongodb-bulk) | [boolean](value-types.md#boolean) | No |
+| [`bulk_interval`](plugins-outputs-mongodb.md#plugins-outputs-mongodb-bulk_interval) | [number](value-types.md#number) | No |
+| [`bulk_size`](plugins-outputs-mongodb.md#plugins-outputs-mongodb-bulk_size) | [number](value-types.md#number) | No |
+| [`collection`](plugins-outputs-mongodb.md#plugins-outputs-mongodb-collection) | [string](value-types.md#string) | Yes |
+| [`database`](plugins-outputs-mongodb.md#plugins-outputs-mongodb-database) | [string](value-types.md#string) | Yes |
+| [`generateId`](plugins-outputs-mongodb.md#plugins-outputs-mongodb-generateId) | [boolean](value-types.md#boolean) | No |
+| [`isodate`](plugins-outputs-mongodb.md#plugins-outputs-mongodb-isodate) | [boolean](value-types.md#boolean) | No |
+| [`retry_delay`](plugins-outputs-mongodb.md#plugins-outputs-mongodb-retry_delay) | [number](value-types.md#number) | No |
+| [`uri`](plugins-outputs-mongodb.md#plugins-outputs-mongodb-uri) | [string](value-types.md#string) | Yes |
 
 Also see [Common options](plugins-outputs-mongodb.md#plugins-outputs-mongodb-common-options) for a list of options supported by all output plugins.
 
@@ -50,7 +50,7 @@ Also see [Common options](plugins-outputs-mongodb.md#plugins-outputs-mongodb-com
 
 ### `bulk` [plugins-outputs-mongodb-bulk]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 Bulk insert flag, set to true to allow bulk insertion, else it will insert events one by one.
@@ -58,7 +58,7 @@ Bulk insert flag, set to true to allow bulk insertion, else it will insert event
 
 ### `bulk_interval` [plugins-outputs-mongodb-bulk_interval]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `2`
 
 Bulk interval, Used to insert events periodically if the "bulk" flag is activated.
@@ -66,7 +66,7 @@ Bulk interval, Used to insert events periodically if the "bulk" flag is activate
 
 ### `bulk_size` [plugins-outputs-mongodb-bulk_size]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `900`
 
 Bulk events number, if the number of events to insert into a collection raise that limit, it will be bulk inserted whatever the bulk interval value (mongodb hard limit is 1000).
@@ -75,7 +75,7 @@ Bulk events number, if the number of events to insert into a collection raise th
 ### `collection` [plugins-outputs-mongodb-collection]
 
 * This is a required setting.
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 The collection to use. This value can use `%{{foo}}` values to dynamically select a collection based on data in the event.
@@ -84,7 +84,7 @@ The collection to use. This value can use `%{{foo}}` values to dynamically selec
 ### `database` [plugins-outputs-mongodb-database]
 
 * This is a required setting.
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 The database to use.
@@ -92,7 +92,7 @@ The database to use.
 
 ### `generateId` [plugins-outputs-mongodb-generateId]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 If true, an "_id" field will be added to the document before insertion. The "_id" field will use the timestamp of the event and overwrite an existing "_id" field in the event.
@@ -100,7 +100,7 @@ If true, an "_id" field will be added to the document before insertion. The "_id
 
 ### `isodate` [plugins-outputs-mongodb-isodate]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 If true, store the @timestamp field in MongoDB as an ISODate type instead of an ISO8601 string.  For more information about this, see [http://www.mongodb.org/display/DOCS/Dates](http://www.mongodb.org/display/DOCS/Dates).
@@ -108,7 +108,7 @@ If true, store the @timestamp field in MongoDB as an ISODate type instead of an 
 
 ### `retry_delay` [plugins-outputs-mongodb-retry_delay]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `3`
 
 The number of seconds to wait after failure before retrying.
@@ -117,7 +117,7 @@ The number of seconds to wait after failure before retrying.
 ### `uri` [plugins-outputs-mongodb-uri]
 
 * This is a required setting.
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 A MongoDB URI to connect to. See [http://docs.mongodb.org/manual/reference/connection-string/](http://docs.mongodb.org/manual/reference/connection-string/).

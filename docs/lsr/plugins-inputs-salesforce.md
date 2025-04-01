@@ -74,19 +74,19 @@ This plugin supports the following configuration options plus the [Common option
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`api_version`](plugins-inputs-salesforce.md#plugins-inputs-salesforce-api_version) | [string](introduction.md#string) | No |
-| [`client_id`](plugins-inputs-salesforce.md#plugins-inputs-salesforce-client_id) | [string](introduction.md#string) | Yes |
-| [`client_secret`](plugins-inputs-salesforce.md#plugins-inputs-salesforce-client_secret) | [password](introduction.md#password) | Yes |
-| [`password`](plugins-inputs-salesforce.md#plugins-inputs-salesforce-password) | [password](introduction.md#password) | Yes |
-| [`security_token`](plugins-inputs-salesforce.md#plugins-inputs-salesforce-security_token) | [password](introduction.md#password) | Yes |
-| [`sfdc_fields`](plugins-inputs-salesforce.md#plugins-inputs-salesforce-sfdc_fields) | [array](introduction.md#array) | No |
-| [`sfdc_filters`](plugins-inputs-salesforce.md#plugins-inputs-salesforce-sfdc_filters) | [string](introduction.md#string) | No |
-| [`sfdc_instance_url`](plugins-inputs-salesforce.md#plugins-inputs-salesforce-sfdc_instance_url) | [string](introduction.md#string) | No |
-| [`sfdc_object_name`](plugins-inputs-salesforce.md#plugins-inputs-salesforce-sfdc_object_name) | [string](introduction.md#string) | Yes |
-| [`to_underscores`](plugins-inputs-salesforce.md#plugins-inputs-salesforce-to_underscores) | [boolean](introduction.md#boolean) | No |
-| [`use_test_sandbox`](plugins-inputs-salesforce.md#plugins-inputs-salesforce-use_test_sandbox) | [boolean](introduction.md#boolean) | No |
-| [`use_tooling_api`](plugins-inputs-salesforce.md#plugins-inputs-salesforce-use_tooling_api) | [boolean](introduction.md#boolean) | No |
-| [`username`](plugins-inputs-salesforce.md#plugins-inputs-salesforce-username) | [string](introduction.md#string) | Yes |
+| [`api_version`](plugins-inputs-salesforce.md#plugins-inputs-salesforce-api_version) | [string](value-types.md#string) | No |
+| [`client_id`](plugins-inputs-salesforce.md#plugins-inputs-salesforce-client_id) | [string](value-types.md#string) | Yes |
+| [`client_secret`](plugins-inputs-salesforce.md#plugins-inputs-salesforce-client_secret) | [password](value-types.md#password) | Yes |
+| [`password`](plugins-inputs-salesforce.md#plugins-inputs-salesforce-password) | [password](value-types.md#password) | Yes |
+| [`security_token`](plugins-inputs-salesforce.md#plugins-inputs-salesforce-security_token) | [password](value-types.md#password) | Yes |
+| [`sfdc_fields`](plugins-inputs-salesforce.md#plugins-inputs-salesforce-sfdc_fields) | [array](value-types.md#array) | No |
+| [`sfdc_filters`](plugins-inputs-salesforce.md#plugins-inputs-salesforce-sfdc_filters) | [string](value-types.md#string) | No |
+| [`sfdc_instance_url`](plugins-inputs-salesforce.md#plugins-inputs-salesforce-sfdc_instance_url) | [string](value-types.md#string) | No |
+| [`sfdc_object_name`](plugins-inputs-salesforce.md#plugins-inputs-salesforce-sfdc_object_name) | [string](value-types.md#string) | Yes |
+| [`to_underscores`](plugins-inputs-salesforce.md#plugins-inputs-salesforce-to_underscores) | [boolean](value-types.md#boolean) | No |
+| [`use_test_sandbox`](plugins-inputs-salesforce.md#plugins-inputs-salesforce-use_test_sandbox) | [boolean](value-types.md#boolean) | No |
+| [`use_tooling_api`](plugins-inputs-salesforce.md#plugins-inputs-salesforce-use_tooling_api) | [boolean](value-types.md#boolean) | No |
+| [`username`](plugins-inputs-salesforce.md#plugins-inputs-salesforce-username) | [string](value-types.md#string) | Yes |
 
 Also see [Common options](plugins-inputs-salesforce.md#plugins-inputs-salesforce-common-options) for a list of options supported by all input plugins.
 
@@ -94,7 +94,7 @@ Also see [Common options](plugins-inputs-salesforce.md#plugins-inputs-salesforce
 
 ### `api_version` [plugins-inputs-salesforce-api_version]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 By default, this uses the default Restforce API version. To override this, set this to something like "32.0" for example
@@ -103,7 +103,7 @@ By default, this uses the default Restforce API version. To override this, set t
 ### `client_id` [plugins-inputs-salesforce-client_id]
 
 * This is a required setting.
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 Consumer Key for authentication. You must set up a new SFDC connected app with oath to use this output. More information can be found here: [https://help.salesforce.com/apex/HTViewHelpDoc?id=connected_app_create.htm](https://help.salesforce.com/apex/HTViewHelpDoc?id=connected_app_create.htm)
@@ -112,7 +112,7 @@ Consumer Key for authentication. You must set up a new SFDC connected app with o
 ### `client_secret` [plugins-inputs-salesforce-client_secret]
 
 * This is a required setting.
-* Value type is [password](introduction.md#password)
+* Value type is [password](value-types.md#password)
 * There is no default value for this setting.
 
 Consumer Secret from your oauth enabled connected app
@@ -121,7 +121,7 @@ Consumer Secret from your oauth enabled connected app
 ### `password` [plugins-inputs-salesforce-password]
 
 * This is a required setting.
-* Value type is [password](introduction.md#password)
+* Value type is [password](value-types.md#password)
 * There is no default value for this setting.
 
 The password used to login to sfdc
@@ -130,7 +130,7 @@ The password used to login to sfdc
 ### `security_token` [plugins-inputs-salesforce-security_token]
 
 * This is a required setting.
-* Value type is [password](introduction.md#password)
+* Value type is [password](value-types.md#password)
 * There is no default value for this setting.
 
 The security token for this account. For more information about generting a security token, see: [https://help.salesforce.com/apex/HTViewHelpDoc?id=user_security_token.htm](https://help.salesforce.com/apex/HTViewHelpDoc?id=user_security_token.htm)
@@ -138,7 +138,7 @@ The security token for this account. For more information about generting a secu
 
 ### `sfdc_fields` [plugins-inputs-salesforce-sfdc_fields]
 
-* Value type is [array](introduction.md#array)
+* Value type is [array](value-types.md#array)
 * Default value is `[]`
 
 These are the field names to return in the Salesforce query If this is empty, all fields are returned.
@@ -146,7 +146,7 @@ These are the field names to return in the Salesforce query If this is empty, al
 
 ### `sfdc_filters` [plugins-inputs-salesforce-sfdc_filters]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `""`
 
 These options will be added to the WHERE clause in the SOQL statement. Additional fields can be filtered on by adding field1 = value1 AND field2 = value2 AND…​
@@ -154,7 +154,7 @@ These options will be added to the WHERE clause in the SOQL statement. Additiona
 
 ### `sfdc_instance_url` [plugins-inputs-salesforce-sfdc_instance_url]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 The url of a Salesforce instance. Provide the url if you want to connect to your Salesforce instance instead of `login.salesforce.com` or `test.salesforce.com` at login.
@@ -165,7 +165,7 @@ Use either this or the `use_test_sandbox` configuration option but not both to c
 ### `sfdc_object_name` [plugins-inputs-salesforce-sfdc_object_name]
 
 * This is a required setting.
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 The name of the salesforce object you are creating or updating
@@ -173,7 +173,7 @@ The name of the salesforce object you are creating or updating
 
 ### `to_underscores` [plugins-inputs-salesforce-to_underscores]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 Setting this to true will convert SFDC’s NamedFields*c to named_fields*c
@@ -181,7 +181,7 @@ Setting this to true will convert SFDC’s NamedFields*c to named_fields*c
 
 ### `use_test_sandbox` [plugins-inputs-salesforce-use_test_sandbox]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 Set this to true to connect to a sandbox sfdc instance logging in through test.salesforce.com
@@ -191,7 +191,7 @@ Use either this or the `sfdc_instance_url` configuration option but not both to 
 
 ### `use_tooling_api` [plugins-inputs-salesforce-use_tooling_api]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 Set this to true to connect to the sfdc tooling api instead of the regular sfdc rest api. See [https://developer.salesforce.com/docs/atlas.en-us.api_tooling.meta/api_tooling](https://developer.salesforce.com/docs/atlas.en-us.api_tooling.meta/api_tooling) for details about the sfdc tooling api. Use cases for the sfdc tooling api include reading apex unit test results, flow coverage results (e.g. coverage of elements of sfdc flows) and security health check risks.
@@ -200,7 +200,7 @@ Set this to true to connect to the sfdc tooling api instead of the regular sfdc 
 ### `username` [plugins-inputs-salesforce-username]
 
 * This is a required setting.
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 A valid salesforce user name, usually your email address. Used for authentication and will be the user all objects are created or modified by

@@ -57,22 +57,22 @@ This plugin supports the following configuration options plus the [Common option
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`ecs_compatibility`](plugins-inputs-snmp.md#plugins-inputs-snmp-ecs_compatibility) | [string](introduction.md#string) | No |
-| [`get`](plugins-inputs-snmp.md#plugins-inputs-snmp-get) | [array](introduction.md#array) | No |
-| [`hosts`](plugins-inputs-snmp.md#plugins-inputs-snmp-hosts) | [array](introduction.md#array) | No |
-| [`interval`](plugins-inputs-snmp.md#plugins-inputs-snmp-interval) | [number](introduction.md#number) | No |
-| [`local_engine_id`](plugins-inputs-snmp.md#plugins-inputs-snmp-local_engine_id) | [string](introduction.md#string) | No |
-| [`mib_paths`](plugins-inputs-snmp.md#plugins-inputs-snmp-mib_paths) | [path](introduction.md#path) | No |
-| [`oid_mapping_format`](plugins-inputs-snmp.md#plugins-inputs-snmp-oid_mapping_format) | [string](introduction.md#string), one of `["default", "ruby_snmp", "dotted_string"]` | No |
-| [`oid_map_field_values`](plugins-inputs-snmp.md#plugins-inputs-snmp-oid_map_field_values) | [boolean](introduction.md#boolean) | No |
-| [`oid_path_length`](plugins-inputs-snmp.md#plugins-inputs-snmp-oid_path_length) | [number](introduction.md#number) | No |
-| [`oid_root_skip`](plugins-inputs-snmp.md#plugins-inputs-snmp-oid_root_skip) | [number](introduction.md#number) | No |
-| [`poll_hosts_timeout`](plugins-inputs-snmp.md#plugins-inputs-snmp-poll_hosts_timeout) | [number](introduction.md#number) | No |
-| [`walk`](plugins-inputs-snmp.md#plugins-inputs-snmp-walk) | [array](introduction.md#array) | No |
-| [`tables`](plugins-inputs-snmp.md#plugins-inputs-snmp-tables) | [array](introduction.md#array) | No |
-| [`target`](plugins-inputs-snmp.md#plugins-inputs-snmp-target) | [string](introduction.md#string) | No |
-| [`threads`](plugins-inputs-snmp.md#plugins-inputs-snmp-threads) | [number](introduction.md#number) | No |
-| [`use_provided_mibs`](plugins-inputs-snmp.md#plugins-inputs-snmp-use_provided_mibs) | [boolean](introduction.md#boolean) | No |
+| [`ecs_compatibility`](plugins-inputs-snmp.md#plugins-inputs-snmp-ecs_compatibility) | [string](value-types.md#string) | No |
+| [`get`](plugins-inputs-snmp.md#plugins-inputs-snmp-get) | [array](value-types.md#array) | No |
+| [`hosts`](plugins-inputs-snmp.md#plugins-inputs-snmp-hosts) | [array](value-types.md#array) | No |
+| [`interval`](plugins-inputs-snmp.md#plugins-inputs-snmp-interval) | [number](value-types.md#number) | No |
+| [`local_engine_id`](plugins-inputs-snmp.md#plugins-inputs-snmp-local_engine_id) | [string](value-types.md#string) | No |
+| [`mib_paths`](plugins-inputs-snmp.md#plugins-inputs-snmp-mib_paths) | [path](value-types.md#path) | No |
+| [`oid_mapping_format`](plugins-inputs-snmp.md#plugins-inputs-snmp-oid_mapping_format) | [string](value-types.md#string), one of `["default", "ruby_snmp", "dotted_string"]` | No |
+| [`oid_map_field_values`](plugins-inputs-snmp.md#plugins-inputs-snmp-oid_map_field_values) | [boolean](value-types.md#boolean) | No |
+| [`oid_path_length`](plugins-inputs-snmp.md#plugins-inputs-snmp-oid_path_length) | [number](value-types.md#number) | No |
+| [`oid_root_skip`](plugins-inputs-snmp.md#plugins-inputs-snmp-oid_root_skip) | [number](value-types.md#number) | No |
+| [`poll_hosts_timeout`](plugins-inputs-snmp.md#plugins-inputs-snmp-poll_hosts_timeout) | [number](value-types.md#number) | No |
+| [`walk`](plugins-inputs-snmp.md#plugins-inputs-snmp-walk) | [array](value-types.md#array) | No |
+| [`tables`](plugins-inputs-snmp.md#plugins-inputs-snmp-tables) | [array](value-types.md#array) | No |
+| [`target`](plugins-inputs-snmp.md#plugins-inputs-snmp-target) | [string](value-types.md#string) | No |
+| [`threads`](plugins-inputs-snmp.md#plugins-inputs-snmp-threads) | [number](value-types.md#number) | No |
+| [`use_provided_mibs`](plugins-inputs-snmp.md#plugins-inputs-snmp-use_provided_mibs) | [boolean](value-types.md#boolean) | No |
 
 
 ## SNMPv3 Authentication Options [_snmpv3_authentication_options]
@@ -81,12 +81,12 @@ This plugin supports the following SNMPv3 authentication options.
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`auth_pass`](plugins-inputs-snmp.md#plugins-inputs-snmp-auth_pass) | [password](introduction.md#password) | No |
-| [`auth_protocol`](plugins-inputs-snmp.md#plugins-inputs-snmp-auth_protocol) | [string](introduction.md#string), one of `["md5", "sha", "sha2", "hmac128sha224", "hmac192sha256", "hmac256sha384", "hmac384sha512"]` | No |
-| [`priv_pass`](plugins-inputs-snmp.md#plugins-inputs-snmp-priv_pass) | [password](introduction.md#password) | No |
-| [`priv_protocol`](plugins-inputs-snmp.md#plugins-inputs-snmp-priv_protocol) | [string](introduction.md#string), one of `["des", "3des", "aes", "aes128", "aes192", "aes256"]` | No |
-| [`security_level`](plugins-inputs-snmp.md#plugins-inputs-snmp-security_level) | [string](introduction.md#string), one of `["noAuthNoPriv", "authNoPriv", "authPriv"]` | No |
-| [`security_name`](plugins-inputs-snmp.md#plugins-inputs-snmp-security_name) | [string](introduction.md#string) | No |
+| [`auth_pass`](plugins-inputs-snmp.md#plugins-inputs-snmp-auth_pass) | [password](value-types.md#password) | No |
+| [`auth_protocol`](plugins-inputs-snmp.md#plugins-inputs-snmp-auth_protocol) | [string](value-types.md#string), one of `["md5", "sha", "sha2", "hmac128sha224", "hmac192sha256", "hmac256sha384", "hmac384sha512"]` | No |
+| [`priv_pass`](plugins-inputs-snmp.md#plugins-inputs-snmp-priv_pass) | [password](value-types.md#password) | No |
+| [`priv_protocol`](plugins-inputs-snmp.md#plugins-inputs-snmp-priv_protocol) | [string](value-types.md#string), one of `["des", "3des", "aes", "aes128", "aes192", "aes256"]` | No |
+| [`security_level`](plugins-inputs-snmp.md#plugins-inputs-snmp-security_level) | [string](value-types.md#string), one of `["noAuthNoPriv", "authNoPriv", "authPriv"]` | No |
+| [`security_name`](plugins-inputs-snmp.md#plugins-inputs-snmp-security_name) | [string](value-types.md#string) | No |
 
 
 ## SNMP Input Configuration Options [_snmp_input_configuration_options]
@@ -95,7 +95,7 @@ Also see [Common options](plugins-inputs-snmp.md#plugins-inputs-snmp-common-opti
 
 ### `ecs_compatibility` [plugins-inputs-snmp-ecs_compatibility]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Supported values are:
 
     * `disabled`: does not use ECS-compatible field names (fields might be set at the root of the event)
@@ -112,7 +112,7 @@ Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)](ht
 
 ### `get` [plugins-inputs-snmp-get]
 
-* Value type is [array](introduction.md#array)
+* Value type is [array](value-types.md#array)
 * There is no default value for this setting
 
 Use the `get` option to query for scalar values for the given OID(s). One or more OID(s) are specified as an array of strings of OID(s).
@@ -131,7 +131,7 @@ input {
 
 ### `hosts` [plugins-inputs-snmp-hosts]
 
-* Value type is [array](introduction.md#array)
+* Value type is [array](value-types.md#array)
 * There is no default value for this setting
 
 The `hosts` option specifies the list of hosts to query the configured `get` and `walk` options.
@@ -181,7 +181,7 @@ input {
 
 ### `interval` [plugins-inputs-snmp-interval]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `30`
 
 The `interval` option specifies the polling interval in seconds. If polling all configured hosts takes longer than this interval, a warning will be emitted to the logs.
@@ -189,7 +189,7 @@ The `interval` option specifies the polling interval in seconds. If polling all 
 
 ### `local_engine_id` [plugins-inputs-snmp-local_engine_id]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting
 
 The SNMPv3 local engine ID. Its length must be greater or equal than 5 and less or equal than 32. If not provided, a default ID is generated based on the local IP address and additional four random bytes.
@@ -197,7 +197,7 @@ The SNMPv3 local engine ID. Its length must be greater or equal than 5 and less 
 
 ### `mib_paths` [plugins-inputs-snmp-mib_paths]
 
-* Value type is [path](introduction.md#path)
+* Value type is [path](value-types.md#path)
 * There is no default value for this setting
 
 The `mib_paths` option specifies the location of one or more imported MIB files. The value can be either a dir path containing the imported MIB (`.dic`, `.yaml`) files, or a file path to a single MIB file.
@@ -219,7 +219,7 @@ Defines the mapping textual representation of an OID in the Logstash event:
 
 ### `oid_map_field_values` [plugins-inputs-snmp-oid_map_field_values]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 Defines if the Logstash event fields values, which types are `OID`, are mapped using the configured OID textual representation set on the [`oid_mapping_format`](plugins-inputs-snmp.md#plugins-inputs-snmp-oid_mapping_format) option.
@@ -227,7 +227,7 @@ Defines if the Logstash event fields values, which types are `OID`, are mapped u
 
 ### `oid_root_skip` [plugins-inputs-snmp-oid_root_skip]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `0`
 
 The `oid_root_skip` option specifies the number of OID root digits to ignore in the event field name. For example, in a numeric OID like "1.3.6.1.2.1.1.1.0" the first 5 digits could be ignored by setting `oid_root_skip => 5` which would result in a field name "1.1.1.0". Similarly when a MIB is used an OID such "1.3.6.1.2.mib-2.system.sysDescr.0" would become "mib-2.system.sysDescr.0"
@@ -238,7 +238,7 @@ The `oid_root_skip` option specifies the number of OID root digits to ignore in 
 
 ### `oid_path_length` [plugins-inputs-snmp-oid_path_length]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `0`
 
 The `oid_path_length` option specifies the number of OID root digits to retain in the event field name. For example, in a numeric OID like "1.3.6.1.2.1.1.1.0" the last 2 digits could be retained by setting `oid_path_length => 2` which would result in a field name "1.0". Similarly when a MIB is used an OID such "1.3.6.1.2.mib-2.system.sysDescr.0" would become "sysDescr.0"
@@ -249,7 +249,7 @@ The `oid_path_length` option specifies the number of OID root digits to retain i
 
 ### `poll_hosts_timeout` [plugins-inputs-snmp-poll_hosts_timeout]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * There is no default value for this setting
 
 Specifies the maximum amount of time in milliseconds the polling client will wait for all [`hosts`](plugins-inputs-snmp.md#plugins-inputs-snmp-hosts) responses. If all responses are not received before the timeout elapses, the client will fail and some hosts might not get polled during the current cycle.
@@ -259,7 +259,7 @@ By default, it uses the highest value between `1 hour`, the maximum [`hosts`](pl
 
 ### `walk` [plugins-inputs-snmp-walk]
 
-* Value type is [array](introduction.md#array)
+* Value type is [array](value-types.md#array)
 * There is no default value for this setting
 
 Use the `walk` option to retrieve the subtree of information for the given OID(s). One or more OID(s) are specified as an array of strings of OID(s).
@@ -279,7 +279,7 @@ Example
 
 ### `tables` [plugins-inputs-snmp-tables]
 
-* Value type is [array](introduction.md#array)
+* Value type is [array](value-types.md#array)
 * There is no default value for this setting
 * Results are returned under a field using the table name
 
@@ -312,7 +312,7 @@ input {
 
 ### `target` [plugins-inputs-snmp-target]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting
 
 The name of the field under which SNMP payloads are assigned. If not specified data will be stored in the root of the event.
@@ -322,7 +322,7 @@ Setting a target is recommended when [`ecs_compatibility`](plugins-inputs-snmp.m
 
 ### `threads` [plugins-inputs-snmp-threads]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is the number of CPU cores
 
 The number of threads to use for executing the hosts SNMP requests.
@@ -330,7 +330,7 @@ The number of threads to use for executing the hosts SNMP requests.
 
 ### `use_provided_mibs` [plugins-inputs-snmp-use_provided_mibs]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `true`
 
 This plugin provides all IETF MIBs (management information bases), publicly available in the [libsmi](https://www.ibr.cs.tu-bs.de/projects/libsmi) version `0.5.0`. When enabled, it automatically loads the bundled MIBs and provides mapping of the numeric OIDs to MIB field names in the resulting event.
@@ -343,7 +343,7 @@ A ***single user*** can be configured and will be used for all defined SNMPv3 ho
 
 ### `auth_pass` [plugins-inputs-snmp-auth_pass]
 
-* Value type is [password](introduction.md#password)
+* Value type is [password](value-types.md#password)
 * There is no default value for this setting
 
 The `auth_pass` option specifies the SNMPv3 authentication passphrase or password.
@@ -360,7 +360,7 @@ The `auth_protocol` option specifies the SNMPv3 authentication protocol or type
 
 ### `priv_pass` [plugins-inputs-snmp-priv_pass]
 
-* Value type is [password](introduction.md#password)
+* Value type is [password](value-types.md#password)
 * There is no default value for this setting
 
 The `priv_pass` option specifies the SNMPv3 encryption password.
@@ -385,7 +385,7 @@ The `security_level` option specifies the SNMPv3 security level between Authenti
 
 ### `security_name` [plugins-inputs-snmp-security_name]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting
 
 The `security_name` option specifies the SNMPv3 security name or user name.

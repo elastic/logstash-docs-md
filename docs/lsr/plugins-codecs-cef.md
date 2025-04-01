@@ -334,26 +334,26 @@ The following is a mapping between these fields.
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`default_timezone`](plugins-codecs-cef.md#plugins-codecs-cef-default_timezone) | [string](introduction.md#string) | No |
-| [`delimiter`](plugins-codecs-cef.md#plugins-codecs-cef-delimiter) | [string](introduction.md#string) | No |
-| [`device`](plugins-codecs-cef.md#plugins-codecs-cef-device) | [string](introduction.md#string) | No |
-| [`ecs_compatibility`](plugins-codecs-cef.md#plugins-codecs-cef-ecs_compatibility) | [string](introduction.md#string) | No |
-| [`fields`](plugins-codecs-cef.md#plugins-codecs-cef-fields) | [array](introduction.md#array) | No |
-| [`locale`](plugins-codecs-cef.md#plugins-codecs-cef-locale) | [string](introduction.md#string) | No |
-| [`name`](plugins-codecs-cef.md#plugins-codecs-cef-name) | [string](introduction.md#string) | No |
-| [`product`](plugins-codecs-cef.md#plugins-codecs-cef-product) | [string](introduction.md#string) | No |
-| [`raw_data_field`](plugins-codecs-cef.md#plugins-codecs-cef-raw_data_field) | [string](introduction.md#string) | No |
-| [`reverse_mapping`](plugins-codecs-cef.md#plugins-codecs-cef-reverse_mapping) | [boolean](introduction.md#boolean) | No |
-| [`severity`](plugins-codecs-cef.md#plugins-codecs-cef-severity) | [string](introduction.md#string) | No |
-| [`signature`](plugins-codecs-cef.md#plugins-codecs-cef-signature) | [string](introduction.md#string) | No |
-| [`vendor`](plugins-codecs-cef.md#plugins-codecs-cef-vendor) | [string](introduction.md#string) | No |
-| [`version`](plugins-codecs-cef.md#plugins-codecs-cef-version) | [string](introduction.md#string) | No |
+| [`default_timezone`](plugins-codecs-cef.md#plugins-codecs-cef-default_timezone) | [string](value-types.md#string) | No |
+| [`delimiter`](plugins-codecs-cef.md#plugins-codecs-cef-delimiter) | [string](value-types.md#string) | No |
+| [`device`](plugins-codecs-cef.md#plugins-codecs-cef-device) | [string](value-types.md#string) | No |
+| [`ecs_compatibility`](plugins-codecs-cef.md#plugins-codecs-cef-ecs_compatibility) | [string](value-types.md#string) | No |
+| [`fields`](plugins-codecs-cef.md#plugins-codecs-cef-fields) | [array](value-types.md#array) | No |
+| [`locale`](plugins-codecs-cef.md#plugins-codecs-cef-locale) | [string](value-types.md#string) | No |
+| [`name`](plugins-codecs-cef.md#plugins-codecs-cef-name) | [string](value-types.md#string) | No |
+| [`product`](plugins-codecs-cef.md#plugins-codecs-cef-product) | [string](value-types.md#string) | No |
+| [`raw_data_field`](plugins-codecs-cef.md#plugins-codecs-cef-raw_data_field) | [string](value-types.md#string) | No |
+| [`reverse_mapping`](plugins-codecs-cef.md#plugins-codecs-cef-reverse_mapping) | [boolean](value-types.md#boolean) | No |
+| [`severity`](plugins-codecs-cef.md#plugins-codecs-cef-severity) | [string](value-types.md#string) | No |
+| [`signature`](plugins-codecs-cef.md#plugins-codecs-cef-signature) | [string](value-types.md#string) | No |
+| [`vendor`](plugins-codecs-cef.md#plugins-codecs-cef-vendor) | [string](value-types.md#string) | No |
+| [`version`](plugins-codecs-cef.md#plugins-codecs-cef-version) | [string](value-types.md#string) | No |
 
  
 
 ### `default_timezone` [plugins-codecs-cef-default_timezone]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Supported values are:
 
     * [Timezone names](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) (such as `Europe/Moscow`, `America/Argentina/Buenos_Aires`)
@@ -367,7 +367,7 @@ When parsing timestamp fields in ECS mode and encountering timestamps that do no
 
 ### `delimiter` [plugins-codecs-cef-delimiter]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 If your input puts a delimiter between each CEF event, you’ll want to set this to be that delimiter.
@@ -396,7 +396,7 @@ This setting allows the following character sequences to have special meaning:
 
 ### `device` [plugins-codecs-cef-device]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Supported values are:
 
     * `observer`: indicates that device-specific fields represent the device used to *observe* the event.
@@ -413,7 +413,7 @@ If the codec handles data from a variety of sources, the ECS recommendation is t
 
 ### `ecs_compatibility` [plugins-codecs-cef-ecs_compatibility]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Supported values are:
 
     * `disabled`: uses CEF-defined field names in the event (e.g., `bytesIn`, `sourceAddress`)
@@ -430,7 +430,7 @@ Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)](ht
 
 ### `fields` [plugins-codecs-cef-fields]
 
-* Value type is [array](introduction.md#array)
+* Value type is [array](value-types.md#array)
 * Default value is `[]`
 * Option has no effect when *decoding*
 
@@ -439,7 +439,7 @@ When this codec is used in an Output Plugin, a list of fields can be provided to
 
 ### `locale` [plugins-codecs-cef-locale]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Supported values are:
 
     * Abbreviated language_COUNTRY format (e.g., `en_GB`, `pt_BR`)
@@ -453,7 +453,7 @@ When parsing timestamp fields in ECS mode and encountering timestamps in a local
 
 ### `name` [plugins-codecs-cef-name]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"Logstash"`
 * Option has no effect when *decoding*
 
@@ -462,7 +462,7 @@ When this codec is used in an Output Plugin, this option can be used to specify 
 
 ### `product` [plugins-codecs-cef-product]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"Logstash"`
 * Option has no effect when *decoding*
 
@@ -471,7 +471,7 @@ When this codec is used in an Output Plugin, this option can be used to specify 
 
 ### `raw_data_field` [plugins-codecs-cef-raw_data_field]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting
 
 Store the raw data to the field, for example `[event][original]`. Existing target field will be overriden.
@@ -479,7 +479,7 @@ Store the raw data to the field, for example `[event][original]`. Existing targe
 
 ### `reverse_mapping` [plugins-codecs-cef-reverse_mapping]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 * Option has no effect when *decoding*
 
@@ -488,7 +488,7 @@ Set to true to adhere to the specifications and encode using the CEF key name (s
 
 ### `severity` [plugins-codecs-cef-severity]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"6"`
 * Option has no effect when *decoding*
 
@@ -499,7 +499,7 @@ Defined as field of type string to allow sprintf. The value will be validated to
 
 ### `signature` [plugins-codecs-cef-signature]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"Logstash"`
 * Option has no effect when *decoding*
 
@@ -508,7 +508,7 @@ When this codec is used in an Output Plugin, this option can be used to specify 
 
 ### `vendor` [plugins-codecs-cef-vendor]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"Elasticsearch"`
 * Option has no effect when *decoding*
 
@@ -517,7 +517,7 @@ When this codec is used in an Output Plugin, this option can be used to specify 
 
 ### `version` [plugins-codecs-cef-version]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"1.0"`
 * Option has no effect when *decoding*
 
