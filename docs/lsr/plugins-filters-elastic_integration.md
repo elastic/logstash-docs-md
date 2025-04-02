@@ -240,28 +240,28 @@ This plugin supports the following configuration options plus the [Common option
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`api_key`](plugins-filters-elastic_integration.md#plugins-filters-elastic_integration-api_key) | [password](introduction.md#password) | No |
-| [`cloud_auth`](plugins-filters-elastic_integration.md#plugins-filters-elastic_integration-cloud_auth) | [password](introduction.md#password) | No |
-| [`cloud_id`](plugins-filters-elastic_integration.md#plugins-filters-elastic_integration-cloud_id) | [string](introduction.md#string) | No |
-| [`geoip_database_directory`](plugins-filters-elastic_integration.md#plugins-filters-elastic_integration-geoip_database_directory) | [path](introduction.md#path) | No |
-| [`hosts`](plugins-filters-elastic_integration.md#plugins-filters-elastic_integration-hosts) | [array](introduction.md#array) | No |
-| [`password`](plugins-filters-elastic_integration.md#plugins-filters-elastic_integration-password) | [password](introduction.md#password) | No |
-| [`pipeline_name`](plugins-filters-elastic_integration.md#plugins-filters-elastic_integration-pipeline_name) | [string](introduction.md#string) | No |
-| [`ssl_certificate`](plugins-filters-elastic_integration.md#plugins-filters-elastic_integration-ssl_certificate) | [path](introduction.md#path) | No |
-| [`ssl_certificate_authorities`](plugins-filters-elastic_integration.md#plugins-filters-elastic_integration-ssl_certificate_authorities) | [array](introduction.md#array) | No |
-| [`ssl_enabled`](plugins-filters-elastic_integration.md#plugins-filters-elastic_integration-ssl_enabled) | [boolean](introduction.md#boolean) | No |
-| [`ssl_key`](plugins-filters-elastic_integration.md#plugins-filters-elastic_integration-ssl_key) | [path](introduction.md#path) | No |
-| [`ssl_keystore_password`](plugins-filters-elastic_integration.md#plugins-filters-elastic_integration-ssl_keystore_password) | [password](introduction.md#password) | No |
-| [`ssl_keystore_path`](plugins-filters-elastic_integration.md#plugins-filters-elastic_integration-ssl_keystore_path) | [path](introduction.md#path) | No |
-| [`ssl_key_passphrase`](plugins-filters-elastic_integration.md#plugins-filters-elastic_integration-ssl_key_passphrase) | [password](introduction.md#password) | No |
-| [`ssl_truststore_path`](plugins-filters-elastic_integration.md#plugins-filters-elastic_integration-ssl_truststore_path) | [path](introduction.md#path) | No |
-| [`ssl_truststore_password`](plugins-filters-elastic_integration.md#plugins-filters-elastic_integration-ssl_truststore_password) | [password](introduction.md#password) | No |
-| [`ssl_verification_mode`](plugins-filters-elastic_integration.md#plugins-filters-elastic_integration-ssl_verification_mode) | [string](introduction.md#string), one of `["full", "certificate", "none"]` | No |
-| [`username`](plugins-filters-elastic_integration.md#plugins-filters-elastic_integration-username) | [string](introduction.md#string) | No |
+| [`api_key`](plugins-filters-elastic_integration.md#plugins-filters-elastic_integration-api_key) | [password](value-types.md#password) | No |
+| [`cloud_auth`](plugins-filters-elastic_integration.md#plugins-filters-elastic_integration-cloud_auth) | [password](value-types.md#password) | No |
+| [`cloud_id`](plugins-filters-elastic_integration.md#plugins-filters-elastic_integration-cloud_id) | [string](value-types.md#string) | No |
+| [`geoip_database_directory`](plugins-filters-elastic_integration.md#plugins-filters-elastic_integration-geoip_database_directory) | [path](value-types.md#path) | No |
+| [`hosts`](plugins-filters-elastic_integration.md#plugins-filters-elastic_integration-hosts) | [array](value-types.md#array) | No |
+| [`password`](plugins-filters-elastic_integration.md#plugins-filters-elastic_integration-password) | [password](value-types.md#password) | No |
+| [`pipeline_name`](plugins-filters-elastic_integration.md#plugins-filters-elastic_integration-pipeline_name) | [string](value-types.md#string) | No |
+| [`ssl_certificate`](plugins-filters-elastic_integration.md#plugins-filters-elastic_integration-ssl_certificate) | [path](value-types.md#path) | No |
+| [`ssl_certificate_authorities`](plugins-filters-elastic_integration.md#plugins-filters-elastic_integration-ssl_certificate_authorities) | [array](value-types.md#array) | No |
+| [`ssl_enabled`](plugins-filters-elastic_integration.md#plugins-filters-elastic_integration-ssl_enabled) | [boolean](value-types.md#boolean) | No |
+| [`ssl_key`](plugins-filters-elastic_integration.md#plugins-filters-elastic_integration-ssl_key) | [path](value-types.md#path) | No |
+| [`ssl_keystore_password`](plugins-filters-elastic_integration.md#plugins-filters-elastic_integration-ssl_keystore_password) | [password](value-types.md#password) | No |
+| [`ssl_keystore_path`](plugins-filters-elastic_integration.md#plugins-filters-elastic_integration-ssl_keystore_path) | [path](value-types.md#path) | No |
+| [`ssl_key_passphrase`](plugins-filters-elastic_integration.md#plugins-filters-elastic_integration-ssl_key_passphrase) | [password](value-types.md#password) | No |
+| [`ssl_truststore_path`](plugins-filters-elastic_integration.md#plugins-filters-elastic_integration-ssl_truststore_path) | [path](value-types.md#path) | No |
+| [`ssl_truststore_password`](plugins-filters-elastic_integration.md#plugins-filters-elastic_integration-ssl_truststore_password) | [password](value-types.md#password) | No |
+| [`ssl_verification_mode`](plugins-filters-elastic_integration.md#plugins-filters-elastic_integration-ssl_verification_mode) | [string](value-types.md#string), one of `["full", "certificate", "none"]` | No |
+| [`username`](plugins-filters-elastic_integration.md#plugins-filters-elastic_integration-username) | [string](value-types.md#string) | No |
 
 ### `api_key` [plugins-filters-elastic_integration-api_key]
 
-* Value type is [password](introduction.md#password)
+* Value type is [password](value-types.md#password)
 * There is no default value for this setting.
 
 The encoded form of an API key that is used to authenticate this plugin to {{es}}.
@@ -269,7 +269,7 @@ The encoded form of an API key that is used to authenticate this plugin to {{es}
 
 ### `cloud_auth` [plugins-filters-elastic_integration-cloud_auth]
 
-* Value type is [password](introduction.md#password)
+* Value type is [password](value-types.md#password)
 * There is no default value for this setting.
 
 Cloud authentication string ("<username>:<password>" format) is an alternative for the `username`/`password` pair and can be obtained from Elastic Cloud web console.
@@ -277,7 +277,7 @@ Cloud authentication string ("<username>:<password>" format) is an alternative f
 
 ### `cloud_id` [plugins-filters-elastic_integration-cloud_id]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 * Cannot be combined with `[`ssl_enabled`](plugins-filters-elastic_integration.md#plugins-filters-elastic_integration-ssl_enabled)⇒false`.
 
@@ -290,7 +290,7 @@ For more details, check out the [Logstash-to-Cloud documentation](logstash://ref
 
 ### `geoip_database_directory` [plugins-filters-elastic_integration-geoip_database_directory]
 
-* Value type is [path](introduction.md#path)
+* Value type is [path](value-types.md#path)
 * There is no default value for this setting.
 
 When running in a Logstash process that has Geoip Database Management enabled, integrations that use the Geoip Processor wil use managed Maxmind databases by default. By using managed databases you accept and agree to the [MaxMind EULA](https://www.maxmind.com/en/geolite2/eula).
@@ -321,7 +321,7 @@ Most integrations rely on databases being present named *exactly*:
 
 ### `hosts` [plugins-filters-elastic_integration-hosts]
 
-* Value type is a list of [uri](introduction.md#uri)s
+* Value type is a list of [uri](value-types.md#uri)s
 * There is no default value for this setting.
 * Constraints:
 
@@ -360,7 +360,7 @@ There are two ways to disable SSL:
 
 ### `password` [plugins-filters-elastic_integration-password]
 
-* Value type is [password](introduction.md#password)
+* Value type is [password](value-types.md#password)
 * There is no default value for this setting.
 * Required when request auth is configured with [`username`](plugins-filters-elastic_integration.md#plugins-filters-elastic_integration-username)
 
@@ -369,7 +369,7 @@ A password when using HTTP Basic Authentication to connect to {{es}}.
 
 ### `pipeline_name` [plugins-filters-elastic_integration-pipeline_name]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 * When present, the event’s initial pipeline will *not* be auto-detected from the event’s data stream fields.
 * Value may be a [sprintf-style](https://www.elastic.co/guide/en/logstash/current/event-dependent-configuration.html#sprintf) template; if any referenced fields cannot be resolved the event will not be routed to an ingest pipeline.
@@ -377,7 +377,7 @@ A password when using HTTP Basic Authentication to connect to {{es}}.
 
 ### `ssl_certificate` [plugins-filters-elastic_integration-ssl_certificate]
 
-* Value type is [path](introduction.md#path)
+* Value type is [path](value-types.md#path)
 * There is no default value for this setting.
 * When present, [`ssl_key`](plugins-filters-elastic_integration.md#plugins-filters-elastic_integration-ssl_key) and [`ssl_key_passphrase`](plugins-filters-elastic_integration.md#plugins-filters-elastic_integration-ssl_key_passphrase) are also required.
 * Cannot be combined with configurations that disable SSL
@@ -387,7 +387,7 @@ Path to a PEM-encoded certificate or certificate chain with which to identify th
 
 ### `ssl_certificate_authorities` [plugins-filters-elastic_integration-ssl_certificate_authorities]
 
-* Value type is a list of [path](introduction.md#path)s
+* Value type is a list of [path](value-types.md#path)s
 * There is no default value for this setting.
 * Cannot be combined with configurations that disable SSL
 * Cannot be combined with `[`ssl_verification_mode`](plugins-filters-elastic_integration.md#plugins-filters-elastic_integration-ssl_verification_mode)⇒none`.
@@ -399,7 +399,7 @@ This setting can be used to *override* the system trust store for verifying the 
 
 ### `ssl_enabled` [plugins-filters-elastic_integration-ssl_enabled]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * There is no default value for this setting.
 
 Secure SSL communication to {{es}} is enabled unless:
@@ -412,7 +412,7 @@ Specifying `ssl_enabled => true` can be a helpful redundant safeguard to ensure 
 
 ### `ssl_key` [plugins-filters-elastic_integration-ssl_key]
 
-* Value type is [path](introduction.md#path)
+* Value type is [path](value-types.md#path)
 * There is no default value for this setting.
 * Required when connection identity is configured with [`ssl_certificate`](plugins-filters-elastic_integration.md#plugins-filters-elastic_integration-ssl_certificate)
 * Cannot be combined with configurations that disable SSL
@@ -422,7 +422,7 @@ A path to a PKCS8-formatted SSL certificate key.
 
 ### `ssl_keystore_password` [plugins-filters-elastic_integration-ssl_keystore_password]
 
-* Value type is [password](introduction.md#password)
+* Value type is [password](value-types.md#password)
 * There is no default value for this setting.
 * Required when connection identity is configured with [`ssl_keystore_path`](plugins-filters-elastic_integration.md#plugins-filters-elastic_integration-ssl_keystore_path)
 * Cannot be combined with configurations that disable SSL
@@ -432,7 +432,7 @@ Password for the [`ssl_keystore_path`](plugins-filters-elastic_integration.md#pl
 
 ### `ssl_keystore_path` [plugins-filters-elastic_integration-ssl_keystore_path]
 
-* Value type is [path](introduction.md#path)
+* Value type is [path](value-types.md#path)
 * There is no default value for this setting.
 * When present, [`ssl_keystore_password`](plugins-filters-elastic_integration.md#plugins-filters-elastic_integration-ssl_keystore_password) is also required.
 * Cannot be combined with configurations that disable SSL
@@ -442,7 +442,7 @@ A path to a JKS- or PKCS12-formatted keystore with which to identify this plugin
 
 ### `ssl_key_passphrase` [plugins-filters-elastic_integration-ssl_key_passphrase]
 
-* Value type is [password](introduction.md#password)
+* Value type is [password](value-types.md#password)
 * There is no default value for this setting.
 * Required when connection identity is configured with [`ssl_certificate`](plugins-filters-elastic_integration.md#plugins-filters-elastic_integration-ssl_certificate)
 * Cannot be combined with configurations that disable SSL
@@ -452,7 +452,7 @@ A password or passphrase of the [`ssl_key`](plugins-filters-elastic_integration.
 
 ### `ssl_truststore_path` [plugins-filters-elastic_integration-ssl_truststore_path]
 
-* Value type is [path](introduction.md#path)
+* Value type is [path](value-types.md#path)
 * There is no default value for this setting.
 * When present, [`ssl_truststore_password`](plugins-filters-elastic_integration.md#plugins-filters-elastic_integration-ssl_truststore_password) is required.
 * Cannot be combined with configurations that disable SSL
@@ -465,7 +465,7 @@ This setting can be used to *override* the system trust store for verifying the 
 
 ### `ssl_truststore_password` [plugins-filters-elastic_integration-ssl_truststore_password]
 
-* Value type is [password](introduction.md#password)
+* Value type is [password](value-types.md#password)
 * There is no default value for this setting.
 * Required when connection trust is configured with [`ssl_truststore_path`](plugins-filters-elastic_integration.md#plugins-filters-elastic_integration-ssl_truststore_path)
 * Cannot be combined with configurations that disable SSL
@@ -475,7 +475,7 @@ Password for the [`ssl_truststore_path`](plugins-filters-elastic_integration.md#
 
 ### `ssl_verification_mode` [plugins-filters-elastic_integration-ssl_verification_mode]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 * Cannot be combined with configurations that disable SSL
 
@@ -493,7 +493,7 @@ SSL certificates presented by {{es}} are fully-validated by default.
 
 ### `username` [plugins-filters-elastic_integration-username]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 * When present, [`password`](plugins-filters-elastic_integration.md#plugins-filters-elastic_integration-password) is also required.
 

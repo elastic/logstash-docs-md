@@ -27,13 +27,13 @@ The rubydebug codec will output your Logstash event data using the Ruby Amazing 
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`metadata`](plugins-codecs-rubydebug.md#plugins-codecs-rubydebug-metadata) | [boolean](introduction.md#boolean) | No |
+| [`metadata`](plugins-codecs-rubydebug.md#plugins-codecs-rubydebug-metadata) | [boolean](value-types.md#boolean) | No |
 
  
 
 ### `metadata` [plugins-codecs-rubydebug-metadata]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 Should the event’s metadata be included?

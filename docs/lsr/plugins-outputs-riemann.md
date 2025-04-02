@@ -46,13 +46,13 @@ This plugin supports the following configuration options plus the [Common option
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`debug`](plugins-outputs-riemann.md#plugins-outputs-riemann-debug) | [boolean](introduction.md#boolean) | No |
-| [`host`](plugins-outputs-riemann.md#plugins-outputs-riemann-host) | [string](introduction.md#string) | No |
-| [`map_fields`](plugins-outputs-riemann.md#plugins-outputs-riemann-map_fields) | [boolean](introduction.md#boolean) | No |
-| [`port`](plugins-outputs-riemann.md#plugins-outputs-riemann-port) | [number](introduction.md#number) | No |
-| [`protocol`](plugins-outputs-riemann.md#plugins-outputs-riemann-protocol) | [string](introduction.md#string), one of `["tcp", "udp"]` | No |
-| [`riemann_event`](plugins-outputs-riemann.md#plugins-outputs-riemann-riemann_event) | [hash](introduction.md#hash) | No |
-| [`sender`](plugins-outputs-riemann.md#plugins-outputs-riemann-sender) | [string](introduction.md#string) | No |
+| [`debug`](plugins-outputs-riemann.md#plugins-outputs-riemann-debug) | [boolean](value-types.md#boolean) | No |
+| [`host`](plugins-outputs-riemann.md#plugins-outputs-riemann-host) | [string](value-types.md#string) | No |
+| [`map_fields`](plugins-outputs-riemann.md#plugins-outputs-riemann-map_fields) | [boolean](value-types.md#boolean) | No |
+| [`port`](plugins-outputs-riemann.md#plugins-outputs-riemann-port) | [number](value-types.md#number) | No |
+| [`protocol`](plugins-outputs-riemann.md#plugins-outputs-riemann-protocol) | [string](value-types.md#string), one of `["tcp", "udp"]` | No |
+| [`riemann_event`](plugins-outputs-riemann.md#plugins-outputs-riemann-riemann_event) | [hash](value-types.md#hash) | No |
+| [`sender`](plugins-outputs-riemann.md#plugins-outputs-riemann-sender) | [string](value-types.md#string) | No |
 
 Also see [Common options](plugins-outputs-riemann.md#plugins-outputs-riemann-common-options) for a list of options supported by all output plugins.
 
@@ -60,7 +60,7 @@ Also see [Common options](plugins-outputs-riemann.md#plugins-outputs-riemann-com
 
 ### `debug` [plugins-outputs-riemann-debug]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 Enable debugging output?
@@ -68,7 +68,7 @@ Enable debugging output?
 
 ### `host` [plugins-outputs-riemann-host]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"localhost"`
 
 The address of the Riemann server.
@@ -76,7 +76,7 @@ The address of the Riemann server.
 
 ### `map_fields` [plugins-outputs-riemann-map_fields]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 If set to true automatically map all logstash defined fields to riemann event fields. All nested logstash fields will be mapped to riemann fields containing all parent keys separated by dots and the deepest value.
@@ -111,7 +111,7 @@ It can be used in conjunction with or independent of the riemann_event option. W
 
 ### `port` [plugins-outputs-riemann-port]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `5555`
 
 The port to connect to on your Riemann server.
@@ -129,7 +129,7 @@ Logstash’s default output behaviour is to never lose events As such, we use tc
 
 ### `riemann_event` [plugins-outputs-riemann-riemann_event]
 
-* Value type is [hash](introduction.md#hash)
+* Value type is [hash](value-types.md#hash)
 * There is no default value for this setting.
 
 A Hash to set Riemann event fields ([http://riemann.io/concepts.html](http://riemann.io/concepts.md)).
@@ -158,7 +158,7 @@ Example:
 
 ### `sender` [plugins-outputs-riemann-sender]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"%{{host}}"`
 
 The name of the sender. This sets the `host` value in the Riemann event

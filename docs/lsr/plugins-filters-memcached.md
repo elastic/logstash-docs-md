@@ -68,12 +68,12 @@ This plugin supports the following configuration options plus the [Common option
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`hosts`](plugins-filters-memcached.md#plugins-filters-memcached-hosts) | [array](introduction.md#array) | No |
-| [`namespace`](plugins-filters-memcached.md#plugins-filters-memcached-namespace) | [string](introduction.md#string) | No |
-| [`get`](plugins-filters-memcached.md#plugins-filters-memcached-get) | [hash](introduction.md#hash) | No |
-| [`set`](plugins-filters-memcached.md#plugins-filters-memcached-set) | [hash](introduction.md#hash) | No |
-| [`tag_on_failure`](plugins-filters-memcached.md#plugins-filters-memcached-tag_on_failure) | [string](introduction.md#string) | No |
-| [`ttl`](plugins-filters-memcached.md#plugins-filters-memcached-ttl) | [number](introduction.md#number) | No |
+| [`hosts`](plugins-filters-memcached.md#plugins-filters-memcached-hosts) | [array](value-types.md#array) | No |
+| [`namespace`](plugins-filters-memcached.md#plugins-filters-memcached-namespace) | [string](value-types.md#string) | No |
+| [`get`](plugins-filters-memcached.md#plugins-filters-memcached-get) | [hash](value-types.md#hash) | No |
+| [`set`](plugins-filters-memcached.md#plugins-filters-memcached-set) | [hash](value-types.md#hash) | No |
+| [`tag_on_failure`](plugins-filters-memcached.md#plugins-filters-memcached-tag_on_failure) | [string](value-types.md#string) | No |
+| [`ttl`](plugins-filters-memcached.md#plugins-filters-memcached-ttl) | [number](value-types.md#number) | No |
 
 Also see [Common options](plugins-filters-memcached.md#plugins-filters-memcached-common-options) for a list of options supported by all filter plugins.
 
@@ -81,7 +81,7 @@ Also see [Common options](plugins-filters-memcached.md#plugins-filters-memcached
 
 ### `hosts` [plugins-filters-memcached-hosts]
 
-* Value type is [array](introduction.md#array)
+* Value type is [array](value-types.md#array)
 * Default value is `localhost`
 
 The `hosts` parameter accepts an array of addresses corresponding to memcached instances.
@@ -93,7 +93,7 @@ If more than one host is specified, requests will be distributed to the given ho
 
 ### `namespace` [plugins-filters-memcached-namespace]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 If specified, prefix all memcached keys with the given string followed by a colon (`:`); this is useful if all keys being used by this plugin share a common prefix.
@@ -117,7 +117,7 @@ filter {
 
 ### `get` [plugins-filters-memcached-get]
 
-* Value type is [hash](introduction.md#hash)
+* Value type is [hash](value-types.md#hash)
 * There is no default value for this setting.
 
 If specified, get the values for the given keys from memcached, and store them in the corresponding fields on the event.
@@ -139,7 +139,7 @@ filter {
 
 ### `set` [plugins-filters-memcached-set]
 
-* Value type is [hash](introduction.md#hash)
+* Value type is [hash](value-types.md#hash)
 * There is no default value for this setting.
 
 If specified, extracts the values from the given event fields, and sets the corresponding keys to those values in memcached with the configured [ttl](plugins-filters-memcached.md#plugins-filters-memcached-ttl)
@@ -161,7 +161,7 @@ filter {
 
 ### `tag_on_failure` [plugins-filters-memcached-tag_on_failure]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * The default value for this setting is `_memcached_failure`.
 
 When a memcached operation causes a runtime exception to be thrown within the plugin, the operation is safely aborted without crashing the plugin, and the event is tagged with the provided value.
@@ -171,7 +171,7 @@ When a memcached operation causes a runtime exception to be thrown within the pl
 
 For usages of this plugin that persist data to memcached (e.g., [`set`](plugins-filters-memcached.md#plugins-filters-memcached-set)), the time-to-live in seconds
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * The default value is `0` (no expiry)
 
 

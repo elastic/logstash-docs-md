@@ -126,20 +126,20 @@ As of version `2.0.0` of this plugin, a previously deprecated SSL setting has be
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`auth_basic_username`](plugins-inputs-elastic_serverless_forwarder.md#plugins-inputs-elastic_serverless_forwarder-auth_basic_username) | [string](introduction.md#string) | No |
-| [`auth_basic_password`](plugins-inputs-elastic_serverless_forwarder.md#plugins-inputs-elastic_serverless_forwarder-auth_basic_password) | [password](introduction.md#password) | No |
-| [`host`](plugins-inputs-elastic_serverless_forwarder.md#plugins-inputs-elastic_serverless_forwarder-host) | [string](introduction.md#string) | No |
-| [`port`](plugins-inputs-elastic_serverless_forwarder.md#plugins-inputs-elastic_serverless_forwarder-port) | [number](introduction.md#number) | No |
+| [`auth_basic_username`](plugins-inputs-elastic_serverless_forwarder.md#plugins-inputs-elastic_serverless_forwarder-auth_basic_username) | [string](value-types.md#string) | No |
+| [`auth_basic_password`](plugins-inputs-elastic_serverless_forwarder.md#plugins-inputs-elastic_serverless_forwarder-auth_basic_password) | [password](value-types.md#password) | No |
+| [`host`](plugins-inputs-elastic_serverless_forwarder.md#plugins-inputs-elastic_serverless_forwarder-host) | [string](value-types.md#string) | No |
+| [`port`](plugins-inputs-elastic_serverless_forwarder.md#plugins-inputs-elastic_serverless_forwarder-port) | [number](value-types.md#number) | No |
 | [`ssl_certificate`](plugins-inputs-elastic_serverless_forwarder.md#plugins-inputs-elastic_serverless_forwarder-ssl_certificate) | a valid filesystem path | No |
-| [`ssl_certificate_authorities`](plugins-inputs-elastic_serverless_forwarder.md#plugins-inputs-elastic_serverless_forwarder-ssl_certificate_authorities) | [array](introduction.md#array) | No |
-| [`ssl_client_authentication`](plugins-inputs-elastic_serverless_forwarder.md#plugins-inputs-elastic_serverless_forwarder-ssl_client_authentication) | [string](introduction.md#string), one of `["none", "optional", "required"]` | No |
-| [`ssl_cipher_suites`](plugins-inputs-elastic_serverless_forwarder.md#plugins-inputs-elastic_serverless_forwarder-ssl_cipher_suites) | [array](introduction.md#array) | No |
-| [`ssl_enabled`](plugins-inputs-elastic_serverless_forwarder.md#plugins-inputs-elastic_serverless_forwarder-ssl_enabled) | [boolean](introduction.md#boolean) | No |
-| [`ssl_handshake_timeout`](plugins-inputs-elastic_serverless_forwarder.md#plugins-inputs-elastic_serverless_forwarder-ssl_handshake_timeout) | [number](introduction.md#number) | No |
+| [`ssl_certificate_authorities`](plugins-inputs-elastic_serverless_forwarder.md#plugins-inputs-elastic_serverless_forwarder-ssl_certificate_authorities) | [array](value-types.md#array) | No |
+| [`ssl_client_authentication`](plugins-inputs-elastic_serverless_forwarder.md#plugins-inputs-elastic_serverless_forwarder-ssl_client_authentication) | [string](value-types.md#string), one of `["none", "optional", "required"]` | No |
+| [`ssl_cipher_suites`](plugins-inputs-elastic_serverless_forwarder.md#plugins-inputs-elastic_serverless_forwarder-ssl_cipher_suites) | [array](value-types.md#array) | No |
+| [`ssl_enabled`](plugins-inputs-elastic_serverless_forwarder.md#plugins-inputs-elastic_serverless_forwarder-ssl_enabled) | [boolean](value-types.md#boolean) | No |
+| [`ssl_handshake_timeout`](plugins-inputs-elastic_serverless_forwarder.md#plugins-inputs-elastic_serverless_forwarder-ssl_handshake_timeout) | [number](value-types.md#number) | No |
 | [`ssl_key`](plugins-inputs-elastic_serverless_forwarder.md#plugins-inputs-elastic_serverless_forwarder-ssl_key) | a valid filesystem path | No |
-| [`ssl_key_passphrase`](plugins-inputs-elastic_serverless_forwarder.md#plugins-inputs-elastic_serverless_forwarder-ssl_key_passphrase) | [password](introduction.md#password) | No |
-| [`ssl_supported_protocols`](plugins-inputs-elastic_serverless_forwarder.md#plugins-inputs-elastic_serverless_forwarder-ssl_supported_protocols) | [array](introduction.md#array) | No |
-| [`ssl_verification_mode`](plugins-inputs-elastic_serverless_forwarder.md#plugins-inputs-elastic_serverless_forwarder-ssl_verification_mode) | [string](introduction.md#string), one of `["certificate"]` | No |
+| [`ssl_key_passphrase`](plugins-inputs-elastic_serverless_forwarder.md#plugins-inputs-elastic_serverless_forwarder-ssl_key_passphrase) | [password](value-types.md#password) | No |
+| [`ssl_supported_protocols`](plugins-inputs-elastic_serverless_forwarder.md#plugins-inputs-elastic_serverless_forwarder-ssl_supported_protocols) | [array](value-types.md#array) | No |
+| [`ssl_verification_mode`](plugins-inputs-elastic_serverless_forwarder.md#plugins-inputs-elastic_serverless_forwarder-ssl_verification_mode) | [string](value-types.md#string), one of `["certificate"]` | No |
 
 Also see [Common options](plugins-inputs-elastic_serverless_forwarder.md#plugins-inputs-elastic_serverless_forwarder-common-options) for a list of options supported by all input plugins.
 
@@ -147,7 +147,7 @@ Also see [Common options](plugins-inputs-elastic_serverless_forwarder.md#plugins
 
 ### `auth_basic_password` [plugins-inputs-elastic_serverless_forwarder-auth_basic_password]
 
-* Value type is [password](introduction.md#password)
+* Value type is [password](value-types.md#password)
 * There is no default value for this setting.
 
 Password for HTTP basic authorization. Requires [`auth_basic_username`](plugins-inputs-elastic_serverless_forwarder.md#plugins-inputs-elastic_serverless_forwarder-auth_basic_username).
@@ -155,7 +155,7 @@ Password for HTTP basic authorization. Requires [`auth_basic_username`](plugins-
 
 ### `auth_basic_username` [plugins-inputs-elastic_serverless_forwarder-auth_basic_username]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 Username for basic authorization. Requires [`auth_basic_password`](plugins-inputs-elastic_serverless_forwarder.md#plugins-inputs-elastic_serverless_forwarder-auth_basic_password).
@@ -163,7 +163,7 @@ Username for basic authorization. Requires [`auth_basic_password`](plugins-input
 
 ### `host` [plugins-inputs-elastic_serverless_forwarder-host]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"0.0.0.0"` (all available interfaces)
 
 The host or ip to bind
@@ -171,7 +171,7 @@ The host or ip to bind
 
 ### `port` [plugins-inputs-elastic_serverless_forwarder-port]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `8080`
 
 The TCP port to bind to
@@ -179,7 +179,7 @@ The TCP port to bind to
 
 ### `ssl_certificate` [plugins-inputs-elastic_serverless_forwarder-ssl_certificate]
 
-* Value type is [path](introduction.md#path)
+* Value type is [path](value-types.md#path)
 * There is no default value for this setting.
 
 SSL certificate to use. This certificate *MUST* be PEM-formatted, and *MAY* contain a chain of certificates starting with the certificate that identifies itself, followed by zero or more ordered intermediates optionally ending with the root signing authority. Providing a complete chain allows clients to trust our certificate if their configuration allows them to trust one of our intermediates.
@@ -187,7 +187,7 @@ SSL certificate to use. This certificate *MUST* be PEM-formatted, and *MAY* cont
 
 ### `ssl_certificate_authorities` [plugins-inputs-elastic_serverless_forwarder-ssl_certificate_authorities]
 
-* Value type is [array](introduction.md#array)
+* Value type is [array](value-types.md#array)
 * Default value is `[]`
 
 Validate client certificates against these authorities. You can define multiple files or paths. All the certificates will be read and added to the trust store.
@@ -197,7 +197,7 @@ If you wish to perform client authentication, you need to set `ssl_client_authen
 
 ### `ssl_cipher_suites` [plugins-inputs-elastic_serverless_forwarder-ssl_cipher_suites]
 
-* Value type is [array](introduction.md#array)
+* Value type is [array](value-types.md#array)
 * Default value is `['TLS_AES_256_GCM_SHA384', 'TLS_AES_128_GCM_SHA256', 'TLS_CHACHA20_POLY1305_SHA256', 'TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384', 'TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384', 'TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256', 'TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256', 'TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256', 'TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256', 'TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384', 'TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384', 'TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256', 'TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256']`
 
 The list of cipher suites to use, listed by priorities.
@@ -222,7 +222,7 @@ By default the server doesn’t do any client authentication. This means that co
 
 ### `ssl_enabled` [plugins-inputs-elastic_serverless_forwarder-ssl_enabled]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `true`
 
 Events are, by default, sent over SSL, which requires configuring this plugin to present an identity certificate using [`ssl_certificate`](plugins-inputs-elastic_serverless_forwarder.md#plugins-inputs-elastic_serverless_forwarder-ssl_certificate) and key using [`ssl_key`](plugins-inputs-elastic_serverless_forwarder.md#plugins-inputs-elastic_serverless_forwarder-ssl_key).
@@ -232,7 +232,7 @@ You can disable SSL with `+ssl_enabled => false+`.
 
 ### `ssl_handshake_timeout` [plugins-inputs-elastic_serverless_forwarder-ssl_handshake_timeout]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `10000`
 
 Time in milliseconds for an incomplete ssl handshake to timeout
@@ -242,7 +242,7 @@ This is an advanced SSL configuration.
 
 ### `ssl_key` [plugins-inputs-elastic_serverless_forwarder-ssl_key]
 
-* Value type is [path](introduction.md#path)
+* Value type is [path](value-types.md#path)
 * There is no default value for this setting.
 
 SSL key to use.
@@ -255,7 +255,7 @@ This key need to be in the PKCS8 format, you can convert it with [OpenSSL](https
 
 ### `ssl_key_passphrase` [plugins-inputs-elastic_serverless_forwarder-ssl_key_passphrase]
 
-* Value type is [password](introduction.md#password)
+* Value type is [password](value-types.md#password)
 * There is no default value for this setting.
 
 SSL key passphrase to use.
@@ -263,7 +263,7 @@ SSL key passphrase to use.
 
 ### `ssl_supported_protocols` [plugins-inputs-elastic_serverless_forwarder-ssl_supported_protocols]
 
-* Value type is [array](introduction.md#array)
+* Value type is [array](value-types.md#array)
 * Allowed values are: `'TLSv1.1'`, `'TLSv1.2'`, `'TLSv1.3'`
 * Default depends on the JDK being used. With up-to-date Logstash, the default is `['TLSv1.2', 'TLSv1.3']`. `'TLSv1.1'` is not considered secure and is only provided for legacy applications.
 
@@ -281,7 +281,7 @@ If you configure the plugin to use `'TLSv1.1'` on any recent JVM, such as the on
 
 ### `ssl_verification_mode` [plugins-inputs-elastic_serverless_forwarder-ssl_verification_mode]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is only one currently-supported mode:
 
     * `certificate`: verifies that a certificate provided by the client is signed by a trusted authority (CA), is within its valid date range, and that the client has possession of the associated key, but does *not* perform hostname validation.

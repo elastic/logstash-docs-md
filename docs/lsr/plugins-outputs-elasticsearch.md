@@ -279,81 +279,81 @@ As of version 12.0.0 of this plugin, a number of previously deprecated SSL setti
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`action`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-action) | [string](introduction.md#string) | No |
-| [`api_key`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-api_key) | [password](introduction.md#password) | No |
-| [`bulk_path`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-bulk_path) | [string](introduction.md#string) | No |
-| [`ca_trusted_fingerprint`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-ca_trusted_fingerprint) | [string](introduction.md#string) | No |
-| [`cloud_auth`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-cloud_auth) | [password](introduction.md#password) | No |
-| [`cloud_id`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-cloud_id) | [string](introduction.md#string) | No |
-| [`compression_level`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-compression_level) | [number](introduction.md#number), one of `[0 ~ 9]` | No |
-| [`custom_headers`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-custom_headers) | [hash](introduction.md#hash) | No |
-| [`data_stream`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-data_stream) | [string](introduction.md#string), one of `["true", "false", "auto"]` | No |
-| [`data_stream_auto_routing`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-data_stream_auto_routing) | [boolean](introduction.md#boolean) | No |
-| [`data_stream_dataset`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-data_stream_dataset) | [string](introduction.md#string) | No |
-| [`data_stream_namespace`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-data_stream_namespace) | [string](introduction.md#string) | No |
-| [`data_stream_sync_fields`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-data_stream_sync_fields) | [boolean](introduction.md#boolean) | No |
-| [`data_stream_type`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-data_stream_type) | [string](introduction.md#string) | No |
-| [`dlq_custom_codes`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-dlq_custom_codes) | [number](introduction.md#number) | No |
-| [`dlq_on_failed_indexname_interpolation`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-dlq_on_failed_indexname_interpolation) | [boolean](introduction.md#boolean) | No |
-| [`doc_as_upsert`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-doc_as_upsert) | [boolean](introduction.md#boolean) | No |
-| [`document_id`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-document_id) | [string](introduction.md#string) | No |
-| [`document_type`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-document_type) | [string](introduction.md#string) | No |
-| [`ecs_compatibility`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-ecs_compatibility) | [string](introduction.md#string) | No |
-| [`failure_type_logging_whitelist`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-failure_type_logging_whitelist) | [array](introduction.md#array) | No |
-| [`healthcheck_path`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-healthcheck_path) | [string](introduction.md#string) | No |
-| [`hosts`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-hosts) | [uri](introduction.md#uri) | No |
-| [`http_compression`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-http_compression) | [boolean](introduction.md#boolean) | No |
-| [`ilm_enabled`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-ilm_enabled) | [string](introduction.md#string), one of `["true", "false", "auto"]` | No |
-| [`ilm_pattern`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-ilm_pattern) | [string](introduction.md#string) | No |
-| [`ilm_policy`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-ilm_policy) | [string](introduction.md#string) | No |
-| [`ilm_rollover_alias`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-ilm_rollover_alias) | [string](introduction.md#string) | No |
-| [`index`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-index) | [string](introduction.md#string) | No |
-| [`silence_errors_in_log`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-silence_errors_in_log) | [array](introduction.md#array) | No |
-| [`manage_template`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-manage_template) | [boolean](introduction.md#boolean) | No |
-| [`parameters`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-parameters) | [hash](introduction.md#hash) | No |
-| [`parent`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-parent) | [string](introduction.md#string) | No |
-| [`password`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-password) | [password](introduction.md#password) | No |
-| [`path`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-path) | [string](introduction.md#string) | No |
-| [`pipeline`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-pipeline) | [string](introduction.md#string) | No |
-| [`pool_max`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-pool_max) | [number](introduction.md#number) | No |
-| [`pool_max_per_route`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-pool_max_per_route) | [number](introduction.md#number) | No |
-| [`proxy`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-proxy) | [uri](introduction.md#uri) | No |
-| [`resurrect_delay`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-resurrect_delay) | [number](introduction.md#number) | No |
-| [`retry_initial_interval`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-retry_initial_interval) | [number](introduction.md#number) | No |
-| [`retry_max_interval`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-retry_max_interval) | [number](introduction.md#number) | No |
-| [`retry_on_conflict`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-retry_on_conflict) | [number](introduction.md#number) | No |
-| [`routing`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-routing) | [string](introduction.md#string) | No |
-| [`script`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-script) | [string](introduction.md#string) | No |
-| [`script_lang`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-script_lang) | [string](introduction.md#string) | No |
-| [`script_type`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-script_type) | [string](introduction.md#string), one of `["inline", "indexed", "file"]` | No |
-| [`script_var_name`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-script_var_name) | [string](introduction.md#string) | No |
-| [`scripted_upsert`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-scripted_upsert) | [boolean](introduction.md#boolean) | No |
-| [`sniffing`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-sniffing) | [boolean](introduction.md#boolean) | No |
-| [`sniffing_delay`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-sniffing_delay) | [number](introduction.md#number) | No |
-| [`sniffing_path`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-sniffing_path) | [string](introduction.md#string) | No |
-| [`ssl_certificate`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-ssl_certificate) | [path](introduction.md#path) | No |
-| [`ssl_certificate_authorities`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-ssl_certificate_authorities) | list of [path](introduction.md#path) | No |
-| [`ssl_cipher_suites`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-ssl_cipher_suites) | list of [string](introduction.md#string) | No |
-| [`ssl_enabled`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-ssl_enabled) | [boolean](introduction.md#boolean) | No |
-| [`ssl_key`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-ssl_key) | [path](introduction.md#path) | No |
-| [`ssl_keystore_password`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-ssl_keystore_password) | [password](introduction.md#password) | No |
-| [`ssl_keystore_path`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-ssl_keystore_path) | [path](introduction.md#path) | No |
-| [`ssl_keystore_type`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-ssl_keystore_type) | [string](introduction.md#string) | No |
-| [`ssl_supported_protocols`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-ssl_supported_protocols) | [string](introduction.md#string) | No |
-| [`ssl_truststore_password`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-ssl_truststore_password) | [password](introduction.md#password) | No |
-| [`ssl_truststore_path`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-ssl_truststore_path) | [path](introduction.md#path) | No |
-| [`ssl_truststore_type`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-ssl_truststore_type) | [string](introduction.md#string) | No |
-| [`ssl_verification_mode`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-ssl_verification_mode) | [string](introduction.md#string), one of `["full", "none"]` | No |
+| [`action`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-action) | [string](value-types.md#string) | No |
+| [`api_key`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-api_key) | [password](value-types.md#password) | No |
+| [`bulk_path`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-bulk_path) | [string](value-types.md#string) | No |
+| [`ca_trusted_fingerprint`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-ca_trusted_fingerprint) | [string](value-types.md#string) | No |
+| [`cloud_auth`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-cloud_auth) | [password](value-types.md#password) | No |
+| [`cloud_id`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-cloud_id) | [string](value-types.md#string) | No |
+| [`compression_level`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-compression_level) | [number](value-types.md#number), one of `[0 ~ 9]` | No |
+| [`custom_headers`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-custom_headers) | [hash](value-types.md#hash) | No |
+| [`data_stream`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-data_stream) | [string](value-types.md#string), one of `["true", "false", "auto"]` | No |
+| [`data_stream_auto_routing`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-data_stream_auto_routing) | [boolean](value-types.md#boolean) | No |
+| [`data_stream_dataset`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-data_stream_dataset) | [string](value-types.md#string) | No |
+| [`data_stream_namespace`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-data_stream_namespace) | [string](value-types.md#string) | No |
+| [`data_stream_sync_fields`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-data_stream_sync_fields) | [boolean](value-types.md#boolean) | No |
+| [`data_stream_type`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-data_stream_type) | [string](value-types.md#string) | No |
+| [`dlq_custom_codes`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-dlq_custom_codes) | [number](value-types.md#number) | No |
+| [`dlq_on_failed_indexname_interpolation`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-dlq_on_failed_indexname_interpolation) | [boolean](value-types.md#boolean) | No |
+| [`doc_as_upsert`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-doc_as_upsert) | [boolean](value-types.md#boolean) | No |
+| [`document_id`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-document_id) | [string](value-types.md#string) | No |
+| [`document_type`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-document_type) | [string](value-types.md#string) | No |
+| [`ecs_compatibility`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-ecs_compatibility) | [string](value-types.md#string) | No |
+| [`failure_type_logging_whitelist`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-failure_type_logging_whitelist) | [array](value-types.md#array) | No |
+| [`healthcheck_path`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-healthcheck_path) | [string](value-types.md#string) | No |
+| [`hosts`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-hosts) | [uri](value-types.md#uri) | No |
+| [`http_compression`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-http_compression) | [boolean](value-types.md#boolean) | No |
+| [`ilm_enabled`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-ilm_enabled) | [string](value-types.md#string), one of `["true", "false", "auto"]` | No |
+| [`ilm_pattern`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-ilm_pattern) | [string](value-types.md#string) | No |
+| [`ilm_policy`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-ilm_policy) | [string](value-types.md#string) | No |
+| [`ilm_rollover_alias`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-ilm_rollover_alias) | [string](value-types.md#string) | No |
+| [`index`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-index) | [string](value-types.md#string) | No |
+| [`silence_errors_in_log`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-silence_errors_in_log) | [array](value-types.md#array) | No |
+| [`manage_template`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-manage_template) | [boolean](value-types.md#boolean) | No |
+| [`parameters`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-parameters) | [hash](value-types.md#hash) | No |
+| [`parent`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-parent) | [string](value-types.md#string) | No |
+| [`password`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-password) | [password](value-types.md#password) | No |
+| [`path`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-path) | [string](value-types.md#string) | No |
+| [`pipeline`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-pipeline) | [string](value-types.md#string) | No |
+| [`pool_max`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-pool_max) | [number](value-types.md#number) | No |
+| [`pool_max_per_route`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-pool_max_per_route) | [number](value-types.md#number) | No |
+| [`proxy`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-proxy) | [uri](value-types.md#uri) | No |
+| [`resurrect_delay`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-resurrect_delay) | [number](value-types.md#number) | No |
+| [`retry_initial_interval`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-retry_initial_interval) | [number](value-types.md#number) | No |
+| [`retry_max_interval`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-retry_max_interval) | [number](value-types.md#number) | No |
+| [`retry_on_conflict`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-retry_on_conflict) | [number](value-types.md#number) | No |
+| [`routing`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-routing) | [string](value-types.md#string) | No |
+| [`script`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-script) | [string](value-types.md#string) | No |
+| [`script_lang`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-script_lang) | [string](value-types.md#string) | No |
+| [`script_type`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-script_type) | [string](value-types.md#string), one of `["inline", "indexed", "file"]` | No |
+| [`script_var_name`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-script_var_name) | [string](value-types.md#string) | No |
+| [`scripted_upsert`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-scripted_upsert) | [boolean](value-types.md#boolean) | No |
+| [`sniffing`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-sniffing) | [boolean](value-types.md#boolean) | No |
+| [`sniffing_delay`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-sniffing_delay) | [number](value-types.md#number) | No |
+| [`sniffing_path`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-sniffing_path) | [string](value-types.md#string) | No |
+| [`ssl_certificate`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-ssl_certificate) | [path](value-types.md#path) | No |
+| [`ssl_certificate_authorities`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-ssl_certificate_authorities) | list of [path](value-types.md#path) | No |
+| [`ssl_cipher_suites`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-ssl_cipher_suites) | list of [string](value-types.md#string) | No |
+| [`ssl_enabled`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-ssl_enabled) | [boolean](value-types.md#boolean) | No |
+| [`ssl_key`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-ssl_key) | [path](value-types.md#path) | No |
+| [`ssl_keystore_password`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-ssl_keystore_password) | [password](value-types.md#password) | No |
+| [`ssl_keystore_path`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-ssl_keystore_path) | [path](value-types.md#path) | No |
+| [`ssl_keystore_type`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-ssl_keystore_type) | [string](value-types.md#string) | No |
+| [`ssl_supported_protocols`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-ssl_supported_protocols) | [string](value-types.md#string) | No |
+| [`ssl_truststore_password`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-ssl_truststore_password) | [password](value-types.md#password) | No |
+| [`ssl_truststore_path`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-ssl_truststore_path) | [path](value-types.md#path) | No |
+| [`ssl_truststore_type`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-ssl_truststore_type) | [string](value-types.md#string) | No |
+| [`ssl_verification_mode`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-ssl_verification_mode) | [string](value-types.md#string), one of `["full", "none"]` | No |
 | [`template`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-template) | a valid filesystem path | No |
-| [`template_api`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-template_api) | [string](introduction.md#string), one of `["auto", "legacy", "composable"]` | No |
-| [`template_name`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-template_name) | [string](introduction.md#string) | No |
-| [`template_overwrite`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-template_overwrite) | [boolean](introduction.md#boolean) | No |
-| [`timeout`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-timeout) | [number](introduction.md#number) | No |
-| [`upsert`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-upsert) | [string](introduction.md#string) | No |
-| [`user`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-user) | [string](introduction.md#string) | No |
-| [`validate_after_inactivity`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-validate_after_inactivity) | [number](introduction.md#number) | No |
-| [`version`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-version) | [string](introduction.md#string) | No |
-| [`version_type`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-version_type) | [string](introduction.md#string), one of `["internal", "external", "external_gt", "external_gte", "force"]` | No |
+| [`template_api`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-template_api) | [string](value-types.md#string), one of `["auto", "legacy", "composable"]` | No |
+| [`template_name`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-template_name) | [string](value-types.md#string) | No |
+| [`template_overwrite`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-template_overwrite) | [boolean](value-types.md#boolean) | No |
+| [`timeout`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-timeout) | [number](value-types.md#number) | No |
+| [`upsert`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-upsert) | [string](value-types.md#string) | No |
+| [`user`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-user) | [string](value-types.md#string) | No |
+| [`validate_after_inactivity`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-validate_after_inactivity) | [number](value-types.md#number) | No |
+| [`version`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-version) | [string](value-types.md#string) | No |
+| [`version_type`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-version_type) | [string](value-types.md#string), one of `["internal", "external", "external_gt", "external_gte", "force"]` | No |
 
 Also see [Common options](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-common-options) for a list of options supported by all output plugins.
 
@@ -361,7 +361,7 @@ Also see [Common options](plugins-outputs-elasticsearch.md#plugins-outputs-elast
 
 ### `action` [plugins-outputs-elasticsearch-action]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `create` for data streams, and `index` for non-time series data.
 
 The Elasticsearch action to perform. Valid actions are:
@@ -377,7 +377,7 @@ For more details on actions, check out the [Elasticsearch bulk API documentation
 
 ### `api_key` [plugins-outputs-elasticsearch-api_key]
 
-* Value type is [password](introduction.md#password)
+* Value type is [password](value-types.md#password)
 * There is no default value for this setting.
 
 Authenticate using Elasticsearch API key. Note that this option also requires SSL/TLS, which can be enabled by supplying a [`cloud_id`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-cloud_id), a list of HTTPS [`hosts`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-hosts), or by setting [`ssl_enabled => true`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-ssl_enabled).
@@ -387,7 +387,7 @@ Format is `id:api_key` where `id` and `api_key` are as returned by the Elasticse
 
 ### `bulk_path` [plugins-outputs-elasticsearch-bulk_path]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * The default value for this settings is `/_bulk?filter_path=errors,items.*.error,items.*.status`
 
 HTTP Path to perform the _bulk requests to * This default bulk path is the concatenation of the value of `path` parameter and `/_bulk?filter_path=errors,items.*.error,items.*.status` * The `filter_path` query parameter is appended to the bulk path to reduce the payload between logstash and elasticsearch. However, if a custom `filter_path` query parameter is included in the `bulk_path` setting, then that value will be used.
@@ -395,7 +395,7 @@ HTTP Path to perform the _bulk requests to * This default bulk path is the conca
 
 ### `ca_trusted_fingerprint` [plugins-outputs-elasticsearch-ca_trusted_fingerprint]
 
-* Value type is [string](introduction.md#string), and must contain exactly 64 hexadecimal characters.
+* Value type is [string](value-types.md#string), and must contain exactly 64 hexadecimal characters.
 * There is no default value for this setting.
 * Use of this option *requires* Logstash 8.3+
 
@@ -404,7 +404,7 @@ The SHA-256 fingerprint of an SSL Certificate Authority to trust, such as the au
 
 ### `cloud_auth` [plugins-outputs-elasticsearch-cloud_auth]
 
-* Value type is [password](introduction.md#password)
+* Value type is [password](value-types.md#password)
 * There is no default value for this setting.
 
 Cloud authentication string ("<username>:<password>" format) is an alternative for the `user`/`password` pair.
@@ -414,7 +414,7 @@ For more details, check out the [Logstash-to-Cloud documentation](logstash://ref
 
 ### `cloud_id` [plugins-outputs-elasticsearch-cloud_id]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 Cloud ID, from the Elastic Cloud web console. If set `hosts` should not be used.
@@ -444,7 +444,7 @@ Logstash handles the output as a data stream when the supplied configuration is 
 
 ### `data_stream_auto_routing` [plugins-outputs-elasticsearch-data_stream_auto_routing]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `true`.
 
 Automatically routes events by deriving the data stream name using specific event fields with the `%{[data_stream][type]}-%{[data_stream][dataset]}-%{[data_stream][namespace]}` format.
@@ -454,7 +454,7 @@ If enabled, the `data_stream.*` event fields will take precedence over the `data
 
 ### `data_stream_dataset` [plugins-outputs-elasticsearch-data_stream_dataset]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `generic`.
 
 The data stream dataset used to construct the data stream at index time.
@@ -462,7 +462,7 @@ The data stream dataset used to construct the data stream at index time.
 
 ### `data_stream_namespace` [plugins-outputs-elasticsearch-data_stream_namespace]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `default`.
 
 The data stream namespace used to construct the data stream at index time.
@@ -470,7 +470,7 @@ The data stream namespace used to construct the data stream at index time.
 
 ### `data_stream_sync_fields` [plugins-outputs-elasticsearch-data_stream_sync_fields]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `true`
 
 Automatically adds and syncs the `data_stream.*` event fields if they are missing from the event. This ensures that fields match the name of the data stream that is receiving events.
@@ -483,7 +483,7 @@ If existing `data_stream.*` event fields do not match the data stream name and `
 
 ### `data_stream_type` [plugins-outputs-elasticsearch-data_stream_type]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `logs`.
 
 The data stream type used to construct the data stream at index time. Currently, only `logs`, `metrics`, `synthetics` and `traces` are supported.
@@ -491,7 +491,7 @@ The data stream type used to construct the data stream at index time. Currently,
 
 ### `dlq_custom_codes` [plugins-outputs-elasticsearch-dlq_custom_codes]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `[]`.
 
 List single-action error codes from Elasticsearch’s Bulk API that are considered valid to move the events into the dead letter queue. This list is an addition to the ordinary error codes considered for this feature, 400 and 404. It’s considered a configuration error to re-use the same predefined codes for success, DLQ or conflict. The option accepts a list of natural numbers corresponding to HTTP errors codes.
@@ -499,7 +499,7 @@ List single-action error codes from Elasticsearch’s Bulk API that are consider
 
 ### `dlq_on_failed_indexname_interpolation` [plugins-outputs-elasticsearch-dlq_on_failed_indexname_interpolation]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `true`.
 
 If enabled, failed index name interpolation events go into dead letter queue.
@@ -507,7 +507,7 @@ If enabled, failed index name interpolation events go into dead letter queue.
 
 ### `doc_as_upsert` [plugins-outputs-elasticsearch-doc_as_upsert]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 Enable `doc_as_upsert` for update mode. Create a new document with source if `document_id` doesn’t exist in Elasticsearch.
@@ -515,7 +515,7 @@ Enable `doc_as_upsert` for update mode. Create a new document with source if `do
 
 ### `document_id` [plugins-outputs-elasticsearch-document_id]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 The document ID for the index. Useful for overwriting existing entries in Elasticsearch with the same ID.
@@ -523,7 +523,7 @@ The document ID for the index. Useful for overwriting existing entries in Elasti
 
 ### `document_type` [plugins-outputs-elasticsearch-document_type]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 * This option is deprecated
 
@@ -547,7 +547,7 @@ This sets the document type to write events to. Generally you should try to writ
 
 ### `ecs_compatibility` [plugins-outputs-elasticsearch-ecs_compatibility]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Supported values are:
 
     * `disabled`: does not provide ECS-compatible templates
@@ -568,7 +568,7 @@ Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)](ht
 
 ### `failure_type_logging_whitelist` [plugins-outputs-elasticsearch-failure_type_logging_whitelist]
 
-* Value type is [array](introduction.md#array)
+* Value type is [array](value-types.md#array)
 * Default value is `[]`
 
 ::::{note} 
@@ -579,7 +579,7 @@ Deprecated, refer to [`silence_errors_in_log`](plugins-outputs-elasticsearch.md#
 
 ### `custom_headers` [plugins-outputs-elasticsearch-custom_headers]
 
-* Value type is [hash](introduction.md#hash)
+* Value type is [hash](value-types.md#hash)
 * There is no default value for this setting.
 
 Pass a set of key value pairs as the headers sent in each request to an elasticsearch node. The headers will be used for any kind of request (_bulk request, template installation, health checks and sniffing). These custom headers will be overidden by settings like `compression_level`.
@@ -587,7 +587,7 @@ Pass a set of key value pairs as the headers sent in each request to an elastics
 
 ### `healthcheck_path` [plugins-outputs-elasticsearch-healthcheck_path]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 HTTP Path where a HEAD request is sent when a backend is marked down the request is sent in the background to see if it has come back again before it is once again eligible to service requests. If you have custom firewall rules you may need to change this
@@ -595,7 +595,7 @@ HTTP Path where a HEAD request is sent when a backend is marked down the request
 
 ### `hosts` [plugins-outputs-elasticsearch-hosts]
 
-* Value type is [uri](introduction.md#uri)
+* Value type is [uri](value-types.md#uri)
 * Default value is `[//127.0.0.1]`
 
 Sets the host(s) of the remote instance. If given an array it will load balance requests across the hosts specified in the `hosts` parameter. Remember the `http` protocol uses the [http](https://www.elastic.co/guide/en/elasticsearch/reference/current/modules-http.html#modules-http) address (eg. 9200, not 9300).
@@ -623,7 +623,7 @@ Replaced by [`compression_level`](plugins-outputs-elasticsearch.md#plugins-outpu
 ::::
 
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 Setting `true` enables gzip compression level 1 on requests.
@@ -653,7 +653,7 @@ This feature requires a Basic License or above to be installed on an Elasticsear
 
 ### `ilm_pattern` [plugins-outputs-elasticsearch-ilm_pattern]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `{now/d}-000001`
 
 Pattern used for generating indices managed by [Index Lifecycle Management](https://www.elastic.co/guide/en/elasticsearch/reference/current/index-lifecycle-management.html). The value specified in the pattern will be appended to the write alias, and incremented automatically when a new index is created by ILM.
@@ -678,7 +678,7 @@ The pattern is a 6-digit string padded by zeros, regardless of prior index name.
 
 ### `ilm_policy` [plugins-outputs-elasticsearch-ilm_policy]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `logstash-policy`
 
 Modify this setting to use a custom Index Lifecycle Management policy, rather than the default. If this value is not set, the default policy will be automatically installed into Elasticsearch
@@ -691,7 +691,7 @@ If this setting is specified, the policy must already exist in Elasticsearch clu
 
 ### `ilm_rollover_alias` [plugins-outputs-elasticsearch-ilm_rollover_alias]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value depends on whether [`ecs_compatibility`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-ecs_compatibility) is enabled:
 
     * ECS Compatibility disabled: `logstash`
@@ -718,7 +718,7 @@ Updating the rollover alias will require the index template to be rewritten.
 
 ### `index` [plugins-outputs-elasticsearch-index]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value depends on whether [`ecs_compatibility`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-ecs_compatibility) is enabled:
 
     * ECS Compatibility disabled: `"logstash-%{+yyyy.MM.dd}"`
@@ -730,7 +730,7 @@ The indexing target to write events to. Can point to an [index](https://www.elas
 
 ### `manage_template` [plugins-outputs-elasticsearch-manage_template]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `true` for non-time series data, and `false` for data streams.
 
 From Logstash 1.3 onwards, a template is applied to Elasticsearch during Logstash’s startup if one with the name [`template_name`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-template_name) does not already exist. By default, the contents of this template is the default template for `logstash-%{+YYYY.MM.dd}` which always matches indices based on the pattern `logstash-*`.  Should you require support for other index names, or would like to change the mappings in the template in general, a custom template can be specified by setting `template` to the path of a template file.
@@ -740,7 +740,7 @@ Setting `manage_template` to false disables this feature.  If you require more c
 
 ### `parameters` [plugins-outputs-elasticsearch-parameters]
 
-* Value type is [hash](introduction.md#hash)
+* Value type is [hash](value-types.md#hash)
 * There is no default value for this setting.
 
 Pass a set of key value pairs as the URL query string. This query string is added to every host listed in the *hosts* configuration. If the *hosts* list contains urls that already have query strings, the one specified here will be appended.
@@ -748,7 +748,7 @@ Pass a set of key value pairs as the URL query string. This query string is adde
 
 ### `parent` [plugins-outputs-elasticsearch-parent]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `nil`
 
 For child documents, ID of the associated parent. This can be dynamic using the `%{{foo}}` syntax.
@@ -756,7 +756,7 @@ For child documents, ID of the associated parent. This can be dynamic using the 
 
 ### `password` [plugins-outputs-elasticsearch-password]
 
-* Value type is [password](introduction.md#password)
+* Value type is [password](value-types.md#password)
 * There is no default value for this setting.
 
 Password to authenticate to a secure Elasticsearch cluster
@@ -764,7 +764,7 @@ Password to authenticate to a secure Elasticsearch cluster
 
 ### `path` [plugins-outputs-elasticsearch-path]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 HTTP Path at which the Elasticsearch server lives. Use this if you must run Elasticsearch behind a proxy that remaps the root path for the Elasticsearch HTTP API lives. Note that if you use paths as components of URLs in the *hosts* field you may not also set this field. That will raise an error at startup
@@ -772,7 +772,7 @@ HTTP Path at which the Elasticsearch server lives. Use this if you must run Elas
 
 ### `pipeline` [plugins-outputs-elasticsearch-pipeline]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value.
 
 Set which ingest pipeline you wish to execute for an event. You can also use event dependent configuration here like `pipeline => "%{[@metadata][pipeline]}"`. The pipeline parameter won’t be set if the value resolves to empty string ("").
@@ -780,7 +780,7 @@ Set which ingest pipeline you wish to execute for an event. You can also use eve
 
 ### `pool_max` [plugins-outputs-elasticsearch-pool_max]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `1000`
 
 While the output tries to reuse connections efficiently we have a maximum. This sets the maximum number of open connections the output will create. Setting this too low may mean frequently closing / opening connections which is bad.
@@ -788,7 +788,7 @@ While the output tries to reuse connections efficiently we have a maximum. This 
 
 ### `pool_max_per_route` [plugins-outputs-elasticsearch-pool_max_per_route]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `100`
 
 While the output tries to reuse connections efficiently we have a maximum per endpoint. This sets the maximum number of open connections per endpoint the output will create. Setting this too low may mean frequently closing / opening connections which is bad.
@@ -796,7 +796,7 @@ While the output tries to reuse connections efficiently we have a maximum per en
 
 ### `proxy` [plugins-outputs-elasticsearch-proxy]
 
-* Value type is [uri](introduction.md#uri)
+* Value type is [uri](value-types.md#uri)
 * There is no default value for this setting.
 
 Set the address of a forward HTTP proxy. This setting accepts only URI arguments to prevent leaking credentials. An empty string is treated as if proxy was not set. This is useful when using environment variables e.g. `proxy => '${LS_PROXY:}'`.
@@ -804,7 +804,7 @@ Set the address of a forward HTTP proxy. This setting accepts only URI arguments
 
 ### `resurrect_delay` [plugins-outputs-elasticsearch-resurrect_delay]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `5`
 
 How frequently, in seconds, to wait between resurrection attempts. Resurrection is the process by which backend endpoints marked *down* are checked to see if they have come back to life
@@ -812,7 +812,7 @@ How frequently, in seconds, to wait between resurrection attempts. Resurrection 
 
 ### `retry_initial_interval` [plugins-outputs-elasticsearch-retry_initial_interval]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `2`
 
 Set initial interval in seconds between bulk retries. Doubled on each retry up to `retry_max_interval`
@@ -820,7 +820,7 @@ Set initial interval in seconds between bulk retries. Doubled on each retry up t
 
 ### `retry_max_interval` [plugins-outputs-elasticsearch-retry_max_interval]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `64`
 
 Set max interval in seconds between bulk retries.
@@ -828,7 +828,7 @@ Set max interval in seconds between bulk retries.
 
 ### `retry_on_conflict` [plugins-outputs-elasticsearch-retry_on_conflict]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `1`
 
 The number of times Elasticsearch should internally retry an update/upserted document.
@@ -836,7 +836,7 @@ The number of times Elasticsearch should internally retry an update/upserted doc
 
 ### `routing` [plugins-outputs-elasticsearch-routing]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 A routing override to be applied to all processed events. This can be dynamic using the `%{{foo}}` syntax.
@@ -844,7 +844,7 @@ A routing override to be applied to all processed events. This can be dynamic us
 
 ### `script` [plugins-outputs-elasticsearch-script]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `""`
 
 Set script name for scripted update mode
@@ -862,7 +862,7 @@ Example:
 
 ### `script_lang` [plugins-outputs-elasticsearch-script_lang]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"painless"`
 
 Set the language of the used script. When using indexed (stored) scripts on Elasticsearch 6.0 and higher, you must set this parameter to `""` (empty string).
@@ -878,7 +878,7 @@ Define the type of script referenced by "script" variable inline : "script" cont
 
 ### `script_var_name` [plugins-outputs-elasticsearch-script_var_name]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"event"`
 
 Set variable name passed to script (scripted update)
@@ -886,7 +886,7 @@ Set variable name passed to script (scripted update)
 
 ### `scripted_upsert` [plugins-outputs-elasticsearch-scripted_upsert]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 if enabled, script is in charge of creating non-existent document (scripted update)
@@ -894,7 +894,7 @@ if enabled, script is in charge of creating non-existent document (scripted upda
 
 ### `silence_errors_in_log` [plugins-outputs-elasticsearch-silence_errors_in_log]
 
-* Value type is [array](introduction.md#array)
+* Value type is [array](value-types.md#array)
 * Default value is `[]`
 
 Defines the list of Elasticsearch errors that you don’t want to log. A useful example is when you want to skip all 409 errors which are `version_conflict_engine_exception`.
@@ -915,7 +915,7 @@ Deprecates [`failure_type_logging_whitelist`](plugins-outputs-elasticsearch.md#p
 
 ### `sniffing` [plugins-outputs-elasticsearch-sniffing]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 This setting asks Elasticsearch for the list of all cluster nodes and adds them to the hosts list. For Elasticsearch 5.x and 6.x any nodes with `http.enabled` (on by default) will be added to the hosts list, excluding master-only nodes.
@@ -923,7 +923,7 @@ This setting asks Elasticsearch for the list of all cluster nodes and adds them 
 
 ### `sniffing_delay` [plugins-outputs-elasticsearch-sniffing_delay]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `5`
 
 How long to wait, in seconds, between sniffing attempts
@@ -931,7 +931,7 @@ How long to wait, in seconds, between sniffing attempts
 
 ### `sniffing_path` [plugins-outputs-elasticsearch-sniffing_path]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 HTTP Path to be used for the sniffing requests the default value is computed by concatenating the path value and "_nodes/http" if sniffing_path is set it will be used as an absolute path do not use full URL here, only paths, e.g. "/sniff/_nodes/http"
@@ -939,7 +939,7 @@ HTTP Path to be used for the sniffing requests the default value is computed by 
 
 ### `ssl_certificate` [plugins-outputs-elasticsearch-ssl_certificate]
 
-* Value type is [path](introduction.md#path)
+* Value type is [path](value-types.md#path)
 * There is no default value for this setting.
 
 SSL certificate to use to authenticate the client. This certificate should be an OpenSSL-style X.509 certificate file.
@@ -952,7 +952,7 @@ This setting can be used only if [`ssl_key`](plugins-outputs-elasticsearch.md#pl
 
 ### `ssl_certificate_authorities` [plugins-outputs-elasticsearch-ssl_certificate_authorities]
 
-* Value type is a list of [path](introduction.md#path)
+* Value type is a list of [path](value-types.md#path)
 * There is no default value for this setting
 
 The .cer or .pem files to validate the server’s certificate.
@@ -965,7 +965,7 @@ You cannot use this setting and [`ssl_truststore_path`](plugins-outputs-elastics
 
 ### `ssl_cipher_suites` [plugins-outputs-elasticsearch-ssl_cipher_suites]
 
-* Value type is a list of [string](introduction.md#string)
+* Value type is a list of [string](value-types.md#string)
 * There is no default value for this setting
 
 The list of cipher suites to use, listed by priorities. Supported cipher suites vary depending on the Java and protocol versions.
@@ -973,7 +973,7 @@ The list of cipher suites to use, listed by priorities. Supported cipher suites 
 
 ### `ssl_enabled` [plugins-outputs-elasticsearch-ssl_enabled]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * There is no default value for this setting.
 
 Enable SSL/TLS secured communication to Elasticsearch cluster. Leaving this unspecified will use whatever scheme is specified in the URLs listed in [`hosts`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-hosts) or extracted from the [`cloud_id`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-cloud_id). If no explicit protocol is specified plain HTTP will be used.
@@ -981,7 +981,7 @@ Enable SSL/TLS secured communication to Elasticsearch cluster. Leaving this unsp
 
 ### `ssl_key` [plugins-outputs-elasticsearch-ssl_key]
 
-* Value type is [path](introduction.md#path)
+* Value type is [path](value-types.md#path)
 * There is no default value for this setting.
 
 SSL key to use. This key must be in the PKCS8 format and PEM encoded. You can use the [openssl pkcs8](https://www.openssl.org/docs/man1.1.1/man1/openssl-pkcs8.md) command to complete the conversion. For example, the command to convert a PEM encoded PKCS1 private key to a PEM encoded, non-encrypted PKCS8 key is:
@@ -998,7 +998,7 @@ This setting can be used only if [`ssl_certificate`](plugins-outputs-elasticsear
 
 ### `ssl_keystore_password` [plugins-outputs-elasticsearch-ssl_keystore_password]
 
-* Value type is [password](introduction.md#password)
+* Value type is [password](value-types.md#password)
 * There is no default value for this setting.
 
 Set the keystore password
@@ -1006,7 +1006,7 @@ Set the keystore password
 
 ### `ssl_keystore_path` [plugins-outputs-elasticsearch-ssl_keystore_path]
 
-* Value type is [path](introduction.md#path)
+* Value type is [path](value-types.md#path)
 * There is no default value for this setting.
 
 The keystore used to present a certificate to the server. It can be either `.jks` or `.p12`
@@ -1027,7 +1027,7 @@ The format of the keystore file. It must be either `jks` or `pkcs12`.
 
 ### `ssl_supported_protocols` [plugins-outputs-elasticsearch-ssl_supported_protocols]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Allowed values are: `'TLSv1.1'`, `'TLSv1.2'`, `'TLSv1.3'`
 * Default depends on the JDK being used. With up-to-date Logstash, the default is `['TLSv1.2', 'TLSv1.3']`. `'TLSv1.1'` is not considered secure and is only provided for legacy applications.
 
@@ -1043,7 +1043,7 @@ If you configure the plugin to use `'TLSv1.1'` on any recent JVM, such as the on
 
 ### `ssl_truststore_password` [plugins-outputs-elasticsearch-ssl_truststore_password]
 
-* Value type is [password](introduction.md#password)
+* Value type is [password](value-types.md#password)
 * There is no default value for this setting.
 
 Set the truststore password
@@ -1051,7 +1051,7 @@ Set the truststore password
 
 ### `ssl_truststore_path` [plugins-outputs-elasticsearch-ssl_truststore_path]
 
-* Value type is [path](introduction.md#path)
+* Value type is [path](value-types.md#path)
 * There is no default value for this setting.
 
 The truststore to validate the server’s certificate. It can be either `.jks` or `.p12`.
@@ -1089,7 +1089,7 @@ Setting certificate verification to `none` disables many security benefits of SS
 
 ### `template` [plugins-outputs-elasticsearch-template]
 
-* Value type is [path](introduction.md#path)
+* Value type is [path](value-types.md#path)
 * There is no default value for this setting.
 
 You can set the path to your own template here, if you so desire. If not set, the included template will be used.
@@ -1112,7 +1112,7 @@ The format of template provided to [`template`](plugins-outputs-elasticsearch.md
 
 ### `template_name` [plugins-outputs-elasticsearch-template_name]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value depends on whether [`ecs_compatibility`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-ecs_compatibility) is enabled:
 
     * ECS Compatibility disabled: `logstash`
@@ -1128,7 +1128,7 @@ where `OldTemplateName` is whatever the former setting was.
 
 ### `template_overwrite` [plugins-outputs-elasticsearch-template_overwrite]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 The template_overwrite option will always overwrite the indicated template in Elasticsearch with either the one indicated by template or the included one. This option is set to false by default. If you always want to stay up to date with the template provided by Logstash, this option could be very useful to you. Likewise, if you have your own template file managed by puppet, for example, and you wanted to be able to update it regularly, this option could help there as well.
@@ -1138,7 +1138,7 @@ Please note that if you are using your own customized version of the Logstash te
 
 ### `timeout` [plugins-outputs-elasticsearch-timeout]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `60`
 
 Set the timeout, in seconds, for network operations and requests sent Elasticsearch. If a timeout occurs, the request will be retried.
@@ -1146,7 +1146,7 @@ Set the timeout, in seconds, for network operations and requests sent Elasticsea
 
 ### `upsert` [plugins-outputs-elasticsearch-upsert]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `""`
 
 Set upsert content for update mode. Create a new document with this parameter as json string if `document_id` doesn’t exists
@@ -1154,7 +1154,7 @@ Set upsert content for update mode. Create a new document with this parameter as
 
 ### `user` [plugins-outputs-elasticsearch-user]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 Username to authenticate to a secure Elasticsearch cluster
@@ -1162,7 +1162,7 @@ Username to authenticate to a secure Elasticsearch cluster
 
 ### `validate_after_inactivity` [plugins-outputs-elasticsearch-validate_after_inactivity]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `10000`
 
 How long to wait before checking for a stale connection to determine if a keepalive request is needed. Consider setting this value lower than the default, possibly to 0, if you get connection errors regularly.
@@ -1172,7 +1172,7 @@ This client is based on Apache Commons. Here’s how the [Apache Commons documen
 
 ### `version` [plugins-outputs-elasticsearch-version]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 The version to use for indexing. Use sprintf syntax like `%{{my_version}}` to use a field value here. See the [versioning support blog](https://www.elastic.co/blog/elasticsearch-versioning-support) for more information.

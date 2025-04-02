@@ -38,8 +38,8 @@ This plugin supports the following configuration options plus the [Common option
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`host`](plugins-outputs-websocket.md#plugins-outputs-websocket-host) | [string](introduction.md#string) | No |
-| [`port`](plugins-outputs-websocket.md#plugins-outputs-websocket-port) | [number](introduction.md#number) | No |
+| [`host`](plugins-outputs-websocket.md#plugins-outputs-websocket-host) | [string](value-types.md#string) | No |
+| [`port`](plugins-outputs-websocket.md#plugins-outputs-websocket-port) | [number](value-types.md#number) | No |
 
 Also see [Common options](plugins-outputs-websocket.md#plugins-outputs-websocket-common-options) for a list of options supported by all output plugins.
 
@@ -47,7 +47,7 @@ Also see [Common options](plugins-outputs-websocket.md#plugins-outputs-websocket
 
 ### `host` [plugins-outputs-websocket-host]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"0.0.0.0"`
 
 The address to serve websocket data from
@@ -55,7 +55,7 @@ The address to serve websocket data from
 
 ### `port` [plugins-outputs-websocket-port]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `3232`
 
 The port to serve websocket data from

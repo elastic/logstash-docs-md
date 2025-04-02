@@ -34,13 +34,13 @@ This plugin supports the following configuration options plus the [Common option
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`environment`](plugins-inputs-puppet_facter.md#plugins-inputs-puppet_facter-environment) | [string](introduction.md#string) | No |
-| [`host`](plugins-inputs-puppet_facter.md#plugins-inputs-puppet_facter-host) | [string](introduction.md#string) | No |
-| [`interval`](plugins-inputs-puppet_facter.md#plugins-inputs-puppet_facter-interval) | [number](introduction.md#number) | No |
-| [`port`](plugins-inputs-puppet_facter.md#plugins-inputs-puppet_facter-port) | [number](introduction.md#number) | No |
+| [`environment`](plugins-inputs-puppet_facter.md#plugins-inputs-puppet_facter-environment) | [string](value-types.md#string) | No |
+| [`host`](plugins-inputs-puppet_facter.md#plugins-inputs-puppet_facter-host) | [string](value-types.md#string) | No |
+| [`interval`](plugins-inputs-puppet_facter.md#plugins-inputs-puppet_facter-interval) | [number](value-types.md#number) | No |
+| [`port`](plugins-inputs-puppet_facter.md#plugins-inputs-puppet_facter-port) | [number](value-types.md#number) | No |
 | [`private_key`](plugins-inputs-puppet_facter.md#plugins-inputs-puppet_facter-private_key) | a valid filesystem path | No |
 | [`public_key`](plugins-inputs-puppet_facter.md#plugins-inputs-puppet_facter-public_key) | a valid filesystem path | No |
-| [`ssl`](plugins-inputs-puppet_facter.md#plugins-inputs-puppet_facter-ssl) | [boolean](introduction.md#boolean) | No |
+| [`ssl`](plugins-inputs-puppet_facter.md#plugins-inputs-puppet_facter-ssl) | [boolean](value-types.md#boolean) | No |
 
 Also see [Common options](plugins-inputs-puppet_facter.md#plugins-inputs-puppet_facter-common-options) for a list of options supported by all input plugins.
 
@@ -48,43 +48,43 @@ Also see [Common options](plugins-inputs-puppet_facter.md#plugins-inputs-puppet_
 
 ### `environment` [plugins-inputs-puppet_facter-environment]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"production"`
 
 
 ### `host` [plugins-inputs-puppet_facter-host]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"0.0.0.0"`
 
 
 ### `interval` [plugins-inputs-puppet_facter-interval]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `600`
 
 
 ### `port` [plugins-inputs-puppet_facter-port]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `8140`
 
 
 ### `private_key` [plugins-inputs-puppet_facter-private_key]
 
-* Value type is [path](introduction.md#path)
+* Value type is [path](value-types.md#path)
 * There is no default value for this setting.
 
 
 ### `public_key` [plugins-inputs-puppet_facter-public_key]
 
-* Value type is [path](introduction.md#path)
+* Value type is [path](value-types.md#path)
 * There is no default value for this setting.
 
 
 ### `ssl` [plugins-inputs-puppet_facter-ssl]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `true`
 
 

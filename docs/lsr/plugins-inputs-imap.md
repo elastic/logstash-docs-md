@@ -36,26 +36,26 @@ This plugin supports the following configuration options plus the [Common option
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`attachments_target`](plugins-inputs-imap.md#plugins-inputs-imap-attachments_target) | [string](introduction.md#string) | No |
-| [`check_interval`](plugins-inputs-imap.md#plugins-inputs-imap-check_interval) | [number](introduction.md#number) | No |
-| [`content_type`](plugins-inputs-imap.md#plugins-inputs-imap-content_type) | [string](introduction.md#string) | No |
-| [`delete`](plugins-inputs-imap.md#plugins-inputs-imap-delete) | [boolean](introduction.md#boolean) | No |
-| [`ecs_compatibility`](plugins-inputs-imap.md#plugins-inputs-imap-ecs_compatibility) | [string](introduction.md#string) | No |
-| [`expunge`](plugins-inputs-imap.md#plugins-inputs-imap-expunge) | [boolean](introduction.md#boolean) | No |
-| [`fetch_count`](plugins-inputs-imap.md#plugins-inputs-imap-fetch_count) | [number](introduction.md#number) | No |
-| [`folder`](plugins-inputs-imap.md#plugins-inputs-imap-folder) | [string](introduction.md#string) | No |
-| [`headers_target`](plugins-inputs-imap.md#plugins-inputs-imap-headers_target) | [string](introduction.md#string) | No |
-| [`host`](plugins-inputs-imap.md#plugins-inputs-imap-host) | [string](introduction.md#string) | Yes |
-| [`lowercase_headers`](plugins-inputs-imap.md#plugins-inputs-imap-lowercase_headers) | [boolean](introduction.md#boolean) | No |
-| [`password`](plugins-inputs-imap.md#plugins-inputs-imap-password) | [password](introduction.md#password) | Yes |
-| [`port`](plugins-inputs-imap.md#plugins-inputs-imap-port) | [number](introduction.md#number) | No |
-| [`save_attachments`](plugins-inputs-imap.md#plugins-inputs-imap-save_attachments) | [boolean](introduction.md#boolean) | No |
-| [`secure`](plugins-inputs-imap.md#plugins-inputs-imap-secure) | [boolean](introduction.md#boolean) | No |
-| [`sincedb_path`](plugins-inputs-imap.md#plugins-inputs-imap-sincedb_path) | [string](introduction.md#string) | No |
-| [`strip_attachments`](plugins-inputs-imap.md#plugins-inputs-imap-strip_attachments) | [boolean](introduction.md#boolean) | No |
-| [`uid_tracking`](plugins-inputs-imap.md#plugins-inputs-imap-uid_tracking) | [boolean](introduction.md#boolean) | No |
-| [`user`](plugins-inputs-imap.md#plugins-inputs-imap-user) | [string](introduction.md#string) | Yes |
-| [`verify_cert`](plugins-inputs-imap.md#plugins-inputs-imap-verify_cert) | [boolean](introduction.md#boolean) | No |
+| [`attachments_target`](plugins-inputs-imap.md#plugins-inputs-imap-attachments_target) | [string](value-types.md#string) | No |
+| [`check_interval`](plugins-inputs-imap.md#plugins-inputs-imap-check_interval) | [number](value-types.md#number) | No |
+| [`content_type`](plugins-inputs-imap.md#plugins-inputs-imap-content_type) | [string](value-types.md#string) | No |
+| [`delete`](plugins-inputs-imap.md#plugins-inputs-imap-delete) | [boolean](value-types.md#boolean) | No |
+| [`ecs_compatibility`](plugins-inputs-imap.md#plugins-inputs-imap-ecs_compatibility) | [string](value-types.md#string) | No |
+| [`expunge`](plugins-inputs-imap.md#plugins-inputs-imap-expunge) | [boolean](value-types.md#boolean) | No |
+| [`fetch_count`](plugins-inputs-imap.md#plugins-inputs-imap-fetch_count) | [number](value-types.md#number) | No |
+| [`folder`](plugins-inputs-imap.md#plugins-inputs-imap-folder) | [string](value-types.md#string) | No |
+| [`headers_target`](plugins-inputs-imap.md#plugins-inputs-imap-headers_target) | [string](value-types.md#string) | No |
+| [`host`](plugins-inputs-imap.md#plugins-inputs-imap-host) | [string](value-types.md#string) | Yes |
+| [`lowercase_headers`](plugins-inputs-imap.md#plugins-inputs-imap-lowercase_headers) | [boolean](value-types.md#boolean) | No |
+| [`password`](plugins-inputs-imap.md#plugins-inputs-imap-password) | [password](value-types.md#password) | Yes |
+| [`port`](plugins-inputs-imap.md#plugins-inputs-imap-port) | [number](value-types.md#number) | No |
+| [`save_attachments`](plugins-inputs-imap.md#plugins-inputs-imap-save_attachments) | [boolean](value-types.md#boolean) | No |
+| [`secure`](plugins-inputs-imap.md#plugins-inputs-imap-secure) | [boolean](value-types.md#boolean) | No |
+| [`sincedb_path`](plugins-inputs-imap.md#plugins-inputs-imap-sincedb_path) | [string](value-types.md#string) | No |
+| [`strip_attachments`](plugins-inputs-imap.md#plugins-inputs-imap-strip_attachments) | [boolean](value-types.md#boolean) | No |
+| [`uid_tracking`](plugins-inputs-imap.md#plugins-inputs-imap-uid_tracking) | [boolean](value-types.md#boolean) | No |
+| [`user`](plugins-inputs-imap.md#plugins-inputs-imap-user) | [string](value-types.md#string) | Yes |
+| [`verify_cert`](plugins-inputs-imap.md#plugins-inputs-imap-verify_cert) | [boolean](value-types.md#boolean) | No |
 
 Also see [Common options](plugins-inputs-imap.md#plugins-inputs-imap-common-options) for a list of options supported by all input plugins.
 
@@ -63,7 +63,7 @@ Also see [Common options](plugins-inputs-imap.md#plugins-inputs-imap-common-opti
 
 ### `attachments_target` [plugins-inputs-imap-attachments_target]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value depends on whether [`ecs_compatibility`](plugins-inputs-imap.md#plugins-inputs-imap-ecs_compatibility) is enabled:
 
     * ECS Compatibility disabled: `"[attachments]"`
@@ -75,13 +75,13 @@ The name of the field under which mail attachments information will be added, if
 
 ### `check_interval` [plugins-inputs-imap-check_interval]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `300`
 
 
 ### `content_type` [plugins-inputs-imap-content_type]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"text/plain"`
 
 For multipart messages, use the first part that has this content-type as the event message.
@@ -89,13 +89,13 @@ For multipart messages, use the first part that has this content-type as the eve
 
 ### `delete` [plugins-inputs-imap-delete]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 
 ### `ecs_compatibility` [plugins-inputs-imap-ecs_compatibility]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Supported values are:
 
     * `disabled`: does not use ECS-compatible field names (for example, `From` header field is added to the event)
@@ -112,25 +112,25 @@ Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)](ht
 
 ### `expunge` [plugins-inputs-imap-expunge]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 
 ### `fetch_count` [plugins-inputs-imap-fetch_count]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `50`
 
 
 ### `folder` [plugins-inputs-imap-folder]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"INBOX"`
 
 
 ### `headers_target` [plugins-inputs-imap-headers_target]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value depends on whether [`ecs_compatibility`](plugins-inputs-imap.md#plugins-inputs-imap-ecs_compatibility) is enabled:
 
     * ECS Compatibility disabled: no default value (for example, the subject header is stored under the `"subject"` name)
@@ -145,32 +145,32 @@ Setting `headers_target => ''` skips headers processing and no header is added t
 ### `host` [plugins-inputs-imap-host]
 
 * This is a required setting.
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 
 ### `lowercase_headers` [plugins-inputs-imap-lowercase_headers]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `true`
 
 
 ### `password` [plugins-inputs-imap-password]
 
 * This is a required setting.
-* Value type is [password](introduction.md#password)
+* Value type is [password](value-types.md#password)
 * There is no default value for this setting.
 
 
 ### `port` [plugins-inputs-imap-port]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * There is no default value for this setting.
 
 
 ### `save_attachments` [plugins-inputs-imap-save_attachments]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 When set to true the content of attachments will be included in the `attachments.data` field.
@@ -178,13 +178,13 @@ When set to true the content of attachments will be included in the `attachments
 
 ### `secure` [plugins-inputs-imap-secure]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `true`
 
 
 ### `sincedb_path` [plugins-inputs-imap-sincedb_path]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 Path of the sincedb database file (keeps track of the UID of the last processed mail) that will be written to disk. The default will write sincedb file to `<path.data>/plugins/inputs/imap` directory. NOTE: it must be a file path and not a directory path.
@@ -192,13 +192,13 @@ Path of the sincedb database file (keeps track of the UID of the last processed 
 
 ### `strip_attachments` [plugins-inputs-imap-strip_attachments]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 
 ### `uid_tracking` [plugins-inputs-imap-uid_tracking]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 When the IMAP input plugin connects to the mailbox for the first time and the UID of the last processed mail is not yet known, the unread mails are first downloaded and the UID of the last processed mail is saved. From this point on, if `uid_tracking` is set to `true`, all new mail will be downloaded regardless of whether they are marked as read or unread. This allows users or other services to use the mailbox simultaneously with the IMAP input plugin. UID of the last processed mail is always saved regardles of the `uid_tracking` value, so you can switch its value as needed. In transition from the previous IMAP input plugin version, first process at least one mail with `uid_tracking` set to `false` to save the UID of the last processed mail and then switch `uid_tracking` to `true`.
@@ -207,13 +207,13 @@ When the IMAP input plugin connects to the mailbox for the first time and the UI
 ### `user` [plugins-inputs-imap-user]
 
 * This is a required setting.
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 
 ### `verify_cert` [plugins-inputs-imap-verify_cert]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `true`
 
 

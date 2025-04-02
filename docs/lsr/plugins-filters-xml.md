@@ -29,16 +29,16 @@ This plugin supports the following configuration options plus the [Common option
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`force_array`](plugins-filters-xml.md#plugins-filters-xml-force_array) | [boolean](introduction.md#boolean) | No |
-| [`force_content`](plugins-filters-xml.md#plugins-filters-xml-force_content) | [boolean](introduction.md#boolean) | No |
-| [`namespaces`](plugins-filters-xml.md#plugins-filters-xml-namespaces) | [hash](introduction.md#hash) | No |
-| [`parse_options`](plugins-filters-xml.md#plugins-filters-xml-parse_options) | [string](introduction.md#string) | No |
-| [`remove_namespaces`](plugins-filters-xml.md#plugins-filters-xml-remove_namespaces) | [boolean](introduction.md#boolean) | No |
-| [`source`](plugins-filters-xml.md#plugins-filters-xml-source) | [string](introduction.md#string) | Yes |
-| [`store_xml`](plugins-filters-xml.md#plugins-filters-xml-store_xml) | [boolean](introduction.md#boolean) | No |
-| [`suppress_empty`](plugins-filters-xml.md#plugins-filters-xml-suppress_empty) | [boolean](introduction.md#boolean) | No |
-| [`target`](plugins-filters-xml.md#plugins-filters-xml-target) | [string](introduction.md#string) | No |
-| [`xpath`](plugins-filters-xml.md#plugins-filters-xml-xpath) | [hash](introduction.md#hash) | No |
+| [`force_array`](plugins-filters-xml.md#plugins-filters-xml-force_array) | [boolean](value-types.md#boolean) | No |
+| [`force_content`](plugins-filters-xml.md#plugins-filters-xml-force_content) | [boolean](value-types.md#boolean) | No |
+| [`namespaces`](plugins-filters-xml.md#plugins-filters-xml-namespaces) | [hash](value-types.md#hash) | No |
+| [`parse_options`](plugins-filters-xml.md#plugins-filters-xml-parse_options) | [string](value-types.md#string) | No |
+| [`remove_namespaces`](plugins-filters-xml.md#plugins-filters-xml-remove_namespaces) | [boolean](value-types.md#boolean) | No |
+| [`source`](plugins-filters-xml.md#plugins-filters-xml-source) | [string](value-types.md#string) | Yes |
+| [`store_xml`](plugins-filters-xml.md#plugins-filters-xml-store_xml) | [boolean](value-types.md#boolean) | No |
+| [`suppress_empty`](plugins-filters-xml.md#plugins-filters-xml-suppress_empty) | [boolean](value-types.md#boolean) | No |
+| [`target`](plugins-filters-xml.md#plugins-filters-xml-target) | [string](value-types.md#string) | No |
+| [`xpath`](plugins-filters-xml.md#plugins-filters-xml-xpath) | [hash](value-types.md#hash) | No |
 
 Also see [Common options](plugins-filters-xml.md#plugins-filters-xml-common-options) for a list of options supported by all filter plugins.
 
@@ -46,7 +46,7 @@ Also see [Common options](plugins-filters-xml.md#plugins-filters-xml-common-opti
 
 ### `force_array` [plugins-filters-xml-force_array]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `true`
 
 By default the filter will force single elements to be arrays. Setting this to false will prevent storing single elements in arrays.
@@ -54,7 +54,7 @@ By default the filter will force single elements to be arrays. Setting this to f
 
 ### `force_content` [plugins-filters-xml-force_content]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 By default the filter will expand attributes differently from content inside of tags. This option allows you to force text content and attributes to always parse to a hash value.
@@ -62,7 +62,7 @@ By default the filter will expand attributes differently from content inside of 
 
 ### `namespaces` [plugins-filters-xml-namespaces]
 
-* Value type is [hash](introduction.md#hash)
+* Value type is [hash](value-types.md#hash)
 * Default value is `{}`
 
 By default only namespaces declarations on the root element are considered. This allows to configure all namespace declarations to parse the XML document.
@@ -83,7 +83,7 @@ filter {
 
 ### `parse_options` [plugins-filters-xml-parse_options]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 Setting XML parse options allows for more control of the parsing process. By default the parser is not strict and thus accepts some invalid content. Currently supported options are:
@@ -102,7 +102,7 @@ XML specs:
 
 ### `remove_namespaces` [plugins-filters-xml-remove_namespaces]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 Remove all namespaces from all nodes in the document. Of course, if the document had nodes with the same names but different namespaces, they will now be ambiguous.
@@ -111,7 +111,7 @@ Remove all namespaces from all nodes in the document. Of course, if the document
 ### `source` [plugins-filters-xml-source]
 
 * This is a required setting.
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 Config for xml to hash is:
@@ -135,7 +135,7 @@ The above would parse the XML from the `message` field.
 
 ### `store_xml` [plugins-filters-xml-store_xml]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `true`
 
 By default the filter will store the whole parsed XML in the destination field as described above. Setting this to false will prevent that.
@@ -143,7 +143,7 @@ By default the filter will store the whole parsed XML in the destination field a
 
 ### `suppress_empty` [plugins-filters-xml-suppress_empty]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `true`
 
 By default, output nothing if the element is empty. If set to `false`, empty element will result in an empty hash object.
@@ -151,7 +151,7 @@ By default, output nothing if the element is empty. If set to `false`, empty ele
 
 ### `target` [plugins-filters-xml-target]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 Define target for placing the data
@@ -171,7 +171,7 @@ XML in the value of the source field will be expanded into a datastructure in th
 
 ### `xpath` [plugins-filters-xml-xpath]
 
-* Value type is [hash](introduction.md#hash)
+* Value type is [hash](value-types.md#hash)
 * Default value is `{}`
 
 xpath will additionally select string values (non-strings will be converted to strings with Ruby’s `to_s` function) from parsed XML (using each source field defined using the method above) and place those values in the destination fields. Configuration:

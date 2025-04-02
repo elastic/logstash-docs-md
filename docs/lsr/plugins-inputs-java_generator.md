@@ -27,11 +27,11 @@ This plugin supports the following configuration options plus the [Common option
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`count`](plugins-inputs-java_generator.md#plugins-inputs-java_generator-count) | [number](introduction.md#number) | No |
-| [`eps`](plugins-inputs-java_generator.md#plugins-inputs-java_generator-eps) | [number](introduction.md#number) | No |
-| [`lines`](plugins-inputs-java_generator.md#plugins-inputs-java_generator-lines) | [array](introduction.md#array) | No |
-| [`message`](plugins-inputs-java_generator.md#plugins-inputs-java_generator-message) | [string](introduction.md#string) | No |
-| [`threads`](plugins-inputs-java_generator.md#plugins-inputs-java_generator-threads) | [number](introduction.md#number) | No |
+| [`count`](plugins-inputs-java_generator.md#plugins-inputs-java_generator-count) | [number](value-types.md#number) | No |
+| [`eps`](plugins-inputs-java_generator.md#plugins-inputs-java_generator-eps) | [number](value-types.md#number) | No |
+| [`lines`](plugins-inputs-java_generator.md#plugins-inputs-java_generator-lines) | [array](value-types.md#array) | No |
+| [`message`](plugins-inputs-java_generator.md#plugins-inputs-java_generator-message) | [string](value-types.md#string) | No |
+| [`threads`](plugins-inputs-java_generator.md#plugins-inputs-java_generator-threads) | [number](value-types.md#number) | No |
 
 Also see [Common options](plugins-inputs-java_generator.md#plugins-inputs-java_generator-common-options) for a list of options supported by all input plugins.
 
@@ -39,7 +39,7 @@ Also see [Common options](plugins-inputs-java_generator.md#plugins-inputs-java_g
 
 ### `count` [plugins-inputs-java_generator-count]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `0`
 
 Sets the number of events that should be generated.
@@ -49,7 +49,7 @@ The default, `0`, means generate an unlimited number of events.
 
 ### `eps` [plugins-inputs-java_generator-eps]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `0`
 
 Sets the rate at which events should be generated. Fractional values may be specified. For example, a rate of `0.25` means that one event will be generated every four seconds.
@@ -59,7 +59,7 @@ The default, `0`, means generate events as fast as possible.
 
 ### `lines` [plugins-inputs-java_generator-lines]
 
-* Value type is [array](introduction.md#array)
+* Value type is [array](value-types.md#array)
 * There is no default value for this setting.
 
 The lines to emit, in order. This option overrides the *message* setting if it has also been specified.
@@ -85,7 +85,7 @@ The above will emit a series of three events `line 1` then `line 2` then `line 3
 
 ### `message` [plugins-inputs-java_generator-message]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"Hello world!"`
 
 The message string to use in the event.
@@ -93,7 +93,7 @@ The message string to use in the event.
 
 ### `threads` [plugins-inputs-java_generator-threads]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `1`
 
 Increasing the number of generator threads up to about the number of CPU cores generally increases overall event throughput. The `count`, `eps`, and `lines` settings all apply on a per-thread basis. In other words, each thread will emit the number of events specified in the `count` setting for a total of `threads * count` events. Each thread will emit events at the `eps` rate for a total rate of `threads * eps`, and each thread will emit each line specified in the `lines` option.

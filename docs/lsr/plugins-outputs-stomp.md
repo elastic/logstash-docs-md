@@ -34,14 +34,14 @@ This plugin supports the following configuration options plus the [Common option
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`debug`](plugins-outputs-stomp.md#plugins-outputs-stomp-debug) | [boolean](introduction.md#boolean) | No |
-| [`destination`](plugins-outputs-stomp.md#plugins-outputs-stomp-destination) | [string](introduction.md#string) | Yes |
-| [`headers`](plugins-outputs-stomp.md#plugins-outputs-stomp-headers) | [hash](introduction.md#hash) | No |
-| [`host`](plugins-outputs-stomp.md#plugins-outputs-stomp-host) | [string](introduction.md#string) | Yes |
-| [`password`](plugins-outputs-stomp.md#plugins-outputs-stomp-password) | [password](introduction.md#password) | No |
-| [`port`](plugins-outputs-stomp.md#plugins-outputs-stomp-port) | [number](introduction.md#number) | No |
-| [`user`](plugins-outputs-stomp.md#plugins-outputs-stomp-user) | [string](introduction.md#string) | No |
-| [`vhost`](plugins-outputs-stomp.md#plugins-outputs-stomp-vhost) | [string](introduction.md#string) | No |
+| [`debug`](plugins-outputs-stomp.md#plugins-outputs-stomp-debug) | [boolean](value-types.md#boolean) | No |
+| [`destination`](plugins-outputs-stomp.md#plugins-outputs-stomp-destination) | [string](value-types.md#string) | Yes |
+| [`headers`](plugins-outputs-stomp.md#plugins-outputs-stomp-headers) | [hash](value-types.md#hash) | No |
+| [`host`](plugins-outputs-stomp.md#plugins-outputs-stomp-host) | [string](value-types.md#string) | Yes |
+| [`password`](plugins-outputs-stomp.md#plugins-outputs-stomp-password) | [password](value-types.md#password) | No |
+| [`port`](plugins-outputs-stomp.md#plugins-outputs-stomp-port) | [number](value-types.md#number) | No |
+| [`user`](plugins-outputs-stomp.md#plugins-outputs-stomp-user) | [string](value-types.md#string) | No |
+| [`vhost`](plugins-outputs-stomp.md#plugins-outputs-stomp-vhost) | [string](value-types.md#string) | No |
 
 Also see [Common options](plugins-outputs-stomp.md#plugins-outputs-stomp-common-options) for a list of options supported by all output plugins.
 
@@ -49,7 +49,7 @@ Also see [Common options](plugins-outputs-stomp.md#plugins-outputs-stomp-common-
 
 ### `debug` [plugins-outputs-stomp-debug]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 Enable debugging output?
@@ -58,7 +58,7 @@ Enable debugging output?
 ### `destination` [plugins-outputs-stomp-destination]
 
 * This is a required setting.
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 The destination to read events from. Supports string expansion, meaning `%{{foo}}` values will expand to the field value.
@@ -68,7 +68,7 @@ Example: "/topic/logstash"
 
 ### `headers` [plugins-outputs-stomp-headers]
 
-* Value type is [hash](introduction.md#hash)
+* Value type is [hash](value-types.md#hash)
 * There is no default value for this setting.
 
 Custom headers to send with each message. Supports string expansion, meaning `%{{foo}}` values will expand to the field value.
@@ -79,7 +79,7 @@ Example: `headers ⇒ ["amq-msg-type", "text", "host", "%{{host}}"]`
 ### `host` [plugins-outputs-stomp-host]
 
 * This is a required setting.
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 The address of the STOMP server.
@@ -87,7 +87,7 @@ The address of the STOMP server.
 
 ### `password` [plugins-outputs-stomp-password]
 
-* Value type is [password](introduction.md#password)
+* Value type is [password](value-types.md#password)
 * Default value is `""`
 
 The password to authenticate with.
@@ -95,7 +95,7 @@ The password to authenticate with.
 
 ### `port` [plugins-outputs-stomp-port]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `61613`
 
 The port to connect to on your STOMP server.
@@ -103,7 +103,7 @@ The port to connect to on your STOMP server.
 
 ### `user` [plugins-outputs-stomp-user]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `""`
 
 The username to authenticate with.
@@ -111,7 +111,7 @@ The username to authenticate with.
 
 ### `vhost` [plugins-outputs-stomp-vhost]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `nil`
 
 The vhost to use

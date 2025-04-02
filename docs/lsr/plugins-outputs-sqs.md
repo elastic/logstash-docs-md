@@ -72,20 +72,20 @@ This plugin supports the following configuration options plus the [Common option
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`access_key_id`](plugins-outputs-sqs.md#plugins-outputs-sqs-access_key_id) | [string](introduction.md#string) | No |
-| [`aws_credentials_file`](plugins-outputs-sqs.md#plugins-outputs-sqs-aws_credentials_file) | [string](introduction.md#string) | No |
-| [`batch_events`](plugins-outputs-sqs.md#plugins-outputs-sqs-batch_events) | [number](introduction.md#number) | No |
-| [`endpoint`](plugins-outputs-sqs.md#plugins-outputs-sqs-endpoint) | [string](introduction.md#string) | No |
-| [`message_max_size`](plugins-outputs-sqs.md#plugins-outputs-sqs-message_max_size) | [bytes](introduction.md#bytes) | No |
-| [`proxy_uri`](plugins-outputs-sqs.md#plugins-outputs-sqs-proxy_uri) | [string](introduction.md#string) | No |
-| [`queue`](plugins-outputs-sqs.md#plugins-outputs-sqs-queue) | [string](introduction.md#string) | Yes |
-| [`queue_owner_aws_account_id`](plugins-outputs-sqs.md#plugins-outputs-sqs-queue_owner_aws_account_id) | [string](introduction.md#string) | No |
-| [`region`](plugins-outputs-sqs.md#plugins-outputs-sqs-region) | [string](introduction.md#string) | No |
-| [`role_arn`](plugins-outputs-sqs.md#plugins-outputs-sqs-role_arn) | [string](introduction.md#string) | No |
-| [`role_session_name`](plugins-outputs-sqs.md#plugins-outputs-sqs-role_session_name) | [string](introduction.md#string) | No |
-| [`secret_access_key`](plugins-outputs-sqs.md#plugins-outputs-sqs-secret_access_key) | [string](introduction.md#string) | No |
-| [`session_token`](plugins-outputs-sqs.md#plugins-outputs-sqs-session_token) | [string](introduction.md#string) | No |
-| [`use_aws_bundled_ca`](plugins-outputs-sqs.md#plugins-outputs-sqs-use_aws_bundled_ca) | [boolean](introduction.md#boolean) | No |
+| [`access_key_id`](plugins-outputs-sqs.md#plugins-outputs-sqs-access_key_id) | [string](value-types.md#string) | No |
+| [`aws_credentials_file`](plugins-outputs-sqs.md#plugins-outputs-sqs-aws_credentials_file) | [string](value-types.md#string) | No |
+| [`batch_events`](plugins-outputs-sqs.md#plugins-outputs-sqs-batch_events) | [number](value-types.md#number) | No |
+| [`endpoint`](plugins-outputs-sqs.md#plugins-outputs-sqs-endpoint) | [string](value-types.md#string) | No |
+| [`message_max_size`](plugins-outputs-sqs.md#plugins-outputs-sqs-message_max_size) | [bytes](value-types.md#bytes) | No |
+| [`proxy_uri`](plugins-outputs-sqs.md#plugins-outputs-sqs-proxy_uri) | [string](value-types.md#string) | No |
+| [`queue`](plugins-outputs-sqs.md#plugins-outputs-sqs-queue) | [string](value-types.md#string) | Yes |
+| [`queue_owner_aws_account_id`](plugins-outputs-sqs.md#plugins-outputs-sqs-queue_owner_aws_account_id) | [string](value-types.md#string) | No |
+| [`region`](plugins-outputs-sqs.md#plugins-outputs-sqs-region) | [string](value-types.md#string) | No |
+| [`role_arn`](plugins-outputs-sqs.md#plugins-outputs-sqs-role_arn) | [string](value-types.md#string) | No |
+| [`role_session_name`](plugins-outputs-sqs.md#plugins-outputs-sqs-role_session_name) | [string](value-types.md#string) | No |
+| [`secret_access_key`](plugins-outputs-sqs.md#plugins-outputs-sqs-secret_access_key) | [string](value-types.md#string) | No |
+| [`session_token`](plugins-outputs-sqs.md#plugins-outputs-sqs-session_token) | [string](value-types.md#string) | No |
+| [`use_aws_bundled_ca`](plugins-outputs-sqs.md#plugins-outputs-sqs-use_aws_bundled_ca) | [boolean](value-types.md#boolean) | No |
 
 Also see [Common options](plugins-outputs-sqs.md#plugins-outputs-sqs-common-options) for a list of options supported by all output plugins.
 
@@ -93,7 +93,7 @@ Also see [Common options](plugins-outputs-sqs.md#plugins-outputs-sqs-common-opti
 
 ### `access_key_id` [plugins-outputs-sqs-access_key_id]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 This plugin uses the AWS SDK and supports several ways to get credentials, which will be tried in this order:
@@ -107,7 +107,7 @@ This plugin uses the AWS SDK and supports several ways to get credentials, which
 
 ### `aws_credentials_file` [plugins-outputs-sqs-aws_credentials_file]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 Path to YAML file containing a hash of AWS credentials. This file will only be loaded if `access_key_id` and `secret_access_key` aren’t set. The contents of the file should look like this:
@@ -120,7 +120,7 @@ Path to YAML file containing a hash of AWS credentials. This file will only be l
 
 ### `batch_events` [plugins-outputs-sqs-batch_events]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `10`
 
 The number of events to be sent in each batch. Set this to `1` to disable the batch sending of messages.
@@ -128,7 +128,7 @@ The number of events to be sent in each batch. Set this to `1` to disable the ba
 
 ### `endpoint` [plugins-outputs-sqs-endpoint]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 The endpoint to connect to. By default it is constructed using the value of `region`. This is useful when connecting to S3 compatible services, but beware that these aren’t guaranteed to work correctly with the AWS SDK.
@@ -136,7 +136,7 @@ The endpoint to connect to. By default it is constructed using the value of `reg
 
 ### `message_max_size` [plugins-outputs-sqs-message_max_size]
 
-* Value type is [bytes](introduction.md#bytes)
+* Value type is [bytes](value-types.md#bytes)
 * Default value is `"256KiB"`
 
 The maximum number of bytes for any message sent to SQS. Messages exceeding this size will be dropped. See [http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/limits-messages.html](http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/limits-messages.md).
@@ -144,7 +144,7 @@ The maximum number of bytes for any message sent to SQS. Messages exceeding this
 
 ### `proxy_uri` [plugins-outputs-sqs-proxy_uri]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 URI to proxy server if required
@@ -153,7 +153,7 @@ URI to proxy server if required
 ### `queue` [plugins-outputs-sqs-queue]
 
 * This is a required setting.
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 The name of the target SQS queue. Note that this is just the name of the queue, not the URL or ARN.
@@ -161,7 +161,7 @@ The name of the target SQS queue. Note that this is just the name of the queue, 
 
 ### `queue_owner_aws_account_id` [plugins-outputs-sqs-queue_owner_aws_account_id]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 The owning account id of the target SQS queue. IAM permissions need to be configured on both accounts to function.
@@ -169,7 +169,7 @@ The owning account id of the target SQS queue. IAM permissions need to be config
 
 ### `region` [plugins-outputs-sqs-region]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"us-east-1"`
 
 The AWS Region
@@ -177,7 +177,7 @@ The AWS Region
 
 ### `role_arn` [plugins-outputs-sqs-role_arn]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 The AWS IAM Role to assume, if any. This is used to generate temporary credentials, typically for cross-account access. See the [AssumeRole API documentation](https://docs.aws.amazon.com/STS/latest/APIReference/API_AssumeRole.md) for more information.
@@ -185,7 +185,7 @@ The AWS IAM Role to assume, if any. This is used to generate temporary credentia
 
 ### `role_session_name` [plugins-outputs-sqs-role_session_name]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"logstash"`
 
 Session name to use when assuming an IAM role.
@@ -193,7 +193,7 @@ Session name to use when assuming an IAM role.
 
 ### `secret_access_key` [plugins-outputs-sqs-secret_access_key]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 The AWS Secret Access Key
@@ -201,7 +201,7 @@ The AWS Secret Access Key
 
 ### `session_token` [plugins-outputs-sqs-session_token]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 The AWS Session token for temporary credential
@@ -209,7 +209,7 @@ The AWS Session token for temporary credential
 
 ### `use_aws_bundled_ca` [plugins-outputs-sqs-use_aws_bundled_ca]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 Use bundled CA certificates that ship with AWS SDK to verify SSL peer certificates. For cases where the default certificates are unavailable, e.g. Windows, you can set this to `true`.

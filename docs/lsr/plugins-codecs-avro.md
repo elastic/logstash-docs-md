@@ -73,17 +73,17 @@ output {
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`ecs_compatibility`](plugins-codecs-avro.md#plugins-codecs-avro-ecs_compatibility) | [string](introduction.md#string) | No |
-| [`encoding`](plugins-codecs-avro.md#plugins-codecs-avro-encoding) | [string](introduction.md#string), one of `["binary", "base64"]` | No |
-| [`schema_uri`](plugins-codecs-avro.md#plugins-codecs-avro-schema_uri) | [string](introduction.md#string) | Yes |
-| [`tag_on_failure`](plugins-codecs-avro.md#plugins-codecs-avro-tag_on_failure) | [boolean](introduction.md#boolean) | No |
-| [`target`](plugins-codecs-avro.md#plugins-codecs-avro-target) | [string](introduction.md#string) | No |
+| [`ecs_compatibility`](plugins-codecs-avro.md#plugins-codecs-avro-ecs_compatibility) | [string](value-types.md#string) | No |
+| [`encoding`](plugins-codecs-avro.md#plugins-codecs-avro-encoding) | [string](value-types.md#string), one of `["binary", "base64"]` | No |
+| [`schema_uri`](plugins-codecs-avro.md#plugins-codecs-avro-schema_uri) | [string](value-types.md#string) | Yes |
+| [`tag_on_failure`](plugins-codecs-avro.md#plugins-codecs-avro-tag_on_failure) | [boolean](value-types.md#boolean) | No |
+| [`target`](plugins-codecs-avro.md#plugins-codecs-avro-target) | [string](value-types.md#string) | No |
 
  
 
 ### `ecs_compatibility` [plugins-codecs-avro-ecs_compatibility]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Supported values are:
 
     * `disabled`: Avro data added at root level
@@ -106,7 +106,7 @@ Set this option to `binary` to indicate that this codec sends or expects to rece
 ### `schema_uri` [plugins-codecs-avro-schema_uri]
 
 * This is a required setting.
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 schema path to fetch the schema from. This can be a *http* or *file* scheme URI example:
@@ -117,7 +117,7 @@ schema path to fetch the schema from. This can be a *http* or *file* scheme URI 
 
 ### `tag_on_failure` [plugins-codecs-avro-tag_on_failure]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 tag events with `_avroparsefailure` when decode fails
@@ -125,7 +125,7 @@ tag events with `_avroparsefailure` when decode fails
 
 ### `target` [plugins-codecs-avro-target]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 * This is only relevant when decode data into an event
 

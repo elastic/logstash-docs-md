@@ -34,9 +34,9 @@ This plugin supports the following configuration options plus the [Common option
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`annotation`](plugins-outputs-circonus.md#plugins-outputs-circonus-annotation) | [hash](introduction.md#hash) | Yes |
-| [`api_token`](plugins-outputs-circonus.md#plugins-outputs-circonus-api_token) | [password](introduction.md#password) | Yes |
-| [`app_name`](plugins-outputs-circonus.md#plugins-outputs-circonus-app_name) | [string](introduction.md#string) | Yes |
+| [`annotation`](plugins-outputs-circonus.md#plugins-outputs-circonus-annotation) | [hash](value-types.md#hash) | Yes |
+| [`api_token`](plugins-outputs-circonus.md#plugins-outputs-circonus-api_token) | [password](value-types.md#password) | Yes |
+| [`app_name`](plugins-outputs-circonus.md#plugins-outputs-circonus-app_name) | [string](value-types.md#string) | Yes |
 
 Also see [Common options](plugins-outputs-circonus.md#plugins-outputs-circonus-common-options) for a list of options supported by all output plugins.
 
@@ -45,7 +45,7 @@ Also see [Common options](plugins-outputs-circonus.md#plugins-outputs-circonus-c
 ### `annotation` [plugins-outputs-circonus-annotation]
 
 * This is a required setting.
-* Value type is [hash](introduction.md#hash)
+* Value type is [hash](value-types.md#hash)
 * Default value is `{}`
 
 Annotations Registers an annotation with Circonus The only required field is `title` and `description`. `start` and `stop` will be set to the event timestamp. You can add any other optional annotation values as well. All values will be passed through `event.sprintf`
@@ -66,7 +66,7 @@ or
 ### `api_token` [plugins-outputs-circonus-api_token]
 
 * This is a required setting.
-* Value type is [password](introduction.md#password)
+* Value type is [password](value-types.md#password)
 * There is no default value for this setting.
 
 Your Circonus API Token
@@ -75,7 +75,7 @@ Your Circonus API Token
 ### `app_name` [plugins-outputs-circonus-app_name]
 
 * This is a required setting.
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 Your Circonus App name This will be passed through `event.sprintf` so variables are allowed here:

@@ -33,8 +33,8 @@ This plugin supports the following configuration options plus the [Common option
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`overwrite`](plugins-filters-uuid.md#plugins-filters-uuid-overwrite) | [boolean](introduction.md#boolean) | No |
-| [`target`](plugins-filters-uuid.md#plugins-filters-uuid-target) | [string](introduction.md#string) | Yes |
+| [`overwrite`](plugins-filters-uuid.md#plugins-filters-uuid-overwrite) | [boolean](value-types.md#boolean) | No |
+| [`target`](plugins-filters-uuid.md#plugins-filters-uuid-target) | [string](value-types.md#string) | Yes |
 
 Also see [Common options](plugins-filters-uuid.md#plugins-filters-uuid-common-options) for a list of options supported by all filter plugins.
 
@@ -42,7 +42,7 @@ Also see [Common options](plugins-filters-uuid.md#plugins-filters-uuid-common-op
 
 ### `overwrite` [plugins-filters-uuid-overwrite]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 If the value in the field currently (if any) should be overridden by the generated UUID. Defaults to `false` (i.e. if the field is present, with ANY value, it won’t be overridden)
@@ -62,7 +62,7 @@ Example:
 ### `target` [plugins-filters-uuid-target]
 
 * This is a required setting.
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 Select the name of the field where the generated UUID should be stored.

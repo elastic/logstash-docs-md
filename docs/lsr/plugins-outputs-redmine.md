@@ -52,19 +52,19 @@ This plugin supports the following configuration options plus the [Common option
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`assigned_to_id`](plugins-outputs-redmine.md#plugins-outputs-redmine-assigned_to_id) | [number](introduction.md#number) | No |
-| [`categorie_id`](plugins-outputs-redmine.md#plugins-outputs-redmine-categorie_id) | [number](introduction.md#number) | No |
-| [`description`](plugins-outputs-redmine.md#plugins-outputs-redmine-description) | [string](introduction.md#string) | No |
-| [`fixed_version_id`](plugins-outputs-redmine.md#plugins-outputs-redmine-fixed_version_id) | [number](introduction.md#number) | No |
-| [`parent_issue_id`](plugins-outputs-redmine.md#plugins-outputs-redmine-parent_issue_id) | [number](introduction.md#number) | No |
-| [`priority_id`](plugins-outputs-redmine.md#plugins-outputs-redmine-priority_id) | [number](introduction.md#number) | Yes |
-| [`project_id`](plugins-outputs-redmine.md#plugins-outputs-redmine-project_id) | [number](introduction.md#number) | Yes |
-| [`ssl`](plugins-outputs-redmine.md#plugins-outputs-redmine-ssl) | [boolean](introduction.md#boolean) | No |
-| [`status_id`](plugins-outputs-redmine.md#plugins-outputs-redmine-status_id) | [number](introduction.md#number) | Yes |
-| [`subject`](plugins-outputs-redmine.md#plugins-outputs-redmine-subject) | [string](introduction.md#string) | No |
-| [`token`](plugins-outputs-redmine.md#plugins-outputs-redmine-token) | [string](introduction.md#string) | Yes |
-| [`tracker_id`](plugins-outputs-redmine.md#plugins-outputs-redmine-tracker_id) | [number](introduction.md#number) | Yes |
-| [`url`](plugins-outputs-redmine.md#plugins-outputs-redmine-url) | [string](introduction.md#string) | Yes |
+| [`assigned_to_id`](plugins-outputs-redmine.md#plugins-outputs-redmine-assigned_to_id) | [number](value-types.md#number) | No |
+| [`categorie_id`](plugins-outputs-redmine.md#plugins-outputs-redmine-categorie_id) | [number](value-types.md#number) | No |
+| [`description`](plugins-outputs-redmine.md#plugins-outputs-redmine-description) | [string](value-types.md#string) | No |
+| [`fixed_version_id`](plugins-outputs-redmine.md#plugins-outputs-redmine-fixed_version_id) | [number](value-types.md#number) | No |
+| [`parent_issue_id`](plugins-outputs-redmine.md#plugins-outputs-redmine-parent_issue_id) | [number](value-types.md#number) | No |
+| [`priority_id`](plugins-outputs-redmine.md#plugins-outputs-redmine-priority_id) | [number](value-types.md#number) | Yes |
+| [`project_id`](plugins-outputs-redmine.md#plugins-outputs-redmine-project_id) | [number](value-types.md#number) | Yes |
+| [`ssl`](plugins-outputs-redmine.md#plugins-outputs-redmine-ssl) | [boolean](value-types.md#boolean) | No |
+| [`status_id`](plugins-outputs-redmine.md#plugins-outputs-redmine-status_id) | [number](value-types.md#number) | Yes |
+| [`subject`](plugins-outputs-redmine.md#plugins-outputs-redmine-subject) | [string](value-types.md#string) | No |
+| [`token`](plugins-outputs-redmine.md#plugins-outputs-redmine-token) | [string](value-types.md#string) | Yes |
+| [`tracker_id`](plugins-outputs-redmine.md#plugins-outputs-redmine-tracker_id) | [number](value-types.md#number) | Yes |
+| [`url`](plugins-outputs-redmine.md#plugins-outputs-redmine-url) | [string](value-types.md#string) | Yes |
 
 Also see [Common options](plugins-outputs-redmine.md#plugins-outputs-redmine-common-options) for a list of options supported by all output plugins.
 
@@ -72,7 +72,7 @@ Also see [Common options](plugins-outputs-redmine.md#plugins-outputs-redmine-com
 
 ### `assigned_to_id` [plugins-outputs-redmine-assigned_to_id]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `nil`
 
 redmine issue assigned_to not required for post_issue
@@ -80,7 +80,7 @@ redmine issue assigned_to not required for post_issue
 
 ### `categorie_id` [plugins-outputs-redmine-categorie_id]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `nil`
 
 not required for post_issue
@@ -88,7 +88,7 @@ not required for post_issue
 
 ### `description` [plugins-outputs-redmine-description]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"%{{message}}"`
 
 redmine issue description required
@@ -96,7 +96,7 @@ redmine issue description required
 
 ### `fixed_version_id` [plugins-outputs-redmine-fixed_version_id]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `nil`
 
 redmine issue fixed_version_id
@@ -104,7 +104,7 @@ redmine issue fixed_version_id
 
 ### `parent_issue_id` [plugins-outputs-redmine-parent_issue_id]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `nil`
 
 redmine issue parent_issue_id not required for post_issue
@@ -113,7 +113,7 @@ redmine issue parent_issue_id not required for post_issue
 ### `priority_id` [plugins-outputs-redmine-priority_id]
 
 * This is a required setting.
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * There is no default value for this setting.
 
 redmine issue priority_id required
@@ -122,7 +122,7 @@ redmine issue priority_id required
 ### `project_id` [plugins-outputs-redmine-project_id]
 
 * This is a required setting.
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * There is no default value for this setting.
 
 redmine issue projet_id required
@@ -130,14 +130,14 @@ redmine issue projet_id required
 
 ### `ssl` [plugins-outputs-redmine-ssl]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 
 ### `status_id` [plugins-outputs-redmine-status_id]
 
 * This is a required setting.
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * There is no default value for this setting.
 
 redmine issue status_id required
@@ -145,7 +145,7 @@ redmine issue status_id required
 
 ### `subject` [plugins-outputs-redmine-subject]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"%{{host}}"`
 
 redmine issue subject required
@@ -154,7 +154,7 @@ redmine issue subject required
 ### `token` [plugins-outputs-redmine-token]
 
 * This is a required setting.
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 redmine token user used for authentication
@@ -163,7 +163,7 @@ redmine token user used for authentication
 ### `tracker_id` [plugins-outputs-redmine-tracker_id]
 
 * This is a required setting.
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * There is no default value for this setting.
 
 redmine issue tracker_id required
@@ -172,7 +172,7 @@ redmine issue tracker_id required
 ### `url` [plugins-outputs-redmine-url]
 
 * This is a required setting.
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 host of redmine app value format : *http://urlofredmine.tld* - Not add */issues* at end

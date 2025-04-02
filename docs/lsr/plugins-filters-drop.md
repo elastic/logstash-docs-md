@@ -43,7 +43,7 @@ This plugin supports the following configuration options plus the [Common option
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`percentage`](plugins-filters-drop.md#plugins-filters-drop-percentage) | [number](introduction.md#number) | No |
+| [`percentage`](plugins-filters-drop.md#plugins-filters-drop-percentage) | [number](value-types.md#number) | No |
 
 Also see [Common options](plugins-filters-drop.md#plugins-filters-drop-common-options) for a list of options supported by all filter plugins.
 
@@ -51,7 +51,7 @@ Also see [Common options](plugins-filters-drop.md#plugins-filters-drop-common-op
 
 ### `percentage` [plugins-filters-drop-percentage]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `100`
 
 Drop all the events within a pre-configured percentage.

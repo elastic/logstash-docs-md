@@ -31,11 +31,11 @@ This plugin supports the following configuration options plus the [Common option
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`ecs_compatibility`](plugins-filters-syslog_pri.md#plugins-filters-syslog_pri-ecs_compatibility) | [string](introduction.md#string) | No |
-| [`facility_labels`](plugins-filters-syslog_pri.md#plugins-filters-syslog_pri-facility_labels) | [array](introduction.md#array) | No |
-| [`severity_labels`](plugins-filters-syslog_pri.md#plugins-filters-syslog_pri-severity_labels) | [array](introduction.md#array) | No |
-| [`syslog_pri_field_name`](plugins-filters-syslog_pri.md#plugins-filters-syslog_pri-syslog_pri_field_name) | [string](introduction.md#string) | No |
-| [`use_labels`](plugins-filters-syslog_pri.md#plugins-filters-syslog_pri-use_labels) | [boolean](introduction.md#boolean) | No |
+| [`ecs_compatibility`](plugins-filters-syslog_pri.md#plugins-filters-syslog_pri-ecs_compatibility) | [string](value-types.md#string) | No |
+| [`facility_labels`](plugins-filters-syslog_pri.md#plugins-filters-syslog_pri-facility_labels) | [array](value-types.md#array) | No |
+| [`severity_labels`](plugins-filters-syslog_pri.md#plugins-filters-syslog_pri-severity_labels) | [array](value-types.md#array) | No |
+| [`syslog_pri_field_name`](plugins-filters-syslog_pri.md#plugins-filters-syslog_pri-syslog_pri_field_name) | [string](value-types.md#string) | No |
+| [`use_labels`](plugins-filters-syslog_pri.md#plugins-filters-syslog_pri-use_labels) | [boolean](value-types.md#boolean) | No |
 
 Also see [Common options](plugins-filters-syslog_pri.md#plugins-filters-syslog_pri-common-options) for a list of options supported by all filter plugins.
 
@@ -43,7 +43,7 @@ Also see [Common options](plugins-filters-syslog_pri.md#plugins-filters-syslog_p
 
 ### `ecs_compatibility` [plugins-filters-syslog_pri-ecs_compatibility]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Supported values are:
 
     * `disabled`: does not use ECS-compatible field names (for example, `syslog_severity_code` for syslog severity)
@@ -60,7 +60,7 @@ Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)](ht
 
 ### `facility_labels` [plugins-filters-syslog_pri-facility_labels]
 
-* Value type is [array](introduction.md#array)
+* Value type is [array](value-types.md#array)
 * Default value is `["kernel", "user-level", "mail", "daemon", "security/authorization", "syslogd", "line printer", "network news", "uucp", "clock", "security/authorization", "ftp", "ntp", "log audit", "log alert", "clock", "local0", "local1", "local2", "local3", "local4", "local5", "local6", "local7"]`
 
 Labels for facility levels. This comes from RFC3164. If an unrecognized facility code is provided and [`use_labels`](plugins-filters-syslog_pri.md#plugins-filters-syslog_pri-use_labels) is `true` then the event is tagged with `_syslogpriparsefailure`.
@@ -68,7 +68,7 @@ Labels for facility levels. This comes from RFC3164. If an unrecognized facility
 
 ### `severity_labels` [plugins-filters-syslog_pri-severity_labels]
 
-* Value type is [array](introduction.md#array)
+* Value type is [array](value-types.md#array)
 * Default value is `["emergency", "alert", "critical", "error", "warning", "notice", "informational", "debug"]`
 
 Labels for severity levels. This comes from RFC3164.
@@ -76,7 +76,7 @@ Labels for severity levels. This comes from RFC3164.
 
 ### `syslog_pri_field_name` [plugins-filters-syslog_pri-syslog_pri_field_name]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value depends on whether [`ecs_compatibility`](plugins-filters-syslog_pri.md#plugins-filters-syslog_pri-ecs_compatibility) is enabled:
 
     * ECS Compatibility disabled: `"syslog_pri"`
@@ -88,7 +88,7 @@ Name of field which passes in the extracted PRI part of the syslog message
 
 ### `use_labels` [plugins-filters-syslog_pri-use_labels]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `true`
 
 Add human-readable names after parsing severity and facility from PRI

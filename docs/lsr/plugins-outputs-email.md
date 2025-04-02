@@ -48,26 +48,26 @@ This plugin supports the following configuration options plus the [Common option
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`address`](plugins-outputs-email.md#plugins-outputs-email-address) | [string](introduction.md#string) | No |
-| [`attachments`](plugins-outputs-email.md#plugins-outputs-email-attachments) | [array](introduction.md#array) | No |
-| [`authentication`](plugins-outputs-email.md#plugins-outputs-email-authentication) | [string](introduction.md#string) | No |
-| [`body`](plugins-outputs-email.md#plugins-outputs-email-body) | [string](introduction.md#string) | No |
-| [`cc`](plugins-outputs-email.md#plugins-outputs-email-cc) | [string](introduction.md#string) | No |
-| [`bcc`](plugins-outputs-email.md#plugins-outputs-email-bcc) | [string](introduction.md#string) | No |
-| [`contenttype`](plugins-outputs-email.md#plugins-outputs-email-contenttype) | [string](introduction.md#string) | No |
-| [`debug`](plugins-outputs-email.md#plugins-outputs-email-debug) | [boolean](introduction.md#boolean) | No |
-| [`domain`](plugins-outputs-email.md#plugins-outputs-email-domain) | [string](introduction.md#string) | No |
-| [`from`](plugins-outputs-email.md#plugins-outputs-email-from) | [string](introduction.md#string) | No |
-| [`htmlbody`](plugins-outputs-email.md#plugins-outputs-email-htmlbody) | [string](introduction.md#string) | No |
-| [`password`](plugins-outputs-email.md#plugins-outputs-email-password) | [password](introduction.md#password) | No |
-| [`port`](plugins-outputs-email.md#plugins-outputs-email-port) | [number](introduction.md#number) | No |
-| [`replyto`](plugins-outputs-email.md#plugins-outputs-email-replyto) | [string](introduction.md#string) | No |
-| [`subject`](plugins-outputs-email.md#plugins-outputs-email-subject) | [string](introduction.md#string) | No |
-| [`to`](plugins-outputs-email.md#plugins-outputs-email-to) | [string](introduction.md#string) | Yes |
-| [`use_tls`](plugins-outputs-email.md#plugins-outputs-email-use_tls) | [boolean](introduction.md#boolean) | No |
-| [`username`](plugins-outputs-email.md#plugins-outputs-email-username) | [string](introduction.md#string) | No |
-| [`via`](plugins-outputs-email.md#plugins-outputs-email-via) | [string](introduction.md#string) | No |
-| [`template_file`](plugins-outputs-email.md#plugins-outputs-email-template_file) | [path](introduction.md#path) | No |
+| [`address`](plugins-outputs-email.md#plugins-outputs-email-address) | [string](value-types.md#string) | No |
+| [`attachments`](plugins-outputs-email.md#plugins-outputs-email-attachments) | [array](value-types.md#array) | No |
+| [`authentication`](plugins-outputs-email.md#plugins-outputs-email-authentication) | [string](value-types.md#string) | No |
+| [`body`](plugins-outputs-email.md#plugins-outputs-email-body) | [string](value-types.md#string) | No |
+| [`cc`](plugins-outputs-email.md#plugins-outputs-email-cc) | [string](value-types.md#string) | No |
+| [`bcc`](plugins-outputs-email.md#plugins-outputs-email-bcc) | [string](value-types.md#string) | No |
+| [`contenttype`](plugins-outputs-email.md#plugins-outputs-email-contenttype) | [string](value-types.md#string) | No |
+| [`debug`](plugins-outputs-email.md#plugins-outputs-email-debug) | [boolean](value-types.md#boolean) | No |
+| [`domain`](plugins-outputs-email.md#plugins-outputs-email-domain) | [string](value-types.md#string) | No |
+| [`from`](plugins-outputs-email.md#plugins-outputs-email-from) | [string](value-types.md#string) | No |
+| [`htmlbody`](plugins-outputs-email.md#plugins-outputs-email-htmlbody) | [string](value-types.md#string) | No |
+| [`password`](plugins-outputs-email.md#plugins-outputs-email-password) | [password](value-types.md#password) | No |
+| [`port`](plugins-outputs-email.md#plugins-outputs-email-port) | [number](value-types.md#number) | No |
+| [`replyto`](plugins-outputs-email.md#plugins-outputs-email-replyto) | [string](value-types.md#string) | No |
+| [`subject`](plugins-outputs-email.md#plugins-outputs-email-subject) | [string](value-types.md#string) | No |
+| [`to`](plugins-outputs-email.md#plugins-outputs-email-to) | [string](value-types.md#string) | Yes |
+| [`use_tls`](plugins-outputs-email.md#plugins-outputs-email-use_tls) | [boolean](value-types.md#boolean) | No |
+| [`username`](plugins-outputs-email.md#plugins-outputs-email-username) | [string](value-types.md#string) | No |
+| [`via`](plugins-outputs-email.md#plugins-outputs-email-via) | [string](value-types.md#string) | No |
+| [`template_file`](plugins-outputs-email.md#plugins-outputs-email-template_file) | [path](value-types.md#path) | No |
 
 Also see [Common options](plugins-outputs-email.md#plugins-outputs-email-common-options) for a list of options supported by all output plugins.
 
@@ -75,7 +75,7 @@ Also see [Common options](plugins-outputs-email.md#plugins-outputs-email-common-
 
 ### `address` [plugins-outputs-email-address]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"localhost"`
 
 The address used to connect to the mail server
@@ -83,7 +83,7 @@ The address used to connect to the mail server
 
 ### `attachments` [plugins-outputs-email-attachments]
 
-* Value type is [array](introduction.md#array)
+* Value type is [array](value-types.md#array)
 * Default value is `[]`
 
 Attachments - specify the name(s) and location(s) of the files.
@@ -91,7 +91,7 @@ Attachments - specify the name(s) and location(s) of the files.
 
 ### `authentication` [plugins-outputs-email-authentication]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 Authentication method used when identifying with the server
@@ -99,7 +99,7 @@ Authentication method used when identifying with the server
 
 ### `body` [plugins-outputs-email-body]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `""`
 
 Body for the email - plain text only.
@@ -107,7 +107,7 @@ Body for the email - plain text only.
 
 ### `cc` [plugins-outputs-email-cc]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 The fully-qualified email address(es) to include as cc: address(es).
@@ -117,7 +117,7 @@ This field also accepts a comma-separated string of addresses, for example: `"me
 
 ### `bcc` [plugins-outputs-email-bcc]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 The fully-qualified email address(es) to include as bcc: address(es).
@@ -127,7 +127,7 @@ This field accepts several addresses like cc.
 
 ### `contenttype` [plugins-outputs-email-contenttype]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"text/html; charset=UTF-8"`
 
 contenttype : for multipart messages, set the content-type and/or charset of the HTML part. NOTE: this may not be functional (KH)
@@ -135,7 +135,7 @@ contenttype : for multipart messages, set the content-type and/or charset of the
 
 ### `debug` [plugins-outputs-email-debug]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 Run the mail relay in debug mode
@@ -143,7 +143,7 @@ Run the mail relay in debug mode
 
 ### `domain` [plugins-outputs-email-domain]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"localhost"`
 
 The HELO/EHLO domain name used in the greeting message when connecting to a remote SMTP server. Some servers require this name to match the actual hostname of the connecting client.
@@ -151,7 +151,7 @@ The HELO/EHLO domain name used in the greeting message when connecting to a remo
 
 ### `from` [plugins-outputs-email-from]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"logstash.alert@example.com"`
 
 The fully-qualified email address for the From: field in the email.
@@ -159,7 +159,7 @@ The fully-qualified email address for the From: field in the email.
 
 ### `htmlbody` [plugins-outputs-email-htmlbody]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `""`
 
 HTML Body for the email, which may contain HTML markup.
@@ -167,7 +167,7 @@ HTML Body for the email, which may contain HTML markup.
 
 ### `password` [plugins-outputs-email-password]
 
-* Value type is [password](introduction.md#password)
+* Value type is [password](value-types.md#password)
 * There is no default value for this setting.
 
 Password to authenticate with the server
@@ -175,7 +175,7 @@ Password to authenticate with the server
 
 ### `port` [plugins-outputs-email-port]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `25`
 
 Port used to communicate with the mail server
@@ -183,7 +183,7 @@ Port used to communicate with the mail server
 
 ### `replyto` [plugins-outputs-email-replyto]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 The fully qualified email address for the Reply-To: field.
@@ -191,7 +191,7 @@ The fully qualified email address for the Reply-To: field.
 
 ### `subject` [plugins-outputs-email-subject]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `""`
 
 Subject: for the email.
@@ -200,7 +200,7 @@ Subject: for the email.
 ### `to` [plugins-outputs-email-to]
 
 * This is a required setting.
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 The fully-qualified email address to send the email to.
@@ -212,7 +212,7 @@ You can also use dynamic fields from the event with the `%{{fieldname}}` syntax.
 
 ### `use_tls` [plugins-outputs-email-use_tls]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 Enables TLS when communicating with the server
@@ -220,7 +220,7 @@ Enables TLS when communicating with the server
 
 ### `username` [plugins-outputs-email-username]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 Username to authenticate with the server
@@ -228,7 +228,7 @@ Username to authenticate with the server
 
 ### `via` [plugins-outputs-email-via]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"smtp"`
 
 How Logstash should send the email, either via SMTP or by invoking sendmail.
@@ -236,7 +236,7 @@ How Logstash should send the email, either via SMTP or by invoking sendmail.
 
 ### `template_file` [plugins-outputs-email-template_file]
 
-* Value type is [path](introduction.md#path)
+* Value type is [path](value-types.md#path)
 * There is no default value for this setting.
 
 Path of a [Mustache templating](https://mustache.github.io/) file used for email templating. See example in test fixture. Can be used with `body` to send multi-part emails. Takes precedence over `htmlBody`.

@@ -38,16 +38,16 @@ Event types are listed below
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`emit_hosts`](plugins-codecs-nmap.md#plugins-codecs-nmap-emit_hosts) | [boolean](introduction.md#boolean) | No |
-| [`emit_ports`](plugins-codecs-nmap.md#plugins-codecs-nmap-emit_ports) | [boolean](introduction.md#boolean) | No |
-| [`emit_scan_metadata`](plugins-codecs-nmap.md#plugins-codecs-nmap-emit_scan_metadata) | [boolean](introduction.md#boolean) | No |
-| [`emit_traceroute_links`](plugins-codecs-nmap.md#plugins-codecs-nmap-emit_traceroute_links) | [boolean](introduction.md#boolean) | No |
+| [`emit_hosts`](plugins-codecs-nmap.md#plugins-codecs-nmap-emit_hosts) | [boolean](value-types.md#boolean) | No |
+| [`emit_ports`](plugins-codecs-nmap.md#plugins-codecs-nmap-emit_ports) | [boolean](value-types.md#boolean) | No |
+| [`emit_scan_metadata`](plugins-codecs-nmap.md#plugins-codecs-nmap-emit_scan_metadata) | [boolean](value-types.md#boolean) | No |
+| [`emit_traceroute_links`](plugins-codecs-nmap.md#plugins-codecs-nmap-emit_traceroute_links) | [boolean](value-types.md#boolean) | No |
 
  
 
 ### `emit_hosts` [plugins-codecs-nmap-emit_hosts]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `true`
 
 Emit all host data as a nested document (including ports + traceroutes) with the type *nmap_fullscan*
@@ -55,7 +55,7 @@ Emit all host data as a nested document (including ports + traceroutes) with the
 
 ### `emit_ports` [plugins-codecs-nmap-emit_ports]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `true`
 
 Emit each port as a separate document with type *nmap_port*
@@ -63,7 +63,7 @@ Emit each port as a separate document with type *nmap_port*
 
 ### `emit_scan_metadata` [plugins-codecs-nmap-emit_scan_metadata]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `true`
 
 Emit scan metadata
@@ -71,7 +71,7 @@ Emit scan metadata
 
 ### `emit_traceroute_links` [plugins-codecs-nmap-emit_traceroute_links]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `true`
 
 Emit each hop_tuple of the traceroute with type *nmap_traceroute_link*

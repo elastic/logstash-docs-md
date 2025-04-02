@@ -102,28 +102,28 @@ Duration settings can be specified in text form e.g. "250 ms", this string will 
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`check_archive_validity`](plugins-inputs-file.md#plugins-inputs-file-check_archive_validity) | [boolean](introduction.md#boolean) | No |
-| [`close_older`](plugins-inputs-file.md#plugins-inputs-file-close_older) | [number](introduction.md#number) or [string_duration](plugins-inputs-file.md#plugins-inputs-file-string_duration) | No |
-| [`delimiter`](plugins-inputs-file.md#plugins-inputs-file-delimiter) | [string](introduction.md#string) | No |
-| [`discover_interval`](plugins-inputs-file.md#plugins-inputs-file-discover_interval) | [number](introduction.md#number) | No |
-| [`ecs_compatibility`](plugins-inputs-file.md#plugins-inputs-file-ecs_compatibility) | [string](introduction.md#string) | No |
-| [`exclude`](plugins-inputs-file.md#plugins-inputs-file-exclude) | [array](introduction.md#array) | No |
-| [`exit_after_read`](plugins-inputs-file.md#plugins-inputs-file-exit_after_read) | [boolean](introduction.md#boolean) | No |
-| [`file_chunk_count`](plugins-inputs-file.md#plugins-inputs-file-file_chunk_count) | [number](introduction.md#number) | No |
-| [`file_chunk_size`](plugins-inputs-file.md#plugins-inputs-file-file_chunk_size) | [number](introduction.md#number) | No |
-| [`file_completed_action`](plugins-inputs-file.md#plugins-inputs-file-file_completed_action) | [string](introduction.md#string), one of `["delete", "log", "log_and_delete"]` | No |
-| [`file_completed_log_path`](plugins-inputs-file.md#plugins-inputs-file-file_completed_log_path) | [string](introduction.md#string) | No |
-| [`file_sort_by`](plugins-inputs-file.md#plugins-inputs-file-file_sort_by) | [string](introduction.md#string), one of `["last_modified", "path"]` | No |
-| [`file_sort_direction`](plugins-inputs-file.md#plugins-inputs-file-file_sort_direction) | [string](introduction.md#string), one of `["asc", "desc"]` | No |
-| [`ignore_older`](plugins-inputs-file.md#plugins-inputs-file-ignore_older) | [number](introduction.md#number) or [string_duration](plugins-inputs-file.md#plugins-inputs-file-string_duration) | No |
-| [`max_open_files`](plugins-inputs-file.md#plugins-inputs-file-max_open_files) | [number](introduction.md#number) | No |
-| [`mode`](plugins-inputs-file.md#plugins-inputs-file-mode) | [string](introduction.md#string), one of `["tail", "read"]` | No |
-| [`path`](plugins-inputs-file.md#plugins-inputs-file-path) | [array](introduction.md#array) | Yes |
-| [`sincedb_clean_after`](plugins-inputs-file.md#plugins-inputs-file-sincedb_clean_after) | [number](introduction.md#number) or [string_duration](plugins-inputs-file.md#plugins-inputs-file-string_duration) | No |
-| [`sincedb_path`](plugins-inputs-file.md#plugins-inputs-file-sincedb_path) | [string](introduction.md#string) | No |
-| [`sincedb_write_interval`](plugins-inputs-file.md#plugins-inputs-file-sincedb_write_interval) | [number](introduction.md#number) or [string_duration](plugins-inputs-file.md#plugins-inputs-file-string_duration) | No |
-| [`start_position`](plugins-inputs-file.md#plugins-inputs-file-start_position) | [string](introduction.md#string), one of `["beginning", "end"]` | No |
-| [`stat_interval`](plugins-inputs-file.md#plugins-inputs-file-stat_interval) | [number](introduction.md#number) or [string_duration](plugins-inputs-file.md#plugins-inputs-file-string_duration) | No |
+| [`check_archive_validity`](plugins-inputs-file.md#plugins-inputs-file-check_archive_validity) | [boolean](value-types.md#boolean) | No |
+| [`close_older`](plugins-inputs-file.md#plugins-inputs-file-close_older) | [number](value-types.md#number) or [string_duration](plugins-inputs-file.md#plugins-inputs-file-string_duration) | No |
+| [`delimiter`](plugins-inputs-file.md#plugins-inputs-file-delimiter) | [string](value-types.md#string) | No |
+| [`discover_interval`](plugins-inputs-file.md#plugins-inputs-file-discover_interval) | [number](value-types.md#number) | No |
+| [`ecs_compatibility`](plugins-inputs-file.md#plugins-inputs-file-ecs_compatibility) | [string](value-types.md#string) | No |
+| [`exclude`](plugins-inputs-file.md#plugins-inputs-file-exclude) | [array](value-types.md#array) | No |
+| [`exit_after_read`](plugins-inputs-file.md#plugins-inputs-file-exit_after_read) | [boolean](value-types.md#boolean) | No |
+| [`file_chunk_count`](plugins-inputs-file.md#plugins-inputs-file-file_chunk_count) | [number](value-types.md#number) | No |
+| [`file_chunk_size`](plugins-inputs-file.md#plugins-inputs-file-file_chunk_size) | [number](value-types.md#number) | No |
+| [`file_completed_action`](plugins-inputs-file.md#plugins-inputs-file-file_completed_action) | [string](value-types.md#string), one of `["delete", "log", "log_and_delete"]` | No |
+| [`file_completed_log_path`](plugins-inputs-file.md#plugins-inputs-file-file_completed_log_path) | [string](value-types.md#string) | No |
+| [`file_sort_by`](plugins-inputs-file.md#plugins-inputs-file-file_sort_by) | [string](value-types.md#string), one of `["last_modified", "path"]` | No |
+| [`file_sort_direction`](plugins-inputs-file.md#plugins-inputs-file-file_sort_direction) | [string](value-types.md#string), one of `["asc", "desc"]` | No |
+| [`ignore_older`](plugins-inputs-file.md#plugins-inputs-file-ignore_older) | [number](value-types.md#number) or [string_duration](plugins-inputs-file.md#plugins-inputs-file-string_duration) | No |
+| [`max_open_files`](plugins-inputs-file.md#plugins-inputs-file-max_open_files) | [number](value-types.md#number) | No |
+| [`mode`](plugins-inputs-file.md#plugins-inputs-file-mode) | [string](value-types.md#string), one of `["tail", "read"]` | No |
+| [`path`](plugins-inputs-file.md#plugins-inputs-file-path) | [array](value-types.md#array) | Yes |
+| [`sincedb_clean_after`](plugins-inputs-file.md#plugins-inputs-file-sincedb_clean_after) | [number](value-types.md#number) or [string_duration](plugins-inputs-file.md#plugins-inputs-file-string_duration) | No |
+| [`sincedb_path`](plugins-inputs-file.md#plugins-inputs-file-sincedb_path) | [string](value-types.md#string) | No |
+| [`sincedb_write_interval`](plugins-inputs-file.md#plugins-inputs-file-sincedb_write_interval) | [number](value-types.md#number) or [string_duration](plugins-inputs-file.md#plugins-inputs-file-string_duration) | No |
+| [`start_position`](plugins-inputs-file.md#plugins-inputs-file-start_position) | [string](value-types.md#string), one of `["beginning", "end"]` | No |
+| [`stat_interval`](plugins-inputs-file.md#plugins-inputs-file-stat_interval) | [number](value-types.md#number) or [string_duration](plugins-inputs-file.md#plugins-inputs-file-string_duration) | No |
 
 Also see [Common options](plugins-inputs-file.md#plugins-inputs-file-common-options) for a list of options supported by all input plugins.
 
@@ -131,7 +131,7 @@ Also see [Common options](plugins-inputs-file.md#plugins-inputs-file-common-opti
 
 ### `check_archive_validity` [plugins-inputs-file-check_archive_validity]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * The default is `false`.
 
 When set to `true`, this setting verifies that a compressed file is valid before processing it. There are two passes through the file—​one pass to verify that the file is valid, and another pass to process the file.
@@ -141,7 +141,7 @@ Validating a compressed file requires more processing time, but can prevent a co
 
 ### `close_older` [plugins-inputs-file-close_older]
 
-* Value type is [number](introduction.md#number) or [string_duration](plugins-inputs-file.md#plugins-inputs-file-string_duration)
+* Value type is [number](value-types.md#number) or [string_duration](plugins-inputs-file.md#plugins-inputs-file-string_duration)
 * Default value is `"1 hour"`
 
 The file input closes any files that were last read the specified duration (seconds if a number is specified) ago. This has different implications depending on if a file is being tailed or read. If tailing, and there is a large time gap in incoming data the file can be closed (allowing other files to be opened) but will be queued for reopening when new data is detected. If reading, the file will be closed after closed_older seconds from when the last bytes were read. This setting is retained for backward compatibility if you upgrade the plugin to 4.1.0+, are reading not tailing and do not switch to using Read mode.
@@ -149,7 +149,7 @@ The file input closes any files that were last read the specified duration (seco
 
 ### `delimiter` [plugins-inputs-file-delimiter]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"\n"`
 
 set the new line delimiter, defaults to "\n". Note that when reading compressed files this setting is not used, instead the standard Windows or Unix line endings are used.
@@ -157,7 +157,7 @@ set the new line delimiter, defaults to "\n". Note that when reading compressed 
 
 ### `discover_interval` [plugins-inputs-file-discover_interval]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `15`
 
 How often we expand the filename patterns in the `path` option to discover new files to watch. This value is a multiple to `stat_interval`, e.g. if `stat_interval` is "500 ms" then new files files could be discovered every 15 X 500 milliseconds - 7.5 seconds. In practice, this will be the best case because the time taken to read new content needs to be factored in.
@@ -165,7 +165,7 @@ How often we expand the filename patterns in the `path` option to discover new f
 
 ### `ecs_compatibility` [plugins-inputs-file-ecs_compatibility]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Supported values are:
 
     * `disabled`: sets non-ECS metadata on event (such as top-level `host`, `path`)
@@ -182,7 +182,7 @@ Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)](ht
 
 ### `exclude` [plugins-inputs-file-exclude]
 
-* Value type is [array](introduction.md#array)
+* Value type is [array](value-types.md#array)
 * There is no default value for this setting.
 
 Exclusions (matched against the filename, not full path). Filename patterns are valid here, too. For example, if you have
@@ -200,7 +200,7 @@ In Tail mode, you might want to exclude gzipped files:
 
 ### `exit_after_read` [plugins-inputs-file-exit_after_read]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 This option can be used in `read` mode to enforce closing all watchers when file gets read. Can be used in situation when content of the file is static and won’t change during execution. When set to `true` it also disables active discovery of the files - only files that were in the directories when process was started will be read. It supports `sincedb` entries. When file was processed once, then modified - next run will only read newly added entries.
@@ -208,7 +208,7 @@ This option can be used in `read` mode to enforce closing all watchers when file
 
 ### `file_chunk_count` [plugins-inputs-file-file_chunk_count]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `4611686018427387903`
 
 When combined with the `file_chunk_size`, this option sets how many chunks (bands or stripes) are read from each file before moving to the next active file. For example, a `file_chunk_count` of 32 and a `file_chunk_size` 32KB will process the next 1MB from each active file. As the default is very large, the file is effectively read to EOF before moving to the next active file.
@@ -216,7 +216,7 @@ When combined with the `file_chunk_size`, this option sets how many chunks (band
 
 ### `file_chunk_size` [plugins-inputs-file-file_chunk_size]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `32768` (32KB)
 
 File content is read off disk in blocks or chunks and lines are extracted from the chunk. See [`file_chunk_count`](plugins-inputs-file.md#plugins-inputs-file-file_chunk_count) to see why and when to change this setting from the default.
@@ -232,7 +232,7 @@ When in `read` mode, what action should be carried out when a file is done with.
 
 ### `file_completed_log_path` [plugins-inputs-file-file_completed_log_path]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 Which file should the completely read file paths be appended to. Only specify this path to a file when `file_completed_action` is *log* or *log_and_delete*. IMPORTANT: this file is appended to only - it could become very large. You are responsible for file rotation.
@@ -256,7 +256,7 @@ Select between ascending and descending order when sorting "watched" files. If o
 
 ### `ignore_older` [plugins-inputs-file-ignore_older]
 
-* Value type is [number](introduction.md#number) or [string_duration](plugins-inputs-file.md#plugins-inputs-file-string_duration)
+* Value type is [number](value-types.md#number) or [string_duration](plugins-inputs-file.md#plugins-inputs-file-string_duration)
 * There is no default value for this setting.
 
 When the file input discovers a file that was last modified before the specified duration (seconds if a number is specified), the file is ignored. After it’s discovery, if an ignored file is modified it is no longer ignored and any new data is read. By default, this option is disabled. Note this unit is in seconds.
@@ -264,7 +264,7 @@ When the file input discovers a file that was last modified before the specified
 
 ### `max_open_files` [plugins-inputs-file-max_open_files]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * There is no default value for this setting.
 
 What is the maximum number of file_handles that this input consumes at any one time. Use close_older to close some files if you need to process more files than this number. This should not be set to the maximum the OS can do because file handles are needed for other LS plugins and OS processes. A default of 4095 is set in internally.
@@ -292,7 +292,7 @@ If `read` is specified, these settings are ignored:
 ### `path` [plugins-inputs-file-path]
 
 * This is a required setting.
-* Value type is [array](introduction.md#array)
+* Value type is [array](value-types.md#array)
 * There is no default value for this setting.
 
 The path(s) to the file(s) to use as an input. You can use filename patterns here, such as `/var/log/*.log`. If you use a pattern like `/var/log/**/*.log`, a recursive search of `/var/log` will be done for all `*.log` files. Paths must be absolute and cannot be relative.
@@ -302,7 +302,7 @@ You may also configure multiple paths. See an example on the [Logstash configura
 
 ### `sincedb_clean_after` [plugins-inputs-file-sincedb_clean_after]
 
-* Value type is [number](introduction.md#number) or [string_duration](plugins-inputs-file.md#plugins-inputs-file-string_duration)
+* Value type is [number](value-types.md#number) or [string_duration](plugins-inputs-file.md#plugins-inputs-file-string_duration)
 * The default value for this setting is "2 weeks".
 * If a number is specified then it is interpreted as **days** and can be decimal e.g. 0.5 is 12 hours.
 
@@ -311,7 +311,7 @@ The sincedb record now has a last active timestamp associated with it. If no cha
 
 ### `sincedb_path` [plugins-inputs-file-sincedb_path]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 Path of the sincedb database file (keeps track of the current position of monitored log files) that will be written to disk. The default will write sincedb files to `<path.data>/plugins/inputs/file` NOTE: it must be a file path and not a directory path
@@ -319,7 +319,7 @@ Path of the sincedb database file (keeps track of the current position of monito
 
 ### `sincedb_write_interval` [plugins-inputs-file-sincedb_write_interval]
 
-* Value type is [number](introduction.md#number) or [string_duration](plugins-inputs-file.md#plugins-inputs-file-string_duration)
+* Value type is [number](value-types.md#number) or [string_duration](plugins-inputs-file.md#plugins-inputs-file-string_duration)
 * Default value is `"15 seconds"`
 
 How often (in seconds) to write a since database with the current position of monitored log files.
@@ -337,7 +337,7 @@ This option only modifies "first contact" situations where a file is new and not
 
 ### `stat_interval` [plugins-inputs-file-stat_interval]
 
-* Value type is [number](introduction.md#number) or [string_duration](plugins-inputs-file.md#plugins-inputs-file-string_duration)
+* Value type is [number](value-types.md#number) or [string_duration](plugins-inputs-file.md#plugins-inputs-file-string_duration)
 * Default value is `"1 second"`
 
 How often (in seconds) we stat files to see if they have been modified. Increasing this interval will decrease the number of system calls we make, but increase the time to detect new log lines.

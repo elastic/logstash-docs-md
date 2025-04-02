@@ -40,7 +40,7 @@ This plugin supports the following configuration options plus the [Common option
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`source`](plugins-filters-extractnumbers.md#plugins-filters-extractnumbers-source) | [string](introduction.md#string) | No |
+| [`source`](plugins-filters-extractnumbers.md#plugins-filters-extractnumbers-source) | [string](value-types.md#string) | No |
 
 Also see [Common options](plugins-filters-extractnumbers.md#plugins-filters-extractnumbers-common-options) for a list of options supported by all filter plugins.
 
@@ -48,7 +48,7 @@ Also see [Common options](plugins-filters-extractnumbers.md#plugins-filters-extr
 
 ### `source` [plugins-filters-extractnumbers-source]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"message"`
 
 The source field for the data. By default is message.

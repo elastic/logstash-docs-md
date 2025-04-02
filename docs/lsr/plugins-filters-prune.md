@@ -60,11 +60,11 @@ This plugin supports the following configuration options plus the [Common option
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`blacklist_names`](plugins-filters-prune.md#plugins-filters-prune-blacklist_names) | [array](introduction.md#array) | No |
-| [`blacklist_values`](plugins-filters-prune.md#plugins-filters-prune-blacklist_values) | [hash](introduction.md#hash) | No |
-| [`interpolate`](plugins-filters-prune.md#plugins-filters-prune-interpolate) | [boolean](introduction.md#boolean) | No |
-| [`whitelist_names`](plugins-filters-prune.md#plugins-filters-prune-whitelist_names) | [array](introduction.md#array) | No |
-| [`whitelist_values`](plugins-filters-prune.md#plugins-filters-prune-whitelist_values) | [hash](introduction.md#hash) | No |
+| [`blacklist_names`](plugins-filters-prune.md#plugins-filters-prune-blacklist_names) | [array](value-types.md#array) | No |
+| [`blacklist_values`](plugins-filters-prune.md#plugins-filters-prune-blacklist_values) | [hash](value-types.md#hash) | No |
+| [`interpolate`](plugins-filters-prune.md#plugins-filters-prune-interpolate) | [boolean](value-types.md#boolean) | No |
+| [`whitelist_names`](plugins-filters-prune.md#plugins-filters-prune-whitelist_names) | [array](value-types.md#array) | No |
+| [`whitelist_values`](plugins-filters-prune.md#plugins-filters-prune-whitelist_values) | [hash](value-types.md#hash) | No |
 
 Also see [Common options](plugins-filters-prune.md#plugins-filters-prune-common-options) for a list of options supported by all filter plugins.
 
@@ -72,7 +72,7 @@ Also see [Common options](plugins-filters-prune.md#plugins-filters-prune-common-
 
 ### `blacklist_names` [plugins-filters-prune-blacklist_names]
 
-* Value type is [array](introduction.md#array)
+* Value type is [array](value-types.md#array)
 * Default value is `["%{[^}]+}"]`
 
 Exclude fields whose names match specified regexps, by default exclude unresolved `%{{field}}` strings.
@@ -88,7 +88,7 @@ Exclude fields whose names match specified regexps, by default exclude unresolve
 
 ### `blacklist_values` [plugins-filters-prune-blacklist_values]
 
-* Value type is [hash](introduction.md#hash)
+* Value type is [hash](value-types.md#hash)
 * Default value is `{}`
 
 Exclude specified fields if their values match one of the supplied regular expressions. In case field values are arrays, each array item is matched against the regular expressions and matching array items will be excluded.
@@ -106,7 +106,7 @@ Exclude specified fields if their values match one of the supplied regular expre
 
 ### `interpolate` [plugins-filters-prune-interpolate]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 Trigger whether configuration fields and values should be interpolated for dynamic values (when resolving `%{{some_field}}`). Probably adds some performance overhead. Defaults to false.
@@ -114,7 +114,7 @@ Trigger whether configuration fields and values should be interpolated for dynam
 
 ### `whitelist_names` [plugins-filters-prune-whitelist_names]
 
-* Value type is [array](introduction.md#array)
+* Value type is [array](value-types.md#array)
 * Default value is `[]`
 
 Include only fields only if their names match specified regexps, default to empty list which means include everything.
@@ -130,7 +130,7 @@ Include only fields only if their names match specified regexps, default to empt
 
 ### `whitelist_values` [plugins-filters-prune-whitelist_values]
 
-* Value type is [hash](introduction.md#hash)
+* Value type is [hash](value-types.md#hash)
 * Default value is `{}`
 
 Include specified fields only if their values match one of the supplied regular expressions. In case field values are arrays, each array item is matched against the regular expressions and only matching array items will be included. By default all fields that are not listed in this setting are kept unless pruned by other settings.

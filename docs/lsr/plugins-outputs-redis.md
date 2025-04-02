@@ -31,27 +31,27 @@ This plugin supports the following configuration options plus the [Common option
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`batch`](plugins-outputs-redis.md#plugins-outputs-redis-batch) | [boolean](introduction.md#boolean) | No |
-| [`batch_events`](plugins-outputs-redis.md#plugins-outputs-redis-batch_events) | [number](introduction.md#number) | No |
-| [`batch_timeout`](plugins-outputs-redis.md#plugins-outputs-redis-batch_timeout) | [number](introduction.md#number) | No |
-| [`congestion_interval`](plugins-outputs-redis.md#plugins-outputs-redis-congestion_interval) | [number](introduction.md#number) | No |
-| [`congestion_threshold`](plugins-outputs-redis.md#plugins-outputs-redis-congestion_threshold) | [number](introduction.md#number) | No |
-| [`data_type`](plugins-outputs-redis.md#plugins-outputs-redis-data_type) | [string](introduction.md#string), one of `["list", "channel"]` | Yes |
-| [`db`](plugins-outputs-redis.md#plugins-outputs-redis-db) | [number](introduction.md#number) | No |
-| [`host`](plugins-outputs-redis.md#plugins-outputs-redis-host) | [array](introduction.md#array) | No |
-| [`key`](plugins-outputs-redis.md#plugins-outputs-redis-key) | [string](introduction.md#string) | Yes |
-| [`password`](plugins-outputs-redis.md#plugins-outputs-redis-password) | [password](introduction.md#password) | No |
-| [`port`](plugins-outputs-redis.md#plugins-outputs-redis-port) | [number](introduction.md#number) | No |
-| [`reconnect_interval`](plugins-outputs-redis.md#plugins-outputs-redis-reconnect_interval) | [number](introduction.md#number) | No |
-| [`shuffle_hosts`](plugins-outputs-redis.md#plugins-outputs-redis-shuffle_hosts) | [boolean](introduction.md#boolean) | No |
-| [`ssl_certificate`](plugins-outputs-redis.md#plugins-outputs-redis-ssl_certificate) | [path](introduction.md#path) | No |
-| [`ssl_certificate_authorities`](plugins-outputs-redis.md#plugins-outputs-redis-ssl_certificate_authorities) | list of [path](introduction.md#path) | No |
-| [`ssl_cipher_suites`](plugins-outputs-redis.md#plugins-outputs-redis-ssl_cipher_suites) | list of [string](introduction.md#string) | No |
-| [`ssl_enabled`](plugins-outputs-redis.md#plugins-outputs-redis-ssl_enabled) | [boolean](introduction.md#boolean) | No |
-| [`ssl_key`](plugins-outputs-redis.md#plugins-outputs-redis-ssl_key) | [path](introduction.md#path) | No |
-| [`ssl_supported_protocols`](plugins-outputs-redis.md#plugins-outputs-redis-ssl_supported_protocols) | [string](introduction.md#string) | No |
-| [`ssl_verification_mode`](plugins-outputs-redis.md#plugins-outputs-redis-ssl_verification_mode) | [string](introduction.md#string), one of `["full", "none"]` | No |
-| [`timeout`](plugins-outputs-redis.md#plugins-outputs-redis-timeout) | [number](introduction.md#number) | No |
+| [`batch`](plugins-outputs-redis.md#plugins-outputs-redis-batch) | [boolean](value-types.md#boolean) | No |
+| [`batch_events`](plugins-outputs-redis.md#plugins-outputs-redis-batch_events) | [number](value-types.md#number) | No |
+| [`batch_timeout`](plugins-outputs-redis.md#plugins-outputs-redis-batch_timeout) | [number](value-types.md#number) | No |
+| [`congestion_interval`](plugins-outputs-redis.md#plugins-outputs-redis-congestion_interval) | [number](value-types.md#number) | No |
+| [`congestion_threshold`](plugins-outputs-redis.md#plugins-outputs-redis-congestion_threshold) | [number](value-types.md#number) | No |
+| [`data_type`](plugins-outputs-redis.md#plugins-outputs-redis-data_type) | [string](value-types.md#string), one of `["list", "channel"]` | Yes |
+| [`db`](plugins-outputs-redis.md#plugins-outputs-redis-db) | [number](value-types.md#number) | No |
+| [`host`](plugins-outputs-redis.md#plugins-outputs-redis-host) | [array](value-types.md#array) | No |
+| [`key`](plugins-outputs-redis.md#plugins-outputs-redis-key) | [string](value-types.md#string) | Yes |
+| [`password`](plugins-outputs-redis.md#plugins-outputs-redis-password) | [password](value-types.md#password) | No |
+| [`port`](plugins-outputs-redis.md#plugins-outputs-redis-port) | [number](value-types.md#number) | No |
+| [`reconnect_interval`](plugins-outputs-redis.md#plugins-outputs-redis-reconnect_interval) | [number](value-types.md#number) | No |
+| [`shuffle_hosts`](plugins-outputs-redis.md#plugins-outputs-redis-shuffle_hosts) | [boolean](value-types.md#boolean) | No |
+| [`ssl_certificate`](plugins-outputs-redis.md#plugins-outputs-redis-ssl_certificate) | [path](value-types.md#path) | No |
+| [`ssl_certificate_authorities`](plugins-outputs-redis.md#plugins-outputs-redis-ssl_certificate_authorities) | list of [path](value-types.md#path) | No |
+| [`ssl_cipher_suites`](plugins-outputs-redis.md#plugins-outputs-redis-ssl_cipher_suites) | list of [string](value-types.md#string) | No |
+| [`ssl_enabled`](plugins-outputs-redis.md#plugins-outputs-redis-ssl_enabled) | [boolean](value-types.md#boolean) | No |
+| [`ssl_key`](plugins-outputs-redis.md#plugins-outputs-redis-ssl_key) | [path](value-types.md#path) | No |
+| [`ssl_supported_protocols`](plugins-outputs-redis.md#plugins-outputs-redis-ssl_supported_protocols) | [string](value-types.md#string) | No |
+| [`ssl_verification_mode`](plugins-outputs-redis.md#plugins-outputs-redis-ssl_verification_mode) | [string](value-types.md#string), one of `["full", "none"]` | No |
+| [`timeout`](plugins-outputs-redis.md#plugins-outputs-redis-timeout) | [number](value-types.md#number) | No |
 
 Also see [Common options](plugins-outputs-redis.md#plugins-outputs-redis-common-options) for a list of options supported by all output plugins.
 
@@ -59,7 +59,7 @@ Also see [Common options](plugins-outputs-redis.md#plugins-outputs-redis-common-
 
 ### `batch` [plugins-outputs-redis-batch]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 Set to true if you want Redis to batch up values and send 1 RPUSH command instead of one command per value to push on the list.  Note that this only works with `data_type="list"` mode right now.
@@ -69,7 +69,7 @@ If true, we send an RPUSH every "batch_events" events or "batch_timeout" seconds
 
 ### `batch_events` [plugins-outputs-redis-batch_events]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `50`
 
 If batch is set to true, the number of events we queue up for an RPUSH.
@@ -77,7 +77,7 @@ If batch is set to true, the number of events we queue up for an RPUSH.
 
 ### `batch_timeout` [plugins-outputs-redis-batch_timeout]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `5`
 
 If batch is set to true, the maximum amount of time between RPUSH commands when there are pending events to flush.
@@ -85,7 +85,7 @@ If batch is set to true, the maximum amount of time between RPUSH commands when 
 
 ### `congestion_interval` [plugins-outputs-redis-congestion_interval]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `1`
 
 How often to check for congestion. Default is one second. Zero means to check on every event.
@@ -93,7 +93,7 @@ How often to check for congestion. Default is one second. Zero means to check on
 
 ### `congestion_threshold` [plugins-outputs-redis-congestion_threshold]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `0`
 
 In case Redis `data_type` is `list` and has more than `@congestion_threshold` items, block until someone consumes them and reduces congestion, otherwise if there are no consumers Redis will run out of memory, unless it was configured with OOM protection. But even with OOM protection, a single Redis list can block all other users of Redis, until Redis CPU consumption reaches the max allowed RAM size. A default value of 0 means that this limit is disabled. Only supported for `list` Redis `data_type`.
@@ -109,7 +109,7 @@ Either list or channel.  If `data_type` is list, then we will set RPUSH to key. 
 
 ### `db` [plugins-outputs-redis-db]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `0`
 
 The Redis database number.
@@ -117,7 +117,7 @@ The Redis database number.
 
 ### `host` [plugins-outputs-redis-host]
 
-* Value type is [array](introduction.md#array)
+* Value type is [array](value-types.md#array)
 * Default value is `["127.0.0.1"]`
 
 The hostname(s) of your Redis server(s). Ports may be specified on any hostname, which will override the global port config. If the hosts list is an array, Logstash will pick one random host to connect to, if that host is disconnected it will then pick another.
@@ -133,7 +133,7 @@ For example:
 
 ### `key` [plugins-outputs-redis-key]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 The name of a Redis list or channel. Dynamic names are valid here, for example `logstash-%{{type}}`.
@@ -141,7 +141,7 @@ The name of a Redis list or channel. Dynamic names are valid here, for example `
 
 ### `password` [plugins-outputs-redis-password]
 
-* Value type is [password](introduction.md#password)
+* Value type is [password](value-types.md#password)
 * There is no default value for this setting.
 
 Password to authenticate with.  There is no authentication by default.
@@ -149,7 +149,7 @@ Password to authenticate with.  There is no authentication by default.
 
 ### `port` [plugins-outputs-redis-port]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `6379`
 
 The default port to connect on. Can be overridden on any hostname.
@@ -157,7 +157,7 @@ The default port to connect on. Can be overridden on any hostname.
 
 ### `ssl` [plugins-outputs-redis-ssl]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 Enable SSL support.
@@ -165,7 +165,7 @@ Enable SSL support.
 
 ### `reconnect_interval` [plugins-outputs-redis-reconnect_interval]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `1`
 
 Interval for reconnecting to failed Redis connections
@@ -173,7 +173,7 @@ Interval for reconnecting to failed Redis connections
 
 ### `shuffle_hosts` [plugins-outputs-redis-shuffle_hosts]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `true`
 
 Shuffle the host list during Logstash startup.
@@ -181,7 +181,7 @@ Shuffle the host list during Logstash startup.
 
 ### `ssl_certificate` [plugins-outputs-redis-ssl_certificate]
 
-* Value type is [path](introduction.md#path)
+* Value type is [path](value-types.md#path)
 * There is no default value for this setting.
 
 Path to certificate in PEM format. This certificate will be presented to the other part of the TLS connection.
@@ -189,7 +189,7 @@ Path to certificate in PEM format. This certificate will be presented to the oth
 
 ### `ssl_certificate_authorities` [plugins-outputs-redis-ssl_certificate_authorities]
 
-* Value type is [array](introduction.md#array)
+* Value type is [array](value-types.md#array)
 * Default value is `[]`
 
 Validate the certificate chain against these authorities. You can define multiple files. All the certificates will be read and added to the trust store. The system CA path is automatically included.
@@ -197,7 +197,7 @@ Validate the certificate chain against these authorities. You can define multipl
 
 ### `ssl_cipher_suites` [plugins-outputs-redis-ssl_cipher_suites]
 
-* Value type is a list of [string](introduction.md#string)
+* Value type is a list of [string](value-types.md#string)
 * There is no default value for this setting
 
 The list of cipher suites to use, listed by priorities. Supported cipher suites vary depending on the Java and protocol versions.
@@ -205,7 +205,7 @@ The list of cipher suites to use, listed by priorities. Supported cipher suites 
 
 ### `ssl_enabled` [plugins-outputs-redis-ssl_enabled]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 Enable SSL (must be set for other `ssl_` options to take effect).
@@ -213,7 +213,7 @@ Enable SSL (must be set for other `ssl_` options to take effect).
 
 ### `ssl_key` [plugins-outputs-redis-ssl_key]
 
-* Value type is [path](introduction.md#path)
+* Value type is [path](value-types.md#path)
 * There is no default value for this setting.
 
 SSL key path
@@ -221,7 +221,7 @@ SSL key path
 
 ### `ssl_key_passphrase` [plugins-outputs-redis-ssl_key_passphrase]
 
-* Value type is [password](introduction.md#password)
+* Value type is [password](value-types.md#password)
 * Default value is `nil`
 
 SSL key passphrase
@@ -229,7 +229,7 @@ SSL key passphrase
 
 ### `ssl_supported_protocols` [plugins-outputs-redis-ssl_supported_protocols]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Allowed values are: `'TLSv1.1'`, `'TLSv1.2'`, `'TLSv1.3'`
 * Default depends on the JDK being used. With up-to-date Logstash, the default is `['TLSv1.2', 'TLSv1.3']`. `'TLSv1.1'` is not considered secure and is only provided for legacy applications.
 
@@ -255,7 +255,7 @@ Defines how to verify the certificates presented by another part in the TLS conn
 
 ### `timeout` [plugins-outputs-redis-timeout]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `5`
 
 Redis initial connection timeout in seconds.

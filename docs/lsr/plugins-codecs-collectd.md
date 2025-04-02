@@ -58,20 +58,20 @@ Be sure to replace `10.0.0.1` with the IP of your Logstash instance.
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`authfile`](plugins-codecs-collectd.md#plugins-codecs-collectd-authfile) | [string](introduction.md#string) | No |
-| [`nan_handling`](plugins-codecs-collectd.md#plugins-codecs-collectd-nan_handling) | [string](introduction.md#string), one of `["change_value", "warn", "drop"]` | No |
-| [`nan_tag`](plugins-codecs-collectd.md#plugins-codecs-collectd-nan_tag) | [string](introduction.md#string) | No |
-| [`nan_value`](plugins-codecs-collectd.md#plugins-codecs-collectd-nan_value) | [number](introduction.md#number) | No |
-| [`prune_intervals`](plugins-codecs-collectd.md#plugins-codecs-collectd-prune_intervals) | [boolean](introduction.md#boolean) | No |
-| [`security_level`](plugins-codecs-collectd.md#plugins-codecs-collectd-security_level) | [string](introduction.md#string), one of `["None", "Sign", "Encrypt"]` | No |
-| [`target`](plugins-codecs-collectd.md#plugins-codecs-collectd-target) | [string](introduction.md#string) | No |
-| [`typesdb`](plugins-codecs-collectd.md#plugins-codecs-collectd-typesdb) | [array](introduction.md#array) | No |
+| [`authfile`](plugins-codecs-collectd.md#plugins-codecs-collectd-authfile) | [string](value-types.md#string) | No |
+| [`nan_handling`](plugins-codecs-collectd.md#plugins-codecs-collectd-nan_handling) | [string](value-types.md#string), one of `["change_value", "warn", "drop"]` | No |
+| [`nan_tag`](plugins-codecs-collectd.md#plugins-codecs-collectd-nan_tag) | [string](value-types.md#string) | No |
+| [`nan_value`](plugins-codecs-collectd.md#plugins-codecs-collectd-nan_value) | [number](value-types.md#number) | No |
+| [`prune_intervals`](plugins-codecs-collectd.md#plugins-codecs-collectd-prune_intervals) | [boolean](value-types.md#boolean) | No |
+| [`security_level`](plugins-codecs-collectd.md#plugins-codecs-collectd-security_level) | [string](value-types.md#string), one of `["None", "Sign", "Encrypt"]` | No |
+| [`target`](plugins-codecs-collectd.md#plugins-codecs-collectd-target) | [string](value-types.md#string) | No |
+| [`typesdb`](plugins-codecs-collectd.md#plugins-codecs-collectd-typesdb) | [array](value-types.md#array) | No |
 
  
 
 ### `authfile` [plugins-codecs-collectd-authfile]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 Path to the authentication file. This file should have the same format as the [AuthFile](http://collectd.org/documentation/manpages/collectd.conf.5.shtml#authfile_filename) in collectd. You only need to set this option if the `security_level` is set to `Sign` or `Encrypt`
@@ -91,7 +91,7 @@ What to do when a value in the event is `NaN` (Not a Number)
 
 ### `nan_tag` [plugins-codecs-collectd-nan_tag]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"_collectdNaN"`
 
 The tag to add to the event if a `NaN` value was found Set this to an empty string ('') if you don’t want to tag
@@ -99,7 +99,7 @@ The tag to add to the event if a `NaN` value was found Set this to an empty stri
 
 ### `nan_value` [plugins-codecs-collectd-nan_value]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `0`
 
 Only relevant when `nan_handeling` is set to `change_value` Change NaN to this configured value
@@ -107,7 +107,7 @@ Only relevant when `nan_handeling` is set to `change_value` Change NaN to this c
 
 ### `prune_intervals` [plugins-codecs-collectd-prune_intervals]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `true`
 
 Prune interval records.  Defaults to `true`.
@@ -123,7 +123,7 @@ Security Level. Default is `None`. This setting mirrors the setting from the col
 
 ### `target` [plugins-codecs-collectd-target]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 Define the target field for placing the decoded values. If this setting is not set, data will be stored at the root (top level) of the event.
@@ -144,7 +144,7 @@ For example, if you want data to be put under the `document` field:
 
 ### `typesdb` [plugins-codecs-collectd-typesdb]
 
-* Value type is [array](introduction.md#array)
+* Value type is [array](value-types.md#array)
 * There is no default value for this setting.
 
 File path(s) to collectd `types.db` to use. The last matching pattern wins if you have identical pattern names in multiple files. If no types.db is provided the included `types.db` will be used (currently 5.4.0).

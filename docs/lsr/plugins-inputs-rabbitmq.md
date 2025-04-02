@@ -68,33 +68,33 @@ This plugin supports the following configuration options plus the [Common option
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`ack`](plugins-inputs-rabbitmq.md#plugins-inputs-rabbitmq-ack) | [boolean](introduction.md#boolean) | No |
-| [`arguments`](plugins-inputs-rabbitmq.md#plugins-inputs-rabbitmq-arguments) | [array](introduction.md#array) | No |
-| [`auto_delete`](plugins-inputs-rabbitmq.md#plugins-inputs-rabbitmq-auto_delete) | [boolean](introduction.md#boolean) | No |
-| [`automatic_recovery`](plugins-inputs-rabbitmq.md#plugins-inputs-rabbitmq-automatic_recovery) | [boolean](introduction.md#boolean) | No |
-| [`connect_retry_interval`](plugins-inputs-rabbitmq.md#plugins-inputs-rabbitmq-connect_retry_interval) | [number](introduction.md#number) | No |
-| [`connection_timeout`](plugins-inputs-rabbitmq.md#plugins-inputs-rabbitmq-connection_timeout) | [number](introduction.md#number) | No |
-| [`durable`](plugins-inputs-rabbitmq.md#plugins-inputs-rabbitmq-durable) | [boolean](introduction.md#boolean) | No |
-| [`exchange`](plugins-inputs-rabbitmq.md#plugins-inputs-rabbitmq-exchange) | [string](introduction.md#string) | No |
-| [`exchange_type`](plugins-inputs-rabbitmq.md#plugins-inputs-rabbitmq-exchange_type) | [string](introduction.md#string) | No |
-| [`exclusive`](plugins-inputs-rabbitmq.md#plugins-inputs-rabbitmq-exclusive) | [boolean](introduction.md#boolean) | No |
-| [`heartbeat`](plugins-inputs-rabbitmq.md#plugins-inputs-rabbitmq-heartbeat) | [number](introduction.md#number) | No |
-| [`host`](plugins-inputs-rabbitmq.md#plugins-inputs-rabbitmq-host) | [string](introduction.md#string) | Yes |
-| [`key`](plugins-inputs-rabbitmq.md#plugins-inputs-rabbitmq-key) | [string](introduction.md#string) | No |
-| [`metadata_enabled`](plugins-inputs-rabbitmq.md#plugins-inputs-rabbitmq-metadata_enabled) | [boolean](introduction.md#boolean) | No |
-| [`passive`](plugins-inputs-rabbitmq.md#plugins-inputs-rabbitmq-passive) | [boolean](introduction.md#boolean) | No |
-| [`password`](plugins-inputs-rabbitmq.md#plugins-inputs-rabbitmq-password) | [password](introduction.md#password) | No |
-| [`port`](plugins-inputs-rabbitmq.md#plugins-inputs-rabbitmq-port) | [number](introduction.md#number) | No |
-| [`prefetch_count`](plugins-inputs-rabbitmq.md#plugins-inputs-rabbitmq-prefetch_count) | [number](introduction.md#number) | No |
-| [`queue`](plugins-inputs-rabbitmq.md#plugins-inputs-rabbitmq-queue) | [string](introduction.md#string) | No |
-| [`ssl`](plugins-inputs-rabbitmq.md#plugins-inputs-rabbitmq-ssl) | [boolean](introduction.md#boolean) | No |
-| [`ssl_certificate_password`](plugins-inputs-rabbitmq.md#plugins-inputs-rabbitmq-ssl_certificate_password) | [string](introduction.md#string) | No |
+| [`ack`](plugins-inputs-rabbitmq.md#plugins-inputs-rabbitmq-ack) | [boolean](value-types.md#boolean) | No |
+| [`arguments`](plugins-inputs-rabbitmq.md#plugins-inputs-rabbitmq-arguments) | [array](value-types.md#array) | No |
+| [`auto_delete`](plugins-inputs-rabbitmq.md#plugins-inputs-rabbitmq-auto_delete) | [boolean](value-types.md#boolean) | No |
+| [`automatic_recovery`](plugins-inputs-rabbitmq.md#plugins-inputs-rabbitmq-automatic_recovery) | [boolean](value-types.md#boolean) | No |
+| [`connect_retry_interval`](plugins-inputs-rabbitmq.md#plugins-inputs-rabbitmq-connect_retry_interval) | [number](value-types.md#number) | No |
+| [`connection_timeout`](plugins-inputs-rabbitmq.md#plugins-inputs-rabbitmq-connection_timeout) | [number](value-types.md#number) | No |
+| [`durable`](plugins-inputs-rabbitmq.md#plugins-inputs-rabbitmq-durable) | [boolean](value-types.md#boolean) | No |
+| [`exchange`](plugins-inputs-rabbitmq.md#plugins-inputs-rabbitmq-exchange) | [string](value-types.md#string) | No |
+| [`exchange_type`](plugins-inputs-rabbitmq.md#plugins-inputs-rabbitmq-exchange_type) | [string](value-types.md#string) | No |
+| [`exclusive`](plugins-inputs-rabbitmq.md#plugins-inputs-rabbitmq-exclusive) | [boolean](value-types.md#boolean) | No |
+| [`heartbeat`](plugins-inputs-rabbitmq.md#plugins-inputs-rabbitmq-heartbeat) | [number](value-types.md#number) | No |
+| [`host`](plugins-inputs-rabbitmq.md#plugins-inputs-rabbitmq-host) | [string](value-types.md#string) | Yes |
+| [`key`](plugins-inputs-rabbitmq.md#plugins-inputs-rabbitmq-key) | [string](value-types.md#string) | No |
+| [`metadata_enabled`](plugins-inputs-rabbitmq.md#plugins-inputs-rabbitmq-metadata_enabled) | [boolean](value-types.md#boolean) | No |
+| [`passive`](plugins-inputs-rabbitmq.md#plugins-inputs-rabbitmq-passive) | [boolean](value-types.md#boolean) | No |
+| [`password`](plugins-inputs-rabbitmq.md#plugins-inputs-rabbitmq-password) | [password](value-types.md#password) | No |
+| [`port`](plugins-inputs-rabbitmq.md#plugins-inputs-rabbitmq-port) | [number](value-types.md#number) | No |
+| [`prefetch_count`](plugins-inputs-rabbitmq.md#plugins-inputs-rabbitmq-prefetch_count) | [number](value-types.md#number) | No |
+| [`queue`](plugins-inputs-rabbitmq.md#plugins-inputs-rabbitmq-queue) | [string](value-types.md#string) | No |
+| [`ssl`](plugins-inputs-rabbitmq.md#plugins-inputs-rabbitmq-ssl) | [boolean](value-types.md#boolean) | No |
+| [`ssl_certificate_password`](plugins-inputs-rabbitmq.md#plugins-inputs-rabbitmq-ssl_certificate_password) | [string](value-types.md#string) | No |
 | [`ssl_certificate_path`](plugins-inputs-rabbitmq.md#plugins-inputs-rabbitmq-ssl_certificate_path) | a valid filesystem path | No |
-| [`ssl_version`](plugins-inputs-rabbitmq.md#plugins-inputs-rabbitmq-ssl_version) | [string](introduction.md#string) | No |
-| [`subscription_retry_interval_seconds`](plugins-inputs-rabbitmq.md#plugins-inputs-rabbitmq-subscription_retry_interval_seconds) | [number](introduction.md#number) | Yes |
-| [`threads`](plugins-inputs-rabbitmq.md#plugins-inputs-rabbitmq-threads) | [number](introduction.md#number) | No |
-| [`user`](plugins-inputs-rabbitmq.md#plugins-inputs-rabbitmq-user) | [string](introduction.md#string) | No |
-| [`vhost`](plugins-inputs-rabbitmq.md#plugins-inputs-rabbitmq-vhost) | [string](introduction.md#string) | No |
+| [`ssl_version`](plugins-inputs-rabbitmq.md#plugins-inputs-rabbitmq-ssl_version) | [string](value-types.md#string) | No |
+| [`subscription_retry_interval_seconds`](plugins-inputs-rabbitmq.md#plugins-inputs-rabbitmq-subscription_retry_interval_seconds) | [number](value-types.md#number) | Yes |
+| [`threads`](plugins-inputs-rabbitmq.md#plugins-inputs-rabbitmq-threads) | [number](value-types.md#number) | No |
+| [`user`](plugins-inputs-rabbitmq.md#plugins-inputs-rabbitmq-user) | [string](value-types.md#string) | No |
+| [`vhost`](plugins-inputs-rabbitmq.md#plugins-inputs-rabbitmq-vhost) | [string](value-types.md#string) | No |
 
 Also see [Common options](plugins-inputs-rabbitmq.md#plugins-inputs-rabbitmq-common-options) for a list of options supported by all input plugins.
 
@@ -102,7 +102,7 @@ Also see [Common options](plugins-inputs-rabbitmq.md#plugins-inputs-rabbitmq-com
 
 ### `ack` [plugins-inputs-rabbitmq-ack]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `true`
 
 Enable message acknowledgements. With acknowledgements messages fetched by Logstash but not yet sent into the Logstash pipeline will be requeued by the server if Logstash shuts down. Acknowledgements will however hurt the message throughput.
@@ -112,7 +112,7 @@ This will only send an ack back every `prefetch_count` messages. Working in batc
 
 ### `arguments` [plugins-inputs-rabbitmq-arguments]
 
-* Value type is [array](introduction.md#array)
+* Value type is [array](value-types.md#array)
 * Default value is `{}`
 
 Optional queue arguments as an array.
@@ -126,7 +126,7 @@ Relevant RabbitMQ doc guides:
 
 ### `auto_delete` [plugins-inputs-rabbitmq-auto_delete]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 Should the queue be deleted on the broker when the last consumer disconnects? Set this option to `false` if you want the queue to remain on the broker, queueing up messages until a consumer comes along to consume them.
@@ -134,7 +134,7 @@ Should the queue be deleted on the broker when the last consumer disconnects? Se
 
 ### `automatic_recovery` [plugins-inputs-rabbitmq-automatic_recovery]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `true`
 
 Set this to [automatically recover](https://www.rabbitmq.com/connections.md#automatic-recovery) from a broken connection. You almost certainly don’t want to override this!
@@ -142,7 +142,7 @@ Set this to [automatically recover](https://www.rabbitmq.com/connections.md#auto
 
 ### `connect_retry_interval` [plugins-inputs-rabbitmq-connect_retry_interval]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `1`
 
 Time in seconds to wait before retrying a connection
@@ -150,7 +150,7 @@ Time in seconds to wait before retrying a connection
 
 ### `connection_timeout` [plugins-inputs-rabbitmq-connection_timeout]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * There is no default value for this setting.
 
 The default connection timeout in milliseconds. If not specified the timeout is infinite.
@@ -158,7 +158,7 @@ The default connection timeout in milliseconds. If not specified the timeout is 
 
 ### `durable` [plugins-inputs-rabbitmq-durable]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 Is this queue durable? (aka; Should it survive a broker restart?) If consuming directly from a queue you must set this value to match the existing queue setting, otherwise the connection will fail due to an inequivalent arg error.
@@ -166,7 +166,7 @@ Is this queue durable? (aka; Should it survive a broker restart?) If consuming d
 
 ### `exchange` [plugins-inputs-rabbitmq-exchange]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 The name of the exchange to bind the queue to. Specify `exchange_type` as well to declare the exchange if it does not exist
@@ -174,7 +174,7 @@ The name of the exchange to bind the queue to. Specify `exchange_type` as well t
 
 ### `exchange_type` [plugins-inputs-rabbitmq-exchange_type]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 The type of the exchange to bind to. Specifying this will cause this plugin to declare the exchange if it does not exist.
@@ -182,7 +182,7 @@ The type of the exchange to bind to. Specifying this will cause this plugin to d
 
 ### `exclusive` [plugins-inputs-rabbitmq-exclusive]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 Is the queue exclusive? Exclusive queues can only be used by the connection that declared them and will be deleted when it is closed (e.g. due to a Logstash restart).
@@ -190,7 +190,7 @@ Is the queue exclusive? Exclusive queues can only be used by the connection that
 
 ### `heartbeat` [plugins-inputs-rabbitmq-heartbeat]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * There is no default value for this setting.
 
 [Heartbeat timeout](https://www.rabbitmq.com/heartbeats.md) in seconds. If unspecified then heartbeat timeout of 60 seconds will be used.
@@ -199,7 +199,7 @@ Is the queue exclusive? Exclusive queues can only be used by the connection that
 ### `host` [plugins-inputs-rabbitmq-host]
 
 * This is a required setting.
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 Common functionality for the rabbitmq input/output RabbitMQ server address(es) host can either be a single host, or a list of hosts i.e. host ⇒ "localhost" or host ⇒ ["host01", "host02]
@@ -209,7 +209,7 @@ if multiple hosts are provided on the initial connection and any subsequent reco
 
 ### `key` [plugins-inputs-rabbitmq-key]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"logstash"`
 
 The routing key to use when binding a queue to the exchange. This is only relevant for direct or topic exchanges.
@@ -220,7 +220,7 @@ The routing key to use when binding a queue to the exchange. This is only releva
 
 ### `metadata_enabled` [plugins-inputs-rabbitmq-metadata_enabled]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Accepted values are:
 
     * `none`: no metadata is added
@@ -245,7 +245,7 @@ Enable metadata about the RabbitMQ topic to be added to the event’s `@metadata
 
 ### `passive` [plugins-inputs-rabbitmq-passive]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 If true the queue will be passively declared, meaning it must already exist on the server. To have Logstash create the queue if necessary leave this option as false. If actively declaring a queue that already exists, the queue options for this plugin (durable etc) must match those of the existing queue.
@@ -253,7 +253,7 @@ If true the queue will be passively declared, meaning it must already exist on t
 
 ### `password` [plugins-inputs-rabbitmq-password]
 
-* Value type is [password](introduction.md#password)
+* Value type is [password](value-types.md#password)
 * Default value is `"guest"`
 
 RabbitMQ password
@@ -261,7 +261,7 @@ RabbitMQ password
 
 ### `port` [plugins-inputs-rabbitmq-port]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `5672`
 
 RabbitMQ port to connect on
@@ -269,7 +269,7 @@ RabbitMQ port to connect on
 
 ### `prefetch_count` [plugins-inputs-rabbitmq-prefetch_count]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `256`
 
 Prefetch count. If acknowledgements are enabled with the `ack` option, specifies the number of outstanding unacknowledged messages allowed.
@@ -277,7 +277,7 @@ Prefetch count. If acknowledgements are enabled with the `ack` option, specifies
 
 ### `queue` [plugins-inputs-rabbitmq-queue]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `""`
 
 The properties to extract from each message and store in a @metadata field.
@@ -291,7 +291,7 @@ If updating this list, remember to update the documentation above too. The defau
 
 ### `ssl` [plugins-inputs-rabbitmq-ssl]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * There is no default value for this setting.
 
 Enable or disable SSL. Note that by default remote certificate verification is off. Specify ssl_certificate_path and ssl_certificate_password if you need certificate verification
@@ -299,7 +299,7 @@ Enable or disable SSL. Note that by default remote certificate verification is o
 
 ### `ssl_certificate_password` [plugins-inputs-rabbitmq-ssl_certificate_password]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 Password for the encrypted PKCS12 (.p12) certificate file specified in ssl_certificate_path
@@ -307,7 +307,7 @@ Password for the encrypted PKCS12 (.p12) certificate file specified in ssl_certi
 
 ### `ssl_certificate_path` [plugins-inputs-rabbitmq-ssl_certificate_path]
 
-* Value type is [path](introduction.md#path)
+* Value type is [path](value-types.md#path)
 * There is no default value for this setting.
 
 Path to an SSL certificate in PKCS12 (.p12) format used for verifying the remote host
@@ -315,7 +315,7 @@ Path to an SSL certificate in PKCS12 (.p12) format used for verifying the remote
 
 ### `ssl_version` [plugins-inputs-rabbitmq-ssl_version]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"TLSv1.2"`
 
 Version of the SSL protocol to use.
@@ -324,7 +324,7 @@ Version of the SSL protocol to use.
 ### `subscription_retry_interval_seconds` [plugins-inputs-rabbitmq-subscription_retry_interval_seconds]
 
 * This is a required setting.
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `5`
 
 Amount of time in seconds to wait after a failed subscription request before retrying. Subscribes can fail if the server goes away and then comes back.
@@ -332,13 +332,13 @@ Amount of time in seconds to wait after a failed subscription request before ret
 
 ### `threads` [plugins-inputs-rabbitmq-threads]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `1`
 
 
 ### `user` [plugins-inputs-rabbitmq-user]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"guest"`
 
 RabbitMQ username
@@ -346,7 +346,7 @@ RabbitMQ username
 
 ### `vhost` [plugins-inputs-rabbitmq-vhost]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"/"`
 
 The vhost (virtual host) to use. If you don’t know what this is, leave the default. With the exception of the default vhost ("/"), names of vhosts should not begin with a forward slash.

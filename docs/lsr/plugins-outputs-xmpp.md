@@ -36,12 +36,12 @@ This plugin supports the following configuration options plus the [Common option
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`host`](plugins-outputs-xmpp.md#plugins-outputs-xmpp-host) | [string](introduction.md#string) | No |
-| [`message`](plugins-outputs-xmpp.md#plugins-outputs-xmpp-message) | [string](introduction.md#string) | Yes |
-| [`password`](plugins-outputs-xmpp.md#plugins-outputs-xmpp-password) | [password](introduction.md#password) | Yes |
-| [`rooms`](plugins-outputs-xmpp.md#plugins-outputs-xmpp-rooms) | [array](introduction.md#array) | No |
-| [`user`](plugins-outputs-xmpp.md#plugins-outputs-xmpp-user) | [string](introduction.md#string) | Yes |
-| [`users`](plugins-outputs-xmpp.md#plugins-outputs-xmpp-users) | [array](introduction.md#array) | No |
+| [`host`](plugins-outputs-xmpp.md#plugins-outputs-xmpp-host) | [string](value-types.md#string) | No |
+| [`message`](plugins-outputs-xmpp.md#plugins-outputs-xmpp-message) | [string](value-types.md#string) | Yes |
+| [`password`](plugins-outputs-xmpp.md#plugins-outputs-xmpp-password) | [password](value-types.md#password) | Yes |
+| [`rooms`](plugins-outputs-xmpp.md#plugins-outputs-xmpp-rooms) | [array](value-types.md#array) | No |
+| [`user`](plugins-outputs-xmpp.md#plugins-outputs-xmpp-user) | [string](value-types.md#string) | Yes |
+| [`users`](plugins-outputs-xmpp.md#plugins-outputs-xmpp-users) | [array](value-types.md#array) | No |
 
 Also see [Common options](plugins-outputs-xmpp.md#plugins-outputs-xmpp-common-options) for a list of options supported by all output plugins.
 
@@ -49,7 +49,7 @@ Also see [Common options](plugins-outputs-xmpp.md#plugins-outputs-xmpp-common-op
 
 ### `host` [plugins-outputs-xmpp-host]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 The xmpp server to connect to. This is optional. If you omit this setting, the host on the user/identity is used. (foo.com for `user@foo.com`)
@@ -58,7 +58,7 @@ The xmpp server to connect to. This is optional. If you omit this setting, the h
 ### `message` [plugins-outputs-xmpp-message]
 
 * This is a required setting.
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 The message to send. This supports dynamic strings like `%{{host}}`
@@ -67,7 +67,7 @@ The message to send. This supports dynamic strings like `%{{host}}`
 ### `password` [plugins-outputs-xmpp-password]
 
 * This is a required setting.
-* Value type is [password](introduction.md#password)
+* Value type is [password](value-types.md#password)
 * There is no default value for this setting.
 
 The xmpp password for the user/identity.
@@ -75,7 +75,7 @@ The xmpp password for the user/identity.
 
 ### `rooms` [plugins-outputs-xmpp-rooms]
 
-* Value type is [array](introduction.md#array)
+* Value type is [array](value-types.md#array)
 * There is no default value for this setting.
 
 if muc/multi-user-chat required, give the name of the room that you want to join: room@conference.domain/nick
@@ -84,7 +84,7 @@ if muc/multi-user-chat required, give the name of the room that you want to join
 ### `user` [plugins-outputs-xmpp-user]
 
 * This is a required setting.
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 The user or resource ID, like `foo@example.com`.
@@ -92,7 +92,7 @@ The user or resource ID, like `foo@example.com`.
 
 ### `users` [plugins-outputs-xmpp-users]
 
-* Value type is [array](introduction.md#array)
+* Value type is [array](value-types.md#array)
 * There is no default value for this setting.
 
 The users to send messages to

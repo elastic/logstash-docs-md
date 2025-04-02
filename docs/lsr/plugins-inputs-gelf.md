@@ -31,14 +31,14 @@ This plugin supports the following configuration options plus the [Common option
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`host`](plugins-inputs-gelf.md#plugins-inputs-gelf-host) | [string](introduction.md#string) | No |
-| [`use_udp`](plugins-inputs-gelf.md#plugins-inputs-gelf-use_udp) | [boolean](introduction.md#boolean) | No |
-| [`use_tcp`](plugins-inputs-gelf.md#plugins-inputs-gelf-use_tcp) | [boolean](introduction.md#boolean) | No |
-| [`port`](plugins-inputs-gelf.md#plugins-inputs-gelf-port) | [number](introduction.md#number) | No |
-| [`port_tcp`](plugins-inputs-gelf.md#plugins-inputs-gelf-port_tcp) | [number](introduction.md#number) | No |
-| [`port_udp`](plugins-inputs-gelf.md#plugins-inputs-gelf-port_udp) | [number](introduction.md#number) | No |
-| [`remap`](plugins-inputs-gelf.md#plugins-inputs-gelf-remap) | [boolean](introduction.md#boolean) | No |
-| [`strip_leading_underscore`](plugins-inputs-gelf.md#plugins-inputs-gelf-strip_leading_underscore) | [boolean](introduction.md#boolean) | No |
+| [`host`](plugins-inputs-gelf.md#plugins-inputs-gelf-host) | [string](value-types.md#string) | No |
+| [`use_udp`](plugins-inputs-gelf.md#plugins-inputs-gelf-use_udp) | [boolean](value-types.md#boolean) | No |
+| [`use_tcp`](plugins-inputs-gelf.md#plugins-inputs-gelf-use_tcp) | [boolean](value-types.md#boolean) | No |
+| [`port`](plugins-inputs-gelf.md#plugins-inputs-gelf-port) | [number](value-types.md#number) | No |
+| [`port_tcp`](plugins-inputs-gelf.md#plugins-inputs-gelf-port_tcp) | [number](value-types.md#number) | No |
+| [`port_udp`](plugins-inputs-gelf.md#plugins-inputs-gelf-port_udp) | [number](value-types.md#number) | No |
+| [`remap`](plugins-inputs-gelf.md#plugins-inputs-gelf-remap) | [boolean](value-types.md#boolean) | No |
+| [`strip_leading_underscore`](plugins-inputs-gelf.md#plugins-inputs-gelf-strip_leading_underscore) | [boolean](value-types.md#boolean) | No |
 
 Also see [Common options](plugins-inputs-gelf.md#plugins-inputs-gelf-common-options) for a list of options supported by all input plugins.
 
@@ -46,7 +46,7 @@ Also see [Common options](plugins-inputs-gelf.md#plugins-inputs-gelf-common-opti
 
 ### `host` [plugins-inputs-gelf-host]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"0.0.0.0"`
 
 The IP address or hostname to listen on.
@@ -54,7 +54,7 @@ The IP address or hostname to listen on.
 
 ### `use_udp` [plugins-inputs-gelf-use_udp]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `true`
 
 Whether to listen for gelf messages sent over udp
@@ -62,7 +62,7 @@ Whether to listen for gelf messages sent over udp
 
 ### `use_tcp` [plugins-inputs-gelf-use_tcp]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 Whether to listen for gelf messages sent over tcp
@@ -70,7 +70,7 @@ Whether to listen for gelf messages sent over tcp
 
 ### `port` [plugins-inputs-gelf-port]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `12201`
 
 The port to listen on. Remember that ports less than 1024 (privileged ports) may require root to use. port_tcp and port_udp can be used to set a specific port for each protocol.
@@ -78,7 +78,7 @@ The port to listen on. Remember that ports less than 1024 (privileged ports) may
 
 ### `port_tcp` [plugins-inputs-gelf-port_tcp]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * There is no default value for this setting.
 
 Tcp port to listen on. Use port instead of this setting unless you need a different port for udp than tcp
@@ -86,7 +86,7 @@ Tcp port to listen on. Use port instead of this setting unless you need a differ
 
 ### `port_udp` [plugins-inputs-gelf-port_udp]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * There is no default value for this setting.
 
 Udp port to listen on. Use port instead of this setting unless you need a different port for udp than tcp
@@ -94,7 +94,7 @@ Udp port to listen on. Use port instead of this setting unless you need a differ
 
 ### `remap` [plugins-inputs-gelf-remap]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `true`
 
 Whether or not to remap the GELF message fields to Logstash event fields or leave them intact.
@@ -107,7 +107,7 @@ Remapping converts the following GELF fields to Logstash equivalents:
 
 ### `strip_leading_underscore` [plugins-inputs-gelf-strip_leading_underscore]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `true`
 
 Whether or not to remove the leading `\_` in GELF fields or leave them in place. (Logstash < 1.2 did not remove them by default.). Note that GELF version 1.1 format now requires all non-standard fields to be added as an "additional" field, beginning with an underscore.

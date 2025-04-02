@@ -78,31 +78,31 @@ As of version `4.0.0` of this plugin, a number of previously deprecated settings
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`additional_codecs`](plugins-inputs-http.md#plugins-inputs-http-additional_codecs) | [hash](introduction.md#hash) | No |
-| [`ecs_compatibility`](plugins-inputs-http.md#plugins-inputs-http-ecs_compatibility) | [string](introduction.md#string) | No |
-| [`host`](plugins-inputs-http.md#plugins-inputs-http-host) | [string](introduction.md#string) | No |
-| [`password`](plugins-inputs-http.md#plugins-inputs-http-password) | [password](introduction.md#password) | No |
-| [`port`](plugins-inputs-http.md#plugins-inputs-http-port) | [number](introduction.md#number) | No |
-| [`max_pending_requests`](plugins-inputs-http.md#plugins-inputs-http-max_pending_requests) | [number](introduction.md#number) | No |
-| [`response_headers`](plugins-inputs-http.md#plugins-inputs-http-response_headers) | [hash](introduction.md#hash) | No |
-| [`response_code`](plugins-inputs-http.md#plugins-inputs-http-response_code) | [number](introduction.md#number), one of `[200, 201, 202, 204]` | No |
+| [`additional_codecs`](plugins-inputs-http.md#plugins-inputs-http-additional_codecs) | [hash](value-types.md#hash) | No |
+| [`ecs_compatibility`](plugins-inputs-http.md#plugins-inputs-http-ecs_compatibility) | [string](value-types.md#string) | No |
+| [`host`](plugins-inputs-http.md#plugins-inputs-http-host) | [string](value-types.md#string) | No |
+| [`password`](plugins-inputs-http.md#plugins-inputs-http-password) | [password](value-types.md#password) | No |
+| [`port`](plugins-inputs-http.md#plugins-inputs-http-port) | [number](value-types.md#number) | No |
+| [`max_pending_requests`](plugins-inputs-http.md#plugins-inputs-http-max_pending_requests) | [number](value-types.md#number) | No |
+| [`response_headers`](plugins-inputs-http.md#plugins-inputs-http-response_headers) | [hash](value-types.md#hash) | No |
+| [`response_code`](plugins-inputs-http.md#plugins-inputs-http-response_code) | [number](value-types.md#number), one of `[200, 201, 202, 204]` | No |
 | [`ssl_certificate`](plugins-inputs-http.md#plugins-inputs-http-ssl_certificate) | a valid filesystem path | No |
-| [`ssl_certificate_authorities`](plugins-inputs-http.md#plugins-inputs-http-ssl_certificate_authorities) | [array](introduction.md#array) | No |
-| [`ssl_cipher_suites`](plugins-inputs-http.md#plugins-inputs-http-ssl_cipher_suites) | [array](introduction.md#array) | No |
-| [`ssl_client_authentication`](plugins-inputs-http.md#plugins-inputs-http-ssl_client_authentication) | [string](introduction.md#string), one of `["none", "optional", "required"]` | No |
-| [`ssl_enabled`](plugins-inputs-http.md#plugins-inputs-http-ssl_enabled) | [boolean](introduction.md#boolean) | No |
-| [`ssl_handshake_timeout`](plugins-inputs-http.md#plugins-inputs-http-ssl_handshake_timeout) | [number](introduction.md#number) | No |
+| [`ssl_certificate_authorities`](plugins-inputs-http.md#plugins-inputs-http-ssl_certificate_authorities) | [array](value-types.md#array) | No |
+| [`ssl_cipher_suites`](plugins-inputs-http.md#plugins-inputs-http-ssl_cipher_suites) | [array](value-types.md#array) | No |
+| [`ssl_client_authentication`](plugins-inputs-http.md#plugins-inputs-http-ssl_client_authentication) | [string](value-types.md#string), one of `["none", "optional", "required"]` | No |
+| [`ssl_enabled`](plugins-inputs-http.md#plugins-inputs-http-ssl_enabled) | [boolean](value-types.md#boolean) | No |
+| [`ssl_handshake_timeout`](plugins-inputs-http.md#plugins-inputs-http-ssl_handshake_timeout) | [number](value-types.md#number) | No |
 | [`ssl_key`](plugins-inputs-http.md#plugins-inputs-http-ssl_key) | a valid filesystem path | No |
-| [`ssl_key_passphrase`](plugins-inputs-http.md#plugins-inputs-http-ssl_key_passphrase) | [password](introduction.md#password) | No |
-| [`ssl_keystore_password`](plugins-inputs-http.md#plugins-inputs-http-ssl_keystore_password) | [password](introduction.md#password) | No |
-| [`ssl_keystore_path`](plugins-inputs-http.md#plugins-inputs-http-ssl_keystore_path) | [path](introduction.md#path) | No |
-| [`ssl_keystore_type`](plugins-inputs-http.md#plugins-inputs-http-ssl_keystore_type) | [string](introduction.md#string) | No |
-| [`ssl_supported_protocols`](plugins-inputs-http.md#plugins-inputs-http-ssl_supported_protocols) | [array](introduction.md#array) | No |
-| [`ssl_truststore_password`](plugins-inputs-http.md#plugins-inputs-http-ssl_truststore_password) | [password](introduction.md#password) | No |
-| [`ssl_truststore_path`](plugins-inputs-http.md#plugins-inputs-http-ssl_truststore_path) | [path](introduction.md#path) | No |
-| [`ssl_truststore_type`](plugins-inputs-http.md#plugins-inputs-http-ssl_truststore_type) | [string](introduction.md#string) | No |
-| [`threads`](plugins-inputs-http.md#plugins-inputs-http-threads) | [number](introduction.md#number) | No |
-| [`user`](plugins-inputs-http.md#plugins-inputs-http-user) | [string](introduction.md#string) | No |
+| [`ssl_key_passphrase`](plugins-inputs-http.md#plugins-inputs-http-ssl_key_passphrase) | [password](value-types.md#password) | No |
+| [`ssl_keystore_password`](plugins-inputs-http.md#plugins-inputs-http-ssl_keystore_password) | [password](value-types.md#password) | No |
+| [`ssl_keystore_path`](plugins-inputs-http.md#plugins-inputs-http-ssl_keystore_path) | [path](value-types.md#path) | No |
+| [`ssl_keystore_type`](plugins-inputs-http.md#plugins-inputs-http-ssl_keystore_type) | [string](value-types.md#string) | No |
+| [`ssl_supported_protocols`](plugins-inputs-http.md#plugins-inputs-http-ssl_supported_protocols) | [array](value-types.md#array) | No |
+| [`ssl_truststore_password`](plugins-inputs-http.md#plugins-inputs-http-ssl_truststore_password) | [password](value-types.md#password) | No |
+| [`ssl_truststore_path`](plugins-inputs-http.md#plugins-inputs-http-ssl_truststore_path) | [path](value-types.md#path) | No |
+| [`ssl_truststore_type`](plugins-inputs-http.md#plugins-inputs-http-ssl_truststore_type) | [string](value-types.md#string) | No |
+| [`threads`](plugins-inputs-http.md#plugins-inputs-http-threads) | [number](value-types.md#number) | No |
+| [`user`](plugins-inputs-http.md#plugins-inputs-http-user) | [string](value-types.md#string) | No |
 
 Also see [Common options](plugins-inputs-http.md#plugins-inputs-http-common-options) for a list of options supported by all input plugins.
 
@@ -110,7 +110,7 @@ Also see [Common options](plugins-inputs-http.md#plugins-inputs-http-common-opti
 
 ### `additional_codecs` [plugins-inputs-http-additional_codecs]
 
-* Value type is [hash](introduction.md#hash)
+* Value type is [hash](value-types.md#hash)
 * Default value is `{"application/json"=>"json"}`
 
 Apply specific codecs for specific content types. The default codec will be applied only after this list is checked and no codec for the request’s content-type is found
@@ -118,7 +118,7 @@ Apply specific codecs for specific content types. The default codec will be appl
 
 ### `ecs_compatibility` [plugins-inputs-http-ecs_compatibility]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Supported values are:
 
     * `disabled`: unstructured connection metadata added at root level
@@ -182,7 +182,7 @@ Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)](ht
 
 ### `host` [plugins-inputs-http-host]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"0.0.0.0"`
 
 The host or ip to bind
@@ -190,7 +190,7 @@ The host or ip to bind
 
 ### `password` [plugins-inputs-http-password]
 
-* Value type is [password](introduction.md#password)
+* Value type is [password](value-types.md#password)
 * There is no default value for this setting.
 
 Password for basic authorization
@@ -198,7 +198,7 @@ Password for basic authorization
 
 ### `port` [plugins-inputs-http-port]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `8080`
 
 The TCP port to bind to
@@ -206,7 +206,7 @@ The TCP port to bind to
 
 ### `max_content_length` [plugins-inputs-http-max_content_length]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is 104857600
 
 The max content of an HTTP request in bytes. It defaults to 100mb.
@@ -214,7 +214,7 @@ The max content of an HTTP request in bytes. It defaults to 100mb.
 
 ### `max_pending_requests` [plugins-inputs-http-max_pending_requests]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is 200
 
 Maximum number of incoming requests to store in a temporary queue before being processed by worker threads. If a request arrives and the queue is full a 429 response will be returned immediately. This queue exists to deal with micro bursts of events and to improve overall throughput, so it should be changed very carefully as it can lead to memory pressure and impact performance. If you need to deal both periodic or unforeseen spikes in incoming requests consider enabling the Persistent Queue for the logstash pipeline.
@@ -234,7 +234,7 @@ If 204 (No Content) is set, the response body will not be sent in the response.
 
 ### `response_headers` [plugins-inputs-http-response_headers]
 
-* Value type is [hash](introduction.md#hash)
+* Value type is [hash](value-types.md#hash)
 * Default value is `{"Content-Type"=>"text/plain"}`
 
 specify a custom set of response headers
@@ -242,7 +242,7 @@ specify a custom set of response headers
 
 ### `remote_host_target_field` [plugins-inputs-http-remote_host_target_field]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"host"` when ECS is disabled
 * Default value is `[host][ip]` when ECS is enabled
 
@@ -251,7 +251,7 @@ specify a target field for the client host of the http request
 
 ### `request_headers_target_field` [plugins-inputs-http-request_headers_target_field]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"headers"` when ECS is disabled
 * Default value is `[@metadata][http][header]` when ECS is enabled
 
@@ -260,7 +260,7 @@ specify target field for the client host of the http request
 
 ### `ssl_certificate` [plugins-inputs-http-ssl_certificate]
 
-* Value type is [path](introduction.md#path)
+* Value type is [path](value-types.md#path)
 * There is no default value for this setting.
 
 SSL certificate to use.
@@ -268,7 +268,7 @@ SSL certificate to use.
 
 ### `ssl_certificate_authorities` [plugins-inputs-http-ssl_certificate_authorities]
 
-* Value type is [array](introduction.md#array)
+* Value type is [array](value-types.md#array)
 * Default value is `[]`
 
 Validate client certificates against these authorities. You can define multiple files or paths. All the certificates will be read and added to the trust store. You need to configure the [`ssl_client_authentication`](plugins-inputs-http.md#plugins-inputs-http-ssl_client_authentication) to `optional` or `required` to enable the verification.
@@ -276,7 +276,7 @@ Validate client certificates against these authorities. You can define multiple 
 
 ### `ssl_cipher_suites` [plugins-inputs-http-ssl_cipher_suites]
 
-* Value type is [array](introduction.md#array)
+* Value type is [array](value-types.md#array)
 * Default value is `['TLS_AES_256_GCM_SHA384', 'TLS_AES_128_GCM_SHA256', 'TLS_CHACHA20_POLY1305_SHA256', 'TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384', 'TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384', 'TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256', 'TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256', 'TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256', 'TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256', 'TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384', 'TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384', 'TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256', 'TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256']`
 
 The list of cipher suites to use, listed by priorities. This default list applies for OpenJDK 11.0.14 and higher. For older JDK versions, the default list includes only suites supported by that version. For example, the ChaCha20 family of ciphers is not supported in older versions.
@@ -297,7 +297,7 @@ This setting can be used only if [`ssl_certificate_authorities`](plugins-inputs-
 
 ### `ssl_enabled` [plugins-inputs-http-ssl_enabled]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 Events are, by default, sent in plain text. You can enable encryption by setting `ssl_enabled` to true and configuring the [`ssl_certificate`](plugins-inputs-http.md#plugins-inputs-http-ssl_certificate) and [`ssl_key`](plugins-inputs-http.md#plugins-inputs-http-ssl_key) options.
@@ -305,7 +305,7 @@ Events are, by default, sent in plain text. You can enable encryption by setting
 
 ### `ssl_handshake_timeout` [plugins-inputs-http-ssl_handshake_timeout]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `10000`
 
 Time in milliseconds for an incomplete ssl handshake to timeout
@@ -313,7 +313,7 @@ Time in milliseconds for an incomplete ssl handshake to timeout
 
 ### `ssl_key` [plugins-inputs-http-ssl_key]
 
-* Value type is [path](introduction.md#path)
+* Value type is [path](value-types.md#path)
 * There is no default value for this setting.
 
 SSL key to use. NOTE: This key need to be in the PKCS8 format, you can convert it with [OpenSSL](https://www.openssl.org/docs/man1.1.1/man1/openssl-pkcs8.md) for more information.
@@ -321,7 +321,7 @@ SSL key to use. NOTE: This key need to be in the PKCS8 format, you can convert i
 
 ### `ssl_key_passphrase` [plugins-inputs-http-ssl_key_passphrase]
 
-* Value type is [password](introduction.md#password)
+* Value type is [password](value-types.md#password)
 * There is no default value for this setting.
 
 SSL key passphrase to use.
@@ -329,7 +329,7 @@ SSL key passphrase to use.
 
 ### `ssl_keystore_path` [plugins-inputs-http-ssl_keystore_path]
 
-* Value type is [path](introduction.md#path)
+* Value type is [path](value-types.md#path)
 * There is no default value for this setting.
 
 The path for the keystore file that contains a private key and certificate. It must be either a Java keystore (jks) or a PKCS#12 file.
@@ -350,7 +350,7 @@ The format of the keystore file. It must be either `jks` or `pkcs12`.
 
 ### `ssl_keystore_password` [plugins-inputs-http-ssl_keystore_password]
 
-* Value type is [password](introduction.md#password)
+* Value type is [password](value-types.md#password)
 * There is no default value for this setting.
 
 Set the JKS keystore password
@@ -358,7 +358,7 @@ Set the JKS keystore password
 
 ### `ssl_supported_protocols` [plugins-inputs-http-ssl_supported_protocols]
 
-* Value type is [array](introduction.md#array)
+* Value type is [array](value-types.md#array)
 * Allowed values are: `'TLSv1.1'`, `'TLSv1.2'`, `'TLSv1.3'`
 * Default depends on the JDK being used. With up-to-date Logstash, the default is `['TLSv1.2', 'TLSv1.3']`. `'TLSv1.1'` is not considered secure and is only provided for legacy applications.
 
@@ -374,7 +374,7 @@ If you configure the plugin to use `'TLSv1.1'` on any recent JVM, such as the on
 
 ### `ssl_truststore_password` [plugins-inputs-http-ssl_truststore_password]
 
-* Value type is [password](introduction.md#password)
+* Value type is [password](value-types.md#password)
 * There is no default value for this setting.
 
 Set the truststore password
@@ -382,7 +382,7 @@ Set the truststore password
 
 ### `ssl_truststore_path` [plugins-inputs-http-ssl_truststore_path]
 
-* Value type is [path](introduction.md#path)
+* Value type is [path](value-types.md#path)
 * There is no default value for this setting.
 
 The path for the keystore that contains the certificates to trust. It must be either a Java keystore (jks) or a PKCS#12 file.
@@ -403,7 +403,7 @@ The format of the truststore file. It must be either `jks` or `pkcs12`.
 
 ### `threads` [plugins-inputs-http-threads]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is number of processors
 
 Number of threads to use for both accepting connections and handling requests
@@ -411,7 +411,7 @@ Number of threads to use for both accepting connections and handling requests
 
 ### `user` [plugins-inputs-http-user]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 Username for basic authorization

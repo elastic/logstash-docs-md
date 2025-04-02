@@ -31,17 +31,17 @@ This plugin supports the following configuration options plus the [Common option
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`exclude_metrics`](plugins-outputs-graphite.md#plugins-outputs-graphite-exclude_metrics) | [array](introduction.md#array) | No |
-| [`fields_are_metrics`](plugins-outputs-graphite.md#plugins-outputs-graphite-fields_are_metrics) | [boolean](introduction.md#boolean) | No |
-| [`host`](plugins-outputs-graphite.md#plugins-outputs-graphite-host) | [string](introduction.md#string) | No |
-| [`include_metrics`](plugins-outputs-graphite.md#plugins-outputs-graphite-include_metrics) | [array](introduction.md#array) | No |
-| [`metrics`](plugins-outputs-graphite.md#plugins-outputs-graphite-metrics) | [hash](introduction.md#hash) | No |
-| [`metrics_format`](plugins-outputs-graphite.md#plugins-outputs-graphite-metrics_format) | [string](introduction.md#string) | No |
-| [`nested_object_separator`](plugins-outputs-graphite.md#plugins-outputs-graphite-nested_object_separator) | [string](introduction.md#string) | No |
-| [`port`](plugins-outputs-graphite.md#plugins-outputs-graphite-port) | [number](introduction.md#number) | No |
-| [`reconnect_interval`](plugins-outputs-graphite.md#plugins-outputs-graphite-reconnect_interval) | [number](introduction.md#number) | No |
-| [`resend_on_failure`](plugins-outputs-graphite.md#plugins-outputs-graphite-resend_on_failure) | [boolean](introduction.md#boolean) | No |
-| [`timestamp_field`](plugins-outputs-graphite.md#plugins-outputs-graphite-timestamp_field) | [string](introduction.md#string) | No |
+| [`exclude_metrics`](plugins-outputs-graphite.md#plugins-outputs-graphite-exclude_metrics) | [array](value-types.md#array) | No |
+| [`fields_are_metrics`](plugins-outputs-graphite.md#plugins-outputs-graphite-fields_are_metrics) | [boolean](value-types.md#boolean) | No |
+| [`host`](plugins-outputs-graphite.md#plugins-outputs-graphite-host) | [string](value-types.md#string) | No |
+| [`include_metrics`](plugins-outputs-graphite.md#plugins-outputs-graphite-include_metrics) | [array](value-types.md#array) | No |
+| [`metrics`](plugins-outputs-graphite.md#plugins-outputs-graphite-metrics) | [hash](value-types.md#hash) | No |
+| [`metrics_format`](plugins-outputs-graphite.md#plugins-outputs-graphite-metrics_format) | [string](value-types.md#string) | No |
+| [`nested_object_separator`](plugins-outputs-graphite.md#plugins-outputs-graphite-nested_object_separator) | [string](value-types.md#string) | No |
+| [`port`](plugins-outputs-graphite.md#plugins-outputs-graphite-port) | [number](value-types.md#number) | No |
+| [`reconnect_interval`](plugins-outputs-graphite.md#plugins-outputs-graphite-reconnect_interval) | [number](value-types.md#number) | No |
+| [`resend_on_failure`](plugins-outputs-graphite.md#plugins-outputs-graphite-resend_on_failure) | [boolean](value-types.md#boolean) | No |
+| [`timestamp_field`](plugins-outputs-graphite.md#plugins-outputs-graphite-timestamp_field) | [string](value-types.md#string) | No |
 
 Also see [Common options](plugins-outputs-graphite.md#plugins-outputs-graphite-common-options) for a list of options supported by all output plugins.
 
@@ -49,7 +49,7 @@ Also see [Common options](plugins-outputs-graphite.md#plugins-outputs-graphite-c
 
 ### `exclude_metrics` [plugins-outputs-graphite-exclude_metrics]
 
-* Value type is [array](introduction.md#array)
+* Value type is [array](value-types.md#array)
 * Default value is `["%{[^}]+}"]`
 
 Exclude regex matched metric names, by default exclude unresolved `%{{field}}` strings.
@@ -57,7 +57,7 @@ Exclude regex matched metric names, by default exclude unresolved `%{{field}}` s
 
 ### `fields_are_metrics` [plugins-outputs-graphite-fields_are_metrics]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 An array indicating that these event fields should be treated as metrics and will be sent verbatim to Graphite. You may use either `fields_are_metrics` or `metrics`, but not both.
@@ -65,7 +65,7 @@ An array indicating that these event fields should be treated as metrics and wil
 
 ### `host` [plugins-outputs-graphite-host]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"localhost"`
 
 The hostname or IP address of the Graphite server.
@@ -73,7 +73,7 @@ The hostname or IP address of the Graphite server.
 
 ### `include_metrics` [plugins-outputs-graphite-include_metrics]
 
-* Value type is [array](introduction.md#array)
+* Value type is [array](value-types.md#array)
 * Default value is `[".*"]`
 
 Include only regex matched metric names.
@@ -81,7 +81,7 @@ Include only regex matched metric names.
 
 ### `metrics` [plugins-outputs-graphite-metrics]
 
-* Value type is [hash](introduction.md#hash)
+* Value type is [hash](value-types.md#hash)
 * Default value is `{}`
 
 The metric(s) to use. This supports dynamic strings like `%{{host}}` for metric names and also for values. This is a hash field with key being the metric name, value being the metric value. Example:
@@ -95,7 +95,7 @@ The value will be coerced to a floating point value. Values which cannot be coer
 
 ### `metrics_format` [plugins-outputs-graphite-metrics_format]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"*"`
 
 Defines the format of the metric string. The placeholder *** will be replaced with the name of the actual metric.
@@ -112,7 +112,7 @@ If no metrics_format is defined, the name of the metric will be used as fallback
 
 ### `nested_object_separator` [plugins-outputs-graphite-nested_object_separator]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"."`
 
 When hashes are passed in as values they are broken out into a dotted notation For instance if you configure this plugin with # [source,ruby] metrics ⇒ "mymetrics"
@@ -122,7 +122,7 @@ and "mymetrics" is a nested hash of *{a ⇒ 1, b ⇒ { c ⇒ 2 }}* this plugin w
 
 ### `port` [plugins-outputs-graphite-port]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `2003`
 
 The port to connect to on the Graphite server.
@@ -130,7 +130,7 @@ The port to connect to on the Graphite server.
 
 ### `reconnect_interval` [plugins-outputs-graphite-reconnect_interval]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `2`
 
 Interval between reconnect attempts to Carbon.
@@ -138,7 +138,7 @@ Interval between reconnect attempts to Carbon.
 
 ### `resend_on_failure` [plugins-outputs-graphite-resend_on_failure]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 Should metrics be resent on failure?
@@ -146,7 +146,7 @@ Should metrics be resent on failure?
 
 ### `timestamp_field` [plugins-outputs-graphite-timestamp_field]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"@timestamp"`
 
 Use this field for the timestamp instead of *@timestamp* which is the default. Useful when backfilling or just getting more accurate data into graphite since you probably have a cache layer infront of Logstash.

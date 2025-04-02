@@ -34,7 +34,7 @@ This plugin supports the following configuration options plus the [Common option
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`transliterate`](plugins-filters-i18n.md#plugins-filters-i18n-transliterate) | [array](introduction.md#array) | No |
+| [`transliterate`](plugins-filters-i18n.md#plugins-filters-i18n-transliterate) | [array](value-types.md#array) | No |
 
 Also see [Common options](plugins-filters-i18n.md#plugins-filters-i18n-common-options) for a list of options supported by all filter plugins.
 
@@ -42,7 +42,7 @@ Also see [Common options](plugins-filters-i18n.md#plugins-filters-i18n-common-op
 
 ### `transliterate` [plugins-filters-i18n-transliterate]
 
-* Value type is [array](introduction.md#array)
+* Value type is [array](value-types.md#array)
 * There is no default value for this setting.
 
 Replaces non-ASCII characters with an ASCII approximation, or if none exists, a replacement character which defaults to `?`

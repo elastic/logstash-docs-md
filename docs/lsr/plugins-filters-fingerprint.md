@@ -49,14 +49,14 @@ This plugin supports the following configuration options plus the [Common option
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`base64encode`](plugins-filters-fingerprint.md#plugins-filters-fingerprint-base64encode) | [boolean](introduction.md#boolean) | No |
-| [`concatenate_sources`](plugins-filters-fingerprint.md#plugins-filters-fingerprint-concatenate_sources) | [boolean](introduction.md#boolean) | No |
-| [`concatenate_all_fields`](plugins-filters-fingerprint.md#plugins-filters-fingerprint-concatenate_all_fields) | [boolean](introduction.md#boolean) | No |
-| [`ecs_compatibility`](plugins-filters-fingerprint.md#plugins-filters-fingerprint-ecs_compatibility) | [string](introduction.md#string) | No |
-| [`key`](plugins-filters-fingerprint.md#plugins-filters-fingerprint-key) | [password](introduction.md#password) | No |
-| [`method`](plugins-filters-fingerprint.md#plugins-filters-fingerprint-method) | [string](introduction.md#string), one of `["SHA1", "SHA256", "SHA384", "SHA512", "MD5", "MURMUR3", "MURMUR3_128", IPV4_NETWORK", "UUID", "PUNCTUATION"]` | Yes |
-| [`source`](plugins-filters-fingerprint.md#plugins-filters-fingerprint-source) | [array](introduction.md#array) | No |
-| [`target`](plugins-filters-fingerprint.md#plugins-filters-fingerprint-target) | [string](introduction.md#string) | No |
+| [`base64encode`](plugins-filters-fingerprint.md#plugins-filters-fingerprint-base64encode) | [boolean](value-types.md#boolean) | No |
+| [`concatenate_sources`](plugins-filters-fingerprint.md#plugins-filters-fingerprint-concatenate_sources) | [boolean](value-types.md#boolean) | No |
+| [`concatenate_all_fields`](plugins-filters-fingerprint.md#plugins-filters-fingerprint-concatenate_all_fields) | [boolean](value-types.md#boolean) | No |
+| [`ecs_compatibility`](plugins-filters-fingerprint.md#plugins-filters-fingerprint-ecs_compatibility) | [string](value-types.md#string) | No |
+| [`key`](plugins-filters-fingerprint.md#plugins-filters-fingerprint-key) | [password](value-types.md#password) | No |
+| [`method`](plugins-filters-fingerprint.md#plugins-filters-fingerprint-method) | [string](value-types.md#string), one of `["SHA1", "SHA256", "SHA384", "SHA512", "MD5", "MURMUR3", "MURMUR3_128", IPV4_NETWORK", "UUID", "PUNCTUATION"]` | Yes |
+| [`source`](plugins-filters-fingerprint.md#plugins-filters-fingerprint-source) | [array](value-types.md#array) | No |
+| [`target`](plugins-filters-fingerprint.md#plugins-filters-fingerprint-target) | [string](value-types.md#string) | No |
 
 Also see [Common options](plugins-filters-fingerprint.md#plugins-filters-fingerprint-common-options) for a list of options supported by all filter plugins.
 
@@ -64,7 +64,7 @@ Also see [Common options](plugins-filters-fingerprint.md#plugins-filters-fingerp
 
 ### `base64encode` [plugins-filters-fingerprint-base64encode]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 When set to `true`, the `SHA1`, `SHA256`, `SHA384`, `SHA512`, `MD5` and `MURMUR3_128` fingerprint methods will produce base64 encoded rather than hex encoded strings.
@@ -72,7 +72,7 @@ When set to `true`, the `SHA1`, `SHA256`, `SHA384`, `SHA512`, `MD5` and `MURMUR3
 
 ### `concatenate_sources` [plugins-filters-fingerprint-concatenate_sources]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 When set to `true` and `method` isn’t `UUID` or `PUNCTUATION`, the plugin concatenates the names and values of all fields given in the `source` option into one string (like the old checksum filter) before doing the fingerprint computation.
@@ -120,7 +120,7 @@ The output is:
 
 ### `concatenate_all_fields` [plugins-filters-fingerprint-concatenate_all_fields]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 When set to `true` and `method` isn’t `UUID` or `PUNCTUATION`, the plugin concatenates the names and values of all fields of the event into one string (like the old checksum filter) before doing the fingerprint computation. If `false` and at least one source field is given, the target field will be an array with fingerprints of the source fields given.
@@ -128,7 +128,7 @@ When set to `true` and `method` isn’t `UUID` or `PUNCTUATION`, the plugin conc
 
 ### `ecs_compatibility` [plugins-filters-fingerprint-ecs_compatibility]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Supported values are:
 
     * `disabled`: unstructured data added at root level
@@ -140,7 +140,7 @@ Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)](ht
 
 ### `key` [plugins-filters-fingerprint-key]
 
-* Value type is [password](introduction.md#password)
+* Value type is [password](value-types.md#password)
 * There is no default value for this setting.
 
 When used with the `IPV4_NETWORK` method fill in the subnet prefix length. With other methods, optionally fill in the HMAC key.
@@ -167,7 +167,7 @@ If set to `UUID`, a [UUID](https://en.wikipedia.org/wiki/Universally_unique_iden
 
 ### `source` [plugins-filters-fingerprint-source]
 
-* Value type is [array](introduction.md#array)
+* Value type is [array](value-types.md#array)
 * Default value is `"message"`
 
 The name(s) of the source field(s) whose contents will be used to create the fingerprint. If an array is given, see the `concatenate_sources` option.
@@ -175,7 +175,7 @@ The name(s) of the source field(s) whose contents will be used to create the fin
 
 ### `target` [plugins-filters-fingerprint-target]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"fingerprint"` when ECS is disabled
 * Default value is `"[event][hash]"` when ECS is enabled
 

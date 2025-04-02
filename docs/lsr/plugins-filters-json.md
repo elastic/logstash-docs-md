@@ -45,11 +45,11 @@ This plugin supports the following configuration options plus the [Common option
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`ecs_compatibility`](plugins-filters-json.md#plugins-filters-json-ecs_compatibility) | [string](introduction.md#string) | No |
-| [`skip_on_invalid_json`](plugins-filters-json.md#plugins-filters-json-skip_on_invalid_json) | [boolean](introduction.md#boolean) | No |
-| [`source`](plugins-filters-json.md#plugins-filters-json-source) | [string](introduction.md#string) | Yes |
-| [`tag_on_failure`](plugins-filters-json.md#plugins-filters-json-tag_on_failure) | [array](introduction.md#array) | No |
-| [`target`](plugins-filters-json.md#plugins-filters-json-target) | [string](introduction.md#string) | No |
+| [`ecs_compatibility`](plugins-filters-json.md#plugins-filters-json-ecs_compatibility) | [string](value-types.md#string) | No |
+| [`skip_on_invalid_json`](plugins-filters-json.md#plugins-filters-json-skip_on_invalid_json) | [boolean](value-types.md#boolean) | No |
+| [`source`](plugins-filters-json.md#plugins-filters-json-source) | [string](value-types.md#string) | Yes |
+| [`tag_on_failure`](plugins-filters-json.md#plugins-filters-json-tag_on_failure) | [array](value-types.md#array) | No |
+| [`target`](plugins-filters-json.md#plugins-filters-json-target) | [string](value-types.md#string) | No |
 
 Also see [Common options](plugins-filters-json.md#plugins-filters-json-common-options) for a list of options supported by all filter plugins.
 
@@ -57,7 +57,7 @@ Also see [Common options](plugins-filters-json.md#plugins-filters-json-common-op
 
 ### `ecs_compatibility` [plugins-filters-json-ecs_compatibility]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Supported values are:
 
     * `disabled`: does not use ECS-compatible field names
@@ -69,7 +69,7 @@ Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)](ht
 
 ### `skip_on_invalid_json` [plugins-filters-json-skip_on_invalid_json]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 Allows for skipping the filter on invalid JSON (this allows you to handle JSON and non-JSON data without warnings)
@@ -78,7 +78,7 @@ Allows for skipping the filter on invalid JSON (this allows you to handle JSON a
 ### `source` [plugins-filters-json-source]
 
 * This is a required setting.
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 The configuration for the JSON filter:
@@ -102,7 +102,7 @@ The above would parse the JSON from the `message` field.
 
 ### `tag_on_failure` [plugins-filters-json-tag_on_failure]
 
-* Value type is [array](introduction.md#array)
+* Value type is [array](value-types.md#array)
 * Default value is `["_jsonparsefailure"]`
 
 Append values to the `tags` field when there has been no successful match
@@ -110,7 +110,7 @@ Append values to the `tags` field when there has been no successful match
 
 ### `target` [plugins-filters-json-target]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 Define the target field for placing the parsed data. If this setting is omitted, the JSON data will be stored at the root (top level) of the event.

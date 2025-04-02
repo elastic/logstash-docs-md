@@ -34,16 +34,16 @@ This plugin supports the following configuration options plus the [Common option
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`group`](plugins-outputs-ganglia.md#plugins-outputs-ganglia-group) | [string](introduction.md#string) | No |
-| [`host`](plugins-outputs-ganglia.md#plugins-outputs-ganglia-host) | [string](introduction.md#string) | No |
-| [`lifetime`](plugins-outputs-ganglia.md#plugins-outputs-ganglia-lifetime) | [number](introduction.md#number) | No |
-| [`max_interval`](plugins-outputs-ganglia.md#plugins-outputs-ganglia-max_interval) | [number](introduction.md#number) | No |
-| [`metric`](plugins-outputs-ganglia.md#plugins-outputs-ganglia-metric) | [string](introduction.md#string) | Yes |
-| [`metric_type`](plugins-outputs-ganglia.md#plugins-outputs-ganglia-metric_type) | [string](introduction.md#string), one of `["string", "int8", "uint8", "int16", "uint16", "int32", "uint32", "float", "double"]` | No |
-| [`port`](plugins-outputs-ganglia.md#plugins-outputs-ganglia-port) | [number](introduction.md#number) | No |
-| [`slope`](plugins-outputs-ganglia.md#plugins-outputs-ganglia-slope) | [string](introduction.md#string), one of `["zero", "positive", "negative", "both", "unspecified"]` | No |
-| [`units`](plugins-outputs-ganglia.md#plugins-outputs-ganglia-units) | [string](introduction.md#string) | No |
-| [`value`](plugins-outputs-ganglia.md#plugins-outputs-ganglia-value) | [string](introduction.md#string) | Yes |
+| [`group`](plugins-outputs-ganglia.md#plugins-outputs-ganglia-group) | [string](value-types.md#string) | No |
+| [`host`](plugins-outputs-ganglia.md#plugins-outputs-ganglia-host) | [string](value-types.md#string) | No |
+| [`lifetime`](plugins-outputs-ganglia.md#plugins-outputs-ganglia-lifetime) | [number](value-types.md#number) | No |
+| [`max_interval`](plugins-outputs-ganglia.md#plugins-outputs-ganglia-max_interval) | [number](value-types.md#number) | No |
+| [`metric`](plugins-outputs-ganglia.md#plugins-outputs-ganglia-metric) | [string](value-types.md#string) | Yes |
+| [`metric_type`](plugins-outputs-ganglia.md#plugins-outputs-ganglia-metric_type) | [string](value-types.md#string), one of `["string", "int8", "uint8", "int16", "uint16", "int32", "uint32", "float", "double"]` | No |
+| [`port`](plugins-outputs-ganglia.md#plugins-outputs-ganglia-port) | [number](value-types.md#number) | No |
+| [`slope`](plugins-outputs-ganglia.md#plugins-outputs-ganglia-slope) | [string](value-types.md#string), one of `["zero", "positive", "negative", "both", "unspecified"]` | No |
+| [`units`](plugins-outputs-ganglia.md#plugins-outputs-ganglia-units) | [string](value-types.md#string) | No |
+| [`value`](plugins-outputs-ganglia.md#plugins-outputs-ganglia-value) | [string](value-types.md#string) | Yes |
 
 Also see [Common options](plugins-outputs-ganglia.md#plugins-outputs-ganglia-common-options) for a list of options supported by all output plugins.
 
@@ -51,7 +51,7 @@ Also see [Common options](plugins-outputs-ganglia.md#plugins-outputs-ganglia-com
 
 ### `group` [plugins-outputs-ganglia-group]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `""`
 
 Metric group
@@ -59,7 +59,7 @@ Metric group
 
 ### `host` [plugins-outputs-ganglia-host]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"localhost"`
 
 The address of the ganglia server.
@@ -67,7 +67,7 @@ The address of the ganglia server.
 
 ### `lifetime` [plugins-outputs-ganglia-lifetime]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `300`
 
 Lifetime in seconds of this metric
@@ -75,7 +75,7 @@ Lifetime in seconds of this metric
 
 ### `max_interval` [plugins-outputs-ganglia-max_interval]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `60`
 
 Maximum time in seconds between gmetric calls for this metric.
@@ -84,7 +84,7 @@ Maximum time in seconds between gmetric calls for this metric.
 ### `metric` [plugins-outputs-ganglia-metric]
 
 * This is a required setting.
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 The metric to use. This supports dynamic strings like `%{{host}}`
@@ -100,7 +100,7 @@ The type of value for this metric.
 
 ### `port` [plugins-outputs-ganglia-port]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `8649`
 
 The port to connect on your ganglia server.
@@ -116,7 +116,7 @@ Metric slope, represents metric behavior
 
 ### `units` [plugins-outputs-ganglia-units]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `""`
 
 Gmetric units for metric, such as "kb/sec" or "ms" or whatever unit this metric uses.
@@ -125,7 +125,7 @@ Gmetric units for metric, such as "kb/sec" or "ms" or whatever unit this metric 
 ### `value` [plugins-outputs-ganglia-value]
 
 * This is a required setting.
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 The value to use. This supports dynamic strings like `%{{bytes}}` It will be coerced to a floating point value. Values which cannot be coerced will zero (0)

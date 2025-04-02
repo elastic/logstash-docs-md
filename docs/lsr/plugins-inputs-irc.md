@@ -34,17 +34,17 @@ This plugin supports the following configuration options plus the [Common option
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`catch_all`](plugins-inputs-irc.md#plugins-inputs-irc-catch_all) | [boolean](introduction.md#boolean) | No |
-| [`channels`](plugins-inputs-irc.md#plugins-inputs-irc-channels) | [array](introduction.md#array) | Yes |
-| [`get_stats`](plugins-inputs-irc.md#plugins-inputs-irc-get_stats) | [boolean](introduction.md#boolean) | No |
-| [`host`](plugins-inputs-irc.md#plugins-inputs-irc-host) | [string](introduction.md#string) | Yes |
-| [`nick`](plugins-inputs-irc.md#plugins-inputs-irc-nick) | [string](introduction.md#string) | No |
-| [`password`](plugins-inputs-irc.md#plugins-inputs-irc-password) | [password](introduction.md#password) | No |
-| [`port`](plugins-inputs-irc.md#plugins-inputs-irc-port) | [number](introduction.md#number) | No |
-| [`real`](plugins-inputs-irc.md#plugins-inputs-irc-real) | [string](introduction.md#string) | No |
-| [`secure`](plugins-inputs-irc.md#plugins-inputs-irc-secure) | [boolean](introduction.md#boolean) | No |
-| [`stats_interval`](plugins-inputs-irc.md#plugins-inputs-irc-stats_interval) | [number](introduction.md#number) | No |
-| [`user`](plugins-inputs-irc.md#plugins-inputs-irc-user) | [string](introduction.md#string) | No |
+| [`catch_all`](plugins-inputs-irc.md#plugins-inputs-irc-catch_all) | [boolean](value-types.md#boolean) | No |
+| [`channels`](plugins-inputs-irc.md#plugins-inputs-irc-channels) | [array](value-types.md#array) | Yes |
+| [`get_stats`](plugins-inputs-irc.md#plugins-inputs-irc-get_stats) | [boolean](value-types.md#boolean) | No |
+| [`host`](plugins-inputs-irc.md#plugins-inputs-irc-host) | [string](value-types.md#string) | Yes |
+| [`nick`](plugins-inputs-irc.md#plugins-inputs-irc-nick) | [string](value-types.md#string) | No |
+| [`password`](plugins-inputs-irc.md#plugins-inputs-irc-password) | [password](value-types.md#password) | No |
+| [`port`](plugins-inputs-irc.md#plugins-inputs-irc-port) | [number](value-types.md#number) | No |
+| [`real`](plugins-inputs-irc.md#plugins-inputs-irc-real) | [string](value-types.md#string) | No |
+| [`secure`](plugins-inputs-irc.md#plugins-inputs-irc-secure) | [boolean](value-types.md#boolean) | No |
+| [`stats_interval`](plugins-inputs-irc.md#plugins-inputs-irc-stats_interval) | [number](value-types.md#number) | No |
+| [`user`](plugins-inputs-irc.md#plugins-inputs-irc-user) | [string](value-types.md#string) | No |
 
 Also see [Common options](plugins-inputs-irc.md#plugins-inputs-irc-common-options) for a list of options supported by all input plugins.
 
@@ -52,7 +52,7 @@ Also see [Common options](plugins-inputs-irc.md#plugins-inputs-irc-common-option
 
 ### `catch_all` [plugins-inputs-irc-catch_all]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 Catch all IRC channel/user events not just channel messages
@@ -61,7 +61,7 @@ Catch all IRC channel/user events not just channel messages
 ### `channels` [plugins-inputs-irc-channels]
 
 * This is a required setting.
-* Value type is [array](introduction.md#array)
+* Value type is [array](value-types.md#array)
 * There is no default value for this setting.
 
 Channels to join and read messages from.
@@ -73,7 +73,7 @@ For passworded channels, add a space and the channel password, such as "#logstas
 
 ### `get_stats` [plugins-inputs-irc-get_stats]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 Gather and send user counts for channels - this requires catch_all and will force it
@@ -82,7 +82,7 @@ Gather and send user counts for channels - this requires catch_all and will forc
 ### `host` [plugins-inputs-irc-host]
 
 * This is a required setting.
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 Host of the IRC Server to connect to.
@@ -90,7 +90,7 @@ Host of the IRC Server to connect to.
 
 ### `nick` [plugins-inputs-irc-nick]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"logstash"`
 
 IRC Nickname
@@ -98,7 +98,7 @@ IRC Nickname
 
 ### `password` [plugins-inputs-irc-password]
 
-* Value type is [password](introduction.md#password)
+* Value type is [password](value-types.md#password)
 * There is no default value for this setting.
 
 IRC Server password
@@ -106,7 +106,7 @@ IRC Server password
 
 ### `port` [plugins-inputs-irc-port]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `6667`
 
 Port for the IRC Server
@@ -114,7 +114,7 @@ Port for the IRC Server
 
 ### `real` [plugins-inputs-irc-real]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"logstash"`
 
 IRC Real name
@@ -122,7 +122,7 @@ IRC Real name
 
 ### `secure` [plugins-inputs-irc-secure]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 Set this to true to enable SSL.
@@ -130,7 +130,7 @@ Set this to true to enable SSL.
 
 ### `stats_interval` [plugins-inputs-irc-stats_interval]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `5`
 
 How often in minutes to get the user count stats
@@ -138,7 +138,7 @@ How often in minutes to get the user count stats
 
 ### `user` [plugins-inputs-irc-user]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"logstash"`
 
 IRC Username

@@ -37,18 +37,18 @@ This plugin supports the following configuration options plus the [Common option
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`api_key`](plugins-outputs-elastic_app_search.md#plugins-outputs-elastic_app_search-api_key) | [password](introduction.md#password) | Yes |
-| [`document_id`](plugins-outputs-elastic_app_search.md#plugins-outputs-elastic_app_search-document_id) | [string](introduction.md#string) | No |
-| [`engine`](plugins-outputs-elastic_app_search.md#plugins-outputs-elastic_app_search-engine) | [string](introduction.md#string) | Yes |
-| [`ssl_certificate_authorities`](plugins-outputs-elastic_app_search.md#plugins-outputs-elastic_app_search-ssl_certificate_authorities) | list of [path](introduction.md#path) | No |
-| [`ssl_cipher_suites`](plugins-outputs-elastic_app_search.md#plugins-outputs-elastic_app_search-ssl_cipher_suites) | list of [string](introduction.md#string) | No |
-| [`ssl_supported_protocols`](plugins-outputs-elastic_app_search.md#plugins-outputs-elastic_app_search-ssl_supported_protocols) | [string](introduction.md#string) | No |
-| [`ssl_truststore_password`](plugins-outputs-elastic_app_search.md#plugins-outputs-elastic_app_search-ssl_truststore_password) | [password](introduction.md#password) | No |
-| [`ssl_truststore_path`](plugins-outputs-elastic_app_search.md#plugins-outputs-elastic_app_search-ssl_truststore_path) | [path](introduction.md#path) | No |
-| [`ssl_truststore_type`](plugins-outputs-elastic_app_search.md#plugins-outputs-elastic_app_search-ssl_truststore_type) | [string](introduction.md#string) | No |
-| [`ssl_verification_mode`](plugins-outputs-elastic_app_search.md#plugins-outputs-elastic_app_search-ssl_verification_mode) | [string](introduction.md#string), one of `["full", "none"]` | No |
-| [`timestamp_destination`](plugins-outputs-elastic_app_search.md#plugins-outputs-elastic_app_search-timestamp_destination) | [string](introduction.md#string) | No |
-| [`url`](plugins-outputs-elastic_app_search.md#plugins-outputs-elastic_app_search-url) | [string](introduction.md#string) | Yes |
+| [`api_key`](plugins-outputs-elastic_app_search.md#plugins-outputs-elastic_app_search-api_key) | [password](value-types.md#password) | Yes |
+| [`document_id`](plugins-outputs-elastic_app_search.md#plugins-outputs-elastic_app_search-document_id) | [string](value-types.md#string) | No |
+| [`engine`](plugins-outputs-elastic_app_search.md#plugins-outputs-elastic_app_search-engine) | [string](value-types.md#string) | Yes |
+| [`ssl_certificate_authorities`](plugins-outputs-elastic_app_search.md#plugins-outputs-elastic_app_search-ssl_certificate_authorities) | list of [path](value-types.md#path) | No |
+| [`ssl_cipher_suites`](plugins-outputs-elastic_app_search.md#plugins-outputs-elastic_app_search-ssl_cipher_suites) | list of [string](value-types.md#string) | No |
+| [`ssl_supported_protocols`](plugins-outputs-elastic_app_search.md#plugins-outputs-elastic_app_search-ssl_supported_protocols) | [string](value-types.md#string) | No |
+| [`ssl_truststore_password`](plugins-outputs-elastic_app_search.md#plugins-outputs-elastic_app_search-ssl_truststore_password) | [password](value-types.md#password) | No |
+| [`ssl_truststore_path`](plugins-outputs-elastic_app_search.md#plugins-outputs-elastic_app_search-ssl_truststore_path) | [path](value-types.md#path) | No |
+| [`ssl_truststore_type`](plugins-outputs-elastic_app_search.md#plugins-outputs-elastic_app_search-ssl_truststore_type) | [string](value-types.md#string) | No |
+| [`ssl_verification_mode`](plugins-outputs-elastic_app_search.md#plugins-outputs-elastic_app_search-ssl_verification_mode) | [string](value-types.md#string), one of `["full", "none"]` | No |
+| [`timestamp_destination`](plugins-outputs-elastic_app_search.md#plugins-outputs-elastic_app_search-timestamp_destination) | [string](value-types.md#string) | No |
+| [`url`](plugins-outputs-elastic_app_search.md#plugins-outputs-elastic_app_search-url) | [string](value-types.md#string) | Yes |
 
 Also see [Common options](plugins-outputs-elastic_app_search.md#plugins-outputs-elastic_app_search-common-options) for a list of options supported by all output plugins.
 
@@ -56,7 +56,7 @@ Also see [Common options](plugins-outputs-elastic_app_search.md#plugins-outputs-
 
 ### `api_key` [plugins-outputs-elastic_app_search-api_key]
 
-* Value type is [password](introduction.md#password)
+* Value type is [password](value-types.md#password)
 * There is no default value
 
 The private API Key with write permissions. Visit the App Search API keys reference [page](https://www.elastic.co/guide/en/app-search/current/authentication.html#authentication-api-keys) for more information.
@@ -64,7 +64,7 @@ The private API Key with write permissions. Visit the App Search API keys refere
 
 ### `document_id` [plugins-outputs-elastic_app_search-document_id]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value
 
 The id for app search documents. This can be an interpolated value like `myapp-%{{sequence_id}}`. Reusing ids will cause documents to be rewritten.
@@ -72,7 +72,7 @@ The id for app search documents. This can be an interpolated value like `myapp-%
 
 ### `engine` [plugins-outputs-elastic_app_search-engine]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value
 
 The name of the search engine you created in App Search, an information repository that includes the indexed document records. The `engine` field supports [sprintf format](https://www.elastic.co/guide/en/logstash/current/event-dependent-configuration.html#sprintf) to allow the engine name to be derived from a field value from each event, for example `engine-%{{engine_name}}`.
@@ -111,7 +111,7 @@ output {
 
 ### `ssl_certificate_authorities` [plugins-outputs-elastic_app_search-ssl_certificate_authorities]
 
-* Value type is a list of [path](introduction.md#path)
+* Value type is a list of [path](value-types.md#path)
 * There is no default value for this setting
 
 The .cer or .pem files to validate the server’s certificate.
@@ -124,7 +124,7 @@ You cannot use this setting and [`ssl_truststore_path`](plugins-outputs-elastic_
 
 ### `ssl_cipher_suites` [plugins-outputs-elastic_app_search-ssl_cipher_suites]
 
-* Value type is a list of [string](introduction.md#string)
+* Value type is a list of [string](value-types.md#string)
 * There is no default value for this setting
 
 The list of cipher suites to use, listed by priorities. Supported cipher suites vary depending on the Java and protocol versions.
@@ -132,7 +132,7 @@ The list of cipher suites to use, listed by priorities. Supported cipher suites 
 
 ### `ssl_supported_protocols` [plugins-outputs-elastic_app_search-ssl_supported_protocols]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Allowed values are: `'TLSv1.1'`, `'TLSv1.2'`, `'TLSv1.3'`
 * Default depends on the JDK being used. With up-to-date Logstash, the default is `['TLSv1.2', 'TLSv1.3']`. `'TLSv1.1'` is not considered secure and is only provided for legacy applications.
 
@@ -148,7 +148,7 @@ If you configure the plugin to use `'TLSv1.1'` on any recent JVM, such as the on
 
 ### `ssl_truststore_password` [plugins-outputs-elastic_app_search-ssl_truststore_password]
 
-* Value type is [password](introduction.md#password)
+* Value type is [password](value-types.md#password)
 * There is no default value for this setting.
 
 Set the truststore password
@@ -156,7 +156,7 @@ Set the truststore password
 
 ### `ssl_truststore_path` [plugins-outputs-elastic_app_search-ssl_truststore_path]
 
-* Value type is [path](introduction.md#path)
+* Value type is [path](value-types.md#path)
 * There is no default value for this setting.
 
 The truststore to validate the server’s certificate. It can be either `.jks` or `.p12`.
@@ -194,7 +194,7 @@ Setting certificate verification to `none` disables many security benefits of SS
 
 ### `timestamp_destination` [plugins-outputs-elastic_app_search-timestamp_destination]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value
 
 Where to move the value from the `@timestamp` field.
@@ -206,7 +206,7 @@ To keep the timestamp field, set this value to the name of the field where you w
 
 ### `url` [plugins-outputs-elastic_app_search-url]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `http://localhost:3002`
 
 The value of the API endpoint in the form of a URL.

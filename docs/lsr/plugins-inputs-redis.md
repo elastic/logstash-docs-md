@@ -33,18 +33,18 @@ This plugin supports the following configuration options plus the [Common option
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`batch_count`](plugins-inputs-redis.md#plugins-inputs-redis-batch_count) | [number](introduction.md#number) | No |
-| [`command_map`](plugins-inputs-redis.md#plugins-inputs-redis-command_map) | [hash](introduction.md#hash) | No |
-| [`data_type`](plugins-inputs-redis.md#plugins-inputs-redis-data_type) | [string](introduction.md#string), one of `["list", "channel", "pattern_channel"]` | Yes |
-| [`db`](plugins-inputs-redis.md#plugins-inputs-redis-db) | [number](introduction.md#number) | No |
-| [`host`](plugins-inputs-redis.md#plugins-inputs-redis-host) | [string](introduction.md#string) | No |
-| [`path`](plugins-inputs-redis.md#plugins-inputs-redis-path) | [string](introduction.md#string) | No |
-| [`key`](plugins-inputs-redis.md#plugins-inputs-redis-key) | [string](introduction.md#string) | Yes |
-| [`password`](plugins-inputs-redis.md#plugins-inputs-redis-password) | [password](introduction.md#password) | No |
-| [`port`](plugins-inputs-redis.md#plugins-inputs-redis-port) | [number](introduction.md#number) | No |
-| [`ssl`](plugins-inputs-redis.md#plugins-inputs-redis-ssl) | [boolean](introduction.md#boolean) | No |
-| [`threads`](plugins-inputs-redis.md#plugins-inputs-redis-threads) | [number](introduction.md#number) | No |
-| [`timeout`](plugins-inputs-redis.md#plugins-inputs-redis-timeout) | [number](introduction.md#number) | No |
+| [`batch_count`](plugins-inputs-redis.md#plugins-inputs-redis-batch_count) | [number](value-types.md#number) | No |
+| [`command_map`](plugins-inputs-redis.md#plugins-inputs-redis-command_map) | [hash](value-types.md#hash) | No |
+| [`data_type`](plugins-inputs-redis.md#plugins-inputs-redis-data_type) | [string](value-types.md#string), one of `["list", "channel", "pattern_channel"]` | Yes |
+| [`db`](plugins-inputs-redis.md#plugins-inputs-redis-db) | [number](value-types.md#number) | No |
+| [`host`](plugins-inputs-redis.md#plugins-inputs-redis-host) | [string](value-types.md#string) | No |
+| [`path`](plugins-inputs-redis.md#plugins-inputs-redis-path) | [string](value-types.md#string) | No |
+| [`key`](plugins-inputs-redis.md#plugins-inputs-redis-key) | [string](value-types.md#string) | Yes |
+| [`password`](plugins-inputs-redis.md#plugins-inputs-redis-password) | [password](value-types.md#password) | No |
+| [`port`](plugins-inputs-redis.md#plugins-inputs-redis-port) | [number](value-types.md#number) | No |
+| [`ssl`](plugins-inputs-redis.md#plugins-inputs-redis-ssl) | [boolean](value-types.md#boolean) | No |
+| [`threads`](plugins-inputs-redis.md#plugins-inputs-redis-threads) | [number](value-types.md#number) | No |
+| [`timeout`](plugins-inputs-redis.md#plugins-inputs-redis-timeout) | [number](value-types.md#number) | No |
 
 Also see [Common options](plugins-inputs-redis.md#plugins-inputs-redis-common-options) for a list of options supported by all input plugins.
 
@@ -52,7 +52,7 @@ Also see [Common options](plugins-inputs-redis.md#plugins-inputs-redis-common-op
 
 ### `batch_count` [plugins-inputs-redis-batch_count]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `125`
 
 The number of events to return from Redis using EVAL.
@@ -60,7 +60,7 @@ The number of events to return from Redis using EVAL.
 
 ### `command_map` [plugins-inputs-redis-command_map]
 
-* Value type is [hash](introduction.md#hash)
+* Value type is [hash](value-types.md#hash)
 * There is no default value for this setting.
 * key is the default command name, value is the renamed command.
 
@@ -78,7 +78,7 @@ Specify either list or channel.  If `data_type` is `list`, then we will BLPOP th
 
 ### `db` [plugins-inputs-redis-db]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `0`
 
 The Redis database number.
@@ -86,7 +86,7 @@ The Redis database number.
 
 ### `host` [plugins-inputs-redis-host]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"127.0.0.1"`
 
 The hostname of your Redis server.
@@ -94,7 +94,7 @@ The hostname of your Redis server.
 
 ### `path` [plugins-inputs-redis-path]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 * Path will override Host configuration if both specified.
 
@@ -104,7 +104,7 @@ The unix socket path of your Redis server.
 ### `key` [plugins-inputs-redis-key]
 
 * This is a required setting.
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 The name of a Redis list or channel.
@@ -112,7 +112,7 @@ The name of a Redis list or channel.
 
 ### `password` [plugins-inputs-redis-password]
 
-* Value type is [password](introduction.md#password)
+* Value type is [password](value-types.md#password)
 * There is no default value for this setting.
 
 Password to authenticate with. There is no authentication by default.
@@ -120,7 +120,7 @@ Password to authenticate with. There is no authentication by default.
 
 ### `port` [plugins-inputs-redis-port]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `6379`
 
 The port to connect on.
@@ -128,7 +128,7 @@ The port to connect on.
 
 ### `ssl` [plugins-inputs-redis-ssl]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 Enable SSL support.
@@ -136,7 +136,7 @@ Enable SSL support.
 
 ### `threads` [plugins-inputs-redis-threads]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `1`
 
 Number of instances of the input to start, each on its own thread. Increase from one to improve concurrency in consuming messages from Redis.
@@ -149,7 +149,7 @@ Increasing the number of threads when consuming from a channel will result in du
 
 ### `timeout` [plugins-inputs-redis-timeout]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `5`
 
 Initial connection timeout in seconds.

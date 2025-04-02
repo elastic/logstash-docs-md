@@ -34,18 +34,18 @@ This plugin supports the following configuration options plus the [Common option
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`channels`](plugins-outputs-irc.md#plugins-outputs-irc-channels) | [array](introduction.md#array) | Yes |
-| [`format`](plugins-outputs-irc.md#plugins-outputs-irc-format) | [string](introduction.md#string) | No |
-| [`host`](plugins-outputs-irc.md#plugins-outputs-irc-host) | [string](introduction.md#string) | Yes |
-| [`messages_per_second`](plugins-outputs-irc.md#plugins-outputs-irc-messages_per_second) | [number](introduction.md#number) | No |
-| [`nick`](plugins-outputs-irc.md#plugins-outputs-irc-nick) | [string](introduction.md#string) | No |
-| [`password`](plugins-outputs-irc.md#plugins-outputs-irc-password) | [password](introduction.md#password) | No |
-| [`port`](plugins-outputs-irc.md#plugins-outputs-irc-port) | [number](introduction.md#number) | No |
-| [`post_string`](plugins-outputs-irc.md#plugins-outputs-irc-post_string) | [string](introduction.md#string) | No |
-| [`pre_string`](plugins-outputs-irc.md#plugins-outputs-irc-pre_string) | [string](introduction.md#string) | No |
-| [`real`](plugins-outputs-irc.md#plugins-outputs-irc-real) | [string](introduction.md#string) | No |
-| [`secure`](plugins-outputs-irc.md#plugins-outputs-irc-secure) | [boolean](introduction.md#boolean) | No |
-| [`user`](plugins-outputs-irc.md#plugins-outputs-irc-user) | [string](introduction.md#string) | No |
+| [`channels`](plugins-outputs-irc.md#plugins-outputs-irc-channels) | [array](value-types.md#array) | Yes |
+| [`format`](plugins-outputs-irc.md#plugins-outputs-irc-format) | [string](value-types.md#string) | No |
+| [`host`](plugins-outputs-irc.md#plugins-outputs-irc-host) | [string](value-types.md#string) | Yes |
+| [`messages_per_second`](plugins-outputs-irc.md#plugins-outputs-irc-messages_per_second) | [number](value-types.md#number) | No |
+| [`nick`](plugins-outputs-irc.md#plugins-outputs-irc-nick) | [string](value-types.md#string) | No |
+| [`password`](plugins-outputs-irc.md#plugins-outputs-irc-password) | [password](value-types.md#password) | No |
+| [`port`](plugins-outputs-irc.md#plugins-outputs-irc-port) | [number](value-types.md#number) | No |
+| [`post_string`](plugins-outputs-irc.md#plugins-outputs-irc-post_string) | [string](value-types.md#string) | No |
+| [`pre_string`](plugins-outputs-irc.md#plugins-outputs-irc-pre_string) | [string](value-types.md#string) | No |
+| [`real`](plugins-outputs-irc.md#plugins-outputs-irc-real) | [string](value-types.md#string) | No |
+| [`secure`](plugins-outputs-irc.md#plugins-outputs-irc-secure) | [boolean](value-types.md#boolean) | No |
+| [`user`](plugins-outputs-irc.md#plugins-outputs-irc-user) | [string](value-types.md#string) | No |
 
 Also see [Common options](plugins-outputs-irc.md#plugins-outputs-irc-common-options) for a list of options supported by all output plugins.
 
@@ -54,7 +54,7 @@ Also see [Common options](plugins-outputs-irc.md#plugins-outputs-irc-common-opti
 ### `channels` [plugins-outputs-irc-channels]
 
 * This is a required setting.
-* Value type is [array](introduction.md#array)
+* Value type is [array](value-types.md#array)
 * There is no default value for this setting.
 
 Channels to broadcast to.
@@ -64,7 +64,7 @@ These should be full channel names including the *#* symbol, such as "#logstash"
 
 ### `format` [plugins-outputs-irc-format]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"%{{message}}"`
 
 Message format to send, event tokens are usable here
@@ -73,7 +73,7 @@ Message format to send, event tokens are usable here
 ### `host` [plugins-outputs-irc-host]
 
 * This is a required setting.
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 Address of the host to connect to
@@ -81,7 +81,7 @@ Address of the host to connect to
 
 ### `messages_per_second` [plugins-outputs-irc-messages_per_second]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `0.5`
 
 Limit the rate of messages sent to IRC in messages per second.
@@ -89,7 +89,7 @@ Limit the rate of messages sent to IRC in messages per second.
 
 ### `nick` [plugins-outputs-irc-nick]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"logstash"`
 
 IRC Nickname
@@ -97,7 +97,7 @@ IRC Nickname
 
 ### `password` [plugins-outputs-irc-password]
 
-* Value type is [password](introduction.md#password)
+* Value type is [password](value-types.md#password)
 * There is no default value for this setting.
 
 IRC server password
@@ -105,7 +105,7 @@ IRC server password
 
 ### `port` [plugins-outputs-irc-port]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `6667`
 
 Port on host to connect to.
@@ -113,7 +113,7 @@ Port on host to connect to.
 
 ### `post_string` [plugins-outputs-irc-post_string]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 Static string after event
@@ -121,7 +121,7 @@ Static string after event
 
 ### `pre_string` [plugins-outputs-irc-pre_string]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 Static string before event
@@ -129,7 +129,7 @@ Static string before event
 
 ### `real` [plugins-outputs-irc-real]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"logstash"`
 
 IRC Real name
@@ -137,7 +137,7 @@ IRC Real name
 
 ### `secure` [plugins-outputs-irc-secure]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 Set this to true to enable SSL.
@@ -145,7 +145,7 @@ Set this to true to enable SSL.
 
 ### `user` [plugins-outputs-irc-user]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"logstash"`
 
 IRC Username

@@ -41,11 +41,11 @@ This plugin supports the following configuration options plus the [Common option
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`locale`](plugins-filters-date.md#plugins-filters-date-locale) | [string](introduction.md#string) | No |
-| [`match`](plugins-filters-date.md#plugins-filters-date-match) | [array](introduction.md#array) | No |
-| [`tag_on_failure`](plugins-filters-date.md#plugins-filters-date-tag_on_failure) | [array](introduction.md#array) | No |
-| [`target`](plugins-filters-date.md#plugins-filters-date-target) | [string](introduction.md#string) | No |
-| [`timezone`](plugins-filters-date.md#plugins-filters-date-timezone) | [string](introduction.md#string) | No |
+| [`locale`](plugins-filters-date.md#plugins-filters-date-locale) | [string](value-types.md#string) | No |
+| [`match`](plugins-filters-date.md#plugins-filters-date-match) | [array](value-types.md#array) | No |
+| [`tag_on_failure`](plugins-filters-date.md#plugins-filters-date-tag_on_failure) | [array](value-types.md#array) | No |
+| [`target`](plugins-filters-date.md#plugins-filters-date-target) | [string](value-types.md#string) | No |
+| [`timezone`](plugins-filters-date.md#plugins-filters-date-timezone) | [string](value-types.md#string) | No |
 
 Also see [Common options](plugins-filters-date.md#plugins-filters-date-common-options) for a list of options supported by all filter plugins.
 
@@ -53,7 +53,7 @@ Also see [Common options](plugins-filters-date.md#plugins-filters-date-common-op
 
 ### `locale` [plugins-filters-date-locale]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 Specify a locale to be used for date parsing using either IETF-BCP47 or POSIX language tag. Simple examples are `en`,`en-US` for BCP47 or `en_US` for POSIX.
@@ -65,7 +65,7 @@ If not specified, the platform default will be used but for non-english platform
 
 ### `match` [plugins-filters-date-match]
 
-* Value type is [array](introduction.md#array)
+* Value type is [array](value-types.md#array)
 * Default value is `[]`
 
 An array with field name first, and format patterns following, `[ field, formats... ]`
@@ -232,7 +232,7 @@ Other less common date units, such as era (G), century (C), am/pm (a), and # mor
 
 ### `tag_on_failure` [plugins-filters-date-tag_on_failure]
 
-* Value type is [array](introduction.md#array)
+* Value type is [array](value-types.md#array)
 * Default value is `["_dateparsefailure"]`
 
 Append values to the `tags` field when there has been no successful match
@@ -240,7 +240,7 @@ Append values to the `tags` field when there has been no successful match
 
 ### `target` [plugins-filters-date-target]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"@timestamp"`
 
 Store the matching timestamp into the given target field.  If not provided, default to updating the `@timestamp` field of the event.
@@ -248,7 +248,7 @@ Store the matching timestamp into the given target field.  If not provided, defa
 
 ### `timezone` [plugins-filters-date-timezone]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 Specify a time zone canonical ID to be used for date parsing. The valid IDs are listed on the [Joda.org available time zones page](http://joda-time.sourceforge.net/timezones.md). This is useful in case the time zone cannot be extracted from the value, and is not the platform default. If this is not specified the platform default will be used. Canonical ID is good as it takes care of daylight saving time for you For example, `America/Los_Angeles` or `Europe/Paris` are valid IDs. This field can be dynamic and include parts of the event using the `%{{field}}` syntax

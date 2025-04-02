@@ -43,18 +43,18 @@ This plugin supports the following configuration options plus the [Common option
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`action`](plugins-filters-dns.md#plugins-filters-dns-action) | [string](introduction.md#string), one of `["append", "replace"]` | No |
-| [`failed_cache_size`](plugins-filters-dns.md#plugins-filters-dns-failed_cache_size) | [number](introduction.md#number) | No |
-| [`failed_cache_ttl`](plugins-filters-dns.md#plugins-filters-dns-failed_cache_ttl) | [number](introduction.md#number) | No |
-| [`hit_cache_size`](plugins-filters-dns.md#plugins-filters-dns-hit_cache_size) | [number](introduction.md#number) | No |
-| [`hit_cache_ttl`](plugins-filters-dns.md#plugins-filters-dns-hit_cache_ttl) | [number](introduction.md#number) | No |
-| [`hostsfile`](plugins-filters-dns.md#plugins-filters-dns-hostsfile) | [array](introduction.md#array) | No |
-| [`max_retries`](plugins-filters-dns.md#plugins-filters-dns-max_retries) | [number](introduction.md#number) | No |
-| [`nameserver`](plugins-filters-dns.md#plugins-filters-dns-nameserver) | [hash](introduction.md#hash) | No |
-| [`resolve`](plugins-filters-dns.md#plugins-filters-dns-resolve) | [array](introduction.md#array) | No |
-| [`reverse`](plugins-filters-dns.md#plugins-filters-dns-reverse) | [array](introduction.md#array) | No |
-| [`tag_on_timeout`](plugins-filters-dns.md#plugins-filters-dns-tag_on_timeout) | [array](introduction.md#array) | No |
-| [`timeout`](plugins-filters-dns.md#plugins-filters-dns-timeout) | [number](introduction.md#number) | No |
+| [`action`](plugins-filters-dns.md#plugins-filters-dns-action) | [string](value-types.md#string), one of `["append", "replace"]` | No |
+| [`failed_cache_size`](plugins-filters-dns.md#plugins-filters-dns-failed_cache_size) | [number](value-types.md#number) | No |
+| [`failed_cache_ttl`](plugins-filters-dns.md#plugins-filters-dns-failed_cache_ttl) | [number](value-types.md#number) | No |
+| [`hit_cache_size`](plugins-filters-dns.md#plugins-filters-dns-hit_cache_size) | [number](value-types.md#number) | No |
+| [`hit_cache_ttl`](plugins-filters-dns.md#plugins-filters-dns-hit_cache_ttl) | [number](value-types.md#number) | No |
+| [`hostsfile`](plugins-filters-dns.md#plugins-filters-dns-hostsfile) | [array](value-types.md#array) | No |
+| [`max_retries`](plugins-filters-dns.md#plugins-filters-dns-max_retries) | [number](value-types.md#number) | No |
+| [`nameserver`](plugins-filters-dns.md#plugins-filters-dns-nameserver) | [hash](value-types.md#hash) | No |
+| [`resolve`](plugins-filters-dns.md#plugins-filters-dns-resolve) | [array](value-types.md#array) | No |
+| [`reverse`](plugins-filters-dns.md#plugins-filters-dns-reverse) | [array](value-types.md#array) | No |
+| [`tag_on_timeout`](plugins-filters-dns.md#plugins-filters-dns-tag_on_timeout) | [array](value-types.md#array) | No |
+| [`timeout`](plugins-filters-dns.md#plugins-filters-dns-timeout) | [number](value-types.md#number) | No |
 
 Also see [Common options](plugins-filters-dns.md#plugins-filters-dns-common-options) for a list of options supported by all filter plugins.
 
@@ -70,7 +70,7 @@ Determine what action to do: append or replace the values in the fields specifie
 
 ### `failed_cache_size` [plugins-filters-dns-failed_cache_size]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `0` (cache disabled)
 
 cache size for failed requests
@@ -78,7 +78,7 @@ cache size for failed requests
 
 ### `failed_cache_ttl` [plugins-filters-dns-failed_cache_ttl]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `5`
 
 how long to cache failed requests (in seconds)
@@ -86,7 +86,7 @@ how long to cache failed requests (in seconds)
 
 ### `hit_cache_size` [plugins-filters-dns-hit_cache_size]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `0` (cache disabled)
 
 set the size of cache for successful requests
@@ -94,7 +94,7 @@ set the size of cache for successful requests
 
 ### `hit_cache_ttl` [plugins-filters-dns-hit_cache_ttl]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `60`
 
 how long to cache successful requests (in seconds)
@@ -102,7 +102,7 @@ how long to cache successful requests (in seconds)
 
 ### `hostsfile` [plugins-filters-dns-hostsfile]
 
-* Value type is [array](introduction.md#array)
+* Value type is [array](value-types.md#array)
 * There is no default value for this setting.
 
 Use custom hosts file(s). For example: `["/var/db/my_custom_hosts"]`
@@ -110,7 +110,7 @@ Use custom hosts file(s). For example: `["/var/db/my_custom_hosts"]`
 
 ### `max_retries` [plugins-filters-dns-max_retries]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `2`
 
 number of times to retry a failed resolve/reverse
@@ -118,13 +118,13 @@ number of times to retry a failed resolve/reverse
 
 ### `nameserver` [plugins-filters-dns-nameserver]
 
-* Value type is [hash](introduction.md#hash), and is composed of:
+* Value type is [hash](value-types.md#hash), and is composed of:
 
-    * a required `address` key, whose value is either a [string](introduction.md#string) or an [array](introduction.md#array), representing one or more nameserver ip addresses
-    * an optional `search` key, whose value is either a [string](introduction.md#string) or an [array](introduction.md#array), representing between one and six search domains (e.g., with search domain `com`, a query for `example` will match DNS entries for `example.com`)
-    * an optional `ndots` key, used in conjunction with `search`, whose value is a [number](introduction.md#number), representing the minimum number of dots in a domain name being resolved that will *prevent* the search domains from being used (default `1`; this option is rarely needed)
+    * a required `address` key, whose value is either a [string](value-types.md#string) or an [array](value-types.md#array), representing one or more nameserver ip addresses
+    * an optional `search` key, whose value is either a [string](value-types.md#string) or an [array](value-types.md#array), representing between one and six search domains (e.g., with search domain `com`, a query for `example` will match DNS entries for `example.com`)
+    * an optional `ndots` key, used in conjunction with `search`, whose value is a [number](value-types.md#number), representing the minimum number of dots in a domain name being resolved that will *prevent* the search domains from being used (default `1`; this option is rarely needed)
 
-* For backward-compatibility, values of [string](introduction.md#string) and [array](introduction.md#array) are also accepted, representing one or more nameserver ip addresses *without* search domains.
+* For backward-compatibility, values of [string](value-types.md#string) and [array](value-types.md#array) are also accepted, representing one or more nameserver ip addresses *without* search domains.
 * There is no default value for this setting.
 
 Use custom nameserver(s). For example:
@@ -145,7 +145,7 @@ If `nameserver` is not specified then `/etc/resolv.conf` will be read to configu
 
 ### `resolve` [plugins-filters-dns-resolve]
 
-* Value type is [array](introduction.md#array)
+* Value type is [array](value-types.md#array)
 * There is no default value for this setting.
 
 Forward resolve one or more fields.
@@ -153,7 +153,7 @@ Forward resolve one or more fields.
 
 ### `reverse` [plugins-filters-dns-reverse]
 
-* Value type is [array](introduction.md#array)
+* Value type is [array](value-types.md#array)
 * There is no default value for this setting.
 
 Reverse resolve one or more fields.
@@ -161,7 +161,7 @@ Reverse resolve one or more fields.
 
 ### `timeout` [plugins-filters-dns-timeout]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `0.5`
 
 `resolv` calls will be wrapped in a timeout instance
@@ -169,7 +169,7 @@ Reverse resolve one or more fields.
 
 ### `tag_on_timeout` [plugins-filters-dns-tag_on_timeout]
 
-* Value type is [array](introduction.md#array)
+* Value type is [array](value-types.md#array)
 * Defaults to `["_dnstimeout"]`.
 
 Add tag(s) on DNS lookup time out.

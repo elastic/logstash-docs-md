@@ -68,23 +68,23 @@ This plugin supports the following configuration options plus the [Common option
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`consumer_key`](plugins-inputs-twitter.md#plugins-inputs-twitter-consumer_key) | [string](introduction.md#string) | Yes |
-| [`consumer_secret`](plugins-inputs-twitter.md#plugins-inputs-twitter-consumer_secret) | [password](introduction.md#password) | Yes |
-| [`ecs_compatibility`](plugins-inputs-twitter.md#plugins-inputs-twitter-ecs_compatibility) | [string](introduction.md#string) | No |
-| [`follows`](plugins-inputs-twitter.md#plugins-inputs-twitter-follows) | [array](introduction.md#array) | No |
-| [`full_tweet`](plugins-inputs-twitter.md#plugins-inputs-twitter-full_tweet) | [boolean](introduction.md#boolean) | No |
-| [`ignore_retweets`](plugins-inputs-twitter.md#plugins-inputs-twitter-ignore_retweets) | [boolean](introduction.md#boolean) | No |
-| [`keywords`](plugins-inputs-twitter.md#plugins-inputs-twitter-keywords) | [array](introduction.md#array) | No |
-| [`languages`](plugins-inputs-twitter.md#plugins-inputs-twitter-languages) | [array](introduction.md#array) | No |
-| [`locations`](plugins-inputs-twitter.md#plugins-inputs-twitter-locations) | [string](introduction.md#string) | No |
-| [`oauth_token`](plugins-inputs-twitter.md#plugins-inputs-twitter-oauth_token) | [string](introduction.md#string) | Yes |
-| [`oauth_token_secret`](plugins-inputs-twitter.md#plugins-inputs-twitter-oauth_token_secret) | [password](introduction.md#password) | Yes |
-| [`proxy_address`](plugins-inputs-twitter.md#plugins-inputs-twitter-proxy_address) | [string](introduction.md#string) | No |
-| [`proxy_port`](plugins-inputs-twitter.md#plugins-inputs-twitter-proxy_port) | [number](introduction.md#number) | No |
-| [`rate_limit_reset_in`](plugins-inputs-twitter.md#plugins-inputs-twitter-rate_limit_reset_in) | [number](introduction.md#number) | No |
-| [`use_proxy`](plugins-inputs-twitter.md#plugins-inputs-twitter-use_proxy) | [boolean](introduction.md#boolean) | No |
-| [`use_samples`](plugins-inputs-twitter.md#plugins-inputs-twitter-use_samples) | [boolean](introduction.md#boolean) | No |
-| [`target`](plugins-inputs-twitter.md#plugins-inputs-twitter-target) | [string](introduction.md#string) | No |
+| [`consumer_key`](plugins-inputs-twitter.md#plugins-inputs-twitter-consumer_key) | [string](value-types.md#string) | Yes |
+| [`consumer_secret`](plugins-inputs-twitter.md#plugins-inputs-twitter-consumer_secret) | [password](value-types.md#password) | Yes |
+| [`ecs_compatibility`](plugins-inputs-twitter.md#plugins-inputs-twitter-ecs_compatibility) | [string](value-types.md#string) | No |
+| [`follows`](plugins-inputs-twitter.md#plugins-inputs-twitter-follows) | [array](value-types.md#array) | No |
+| [`full_tweet`](plugins-inputs-twitter.md#plugins-inputs-twitter-full_tweet) | [boolean](value-types.md#boolean) | No |
+| [`ignore_retweets`](plugins-inputs-twitter.md#plugins-inputs-twitter-ignore_retweets) | [boolean](value-types.md#boolean) | No |
+| [`keywords`](plugins-inputs-twitter.md#plugins-inputs-twitter-keywords) | [array](value-types.md#array) | No |
+| [`languages`](plugins-inputs-twitter.md#plugins-inputs-twitter-languages) | [array](value-types.md#array) | No |
+| [`locations`](plugins-inputs-twitter.md#plugins-inputs-twitter-locations) | [string](value-types.md#string) | No |
+| [`oauth_token`](plugins-inputs-twitter.md#plugins-inputs-twitter-oauth_token) | [string](value-types.md#string) | Yes |
+| [`oauth_token_secret`](plugins-inputs-twitter.md#plugins-inputs-twitter-oauth_token_secret) | [password](value-types.md#password) | Yes |
+| [`proxy_address`](plugins-inputs-twitter.md#plugins-inputs-twitter-proxy_address) | [string](value-types.md#string) | No |
+| [`proxy_port`](plugins-inputs-twitter.md#plugins-inputs-twitter-proxy_port) | [number](value-types.md#number) | No |
+| [`rate_limit_reset_in`](plugins-inputs-twitter.md#plugins-inputs-twitter-rate_limit_reset_in) | [number](value-types.md#number) | No |
+| [`use_proxy`](plugins-inputs-twitter.md#plugins-inputs-twitter-use_proxy) | [boolean](value-types.md#boolean) | No |
+| [`use_samples`](plugins-inputs-twitter.md#plugins-inputs-twitter-use_samples) | [boolean](value-types.md#boolean) | No |
+| [`target`](plugins-inputs-twitter.md#plugins-inputs-twitter-target) | [string](value-types.md#string) | No |
 
 Also see [Common options](plugins-inputs-twitter.md#plugins-inputs-twitter-common-options) for a list of options supported by all input plugins.
 
@@ -93,7 +93,7 @@ Also see [Common options](plugins-inputs-twitter.md#plugins-inputs-twitter-commo
 ### `consumer_key` [plugins-inputs-twitter-consumer_key]
 
 * This is a required setting.
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 Your Twitter App’s consumer key
@@ -104,7 +104,7 @@ Don’t know what this is? You need to create an "application" on Twitter, see t
 ### `consumer_secret` [plugins-inputs-twitter-consumer_secret]
 
 * This is a required setting.
-* Value type is [password](introduction.md#password)
+* Value type is [password](value-types.md#password)
 * There is no default value for this setting.
 
 Your Twitter App’s consumer secret
@@ -114,7 +114,7 @@ If you don’t have one of these, you can create one by registering a new applic
 
 ### `ecs_compatibility` [plugins-inputs-twitter-ecs_compatibility]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Supported values are:
 
     * `disabled`: does not use ECS-compatible field names (fields might be set at the root of the event)
@@ -131,7 +131,7 @@ Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)](ht
 
 ### `follows` [plugins-inputs-twitter-follows]
 
-* Value type is [array](introduction.md#array)
+* Value type is [array](value-types.md#array)
 * There is no default value for this setting.
 
 A comma separated list of user IDs, indicating the users to return statuses for in the Twitter stream. See [https://developer.twitter.com/en/docs/tweets/filter-realtime/guides/basic-stream-parameters](https://developer.twitter.com/en/docs/tweets/filter-realtime/guides/basic-stream-parameters) for more details.
@@ -139,7 +139,7 @@ A comma separated list of user IDs, indicating the users to return statuses for 
 
 ### `full_tweet` [plugins-inputs-twitter-full_tweet]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 Record full tweet object as given to us by the Twitter Streaming API.
@@ -147,7 +147,7 @@ Record full tweet object as given to us by the Twitter Streaming API.
 
 ### `ignore_retweets` [plugins-inputs-twitter-ignore_retweets]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 Lets you ignore the retweets coming out of the Twitter API. Default ⇒ false
@@ -155,7 +155,7 @@ Lets you ignore the retweets coming out of the Twitter API. Default ⇒ false
 
 ### `keywords` [plugins-inputs-twitter-keywords]
 
-* Value type is [array](introduction.md#array)
+* Value type is [array](value-types.md#array)
 * There is no default value for this setting.
 
 Any keywords to track in the Twitter stream. For multiple keywords, use the syntax ["foo", "bar"]. There’s a logical OR between each keyword string listed and a logical AND between words separated by spaces per keyword string. See [https://dev.twitter.com/streaming/overview/request-parameters#track](https://dev.twitter.com/streaming/overview/request-parameters#track) for more details.
@@ -165,7 +165,7 @@ The wildcard "*" option is not supported. To ingest a sample stream of all tweet
 
 ### `languages` [plugins-inputs-twitter-languages]
 
-* Value type is [array](introduction.md#array)
+* Value type is [array](value-types.md#array)
 * There is no default value for this setting.
 
 A list of BCP 47 language identifiers corresponding to any of the languages listed on Twitter’s advanced search page will only return tweets that have been detected as being written in the specified languages.
@@ -173,7 +173,7 @@ A list of BCP 47 language identifiers corresponding to any of the languages list
 
 ### `locations` [plugins-inputs-twitter-locations]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 A comma-separated list of longitude, latitude pairs specifying a set of bounding boxes to filter tweets by. See [https://dev.twitter.com/streaming/overview/request-parameters#locations](https://dev.twitter.com/streaming/overview/request-parameters#locations) for more details.
@@ -182,7 +182,7 @@ A comma-separated list of longitude, latitude pairs specifying a set of bounding
 ### `oauth_token` [plugins-inputs-twitter-oauth_token]
 
 * This is a required setting.
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 Your oauth token.
@@ -195,7 +195,7 @@ Click on your app (used with the consumer_key and consumer_secret settings) Then
 ### `oauth_token_secret` [plugins-inputs-twitter-oauth_token_secret]
 
 * This is a required setting.
-* Value type is [password](introduction.md#password)
+* Value type is [password](value-types.md#password)
 * There is no default value for this setting.
 
 Your oauth token secret.
@@ -207,7 +207,7 @@ Click on your app (used with the consumer_key and consumer_secret settings) Then
 
 ### `proxy_address` [plugins-inputs-twitter-proxy_address]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"127.0.0.1"`
 
 Location of the proxy, by default the same machine as the one running this LS instance
@@ -215,7 +215,7 @@ Location of the proxy, by default the same machine as the one running this LS in
 
 ### `proxy_port` [plugins-inputs-twitter-proxy_port]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `3128`
 
 Port where the proxy is listening, by default 3128 (squid)
@@ -223,7 +223,7 @@ Port where the proxy is listening, by default 3128 (squid)
 
 ### `rate_limit_reset_in` [plugins-inputs-twitter-rate_limit_reset_in]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `300`
 
 Duration in seconds to wait before retrying a connection when twitter responds with a 429 TooManyRequests In some cases the *x-rate-limit-reset* header is not set in the response and <error>.rate_limit.reset_in is nil. If this occurs then we use the integer specified here. The default is 5 minutes.
@@ -231,7 +231,7 @@ Duration in seconds to wait before retrying a connection when twitter responds w
 
 ### `use_proxy` [plugins-inputs-twitter-use_proxy]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 When to use a proxy to handle the connections
@@ -239,7 +239,7 @@ When to use a proxy to handle the connections
 
 ### `use_samples` [plugins-inputs-twitter-use_samples]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 Returns a small random sample of all public statuses. The tweets returned by the default access level are the same, so if two different clients connect to this endpoint, they will see the same tweets. If set to true, the keywords, follows, locations, and languages options will be ignored. Default ⇒ false
@@ -247,7 +247,7 @@ Returns a small random sample of all public statuses. The tweets returned by the
 
 ### `target` [plugins-inputs-twitter-target]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 Without a `target`, events are created from tweets at the root level. When the `target` is set to a field reference, the tweet data is placed in the target field instead.

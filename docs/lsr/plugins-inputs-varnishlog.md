@@ -34,7 +34,7 @@ This plugin supports the following configuration options plus the [Common option
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`threads`](plugins-inputs-varnishlog.md#plugins-inputs-varnishlog-threads) | [number](introduction.md#number) | No |
+| [`threads`](plugins-inputs-varnishlog.md#plugins-inputs-varnishlog-threads) | [number](value-types.md#number) | No |
 
 Also see [Common options](plugins-inputs-varnishlog.md#plugins-inputs-varnishlog-common-options) for a list of options supported by all input plugins.
 
@@ -42,7 +42,7 @@ Also see [Common options](plugins-inputs-varnishlog.md#plugins-inputs-varnishlog
 
 ### `threads` [plugins-inputs-varnishlog-threads]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `1`
 
 

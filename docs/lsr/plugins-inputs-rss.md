@@ -39,8 +39,8 @@ This plugin supports the following configuration options plus the [Common option
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`interval`](plugins-inputs-rss.md#plugins-inputs-rss-interval) | [number](introduction.md#number) | Yes |
-| [`url`](plugins-inputs-rss.md#plugins-inputs-rss-url) | [string](introduction.md#string) | Yes |
+| [`interval`](plugins-inputs-rss.md#plugins-inputs-rss-interval) | [number](value-types.md#number) | Yes |
+| [`url`](plugins-inputs-rss.md#plugins-inputs-rss-url) | [string](value-types.md#string) | Yes |
 
 Also see [Common options](plugins-inputs-rss.md#plugins-inputs-rss-common-options) for a list of options supported by all input plugins.
 
@@ -49,7 +49,7 @@ Also see [Common options](plugins-inputs-rss.md#plugins-inputs-rss-common-option
 ### `interval` [plugins-inputs-rss-interval]
 
 * This is a required setting.
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * There is no default value for this setting.
 
 Interval to run the command. Value is in seconds.
@@ -58,7 +58,7 @@ Interval to run the command. Value is in seconds.
 ### `url` [plugins-inputs-rss-url]
 
 * This is a required setting.
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 RSS/Atom feed URL

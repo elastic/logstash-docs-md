@@ -31,7 +31,7 @@ This plugin supports the following configuration options.
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`ecs_compatibility`](plugins-inputs-stdin.md#plugins-inputs-stdin-ecs_compatibility) | [string](introduction.md#string) | No |
+| [`ecs_compatibility`](plugins-inputs-stdin.md#plugins-inputs-stdin-ecs_compatibility) | [string](value-types.md#string) | No |
 
 Also see [Common options](plugins-inputs-stdin.md#plugins-inputs-stdin-common-options) for a list of options supported by all input plugins.
 
@@ -39,7 +39,7 @@ Also see [Common options](plugins-inputs-stdin.md#plugins-inputs-stdin-common-op
 
 ### `ecs_compatibility` [plugins-inputs-stdin-ecs_compatibility]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Supported values are:
 
     * `disabled`: does not use ECS-compatible field names (using `host` field to store host name)

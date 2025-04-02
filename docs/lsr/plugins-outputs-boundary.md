@@ -38,14 +38,14 @@ This plugin supports the following configuration options plus the [Common option
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`api_key`](plugins-outputs-boundary.md#plugins-outputs-boundary-api_key) | [password](introduction.md#password) | Yes |
-| [`auto`](plugins-outputs-boundary.md#plugins-outputs-boundary-auto) | [boolean](introduction.md#boolean) | No |
-| [`bsubtype`](plugins-outputs-boundary.md#plugins-outputs-boundary-bsubtype) | [string](introduction.md#string) | No |
-| [`btags`](plugins-outputs-boundary.md#plugins-outputs-boundary-btags) | [array](introduction.md#array) | No |
-| [`btype`](plugins-outputs-boundary.md#plugins-outputs-boundary-btype) | [string](introduction.md#string) | No |
-| [`end_time`](plugins-outputs-boundary.md#plugins-outputs-boundary-end_time) | [string](introduction.md#string) | No |
-| [`org_id`](plugins-outputs-boundary.md#plugins-outputs-boundary-org_id) | [string](introduction.md#string) | Yes |
-| [`start_time`](plugins-outputs-boundary.md#plugins-outputs-boundary-start_time) | [string](introduction.md#string) | No |
+| [`api_key`](plugins-outputs-boundary.md#plugins-outputs-boundary-api_key) | [password](value-types.md#password) | Yes |
+| [`auto`](plugins-outputs-boundary.md#plugins-outputs-boundary-auto) | [boolean](value-types.md#boolean) | No |
+| [`bsubtype`](plugins-outputs-boundary.md#plugins-outputs-boundary-bsubtype) | [string](value-types.md#string) | No |
+| [`btags`](plugins-outputs-boundary.md#plugins-outputs-boundary-btags) | [array](value-types.md#array) | No |
+| [`btype`](plugins-outputs-boundary.md#plugins-outputs-boundary-btype) | [string](value-types.md#string) | No |
+| [`end_time`](plugins-outputs-boundary.md#plugins-outputs-boundary-end_time) | [string](value-types.md#string) | No |
+| [`org_id`](plugins-outputs-boundary.md#plugins-outputs-boundary-org_id) | [string](value-types.md#string) | Yes |
+| [`start_time`](plugins-outputs-boundary.md#plugins-outputs-boundary-start_time) | [string](value-types.md#string) | No |
 
 Also see [Common options](plugins-outputs-boundary.md#plugins-outputs-boundary-common-options) for a list of options supported by all output plugins.
 
@@ -54,7 +54,7 @@ Also see [Common options](plugins-outputs-boundary.md#plugins-outputs-boundary-c
 ### `api_key` [plugins-outputs-boundary-api_key]
 
 * This is a required setting.
-* Value type is [password](introduction.md#password)
+* Value type is [password](value-types.md#password)
 * There is no default value for this setting.
 
 Your Boundary API key
@@ -62,7 +62,7 @@ Your Boundary API key
 
 ### `auto` [plugins-outputs-boundary-auto]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 Auto If set to true, logstash will try to pull boundary fields out of the event. Any field explicitly set by config options will override these. `['type', 'subtype', 'creation_time', 'end_time', 'links', 'tags', 'loc']`
@@ -70,7 +70,7 @@ Auto If set to true, logstash will try to pull boundary fields out of the event.
 
 ### `bsubtype` [plugins-outputs-boundary-bsubtype]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 Sub-Type
@@ -78,7 +78,7 @@ Sub-Type
 
 ### `btags` [plugins-outputs-boundary-btags]
 
-* Value type is [array](introduction.md#array)
+* Value type is [array](value-types.md#array)
 * There is no default value for this setting.
 
 Tags Set any custom tags for this event Default are the Logstash tags if any
@@ -86,7 +86,7 @@ Tags Set any custom tags for this event Default are the Logstash tags if any
 
 ### `btype` [plugins-outputs-boundary-btype]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 Type
@@ -94,7 +94,7 @@ Type
 
 ### `end_time` [plugins-outputs-boundary-end_time]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 End time Override the stop time Note that Boundary requires this to be seconds since epoch If overriding, it is your responsibility to type this correctly By default this is set to `event.get("@timestamp").to_i`
@@ -103,7 +103,7 @@ End time Override the stop time Note that Boundary requires this to be seconds s
 ### `org_id` [plugins-outputs-boundary-org_id]
 
 * This is a required setting.
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 Your Boundary Org ID
@@ -111,7 +111,7 @@ Your Boundary Org ID
 
 ### `start_time` [plugins-outputs-boundary-start_time]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 Start time Override the start time Note that Boundary requires this to be seconds since epoch If overriding, it is your responsibility to type this correctly By default this is set to `event.get("@timestamp").to_i`

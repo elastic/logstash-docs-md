@@ -110,39 +110,39 @@ As of version `4.0.0` of this plugin, a number of previously deprecated settings
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`aggregation_fields`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-aggregation_fields) | [hash](introduction.md#hash) | No |
-| [`api_key`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-api_key) | [password](introduction.md#password) | No |
-| [`ca_trusted_fingerprint`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-ca_trusted_fingerprint) | [string](introduction.md#string) | No |
-| [`cloud_auth`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-cloud_auth) | [password](introduction.md#password) | No |
-| [`cloud_id`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-cloud_id) | [string](introduction.md#string) | No |
-| [`docinfo_fields`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-docinfo_fields) | [hash](introduction.md#hash) | No |
-| [`enable_sort`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-enable_sort) | [boolean](introduction.md#boolean) | No |
-| [`fields`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-fields) | [array](introduction.md#array) | No |
-| [`hosts`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-hosts) | [array](introduction.md#array) | No |
-| [`index`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-index) | [string](introduction.md#string) | No |
-| [`password`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-password) | [password](introduction.md#password) | No |
-| [`proxy`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-proxy) | [uri](introduction.md#uri) | No |
-| [`query`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-query) | [string](introduction.md#string) | No |
-| [`query_template`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-query_template) | [string](introduction.md#string) | No |
-| [`result_size`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-result_size) | [number](introduction.md#number) | No |
-| [`retry_on_failure`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-retry_on_failure) | [number](introduction.md#number) | No |
-| [`retry_on_status`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-retry_on_status) | [array](introduction.md#array) | No |
-| [`sort`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-sort) | [string](introduction.md#string) | No |
-| [`ssl_certificate`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-ssl_certificate) | [path](introduction.md#path) | No |
-| [`ssl_certificate_authorities`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-ssl_certificate_authorities) | list of [path](introduction.md#path) | No |
-| [`ssl_cipher_suites`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-ssl_cipher_suites) | list of [string](introduction.md#string) | No |
-| [`ssl_enabled`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-ssl_enabled) | [boolean](introduction.md#boolean) | No |
-| [`ssl_key`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-ssl_key) | [path](introduction.md#path) | No |
-| [`ssl_keystore_password`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-ssl_keystore_password) | [password](introduction.md#password) | No |
-| [`ssl_keystore_path`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-ssl_keystore_path) | [path](introduction.md#path) | No |
-| [`ssl_keystore_type`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-ssl_keystore_type) | [string](introduction.md#string) | No |
-| [`ssl_supported_protocols`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-ssl_supported_protocols) | [string](introduction.md#string) | No |
-| [`ssl_truststore_password`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-ssl_truststore_password) | [password](introduction.md#password) | No |
-| [`ssl_truststore_path`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-ssl_truststore_path) | [path](introduction.md#path) | No |
-| [`ssl_truststore_type`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-ssl_truststore_type) | [string](introduction.md#string) | No |
-| [`ssl_verification_mode`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-ssl_verification_mode) | [string](introduction.md#string), one of `["full", "none"]` | No |
-| [`tag_on_failure`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-tag_on_failure) | [array](introduction.md#array) | No |
-| [`user`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-user) | [string](introduction.md#string) | No |
+| [`aggregation_fields`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-aggregation_fields) | [hash](value-types.md#hash) | No |
+| [`api_key`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-api_key) | [password](value-types.md#password) | No |
+| [`ca_trusted_fingerprint`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-ca_trusted_fingerprint) | [string](value-types.md#string) | No |
+| [`cloud_auth`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-cloud_auth) | [password](value-types.md#password) | No |
+| [`cloud_id`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-cloud_id) | [string](value-types.md#string) | No |
+| [`docinfo_fields`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-docinfo_fields) | [hash](value-types.md#hash) | No |
+| [`enable_sort`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-enable_sort) | [boolean](value-types.md#boolean) | No |
+| [`fields`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-fields) | [array](value-types.md#array) | No |
+| [`hosts`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-hosts) | [array](value-types.md#array) | No |
+| [`index`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-index) | [string](value-types.md#string) | No |
+| [`password`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-password) | [password](value-types.md#password) | No |
+| [`proxy`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-proxy) | [uri](value-types.md#uri) | No |
+| [`query`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-query) | [string](value-types.md#string) | No |
+| [`query_template`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-query_template) | [string](value-types.md#string) | No |
+| [`result_size`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-result_size) | [number](value-types.md#number) | No |
+| [`retry_on_failure`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-retry_on_failure) | [number](value-types.md#number) | No |
+| [`retry_on_status`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-retry_on_status) | [array](value-types.md#array) | No |
+| [`sort`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-sort) | [string](value-types.md#string) | No |
+| [`ssl_certificate`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-ssl_certificate) | [path](value-types.md#path) | No |
+| [`ssl_certificate_authorities`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-ssl_certificate_authorities) | list of [path](value-types.md#path) | No |
+| [`ssl_cipher_suites`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-ssl_cipher_suites) | list of [string](value-types.md#string) | No |
+| [`ssl_enabled`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-ssl_enabled) | [boolean](value-types.md#boolean) | No |
+| [`ssl_key`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-ssl_key) | [path](value-types.md#path) | No |
+| [`ssl_keystore_password`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-ssl_keystore_password) | [password](value-types.md#password) | No |
+| [`ssl_keystore_path`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-ssl_keystore_path) | [path](value-types.md#path) | No |
+| [`ssl_keystore_type`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-ssl_keystore_type) | [string](value-types.md#string) | No |
+| [`ssl_supported_protocols`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-ssl_supported_protocols) | [string](value-types.md#string) | No |
+| [`ssl_truststore_password`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-ssl_truststore_password) | [password](value-types.md#password) | No |
+| [`ssl_truststore_path`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-ssl_truststore_path) | [path](value-types.md#path) | No |
+| [`ssl_truststore_type`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-ssl_truststore_type) | [string](value-types.md#string) | No |
+| [`ssl_verification_mode`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-ssl_verification_mode) | [string](value-types.md#string), one of `["full", "none"]` | No |
+| [`tag_on_failure`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-tag_on_failure) | [array](value-types.md#array) | No |
+| [`user`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-user) | [string](value-types.md#string) | No |
 
 Also see [Common options](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-common-options) for a list of options supported by all filter plugins.
 
@@ -150,7 +150,7 @@ Also see [Common options](plugins-filters-elasticsearch.md#plugins-filters-elast
 
 ### `aggregation_fields` [plugins-filters-elasticsearch-aggregation_fields]
 
-* Value type is [hash](introduction.md#hash)
+* Value type is [hash](value-types.md#hash)
 * Default value is `{}`
 
 Hash of aggregation names to copy from elasticsearch response into Logstash event fields
@@ -170,7 +170,7 @@ Example:
 
 ### `api_key` [plugins-filters-elasticsearch-api_key]
 
-* Value type is [password](introduction.md#password)
+* Value type is [password](value-types.md#password)
 * There is no default value for this setting.
 
 Authenticate using Elasticsearch API key. Note that this option also requires enabling the [`ssl_enabled`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-ssl_enabled) option.
@@ -180,7 +180,7 @@ Format is `id:api_key` where `id` and `api_key` are as returned by the Elasticse
 
 ### `ca_trusted_fingerprint` [plugins-filters-elasticsearch-ca_trusted_fingerprint]
 
-* Value type is [string](introduction.md#string), and must contain exactly 64 hexadecimal characters.
+* Value type is [string](value-types.md#string), and must contain exactly 64 hexadecimal characters.
 * There is no default value for this setting.
 * Use of this option *requires* Logstash 8.3+
 
@@ -189,7 +189,7 @@ The SHA-256 fingerprint of an SSL Certificate Authority to trust, such as the au
 
 ### `cloud_auth` [plugins-filters-elasticsearch-cloud_auth]
 
-* Value type is [password](introduction.md#password)
+* Value type is [password](value-types.md#password)
 * There is no default value for this setting.
 
 Cloud authentication string ("<username>:<password>" format) is an alternative for the `user`/`password` pair.
@@ -199,7 +199,7 @@ For more info, check out the [Logstash-to-Cloud documentation](logstash://refere
 
 ### `cloud_id` [plugins-filters-elasticsearch-cloud_id]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 Cloud ID, from the Elastic Cloud web console. If set `hosts` should not be used.
@@ -209,7 +209,7 @@ For more info, check out the [Logstash-to-Cloud documentation](logstash://refere
 
 ### `docinfo_fields` [plugins-filters-elasticsearch-docinfo_fields]
 
-* Value type is [hash](introduction.md#hash)
+* Value type is [hash](value-types.md#hash)
 * Default value is `{}`
 
 Hash of docinfo fields to copy from old event (found via elasticsearch) into new event
@@ -230,7 +230,7 @@ Example:
 
 ### `enable_sort` [plugins-filters-elasticsearch-enable_sort]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `true`
 
 Whether results should be sorted or not
@@ -238,7 +238,7 @@ Whether results should be sorted or not
 
 ### `fields` [plugins-filters-elasticsearch-fields]
 
-* Value type is [array](introduction.md#array)
+* Value type is [array](value-types.md#array)
 * Default value is `{}`
 
 An array of fields to copy from the old event (found via elasticsearch) into the new event, currently being processed.
@@ -255,7 +255,7 @@ fields => {
 
 ### `hosts` [plugins-filters-elasticsearch-hosts]
 
-* Value type is [array](introduction.md#array)
+* Value type is [array](value-types.md#array)
 * Default value is `["localhost:9200"]`
 
 List of elasticsearch hosts to use for querying.
@@ -263,7 +263,7 @@ List of elasticsearch hosts to use for querying.
 
 ### `index` [plugins-filters-elasticsearch-index]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `""`
 
 Comma-delimited list of index names to search; use `_all` or empty string to perform the operation on all indices. Field substitution (e.g. `index-name-%{{date_field}}`) is available
@@ -271,7 +271,7 @@ Comma-delimited list of index names to search; use `_all` or empty string to per
 
 ### `password` [plugins-filters-elasticsearch-password]
 
-* Value type is [password](introduction.md#password)
+* Value type is [password](value-types.md#password)
 * There is no default value for this setting.
 
 Basic Auth - password
@@ -279,7 +279,7 @@ Basic Auth - password
 
 ### `proxy` [plugins-filters-elasticsearch-proxy]
 
-* Value type is [uri](introduction.md#uri)
+* Value type is [uri](value-types.md#uri)
 * There is no default value for this setting.
 
 Set the address of a forward HTTP proxy. An empty string is treated as if proxy was not set, and is useful when using environment variables e.g. `proxy => '${LS_PROXY:}'`.
@@ -287,7 +287,7 @@ Set the address of a forward HTTP proxy. An empty string is treated as if proxy 
 
 ### `query` [plugins-filters-elasticsearch-query]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 Elasticsearch query string. More information is available in the [Elasticsearch query string documentation](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-query-string-query.html#query-string-syntax). Use either `query` or `query_template`.
@@ -295,7 +295,7 @@ Elasticsearch query string. More information is available in the [Elasticsearch 
 
 ### `query_template` [plugins-filters-elasticsearch-query_template]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 File path to elasticsearch query in DSL format. More information is available in the [Elasticsearch query documentation](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl.html). Use either `query` or `query_template`.
@@ -303,7 +303,7 @@ File path to elasticsearch query in DSL format. More information is available in
 
 ### `result_size` [plugins-filters-elasticsearch-result_size]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `1`
 
 How many results to return
@@ -311,7 +311,7 @@ How many results to return
 
 ### `retry_on_failure` [plugins-filters-elasticsearch-retry_on_failure]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `0` (retries disabled)
 
 How many times to retry an individual failed request.
@@ -321,7 +321,7 @@ When enabled, retry requests that result in connection errors or an HTTP status 
 
 ### `retry_on_status` [plugins-filters-elasticsearch-retry_on_status]
 
-* Value type is [array](introduction.md#array)
+* Value type is [array](value-types.md#array)
 * Default value is an empty list `[]`
 
 Which HTTP Status codes to consider for retries (in addition to connection errors) when using [`retry_on_failure`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-retry_on_failure),
@@ -329,7 +329,7 @@ Which HTTP Status codes to consider for retries (in addition to connection error
 
 ### `sort` [plugins-filters-elasticsearch-sort]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"@timestamp:desc"`
 
 Comma-delimited list of `<field>:<direction>` pairs that define the sort order
@@ -337,7 +337,7 @@ Comma-delimited list of `<field>:<direction>` pairs that define the sort order
 
 ### `ssl_certificate` [plugins-filters-elasticsearch-ssl_certificate]
 
-* Value type is [path](introduction.md#path)
+* Value type is [path](value-types.md#path)
 * There is no default value for this setting.
 
 SSL certificate to use to authenticate the client. This certificate should be an OpenSSL-style X.509 certificate file.
@@ -350,7 +350,7 @@ This setting can be used only if [`ssl_key`](plugins-filters-elasticsearch.md#pl
 
 ### `ssl_certificate_authorities` [plugins-filters-elasticsearch-ssl_certificate_authorities]
 
-* Value type is a list of [path](introduction.md#path)
+* Value type is a list of [path](value-types.md#path)
 * There is no default value for this setting
 
 The .cer or .pem files to validate the server’s certificate.
@@ -363,7 +363,7 @@ You cannot use this setting and [`ssl_truststore_path`](plugins-filters-elastics
 
 ### `ssl_cipher_suites` [plugins-filters-elasticsearch-ssl_cipher_suites]
 
-* Value type is a list of [string](introduction.md#string)
+* Value type is a list of [string](value-types.md#string)
 * There is no default value for this setting
 
 The list of cipher suites to use, listed by priorities. Supported cipher suites vary depending on the Java and protocol versions.
@@ -371,7 +371,7 @@ The list of cipher suites to use, listed by priorities. Supported cipher suites 
 
 ### `ssl_enabled` [plugins-filters-elasticsearch-ssl_enabled]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * There is no default value for this setting.
 
 Enable SSL/TLS secured communication to Elasticsearch cluster. Leaving this unspecified will use whatever scheme is specified in the URLs listed in [`hosts`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-hosts) or extracted from the [`cloud_id`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-cloud_id). If no explicit protocol is specified plain HTTP will be used.
@@ -379,7 +379,7 @@ Enable SSL/TLS secured communication to Elasticsearch cluster. Leaving this unsp
 
 ### `ssl_key` [plugins-filters-elasticsearch-ssl_key]
 
-* Value type is [path](introduction.md#path)
+* Value type is [path](value-types.md#path)
 * There is no default value for this setting.
 
 OpenSSL-style RSA private key that corresponds to the [`ssl_certificate`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-ssl_certificate).
@@ -392,7 +392,7 @@ This setting can be used only if [`ssl_certificate`](plugins-filters-elasticsear
 
 ### `ssl_keystore_password` [plugins-filters-elasticsearch-ssl_keystore_password]
 
-* Value type is [password](introduction.md#password)
+* Value type is [password](value-types.md#password)
 * There is no default value for this setting.
 
 Set the keystore password
@@ -400,7 +400,7 @@ Set the keystore password
 
 ### `ssl_keystore_path` [plugins-filters-elasticsearch-ssl_keystore_path]
 
-* Value type is [path](introduction.md#path)
+* Value type is [path](value-types.md#path)
 * There is no default value for this setting.
 
 The keystore used to present a certificate to the server. It can be either `.jks` or `.p12`
@@ -421,7 +421,7 @@ The format of the keystore file. It must be either `jks` or `pkcs12`.
 
 ### `ssl_supported_protocols` [plugins-filters-elasticsearch-ssl_supported_protocols]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Allowed values are: `'TLSv1.1'`, `'TLSv1.2'`, `'TLSv1.3'`
 * Default depends on the JDK being used. With up-to-date Logstash, the default is `['TLSv1.2', 'TLSv1.3']`. `'TLSv1.1'` is not considered secure and is only provided for legacy applications.
 
@@ -437,7 +437,7 @@ If you configure the plugin to use `'TLSv1.1'` on any recent JVM, such as the on
 
 ### `ssl_truststore_password` [plugins-filters-elasticsearch-ssl_truststore_password]
 
-* Value type is [password](introduction.md#password)
+* Value type is [password](value-types.md#password)
 * There is no default value for this setting.
 
 Set the truststore password
@@ -445,7 +445,7 @@ Set the truststore password
 
 ### `ssl_truststore_path` [plugins-filters-elasticsearch-ssl_truststore_path]
 
-* Value type is [path](introduction.md#path)
+* Value type is [path](value-types.md#path)
 * There is no default value for this setting.
 
 The truststore to validate the server’s certificate. It can be either `.jks` or `.p12`.
@@ -483,7 +483,7 @@ Setting certificate verification to `none` disables many security benefits of SS
 
 ### `tag_on_failure` [plugins-filters-elasticsearch-tag_on_failure]
 
-* Value type is [array](introduction.md#array)
+* Value type is [array](value-types.md#array)
 * Default value is `["_elasticsearch_lookup_failure"]`
 
 Tags the event on failure to look up previous log event information. This can be used in later analysis.
@@ -491,7 +491,7 @@ Tags the event on failure to look up previous log event information. This can be
 
 ### `user` [plugins-filters-elasticsearch-user]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 Basic Auth - username

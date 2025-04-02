@@ -38,19 +38,19 @@ As of version `7.0.0` of this plugin, a number of previously deprecated settings
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`host`](plugins-outputs-tcp.md#plugins-outputs-tcp-host) | [string](introduction.md#string) | Yes |
-| [`mode`](plugins-outputs-tcp.md#plugins-outputs-tcp-mode) | [string](introduction.md#string), one of `["server", "client"]` | No |
-| [`port`](plugins-outputs-tcp.md#plugins-outputs-tcp-port) | [number](introduction.md#number) | Yes |
-| [`reconnect_interval`](plugins-outputs-tcp.md#plugins-outputs-tcp-reconnect_interval) | [number](introduction.md#number) | No |
+| [`host`](plugins-outputs-tcp.md#plugins-outputs-tcp-host) | [string](value-types.md#string) | Yes |
+| [`mode`](plugins-outputs-tcp.md#plugins-outputs-tcp-mode) | [string](value-types.md#string), one of `["server", "client"]` | No |
+| [`port`](plugins-outputs-tcp.md#plugins-outputs-tcp-port) | [number](value-types.md#number) | Yes |
+| [`reconnect_interval`](plugins-outputs-tcp.md#plugins-outputs-tcp-reconnect_interval) | [number](value-types.md#number) | No |
 | [`ssl_certificate`](plugins-outputs-tcp.md#plugins-outputs-tcp-ssl_certificate) | a valid filesystem path | No |
-| [`ssl_certificate_authorities`](plugins-outputs-tcp.md#plugins-outputs-tcp-ssl_certificate_authorities) | [array](introduction.md#array) | No |
-| [`ssl_cipher_suites`](plugins-outputs-tcp.md#plugins-outputs-tcp-ssl_cipher_suites) | [string](introduction.md#string) | No |
-| [`ssl_client_authentication`](plugins-outputs-tcp.md#plugins-outputs-tcp-ssl_client_authentication) | [string](introduction.md#string), one of `["none", "optional", "required"]` | No |
-| [`ssl_enabled`](plugins-outputs-tcp.md#plugins-outputs-tcp-ssl_enabled) | [boolean](introduction.md#boolean) | No |
+| [`ssl_certificate_authorities`](plugins-outputs-tcp.md#plugins-outputs-tcp-ssl_certificate_authorities) | [array](value-types.md#array) | No |
+| [`ssl_cipher_suites`](plugins-outputs-tcp.md#plugins-outputs-tcp-ssl_cipher_suites) | [string](value-types.md#string) | No |
+| [`ssl_client_authentication`](plugins-outputs-tcp.md#plugins-outputs-tcp-ssl_client_authentication) | [string](value-types.md#string), one of `["none", "optional", "required"]` | No |
+| [`ssl_enabled`](plugins-outputs-tcp.md#plugins-outputs-tcp-ssl_enabled) | [boolean](value-types.md#boolean) | No |
 | [`ssl_key`](plugins-outputs-tcp.md#plugins-outputs-tcp-ssl_key) | a valid filesystem path | No |
-| [`ssl_key_passphrase`](plugins-outputs-tcp.md#plugins-outputs-tcp-ssl_key_passphrase) | [password](introduction.md#password) | No |
-| [`ssl_supported_protocols`](plugins-outputs-tcp.md#plugins-outputs-tcp-ssl_supported_protocols) | [string](introduction.md#string) | No |
-| [`ssl_verification_mode`](plugins-outputs-tcp.md#plugins-outputs-tcp-ssl_verification_mode) | [string](introduction.md#string), one of `["full", "none"]` | No |
+| [`ssl_key_passphrase`](plugins-outputs-tcp.md#plugins-outputs-tcp-ssl_key_passphrase) | [password](value-types.md#password) | No |
+| [`ssl_supported_protocols`](plugins-outputs-tcp.md#plugins-outputs-tcp-ssl_supported_protocols) | [string](value-types.md#string) | No |
+| [`ssl_verification_mode`](plugins-outputs-tcp.md#plugins-outputs-tcp-ssl_verification_mode) | [string](value-types.md#string), one of `["full", "none"]` | No |
 
 Also see [Common options](plugins-outputs-tcp.md#plugins-outputs-tcp-common-options) for a list of options supported by all output plugins.
 
@@ -59,7 +59,7 @@ Also see [Common options](plugins-outputs-tcp.md#plugins-outputs-tcp-common-opti
 ### `host` [plugins-outputs-tcp-host]
 
 * This is a required setting.
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 When mode is `server`, the address to listen on. When mode is `client`, the address to connect to.
@@ -76,7 +76,7 @@ Mode to operate in. `server` listens for client connections, `client` connects t
 ### `port` [plugins-outputs-tcp-port]
 
 * This is a required setting.
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * There is no default value for this setting.
 
 When mode is `server`, the port to listen on. When mode is `client`, the port to connect to.
@@ -84,7 +84,7 @@ When mode is `server`, the port to listen on. When mode is `client`, the port to
 
 ### `reconnect_interval` [plugins-outputs-tcp-reconnect_interval]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `10`
 
 When connect failed,retry interval in sec.
@@ -92,7 +92,7 @@ When connect failed,retry interval in sec.
 
 ### `ssl_certificate` [plugins-outputs-tcp-ssl_certificate]
 
-* Value type is [path](introduction.md#path)
+* Value type is [path](value-types.md#path)
 * There is no default value for this setting.
 
 Path to certificate in PEM format. This certificate will be presented to the other part of the TLS connection.
@@ -100,7 +100,7 @@ Path to certificate in PEM format. This certificate will be presented to the oth
 
 ### `ssl_certificate_authorities` [plugins-outputs-tcp-ssl_certificate_authorities]
 
-* Value type is [array](introduction.md#array)
+* Value type is [array](value-types.md#array)
 * Default value is `[]`
 
 Validate client certificate or certificate chain against these authorities. You can define multiple files. All the certificates will be read and added to the trust store. The system CA path is automatically included.
@@ -108,7 +108,7 @@ Validate client certificate or certificate chain against these authorities. You 
 
 ### `ssl_cipher_suites` [plugins-outputs-tcp-ssl_cipher_suites]
 
-* Value type is a list of [string](introduction.md#string)
+* Value type is a list of [string](value-types.md#string)
 * There is no default value for this setting
 
 The list of cipher suites to use, listed by priorities. Supported cipher suites vary depending on the Java and protocol versions.
@@ -131,7 +131,7 @@ This setting can be used only if [`mode`](plugins-outputs-tcp.md#plugins-outputs
 
 ### `ssl_enabled` [plugins-outputs-tcp-ssl_enabled]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 Enable SSL (must be set for other `ssl_` options to take effect).
@@ -139,7 +139,7 @@ Enable SSL (must be set for other `ssl_` options to take effect).
 
 ### `ssl_key` [plugins-outputs-tcp-ssl_key]
 
-* Value type is [path](introduction.md#path)
+* Value type is [path](value-types.md#path)
 * There is no default value for this setting.
 
 SSL key path
@@ -147,7 +147,7 @@ SSL key path
 
 ### `ssl_key_passphrase` [plugins-outputs-tcp-ssl_key_passphrase]
 
-* Value type is [password](introduction.md#password)
+* Value type is [password](value-types.md#password)
 * Default value is `nil`
 
 SSL key passphrase
@@ -155,7 +155,7 @@ SSL key passphrase
 
 ### `ssl_supported_protocols` [plugins-outputs-tcp-ssl_supported_protocols]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Allowed values are: `'TLSv1.1'`, `'TLSv1.2'`, `'TLSv1.3'`
 * Default depends on the JDK being used. With up-to-date Logstash, the default is `['TLSv1.2', 'TLSv1.3']`. `'TLSv1.1'` is not considered secure and is only provided for legacy applications.
 

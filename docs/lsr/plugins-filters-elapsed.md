@@ -92,12 +92,12 @@ This plugin supports the following configuration options plus the [Common option
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`end_tag`](plugins-filters-elapsed.md#plugins-filters-elapsed-end_tag) | [string](introduction.md#string) | Yes |
-| [`new_event_on_match`](plugins-filters-elapsed.md#plugins-filters-elapsed-new_event_on_match) | [boolean](introduction.md#boolean) | No |
-| [`start_tag`](plugins-filters-elapsed.md#plugins-filters-elapsed-start_tag) | [string](introduction.md#string) | Yes |
-| [`timeout`](plugins-filters-elapsed.md#plugins-filters-elapsed-timeout) | [number](introduction.md#number) | No |
-| [`unique_id_field`](plugins-filters-elapsed.md#plugins-filters-elapsed-unique_id_field) | [string](introduction.md#string) | Yes |
-| [`keep_start_event`](plugins-filters-elapsed.md#plugins-filters-elapsed-keep_start_event) | [string](introduction.md#string) | No |
+| [`end_tag`](plugins-filters-elapsed.md#plugins-filters-elapsed-end_tag) | [string](value-types.md#string) | Yes |
+| [`new_event_on_match`](plugins-filters-elapsed.md#plugins-filters-elapsed-new_event_on_match) | [boolean](value-types.md#boolean) | No |
+| [`start_tag`](plugins-filters-elapsed.md#plugins-filters-elapsed-start_tag) | [string](value-types.md#string) | Yes |
+| [`timeout`](plugins-filters-elapsed.md#plugins-filters-elapsed-timeout) | [number](value-types.md#number) | No |
+| [`unique_id_field`](plugins-filters-elapsed.md#plugins-filters-elapsed-unique_id_field) | [string](value-types.md#string) | Yes |
+| [`keep_start_event`](plugins-filters-elapsed.md#plugins-filters-elapsed-keep_start_event) | [string](value-types.md#string) | No |
 
 Also see [Common options](plugins-filters-elapsed.md#plugins-filters-elapsed-common-options) for a list of options supported by all filter plugins.
 
@@ -106,7 +106,7 @@ Also see [Common options](plugins-filters-elapsed.md#plugins-filters-elapsed-com
 ### `end_tag` [plugins-filters-elapsed-end_tag]
 
 * This is a required setting.
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 The name of the tag identifying the "end event"
@@ -114,7 +114,7 @@ The name of the tag identifying the "end event"
 
 ### `new_event_on_match` [plugins-filters-elapsed-new_event_on_match]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 This property manage what to do when an "end event" matches a "start event". If it’s set to `false` (default value), the elapsed information are added to the "end event"; if it’s set to `true` a new "match event" is created.
@@ -123,7 +123,7 @@ This property manage what to do when an "end event" matches a "start event". If 
 ### `start_tag` [plugins-filters-elapsed-start_tag]
 
 * This is a required setting.
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 The name of the tag identifying the "start event"
@@ -131,7 +131,7 @@ The name of the tag identifying the "start event"
 
 ### `timeout` [plugins-filters-elapsed-timeout]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `1800`
 
 The amount of seconds after an "end event" can be considered lost. The corresponding "start event" is discarded and an "expired event" is generated. The default value is 30 minutes (1800 seconds).
@@ -140,7 +140,7 @@ The amount of seconds after an "end event" can be considered lost. The correspon
 ### `unique_id_field` [plugins-filters-elapsed-unique_id_field]
 
 * This is a required setting.
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 The name of the field containing the task ID. This value must uniquely identify the task in the system, otherwise it’s impossible to match the couple of events.
@@ -148,7 +148,7 @@ The name of the field containing the task ID. This value must uniquely identify 
 
 ### `keep_start_event` [plugins-filters-elapsed-keep_start_event]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `first`
 
 This property manages what to do when several events matched as a start one were received before the end event for the specified ID. There are two supported values: `first` or `last`. If it’s set to `first` (default value), the first event matched as a start will be used; if it’s set to `last`, the last one will be used.

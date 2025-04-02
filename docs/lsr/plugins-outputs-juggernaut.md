@@ -38,13 +38,13 @@ This plugin supports the following configuration options plus the [Common option
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`channels`](plugins-outputs-juggernaut.md#plugins-outputs-juggernaut-channels) | [array](introduction.md#array) | Yes |
-| [`db`](plugins-outputs-juggernaut.md#plugins-outputs-juggernaut-db) | [number](introduction.md#number) | No |
-| [`host`](plugins-outputs-juggernaut.md#plugins-outputs-juggernaut-host) | [string](introduction.md#string) | No |
-| [`message_format`](plugins-outputs-juggernaut.md#plugins-outputs-juggernaut-message_format) | [string](introduction.md#string) | No |
-| [`password`](plugins-outputs-juggernaut.md#plugins-outputs-juggernaut-password) | [password](introduction.md#password) | No |
-| [`port`](plugins-outputs-juggernaut.md#plugins-outputs-juggernaut-port) | [number](introduction.md#number) | No |
-| [`timeout`](plugins-outputs-juggernaut.md#plugins-outputs-juggernaut-timeout) | [number](introduction.md#number) | No |
+| [`channels`](plugins-outputs-juggernaut.md#plugins-outputs-juggernaut-channels) | [array](value-types.md#array) | Yes |
+| [`db`](plugins-outputs-juggernaut.md#plugins-outputs-juggernaut-db) | [number](value-types.md#number) | No |
+| [`host`](plugins-outputs-juggernaut.md#plugins-outputs-juggernaut-host) | [string](value-types.md#string) | No |
+| [`message_format`](plugins-outputs-juggernaut.md#plugins-outputs-juggernaut-message_format) | [string](value-types.md#string) | No |
+| [`password`](plugins-outputs-juggernaut.md#plugins-outputs-juggernaut-password) | [password](value-types.md#password) | No |
+| [`port`](plugins-outputs-juggernaut.md#plugins-outputs-juggernaut-port) | [number](value-types.md#number) | No |
+| [`timeout`](plugins-outputs-juggernaut.md#plugins-outputs-juggernaut-timeout) | [number](value-types.md#number) | No |
 
 Also see [Common options](plugins-outputs-juggernaut.md#plugins-outputs-juggernaut-common-options) for a list of options supported by all output plugins.
 
@@ -53,7 +53,7 @@ Also see [Common options](plugins-outputs-juggernaut.md#plugins-outputs-juggerna
 ### `channels` [plugins-outputs-juggernaut-channels]
 
 * This is a required setting.
-* Value type is [array](introduction.md#array)
+* Value type is [array](value-types.md#array)
 * There is no default value for this setting.
 
 List of channels to which to publish. Dynamic names are valid here, for example `logstash-%{{type}}`.
@@ -61,7 +61,7 @@ List of channels to which to publish. Dynamic names are valid here, for example 
 
 ### `db` [plugins-outputs-juggernaut-db]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `0`
 
 The redis database number.
@@ -69,7 +69,7 @@ The redis database number.
 
 ### `host` [plugins-outputs-juggernaut-host]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"127.0.0.1"`
 
 The hostname of the redis server to which juggernaut is listening.
@@ -77,7 +77,7 @@ The hostname of the redis server to which juggernaut is listening.
 
 ### `message_format` [plugins-outputs-juggernaut-message_format]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 How should the message be formatted before pushing to the websocket.
@@ -85,7 +85,7 @@ How should the message be formatted before pushing to the websocket.
 
 ### `password` [plugins-outputs-juggernaut-password]
 
-* Value type is [password](introduction.md#password)
+* Value type is [password](value-types.md#password)
 * There is no default value for this setting.
 
 Password to authenticate with.  There is no authentication by default.
@@ -93,7 +93,7 @@ Password to authenticate with.  There is no authentication by default.
 
 ### `port` [plugins-outputs-juggernaut-port]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `6379`
 
 The port to connect on.
@@ -101,7 +101,7 @@ The port to connect on.
 
 ### `timeout` [plugins-outputs-juggernaut-timeout]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `5`
 
 Redis initial connection timeout in seconds.

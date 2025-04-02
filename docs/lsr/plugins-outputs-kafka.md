@@ -70,52 +70,52 @@ Some of these options map to a Kafka option. Defaults usually reflect the Kafka 
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`acks`](plugins-outputs-kafka.md#plugins-outputs-kafka-acks) | [string](introduction.md#string), one of `["0", "1", "all"]` | No |
-| [`batch_size`](plugins-outputs-kafka.md#plugins-outputs-kafka-batch_size) | [number](introduction.md#number) | No |
-| [`bootstrap_servers`](plugins-outputs-kafka.md#plugins-outputs-kafka-bootstrap_servers) | [string](introduction.md#string) | No |
-| [`buffer_memory`](plugins-outputs-kafka.md#plugins-outputs-kafka-buffer_memory) | [number](introduction.md#number) | No |
-| [`client_dns_lookup`](plugins-outputs-kafka.md#plugins-outputs-kafka-client_dns_lookup) | [string](introduction.md#string) | No |
-| [`client_id`](plugins-outputs-kafka.md#plugins-outputs-kafka-client_id) | [string](introduction.md#string) | No |
-| [`compression_type`](plugins-outputs-kafka.md#plugins-outputs-kafka-compression_type) | [string](introduction.md#string), one of `["none", "gzip", "snappy", "lz4", "zstd"]` | No |
-| [`connections_max_idle_ms`](plugins-outputs-kafka.md#plugins-outputs-kafka-connections_max_idle_ms) | [number](introduction.md#number) | No |
+| [`acks`](plugins-outputs-kafka.md#plugins-outputs-kafka-acks) | [string](value-types.md#string), one of `["0", "1", "all"]` | No |
+| [`batch_size`](plugins-outputs-kafka.md#plugins-outputs-kafka-batch_size) | [number](value-types.md#number) | No |
+| [`bootstrap_servers`](plugins-outputs-kafka.md#plugins-outputs-kafka-bootstrap_servers) | [string](value-types.md#string) | No |
+| [`buffer_memory`](plugins-outputs-kafka.md#plugins-outputs-kafka-buffer_memory) | [number](value-types.md#number) | No |
+| [`client_dns_lookup`](plugins-outputs-kafka.md#plugins-outputs-kafka-client_dns_lookup) | [string](value-types.md#string) | No |
+| [`client_id`](plugins-outputs-kafka.md#plugins-outputs-kafka-client_id) | [string](value-types.md#string) | No |
+| [`compression_type`](plugins-outputs-kafka.md#plugins-outputs-kafka-compression_type) | [string](value-types.md#string), one of `["none", "gzip", "snappy", "lz4", "zstd"]` | No |
+| [`connections_max_idle_ms`](plugins-outputs-kafka.md#plugins-outputs-kafka-connections_max_idle_ms) | [number](value-types.md#number) | No |
 | [`jaas_path`](plugins-outputs-kafka.md#plugins-outputs-kafka-jaas_path) | a valid filesystem path | No |
 | [`kerberos_config`](plugins-outputs-kafka.md#plugins-outputs-kafka-kerberos_config) | a valid filesystem path | No |
-| [`key_serializer`](plugins-outputs-kafka.md#plugins-outputs-kafka-key_serializer) | [string](introduction.md#string) | No |
-| [`linger_ms`](plugins-outputs-kafka.md#plugins-outputs-kafka-linger_ms) | [number](introduction.md#number) | No |
-| [`max_request_size`](plugins-outputs-kafka.md#plugins-outputs-kafka-max_request_size) | [number](introduction.md#number) | No |
-| [`message_headers`](plugins-outputs-kafka.md#plugins-outputs-kafka-message_headers) | [hash](introduction.md#hash) | No |
-| [`message_key`](plugins-outputs-kafka.md#plugins-outputs-kafka-message_key) | [string](introduction.md#string) | No |
-| [`metadata_fetch_timeout_ms`](plugins-outputs-kafka.md#plugins-outputs-kafka-metadata_fetch_timeout_ms) | [number](introduction.md#number) | No |
-| [`metadata_max_age_ms`](plugins-outputs-kafka.md#plugins-outputs-kafka-metadata_max_age_ms) | [number](introduction.md#number) | No |
-| [`partitioner`](plugins-outputs-kafka.md#plugins-outputs-kafka-partitioner) | [string](introduction.md#string) | No |
-| [`receive_buffer_bytes`](plugins-outputs-kafka.md#plugins-outputs-kafka-receive_buffer_bytes) | [number](introduction.md#number) | No |
-| [`reconnect_backoff_ms`](plugins-outputs-kafka.md#plugins-outputs-kafka-reconnect_backoff_ms) | [number](introduction.md#number) | No |
-| [`request_timeout_ms`](plugins-outputs-kafka.md#plugins-outputs-kafka-request_timeout_ms) | [number](introduction.md#number) | No |
-| [`retries`](plugins-outputs-kafka.md#plugins-outputs-kafka-retries) | [number](introduction.md#number) | No |
-| [`retry_backoff_ms`](plugins-outputs-kafka.md#plugins-outputs-kafka-retry_backoff_ms) | [number](introduction.md#number) | No |
-| [`sasl_client_callback_handler_class`](plugins-outputs-kafka.md#plugins-outputs-kafka-sasl_client_callback_handler_class) | [string](introduction.md#string) | No |
-| [`sasl_oauthbearer_token_endpoint_url`](plugins-outputs-kafka.md#plugins-outputs-kafka-sasl_oauthbearer_token_endpoint_url) | [string](introduction.md#string) | No |
-| [`sasl_oauthbearer_scope_claim_name`](plugins-outputs-kafka.md#plugins-outputs-kafka-sasl_oauthbearer_scope_claim_name) | [string](introduction.md#string) | No |
-| [`sasl_login_callback_handler_class`](plugins-outputs-kafka.md#plugins-outputs-kafka-sasl_login_callback_handler_class) | [string](introduction.md#string) | No |
-| [`sasl_login_connect_timeout_ms`](plugins-outputs-kafka.md#plugins-outputs-kafka-sasl_login_connect_timeout_ms) | [number](introduction.md#number) | No |
-| [`sasl_login_read_timeout_ms`](plugins-outputs-kafka.md#plugins-outputs-kafka-sasl_login_read_timeout_ms) | [number](introduction.md#number) | No |
-| [`sasl_login_retry_backoff_ms`](plugins-outputs-kafka.md#plugins-outputs-kafka-sasl_login_retry_backoff_ms) | [number](introduction.md#number) | No |
-| [`sasl_login_retry_backoff_max_ms`](plugins-outputs-kafka.md#plugins-outputs-kafka-sasl_login_retry_backoff_max_ms) | [number](introduction.md#number) | No |
-| [`sasl_jaas_config`](plugins-outputs-kafka.md#plugins-outputs-kafka-sasl_jaas_config) | [string](introduction.md#string) | No |
-| [`sasl_kerberos_service_name`](plugins-outputs-kafka.md#plugins-outputs-kafka-sasl_kerberos_service_name) | [string](introduction.md#string) | No |
-| [`sasl_mechanism`](plugins-outputs-kafka.md#plugins-outputs-kafka-sasl_mechanism) | [string](introduction.md#string) | No |
-| [`security_protocol`](plugins-outputs-kafka.md#plugins-outputs-kafka-security_protocol) | [string](introduction.md#string), one of `["PLAINTEXT", "SSL", "SASL_PLAINTEXT", "SASL_SSL"]` | No |
-| [`send_buffer_bytes`](plugins-outputs-kafka.md#plugins-outputs-kafka-send_buffer_bytes) | [number](introduction.md#number) | No |
-| [`ssl_endpoint_identification_algorithm`](plugins-outputs-kafka.md#plugins-outputs-kafka-ssl_endpoint_identification_algorithm) | [string](introduction.md#string) | No |
-| [`ssl_key_password`](plugins-outputs-kafka.md#plugins-outputs-kafka-ssl_key_password) | [password](introduction.md#password) | No |
+| [`key_serializer`](plugins-outputs-kafka.md#plugins-outputs-kafka-key_serializer) | [string](value-types.md#string) | No |
+| [`linger_ms`](plugins-outputs-kafka.md#plugins-outputs-kafka-linger_ms) | [number](value-types.md#number) | No |
+| [`max_request_size`](plugins-outputs-kafka.md#plugins-outputs-kafka-max_request_size) | [number](value-types.md#number) | No |
+| [`message_headers`](plugins-outputs-kafka.md#plugins-outputs-kafka-message_headers) | [hash](value-types.md#hash) | No |
+| [`message_key`](plugins-outputs-kafka.md#plugins-outputs-kafka-message_key) | [string](value-types.md#string) | No |
+| [`metadata_fetch_timeout_ms`](plugins-outputs-kafka.md#plugins-outputs-kafka-metadata_fetch_timeout_ms) | [number](value-types.md#number) | No |
+| [`metadata_max_age_ms`](plugins-outputs-kafka.md#plugins-outputs-kafka-metadata_max_age_ms) | [number](value-types.md#number) | No |
+| [`partitioner`](plugins-outputs-kafka.md#plugins-outputs-kafka-partitioner) | [string](value-types.md#string) | No |
+| [`receive_buffer_bytes`](plugins-outputs-kafka.md#plugins-outputs-kafka-receive_buffer_bytes) | [number](value-types.md#number) | No |
+| [`reconnect_backoff_ms`](plugins-outputs-kafka.md#plugins-outputs-kafka-reconnect_backoff_ms) | [number](value-types.md#number) | No |
+| [`request_timeout_ms`](plugins-outputs-kafka.md#plugins-outputs-kafka-request_timeout_ms) | [number](value-types.md#number) | No |
+| [`retries`](plugins-outputs-kafka.md#plugins-outputs-kafka-retries) | [number](value-types.md#number) | No |
+| [`retry_backoff_ms`](plugins-outputs-kafka.md#plugins-outputs-kafka-retry_backoff_ms) | [number](value-types.md#number) | No |
+| [`sasl_client_callback_handler_class`](plugins-outputs-kafka.md#plugins-outputs-kafka-sasl_client_callback_handler_class) | [string](value-types.md#string) | No |
+| [`sasl_oauthbearer_token_endpoint_url`](plugins-outputs-kafka.md#plugins-outputs-kafka-sasl_oauthbearer_token_endpoint_url) | [string](value-types.md#string) | No |
+| [`sasl_oauthbearer_scope_claim_name`](plugins-outputs-kafka.md#plugins-outputs-kafka-sasl_oauthbearer_scope_claim_name) | [string](value-types.md#string) | No |
+| [`sasl_login_callback_handler_class`](plugins-outputs-kafka.md#plugins-outputs-kafka-sasl_login_callback_handler_class) | [string](value-types.md#string) | No |
+| [`sasl_login_connect_timeout_ms`](plugins-outputs-kafka.md#plugins-outputs-kafka-sasl_login_connect_timeout_ms) | [number](value-types.md#number) | No |
+| [`sasl_login_read_timeout_ms`](plugins-outputs-kafka.md#plugins-outputs-kafka-sasl_login_read_timeout_ms) | [number](value-types.md#number) | No |
+| [`sasl_login_retry_backoff_ms`](plugins-outputs-kafka.md#plugins-outputs-kafka-sasl_login_retry_backoff_ms) | [number](value-types.md#number) | No |
+| [`sasl_login_retry_backoff_max_ms`](plugins-outputs-kafka.md#plugins-outputs-kafka-sasl_login_retry_backoff_max_ms) | [number](value-types.md#number) | No |
+| [`sasl_jaas_config`](plugins-outputs-kafka.md#plugins-outputs-kafka-sasl_jaas_config) | [string](value-types.md#string) | No |
+| [`sasl_kerberos_service_name`](plugins-outputs-kafka.md#plugins-outputs-kafka-sasl_kerberos_service_name) | [string](value-types.md#string) | No |
+| [`sasl_mechanism`](plugins-outputs-kafka.md#plugins-outputs-kafka-sasl_mechanism) | [string](value-types.md#string) | No |
+| [`security_protocol`](plugins-outputs-kafka.md#plugins-outputs-kafka-security_protocol) | [string](value-types.md#string), one of `["PLAINTEXT", "SSL", "SASL_PLAINTEXT", "SASL_SSL"]` | No |
+| [`send_buffer_bytes`](plugins-outputs-kafka.md#plugins-outputs-kafka-send_buffer_bytes) | [number](value-types.md#number) | No |
+| [`ssl_endpoint_identification_algorithm`](plugins-outputs-kafka.md#plugins-outputs-kafka-ssl_endpoint_identification_algorithm) | [string](value-types.md#string) | No |
+| [`ssl_key_password`](plugins-outputs-kafka.md#plugins-outputs-kafka-ssl_key_password) | [password](value-types.md#password) | No |
 | [`ssl_keystore_location`](plugins-outputs-kafka.md#plugins-outputs-kafka-ssl_keystore_location) | a valid filesystem path | No |
-| [`ssl_keystore_password`](plugins-outputs-kafka.md#plugins-outputs-kafka-ssl_keystore_password) | [password](introduction.md#password) | No |
-| [`ssl_keystore_type`](plugins-outputs-kafka.md#plugins-outputs-kafka-ssl_keystore_type) | [string](introduction.md#string) | No |
+| [`ssl_keystore_password`](plugins-outputs-kafka.md#plugins-outputs-kafka-ssl_keystore_password) | [password](value-types.md#password) | No |
+| [`ssl_keystore_type`](plugins-outputs-kafka.md#plugins-outputs-kafka-ssl_keystore_type) | [string](value-types.md#string) | No |
 | [`ssl_truststore_location`](plugins-outputs-kafka.md#plugins-outputs-kafka-ssl_truststore_location) | a valid filesystem path | No |
-| [`ssl_truststore_password`](plugins-outputs-kafka.md#plugins-outputs-kafka-ssl_truststore_password) | [password](introduction.md#password) | No |
-| [`ssl_truststore_type`](plugins-outputs-kafka.md#plugins-outputs-kafka-ssl_truststore_type) | [string](introduction.md#string) | No |
-| [`topic_id`](plugins-outputs-kafka.md#plugins-outputs-kafka-topic_id) | [string](introduction.md#string) | Yes |
-| [`value_serializer`](plugins-outputs-kafka.md#plugins-outputs-kafka-value_serializer) | [string](introduction.md#string) | No |
+| [`ssl_truststore_password`](plugins-outputs-kafka.md#plugins-outputs-kafka-ssl_truststore_password) | [password](value-types.md#password) | No |
+| [`ssl_truststore_type`](plugins-outputs-kafka.md#plugins-outputs-kafka-ssl_truststore_type) | [string](value-types.md#string) | No |
+| [`topic_id`](plugins-outputs-kafka.md#plugins-outputs-kafka-topic_id) | [string](value-types.md#string) | Yes |
+| [`value_serializer`](plugins-outputs-kafka.md#plugins-outputs-kafka-value_serializer) | [string](value-types.md#string) | No |
 
 Also see [Common options](plugins-outputs-kafka.md#plugins-outputs-kafka-common-options) for a list of options supported by all output plugins.
 
@@ -137,7 +137,7 @@ The number of acknowledgments the producer requires the leader to have received 
 
 ### `batch_size` [plugins-outputs-kafka-batch_size]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `16384`.
 
 The producer will attempt to batch records together into fewer requests whenever multiple records are being sent to the same partition. This helps performance on both the client and the server. This configuration controls the default batch size in bytes.
@@ -145,7 +145,7 @@ The producer will attempt to batch records together into fewer requests whenever
 
 ### `bootstrap_servers` [plugins-outputs-kafka-bootstrap_servers]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"localhost:9092"`
 
 This is for bootstrapping and the producer will only use it for getting metadata (topics, partitions and replicas). The socket connections for sending the actual data will be established based on the broker information returned in the metadata. The format is `host1:port1,host2:port2`, and the list can be a subset of brokers or a VIP pointing to a subset of brokers.
@@ -153,7 +153,7 @@ This is for bootstrapping and the producer will only use it for getting metadata
 
 ### `buffer_memory` [plugins-outputs-kafka-buffer_memory]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `33554432` (32MB).
 
 The total bytes of memory the producer can use to buffer records waiting to be sent to the server.
@@ -161,7 +161,7 @@ The total bytes of memory the producer can use to buffer records waiting to be s
 
 ### `client_dns_lookup` [plugins-outputs-kafka-client_dns_lookup]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Valid options are `use_all_dns_ips`, `resolve_canonical_bootstrap_servers_only`, `default`
 * Default value is `"default"`
 
@@ -176,7 +176,7 @@ Starting from Kafka 3 `default` value for `client.dns.lookup` value has been rem
 
 ### `client_id` [plugins-outputs-kafka-client_id]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"logstash"`
 
 The id string to pass to the server when making requests. The purpose of this is to be able to track the source of requests beyond just ip/port by allowing a logical application name to be included with the request
@@ -192,7 +192,7 @@ The compression type for all data generated by the producer. The default is none
 
 ### `connections_max_idle_ms` [plugins-outputs-kafka-connections_max_idle_ms]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `540000` milliseconds (9 minutes).
 
 Close idle connections after the number of milliseconds specified by this config.
@@ -200,7 +200,7 @@ Close idle connections after the number of milliseconds specified by this config
 
 ### `jaas_path` [plugins-outputs-kafka-jaas_path]
 
-* Value type is [path](introduction.md#path)
+* Value type is [path](value-types.md#path)
 * There is no default value for this setting.
 
 The Java Authentication and Authorization Service (JAAS) API supplies user authentication and authorization services for Kafka. This setting provides the path to the JAAS file. Sample JAAS file for Kafka client:
@@ -219,7 +219,7 @@ Please note that specifying `jaas_path` and `kerberos_config` in the config file
 
 ### `kerberos_config` [plugins-outputs-kafka-kerberos_config]
 
-* Value type is [path](introduction.md#path)
+* Value type is [path](value-types.md#path)
 * There is no default value for this setting.
 
 Optional path to kerberos config file. This is krb5.conf style as detailed in [https://web.mit.edu/kerberos/krb5-1.12/doc/admin/conf_files/krb5_conf.html](https://web.mit.edu/kerberos/krb5-1.12/doc/admin/conf_files/krb5_conf.md)
@@ -227,7 +227,7 @@ Optional path to kerberos config file. This is krb5.conf style as detailed in [h
 
 ### `key_serializer` [plugins-outputs-kafka-key_serializer]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"org.apache.kafka.common.serialization.StringSerializer"`
 
 Serializer class for the key of the message
@@ -235,7 +235,7 @@ Serializer class for the key of the message
 
 ### `linger_ms` [plugins-outputs-kafka-linger_ms]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `0`
 
 The producer groups together any records that arrive in between request transmissions into a single batched request. Normally this occurs only under load when records arrive faster than they can be sent out. However in some circumstances the client may want to reduce the number of requests even under moderate load. This setting accomplishes this by adding a small amount of artificial delay—that is, rather than immediately sending out a record the producer will wait for up to the given delay to allow other records to be sent so that the sends can be batched together.
@@ -243,7 +243,7 @@ The producer groups together any records that arrive in between request transmis
 
 ### `max_request_size` [plugins-outputs-kafka-max_request_size]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `1048576` (1MB).
 
 The maximum size of a request
@@ -251,10 +251,10 @@ The maximum size of a request
 
 ### `message_headers` [plugins-outputs-kafka-message_headers]
 
-* Value type is [hash](introduction.md#hash)
+* Value type is [hash](value-types.md#hash)
 
-    * Keys are header names, and must be [string](introduction.md#string)
-    * Values are header values, and must be [string](introduction.md#string)
+    * Keys are header names, and must be [string](value-types.md#string)
+    * Values are header values, and must be [string](value-types.md#string)
     * Values support interpolation from event field values
 
 * There is no default value for this setting.
@@ -268,7 +268,7 @@ A map of key value pairs, each corresponding to a header name and its value resp
 
 ### `message_key` [plugins-outputs-kafka-message_key]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 The key for the message.
@@ -276,7 +276,7 @@ The key for the message.
 
 ### `metadata_fetch_timeout_ms` [plugins-outputs-kafka-metadata_fetch_timeout_ms]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `60000` milliseconds (60 seconds).
 
 The timeout setting for initial metadata request to fetch topic metadata.
@@ -284,7 +284,7 @@ The timeout setting for initial metadata request to fetch topic metadata.
 
 ### `metadata_max_age_ms` [plugins-outputs-kafka-metadata_max_age_ms]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `300000` milliseconds (5 minutes).
 
 The max time in milliseconds before a metadata refresh is forced.
@@ -292,7 +292,7 @@ The max time in milliseconds before a metadata refresh is forced.
 
 ### `partitioner` [plugins-outputs-kafka-partitioner]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 The default behavior is to hash the `message_key` of an event to get the partition. When no message key is present, the plugin picks a partition in a round-robin fashion.
@@ -306,7 +306,7 @@ Available options for choosing a partitioning strategy are as follows:
 
 ### `receive_buffer_bytes` [plugins-outputs-kafka-receive_buffer_bytes]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `32768` (32KB).
 
 The size of the TCP receive buffer to use when reading data
@@ -314,7 +314,7 @@ The size of the TCP receive buffer to use when reading data
 
 ### `reconnect_backoff_ms` [plugins-outputs-kafka-reconnect_backoff_ms]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `50`.
 
 The amount of time to wait before attempting to reconnect to a given host when a connection fails.
@@ -322,7 +322,7 @@ The amount of time to wait before attempting to reconnect to a given host when a
 
 ### `request_timeout_ms` [plugins-outputs-kafka-request_timeout_ms]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `40000` milliseconds (40 seconds).
 
 The configuration controls the maximum amount of time the client will wait for the response of a request. If the response is not received before the timeout elapses the client will resend the request if necessary or fail the request if retries are exhausted.
@@ -330,7 +330,7 @@ The configuration controls the maximum amount of time the client will wait for t
 
 ### `retries` [plugins-outputs-kafka-retries]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * There is no default value for this setting.
 
 The default retry behavior is to retry until successful. To prevent data loss, changing this setting is discouraged.
@@ -346,7 +346,7 @@ In versions prior to 10.5.0, any exception is retried indefinitely unless the `r
 
 ### `retry_backoff_ms` [plugins-outputs-kafka-retry_backoff_ms]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `100` milliseconds.
 
 The amount of time to wait before attempting to retry a failed produce request to a given topic partition.
@@ -354,7 +354,7 @@ The amount of time to wait before attempting to retry a failed produce request t
 
 ### `sasl_client_callback_handler_class` [plugins-outputs-kafka-sasl_client_callback_handler_class]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 The SASL client callback handler class the specified SASL mechanism should use.
@@ -362,7 +362,7 @@ The SASL client callback handler class the specified SASL mechanism should use.
 
 ### `sasl_oauthbearer_token_endpoint_url` [plugins-outputs-kafka-sasl_oauthbearer_token_endpoint_url]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 The URL for the OAuth 2.0 issuer token endpoint.
@@ -370,7 +370,7 @@ The URL for the OAuth 2.0 issuer token endpoint.
 
 ### `sasl_oauthbearer_scope_claim_name` [plugins-outputs-kafka-sasl_oauthbearer_scope_claim_name]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"scope"`
 
 (optional) The override name of the scope claim.
@@ -378,7 +378,7 @@ The URL for the OAuth 2.0 issuer token endpoint.
 
 ### `sasl_login_callback_handler_class` [plugins-outputs-kafka-sasl_login_callback_handler_class]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 The SASL login callback handler class the specified SASL mechanism should use.
@@ -386,7 +386,7 @@ The SASL login callback handler class the specified SASL mechanism should use.
 
 ### `sasl_login_connect_timeout_ms` [plugins-outputs-kafka-sasl_login_connect_timeout_ms]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * There is no default value for this setting.
 
 (optional) The duration, in milliseconds, for HTTPS connect timeout
@@ -394,7 +394,7 @@ The SASL login callback handler class the specified SASL mechanism should use.
 
 ### `sasl_login_read_timeout_ms` [plugins-outputs-kafka-sasl_login_read_timeout_ms]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * There is no default value for this setting.
 
 (optional) The duration, in milliseconds, for HTTPS read timeout.
@@ -402,7 +402,7 @@ The SASL login callback handler class the specified SASL mechanism should use.
 
 ### `sasl_login_retry_backoff_ms` [plugins-outputs-kafka-sasl_login_retry_backoff_ms]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `100` milliseconds.
 
 (optional) The duration, in milliseconds, to wait between HTTPS call attempts.
@@ -410,7 +410,7 @@ The SASL login callback handler class the specified SASL mechanism should use.
 
 ### `sasl_login_retry_backoff_max_ms` [plugins-outputs-kafka-sasl_login_retry_backoff_max_ms]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `10000` milliseconds.
 
 (optional) The maximum duration, in milliseconds, for HTTPS call attempts.
@@ -418,7 +418,7 @@ The SASL login callback handler class the specified SASL mechanism should use.
 
 ### `sasl_jaas_config` [plugins-outputs-kafka-sasl_jaas_config]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 JAAS configuration setting local to this plugin instance, as opposed to settings using config file configured using `jaas_path`, which are shared across the JVM. This allows each plugin instance to have its own configuration.
@@ -438,7 +438,7 @@ Example (setting for Azure Event Hub):
 
 ### `sasl_kerberos_service_name` [plugins-outputs-kafka-sasl_kerberos_service_name]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 The Kerberos principal name that Kafka broker runs as. This can be defined either in Kafka’s JAAS config or in Kafka’s config.
@@ -446,7 +446,7 @@ The Kerberos principal name that Kafka broker runs as. This can be defined eithe
 
 ### `sasl_mechanism` [plugins-outputs-kafka-sasl_mechanism]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"GSSAPI"`
 
 [SASL mechanism](http://kafka.apache.org/documentation.md#security_sasl) used for client connections. This may be any mechanism for which a security provider is available. GSSAPI is the default mechanism.
@@ -462,7 +462,7 @@ Security protocol to use, which can be either of PLAINTEXT,SSL,SASL_PLAINTEXT,SA
 
 ### `send_buffer_bytes` [plugins-outputs-kafka-send_buffer_bytes]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `131072` (128KB).
 
 The size of the TCP send buffer to use when sending data.
@@ -470,7 +470,7 @@ The size of the TCP send buffer to use when sending data.
 
 ### `ssl_endpoint_identification_algorithm` [plugins-outputs-kafka-ssl_endpoint_identification_algorithm]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"https"`
 
 The endpoint identification algorithm, defaults to `"https"`. Set to empty string `""` to disable
@@ -478,7 +478,7 @@ The endpoint identification algorithm, defaults to `"https"`. Set to empty strin
 
 ### `ssl_key_password` [plugins-outputs-kafka-ssl_key_password]
 
-* Value type is [password](introduction.md#password)
+* Value type is [password](value-types.md#password)
 * There is no default value for this setting.
 
 The password of the private key in the key store file.
@@ -486,7 +486,7 @@ The password of the private key in the key store file.
 
 ### `ssl_keystore_location` [plugins-outputs-kafka-ssl_keystore_location]
 
-* Value type is [path](introduction.md#path)
+* Value type is [path](value-types.md#path)
 * There is no default value for this setting.
 
 If client authentication is required, this setting stores the keystore path.
@@ -494,7 +494,7 @@ If client authentication is required, this setting stores the keystore path.
 
 ### `ssl_keystore_password` [plugins-outputs-kafka-ssl_keystore_password]
 
-* Value type is [password](introduction.md#password)
+* Value type is [password](value-types.md#password)
 * There is no default value for this setting.
 
 If client authentication is required, this setting stores the keystore password
@@ -502,7 +502,7 @@ If client authentication is required, this setting stores the keystore password
 
 ### `ssl_keystore_type` [plugins-outputs-kafka-ssl_keystore_type]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 The keystore type.
@@ -510,7 +510,7 @@ The keystore type.
 
 ### `ssl_truststore_location` [plugins-outputs-kafka-ssl_truststore_location]
 
-* Value type is [path](introduction.md#path)
+* Value type is [path](value-types.md#path)
 * There is no default value for this setting.
 
 The JKS truststore path to validate the Kafka broker’s certificate.
@@ -518,7 +518,7 @@ The JKS truststore path to validate the Kafka broker’s certificate.
 
 ### `ssl_truststore_password` [plugins-outputs-kafka-ssl_truststore_password]
 
-* Value type is [password](introduction.md#password)
+* Value type is [password](value-types.md#password)
 * There is no default value for this setting.
 
 The truststore password
@@ -526,7 +526,7 @@ The truststore password
 
 ### `ssl_truststore_type` [plugins-outputs-kafka-ssl_truststore_type]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 The truststore type.
@@ -535,7 +535,7 @@ The truststore type.
 ### `topic_id` [plugins-outputs-kafka-topic_id]
 
 * This is a required setting.
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 The topic to produce messages to
@@ -543,7 +543,7 @@ The topic to produce messages to
 
 ### `value_serializer` [plugins-outputs-kafka-value_serializer]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"org.apache.kafka.common.serialization.StringSerializer"`
 
 Serializer class for the value of the message

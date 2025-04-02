@@ -252,18 +252,18 @@ This plugin supports the following configuration options plus the [Common option
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`jdbc_connection_string`](plugins-filters-jdbc_static.md#plugins-filters-jdbc_static-jdbc_connection_string) | [string](introduction.md#string) | Yes |
-| [`jdbc_driver_class`](plugins-filters-jdbc_static.md#plugins-filters-jdbc_static-jdbc_driver_class) | [string](introduction.md#string) | Yes |
+| [`jdbc_connection_string`](plugins-filters-jdbc_static.md#plugins-filters-jdbc_static-jdbc_connection_string) | [string](value-types.md#string) | Yes |
+| [`jdbc_driver_class`](plugins-filters-jdbc_static.md#plugins-filters-jdbc_static-jdbc_driver_class) | [string](value-types.md#string) | Yes |
 | [`jdbc_driver_library`](plugins-filters-jdbc_static.md#plugins-filters-jdbc_static-jdbc_driver_library) | a valid filesystem path | No |
-| [`jdbc_password`](plugins-filters-jdbc_static.md#plugins-filters-jdbc_static-jdbc_password) | [password](introduction.md#password) | No |
-| [`jdbc_user`](plugins-filters-jdbc_static.md#plugins-filters-jdbc_static-jdbc_user) | [string](introduction.md#string) | No |
-| [`tag_on_failure`](plugins-filters-jdbc_static.md#plugins-filters-jdbc_static-tag_on_failure) | [array](introduction.md#array) | No |
-| [`tag_on_default_use`](plugins-filters-jdbc_static.md#plugins-filters-jdbc_static-tag_on_default_use) | [array](introduction.md#array) | No |
-| [`staging_directory`](plugins-filters-jdbc_static.md#plugins-filters-jdbc_static-staging_directory) | [string](introduction.md#string) | No |
-| [`loader_schedule`](plugins-filters-jdbc_static.md#plugins-filters-jdbc_static-loader_schedule) | [string](introduction.md#string) | No |
-| [`loaders`](plugins-filters-jdbc_static.md#plugins-filters-jdbc_static-loaders) | [array](introduction.md#array) | No |
-| [`local_db_objects`](plugins-filters-jdbc_static.md#plugins-filters-jdbc_static-local_db_objects) | [array](introduction.md#array) | No |
-| [`local_lookups`](plugins-filters-jdbc_static.md#plugins-filters-jdbc_static-local_lookups) | [array](introduction.md#array) | No |
+| [`jdbc_password`](plugins-filters-jdbc_static.md#plugins-filters-jdbc_static-jdbc_password) | [password](value-types.md#password) | No |
+| [`jdbc_user`](plugins-filters-jdbc_static.md#plugins-filters-jdbc_static-jdbc_user) | [string](value-types.md#string) | No |
+| [`tag_on_failure`](plugins-filters-jdbc_static.md#plugins-filters-jdbc_static-tag_on_failure) | [array](value-types.md#array) | No |
+| [`tag_on_default_use`](plugins-filters-jdbc_static.md#plugins-filters-jdbc_static-tag_on_default_use) | [array](value-types.md#array) | No |
+| [`staging_directory`](plugins-filters-jdbc_static.md#plugins-filters-jdbc_static-staging_directory) | [string](value-types.md#string) | No |
+| [`loader_schedule`](plugins-filters-jdbc_static.md#plugins-filters-jdbc_static-loader_schedule) | [string](value-types.md#string) | No |
+| [`loaders`](plugins-filters-jdbc_static.md#plugins-filters-jdbc_static-loaders) | [array](value-types.md#array) | No |
+| [`local_db_objects`](plugins-filters-jdbc_static.md#plugins-filters-jdbc_static-local_db_objects) | [array](value-types.md#array) | No |
+| [`local_lookups`](plugins-filters-jdbc_static.md#plugins-filters-jdbc_static-local_lookups) | [array](value-types.md#array) | No |
 
 Also see [Common options](plugins-filters-jdbc_static.md#plugins-filters-jdbc_static-common-options) for a list of options supported by all filter plugins.
 
@@ -272,7 +272,7 @@ Also see [Common options](plugins-filters-jdbc_static.md#plugins-filters-jdbc_st
 ### `jdbc_connection_string` [plugins-filters-jdbc_static-jdbc_connection_string]
 
 * This is a required setting.
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 JDBC connection string.
@@ -281,7 +281,7 @@ JDBC connection string.
 ### `jdbc_driver_class` [plugins-filters-jdbc_static-jdbc_driver_class]
 
 * This is a required setting.
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 JDBC driver class to load, for example, "org.apache.derby.jdbc.ClientDriver".
@@ -294,7 +294,7 @@ According to [Issue 43](https://github.com/logstash-plugins/logstash-input-jdbc/
 
 ### `jdbc_driver_library` [plugins-filters-jdbc_static-jdbc_driver_library]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 JDBC driver library path to third-party driver library. Use comma separated paths in one string if you need multiple libraries.
@@ -304,7 +304,7 @@ If the driver class is not provided, the plugin looks for it in the Logstash Jav
 
 ### `jdbc_password` [plugins-filters-jdbc_static-jdbc_password]
 
-* Value type is [password](introduction.md#password)
+* Value type is [password](value-types.md#password)
 * There is no default value for this setting.
 
 JDBC password.
@@ -313,7 +313,7 @@ JDBC password.
 ### `jdbc_user` [plugins-filters-jdbc_static-jdbc_user]
 
 * This is a required setting.
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 JDBC user.
@@ -321,7 +321,7 @@ JDBC user.
 
 ### `tag_on_default_use` [plugins-filters-jdbc_static-tag_on_default_use]
 
-* Value type is [array](introduction.md#array)
+* Value type is [array](value-types.md#array)
 * Default value is `["_jdbcstaticdefaultsused"]`
 
 Append values to the `tags` field if no record was found and default values were used.
@@ -329,7 +329,7 @@ Append values to the `tags` field if no record was found and default values were
 
 ### `tag_on_failure` [plugins-filters-jdbc_static-tag_on_failure]
 
-* Value type is [array](introduction.md#array)
+* Value type is [array](value-types.md#array)
 * Default value is `["_jdbcstaticfailure"]`
 
 Append values to the `tags` field if a SQL error occurred.
@@ -337,7 +337,7 @@ Append values to the `tags` field if a SQL error occurred.
 
 ### `staging_directory` [plugins-filters-jdbc_static-staging_directory]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is derived from the Ruby temp directory + plugin_name + "import_data"
 * e.g. `"/tmp/logstash/jdbc_static/import_data"`
 
@@ -348,7 +348,7 @@ Append values to the `tags` field if a SQL error occurred.
 
 ### `loader_schedule` [plugins-filters-jdbc_static-loader_schedule]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 You can schedule remote loading to run periodically according to a specific schedule. This scheduling syntax is powered by [rufus-scheduler](https://github.com/jmettraux/rufus-scheduler). The syntax is cron-like with some extensions specific to Rufus (for example, timezone support). For more about this syntax, see [parsing cronlines and time strings](https://github.com/jmettraux/rufus-scheduler#parsing-cronlines-and-time-strings).
@@ -378,7 +378,7 @@ The object returned by the above call, an instance of `Rufus::Scheduler::CronLin
 
 ### `loaders` [plugins-filters-jdbc_static-loaders]
 
-* Value type is [array](introduction.md#array)
+* Value type is [array](value-types.md#array)
 * Default value is `[]`
 
 The array should contain one or more Hashes. Each Hash is validated according to the table below.
@@ -427,7 +427,7 @@ jdbc_user
 
 ### `local_db_objects` [plugins-filters-jdbc_static-local_db_objects]
 
-* Value type is [array](introduction.md#array)
+* Value type is [array](value-types.md#array)
 * Default value is `[]`
 
 The array should contain one or more Hashes. Each Hash represents a table schema for the local lookups database. Each Hash is validated according to the table below.
@@ -456,7 +456,7 @@ preserve_existing
 
 ### `local_lookups` [plugins-filters-jdbc_static-local_lookups]
 
-* Value type is [array](introduction.md#array)
+* Value type is [array](value-types.md#array)
 * Default value is `[]`
 
 The array should contain one or more Hashes. Each Hash represents a lookup enrichment. Each Hash is validated according to the table below.

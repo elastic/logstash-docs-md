@@ -29,8 +29,8 @@ This plugin supports the following configuration options plus the [Common option
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`overwrite`](plugins-filters-java_uuid.md#plugins-filters-java_uuid-overwrite) | [boolean](introduction.md#boolean) | No |
-| [`target`](plugins-filters-java_uuid.md#plugins-filters-java_uuid-target) | [string](introduction.md#string) | Yes |
+| [`overwrite`](plugins-filters-java_uuid.md#plugins-filters-java_uuid-overwrite) | [boolean](value-types.md#boolean) | No |
+| [`target`](plugins-filters-java_uuid.md#plugins-filters-java_uuid-target) | [string](value-types.md#string) | Yes |
 
 Also see [Common options](plugins-filters-java_uuid.md#plugins-filters-java_uuid-common-options) for a list of options supported by all filter plugins.
 
@@ -38,7 +38,7 @@ Also see [Common options](plugins-filters-java_uuid.md#plugins-filters-java_uuid
 
 ### `overwrite` [plugins-filters-java_uuid-overwrite]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 Determines if an existing value in the field specified by the `target` option should be overwritten by the filter.
@@ -58,7 +58,7 @@ Example:
 ### `target` [plugins-filters-java_uuid-target]
 
 * This is a required setting.
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 Specifies the name of the field in which the generated UUID should be stored.

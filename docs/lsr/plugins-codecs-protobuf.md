@@ -94,20 +94,20 @@ kafka
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`class_name`](plugins-codecs-protobuf.md#plugins-codecs-protobuf-class_name) | [string](introduction.md#string) | Yes |
-| [`class_file`](plugins-codecs-protobuf.md#plugins-codecs-protobuf-class_file) | [string](introduction.md#string) | No |
-| [`protobuf_root_directory`](plugins-codecs-protobuf.md#plugins-codecs-protobuf-protobuf_root_directory) | [string](introduction.md#string) | No |
-| [`include_path`](plugins-codecs-protobuf.md#plugins-codecs-protobuf-include_path) | [array](introduction.md#array) | No |
-| [`protobuf_version`](plugins-codecs-protobuf.md#plugins-codecs-protobuf-protobuf_version) | [number](introduction.md#number) | Yes |
-| [`stop_on_error`](plugins-codecs-protobuf.md#plugins-codecs-protobuf-stop_on_error) | [boolean](introduction.md#boolean) | No |
-| [`pb3_encoder_autoconvert_types`](plugins-codecs-protobuf.md#plugins-codecs-protobuf-pb3_encoder_autoconvert_types) | [boolean](introduction.md#boolean) | No |
+| [`class_name`](plugins-codecs-protobuf.md#plugins-codecs-protobuf-class_name) | [string](value-types.md#string) | Yes |
+| [`class_file`](plugins-codecs-protobuf.md#plugins-codecs-protobuf-class_file) | [string](value-types.md#string) | No |
+| [`protobuf_root_directory`](plugins-codecs-protobuf.md#plugins-codecs-protobuf-protobuf_root_directory) | [string](value-types.md#string) | No |
+| [`include_path`](plugins-codecs-protobuf.md#plugins-codecs-protobuf-include_path) | [array](value-types.md#array) | No |
+| [`protobuf_version`](plugins-codecs-protobuf.md#plugins-codecs-protobuf-protobuf_version) | [number](value-types.md#number) | Yes |
+| [`stop_on_error`](plugins-codecs-protobuf.md#plugins-codecs-protobuf-stop_on_error) | [boolean](value-types.md#boolean) | No |
+| [`pb3_encoder_autoconvert_types`](plugins-codecs-protobuf.md#plugins-codecs-protobuf-pb3_encoder_autoconvert_types) | [boolean](value-types.md#boolean) | No |
 
  
 
 ### `class_name` [plugins-codecs-protobuf-class_name]
 
 * This is a required setting.
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 Fully qualified name of the class to decode. Please note that the module delimiter is different depending on the protobuf version. For protobuf v2, use double colons:
@@ -133,7 +133,7 @@ If your class references other definitions: you only have to add the name of the
 
 ### `class_file` [plugins-codecs-protobuf-class_file]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 Absolute path to the directory that contains all compiled protobuf files. If the protobuf definitions are spread across multiple folders, this needs to point to the folder containing all those folders.
@@ -141,7 +141,7 @@ Absolute path to the directory that contains all compiled protobuf files. If the
 
 ### `protobuf_root_directory` [plugins-codecs-protobuf-protobuf_root_directory]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 Absolute path to the root directory that contains all referenced/used dependencies of the main class (`class_name`) or any of its dependencies. Must be used in combination with the `class_file` setting, and can not be used in combination with the legacy loading mechanism `include_path`.
@@ -160,7 +160,7 @@ In this case `messageA_pb.rb` has an embedded message from `header/header_pb.rb`
 
 ### `include_path` [plugins-codecs-protobuf-include_path]
 
-* Value type is [array](introduction.md#array)
+* Value type is [array](value-types.md#array)
 * There is no default value for this setting.
 
 Legacy protobuf definition loading mechanism for backwards compatibility: List of absolute pathes to files with protobuf definitions. When using more than one file, make sure to arrange the files in reverse order of dependency so that each class is loaded before it is refered to by another.
@@ -190,7 +190,7 @@ Cannot be used together with `protobuf_root_directory` or `class_file`.
 
 ### `protobuf_version` [plugins-codecs-protobuf-protobuf_version]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is 2
 
 Protocol buffers version. Valid settings are 2, 3.
@@ -198,7 +198,7 @@ Protocol buffers version. Valid settings are 2, 3.
 
 ### `stop_on_error` [plugins-codecs-protobuf-stop_on_error]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is false
 
 Stop entire pipeline when encountering a non decodable message.
@@ -206,7 +206,7 @@ Stop entire pipeline when encountering a non decodable message.
 
 ### `pb3_encoder_autoconvert_types` [plugins-codecs-protobuf-pb3_encoder_autoconvert_types]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is true
 
 Convert data types to match the protobuf definition (if possible). The protobuf encoder library is very strict with regards to data types. Example: an event has an integer field but the protobuf definition expects a float. This would lead to an exception and the event would be lost.
@@ -227,7 +227,7 @@ Available only for protobuf version 3.
 
 ### `pb3_set_oneof_metainfo` [plugins-codecs-protobuf-pb3_set_oneof_metainfo]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is false
 
 Add meta information to `[@metadata][pb_oneof]` about which classes were chosen for [oneof](https://developers.google.com/protocol-buffers/docs/proto3#oneof) fields. A new field of name `[@metadata][pb_oneof][FOO]` will be added, where `FOO` is the name of the `oneof` field.

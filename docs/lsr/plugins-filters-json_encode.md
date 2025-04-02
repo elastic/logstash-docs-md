@@ -47,8 +47,8 @@ This plugin supports the following configuration options plus the [Common option
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`source`](plugins-filters-json_encode.md#plugins-filters-json_encode-source) | [string](introduction.md#string) | Yes |
-| [`target`](plugins-filters-json_encode.md#plugins-filters-json_encode-target) | [string](introduction.md#string) | No |
+| [`source`](plugins-filters-json_encode.md#plugins-filters-json_encode-source) | [string](value-types.md#string) | Yes |
+| [`target`](plugins-filters-json_encode.md#plugins-filters-json_encode-target) | [string](value-types.md#string) | No |
 
 Also see [Common options](plugins-filters-json_encode.md#plugins-filters-json_encode-common-options) for a list of options supported by all filter plugins.
 
@@ -57,7 +57,7 @@ Also see [Common options](plugins-filters-json_encode.md#plugins-filters-json_en
 ### `source` [plugins-filters-json_encode-source]
 
 * This is a required setting.
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 The field to convert to JSON.
@@ -65,7 +65,7 @@ The field to convert to JSON.
 
 ### `target` [plugins-filters-json_encode-target]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 The field to write the JSON into. If not specified, the source field will be overwritten.

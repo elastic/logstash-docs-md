@@ -34,10 +34,10 @@ This plugin supports the following configuration options plus the [Common option
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`drop_invalid`](plugins-inputs-github.md#plugins-inputs-github-drop_invalid) | [boolean](introduction.md#boolean) | No |
-| [`ip`](plugins-inputs-github.md#plugins-inputs-github-ip) | [string](introduction.md#string) | No |
-| [`port`](plugins-inputs-github.md#plugins-inputs-github-port) | [number](introduction.md#number) | Yes |
-| [`secret_token`](plugins-inputs-github.md#plugins-inputs-github-secret_token) | [password](introduction.md#password) | No |
+| [`drop_invalid`](plugins-inputs-github.md#plugins-inputs-github-drop_invalid) | [boolean](value-types.md#boolean) | No |
+| [`ip`](plugins-inputs-github.md#plugins-inputs-github-ip) | [string](value-types.md#string) | No |
+| [`port`](plugins-inputs-github.md#plugins-inputs-github-port) | [number](value-types.md#number) | Yes |
+| [`secret_token`](plugins-inputs-github.md#plugins-inputs-github-secret_token) | [password](value-types.md#password) | No |
 
 Also see [Common options](plugins-inputs-github.md#plugins-inputs-github-common-options) for a list of options supported by all input plugins.
 
@@ -45,7 +45,7 @@ Also see [Common options](plugins-inputs-github.md#plugins-inputs-github-common-
 
 ### `drop_invalid` [plugins-inputs-github-drop_invalid]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 If Secret is defined, we drop the events that don’t match. Otherwise, we’ll just add an invalid tag
@@ -53,7 +53,7 @@ If Secret is defined, we drop the events that don’t match. Otherwise, we’ll 
 
 ### `ip` [plugins-inputs-github-ip]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"0.0.0.0"`
 
 The ip to listen on
@@ -62,7 +62,7 @@ The ip to listen on
 ### `port` [plugins-inputs-github-port]
 
 * This is a required setting.
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * There is no default value for this setting.
 
 The port to listen on
@@ -70,7 +70,7 @@ The port to listen on
 
 ### `secret_token` [plugins-inputs-github-secret_token]
 
-* Value type is [password](introduction.md#password)
+* Value type is [password](value-types.md#password)
 * There is no default value for this setting.
 
 Your GitHub Secret Token for the webhook

@@ -80,75 +80,75 @@ Some of these options map to a Kafka option. Defaults usually reflect the Kafka 
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`auto_commit_interval_ms`](plugins-inputs-kafka.md#plugins-inputs-kafka-auto_commit_interval_ms) | [number](introduction.md#number) | No |
-| [`auto_create_topics` ](plugins-inputs-kafka.md#plugins-inputs-kafka-auto_create_topics) | [boolean](introduction.md#boolean) | No |
-| [`auto_offset_reset`](plugins-inputs-kafka.md#plugins-inputs-kafka-auto_offset_reset) | [string](introduction.md#string) | No |
-| [`bootstrap_servers`](plugins-inputs-kafka.md#plugins-inputs-kafka-bootstrap_servers) | [string](introduction.md#string) | No |
-| [`check_crcs`](plugins-inputs-kafka.md#plugins-inputs-kafka-check_crcs) | [boolean](introduction.md#boolean) | No |
-| [`client_dns_lookup`](plugins-inputs-kafka.md#plugins-inputs-kafka-client_dns_lookup) | [string](introduction.md#string) | No |
-| [`client_id`](plugins-inputs-kafka.md#plugins-inputs-kafka-client_id) | [string](introduction.md#string) | No |
-| [`client_rack`](plugins-inputs-kafka.md#plugins-inputs-kafka-client_rack) | [string](introduction.md#string) | No |
-| [`connections_max_idle_ms`](plugins-inputs-kafka.md#plugins-inputs-kafka-connections_max_idle_ms) | [number](introduction.md#number) | No |
-| [`consumer_threads`](plugins-inputs-kafka.md#plugins-inputs-kafka-consumer_threads) | [number](introduction.md#number) | No |
-| [`decorate_events`](plugins-inputs-kafka.md#plugins-inputs-kafka-decorate_events) | [string](introduction.md#string) | No |
-| [`enable_auto_commit`](plugins-inputs-kafka.md#plugins-inputs-kafka-enable_auto_commit) | [boolean](introduction.md#boolean) | No |
-| [`exclude_internal_topics`](plugins-inputs-kafka.md#plugins-inputs-kafka-exclude_internal_topics) | [string](introduction.md#string) | No |
-| [`fetch_max_bytes`](plugins-inputs-kafka.md#plugins-inputs-kafka-fetch_max_bytes) | [number](introduction.md#number) | No |
-| [`fetch_max_wait_ms`](plugins-inputs-kafka.md#plugins-inputs-kafka-fetch_max_wait_ms) | [number](introduction.md#number) | No |
-| [`fetch_min_bytes`](plugins-inputs-kafka.md#plugins-inputs-kafka-fetch_min_bytes) | [number](introduction.md#number) | No |
-| [`group_id`](plugins-inputs-kafka.md#plugins-inputs-kafka-group_id) | [string](introduction.md#string) | No |
-| [`group_instance_id`](plugins-inputs-kafka.md#plugins-inputs-kafka-group_instance_id) | [string](introduction.md#string) | No |
-| [`heartbeat_interval_ms`](plugins-inputs-kafka.md#plugins-inputs-kafka-heartbeat_interval_ms) | [number](introduction.md#number) | No |
-| [`isolation_level`](plugins-inputs-kafka.md#plugins-inputs-kafka-isolation_level) | [string](introduction.md#string) | No |
+| [`auto_commit_interval_ms`](plugins-inputs-kafka.md#plugins-inputs-kafka-auto_commit_interval_ms) | [number](value-types.md#number) | No |
+| [`auto_create_topics` ](plugins-inputs-kafka.md#plugins-inputs-kafka-auto_create_topics) | [boolean](value-types.md#boolean) | No |
+| [`auto_offset_reset`](plugins-inputs-kafka.md#plugins-inputs-kafka-auto_offset_reset) | [string](value-types.md#string) | No |
+| [`bootstrap_servers`](plugins-inputs-kafka.md#plugins-inputs-kafka-bootstrap_servers) | [string](value-types.md#string) | No |
+| [`check_crcs`](plugins-inputs-kafka.md#plugins-inputs-kafka-check_crcs) | [boolean](value-types.md#boolean) | No |
+| [`client_dns_lookup`](plugins-inputs-kafka.md#plugins-inputs-kafka-client_dns_lookup) | [string](value-types.md#string) | No |
+| [`client_id`](plugins-inputs-kafka.md#plugins-inputs-kafka-client_id) | [string](value-types.md#string) | No |
+| [`client_rack`](plugins-inputs-kafka.md#plugins-inputs-kafka-client_rack) | [string](value-types.md#string) | No |
+| [`connections_max_idle_ms`](plugins-inputs-kafka.md#plugins-inputs-kafka-connections_max_idle_ms) | [number](value-types.md#number) | No |
+| [`consumer_threads`](plugins-inputs-kafka.md#plugins-inputs-kafka-consumer_threads) | [number](value-types.md#number) | No |
+| [`decorate_events`](plugins-inputs-kafka.md#plugins-inputs-kafka-decorate_events) | [string](value-types.md#string) | No |
+| [`enable_auto_commit`](plugins-inputs-kafka.md#plugins-inputs-kafka-enable_auto_commit) | [boolean](value-types.md#boolean) | No |
+| [`exclude_internal_topics`](plugins-inputs-kafka.md#plugins-inputs-kafka-exclude_internal_topics) | [string](value-types.md#string) | No |
+| [`fetch_max_bytes`](plugins-inputs-kafka.md#plugins-inputs-kafka-fetch_max_bytes) | [number](value-types.md#number) | No |
+| [`fetch_max_wait_ms`](plugins-inputs-kafka.md#plugins-inputs-kafka-fetch_max_wait_ms) | [number](value-types.md#number) | No |
+| [`fetch_min_bytes`](plugins-inputs-kafka.md#plugins-inputs-kafka-fetch_min_bytes) | [number](value-types.md#number) | No |
+| [`group_id`](plugins-inputs-kafka.md#plugins-inputs-kafka-group_id) | [string](value-types.md#string) | No |
+| [`group_instance_id`](plugins-inputs-kafka.md#plugins-inputs-kafka-group_instance_id) | [string](value-types.md#string) | No |
+| [`heartbeat_interval_ms`](plugins-inputs-kafka.md#plugins-inputs-kafka-heartbeat_interval_ms) | [number](value-types.md#number) | No |
+| [`isolation_level`](plugins-inputs-kafka.md#plugins-inputs-kafka-isolation_level) | [string](value-types.md#string) | No |
 | [`jaas_path`](plugins-inputs-kafka.md#plugins-inputs-kafka-jaas_path) | a valid filesystem path | No |
 | [`kerberos_config`](plugins-inputs-kafka.md#plugins-inputs-kafka-kerberos_config) | a valid filesystem path | No |
-| [`key_deserializer_class`](plugins-inputs-kafka.md#plugins-inputs-kafka-key_deserializer_class) | [string](introduction.md#string) | No |
-| [`max_partition_fetch_bytes`](plugins-inputs-kafka.md#plugins-inputs-kafka-max_partition_fetch_bytes) | [number](introduction.md#number) | No |
-| [`max_poll_interval_ms`](plugins-inputs-kafka.md#plugins-inputs-kafka-max_poll_interval_ms) | [number](introduction.md#number) | No |
-| [`max_poll_records`](plugins-inputs-kafka.md#plugins-inputs-kafka-max_poll_records) | [number](introduction.md#number) | No |
-| [`metadata_max_age_ms`](plugins-inputs-kafka.md#plugins-inputs-kafka-metadata_max_age_ms) | [number](introduction.md#number) | No |
-| [`partition_assignment_strategy`](plugins-inputs-kafka.md#plugins-inputs-kafka-partition_assignment_strategy) | [string](introduction.md#string) | No |
-| [`poll_timeout_ms`](plugins-inputs-kafka.md#plugins-inputs-kafka-poll_timeout_ms) | [number](introduction.md#number) | No |
-| [`receive_buffer_bytes`](plugins-inputs-kafka.md#plugins-inputs-kafka-receive_buffer_bytes) | [number](introduction.md#number) | No |
-| [`reconnect_backoff_ms`](plugins-inputs-kafka.md#plugins-inputs-kafka-reconnect_backoff_ms) | [number](introduction.md#number) | No |
-| [`request_timeout_ms`](plugins-inputs-kafka.md#plugins-inputs-kafka-request_timeout_ms) | [number](introduction.md#number) | No |
-| [`retry_backoff_ms`](plugins-inputs-kafka.md#plugins-inputs-kafka-retry_backoff_ms) | [number](introduction.md#number) | No |
-| [`sasl_client_callback_handler_class`](plugins-inputs-kafka.md#plugins-inputs-kafka-sasl_client_callback_handler_class) | [string](introduction.md#string) | No |
-| [`sasl_oauthbearer_token_endpoint_url`](plugins-inputs-kafka.md#plugins-inputs-kafka-sasl_oauthbearer_token_endpoint_url) | [string](introduction.md#string) | No |
-| [`sasl_oauthbearer_scope_claim_name`](plugins-inputs-kafka.md#plugins-inputs-kafka-sasl_oauthbearer_scope_claim_name) | [string](introduction.md#string) | No |
-| [`sasl_login_callback_handler_class`](plugins-inputs-kafka.md#plugins-inputs-kafka-sasl_login_callback_handler_class) | [string](introduction.md#string) | No |
-| [`sasl_login_connect_timeout_ms`](plugins-inputs-kafka.md#plugins-inputs-kafka-sasl_login_connect_timeout_ms) | [number](introduction.md#number) | No |
-| [`sasl_login_read_timeout_ms`](plugins-inputs-kafka.md#plugins-inputs-kafka-sasl_login_read_timeout_ms) | [number](introduction.md#number) | No |
-| [`sasl_login_retry_backoff_ms`](plugins-inputs-kafka.md#plugins-inputs-kafka-sasl_login_retry_backoff_ms) | [number](introduction.md#number) | No |
-| [`sasl_login_retry_backoff_max_ms`](plugins-inputs-kafka.md#plugins-inputs-kafka-sasl_login_retry_backoff_max_ms) | [number](introduction.md#number) | No |
-| [`sasl_jaas_config`](plugins-inputs-kafka.md#plugins-inputs-kafka-sasl_jaas_config) | [string](introduction.md#string) | No |
-| [`sasl_kerberos_service_name`](plugins-inputs-kafka.md#plugins-inputs-kafka-sasl_kerberos_service_name) | [string](introduction.md#string) | No |
-| [`sasl_mechanism`](plugins-inputs-kafka.md#plugins-inputs-kafka-sasl_mechanism) | [string](introduction.md#string) | No |
-| [`schema_registry_key`](plugins-inputs-kafka.md#plugins-inputs-kafka-schema_registry_key) | [string](introduction.md#string) | No |
-| [`schema_registry_proxy`](plugins-inputs-kafka.md#plugins-inputs-kafka-schema_registry_proxy) | [uri](introduction.md#uri) | No |
-| [`schema_registry_secret`](plugins-inputs-kafka.md#plugins-inputs-kafka-schema_registry_secret) | [string](introduction.md#string) | No |
+| [`key_deserializer_class`](plugins-inputs-kafka.md#plugins-inputs-kafka-key_deserializer_class) | [string](value-types.md#string) | No |
+| [`max_partition_fetch_bytes`](plugins-inputs-kafka.md#plugins-inputs-kafka-max_partition_fetch_bytes) | [number](value-types.md#number) | No |
+| [`max_poll_interval_ms`](plugins-inputs-kafka.md#plugins-inputs-kafka-max_poll_interval_ms) | [number](value-types.md#number) | No |
+| [`max_poll_records`](plugins-inputs-kafka.md#plugins-inputs-kafka-max_poll_records) | [number](value-types.md#number) | No |
+| [`metadata_max_age_ms`](plugins-inputs-kafka.md#plugins-inputs-kafka-metadata_max_age_ms) | [number](value-types.md#number) | No |
+| [`partition_assignment_strategy`](plugins-inputs-kafka.md#plugins-inputs-kafka-partition_assignment_strategy) | [string](value-types.md#string) | No |
+| [`poll_timeout_ms`](plugins-inputs-kafka.md#plugins-inputs-kafka-poll_timeout_ms) | [number](value-types.md#number) | No |
+| [`receive_buffer_bytes`](plugins-inputs-kafka.md#plugins-inputs-kafka-receive_buffer_bytes) | [number](value-types.md#number) | No |
+| [`reconnect_backoff_ms`](plugins-inputs-kafka.md#plugins-inputs-kafka-reconnect_backoff_ms) | [number](value-types.md#number) | No |
+| [`request_timeout_ms`](plugins-inputs-kafka.md#plugins-inputs-kafka-request_timeout_ms) | [number](value-types.md#number) | No |
+| [`retry_backoff_ms`](plugins-inputs-kafka.md#plugins-inputs-kafka-retry_backoff_ms) | [number](value-types.md#number) | No |
+| [`sasl_client_callback_handler_class`](plugins-inputs-kafka.md#plugins-inputs-kafka-sasl_client_callback_handler_class) | [string](value-types.md#string) | No |
+| [`sasl_oauthbearer_token_endpoint_url`](plugins-inputs-kafka.md#plugins-inputs-kafka-sasl_oauthbearer_token_endpoint_url) | [string](value-types.md#string) | No |
+| [`sasl_oauthbearer_scope_claim_name`](plugins-inputs-kafka.md#plugins-inputs-kafka-sasl_oauthbearer_scope_claim_name) | [string](value-types.md#string) | No |
+| [`sasl_login_callback_handler_class`](plugins-inputs-kafka.md#plugins-inputs-kafka-sasl_login_callback_handler_class) | [string](value-types.md#string) | No |
+| [`sasl_login_connect_timeout_ms`](plugins-inputs-kafka.md#plugins-inputs-kafka-sasl_login_connect_timeout_ms) | [number](value-types.md#number) | No |
+| [`sasl_login_read_timeout_ms`](plugins-inputs-kafka.md#plugins-inputs-kafka-sasl_login_read_timeout_ms) | [number](value-types.md#number) | No |
+| [`sasl_login_retry_backoff_ms`](plugins-inputs-kafka.md#plugins-inputs-kafka-sasl_login_retry_backoff_ms) | [number](value-types.md#number) | No |
+| [`sasl_login_retry_backoff_max_ms`](plugins-inputs-kafka.md#plugins-inputs-kafka-sasl_login_retry_backoff_max_ms) | [number](value-types.md#number) | No |
+| [`sasl_jaas_config`](plugins-inputs-kafka.md#plugins-inputs-kafka-sasl_jaas_config) | [string](value-types.md#string) | No |
+| [`sasl_kerberos_service_name`](plugins-inputs-kafka.md#plugins-inputs-kafka-sasl_kerberos_service_name) | [string](value-types.md#string) | No |
+| [`sasl_mechanism`](plugins-inputs-kafka.md#plugins-inputs-kafka-sasl_mechanism) | [string](value-types.md#string) | No |
+| [`schema_registry_key`](plugins-inputs-kafka.md#plugins-inputs-kafka-schema_registry_key) | [string](value-types.md#string) | No |
+| [`schema_registry_proxy`](plugins-inputs-kafka.md#plugins-inputs-kafka-schema_registry_proxy) | [uri](value-types.md#uri) | No |
+| [`schema_registry_secret`](plugins-inputs-kafka.md#plugins-inputs-kafka-schema_registry_secret) | [string](value-types.md#string) | No |
 | [`schema_registry_ssl_keystore_location`](plugins-inputs-kafka.md#plugins-inputs-kafka-schema_registry_ssl_keystore_location) | a valid filesystem path | No |
-| [`schema_registry_ssl_keystore_password`](plugins-inputs-kafka.md#plugins-inputs-kafka-schema_registry_ssl_keystore_password) | [password](introduction.md#password) | No |
-| [`schema_registry_ssl_keystore_type`](plugins-inputs-kafka.md#plugins-inputs-kafka-schema_registry_ssl_keystore_type) | [string](introduction.md#string), one of `["jks", "PKCS12"]` | No |
+| [`schema_registry_ssl_keystore_password`](plugins-inputs-kafka.md#plugins-inputs-kafka-schema_registry_ssl_keystore_password) | [password](value-types.md#password) | No |
+| [`schema_registry_ssl_keystore_type`](plugins-inputs-kafka.md#plugins-inputs-kafka-schema_registry_ssl_keystore_type) | [string](value-types.md#string), one of `["jks", "PKCS12"]` | No |
 | [`schema_registry_ssl_truststore_location`](plugins-inputs-kafka.md#plugins-inputs-kafka-schema_registry_ssl_truststore_location) | a valid filesystem path | No |
-| [`schema_registry_ssl_truststore_password`](plugins-inputs-kafka.md#plugins-inputs-kafka-schema_registry_ssl_truststore_password) | [password](introduction.md#password) | No |
-| [`schema_registry_ssl_truststore_type`](plugins-inputs-kafka.md#plugins-inputs-kafka-schema_registry_ssl_truststore_type) | [string](introduction.md#string), one of `["jks", "PKCS12"]` | No |
-| [`schema_registry_url`](plugins-inputs-kafka.md#plugins-inputs-kafka-schema_registry_url) | [uri](introduction.md#uri) | No |
-| [`schema_registry_validation`](plugins-inputs-kafka.md#plugins-inputs-kafka-schema_registry_validation) | [string](introduction.md#string) | No |
-| [`security_protocol`](plugins-inputs-kafka.md#plugins-inputs-kafka-security_protocol) | [string](introduction.md#string), one of `["PLAINTEXT", "SSL", "SASL_PLAINTEXT", "SASL_SSL"]` | No |
-| [`send_buffer_bytes`](plugins-inputs-kafka.md#plugins-inputs-kafka-send_buffer_bytes) | [number](introduction.md#number) | No |
-| [`session_timeout_ms`](plugins-inputs-kafka.md#plugins-inputs-kafka-session_timeout_ms) | [number](introduction.md#number) | No |
-| [`ssl_endpoint_identification_algorithm`](plugins-inputs-kafka.md#plugins-inputs-kafka-ssl_endpoint_identification_algorithm) | [string](introduction.md#string) | No |
-| [`ssl_key_password`](plugins-inputs-kafka.md#plugins-inputs-kafka-ssl_key_password) | [password](introduction.md#password) | No |
+| [`schema_registry_ssl_truststore_password`](plugins-inputs-kafka.md#plugins-inputs-kafka-schema_registry_ssl_truststore_password) | [password](value-types.md#password) | No |
+| [`schema_registry_ssl_truststore_type`](plugins-inputs-kafka.md#plugins-inputs-kafka-schema_registry_ssl_truststore_type) | [string](value-types.md#string), one of `["jks", "PKCS12"]` | No |
+| [`schema_registry_url`](plugins-inputs-kafka.md#plugins-inputs-kafka-schema_registry_url) | [uri](value-types.md#uri) | No |
+| [`schema_registry_validation`](plugins-inputs-kafka.md#plugins-inputs-kafka-schema_registry_validation) | [string](value-types.md#string) | No |
+| [`security_protocol`](plugins-inputs-kafka.md#plugins-inputs-kafka-security_protocol) | [string](value-types.md#string), one of `["PLAINTEXT", "SSL", "SASL_PLAINTEXT", "SASL_SSL"]` | No |
+| [`send_buffer_bytes`](plugins-inputs-kafka.md#plugins-inputs-kafka-send_buffer_bytes) | [number](value-types.md#number) | No |
+| [`session_timeout_ms`](plugins-inputs-kafka.md#plugins-inputs-kafka-session_timeout_ms) | [number](value-types.md#number) | No |
+| [`ssl_endpoint_identification_algorithm`](plugins-inputs-kafka.md#plugins-inputs-kafka-ssl_endpoint_identification_algorithm) | [string](value-types.md#string) | No |
+| [`ssl_key_password`](plugins-inputs-kafka.md#plugins-inputs-kafka-ssl_key_password) | [password](value-types.md#password) | No |
 | [`ssl_keystore_location`](plugins-inputs-kafka.md#plugins-inputs-kafka-ssl_keystore_location) | a valid filesystem path | No |
-| [`ssl_keystore_password`](plugins-inputs-kafka.md#plugins-inputs-kafka-ssl_keystore_password) | [password](introduction.md#password) | No |
-| [`ssl_keystore_type`](plugins-inputs-kafka.md#plugins-inputs-kafka-ssl_keystore_type) | [string](introduction.md#string), one of `["jks", "PKCS12"]` | No |
+| [`ssl_keystore_password`](plugins-inputs-kafka.md#plugins-inputs-kafka-ssl_keystore_password) | [password](value-types.md#password) | No |
+| [`ssl_keystore_type`](plugins-inputs-kafka.md#plugins-inputs-kafka-ssl_keystore_type) | [string](value-types.md#string), one of `["jks", "PKCS12"]` | No |
 | [`ssl_truststore_location`](plugins-inputs-kafka.md#plugins-inputs-kafka-ssl_truststore_location) | a valid filesystem path | No |
-| [`ssl_truststore_password`](plugins-inputs-kafka.md#plugins-inputs-kafka-ssl_truststore_password) | [password](introduction.md#password) | No |
-| [`ssl_truststore_type`](plugins-inputs-kafka.md#plugins-inputs-kafka-ssl_truststore_type) | [string](introduction.md#string), one of `["jks", "PKCS12"]` | No |
-| [`topics`](plugins-inputs-kafka.md#plugins-inputs-kafka-topics) | [array](introduction.md#array) | No |
-| [`topics_pattern`](plugins-inputs-kafka.md#plugins-inputs-kafka-topics_pattern) | [string](introduction.md#string) | No |
-| [`value_deserializer_class`](plugins-inputs-kafka.md#plugins-inputs-kafka-value_deserializer_class) | [string](introduction.md#string) | No |
+| [`ssl_truststore_password`](plugins-inputs-kafka.md#plugins-inputs-kafka-ssl_truststore_password) | [password](value-types.md#password) | No |
+| [`ssl_truststore_type`](plugins-inputs-kafka.md#plugins-inputs-kafka-ssl_truststore_type) | [string](value-types.md#string), one of `["jks", "PKCS12"]` | No |
+| [`topics`](plugins-inputs-kafka.md#plugins-inputs-kafka-topics) | [array](value-types.md#array) | No |
+| [`topics_pattern`](plugins-inputs-kafka.md#plugins-inputs-kafka-topics_pattern) | [string](value-types.md#string) | No |
+| [`value_deserializer_class`](plugins-inputs-kafka.md#plugins-inputs-kafka-value_deserializer_class) | [string](value-types.md#string) | No |
 
 Also see [Common options](plugins-inputs-kafka.md#plugins-inputs-kafka-common-options) for a list of options supported by all input plugins.
 
@@ -156,7 +156,7 @@ Also see [Common options](plugins-inputs-kafka.md#plugins-inputs-kafka-common-op
 
 ### `auto_commit_interval_ms` [plugins-inputs-kafka-auto_commit_interval_ms]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `5000`.
 
 The frequency in milliseconds that the consumer offsets are committed to Kafka.
@@ -164,7 +164,7 @@ The frequency in milliseconds that the consumer offsets are committed to Kafka.
 
 ### `auto_offset_reset` [plugins-inputs-kafka-auto_offset_reset]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 What to do when there is no initial offset in Kafka or if an offset is out of range:
@@ -177,7 +177,7 @@ What to do when there is no initial offset in Kafka or if an offset is out of ra
 
 ### `bootstrap_servers` [plugins-inputs-kafka-bootstrap_servers]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"localhost:9092"`
 
 A list of URLs of Kafka instances to use for establishing the initial connection to the cluster. This list should be in the form of `host1:port1,host2:port2` These urls are just used for the initial connection to discover the full cluster membership (which may change dynamically) so this list need not contain the full set of servers (you may want more than one, though, in case a server is down).
@@ -185,7 +185,7 @@ A list of URLs of Kafka instances to use for establishing the initial connection
 
 ### `check_crcs` [plugins-inputs-kafka-check_crcs]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `true`
 
 Automatically check the CRC32 of the records consumed. This ensures no on-the-wire or on-disk corruption to the messages occurred. This check adds some overhead, so it may be disabled in cases seeking extreme performance.
@@ -193,7 +193,7 @@ Automatically check the CRC32 of the records consumed. This ensures no on-the-wi
 
 ### `client_dns_lookup` [plugins-inputs-kafka-client_dns_lookup]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"default"`
 
 How DNS lookups should be done. If set to `use_all_dns_ips`, when the lookup returns multiple IP addresses for a hostname, they will all be attempted to connect to before failing the connection. If the value is `resolve_canonical_bootstrap_servers_only` each entry will be resolved and expanded into a list of canonical names.
@@ -207,7 +207,7 @@ Starting from Kafka 3 `default` value for `client.dns.lookup` value has been rem
 
 ### `client_id` [plugins-inputs-kafka-client_id]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"logstash"`
 
 The id string to pass to the server when making requests. The purpose of this is to be able to track the source of requests beyond just ip/port by allowing a logical application name to be included.
@@ -215,7 +215,7 @@ The id string to pass to the server when making requests. The purpose of this is
 
 ### `client_rack` [plugins-inputs-kafka-client_rack]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 A rack identifier for the Kafka consumer. Used to select the physically closest rack for the consumer to read from. The setting corresponds with Kafka’s `broker.rack` configuration.
@@ -228,7 +228,7 @@ Available only for Kafka 2.4.0 and higher. See [KIP-392](https://cwiki.apache.or
 
 ### `connections_max_idle_ms` [plugins-inputs-kafka-connections_max_idle_ms]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `540000` milliseconds (9 minutes).
 
 Close idle connections after the number of milliseconds specified by this config.
@@ -236,7 +236,7 @@ Close idle connections after the number of milliseconds specified by this config
 
 ### `consumer_threads` [plugins-inputs-kafka-consumer_threads]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `1`
 
 Ideally you should have as many threads as the number of partitions for a perfect balance — more threads than partitions means that some threads will be idle
@@ -244,7 +244,7 @@ Ideally you should have as many threads as the number of partitions for a perfec
 
 ### `decorate_events` [plugins-inputs-kafka-decorate_events]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Accepted values are:
 
     * `none`: no metadata is added
@@ -266,14 +266,14 @@ Option to add Kafka metadata like topic, message size and header key values to t
 
 ### `auto_create_topics`  [plugins-inputs-kafka-auto_create_topics]
 
-  * Value type is [boolean](introduction.md#boolean) * Default value is `true`
+  * Value type is [boolean](value-types.md#boolean) * Default value is `true`
 
 Controls whether the topic is automatically created when subscribing to a non-existent topic. A topic will be auto-created only if this configuration is set to `true` and auto-topic creation is enabled on the broker using `auto.create.topics.enable`; otherwise auto-topic creation is not permitted. 
 
 
 ### `enable_auto_commit` [plugins-inputs-kafka-enable_auto_commit]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `true`
 
 This committed offset will be used when the process fails as the position from which the consumption will begin.
@@ -283,7 +283,7 @@ If true, periodically commit to Kafka the offsets of messages already returned b
 
 ### `exclude_internal_topics` [plugins-inputs-kafka-exclude_internal_topics]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 Whether records from internal topics (such as offsets) should be exposed to the consumer. If set to true the only way to receive records from an internal topic is subscribing to it.
@@ -291,7 +291,7 @@ Whether records from internal topics (such as offsets) should be exposed to the 
 
 ### `fetch_max_bytes` [plugins-inputs-kafka-fetch_max_bytes]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `52428800` (50MB)
 
 The maximum amount of data the server should return for a fetch request. This is not an absolute maximum, if the first message in the first non-empty partition of the fetch is larger than this value, the message will still be returned to ensure that the consumer can make progress.
@@ -299,7 +299,7 @@ The maximum amount of data the server should return for a fetch request. This is
 
 ### `fetch_max_wait_ms` [plugins-inputs-kafka-fetch_max_wait_ms]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `500` milliseconds.
 
 The maximum amount of time the server will block before answering the fetch request if there isn’t sufficient data to immediately satisfy `fetch_min_bytes`. This should be less than or equal to the timeout used in `poll_timeout_ms`
@@ -307,7 +307,7 @@ The maximum amount of time the server will block before answering the fetch requ
 
 ### `fetch_min_bytes` [plugins-inputs-kafka-fetch_min_bytes]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * There is no default value for this setting.
 
 The minimum amount of data the server should return for a fetch request. If insufficient data is available the request will wait for that much data to accumulate before answering the request.
@@ -315,7 +315,7 @@ The minimum amount of data the server should return for a fetch request. If insu
 
 ### `group_id` [plugins-inputs-kafka-group_id]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"logstash"`
 
 The identifier of the group this consumer belongs to. Consumer group is a single logical subscriber that happens to be made up of multiple processors. Messages in a topic will be distributed to all Logstash instances with the same `group_id`.
@@ -328,7 +328,7 @@ In cases when multiple inputs are being used in a single pipeline, reading from 
 
 ### `group_instance_id` [plugins-inputs-kafka-group_instance_id]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 The static membership identifier for this Logstash Kafka consumer. Static membership feature was introduced in [KIP-345](https://cwiki.apache.org/confluence/display/KAFKA/KIP-345%3A+Introduce+static+membership+protocol+to+reduce+consumer+rebalances), available under Kafka property `group.instance.id`. Its purpose is to avoid rebalances in situations in which a lot of data has to be forwarded after a consumer goes offline. This feature mitigates cases where the service state is heavy and the rebalance of one topic partition from instance A to B would cause a huge amount of data to be transferred. A client that goes offline/online frequently can avoid frequent and heavy rebalances by using this option.
@@ -346,7 +346,7 @@ In cases when multiple threads are configured and `consumer_threads` is greater 
 
 ### `heartbeat_interval_ms` [plugins-inputs-kafka-heartbeat_interval_ms]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `3000` milliseconds (3 seconds).
 
 The expected time between heartbeats to the consumer coordinator. Heartbeats are used to ensure that the consumer’s session stays active and to facilitate rebalancing when new consumers join or leave the group. The value must be set lower than `session.timeout.ms`, but typically should be set no higher than 1/3 of that value. It can be adjusted even lower to control the expected time for normal rebalances.
@@ -354,7 +354,7 @@ The expected time between heartbeats to the consumer coordinator. Heartbeats are
 
 ### `isolation_level` [plugins-inputs-kafka-isolation_level]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"read_uncommitted"`
 
 Controls how to read messages written transactionally. If set to `read_committed`, polling messages will only return transactional messages which have been committed. If set to `read_uncommitted` (the default), polling messages will return all messages, even transactional messages which have been aborted. Non-transactional messages will be returned unconditionally in either mode.
@@ -362,7 +362,7 @@ Controls how to read messages written transactionally. If set to `read_committed
 
 ### `jaas_path` [plugins-inputs-kafka-jaas_path]
 
-* Value type is [path](introduction.md#path)
+* Value type is [path](value-types.md#path)
 * There is no default value for this setting.
 
 The Java Authentication and Authorization Service (JAAS) API supplies user authentication and authorization services for Kafka. This setting provides the path to the JAAS file. Sample JAAS file for Kafka client:
@@ -381,7 +381,7 @@ Please note that specifying `jaas_path` and `kerberos_config` in the config file
 
 ### `kerberos_config` [plugins-inputs-kafka-kerberos_config]
 
-* Value type is [path](introduction.md#path)
+* Value type is [path](value-types.md#path)
 * There is no default value for this setting.
 
 Optional path to kerberos config file. This is krb5.conf style as detailed in [https://web.mit.edu/kerberos/krb5-1.12/doc/admin/conf_files/krb5_conf.html](https://web.mit.edu/kerberos/krb5-1.12/doc/admin/conf_files/krb5_conf.md)
@@ -389,7 +389,7 @@ Optional path to kerberos config file. This is krb5.conf style as detailed in [h
 
 ### `key_deserializer_class` [plugins-inputs-kafka-key_deserializer_class]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"org.apache.kafka.common.serialization.StringDeserializer"`
 
 Java Class used to deserialize the record’s key
@@ -397,7 +397,7 @@ Java Class used to deserialize the record’s key
 
 ### `max_partition_fetch_bytes` [plugins-inputs-kafka-max_partition_fetch_bytes]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `1048576` (1MB).
 
 The maximum amount of data per-partition the server will return. The maximum total memory used for a request will be `#partitions * max.partition.fetch.bytes`. This size must be at least as large as the maximum message size the server allows or else it is possible for the producer to send messages larger than the consumer can fetch. If that happens, the consumer can get stuck trying to fetch a large message on a certain partition.
@@ -405,7 +405,7 @@ The maximum amount of data per-partition the server will return. The maximum tot
 
 ### `max_poll_interval_ms` [plugins-inputs-kafka-max_poll_interval_ms]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `300000` milliseconds (5 minutes).
 
 The maximum delay between invocations of poll() when using consumer group management. This places an upper bound on the amount of time that the consumer can be idle before fetching more records. If poll() is not called before expiration of this timeout, then the consumer is considered failed and the group will rebalance in order to reassign the partitions to another member.
@@ -413,7 +413,7 @@ The maximum delay between invocations of poll() when using consumer group manage
 
 ### `max_poll_records` [plugins-inputs-kafka-max_poll_records]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `500`.
 
 The maximum number of records returned in a single call to poll().
@@ -421,7 +421,7 @@ The maximum number of records returned in a single call to poll().
 
 ### `metadata_max_age_ms` [plugins-inputs-kafka-metadata_max_age_ms]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `300000` milliseconds (5 minutes).
 
 The period of time in milliseconds after which we force a refresh of metadata even if we haven’t seen any partition leadership changes to proactively discover any new brokers or partitions
@@ -429,7 +429,7 @@ The period of time in milliseconds after which we force a refresh of metadata ev
 
 ### `partition_assignment_strategy` [plugins-inputs-kafka-partition_assignment_strategy]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 The name of the partition assignment strategy that the client uses to distribute partition ownership amongst consumer instances, supported options are:
@@ -444,7 +444,7 @@ These map to Kafka’s corresponding [`ConsumerPartitionAssignor`](https://kafka
 
 ### `poll_timeout_ms` [plugins-inputs-kafka-poll_timeout_ms]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `100` milliseconds.
 
 Time Kafka consumer will wait to receive new messages from topics.
@@ -454,7 +454,7 @@ After subscribing to a set of topics, the Kafka consumer automatically joins the
 
 ### `receive_buffer_bytes` [plugins-inputs-kafka-receive_buffer_bytes]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `32768` (32KB).
 
 The size of the TCP receive buffer (SO_RCVBUF) to use when reading data.
@@ -462,7 +462,7 @@ The size of the TCP receive buffer (SO_RCVBUF) to use when reading data.
 
 ### `reconnect_backoff_ms` [plugins-inputs-kafka-reconnect_backoff_ms]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `50` milliseconds.
 
 The amount of time to wait before attempting to reconnect to a given host. This avoids repeatedly connecting to a host in a tight loop. This backoff applies to all requests sent by the consumer to the broker.
@@ -470,7 +470,7 @@ The amount of time to wait before attempting to reconnect to a given host. This 
 
 ### `request_timeout_ms` [plugins-inputs-kafka-request_timeout_ms]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `40000` milliseconds (40 seconds).
 
 The configuration controls the maximum amount of time the client will wait for the response of a request. If the response is not received before the timeout elapses the client will resend the request if necessary or fail the request if retries are exhausted.
@@ -478,7 +478,7 @@ The configuration controls the maximum amount of time the client will wait for t
 
 ### `retry_backoff_ms` [plugins-inputs-kafka-retry_backoff_ms]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `100` milliseconds.
 
 The amount of time to wait before attempting to retry a failed fetch request to a given topic partition. This avoids repeated fetching-and-failing in a tight loop.
@@ -486,7 +486,7 @@ The amount of time to wait before attempting to retry a failed fetch request to 
 
 ### `sasl_client_callback_handler_class` [plugins-inputs-kafka-sasl_client_callback_handler_class]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 The SASL client callback handler class the specified SASL mechanism should use.
@@ -494,7 +494,7 @@ The SASL client callback handler class the specified SASL mechanism should use.
 
 ### `sasl_oauthbearer_token_endpoint_url` [plugins-inputs-kafka-sasl_oauthbearer_token_endpoint_url]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 The URL for the OAuth 2.0 issuer token endpoint.
@@ -502,7 +502,7 @@ The URL for the OAuth 2.0 issuer token endpoint.
 
 ### `sasl_oauthbearer_scope_claim_name` [plugins-inputs-kafka-sasl_oauthbearer_scope_claim_name]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"scope"`
 
 (optional) The override name of the scope claim.
@@ -510,7 +510,7 @@ The URL for the OAuth 2.0 issuer token endpoint.
 
 ### `sasl_login_callback_handler_class` [plugins-inputs-kafka-sasl_login_callback_handler_class]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 The SASL login callback handler class the specified SASL mechanism should use.
@@ -518,7 +518,7 @@ The SASL login callback handler class the specified SASL mechanism should use.
 
 ### `sasl_login_connect_timeout_ms` [plugins-inputs-kafka-sasl_login_connect_timeout_ms]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * There is no default value for this setting.
 
 (optional) The duration, in milliseconds, for HTTPS connect timeout
@@ -526,7 +526,7 @@ The SASL login callback handler class the specified SASL mechanism should use.
 
 ### `sasl_login_read_timeout_ms` [plugins-inputs-kafka-sasl_login_read_timeout_ms]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * There is no default value for this setting.
 
 (optional) The duration, in milliseconds, for HTTPS read timeout.
@@ -534,7 +534,7 @@ The SASL login callback handler class the specified SASL mechanism should use.
 
 ### `sasl_login_retry_backoff_ms` [plugins-inputs-kafka-sasl_login_retry_backoff_ms]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `100` milliseconds.
 
 (optional) The duration, in milliseconds, to wait between HTTPS call attempts.
@@ -542,7 +542,7 @@ The SASL login callback handler class the specified SASL mechanism should use.
 
 ### `sasl_login_retry_backoff_max_ms` [plugins-inputs-kafka-sasl_login_retry_backoff_max_ms]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `10000` milliseconds.
 
 (optional) The maximum duration, in milliseconds, for HTTPS call attempts.
@@ -550,7 +550,7 @@ The SASL login callback handler class the specified SASL mechanism should use.
 
 ### `sasl_jaas_config` [plugins-inputs-kafka-sasl_jaas_config]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 JAAS configuration setting local to this plugin instance, as opposed to settings using config file configured using `jaas_path`, which are shared across the JVM. This allows each plugin instance to have its own configuration.
@@ -570,7 +570,7 @@ Example (setting for Azure Event Hub):
 
 ### `sasl_kerberos_service_name` [plugins-inputs-kafka-sasl_kerberos_service_name]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 The Kerberos principal name that Kafka broker runs as. This can be defined either in Kafka’s JAAS config or in Kafka’s config.
@@ -578,7 +578,7 @@ The Kerberos principal name that Kafka broker runs as. This can be defined eithe
 
 ### `sasl_mechanism` [plugins-inputs-kafka-sasl_mechanism]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"GSSAPI"`
 
 [SASL mechanism](http://kafka.apache.org/documentation.md#security_sasl) used for client connections. This may be any mechanism for which a security provider is available. GSSAPI is the default mechanism.
@@ -586,7 +586,7 @@ The Kerberos principal name that Kafka broker runs as. This can be defined eithe
 
 ### `schema_registry_key` [plugins-inputs-kafka-schema_registry_key]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 Set the username for basic authorization to access remote Schema Registry.
@@ -594,7 +594,7 @@ Set the username for basic authorization to access remote Schema Registry.
 
 ### `schema_registry_proxy` [plugins-inputs-kafka-schema_registry_proxy]
 
-* Value type is [uri](introduction.md#uri)
+* Value type is [uri](value-types.md#uri)
 * There is no default value for this setting.
 
 Set the address of a forward HTTP proxy. An empty string is treated as if proxy was not set.
@@ -602,7 +602,7 @@ Set the address of a forward HTTP proxy. An empty string is treated as if proxy 
 
 ### `schema_registry_secret` [plugins-inputs-kafka-schema_registry_secret]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 Set the password for basic authorization to access remote Schema Registry.
@@ -610,7 +610,7 @@ Set the password for basic authorization to access remote Schema Registry.
 
 ### `schema_registry_ssl_keystore_location` [plugins-inputs-kafka-schema_registry_ssl_keystore_location]
 
-* Value type is [path](introduction.md#path)
+* Value type is [path](value-types.md#path)
 * There is no default value for this setting.
 
 If schema registry client authentication is required, this setting stores the keystore path.
@@ -618,7 +618,7 @@ If schema registry client authentication is required, this setting stores the ke
 
 ### `schema_registry_ssl_keystore_password` [plugins-inputs-kafka-schema_registry_ssl_keystore_password]
 
-* Value type is [password](introduction.md#password)
+* Value type is [password](value-types.md#password)
 * There is no default value for this setting.
 
 If schema registry authentication is required, this setting stores the keystore password.
@@ -626,7 +626,7 @@ If schema registry authentication is required, this setting stores the keystore 
 
 ### `schema_registry_ssl_keystore_type` [plugins-inputs-kafka-schema_registry_ssl_keystore_type]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 The format of the keystore file. It must be either `jks` or `PKCS12`.
@@ -634,7 +634,7 @@ The format of the keystore file. It must be either `jks` or `PKCS12`.
 
 ### `schema_registry_ssl_truststore_location` [plugins-inputs-kafka-schema_registry_ssl_truststore_location]
 
-* Value type is [path](introduction.md#path)
+* Value type is [path](value-types.md#path)
 * There is no default value for this setting.
 
 The truststore path to validate the schema registry’s certificate.
@@ -642,7 +642,7 @@ The truststore path to validate the schema registry’s certificate.
 
 ### `schema_registry_ssl_truststore_password` [plugins-inputs-kafka-schema_registry_ssl_truststore_password]
 
-* Value type is [password](introduction.md#password)
+* Value type is [password](value-types.md#password)
 * There is no default value for this setting.
 
 The schema registry truststore password.
@@ -650,7 +650,7 @@ The schema registry truststore password.
 
 ### `schema_registry_ssl_truststore_type` [plugins-inputs-kafka-schema_registry_ssl_truststore_type]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 The format of the schema registry’s truststore file. It must be either `jks` or `PKCS12`.
@@ -658,7 +658,7 @@ The format of the schema registry’s truststore file. It must be either `jks` o
 
 ### `schema_registry_url` [plugins-inputs-kafka-schema_registry_url]
 
-* Value type is [uri](introduction.md#uri)
+* Value type is [uri](value-types.md#uri)
 
 The URI that points to an instance of the [Schema Registry](https://docs.confluent.io/current/schema-registry/index.md) service, used to manage Avro schemas. Be sure that the Avro schemas for deserializing the data from the specified topics have been uploaded to the Schema Registry service. The schemas must follow a naming convention with the pattern <topic name>-value.
 
@@ -688,7 +688,7 @@ Security protocol to use, which can be either of PLAINTEXT,SSL,SASL_PLAINTEXT,SA
 
 ### `send_buffer_bytes` [plugins-inputs-kafka-send_buffer_bytes]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `131072` (128KB).
 
 The size of the TCP send buffer (SO_SNDBUF) to use when sending data
@@ -696,7 +696,7 @@ The size of the TCP send buffer (SO_SNDBUF) to use when sending data
 
 ### `session_timeout_ms` [plugins-inputs-kafka-session_timeout_ms]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `10000` milliseconds (10 seconds).
 
 The timeout after which, if the `poll_timeout_ms` is not invoked, the consumer is marked dead and a rebalance operation is triggered for the group identified by `group_id`
@@ -704,7 +704,7 @@ The timeout after which, if the `poll_timeout_ms` is not invoked, the consumer i
 
 ### `ssl_endpoint_identification_algorithm` [plugins-inputs-kafka-ssl_endpoint_identification_algorithm]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"https"`
 
 The endpoint identification algorithm, defaults to `"https"`. Set to empty string `""` to disable endpoint verification
@@ -712,7 +712,7 @@ The endpoint identification algorithm, defaults to `"https"`. Set to empty strin
 
 ### `ssl_key_password` [plugins-inputs-kafka-ssl_key_password]
 
-* Value type is [password](introduction.md#password)
+* Value type is [password](value-types.md#password)
 * There is no default value for this setting.
 
 The password of the private key in the key store file.
@@ -720,7 +720,7 @@ The password of the private key in the key store file.
 
 ### `ssl_keystore_location` [plugins-inputs-kafka-ssl_keystore_location]
 
-* Value type is [path](introduction.md#path)
+* Value type is [path](value-types.md#path)
 * There is no default value for this setting.
 
 If client authentication is required, this setting stores the keystore path.
@@ -728,7 +728,7 @@ If client authentication is required, this setting stores the keystore path.
 
 ### `ssl_keystore_password` [plugins-inputs-kafka-ssl_keystore_password]
 
-* Value type is [password](introduction.md#password)
+* Value type is [password](value-types.md#password)
 * There is no default value for this setting.
 
 If client authentication is required, this setting stores the keystore password
@@ -736,7 +736,7 @@ If client authentication is required, this setting stores the keystore password
 
 ### `ssl_keystore_type` [plugins-inputs-kafka-ssl_keystore_type]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 The format of the keystore file. It must be either `jks` or `PKCS12`.
@@ -744,7 +744,7 @@ The format of the keystore file. It must be either `jks` or `PKCS12`.
 
 ### `ssl_truststore_location` [plugins-inputs-kafka-ssl_truststore_location]
 
-* Value type is [path](introduction.md#path)
+* Value type is [path](value-types.md#path)
 * There is no default value for this setting.
 
 The JKS truststore path to validate the Kafka broker’s certificate.
@@ -752,7 +752,7 @@ The JKS truststore path to validate the Kafka broker’s certificate.
 
 ### `ssl_truststore_password` [plugins-inputs-kafka-ssl_truststore_password]
 
-* Value type is [password](introduction.md#password)
+* Value type is [password](value-types.md#password)
 * There is no default value for this setting.
 
 The truststore password.
@@ -760,7 +760,7 @@ The truststore password.
 
 ### `ssl_truststore_type` [plugins-inputs-kafka-ssl_truststore_type]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 The format of the truststore file. It must be either `jks` or `PKCS12`.
@@ -768,7 +768,7 @@ The format of the truststore file. It must be either `jks` or `PKCS12`.
 
 ### `topics` [plugins-inputs-kafka-topics]
 
-* Value type is [array](introduction.md#array)
+* Value type is [array](value-types.md#array)
 * Default value is `["logstash"]`
 
 A list of topics to subscribe to, defaults to ["logstash"].
@@ -776,7 +776,7 @@ A list of topics to subscribe to, defaults to ["logstash"].
 
 ### `topics_pattern` [plugins-inputs-kafka-topics_pattern]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 A topic regular expression pattern to subscribe to.
@@ -791,7 +791,7 @@ When the broker has some topics configured with ACL rules and they miss the DESC
 
 ### `value_deserializer_class` [plugins-inputs-kafka-value_deserializer_class]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"org.apache.kafka.common.serialization.StringDeserializer"`
 
 Java Class used to deserialize the record’s value. A custom value deserializer can be used only if you are not using a Schema Registry. Use either the value_deserializer_class config option or the [`schema_registry_url`](plugins-inputs-kafka.md#plugins-inputs-kafka-schema_registry_url) config option, but not both.

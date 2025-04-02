@@ -69,21 +69,21 @@ This plugin supports the following configuration options plus the [Common option
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`destination`](plugins-filters-translate.md#plugins-filters-translate-destination) | [string](introduction.md#string) | No |
-| [`dictionary`](plugins-filters-translate.md#plugins-filters-translate-dictionary) | [hash](introduction.md#hash) | No |
+| [`destination`](plugins-filters-translate.md#plugins-filters-translate-destination) | [string](value-types.md#string) | No |
+| [`dictionary`](plugins-filters-translate.md#plugins-filters-translate-dictionary) | [hash](value-types.md#hash) | No |
 | [`dictionary_path`](plugins-filters-translate.md#plugins-filters-translate-dictionary_path) | a valid filesystem path | No |
-| [`ecs_compatibility`](plugins-filters-translate.md#plugins-filters-translate-ecs_compatibility) | [string](introduction.md#string) | No |
-| [`exact`](plugins-filters-translate.md#plugins-filters-translate-exact) | [boolean](introduction.md#boolean) | No |
-| [`fallback`](plugins-filters-translate.md#plugins-filters-translate-fallback) | [string](introduction.md#string) | No |
-| [`field`](plugins-filters-translate.md#plugins-filters-translate-field) | [string](introduction.md#string) | No |
-| [`iterate_on`](plugins-filters-translate.md#plugins-filters-translate-iterate_on) | [string](introduction.md#string) | No |
-| [`override`](plugins-filters-translate.md#plugins-filters-translate-override) | [boolean](introduction.md#boolean) | No |
-| [`refresh_interval`](plugins-filters-translate.md#plugins-filters-translate-refresh_interval) | [number](introduction.md#number) | No |
-| [`regex`](plugins-filters-translate.md#plugins-filters-translate-regex) | [boolean](introduction.md#boolean) | No |
-| [`source`](plugins-filters-translate.md#plugins-filters-translate-source) | [string](introduction.md#string) | Yes |
-| [`refresh_behaviour`](plugins-filters-translate.md#plugins-filters-translate-refresh_behaviour) | [string](introduction.md#string) | No |
-| [`target`](plugins-filters-translate.md#plugins-filters-translate-target) | [string](introduction.md#string) | No |
-| [`yaml_dictionary_code_point_limit`](plugins-filters-translate.md#plugins-filters-translate-yaml_dictionary_code_point_limit) | [number](introduction.md#number) | No |
+| [`ecs_compatibility`](plugins-filters-translate.md#plugins-filters-translate-ecs_compatibility) | [string](value-types.md#string) | No |
+| [`exact`](plugins-filters-translate.md#plugins-filters-translate-exact) | [boolean](value-types.md#boolean) | No |
+| [`fallback`](plugins-filters-translate.md#plugins-filters-translate-fallback) | [string](value-types.md#string) | No |
+| [`field`](plugins-filters-translate.md#plugins-filters-translate-field) | [string](value-types.md#string) | No |
+| [`iterate_on`](plugins-filters-translate.md#plugins-filters-translate-iterate_on) | [string](value-types.md#string) | No |
+| [`override`](plugins-filters-translate.md#plugins-filters-translate-override) | [boolean](value-types.md#boolean) | No |
+| [`refresh_interval`](plugins-filters-translate.md#plugins-filters-translate-refresh_interval) | [number](value-types.md#number) | No |
+| [`regex`](plugins-filters-translate.md#plugins-filters-translate-regex) | [boolean](value-types.md#boolean) | No |
+| [`source`](plugins-filters-translate.md#plugins-filters-translate-source) | [string](value-types.md#string) | Yes |
+| [`refresh_behaviour`](plugins-filters-translate.md#plugins-filters-translate-refresh_behaviour) | [string](value-types.md#string) | No |
+| [`target`](plugins-filters-translate.md#plugins-filters-translate-target) | [string](value-types.md#string) | No |
+| [`yaml_dictionary_code_point_limit`](plugins-filters-translate.md#plugins-filters-translate-yaml_dictionary_code_point_limit) | [number](value-types.md#number) | No |
 
 Also see [Common options](plugins-filters-translate.md#plugins-filters-translate-common-options) for a list of options supported by all filter plugins.
 
@@ -91,7 +91,7 @@ Also see [Common options](plugins-filters-translate.md#plugins-filters-translate
 
 ### `destination` [plugins-filters-translate-destination]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Deprecated alias for [`target`](plugins-filters-translate.md#plugins-filters-translate-target) setting.
 
 ::::{admonition} Deprecated in 3.3.0.
@@ -104,7 +104,7 @@ Use [`target`](plugins-filters-translate.md#plugins-filters-translate-target) in
 
 ### `dictionary` [plugins-filters-translate-dictionary]
 
-* Value type is [hash](introduction.md#hash)
+* Value type is [hash](value-types.md#hash)
 * Default value is `{}`
 
 The dictionary to use for translation, when specified in the logstash filter configuration item (i.e. do not use the `dictionary_path` file).
@@ -132,7 +132,7 @@ It is an error to specify both `dictionary` and `dictionary_path`.
 
 ### `dictionary_path` [plugins-filters-translate-dictionary_path]
 
-* Value type is [path](introduction.md#path)
+* Value type is [path](value-types.md#path)
 * There is no default value for this setting.
 
 The full path of the external dictionary file. The format of the table should be a standard YAML, JSON, or CSV.
@@ -156,7 +156,7 @@ The currently supported formats are YAML, JSON, and CSV. Format selection is bas
 
 ### `ecs_compatibility` [plugins-filters-translate-ecs_compatibility]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Supported values are:
 
     * `disabled`: disabled ECS-compatibility
@@ -173,7 +173,7 @@ Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)](ht
 
 ### `exact` [plugins-filters-translate-exact]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `true`
 
 When `exact => true`, the translate filter will populate the destination field with the exact contents of the dictionary value. When `exact => false`, the filter will populate the destination field with the result of any existing destination field’s data, with the translated value substituted in-place.
@@ -191,7 +191,7 @@ Set both `exact => true` AND `regex => `true` if you would like to match using d
 
 ### `fallback` [plugins-filters-translate-fallback]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 In case no translation occurs in the event (no matches), this will add a default translation string, which will always populate `field`, if the match failed.
@@ -207,7 +207,7 @@ Then, if logstash received an event with the field `foo` set to `bar`, the desti
 
 ### `field` [plugins-filters-translate-field]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Deprecated alias for [`source`](plugins-filters-translate.md#plugins-filters-translate-source) setting.
 
 ::::{admonition} Deprecated in 3.3.0.
@@ -220,7 +220,7 @@ Use [`source`](plugins-filters-translate.md#plugins-filters-translate-source) in
 
 ### `iterate_on` [plugins-filters-translate-iterate_on]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 When the value that you need to perform enrichment on is a variable sized array then specify the field name in this setting. This setting introduces two modes, 1) when the value is an array of strings and 2) when the value is an array of objects (as in JSON object).<br> In the first mode, you should have the same field name in both `source` and `iterate_on`, the result will be an array added to the field specified in the `target` setting. This array will have the looked up value (or the `fallback` value or nil) in same ordinal position as each sought value.<br> In the second mode, specify the field that has the array of objects in `iterate_on` then specify the field in each object that provides the sought value with `source` and the field to write the looked up value (or the `fallback` value) to with `target`.
@@ -326,7 +326,7 @@ After
 
 ### `override` [plugins-filters-translate-override]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value depends on whether in-place translation is being used
 
 If the destination (or target) field already exists, this configuration option controls whether the filter skips translation (default behavior) or overwrites the target field value with the new translation value.
@@ -336,7 +336,7 @@ In case of in-place translation, where `target` is the same as `source` (such as
 
 ### `refresh_interval` [plugins-filters-translate-refresh_interval]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `300`
 
 When using a dictionary file, this setting will indicate how frequently (in seconds) logstash will check the dictionary file for updates.<br> A value of zero or less will disable refresh.
@@ -344,7 +344,7 @@ When using a dictionary file, this setting will indicate how frequently (in seco
 
 ### `regex` [plugins-filters-translate-regex]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 To treat dictionary keys as regular expressions, set `regex => true`.
@@ -354,7 +354,7 @@ Be sure to escape dictionary key strings for use with regex. Resources on regex 
 
 ### `refresh_behaviour` [plugins-filters-translate-refresh_behaviour]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `merge`
 
 When using a dictionary file, this setting indicates how the update will be executed. Setting this to `merge` causes the new dictionary to be merged into the old one. This means same entry will be updated but entries that existed before but not in the new dictionary will remain after the merge; `replace` causes the whole dictionary to be replaced with a new one (deleting all entries of the old one on update).
@@ -363,7 +363,7 @@ When using a dictionary file, this setting indicates how the update will be exec
 ### `source` [plugins-filters-translate-source]
 
 * This is a required setting.
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 The name of the logstash event field containing the value to be compared for a match by the translate filter (e.g. `message`, `host`, `response_code`).
@@ -373,7 +373,7 @@ If this field is an array, only the first value will be used.
 
 ### `target` [plugins-filters-translate-target]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value depends on whether [`ecs_compatibility`](plugins-filters-translate.md#plugins-filters-translate-ecs_compatibility) is enabled:
 
     * ECS Compatibility disabled: `"translation"`
@@ -385,7 +385,7 @@ The target field you wish to populate with the translated code. If you set this 
 
 ### `yaml_dictionary_code_point_limit` [plugins-filters-translate-yaml_dictionary_code_point_limit]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is 134217728 (128MB for 1 byte code points)
 
 The max amount of code points in the YAML file in `dictionary_path`. Please be aware that byte limit depends on the encoding. This setting is effective for YAML file only. YAML over the limit throws exception.

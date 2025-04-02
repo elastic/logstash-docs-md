@@ -120,36 +120,36 @@ As of version `6.0.0` of this plugin, a number of previously deprecated settings
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`automatic_retries`](plugins-inputs-http_poller.md#plugins-inputs-http_poller-automatic_retries) | [number](introduction.md#number) | No |
-| [`connect_timeout`](plugins-inputs-http_poller.md#plugins-inputs-http_poller-connect_timeout) | [number](introduction.md#number) | No |
-| [`cookies`](plugins-inputs-http_poller.md#plugins-inputs-http_poller-cookies) | [boolean](introduction.md#boolean) | No |
-| [`ecs_compatibility`](plugins-inputs-http_poller.md#plugins-inputs-http_poller-ecs_compatibility) | [string](introduction.md#string) | No |
-| [`follow_redirects`](plugins-inputs-http_poller.md#plugins-inputs-http_poller-follow_redirects) | [boolean](introduction.md#boolean) | No |
-| [`keepalive`](plugins-inputs-http_poller.md#plugins-inputs-http_poller-keepalive) | [boolean](introduction.md#boolean) | No |
-| [`metadata_target`](plugins-inputs-http_poller.md#plugins-inputs-http_poller-metadata_target) | [string](introduction.md#string) | No |
-| [`password`](plugins-inputs-http_poller.md#plugins-inputs-http_poller-password) | [password](introduction.md#password) | No |
-| [`pool_max`](plugins-inputs-http_poller.md#plugins-inputs-http_poller-pool_max) | [number](introduction.md#number) | No |
-| [`pool_max_per_route`](plugins-inputs-http_poller.md#plugins-inputs-http_poller-pool_max_per_route) | [number](introduction.md#number) | No |
+| [`automatic_retries`](plugins-inputs-http_poller.md#plugins-inputs-http_poller-automatic_retries) | [number](value-types.md#number) | No |
+| [`connect_timeout`](plugins-inputs-http_poller.md#plugins-inputs-http_poller-connect_timeout) | [number](value-types.md#number) | No |
+| [`cookies`](plugins-inputs-http_poller.md#plugins-inputs-http_poller-cookies) | [boolean](value-types.md#boolean) | No |
+| [`ecs_compatibility`](plugins-inputs-http_poller.md#plugins-inputs-http_poller-ecs_compatibility) | [string](value-types.md#string) | No |
+| [`follow_redirects`](plugins-inputs-http_poller.md#plugins-inputs-http_poller-follow_redirects) | [boolean](value-types.md#boolean) | No |
+| [`keepalive`](plugins-inputs-http_poller.md#plugins-inputs-http_poller-keepalive) | [boolean](value-types.md#boolean) | No |
+| [`metadata_target`](plugins-inputs-http_poller.md#plugins-inputs-http_poller-metadata_target) | [string](value-types.md#string) | No |
+| [`password`](plugins-inputs-http_poller.md#plugins-inputs-http_poller-password) | [password](value-types.md#password) | No |
+| [`pool_max`](plugins-inputs-http_poller.md#plugins-inputs-http_poller-pool_max) | [number](value-types.md#number) | No |
+| [`pool_max_per_route`](plugins-inputs-http_poller.md#plugins-inputs-http_poller-pool_max_per_route) | [number](value-types.md#number) | No |
 | [`proxy`](plugins-inputs-http_poller.md#plugins-inputs-http_poller-proxy) | <<,>> | No |
-| [`request_timeout`](plugins-inputs-http_poller.md#plugins-inputs-http_poller-request_timeout) | [number](introduction.md#number) | No |
-| [`retry_non_idempotent`](plugins-inputs-http_poller.md#plugins-inputs-http_poller-retry_non_idempotent) | [boolean](introduction.md#boolean) | No |
-| [`schedule`](plugins-inputs-http_poller.md#plugins-inputs-http_poller-schedule) | [hash](introduction.md#hash) | Yes |
-| [`socket_timeout`](plugins-inputs-http_poller.md#plugins-inputs-http_poller-socket_timeout) | [number](introduction.md#number) | No |
-| [`ssl_certificate`](plugins-inputs-http_poller.md#plugins-inputs-http_poller-ssl_certificate) | [path](introduction.md#path) | No |
-| [`ssl_certificate_authorities`](plugins-inputs-http_poller.md#plugins-inputs-http_poller-ssl_certificate_authorities) | list of [path](introduction.md#path) | No |
-| [`ssl_cipher_suites`](plugins-inputs-http_poller.md#plugins-inputs-http_poller-ssl_cipher_suites) | list of [string](introduction.md#string) | No |
-| [`ssl_enabled`](plugins-inputs-http_poller.md#plugins-inputs-http_poller-ssl_enabled) | [boolean](introduction.md#boolean) | No |
-| [`ssl_keystore_password`](plugins-inputs-http_poller.md#plugins-inputs-http_poller-ssl_keystore_password) | [password](introduction.md#password) | No |
-| [`ssl_keystore_path`](plugins-inputs-http_poller.md#plugins-inputs-http_poller-ssl_keystore_path) | [path](introduction.md#path) | No |
-| [`ssl_keystore_type`](plugins-inputs-http_poller.md#plugins-inputs-http_poller-ssl_keystore_type) | [string](introduction.md#string) | No |
-| [`ssl_truststore_password`](plugins-inputs-http_poller.md#plugins-inputs-http_poller-ssl_truststore_password) | [password](introduction.md#password) | No |
-| [`ssl_truststore_path`](plugins-inputs-http_poller.md#plugins-inputs-http_poller-ssl_truststore_path) | [path](introduction.md#path) | No |
-| [`ssl_truststore_type`](plugins-inputs-http_poller.md#plugins-inputs-http_poller-ssl_truststore_type) | [string](introduction.md#string) | No |
-| [`ssl_verification_mode`](plugins-inputs-http_poller.md#plugins-inputs-http_poller-ssl_verification_mode) | [string](introduction.md#string), one of `["full", "none"]` | No |
-| [`target`](plugins-inputs-http_poller.md#plugins-inputs-http_poller-target) | [string](introduction.md#string) | No |
-| [`urls`](plugins-inputs-http_poller.md#plugins-inputs-http_poller-urls) | [hash](introduction.md#hash) | Yes |
-| [`user`](plugins-inputs-http_poller.md#plugins-inputs-http_poller-user) | [string](introduction.md#string) | No |
-| [`validate_after_inactivity`](plugins-inputs-http_poller.md#plugins-inputs-http_poller-validate_after_inactivity) | [number](introduction.md#number) | No |
+| [`request_timeout`](plugins-inputs-http_poller.md#plugins-inputs-http_poller-request_timeout) | [number](value-types.md#number) | No |
+| [`retry_non_idempotent`](plugins-inputs-http_poller.md#plugins-inputs-http_poller-retry_non_idempotent) | [boolean](value-types.md#boolean) | No |
+| [`schedule`](plugins-inputs-http_poller.md#plugins-inputs-http_poller-schedule) | [hash](value-types.md#hash) | Yes |
+| [`socket_timeout`](plugins-inputs-http_poller.md#plugins-inputs-http_poller-socket_timeout) | [number](value-types.md#number) | No |
+| [`ssl_certificate`](plugins-inputs-http_poller.md#plugins-inputs-http_poller-ssl_certificate) | [path](value-types.md#path) | No |
+| [`ssl_certificate_authorities`](plugins-inputs-http_poller.md#plugins-inputs-http_poller-ssl_certificate_authorities) | list of [path](value-types.md#path) | No |
+| [`ssl_cipher_suites`](plugins-inputs-http_poller.md#plugins-inputs-http_poller-ssl_cipher_suites) | list of [string](value-types.md#string) | No |
+| [`ssl_enabled`](plugins-inputs-http_poller.md#plugins-inputs-http_poller-ssl_enabled) | [boolean](value-types.md#boolean) | No |
+| [`ssl_keystore_password`](plugins-inputs-http_poller.md#plugins-inputs-http_poller-ssl_keystore_password) | [password](value-types.md#password) | No |
+| [`ssl_keystore_path`](plugins-inputs-http_poller.md#plugins-inputs-http_poller-ssl_keystore_path) | [path](value-types.md#path) | No |
+| [`ssl_keystore_type`](plugins-inputs-http_poller.md#plugins-inputs-http_poller-ssl_keystore_type) | [string](value-types.md#string) | No |
+| [`ssl_truststore_password`](plugins-inputs-http_poller.md#plugins-inputs-http_poller-ssl_truststore_password) | [password](value-types.md#password) | No |
+| [`ssl_truststore_path`](plugins-inputs-http_poller.md#plugins-inputs-http_poller-ssl_truststore_path) | [path](value-types.md#path) | No |
+| [`ssl_truststore_type`](plugins-inputs-http_poller.md#plugins-inputs-http_poller-ssl_truststore_type) | [string](value-types.md#string) | No |
+| [`ssl_verification_mode`](plugins-inputs-http_poller.md#plugins-inputs-http_poller-ssl_verification_mode) | [string](value-types.md#string), one of `["full", "none"]` | No |
+| [`target`](plugins-inputs-http_poller.md#plugins-inputs-http_poller-target) | [string](value-types.md#string) | No |
+| [`urls`](plugins-inputs-http_poller.md#plugins-inputs-http_poller-urls) | [hash](value-types.md#hash) | Yes |
+| [`user`](plugins-inputs-http_poller.md#plugins-inputs-http_poller-user) | [string](value-types.md#string) | No |
+| [`validate_after_inactivity`](plugins-inputs-http_poller.md#plugins-inputs-http_poller-validate_after_inactivity) | [number](value-types.md#number) | No |
 
 Also see [Common options](plugins-inputs-http_poller.md#plugins-inputs-http_poller-common-options) for a list of options supported by all input plugins.
 
@@ -157,7 +157,7 @@ Also see [Common options](plugins-inputs-http_poller.md#plugins-inputs-http_poll
 
 ### `automatic_retries` [plugins-inputs-http_poller-automatic_retries]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `1`
 
 How many times should the client retry a failing URL. We highly recommend NOT setting this value to zero if keepalive is enabled. Some servers incorrectly end keepalives early requiring a retry! Note: if `retry_non_idempotent` is set only GET, HEAD, PUT, DELETE, OPTIONS, and TRACE requests will be retried.
@@ -165,7 +165,7 @@ How many times should the client retry a failing URL. We highly recommend NOT se
 
 ### `connect_timeout` [plugins-inputs-http_poller-connect_timeout]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `10`
 
 Timeout (in seconds) to wait for a connection to be established. Default is `10s`
@@ -173,7 +173,7 @@ Timeout (in seconds) to wait for a connection to be established. Default is `10s
 
 ### `cookies` [plugins-inputs-http_poller-cookies]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `true`
 
 Enable cookie support. With this enabled the client will persist cookies across requests as a normal web browser would. Enabled by default
@@ -181,7 +181,7 @@ Enable cookie support. With this enabled the client will persist cookies across 
 
 ### `ecs_compatibility` [plugins-inputs-http_poller-ecs_compatibility]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Supported values are:
 
     * `disabled`: unstructured data added at root level
@@ -256,7 +256,7 @@ Example output:
 
 ### `follow_redirects` [plugins-inputs-http_poller-follow_redirects]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `true`
 
 Should redirects be followed? Defaults to `true`
@@ -264,7 +264,7 @@ Should redirects be followed? Defaults to `true`
 
 ### `keepalive` [plugins-inputs-http_poller-keepalive]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `true`
 
 Turn this on to enable HTTP keepalive support. We highly recommend setting `automatic_retries` to at least one with this to fix interactions with broken keepalive implementations.
@@ -272,7 +272,7 @@ Turn this on to enable HTTP keepalive support. We highly recommend setting `auto
 
 ### `metadata_target` [plugins-inputs-http_poller-metadata_target]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"@metadata"`
 
 If you’d like to work with the request/response metadata. Set this value to the name of the field you’d like to store a nested hash of metadata.
@@ -280,7 +280,7 @@ If you’d like to work with the request/response metadata. Set this value to th
 
 ### `password` [plugins-inputs-http_poller-password]
 
-* Value type is [password](introduction.md#password)
+* Value type is [password](value-types.md#password)
 * There is no default value for this setting.
 
 Password to be used in conjunction with [`user`](plugins-inputs-http_poller.md#plugins-inputs-http_poller-user) for HTTP authentication.
@@ -288,7 +288,7 @@ Password to be used in conjunction with [`user`](plugins-inputs-http_poller.md#p
 
 ### `pool_max` [plugins-inputs-http_poller-pool_max]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `50`
 
 Max number of concurrent connections. Defaults to `50`
@@ -296,7 +296,7 @@ Max number of concurrent connections. Defaults to `50`
 
 ### `pool_max_per_route` [plugins-inputs-http_poller-pool_max_per_route]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `25`
 
 Max number of concurrent connections to a single host. Defaults to `25`
@@ -304,7 +304,7 @@ Max number of concurrent connections to a single host. Defaults to `25`
 
 ### `proxy` [plugins-inputs-http_poller-proxy]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 If you’d like to use an HTTP proxy . This supports multiple configuration syntaxes:
@@ -316,7 +316,7 @@ If you’d like to use an HTTP proxy . This supports multiple configuration synt
 
 ### `request_timeout` [plugins-inputs-http_poller-request_timeout]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `60`
 
 Timeout (in seconds) for the entire request.
@@ -324,7 +324,7 @@ Timeout (in seconds) for the entire request.
 
 ### `retry_non_idempotent` [plugins-inputs-http_poller-retry_non_idempotent]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 If `automatic_retries` is enabled this will cause non-idempotent HTTP verbs (such as POST) to be retried.
@@ -332,7 +332,7 @@ If `automatic_retries` is enabled this will cause non-idempotent HTTP verbs (suc
 
 ### `schedule` [plugins-inputs-http_poller-schedule]
 
-* Value type is [hash](introduction.md#hash)
+* Value type is [hash](value-types.md#hash)
 * There is no default value for this setting.
 
 Schedule of when to periodically poll from the urls Format: A hash with + key: "cron" | "every" | "in" | "at" + value: string Examples: a) { "every" ⇒ "1h" } b) { "cron" ⇒ "* * * * * UTC" } See: rufus/scheduler for details about different schedule options and value string format
@@ -340,7 +340,7 @@ Schedule of when to periodically poll from the urls Format: A hash with + key: "
 
 ### `socket_timeout` [plugins-inputs-http_poller-socket_timeout]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `10`
 
 Timeout (in seconds) to wait for data on the socket. Default is `10s`
@@ -348,7 +348,7 @@ Timeout (in seconds) to wait for data on the socket. Default is `10s`
 
 ### `ssl_certificate` [plugins-inputs-http_poller-ssl_certificate]
 
-* Value type is [path](introduction.md#path)
+* Value type is [path](value-types.md#path)
 * There is no default value for this setting.
 
 SSL certificate to use to authenticate the client. This certificate should be an OpenSSL-style X.509 certificate file.
@@ -361,7 +361,7 @@ This setting can be used only if [`ssl_key`](plugins-inputs-http_poller.md#plugi
 
 ### `ssl_certificate_authorities` [plugins-inputs-http_poller-ssl_certificate_authorities]
 
-* Value type is a list of [path](introduction.md#path)
+* Value type is a list of [path](value-types.md#path)
 * There is no default value for this setting
 
 The .cer or .pem CA files to validate the server’s certificate.
@@ -369,7 +369,7 @@ The .cer or .pem CA files to validate the server’s certificate.
 
 ### `ssl_cipher_suites` [plugins-inputs-http_poller-ssl_cipher_suites]
 
-* Value type is a list of [string](introduction.md#string)
+* Value type is a list of [string](value-types.md#string)
 * There is no default value for this setting
 
 The list of cipher suites to use, listed by priorities. Supported cipher suites vary depending on the Java and protocol versions.
@@ -377,7 +377,7 @@ The list of cipher suites to use, listed by priorities. Supported cipher suites 
 
 ### `ssl_enabled` [plugins-inputs-http_poller-ssl_enabled]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `true`
 
 Enable SSL/TLS secured communication. It must be `true` for other `ssl_` options to take effect.
@@ -385,7 +385,7 @@ Enable SSL/TLS secured communication. It must be `true` for other `ssl_` options
 
 ### `ssl_key` [plugins-inputs-http_poller-ssl_key]
 
-* Value type is [path](introduction.md#path)
+* Value type is [path](value-types.md#path)
 * There is no default value for this setting.
 
 OpenSSL-style RSA private key that corresponds to the [`ssl_certificate`](plugins-inputs-http_poller.md#plugins-inputs-http_poller-ssl_certificate).
@@ -398,7 +398,7 @@ This setting can be used only if [`ssl_certificate`](plugins-inputs-http_poller.
 
 ### `ssl_keystore_password` [plugins-inputs-http_poller-ssl_keystore_password]
 
-* Value type is [password](introduction.md#password)
+* Value type is [password](value-types.md#password)
 * There is no default value for this setting.
 
 Set the keystore password
@@ -406,7 +406,7 @@ Set the keystore password
 
 ### `ssl_keystore_path` [plugins-inputs-http_poller-ssl_keystore_path]
 
-* Value type is [path](introduction.md#path)
+* Value type is [path](value-types.md#path)
 * There is no default value for this setting.
 
 The keystore used to present a certificate to the server. It can be either `.jks` or `.p12`
@@ -422,7 +422,7 @@ The format of the keystore file. It must be either `jks` or `pkcs12`.
 
 ### `ssl_supported_protocols` [plugins-inputs-http_poller-ssl_supported_protocols]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Allowed values are: `'TLSv1.1'`, `'TLSv1.2'`, `'TLSv1.3'`
 * Default depends on the JDK being used. With up-to-date Logstash, the default is `['TLSv1.2', 'TLSv1.3']`. `'TLSv1.1'` is not considered secure and is only provided for legacy applications.
 
@@ -438,7 +438,7 @@ If you configure the plugin to use `'TLSv1.1'` on any recent JVM, such as the on
 
 ### `ssl_truststore_password` [plugins-inputs-http_poller-ssl_truststore_password]
 
-* Value type is [password](introduction.md#password)
+* Value type is [password](value-types.md#password)
 * There is no default value for this setting.
 
 Set the truststore password
@@ -446,7 +446,7 @@ Set the truststore password
 
 ### `ssl_truststore_path` [plugins-inputs-http_poller-ssl_truststore_path]
 
-* Value type is [path](introduction.md#path)
+* Value type is [path](value-types.md#path)
 * There is no default value for this setting.
 
 The truststore to validate the server’s certificate. It can be either `.jks` or `.p12`.
@@ -462,7 +462,7 @@ The format of the truststore file. It must be either `jks` or `pkcs12`.
 
 ### `ssl_verification_mode` [plugins-inputs-http_poller-ssl_verification_mode]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Supported values are: `full`, `none`
 * Default value is `full`
 
@@ -473,7 +473,7 @@ The `none` setting performs no verification of the server’s certificate. This 
 
 ### `target` [plugins-inputs-http_poller-target]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 Define the target field for placing the received data. If this setting is omitted, the data will be stored at the root (top level) of the event.
@@ -487,7 +487,7 @@ When ECS is enabled, set `target` in the codec (if the codec has a `target` opti
 ### `urls` [plugins-inputs-http_poller-urls]
 
 * This is a required setting.
-* Value type is [hash](introduction.md#hash)
+* Value type is [hash](value-types.md#hash)
 * There is no default value for this setting.
 
 A Hash of urls in this format : `"name" => "url"`. The name and the url will be passed in the outputted event.
@@ -515,7 +515,7 @@ The values in urls can be either:
 
 ### `user` [plugins-inputs-http_poller-user]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 Username to use with HTTP authentication for ALL requests. Note that you can also set this per-URL. If you set this you must also set the [`password`](plugins-inputs-http_poller.md#plugins-inputs-http_poller-password) option.
@@ -523,7 +523,7 @@ Username to use with HTTP authentication for ALL requests. Note that you can als
 
 ### `validate_after_inactivity` [plugins-inputs-http_poller-validate_after_inactivity]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `200`
 
 How long to wait before checking for a stale connection to determine if a keepalive request is needed. Consider setting this value lower than the default, possibly to 0, if you get connection errors regularly.

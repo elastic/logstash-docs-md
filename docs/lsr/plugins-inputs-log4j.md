@@ -121,10 +121,10 @@ This plugin supports the following configuration options plus the [Common option
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`host`](plugins-inputs-log4j.md#plugins-inputs-log4j-host) | [string](introduction.md#string) | No |
-| [`mode`](plugins-inputs-log4j.md#plugins-inputs-log4j-mode) | [string](introduction.md#string), one of `["server", "client"]` | No |
-| [`port`](plugins-inputs-log4j.md#plugins-inputs-log4j-port) | [number](introduction.md#number) | No |
-| [`proxy_protocol`](plugins-inputs-log4j.md#plugins-inputs-log4j-proxy_protocol) | [boolean](introduction.md#boolean) | No |
+| [`host`](plugins-inputs-log4j.md#plugins-inputs-log4j-host) | [string](value-types.md#string) | No |
+| [`mode`](plugins-inputs-log4j.md#plugins-inputs-log4j-mode) | [string](value-types.md#string), one of `["server", "client"]` | No |
+| [`port`](plugins-inputs-log4j.md#plugins-inputs-log4j-port) | [number](value-types.md#number) | No |
+| [`proxy_protocol`](plugins-inputs-log4j.md#plugins-inputs-log4j-proxy_protocol) | [boolean](value-types.md#boolean) | No |
 
 Also see [Common options](plugins-inputs-log4j.md#plugins-inputs-log4j-common-options) for a list of options supported by all input plugins.
 
@@ -132,7 +132,7 @@ Also see [Common options](plugins-inputs-log4j.md#plugins-inputs-log4j-common-op
 
 ### `host` [plugins-inputs-log4j-host]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"0.0.0.0"`
 
 When mode is `server`, the address to listen on. When mode is `client`, the address to connect to.
@@ -148,7 +148,7 @@ Mode to operate in. `server` listens for client connections, `client` connects t
 
 ### `port` [plugins-inputs-log4j-port]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `4560`
 
 When mode is `server`, the port to listen on. When mode is `client`, the port to connect to.
@@ -156,7 +156,7 @@ When mode is `server`, the port to listen on. When mode is `client`, the port to
 
 ### `proxy_protocol` [plugins-inputs-log4j-proxy_protocol]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 Proxy protocol support, only v1 is supported at this time [http://www.haproxy.org/download/1.5/doc/proxy-protocol.txt](http://www.haproxy.org/download/1.5/doc/proxy-protocol.txt)

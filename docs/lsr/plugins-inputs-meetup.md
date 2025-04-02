@@ -34,13 +34,13 @@ This plugin supports the following configuration options plus the [Common option
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`eventstatus`](plugins-inputs-meetup.md#plugins-inputs-meetup-eventstatus) | [string](introduction.md#string) | No |
-| [`groupid`](plugins-inputs-meetup.md#plugins-inputs-meetup-groupid) | [string](introduction.md#string) | No |
-| [`interval`](plugins-inputs-meetup.md#plugins-inputs-meetup-interval) | [number](introduction.md#number) | Yes |
-| [`meetupkey`](plugins-inputs-meetup.md#plugins-inputs-meetup-meetupkey) | [string](introduction.md#string) | Yes |
-| [`urlname`](plugins-inputs-meetup.md#plugins-inputs-meetup-urlname) | [string](introduction.md#string) | No |
-| [`venueid`](plugins-inputs-meetup.md#plugins-inputs-meetup-venueid) | [string](introduction.md#string) | No |
-| [`text`](plugins-inputs-meetup.md#plugins-inputs-meetup-text) | [string](introduction.md#string) | No |
+| [`eventstatus`](plugins-inputs-meetup.md#plugins-inputs-meetup-eventstatus) | [string](value-types.md#string) | No |
+| [`groupid`](plugins-inputs-meetup.md#plugins-inputs-meetup-groupid) | [string](value-types.md#string) | No |
+| [`interval`](plugins-inputs-meetup.md#plugins-inputs-meetup-interval) | [number](value-types.md#number) | Yes |
+| [`meetupkey`](plugins-inputs-meetup.md#plugins-inputs-meetup-meetupkey) | [string](value-types.md#string) | Yes |
+| [`urlname`](plugins-inputs-meetup.md#plugins-inputs-meetup-urlname) | [string](value-types.md#string) | No |
+| [`venueid`](plugins-inputs-meetup.md#plugins-inputs-meetup-venueid) | [string](value-types.md#string) | No |
+| [`text`](plugins-inputs-meetup.md#plugins-inputs-meetup-text) | [string](value-types.md#string) | No |
 
 Also see [Common options](plugins-inputs-meetup.md#plugins-inputs-meetup-common-options) for a list of options supported by all input plugins.
 
@@ -48,7 +48,7 @@ Also see [Common options](plugins-inputs-meetup.md#plugins-inputs-meetup-common-
 
 ### `eventstatus` [plugins-inputs-meetup-eventstatus]
 
-* Value type is [string](introduction.md#string).
+* Value type is [string](value-types.md#string).
 * Default value is `"upcoming,past"`.
 
 Event Status can be one of `"upcoming"`, `"past"`, or `"upcoming,past"`. Default is `"upcoming,past"`.
@@ -56,7 +56,7 @@ Event Status can be one of `"upcoming"`, `"past"`, or `"upcoming,past"`. Default
 
 ### `groupid` [plugins-inputs-meetup-groupid]
 
-* Value type is [string](introduction.md#string).
+* Value type is [string](value-types.md#string).
 * There is no default value for this setting.
 
 The Group ID, multiple may be specified seperated by commas. Must have one of `urlname`, `venueid`, `groupid`, `text`.
@@ -65,7 +65,7 @@ The Group ID, multiple may be specified seperated by commas. Must have one of `u
 ### `interval` [plugins-inputs-meetup-interval]
 
 * This is a required setting.
-* Value type is [number](introduction.md#number).
+* Value type is [number](value-types.md#number).
 * There is no default value for this setting.
 
 Interval to run the command. Value is in minutes.
@@ -74,7 +74,7 @@ Interval to run the command. Value is in minutes.
 ### `meetupkey` [plugins-inputs-meetup-meetupkey]
 
 * This is a required setting.
-* Value type is [string](introduction.md#string).
+* Value type is [string](value-types.md#string).
 * There is no default value for this setting.
 
 Meetup Key, aka personal token.
@@ -82,7 +82,7 @@ Meetup Key, aka personal token.
 
 ### `urlname` [plugins-inputs-meetup-urlname]
 
-* Value type is [string](introduction.md#string).
+* Value type is [string](value-types.md#string).
 * There is no default value for this setting.
 
 URLName - the URL name ie `ElasticSearch-Oklahoma-City`. Must have one of urlname, venue_id, group_id, `text`.
@@ -90,7 +90,7 @@ URLName - the URL name ie `ElasticSearch-Oklahoma-City`. Must have one of urlnam
 
 ### `venueid` [plugins-inputs-meetup-venueid]
 
-* Value type is [string](introduction.md#string).
+* Value type is [string](value-types.md#string).
 * There is no default value for this setting.
 
 The venue ID Must have one of `urlname`, `venue_id`, `group_id`, `text`.
@@ -98,7 +98,7 @@ The venue ID Must have one of `urlname`, `venue_id`, `group_id`, `text`.
 
 ### `text` [plugins-inputs-meetup-text]
 
-* Value type is [string](introduction.md#string).
+* Value type is [string](value-types.md#string).
 * There is no default value for this setting.
 
 A text string to search meetup events by. Must have one of `urlname`, `venue_id`, `group_id`, `text`.

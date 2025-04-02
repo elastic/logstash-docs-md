@@ -51,31 +51,31 @@ This plugin supports the following configuration options plus the [Common option
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`access_key_id`](plugins-inputs-s3.md#plugins-inputs-s3-access_key_id) | [string](introduction.md#string) | No |
-| [`additional_settings`](plugins-inputs-s3.md#plugins-inputs-s3-additional_settings) | [hash](introduction.md#hash) | No |
-| [`aws_credentials_file`](plugins-inputs-s3.md#plugins-inputs-s3-aws_credentials_file) | [string](introduction.md#string) | No |
-| [`backup_add_prefix`](plugins-inputs-s3.md#plugins-inputs-s3-backup_add_prefix) | [string](introduction.md#string) | No |
-| [`backup_to_bucket`](plugins-inputs-s3.md#plugins-inputs-s3-backup_to_bucket) | [string](introduction.md#string) | No |
-| [`backup_to_dir`](plugins-inputs-s3.md#plugins-inputs-s3-backup_to_dir) | [string](introduction.md#string) | No |
-| [`bucket`](plugins-inputs-s3.md#plugins-inputs-s3-bucket) | [string](introduction.md#string) | Yes |
-| [`delete`](plugins-inputs-s3.md#plugins-inputs-s3-delete) | [boolean](introduction.md#boolean) | No |
-| [`ecs_compatibility`](plugins-inputs-s3.md#plugins-inputs-s3-ecs_compatibility) | [string](introduction.md#string) | No |
-| [`endpoint`](plugins-inputs-s3.md#plugins-inputs-s3-endpoint) | [string](introduction.md#string) | No |
-| [`exclude_pattern`](plugins-inputs-s3.md#plugins-inputs-s3-exclude_pattern) | [string](introduction.md#string) | No |
-| [`gzip_pattern`](plugins-inputs-s3.md#plugins-inputs-s3-gzip_pattern) | [string](introduction.md#string) | No |
-| [`include_object_properties`](plugins-inputs-s3.md#plugins-inputs-s3-include_object_properties) | [boolean](introduction.md#boolean) | No |
-| [`interval`](plugins-inputs-s3.md#plugins-inputs-s3-interval) | [number](introduction.md#number) | No |
-| [`prefix`](plugins-inputs-s3.md#plugins-inputs-s3-prefix) | [string](introduction.md#string) | No |
-| [`proxy_uri`](plugins-inputs-s3.md#plugins-inputs-s3-proxy_uri) | [string](introduction.md#string) | No |
-| [`region`](plugins-inputs-s3.md#plugins-inputs-s3-region) | [string](introduction.md#string) | No |
-| [`role_arn`](plugins-inputs-s3.md#plugins-inputs-s3-role_arn) | [string](introduction.md#string) | No |
-| [`role_session_name`](plugins-inputs-s3.md#plugins-inputs-s3-role_session_name) | [string](introduction.md#string) | No |
-| [`secret_access_key`](plugins-inputs-s3.md#plugins-inputs-s3-secret_access_key) | [string](introduction.md#string) | No |
-| [`session_token`](plugins-inputs-s3.md#plugins-inputs-s3-session_token) | [string](introduction.md#string) | No |
-| [`sincedb_path`](plugins-inputs-s3.md#plugins-inputs-s3-sincedb_path) | [string](introduction.md#string) | No |
-| [`temporary_directory`](plugins-inputs-s3.md#plugins-inputs-s3-temporary_directory) | [string](introduction.md#string) | No |
-| [`use_aws_bundled_ca`](plugins-inputs-s3.md#plugins-inputs-s3-use_aws_bundled_ca) | [boolean](introduction.md#boolean) | No |
-| [`watch_for_new_files`](plugins-inputs-s3.md#plugins-inputs-s3-watch_for_new_files) | [boolean](introduction.md#boolean) | No |
+| [`access_key_id`](plugins-inputs-s3.md#plugins-inputs-s3-access_key_id) | [string](value-types.md#string) | No |
+| [`additional_settings`](plugins-inputs-s3.md#plugins-inputs-s3-additional_settings) | [hash](value-types.md#hash) | No |
+| [`aws_credentials_file`](plugins-inputs-s3.md#plugins-inputs-s3-aws_credentials_file) | [string](value-types.md#string) | No |
+| [`backup_add_prefix`](plugins-inputs-s3.md#plugins-inputs-s3-backup_add_prefix) | [string](value-types.md#string) | No |
+| [`backup_to_bucket`](plugins-inputs-s3.md#plugins-inputs-s3-backup_to_bucket) | [string](value-types.md#string) | No |
+| [`backup_to_dir`](plugins-inputs-s3.md#plugins-inputs-s3-backup_to_dir) | [string](value-types.md#string) | No |
+| [`bucket`](plugins-inputs-s3.md#plugins-inputs-s3-bucket) | [string](value-types.md#string) | Yes |
+| [`delete`](plugins-inputs-s3.md#plugins-inputs-s3-delete) | [boolean](value-types.md#boolean) | No |
+| [`ecs_compatibility`](plugins-inputs-s3.md#plugins-inputs-s3-ecs_compatibility) | [string](value-types.md#string) | No |
+| [`endpoint`](plugins-inputs-s3.md#plugins-inputs-s3-endpoint) | [string](value-types.md#string) | No |
+| [`exclude_pattern`](plugins-inputs-s3.md#plugins-inputs-s3-exclude_pattern) | [string](value-types.md#string) | No |
+| [`gzip_pattern`](plugins-inputs-s3.md#plugins-inputs-s3-gzip_pattern) | [string](value-types.md#string) | No |
+| [`include_object_properties`](plugins-inputs-s3.md#plugins-inputs-s3-include_object_properties) | [boolean](value-types.md#boolean) | No |
+| [`interval`](plugins-inputs-s3.md#plugins-inputs-s3-interval) | [number](value-types.md#number) | No |
+| [`prefix`](plugins-inputs-s3.md#plugins-inputs-s3-prefix) | [string](value-types.md#string) | No |
+| [`proxy_uri`](plugins-inputs-s3.md#plugins-inputs-s3-proxy_uri) | [string](value-types.md#string) | No |
+| [`region`](plugins-inputs-s3.md#plugins-inputs-s3-region) | [string](value-types.md#string) | No |
+| [`role_arn`](plugins-inputs-s3.md#plugins-inputs-s3-role_arn) | [string](value-types.md#string) | No |
+| [`role_session_name`](plugins-inputs-s3.md#plugins-inputs-s3-role_session_name) | [string](value-types.md#string) | No |
+| [`secret_access_key`](plugins-inputs-s3.md#plugins-inputs-s3-secret_access_key) | [string](value-types.md#string) | No |
+| [`session_token`](plugins-inputs-s3.md#plugins-inputs-s3-session_token) | [string](value-types.md#string) | No |
+| [`sincedb_path`](plugins-inputs-s3.md#plugins-inputs-s3-sincedb_path) | [string](value-types.md#string) | No |
+| [`temporary_directory`](plugins-inputs-s3.md#plugins-inputs-s3-temporary_directory) | [string](value-types.md#string) | No |
+| [`use_aws_bundled_ca`](plugins-inputs-s3.md#plugins-inputs-s3-use_aws_bundled_ca) | [boolean](value-types.md#boolean) | No |
+| [`watch_for_new_files`](plugins-inputs-s3.md#plugins-inputs-s3-watch_for_new_files) | [boolean](value-types.md#boolean) | No |
 
 Also see [Common options](plugins-inputs-s3.md#plugins-inputs-s3-common-options) for a list of options supported by all input plugins.
 
@@ -83,7 +83,7 @@ Also see [Common options](plugins-inputs-s3.md#plugins-inputs-s3-common-options)
 
 ### `access_key_id` [plugins-inputs-s3-access_key_id]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 This plugin uses the AWS SDK and supports several ways to get credentials, which will be tried in this order:
@@ -97,7 +97,7 @@ This plugin uses the AWS SDK and supports several ways to get credentials, which
 
 ### `additional_settings` [plugins-inputs-s3-additional_settings]
 
-* Value type is [hash](introduction.md#hash)
+* Value type is [hash](value-types.md#hash)
 * Default value is `{}`
 
 Key-value pairs of settings and corresponding values used to parametrize the connection to s3. See full list in [the AWS SDK documentation](https://docs.aws.amazon.com/sdk-for-ruby/v3/api/Aws/S3/Client.md). Example:
@@ -119,7 +119,7 @@ Key-value pairs of settings and corresponding values used to parametrize the con
 
 ### `aws_credentials_file` [plugins-inputs-s3-aws_credentials_file]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 Path to YAML file containing a hash of AWS credentials. This file will only be loaded if `access_key_id` and `secret_access_key` aren’t set. The contents of the file should look like this:
@@ -132,7 +132,7 @@ Path to YAML file containing a hash of AWS credentials. This file will only be l
 
 ### `backup_add_prefix` [plugins-inputs-s3-backup_add_prefix]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `nil`
 
 Append a prefix to the key (full path including file name in s3) after processing. If backing up to another (or the same) bucket, this effectively lets you choose a new *folder* to place the files in
@@ -140,7 +140,7 @@ Append a prefix to the key (full path including file name in s3) after processin
 
 ### `backup_to_bucket` [plugins-inputs-s3-backup_to_bucket]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `nil`
 
 Name of a S3 bucket to backup processed files to.
@@ -148,7 +148,7 @@ Name of a S3 bucket to backup processed files to.
 
 ### `backup_to_dir` [plugins-inputs-s3-backup_to_dir]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `nil`
 
 Path of a local directory to backup processed files to.
@@ -157,7 +157,7 @@ Path of a local directory to backup processed files to.
 ### `bucket` [plugins-inputs-s3-bucket]
 
 * This is a required setting.
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 The name of the S3 bucket.
@@ -165,7 +165,7 @@ The name of the S3 bucket.
 
 ### `delete` [plugins-inputs-s3-delete]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 Whether to delete processed files from the original bucket.
@@ -173,7 +173,7 @@ Whether to delete processed files from the original bucket.
 
 ### `ecs_compatibility` [plugins-inputs-s3-ecs_compatibility]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Supported values are:
 
     * `disabled`: does not use ECS-compatible field names
@@ -185,7 +185,7 @@ Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)](ht
 
 ### `endpoint` [plugins-inputs-s3-endpoint]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 The endpoint to connect to. By default it is constructed using the value of `region`. This is useful when connecting to S3 compatible services, but beware that these aren’t guaranteed to work correctly with the AWS SDK.
@@ -193,7 +193,7 @@ The endpoint to connect to. By default it is constructed using the value of `reg
 
 ### `exclude_pattern` [plugins-inputs-s3-exclude_pattern]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `nil`
 
 Ruby style regexp of keys to exclude from the bucket.
@@ -211,7 +211,7 @@ This pattern excludes all logs containing "/2020/04/" in the path.
 
 ### `gzip_pattern` [plugins-inputs-s3-gzip_pattern]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"\.gz(ip)?$"`
 
 Regular expression used to determine whether an input file is in gzip format.
@@ -219,7 +219,7 @@ Regular expression used to determine whether an input file is in gzip format.
 
 ### `include_object_properties` [plugins-inputs-s3-include_object_properties]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 Whether or not to include the S3 object’s properties (last_modified, content_type, metadata) into each Event at `[@metadata][s3]`. Regardless of this setting, `[@metadata][s3][key]` will always be present.
@@ -227,7 +227,7 @@ Whether or not to include the S3 object’s properties (last_modified, content_t
 
 ### `interval` [plugins-inputs-s3-interval]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `60`
 
 Interval to wait between to check the file list again after a run is finished. Value is in seconds.
@@ -235,7 +235,7 @@ Interval to wait between to check the file list again after a run is finished. V
 
 ### `prefix` [plugins-inputs-s3-prefix]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `nil`
 
 If specified, the prefix of filenames in the bucket must match (not a regexp)
@@ -243,7 +243,7 @@ If specified, the prefix of filenames in the bucket must match (not a regexp)
 
 ### `proxy_uri` [plugins-inputs-s3-proxy_uri]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 URI to proxy server if required
@@ -251,7 +251,7 @@ URI to proxy server if required
 
 ### `region` [plugins-inputs-s3-region]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"us-east-1"`
 
 The AWS Region
@@ -259,7 +259,7 @@ The AWS Region
 
 ### `role_arn` [plugins-inputs-s3-role_arn]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 The AWS IAM Role to assume, if any. This is used to generate temporary credentials, typically for cross-account access. See the [AssumeRole API documentation](https://docs.aws.amazon.com/STS/latest/APIReference/API_AssumeRole.md) for more information.
@@ -267,7 +267,7 @@ The AWS IAM Role to assume, if any. This is used to generate temporary credentia
 
 ### `role_session_name` [plugins-inputs-s3-role_session_name]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"logstash"`
 
 Session name to use when assuming an IAM role.
@@ -275,7 +275,7 @@ Session name to use when assuming an IAM role.
 
 ### `secret_access_key` [plugins-inputs-s3-secret_access_key]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 The AWS Secret Access Key
@@ -283,7 +283,7 @@ The AWS Secret Access Key
 
 ### `session_token` [plugins-inputs-s3-session_token]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 The AWS Session token for temporary credential
@@ -291,7 +291,7 @@ The AWS Session token for temporary credential
 
 ### `sincedb_path` [plugins-inputs-s3-sincedb_path]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `nil`
 
 Where to write the since database (keeps track of the date the last handled file was added to S3). The default will write sincedb files to in the directory *{path.data}/plugins/inputs/s3/*
@@ -301,7 +301,7 @@ If specified, this setting must be a filename path and not just a directory.
 
 ### `temporary_directory` [plugins-inputs-s3-temporary_directory]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"/tmp/logstash"`
 
 Set the directory where logstash will store the tmp files before processing them.
@@ -309,7 +309,7 @@ Set the directory where logstash will store the tmp files before processing them
 
 ### `use_aws_bundled_ca` [plugins-inputs-s3-use_aws_bundled_ca]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 Use bundled CA certificates that ship with AWS SDK to verify SSL peer certificates. For cases where the default certificates are unavailable, e.g. Windows, you can set this to `true`.
@@ -317,7 +317,7 @@ Use bundled CA certificates that ship with AWS SDK to verify SSL peer certificat
 
 ### `watch_for_new_files` [plugins-inputs-s3-watch_for_new_files]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `true`
 
 Whether or not to watch for new files. Disabling this option causes the input to close itself after processing the files from a single listing.

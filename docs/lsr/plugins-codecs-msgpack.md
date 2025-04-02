@@ -27,20 +27,20 @@ This codec reads and produces MessagePack encoded content.
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`format`](plugins-codecs-msgpack.md#plugins-codecs-msgpack-format) | [string](introduction.md#string) | No |
-| [`target`](plugins-codecs-msgpack.md#plugins-codecs-msgpack-target) | [string](introduction.md#string) | No |
+| [`format`](plugins-codecs-msgpack.md#plugins-codecs-msgpack-format) | [string](value-types.md#string) | No |
+| [`target`](plugins-codecs-msgpack.md#plugins-codecs-msgpack-target) | [string](value-types.md#string) | No |
 
  
 
 ### `format` [plugins-codecs-msgpack-format]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 
 ### `target` [plugins-codecs-msgpack-target]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 Define the target field for placing the decoded values. If this setting is not set, data will be stored at the root (top level) of the event.

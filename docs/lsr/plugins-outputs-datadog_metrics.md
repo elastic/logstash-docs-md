@@ -34,16 +34,16 @@ This plugin supports the following configuration options plus the [Common option
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`api_key`](plugins-outputs-datadog_metrics.md#plugins-outputs-datadog_metrics-api_key) | [password](introduction.md#password) | Yes |
-| [`api_url`](plugins-outputs-datadog_metrics.md#plugins-outputs-datadog_metrics-api_url) | [string](introduction.md#string) | No |
-| [`dd_tags`](plugins-outputs-datadog_metrics.md#plugins-outputs-datadog_metrics-dd_tags) | [array](introduction.md#array) | No |
-| [`device`](plugins-outputs-datadog_metrics.md#plugins-outputs-datadog_metrics-device) | [string](introduction.md#string) | No |
-| [`host`](plugins-outputs-datadog_metrics.md#plugins-outputs-datadog_metrics-host) | [string](introduction.md#string) | No |
-| [`metric_name`](plugins-outputs-datadog_metrics.md#plugins-outputs-datadog_metrics-metric_name) | [string](introduction.md#string) | No |
-| [`metric_type`](plugins-outputs-datadog_metrics.md#plugins-outputs-datadog_metrics-metric_type) | [string](introduction.md#string), one of `["gauge", "counter", "%{{metric_type}}"]` | No |
+| [`api_key`](plugins-outputs-datadog_metrics.md#plugins-outputs-datadog_metrics-api_key) | [password](value-types.md#password) | Yes |
+| [`api_url`](plugins-outputs-datadog_metrics.md#plugins-outputs-datadog_metrics-api_url) | [string](value-types.md#string) | No |
+| [`dd_tags`](plugins-outputs-datadog_metrics.md#plugins-outputs-datadog_metrics-dd_tags) | [array](value-types.md#array) | No |
+| [`device`](plugins-outputs-datadog_metrics.md#plugins-outputs-datadog_metrics-device) | [string](value-types.md#string) | No |
+| [`host`](plugins-outputs-datadog_metrics.md#plugins-outputs-datadog_metrics-host) | [string](value-types.md#string) | No |
+| [`metric_name`](plugins-outputs-datadog_metrics.md#plugins-outputs-datadog_metrics-metric_name) | [string](value-types.md#string) | No |
+| [`metric_type`](plugins-outputs-datadog_metrics.md#plugins-outputs-datadog_metrics-metric_type) | [string](value-types.md#string), one of `["gauge", "counter", "%{{metric_type}}"]` | No |
 | [`metric_value`](plugins-outputs-datadog_metrics.md#plugins-outputs-datadog_metrics-metric_value) | <<,>> | No |
-| [`queue_size`](plugins-outputs-datadog_metrics.md#plugins-outputs-datadog_metrics-queue_size) | [number](introduction.md#number) | No |
-| [`timeframe`](plugins-outputs-datadog_metrics.md#plugins-outputs-datadog_metrics-timeframe) | [number](introduction.md#number) | No |
+| [`queue_size`](plugins-outputs-datadog_metrics.md#plugins-outputs-datadog_metrics-queue_size) | [number](value-types.md#number) | No |
+| [`timeframe`](plugins-outputs-datadog_metrics.md#plugins-outputs-datadog_metrics-timeframe) | [number](value-types.md#number) | No |
 
 Also see [Common options](plugins-outputs-datadog_metrics.md#plugins-outputs-datadog_metrics-common-options) for a list of options supported by all output plugins.
 
@@ -52,7 +52,7 @@ Also see [Common options](plugins-outputs-datadog_metrics.md#plugins-outputs-dat
 ### `api_key` [plugins-outputs-datadog_metrics-api_key]
 
 * This is a required setting.
-* Value type is [password](introduction.md#password)
+* Value type is [password](value-types.md#password)
 * There is no default value for this setting.
 
 Your DatadogHQ API key. [https://app.datadoghq.com/account/settings#api](https://app.datadoghq.com/account/settings#api)
@@ -60,7 +60,7 @@ Your DatadogHQ API key. [https://app.datadoghq.com/account/settings#api](https:/
 
 ### `api_url` [plugins-outputs-datadog_metrics-api_url]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"https://api.datadoghq.com/api/v1/series"`
 
 Set the api endpoint for Datadog EU Site users
@@ -68,7 +68,7 @@ Set the api endpoint for Datadog EU Site users
 
 ### `dd_tags` [plugins-outputs-datadog_metrics-dd_tags]
 
-* Value type is [array](introduction.md#array)
+* Value type is [array](value-types.md#array)
 * There is no default value for this setting.
 
 Set any custom tags for this event, default are the Logstash tags if any.
@@ -76,7 +76,7 @@ Set any custom tags for this event, default are the Logstash tags if any.
 
 ### `device` [plugins-outputs-datadog_metrics-device]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"%{{metric_device}}"`
 
 The name of the device that produced the metric.
@@ -84,7 +84,7 @@ The name of the device that produced the metric.
 
 ### `host` [plugins-outputs-datadog_metrics-host]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"%{{host}}"`
 
 The name of the host that produced the metric.
@@ -92,7 +92,7 @@ The name of the host that produced the metric.
 
 ### `metric_name` [plugins-outputs-datadog_metrics-metric_name]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"%{{metric_name}}"`
 
 The name of the time series.
@@ -108,7 +108,7 @@ The type of the metric.
 
 ### `metric_value` [plugins-outputs-datadog_metrics-metric_value]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"%{{metric_value}}"`
 
 The value.
@@ -116,7 +116,7 @@ The value.
 
 ### `queue_size` [plugins-outputs-datadog_metrics-queue_size]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `10`
 
 How many events to queue before flushing to Datadog prior to schedule set in `@timeframe`
@@ -124,7 +124,7 @@ How many events to queue before flushing to Datadog prior to schedule set in `@t
 
 ### `timeframe` [plugins-outputs-datadog_metrics-timeframe]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `10`
 
 How often (in seconds) to flush queued events to Datadog

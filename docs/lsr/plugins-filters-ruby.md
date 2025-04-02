@@ -171,12 +171,12 @@ This plugin supports the following configuration options plus the [Common option
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`code`](plugins-filters-ruby.md#plugins-filters-ruby-code) | [string](introduction.md#string) | No |
-| [`init`](plugins-filters-ruby.md#plugins-filters-ruby-init) | [string](introduction.md#string) | No |
-| [`path`](plugins-filters-ruby.md#plugins-filters-ruby-path) | [string](introduction.md#string) | No |
-| [`script_params`](plugins-filters-ruby.md#plugins-filters-ruby-script_params) | [hash](introduction.md#hash),{} | No |
-| [`tag_on_exception`](plugins-filters-ruby.md#plugins-filters-ruby-tag_on_exception) | [string](introduction.md#string),_rubyexception | No |
-| [`tag_with_exception_message`](plugins-filters-ruby.md#plugins-filters-ruby-tag_with_exception_message) | [boolean](introduction.md#boolean),_false | No |
+| [`code`](plugins-filters-ruby.md#plugins-filters-ruby-code) | [string](value-types.md#string) | No |
+| [`init`](plugins-filters-ruby.md#plugins-filters-ruby-init) | [string](value-types.md#string) | No |
+| [`path`](plugins-filters-ruby.md#plugins-filters-ruby-path) | [string](value-types.md#string) | No |
+| [`script_params`](plugins-filters-ruby.md#plugins-filters-ruby-script_params) | [hash](value-types.md#hash),{} | No |
+| [`tag_on_exception`](plugins-filters-ruby.md#plugins-filters-ruby-tag_on_exception) | [string](value-types.md#string),_rubyexception | No |
+| [`tag_with_exception_message`](plugins-filters-ruby.md#plugins-filters-ruby-tag_with_exception_message) | [boolean](value-types.md#boolean),_false | No |
 
 Also see [Common options](plugins-filters-ruby.md#plugins-filters-ruby-common-options) for a list of options supported by all filter plugins.
 
@@ -184,7 +184,7 @@ Also see [Common options](plugins-filters-ruby.md#plugins-filters-ruby-common-op
 
 ### `code` [plugins-filters-ruby-code]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 * This setting cannot be used together with `path`.
 
@@ -193,7 +193,7 @@ The code to execute for every event. You will have an `event` variable available
 
 ### `init` [plugins-filters-ruby-init]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 Any code to execute at logstash startup-time
@@ -201,7 +201,7 @@ Any code to execute at logstash startup-time
 
 ### `path` [plugins-filters-ruby-path]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 * This setting cannot be used together with `code`.
 
@@ -210,7 +210,7 @@ The path of the ruby script file that implements the `filter` method.
 
 ### `script_params` [plugins-filters-ruby-script_params]
 
-* Value type is [hash](introduction.md#hash)
+* Value type is [hash](value-types.md#hash)
 * Default value is `{}`
 
 A key/value hash with parameters that are passed to the register method of your ruby script file defined in `path`.
@@ -218,7 +218,7 @@ A key/value hash with parameters that are passed to the register method of your 
 
 ### `tag_on_exception` [plugins-filters-ruby-tag_on_exception]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `_rubyexception`
 
 Tag to add to events in case the ruby code (either inline or file based) causes an exception.
@@ -226,7 +226,7 @@ Tag to add to events in case the ruby code (either inline or file based) causes 
 
 ### `tag_with_exception_message` [plugins-filters-ruby-tag_with_exception_message]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 If `true` adds a tag to the event that is the concatenation of `tag_with_exception_message` and the exception message.

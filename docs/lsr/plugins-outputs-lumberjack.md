@@ -29,10 +29,10 @@ This plugin supports the following configuration options plus the [Common option
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`flush_size`](plugins-outputs-lumberjack.md#plugins-outputs-lumberjack-flush_size) | [number](introduction.md#number) | No |
-| [`hosts`](plugins-outputs-lumberjack.md#plugins-outputs-lumberjack-hosts) | [array](introduction.md#array) | Yes |
-| [`idle_flush_time`](plugins-outputs-lumberjack.md#plugins-outputs-lumberjack-idle_flush_time) | [number](introduction.md#number) | No |
-| [`port`](plugins-outputs-lumberjack.md#plugins-outputs-lumberjack-port) | [number](introduction.md#number) | Yes |
+| [`flush_size`](plugins-outputs-lumberjack.md#plugins-outputs-lumberjack-flush_size) | [number](value-types.md#number) | No |
+| [`hosts`](plugins-outputs-lumberjack.md#plugins-outputs-lumberjack-hosts) | [array](value-types.md#array) | Yes |
+| [`idle_flush_time`](plugins-outputs-lumberjack.md#plugins-outputs-lumberjack-idle_flush_time) | [number](value-types.md#number) | No |
+| [`port`](plugins-outputs-lumberjack.md#plugins-outputs-lumberjack-port) | [number](value-types.md#number) | Yes |
 | [`ssl_certificate`](plugins-outputs-lumberjack.md#plugins-outputs-lumberjack-ssl_certificate) | a valid filesystem path | Yes |
 
 Also see [Common options](plugins-outputs-lumberjack.md#plugins-outputs-lumberjack-common-options) for a list of options supported by all output plugins.
@@ -41,7 +41,7 @@ Also see [Common options](plugins-outputs-lumberjack.md#plugins-outputs-lumberja
 
 ### `flush_size` [plugins-outputs-lumberjack-flush_size]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `1024`
 
 To make efficient calls to the lumberjack output we are buffering events locally. if the number of events exceed the number the declared `flush_size` we will send them to the logstash server.
@@ -50,7 +50,7 @@ To make efficient calls to the lumberjack output we are buffering events locally
 ### `hosts` [plugins-outputs-lumberjack-hosts]
 
 * This is a required setting.
-* Value type is [array](introduction.md#array)
+* Value type is [array](value-types.md#array)
 * There is no default value for this setting.
 
 List of addresses lumberjack can send to. When the plugin needs to connect to the remote peer, it randomly selects one of the hosts.
@@ -60,7 +60,7 @@ When the plugin is registered, it opens a connection to one of the hosts. If the
 
 ### `idle_flush_time` [plugins-outputs-lumberjack-idle_flush_time]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `1`
 
 The amount of time since last flush before a flush is forced.
@@ -73,7 +73,7 @@ This helps keep both fast and slow log streams moving along in near-real-time.
 ### `port` [plugins-outputs-lumberjack-port]
 
 * This is a required setting.
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * There is no default value for this setting.
 
 the port to connect to
@@ -82,7 +82,7 @@ the port to connect to
 ### `ssl_certificate` [plugins-outputs-lumberjack-ssl_certificate]
 
 * This is a required setting.
-* Value type is [path](introduction.md#path)
+* Value type is [path](value-types.md#path)
 * There is no default value for this setting.
 
 ssl certificate to use

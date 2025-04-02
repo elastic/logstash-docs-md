@@ -56,26 +56,26 @@ This plugin supports the following configuration options plus the [Common option
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`access_key_id`](plugins-outputs-cloudwatch.md#plugins-outputs-cloudwatch-access_key_id) | [string](introduction.md#string) | No |
-| [`aws_credentials_file`](plugins-outputs-cloudwatch.md#plugins-outputs-cloudwatch-aws_credentials_file) | [string](introduction.md#string) | No |
-| [`batch_size`](plugins-outputs-cloudwatch.md#plugins-outputs-cloudwatch-batch_size) | [number](introduction.md#number) | No |
-| [`dimensions`](plugins-outputs-cloudwatch.md#plugins-outputs-cloudwatch-dimensions) | [hash](introduction.md#hash) | No |
-| [`field_dimensions`](plugins-outputs-cloudwatch.md#plugins-outputs-cloudwatch-field_dimensions) | [string](introduction.md#string) | No |
-| [`field_metricname`](plugins-outputs-cloudwatch.md#plugins-outputs-cloudwatch-field_metricname) | [string](introduction.md#string) | No |
-| [`field_namespace`](plugins-outputs-cloudwatch.md#plugins-outputs-cloudwatch-field_namespace) | [string](introduction.md#string) | No |
-| [`field_unit`](plugins-outputs-cloudwatch.md#plugins-outputs-cloudwatch-field_unit) | [string](introduction.md#string) | No |
-| [`field_value`](plugins-outputs-cloudwatch.md#plugins-outputs-cloudwatch-field_value) | [string](introduction.md#string) | No |
-| [`metricname`](plugins-outputs-cloudwatch.md#plugins-outputs-cloudwatch-metricname) | [string](introduction.md#string) | No |
-| [`namespace`](plugins-outputs-cloudwatch.md#plugins-outputs-cloudwatch-namespace) | [string](introduction.md#string) | No |
-| [`proxy_uri`](plugins-outputs-cloudwatch.md#plugins-outputs-cloudwatch-proxy_uri) | [string](introduction.md#string) | No |
-| [`queue_size`](plugins-outputs-cloudwatch.md#plugins-outputs-cloudwatch-queue_size) | [number](introduction.md#number) | No |
-| [`region`](plugins-outputs-cloudwatch.md#plugins-outputs-cloudwatch-region) | [string](introduction.md#string), one of `["us-east-1", "us-east-2", "us-west-1", "us-west-2", "eu-central-1", "eu-west-1", "eu-west-2", "ap-southeast-1", "ap-southeast-2", "ap-northeast-1", "ap-northeast-2", "sa-east-1", "us-gov-west-1", "cn-north-1", "ap-south-1", "ca-central-1"]` | No |
-| [`secret_access_key`](plugins-outputs-cloudwatch.md#plugins-outputs-cloudwatch-secret_access_key) | [string](introduction.md#string) | No |
-| [`session_token`](plugins-outputs-cloudwatch.md#plugins-outputs-cloudwatch-session_token) | [string](introduction.md#string) | No |
-| [`timeframe`](plugins-outputs-cloudwatch.md#plugins-outputs-cloudwatch-timeframe) | [string](introduction.md#string) | No |
-| [`unit`](plugins-outputs-cloudwatch.md#plugins-outputs-cloudwatch-unit) | [string](introduction.md#string), one of `["Seconds", "Microseconds", "Milliseconds", "Bytes", "Kilobytes", "Megabytes", "Gigabytes", "Terabytes", "Bits", "Kilobits", "Megabits", "Gigabits", "Terabits", "Percent", "Count", "Bytes/Second", "Kilobytes/Second", "Megabytes/Second", "Gigabytes/Second", "Terabytes/Second", "Bits/Second", "Kilobits/Second", "Megabits/Second", "Gigabits/Second", "Terabits/Second", "Count/Second", "None"]` | No |
-| [`use_aws_bundled_ca`](plugins-outputs-cloudwatch.md#plugins-outputs-cloudwatch-use_aws_bundled_ca) | [boolean](introduction.md#boolean) | No |
-| [`value`](plugins-outputs-cloudwatch.md#plugins-outputs-cloudwatch-value) | [string](introduction.md#string) | No |
+| [`access_key_id`](plugins-outputs-cloudwatch.md#plugins-outputs-cloudwatch-access_key_id) | [string](value-types.md#string) | No |
+| [`aws_credentials_file`](plugins-outputs-cloudwatch.md#plugins-outputs-cloudwatch-aws_credentials_file) | [string](value-types.md#string) | No |
+| [`batch_size`](plugins-outputs-cloudwatch.md#plugins-outputs-cloudwatch-batch_size) | [number](value-types.md#number) | No |
+| [`dimensions`](plugins-outputs-cloudwatch.md#plugins-outputs-cloudwatch-dimensions) | [hash](value-types.md#hash) | No |
+| [`field_dimensions`](plugins-outputs-cloudwatch.md#plugins-outputs-cloudwatch-field_dimensions) | [string](value-types.md#string) | No |
+| [`field_metricname`](plugins-outputs-cloudwatch.md#plugins-outputs-cloudwatch-field_metricname) | [string](value-types.md#string) | No |
+| [`field_namespace`](plugins-outputs-cloudwatch.md#plugins-outputs-cloudwatch-field_namespace) | [string](value-types.md#string) | No |
+| [`field_unit`](plugins-outputs-cloudwatch.md#plugins-outputs-cloudwatch-field_unit) | [string](value-types.md#string) | No |
+| [`field_value`](plugins-outputs-cloudwatch.md#plugins-outputs-cloudwatch-field_value) | [string](value-types.md#string) | No |
+| [`metricname`](plugins-outputs-cloudwatch.md#plugins-outputs-cloudwatch-metricname) | [string](value-types.md#string) | No |
+| [`namespace`](plugins-outputs-cloudwatch.md#plugins-outputs-cloudwatch-namespace) | [string](value-types.md#string) | No |
+| [`proxy_uri`](plugins-outputs-cloudwatch.md#plugins-outputs-cloudwatch-proxy_uri) | [string](value-types.md#string) | No |
+| [`queue_size`](plugins-outputs-cloudwatch.md#plugins-outputs-cloudwatch-queue_size) | [number](value-types.md#number) | No |
+| [`region`](plugins-outputs-cloudwatch.md#plugins-outputs-cloudwatch-region) | [string](value-types.md#string), one of `["us-east-1", "us-east-2", "us-west-1", "us-west-2", "eu-central-1", "eu-west-1", "eu-west-2", "ap-southeast-1", "ap-southeast-2", "ap-northeast-1", "ap-northeast-2", "sa-east-1", "us-gov-west-1", "cn-north-1", "ap-south-1", "ca-central-1"]` | No |
+| [`secret_access_key`](plugins-outputs-cloudwatch.md#plugins-outputs-cloudwatch-secret_access_key) | [string](value-types.md#string) | No |
+| [`session_token`](plugins-outputs-cloudwatch.md#plugins-outputs-cloudwatch-session_token) | [string](value-types.md#string) | No |
+| [`timeframe`](plugins-outputs-cloudwatch.md#plugins-outputs-cloudwatch-timeframe) | [string](value-types.md#string) | No |
+| [`unit`](plugins-outputs-cloudwatch.md#plugins-outputs-cloudwatch-unit) | [string](value-types.md#string), one of `["Seconds", "Microseconds", "Milliseconds", "Bytes", "Kilobytes", "Megabytes", "Gigabytes", "Terabytes", "Bits", "Kilobits", "Megabits", "Gigabits", "Terabits", "Percent", "Count", "Bytes/Second", "Kilobytes/Second", "Megabytes/Second", "Gigabytes/Second", "Terabytes/Second", "Bits/Second", "Kilobits/Second", "Megabits/Second", "Gigabits/Second", "Terabits/Second", "Count/Second", "None"]` | No |
+| [`use_aws_bundled_ca`](plugins-outputs-cloudwatch.md#plugins-outputs-cloudwatch-use_aws_bundled_ca) | [boolean](value-types.md#boolean) | No |
+| [`value`](plugins-outputs-cloudwatch.md#plugins-outputs-cloudwatch-value) | [string](value-types.md#string) | No |
 
 Also see [Common options](plugins-outputs-cloudwatch.md#plugins-outputs-cloudwatch-common-options) for a list of options supported by all output plugins.
 
@@ -83,7 +83,7 @@ Also see [Common options](plugins-outputs-cloudwatch.md#plugins-outputs-cloudwat
 
 ### `access_key_id` [plugins-outputs-cloudwatch-access_key_id]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 This plugin uses the AWS SDK and supports several ways to get credentials, which will be tried in this order:
@@ -97,7 +97,7 @@ This plugin uses the AWS SDK and supports several ways to get credentials, which
 
 ### `aws_credentials_file` [plugins-outputs-cloudwatch-aws_credentials_file]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 Path to YAML file containing a hash of AWS credentials. This file will only be loaded if `access_key_id` and `secret_access_key` aren’t set. The contents of the file should look like this:
@@ -110,7 +110,7 @@ Path to YAML file containing a hash of AWS credentials. This file will only be l
 
 ### `batch_size` [plugins-outputs-cloudwatch-batch_size]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `20`
 
 How many data points can be given in one call to the CloudWatch API
@@ -118,7 +118,7 @@ How many data points can be given in one call to the CloudWatch API
 
 ### `dimensions` [plugins-outputs-cloudwatch-dimensions]
 
-* Value type is [hash](introduction.md#hash)
+* Value type is [hash](value-types.md#hash)
 * There is no default value for this setting.
 
 The default dimensions [ name, value, …​ ] to use for events which do not have a `CW_dimensions` field
@@ -126,7 +126,7 @@ The default dimensions [ name, value, …​ ] to use for events which do not ha
 
 ### `field_dimensions` [plugins-outputs-cloudwatch-field_dimensions]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"CW_dimensions"`
 
 The name of the field used to set the dimensions on an event metric The field named here, if present in an event, must have an array of one or more key & value pairs, for example…​ `add_field => [ "CW_dimensions", "Environment", "CW_dimensions", "prod" ]` or, equivalently…​ `add_field => [ "CW_dimensions", "Environment" ]` `add_field => [ "CW_dimensions", "prod" ]`
@@ -134,7 +134,7 @@ The name of the field used to set the dimensions on an event metric The field na
 
 ### `field_metricname` [plugins-outputs-cloudwatch-field_metricname]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"CW_metricname"`
 
 The name of the field used to set the metric name on an event The author of this plugin recommends adding this field to events in inputs & filters rather than using the per-output default setting so that one output plugin on your logstash indexer can serve all events (which of course had fields set on your logstash shippers.)
@@ -142,7 +142,7 @@ The name of the field used to set the metric name on an event The author of this
 
 ### `field_namespace` [plugins-outputs-cloudwatch-field_namespace]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"CW_namespace"`
 
 The name of the field used to set a different namespace per event Note: Only one namespace can be sent to CloudWatch per API call so setting different namespaces will increase the number of API calls and those cost money.
@@ -150,7 +150,7 @@ The name of the field used to set a different namespace per event Note: Only one
 
 ### `field_unit` [plugins-outputs-cloudwatch-field_unit]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"CW_unit"`
 
 The name of the field used to set the unit on an event metric
@@ -158,7 +158,7 @@ The name of the field used to set the unit on an event metric
 
 ### `field_value` [plugins-outputs-cloudwatch-field_value]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"CW_value"`
 
 The name of the field used to set the value (float) on an event metric
@@ -166,7 +166,7 @@ The name of the field used to set the value (float) on an event metric
 
 ### `metricname` [plugins-outputs-cloudwatch-metricname]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 The default metric name to use for events which do not have a `CW_metricname` field. Beware: If this is provided then all events which pass through this output will be aggregated and sent to CloudWatch, so use this carefully.  Furthermore, when providing this option, you will probably want to also restrict events from passing through this output using event type, tag, and field matching
@@ -174,7 +174,7 @@ The default metric name to use for events which do not have a `CW_metricname` fi
 
 ### `namespace` [plugins-outputs-cloudwatch-namespace]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"Logstash"`
 
 The default namespace to use for events which do not have a `CW_namespace` field
@@ -182,7 +182,7 @@ The default namespace to use for events which do not have a `CW_namespace` field
 
 ### `proxy_uri` [plugins-outputs-cloudwatch-proxy_uri]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 URI to proxy server if required
@@ -190,7 +190,7 @@ URI to proxy server if required
 
 ### `queue_size` [plugins-outputs-cloudwatch-queue_size]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `10000`
 
 How many events to queue before forcing a call to the CloudWatch API ahead of `timeframe` schedule Set this to the number of events-per-timeframe you will be sending to CloudWatch to avoid extra API calls
@@ -206,7 +206,7 @@ The AWS Region
 
 ### `secret_access_key` [plugins-outputs-cloudwatch-secret_access_key]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 The AWS Secret Access Key
@@ -214,7 +214,7 @@ The AWS Secret Access Key
 
 ### `session_token` [plugins-outputs-cloudwatch-session_token]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 The AWS Session token for temporary credential
@@ -222,7 +222,7 @@ The AWS Session token for temporary credential
 
 ### `timeframe` [plugins-outputs-cloudwatch-timeframe]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"1m"`
 
 Constants aggregate_key members Units How often to send data to CloudWatch This does not affect the event timestamps, events will always have their actual timestamp (to-the-minute) sent to CloudWatch.
@@ -242,7 +242,7 @@ The default unit to use for events which do not have a `CW_unit` field If you se
 
 ### `use_aws_bundled_ca` [plugins-outputs-cloudwatch-use_aws_bundled_ca]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 Use bundled CA certificates that ship with AWS SDK to verify SSL peer certificates. For cases where the default certificates are unavailable, e.g. Windows, you can set this to `true`.
@@ -250,7 +250,7 @@ Use bundled CA certificates that ship with AWS SDK to verify SSL peer certificat
 
 ### `value` [plugins-outputs-cloudwatch-value]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"1"`
 
 The default value to use for events which do not have a `CW_value` field If provided, this must be a string which can be converted to a float, for example…​ "1", "2.34", ".5", and "0.67" If you set this option you should probably set the `unit` option along with it

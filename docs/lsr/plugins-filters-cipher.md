@@ -39,17 +39,17 @@ This plugin supports the following configuration options plus the [Common option
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`algorithm`](plugins-filters-cipher.md#plugins-filters-cipher-algorithm) | [string](introduction.md#string) | Yes |
-| [`base64`](plugins-filters-cipher.md#plugins-filters-cipher-base64) | [boolean](introduction.md#boolean) | No |
-| [`cipher_padding`](plugins-filters-cipher.md#plugins-filters-cipher-cipher_padding) | [string](introduction.md#string) | No |
-| [`iv_random_length`](plugins-filters-cipher.md#plugins-filters-cipher-iv_random_length) | [number](introduction.md#number) | No |
-| [`key`](plugins-filters-cipher.md#plugins-filters-cipher-key) | [string](introduction.md#string) | No |
-| [`key_pad`](plugins-filters-cipher.md#plugins-filters-cipher-key_pad) | [string](introduction.md#string) | No |
-| [`key_size`](plugins-filters-cipher.md#plugins-filters-cipher-key_size) | [number](introduction.md#number) | No |
-| [`max_cipher_reuse`](plugins-filters-cipher.md#plugins-filters-cipher-max_cipher_reuse) | [number](introduction.md#number) | No |
-| [`mode`](plugins-filters-cipher.md#plugins-filters-cipher-mode) | [string](introduction.md#string) | Yes |
-| [`source`](plugins-filters-cipher.md#plugins-filters-cipher-source) | [string](introduction.md#string) | No |
-| [`target`](plugins-filters-cipher.md#plugins-filters-cipher-target) | [string](introduction.md#string) | No |
+| [`algorithm`](plugins-filters-cipher.md#plugins-filters-cipher-algorithm) | [string](value-types.md#string) | Yes |
+| [`base64`](plugins-filters-cipher.md#plugins-filters-cipher-base64) | [boolean](value-types.md#boolean) | No |
+| [`cipher_padding`](plugins-filters-cipher.md#plugins-filters-cipher-cipher_padding) | [string](value-types.md#string) | No |
+| [`iv_random_length`](plugins-filters-cipher.md#plugins-filters-cipher-iv_random_length) | [number](value-types.md#number) | No |
+| [`key`](plugins-filters-cipher.md#plugins-filters-cipher-key) | [string](value-types.md#string) | No |
+| [`key_pad`](plugins-filters-cipher.md#plugins-filters-cipher-key_pad) | [string](value-types.md#string) | No |
+| [`key_size`](plugins-filters-cipher.md#plugins-filters-cipher-key_size) | [number](value-types.md#number) | No |
+| [`max_cipher_reuse`](plugins-filters-cipher.md#plugins-filters-cipher-max_cipher_reuse) | [number](value-types.md#number) | No |
+| [`mode`](plugins-filters-cipher.md#plugins-filters-cipher-mode) | [string](value-types.md#string) | Yes |
+| [`source`](plugins-filters-cipher.md#plugins-filters-cipher-source) | [string](value-types.md#string) | No |
+| [`target`](plugins-filters-cipher.md#plugins-filters-cipher-target) | [string](value-types.md#string) | No |
 
 Also see [Common options](plugins-filters-cipher.md#plugins-filters-cipher-common-options) for a list of options supported by all filter plugins.
 
@@ -58,7 +58,7 @@ Also see [Common options](plugins-filters-cipher.md#plugins-filters-cipher-commo
 ### `algorithm` [plugins-filters-cipher-algorithm]
 
 * This is a required setting.
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 The cipher algorithm to use for encryption and decryption operations.
@@ -73,7 +73,7 @@ A list of supported algorithms depends on the versions of Logstash, JRuby, and J
 
 ### `base64` [plugins-filters-cipher-base64]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `true`
 * Unless this option is disabled:
 
@@ -84,7 +84,7 @@ A list of supported algorithms depends on the versions of Logstash, JRuby, and J
 
 ### `cipher_padding` [plugins-filters-cipher-cipher_padding]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 
     * `0`: means `false`
     * `1`: means `true`
@@ -104,7 +104,7 @@ Disabling padding by setting this value to `0` will cause this plugin to fail to
 
 ### `iv_random_length` [plugins-filters-cipher-iv_random_length]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * There is no default value for this setting.
 
 In encryption operations, this plugin generates a random Initialization Vector (IV) per encryption operation. This is a standard best-practice to ensure that the resulting ciphertexts cannot be compared to infer equivalence of the source plaintext. This unique IV is then *prepended* to the resulting ciphertext before it is stored, ensuring it is available to any process that needs to decrypt it.
@@ -120,7 +120,7 @@ The size of the IV is generally dependent on which [`algorithm`](plugins-filters
 
 ### `key` [plugins-filters-cipher-key]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 The key to use for encryption and decryption operations.
@@ -136,7 +136,7 @@ Please read the [UnlimitedStrengthCrypto topic](https://github.com/jruby/jruby/w
 
 ### `key_pad` [plugins-filters-cipher-key_pad]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"\u0000"`
 
 The character used to pad the key to the required [`key_size`](plugins-filters-cipher.md#plugins-filters-cipher-key_size).
@@ -144,7 +144,7 @@ The character used to pad the key to the required [`key_size`](plugins-filters-c
 
 ### `key_size` [plugins-filters-cipher-key_size]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `16`
 
 The cipher’s required key size, which depends on which [`algorithm`](plugins-filters-cipher.md#plugins-filters-cipher-algorithm) you are using. If a [`key`](plugins-filters-cipher.md#plugins-filters-cipher-key) is specified with a shorter value, it will be padded with [`key_pad`](plugins-filters-cipher.md#plugins-filters-cipher-key_pad).
@@ -158,7 +158,7 @@ Example, for AES-128, we must have 16 char long key. AES-256 = 32 chars
 
 ### `max_cipher_reuse` [plugins-filters-cipher-max_cipher_reuse]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `1`
 
 If this value is set, the internal Cipher instance will be re-used up to `max_cipher_reuse` times before it is re-created from scratch. This is an option for efficiency where lots of data is being encrypted and decrypted using this filter. This lets the filter avoid creating new Cipher instances over and over for each encrypt/decrypt operation.
@@ -173,7 +173,7 @@ This is optional, the default is no re-use of the Cipher instance and max_cipher
 ### `mode` [plugins-filters-cipher-mode]
 
 * This is a required setting.
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 
     * `encrypt`: encrypts a plaintext value into IV + ciphertext
     * `decrypt`: decrypts an IV + ciphertext value into plaintext
@@ -183,7 +183,7 @@ This is optional, the default is no re-use of the Cipher instance and max_cipher
 
 ### `source` [plugins-filters-cipher-source]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"message"`
 
 The name of the source field.
@@ -200,7 +200,7 @@ Example, to use the `message` field (default) :
 
 ### `target` [plugins-filters-cipher-target]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"message"`
 
 The name of the target field to put the result:

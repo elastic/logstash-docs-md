@@ -38,19 +38,19 @@ This plugin supports the following configuration options plus the [Common option
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`can_retry`](plugins-outputs-loggly.md#plugins-outputs-loggly-can_retry) | [boolean](introduction.md#boolean) | No |
-| [`convert_timestamp`](plugins-outputs-loggly.md#plugins-outputs-loggly-convert_timestamp) | [boolean](introduction.md#boolean) | No |
-| [`host`](plugins-outputs-loggly.md#plugins-outputs-loggly-host) | [string](introduction.md#string) | No |
-| [`key`](plugins-outputs-loggly.md#plugins-outputs-loggly-key) | [string](introduction.md#string) | Yes |
-| [`max_event_size`](plugins-outputs-loggly.md#plugins-outputs-loggly-max_event_size) | [bytes](introduction.md#bytes) | Yes |
-| [`max_payload_size`](plugins-outputs-loggly.md#plugins-outputs-loggly-max_payload_size) | [bytes](introduction.md#bytes) | Yes |
-| [`proto`](plugins-outputs-loggly.md#plugins-outputs-loggly-proto) | [string](introduction.md#string) | No |
-| [`proxy_host`](plugins-outputs-loggly.md#plugins-outputs-loggly-proxy_host) | [string](introduction.md#string) | No |
-| [`proxy_password`](plugins-outputs-loggly.md#plugins-outputs-loggly-proxy_password) | [password](introduction.md#password) | No |
-| [`proxy_port`](plugins-outputs-loggly.md#plugins-outputs-loggly-proxy_port) | [number](introduction.md#number) | No |
-| [`proxy_user`](plugins-outputs-loggly.md#plugins-outputs-loggly-proxy_user) | [string](introduction.md#string) | No |
-| [`retry_count`](plugins-outputs-loggly.md#plugins-outputs-loggly-retry_count) | [number](introduction.md#number) | No |
-| [`tag`](plugins-outputs-loggly.md#plugins-outputs-loggly-tag) | [string](introduction.md#string) | No |
+| [`can_retry`](plugins-outputs-loggly.md#plugins-outputs-loggly-can_retry) | [boolean](value-types.md#boolean) | No |
+| [`convert_timestamp`](plugins-outputs-loggly.md#plugins-outputs-loggly-convert_timestamp) | [boolean](value-types.md#boolean) | No |
+| [`host`](plugins-outputs-loggly.md#plugins-outputs-loggly-host) | [string](value-types.md#string) | No |
+| [`key`](plugins-outputs-loggly.md#plugins-outputs-loggly-key) | [string](value-types.md#string) | Yes |
+| [`max_event_size`](plugins-outputs-loggly.md#plugins-outputs-loggly-max_event_size) | [bytes](value-types.md#bytes) | Yes |
+| [`max_payload_size`](plugins-outputs-loggly.md#plugins-outputs-loggly-max_payload_size) | [bytes](value-types.md#bytes) | Yes |
+| [`proto`](plugins-outputs-loggly.md#plugins-outputs-loggly-proto) | [string](value-types.md#string) | No |
+| [`proxy_host`](plugins-outputs-loggly.md#plugins-outputs-loggly-proxy_host) | [string](value-types.md#string) | No |
+| [`proxy_password`](plugins-outputs-loggly.md#plugins-outputs-loggly-proxy_password) | [password](value-types.md#password) | No |
+| [`proxy_port`](plugins-outputs-loggly.md#plugins-outputs-loggly-proxy_port) | [number](value-types.md#number) | No |
+| [`proxy_user`](plugins-outputs-loggly.md#plugins-outputs-loggly-proxy_user) | [string](value-types.md#string) | No |
+| [`retry_count`](plugins-outputs-loggly.md#plugins-outputs-loggly-retry_count) | [number](value-types.md#number) | No |
+| [`tag`](plugins-outputs-loggly.md#plugins-outputs-loggly-tag) | [string](value-types.md#string) | No |
 
 Also see [Common options](plugins-outputs-loggly.md#plugins-outputs-loggly-common-options) for a list of options supported by all output plugins.
 
@@ -58,7 +58,7 @@ Also see [Common options](plugins-outputs-loggly.md#plugins-outputs-loggly-commo
 
 ### `can_retry` [plugins-outputs-loggly-can_retry]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `true`
 
 Can Retry. Setting this value true helps user to send multiple retry attempts if the first request fails
@@ -66,7 +66,7 @@ Can Retry. Setting this value true helps user to send multiple retry attempts if
 
 ### `convert_timestamp` [plugins-outputs-loggly-convert_timestamp]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `true`
 
 The plugin renames Logstash’s *@timestamp* field to *timestamp* before sending, so that Loggly recognizes it automatically.
@@ -78,7 +78,7 @@ Note that the actual Logstash event is not modified by the output. This modifica
 
 ### `host` [plugins-outputs-loggly-host]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"logs-01.loggly.com"`
 
 The hostname to send logs to. This should target the loggly http input server which is usually "logs-01.loggly.com" (Gen2 account). See the [Loggly HTTP endpoint documentation](https://www.loggly.com/docs/http-endpoint/).
@@ -87,7 +87,7 @@ The hostname to send logs to. This should target the loggly http input server wh
 ### `key` [plugins-outputs-loggly-key]
 
 * This is a required setting.
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 The loggly http customer token to use for sending. You can find yours in "Source Setup", under "Customer Tokens".
@@ -98,7 +98,7 @@ You can use `%{{foo}}` field lookups here if you need to pull the api key from t
 ### `max_event_size` [plugins-outputs-loggly-max_event_size]
 
 * This is a required setting.
-* Value type is [bytes](introduction.md#bytes)
+* Value type is [bytes](value-types.md#bytes)
 * Default value is 1 Mib
 
 The Loggly API supports event size up to 1 Mib.
@@ -111,7 +111,7 @@ See the [Loggly bulk API documentation](https://www.loggly.com/docs/http-bulk-en
 ### `max_payload_size` [plugins-outputs-loggly-max_payload_size]
 
 * This is a required setting.
-* Value type is [bytes](introduction.md#bytes)
+* Value type is [bytes](value-types.md#bytes)
 * Default value is 5 Mib
 
 The Loggly API supports API call payloads up to 5 Mib.
@@ -123,7 +123,7 @@ See the [Loggly bulk API documentation](https://www.loggly.com/docs/http-bulk-en
 
 ### `proto` [plugins-outputs-loggly-proto]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"http"`
 
 Should the log action be sent over https instead of plain http
@@ -131,7 +131,7 @@ Should the log action be sent over https instead of plain http
 
 ### `proxy_host` [plugins-outputs-loggly-proxy_host]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 Proxy Host
@@ -139,7 +139,7 @@ Proxy Host
 
 ### `proxy_password` [plugins-outputs-loggly-proxy_password]
 
-* Value type is [password](introduction.md#password)
+* Value type is [password](value-types.md#password)
 * Default value is `""`
 
 Proxy Password
@@ -147,7 +147,7 @@ Proxy Password
 
 ### `proxy_port` [plugins-outputs-loggly-proxy_port]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * There is no default value for this setting.
 
 Proxy Port
@@ -155,7 +155,7 @@ Proxy Port
 
 ### `proxy_user` [plugins-outputs-loggly-proxy_user]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 Proxy Username
@@ -163,7 +163,7 @@ Proxy Username
 
 ### `retry_count` [plugins-outputs-loggly-retry_count]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `5`
 
 Retry count. It may be possible that the request may timeout due to slow Internet connection if such condition appears, retry_count helps in retrying request for multiple times It will try to submit request until retry_count and then halt
@@ -171,7 +171,7 @@ Retry count. It may be possible that the request may timeout due to slow Interne
 
 ### `tag` [plugins-outputs-loggly-tag]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 
 Loggly Tags help you to find your logs in the Loggly dashboard easily. You can search for a tag in Loggly, using `"tag:your_tag"`.
 

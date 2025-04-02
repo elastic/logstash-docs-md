@@ -102,12 +102,12 @@ This plugin supports the following configuration options plus the [Common option
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`ecs_compatibility`](plugins-filters-useragent.md#plugins-filters-useragent-ecs_compatibility) | [string](introduction.md#string) | No |
-| [`lru_cache_size`](plugins-filters-useragent.md#plugins-filters-useragent-lru_cache_size) | [number](introduction.md#number) | No |
-| [`prefix`](plugins-filters-useragent.md#plugins-filters-useragent-prefix) | [string](introduction.md#string) | No |
-| [`regexes`](plugins-filters-useragent.md#plugins-filters-useragent-regexes) | [string](introduction.md#string) | No |
-| [`source`](plugins-filters-useragent.md#plugins-filters-useragent-source) | [string](introduction.md#string) | Yes |
-| [`target`](plugins-filters-useragent.md#plugins-filters-useragent-target) | [string](introduction.md#string) | No |
+| [`ecs_compatibility`](plugins-filters-useragent.md#plugins-filters-useragent-ecs_compatibility) | [string](value-types.md#string) | No |
+| [`lru_cache_size`](plugins-filters-useragent.md#plugins-filters-useragent-lru_cache_size) | [number](value-types.md#number) | No |
+| [`prefix`](plugins-filters-useragent.md#plugins-filters-useragent-prefix) | [string](value-types.md#string) | No |
+| [`regexes`](plugins-filters-useragent.md#plugins-filters-useragent-regexes) | [string](value-types.md#string) | No |
+| [`source`](plugins-filters-useragent.md#plugins-filters-useragent-source) | [string](value-types.md#string) | Yes |
+| [`target`](plugins-filters-useragent.md#plugins-filters-useragent-target) | [string](value-types.md#string) | No |
 
 Also see [Common options](plugins-filters-useragent.md#plugins-filters-useragent-common-options) for a list of options supported by all filter plugins.
 
@@ -115,7 +115,7 @@ Also see [Common options](plugins-filters-useragent.md#plugins-filters-useragent
 
 ### `ecs_compatibility` [plugins-filters-useragent-ecs_compatibility]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Supported values are:
 
     * `disabled`: does not use ECS-compatible field names (fields might be set at the root of the event)
@@ -132,7 +132,7 @@ Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)](ht
 
 ### `lru_cache_size` [plugins-filters-useragent-lru_cache_size]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `100000`
 
 UA parsing is surprisingly expensive. This filter uses an LRU cache to take advantage of the fact that user agents are often found adjacent to one another in log files and rarely have a random distribution. The higher you set this the more likely an item is to be in the cache and the faster this filter will run. However, if you set this too high you can use more memory than desired.
@@ -146,7 +146,7 @@ It is important to note that this config value is global. That is to say all ins
 
 ### `prefix` [plugins-filters-useragent-prefix]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `""`
 
 A string to prepend to all of the extracted keys
@@ -154,7 +154,7 @@ A string to prepend to all of the extracted keys
 
 ### `regexes` [plugins-filters-useragent-regexes]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 If not specified, this will default to the `regexes.yaml` that ships with logstash. Otherwise use the provided `regexes.yaml` file.
@@ -165,7 +165,7 @@ You can find the latest version of this here: [https://github.com/ua-parser/uap-
 ### `source` [plugins-filters-useragent-source]
 
 * This is a required setting.
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 The field containing the user agent string. If this field is an array, only the first value will be used.
@@ -173,7 +173,7 @@ The field containing the user agent string. If this field is an array, only the 
 
 ### `target` [plugins-filters-useragent-target]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value depends on whether [`ecs_compatibility`](plugins-filters-useragent.md#plugins-filters-useragent-ecs_compatibility) is enabled:
 
     * ECS Compatibility disabled: no default value for this setting

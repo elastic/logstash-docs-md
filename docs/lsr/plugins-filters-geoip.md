@@ -229,14 +229,14 @@ This plugin supports the following configuration options plus the [Common option
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`cache_size`](plugins-filters-geoip.md#plugins-filters-geoip-cache_size) | [number](introduction.md#number) | No |
+| [`cache_size`](plugins-filters-geoip.md#plugins-filters-geoip-cache_size) | [number](value-types.md#number) | No |
 | [`database`](plugins-filters-geoip.md#plugins-filters-geoip-database) | a valid filesystem path | No |
 | [`default_database_type`](plugins-filters-geoip.md#plugins-filters-geoip-default_database_type) | `City` or `ASN` | No |
-| [`ecs_compatibility`](plugins-filters-geoip.md#plugins-filters-geoip-ecs_compatibility) | [string](introduction.md#string) | No |
-| [`fields`](plugins-filters-geoip.md#plugins-filters-geoip-fields) | [array](introduction.md#array) | No |
-| [`source`](plugins-filters-geoip.md#plugins-filters-geoip-source) | [string](introduction.md#string) | Yes |
-| [`tag_on_failure`](plugins-filters-geoip.md#plugins-filters-geoip-tag_on_failure) | [array](introduction.md#array) | No |
-| [`target`](plugins-filters-geoip.md#plugins-filters-geoip-target) | [string](introduction.md#string) | No |
+| [`ecs_compatibility`](plugins-filters-geoip.md#plugins-filters-geoip-ecs_compatibility) | [string](value-types.md#string) | No |
+| [`fields`](plugins-filters-geoip.md#plugins-filters-geoip-fields) | [array](value-types.md#array) | No |
+| [`source`](plugins-filters-geoip.md#plugins-filters-geoip-source) | [string](value-types.md#string) | Yes |
+| [`tag_on_failure`](plugins-filters-geoip.md#plugins-filters-geoip-tag_on_failure) | [array](value-types.md#array) | No |
+| [`target`](plugins-filters-geoip.md#plugins-filters-geoip-target) | [string](value-types.md#string) | No |
 
 Also see [Common options](plugins-filters-geoip.md#plugins-filters-geoip-common-options) for a list of options supported by all filter plugins.
 
@@ -244,7 +244,7 @@ Also see [Common options](plugins-filters-geoip.md#plugins-filters-geoip-common-
 
 ### `cache_size` [plugins-filters-geoip-cache_size]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `1000`
 
 GeoIP lookup is surprisingly expensive. This filter uses an cache to take advantage of the fact that IPs agents are often found adjacent to one another in log files and rarely have a random distribution. The higher you set this the more likely an item is to be in the cache and the faster this filter will run. However, if you set this too high you can use more memory than desired. Since the Geoip API upgraded to v2, there is not any eviction policy so far, if cache is full, no more record can be added. Experiment with different values for this option to find the best performance for your dataset.
@@ -256,7 +256,7 @@ It is important to note that this config value is global to the geoip_type. That
 
 ### `database` [plugins-filters-geoip-database]
 
-* Value type is [path](introduction.md#path)
+* Value type is [path](value-types.md#path)
 * If not specified, the database defaults to the `GeoLite2 City` database that ships with Logstash.
 
 The path to MaxMind’s database file that Logstash should use. The default database is `GeoLite2-City`. This plugin supports several free databases (`GeoLite2-City`, `GeoLite2-Country`, `GeoLite2-ASN`) and a selection of commercially-licensed databases (`GeoIP2-City`, `GeoIP2-ISP`, `GeoIP2-Country`, `GeoIP2-Domain`, `GeoIP2-Enterprise`, `GeoIP2-Anonymous-IP`).
@@ -268,14 +268,14 @@ Database auto-update applies to the default distribution. When `database` points
 
 This plugin now includes both the GeoLite2-City and GeoLite2-ASN databases.  If `database` and `default_database_type` are unset, the GeoLite2-City database will be selected.  To use the included GeoLite2-ASN database, set `default_database_type` to `ASN`.
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * The default value is `City`
 * The only acceptable values are `City` and `ASN`
 
 
 ### `fields` [plugins-filters-geoip-fields]
 
-* Value type is [array](introduction.md#array)
+* Value type is [array](value-types.md#array)
 * There is no default value for this setting.
 
 An array of geoip fields to be included in the event.
@@ -287,7 +287,7 @@ For a complete list of available fields and how they map to an event’s structu
 
 ### `ecs_compatibility` [plugins-filters-geoip-ecs_compatibility]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Supported values are:
 
     * `disabled`: unstructured geo data added at root level
@@ -305,7 +305,7 @@ Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)](ht
 ### `source` [plugins-filters-geoip-source]
 
 * This is a required setting.
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 The field containing the IP address or hostname to map via geoip. If this field is an array, only the first value will be used.
@@ -313,7 +313,7 @@ The field containing the IP address or hostname to map via geoip. If this field 
 
 ### `tag_on_failure` [plugins-filters-geoip-tag_on_failure]
 
-* Value type is [array](introduction.md#array)
+* Value type is [array](value-types.md#array)
 * Default value is `["_geoip_lookup_failure"]`
 
 Tags the event on failure to look up geo information. This can be used in later analysis.
@@ -322,7 +322,7 @@ Tags the event on failure to look up geo information. This can be used in later 
 ### `target` [plugins-filters-geoip-target]
 
 * This is an optional setting with condition.
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value depends on whether [`ecs_compatibility`](plugins-filters-geoip.md#plugins-filters-geoip-ecs_compatibility) is enabled:
 
     * ECS Compatibility disabled: `geoip`

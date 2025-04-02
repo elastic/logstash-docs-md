@@ -293,9 +293,9 @@ This plugin supports the following configuration options plus the [Common option
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`convert_datatype`](plugins-filters-dissect.md#plugins-filters-dissect-convert_datatype) | [hash](introduction.md#hash) | No |
-| [`mapping`](plugins-filters-dissect.md#plugins-filters-dissect-mapping) | [hash](introduction.md#hash) | No |
-| [`tag_on_failure`](plugins-filters-dissect.md#plugins-filters-dissect-tag_on_failure) | [array](introduction.md#array) | No |
+| [`convert_datatype`](plugins-filters-dissect.md#plugins-filters-dissect-convert_datatype) | [hash](value-types.md#hash) | No |
+| [`mapping`](plugins-filters-dissect.md#plugins-filters-dissect-mapping) | [hash](value-types.md#hash) | No |
+| [`tag_on_failure`](plugins-filters-dissect.md#plugins-filters-dissect-tag_on_failure) | [array](value-types.md#array) | No |
 
 Also see [Common options](plugins-filters-dissect.md#plugins-filters-dissect-common-options) for a list of options supported by all filter plugins.
 
@@ -303,7 +303,7 @@ Also see [Common options](plugins-filters-dissect.md#plugins-filters-dissect-com
 
 ### `convert_datatype` [plugins-filters-dissect-convert_datatype]
 
-* Value type is [hash](introduction.md#hash)
+* Value type is [hash](value-types.md#hash)
 * Default value is `{}`
 
 With this setting `int` and `float` datatype conversions can be specified. These will be done after all `mapping` dissections have taken place. Feel free to use this setting on its own without a `mapping` section.
@@ -324,7 +324,7 @@ filter {
 
 ### `mapping` [plugins-filters-dissect-mapping]
 
-* Value type is [hash](introduction.md#hash)
+* Value type is [hash](value-types.md#hash)
 * Default value is `{}`
 
 A hash of dissections of `field => value`<br>
@@ -356,7 +356,7 @@ This is useful if you want to keep the field `description` but also dissect it f
 
 ### `tag_on_failure` [plugins-filters-dissect-tag_on_failure]
 
-* Value type is [array](introduction.md#array)
+* Value type is [array](value-types.md#array)
 * Default value is `["_dissectfailure"]`
 
 Append values to the `tags` field when dissection fails

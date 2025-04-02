@@ -29,11 +29,11 @@ This plugin supports the following configuration options plus the [Common option
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`address`](plugins-filters-cidr.md#plugins-filters-cidr-address) | [array](introduction.md#array) | No |
-| [`network`](plugins-filters-cidr.md#plugins-filters-cidr-network) | [array](introduction.md#array) | No |
+| [`address`](plugins-filters-cidr.md#plugins-filters-cidr-address) | [array](value-types.md#array) | No |
+| [`network`](plugins-filters-cidr.md#plugins-filters-cidr-network) | [array](value-types.md#array) | No |
 | [`network_path`](plugins-filters-cidr.md#plugins-filters-cidr-network_path) | a valid filesystem path | No |
-| [`refresh_interval`](plugins-filters-cidr.md#plugins-filters-cidr-refresh_interval) | [number](introduction.md#number) | No |
-| [`separator`](plugins-filters-cidr.md#plugins-filters-cidr-separator) | [string](introduction.md#string) | No |
+| [`refresh_interval`](plugins-filters-cidr.md#plugins-filters-cidr-refresh_interval) | [number](value-types.md#number) | No |
+| [`separator`](plugins-filters-cidr.md#plugins-filters-cidr-separator) | [string](value-types.md#string) | No |
 
 Also see [Common options](plugins-filters-cidr.md#plugins-filters-cidr-common-options) for a list of options supported by all filter plugins.
 
@@ -41,7 +41,7 @@ Also see [Common options](plugins-filters-cidr.md#plugins-filters-cidr-common-op
 
 ### `address` [plugins-filters-cidr-address]
 
-* Value type is [array](introduction.md#array)
+* Value type is [array](value-types.md#array)
 * Default value is `[]`
 
 The IP address(es) to check with. Example:
@@ -59,7 +59,7 @@ The IP address(es) to check with. Example:
 
 ### `network` [plugins-filters-cidr-network]
 
-* Value type is [array](introduction.md#array)
+* Value type is [array](value-types.md#array)
 * Default value is `[]`
 
 The IP network(s) to check against. Example:
@@ -77,7 +77,7 @@ The IP network(s) to check against. Example:
 
 ### `network_path` [plugins-filters-cidr-network_path]
 
-* Value type is [path](introduction.md#path)
+* Value type is [path](value-types.md#path)
 * There is no default value for this setting.
 
 The full path of the external file containing the networks the filter should check with. Networks are separated by a separator character defined in `separator`.
@@ -91,7 +91,7 @@ NOTE: It is an error to specify both `network` and `network_path`.
 
 ### `refresh_interval` [plugins-filters-cidr-refresh_interval]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `600`
 
 When using an external file, this setting will indicate how frequently (in seconds) Logstash will check the file for updates.
@@ -99,7 +99,7 @@ When using an external file, this setting will indicate how frequently (in secon
 
 ### `separator` [plugins-filters-cidr-separator]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `\n`
 
 Separator character used for parsing networks from the external file specified by `network_path`. Defaults to newline `\n` character.

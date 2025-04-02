@@ -66,17 +66,17 @@ This plugin supports the following configuration options plus the [Common option
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`count`](plugins-outputs-statsd.md#plugins-outputs-statsd-count) | [hash](introduction.md#hash) | No |
-| [`decrement`](plugins-outputs-statsd.md#plugins-outputs-statsd-decrement) | [array](introduction.md#array) | No |
-| [`gauge`](plugins-outputs-statsd.md#plugins-outputs-statsd-gauge) | [hash](introduction.md#hash) | No |
-| [`host`](plugins-outputs-statsd.md#plugins-outputs-statsd-host) | [string](introduction.md#string) | No |
-| [`increment`](plugins-outputs-statsd.md#plugins-outputs-statsd-increment) | [array](introduction.md#array) | No |
-| [`namespace`](plugins-outputs-statsd.md#plugins-outputs-statsd-namespace) | [string](introduction.md#string) | No |
-| [`port`](plugins-outputs-statsd.md#plugins-outputs-statsd-port) | [number](introduction.md#number) | No |
-| [`sample_rate`](plugins-outputs-statsd.md#plugins-outputs-statsd-sample_rate) | [number](introduction.md#number) | No |
-| [`sender`](plugins-outputs-statsd.md#plugins-outputs-statsd-sender) | [string](introduction.md#string) | No |
-| [`set`](plugins-outputs-statsd.md#plugins-outputs-statsd-set) | [hash](introduction.md#hash) | No |
-| [`timing`](plugins-outputs-statsd.md#plugins-outputs-statsd-timing) | [hash](introduction.md#hash) | No |
+| [`count`](plugins-outputs-statsd.md#plugins-outputs-statsd-count) | [hash](value-types.md#hash) | No |
+| [`decrement`](plugins-outputs-statsd.md#plugins-outputs-statsd-decrement) | [array](value-types.md#array) | No |
+| [`gauge`](plugins-outputs-statsd.md#plugins-outputs-statsd-gauge) | [hash](value-types.md#hash) | No |
+| [`host`](plugins-outputs-statsd.md#plugins-outputs-statsd-host) | [string](value-types.md#string) | No |
+| [`increment`](plugins-outputs-statsd.md#plugins-outputs-statsd-increment) | [array](value-types.md#array) | No |
+| [`namespace`](plugins-outputs-statsd.md#plugins-outputs-statsd-namespace) | [string](value-types.md#string) | No |
+| [`port`](plugins-outputs-statsd.md#plugins-outputs-statsd-port) | [number](value-types.md#number) | No |
+| [`sample_rate`](plugins-outputs-statsd.md#plugins-outputs-statsd-sample_rate) | [number](value-types.md#number) | No |
+| [`sender`](plugins-outputs-statsd.md#plugins-outputs-statsd-sender) | [string](value-types.md#string) | No |
+| [`set`](plugins-outputs-statsd.md#plugins-outputs-statsd-set) | [hash](value-types.md#hash) | No |
+| [`timing`](plugins-outputs-statsd.md#plugins-outputs-statsd-timing) | [hash](value-types.md#hash) | No |
 
 Also see [Common options](plugins-outputs-statsd.md#plugins-outputs-statsd-common-options) for a list of options supported by all output plugins.
 
@@ -84,7 +84,7 @@ Also see [Common options](plugins-outputs-statsd.md#plugins-outputs-statsd-commo
 
 ### `count` [plugins-outputs-statsd-count]
 
-* Value type is [hash](introduction.md#hash)
+* Value type is [hash](value-types.md#hash)
 * Default value is `{}`
 
 A count metric. `metric_name => count` as hash. `%{{fieldname}}` substitutions are allowed in the metric names.
@@ -92,7 +92,7 @@ A count metric. `metric_name => count` as hash. `%{{fieldname}}` substitutions a
 
 ### `decrement` [plugins-outputs-statsd-decrement]
 
-* Value type is [array](introduction.md#array)
+* Value type is [array](value-types.md#array)
 * Default value is `[]`
 
 A decrement metric. Metric names as array. `%{{fieldname}}` substitutions are allowed in the metric names.
@@ -100,7 +100,7 @@ A decrement metric. Metric names as array. `%{{fieldname}}` substitutions are al
 
 ### `gauge` [plugins-outputs-statsd-gauge]
 
-* Value type is [hash](introduction.md#hash)
+* Value type is [hash](value-types.md#hash)
 * Default value is `{}`
 
 A gauge metric. `metric_name => gauge` as hash. `%{{fieldname}}` substitutions are allowed in the metric names.
@@ -108,7 +108,7 @@ A gauge metric. `metric_name => gauge` as hash. `%{{fieldname}}` substitutions a
 
 ### `host` [plugins-outputs-statsd-host]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"localhost"`
 
 The hostname or IP address of the statsd server.
@@ -116,7 +116,7 @@ The hostname or IP address of the statsd server.
 
 ### `increment` [plugins-outputs-statsd-increment]
 
-* Value type is [array](introduction.md#array)
+* Value type is [array](value-types.md#array)
 * Default value is `[]`
 
 An increment metric. Metric names as array. `%{{fieldname}}` substitutions are allowed in the metric names.
@@ -124,7 +124,7 @@ An increment metric. Metric names as array. `%{{fieldname}}` substitutions are a
 
 ### `namespace` [plugins-outputs-statsd-namespace]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"logstash"`
 
 The statsd namespace to use for this metric. `%{{fieldname}}` substitutions are allowed.
@@ -132,7 +132,7 @@ The statsd namespace to use for this metric. `%{{fieldname}}` substitutions are 
 
 ### `port` [plugins-outputs-statsd-port]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `8125`
 
 The port to connect to on your statsd server.
@@ -140,7 +140,7 @@ The port to connect to on your statsd server.
 
 ### `protocol` [plugins-outputs-statsd-protocol]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"udp"`
 
 The protocol to connect to on your statsd server.
@@ -148,7 +148,7 @@ The protocol to connect to on your statsd server.
 
 ### `sample_rate` [plugins-outputs-statsd-sample_rate]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `1`
 
 The sample rate for the metric.
@@ -156,7 +156,7 @@ The sample rate for the metric.
 
 ### `sender` [plugins-outputs-statsd-sender]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"%{{host}}"`
 
 The name of the sender. Dots will be replaced with underscores. `%{{fieldname}}` substitutions are allowed.
@@ -164,7 +164,7 @@ The name of the sender. Dots will be replaced with underscores. `%{{fieldname}}`
 
 ### `set` [plugins-outputs-statsd-set]
 
-* Value type is [hash](introduction.md#hash)
+* Value type is [hash](value-types.md#hash)
 * Default value is `{}`
 
 A set metric. `metric_name => "string"` to append as hash. `%{{fieldname}}` substitutions are allowed in the metric names.
@@ -172,7 +172,7 @@ A set metric. `metric_name => "string"` to append as hash. `%{{fieldname}}` subs
 
 ### `timing` [plugins-outputs-statsd-timing]
 
-* Value type is [hash](introduction.md#hash)
+* Value type is [hash](value-types.md#hash)
 * Default value is `{}`
 
 A timing metric. `metric_name => duration` as hash. `%{{fieldname}}` substitutions are allowed in the metric names.

@@ -56,12 +56,12 @@ This plugin supports the following configuration options plus the [Common option
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`host`](plugins-inputs-wmi.md#plugins-inputs-wmi-host) | [string](introduction.md#string) | No |
-| [`interval`](plugins-inputs-wmi.md#plugins-inputs-wmi-interval) | [number](introduction.md#number) | No |
-| [`namespace`](plugins-inputs-wmi.md#plugins-inputs-wmi-namespace) | [string](introduction.md#string) | No |
-| [`password`](plugins-inputs-wmi.md#plugins-inputs-wmi-password) | [password](introduction.md#password) | No |
-| [`query`](plugins-inputs-wmi.md#plugins-inputs-wmi-query) | [string](introduction.md#string) | Yes |
-| [`user`](plugins-inputs-wmi.md#plugins-inputs-wmi-user) | [string](introduction.md#string) | No |
+| [`host`](plugins-inputs-wmi.md#plugins-inputs-wmi-host) | [string](value-types.md#string) | No |
+| [`interval`](plugins-inputs-wmi.md#plugins-inputs-wmi-interval) | [number](value-types.md#number) | No |
+| [`namespace`](plugins-inputs-wmi.md#plugins-inputs-wmi-namespace) | [string](value-types.md#string) | No |
+| [`password`](plugins-inputs-wmi.md#plugins-inputs-wmi-password) | [password](value-types.md#password) | No |
+| [`query`](plugins-inputs-wmi.md#plugins-inputs-wmi-query) | [string](value-types.md#string) | Yes |
+| [`user`](plugins-inputs-wmi.md#plugins-inputs-wmi-user) | [string](value-types.md#string) | No |
 
 Also see [Common options](plugins-inputs-wmi.md#plugins-inputs-wmi-common-options) for a list of options supported by all input plugins.
 
@@ -69,7 +69,7 @@ Also see [Common options](plugins-inputs-wmi.md#plugins-inputs-wmi-common-option
 
 ### `host` [plugins-inputs-wmi-host]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"localhost"`
 
 Host to connect to ( Defaults to localhost )
@@ -77,7 +77,7 @@ Host to connect to ( Defaults to localhost )
 
 ### `interval` [plugins-inputs-wmi-interval]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * Default value is `10`
 
 Polling interval
@@ -85,7 +85,7 @@ Polling interval
 
 ### `namespace` [plugins-inputs-wmi-namespace]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"root\\cimv2"`
 
 Namespace when doing remote connections
@@ -93,7 +93,7 @@ Namespace when doing remote connections
 
 ### `password` [plugins-inputs-wmi-password]
 
-* Value type is [password](introduction.md#password)
+* Value type is [password](value-types.md#password)
 * There is no default value for this setting.
 
 Password when doing remote connections
@@ -102,7 +102,7 @@ Password when doing remote connections
 ### `query` [plugins-inputs-wmi-query]
 
 * This is a required setting.
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 WMI query
@@ -110,7 +110,7 @@ WMI query
 
 ### `user` [plugins-inputs-wmi-user]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 Username when doing remote connections

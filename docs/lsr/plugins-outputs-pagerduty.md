@@ -34,12 +34,12 @@ This plugin supports the following configuration options plus the [Common option
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`description`](plugins-outputs-pagerduty.md#plugins-outputs-pagerduty-description) | [string](introduction.md#string) | No |
-| [`details`](plugins-outputs-pagerduty.md#plugins-outputs-pagerduty-details) | [hash](introduction.md#hash) | No |
-| [`event_type`](plugins-outputs-pagerduty.md#plugins-outputs-pagerduty-event_type) | [string](introduction.md#string), one of `["trigger", "acknowledge", "resolve"]` | No |
-| [`incident_key`](plugins-outputs-pagerduty.md#plugins-outputs-pagerduty-incident_key) | [string](introduction.md#string) | No |
-| [`pdurl`](plugins-outputs-pagerduty.md#plugins-outputs-pagerduty-pdurl) | [string](introduction.md#string) | No |
-| [`service_key`](plugins-outputs-pagerduty.md#plugins-outputs-pagerduty-service_key) | [string](introduction.md#string) | Yes |
+| [`description`](plugins-outputs-pagerduty.md#plugins-outputs-pagerduty-description) | [string](value-types.md#string) | No |
+| [`details`](plugins-outputs-pagerduty.md#plugins-outputs-pagerduty-details) | [hash](value-types.md#hash) | No |
+| [`event_type`](plugins-outputs-pagerduty.md#plugins-outputs-pagerduty-event_type) | [string](value-types.md#string), one of `["trigger", "acknowledge", "resolve"]` | No |
+| [`incident_key`](plugins-outputs-pagerduty.md#plugins-outputs-pagerduty-incident_key) | [string](value-types.md#string) | No |
+| [`pdurl`](plugins-outputs-pagerduty.md#plugins-outputs-pagerduty-pdurl) | [string](value-types.md#string) | No |
+| [`service_key`](plugins-outputs-pagerduty.md#plugins-outputs-pagerduty-service_key) | [string](value-types.md#string) | Yes |
 
 Also see [Common options](plugins-outputs-pagerduty.md#plugins-outputs-pagerduty-common-options) for a list of options supported by all output plugins.
 
@@ -47,7 +47,7 @@ Also see [Common options](plugins-outputs-pagerduty.md#plugins-outputs-pagerduty
 
 ### `description` [plugins-outputs-pagerduty-description]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"Logstash event for %{{host}}"`
 
 Custom description
@@ -55,7 +55,7 @@ Custom description
 
 ### `details` [plugins-outputs-pagerduty-details]
 
-* Value type is [hash](introduction.md#hash)
+* Value type is [hash](value-types.md#hash)
 * Default value is `{"timestamp"=>"%{@timestamp}", "message"=>"%{{message}}"}`
 
 The event details. These might be data from the Logstash event fields you wish to include. Tags are automatically included if detected so there is no need to explicitly add them here.
@@ -71,7 +71,7 @@ Event type
 
 ### `incident_key` [plugins-outputs-pagerduty-incident_key]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"logstash/%{{host}}/%{{type}}"`
 
 The service key to use. You’ll need to set this up in PagerDuty beforehand.
@@ -79,7 +79,7 @@ The service key to use. You’ll need to set this up in PagerDuty beforehand.
 
 ### `pdurl` [plugins-outputs-pagerduty-pdurl]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"https://events.pagerduty.com/generic/2010-04-15/create_event.json"`
 
 PagerDuty API URL. You shouldn’t need to change this, but is included to allow for flexibility should PagerDuty iterate the API and Logstash hasn’t been updated yet.
@@ -88,7 +88,7 @@ PagerDuty API URL. You shouldn’t need to change this, but is included to allow
 ### `service_key` [plugins-outputs-pagerduty-service_key]
 
 * This is a required setting.
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 The PagerDuty Service API Key

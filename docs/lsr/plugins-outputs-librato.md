@@ -36,12 +36,12 @@ This plugin supports the following configuration options plus the [Common option
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`account_id`](plugins-outputs-librato.md#plugins-outputs-librato-account_id) | [string](introduction.md#string) | Yes |
-| [`annotation`](plugins-outputs-librato.md#plugins-outputs-librato-annotation) | [hash](introduction.md#hash) | No |
-| [`api_token`](plugins-outputs-librato.md#plugins-outputs-librato-api_token) | [string](introduction.md#string) | Yes |
-| [`batch_size`](plugins-outputs-librato.md#plugins-outputs-librato-batch_size) | [string](introduction.md#string) | No |
-| [`counter`](plugins-outputs-librato.md#plugins-outputs-librato-counter) | [hash](introduction.md#hash) | No |
-| [`gauge`](plugins-outputs-librato.md#plugins-outputs-librato-gauge) | [hash](introduction.md#hash) | No |
+| [`account_id`](plugins-outputs-librato.md#plugins-outputs-librato-account_id) | [string](value-types.md#string) | Yes |
+| [`annotation`](plugins-outputs-librato.md#plugins-outputs-librato-annotation) | [hash](value-types.md#hash) | No |
+| [`api_token`](plugins-outputs-librato.md#plugins-outputs-librato-api_token) | [string](value-types.md#string) | Yes |
+| [`batch_size`](plugins-outputs-librato.md#plugins-outputs-librato-batch_size) | [string](value-types.md#string) | No |
+| [`counter`](plugins-outputs-librato.md#plugins-outputs-librato-counter) | [hash](value-types.md#hash) | No |
+| [`gauge`](plugins-outputs-librato.md#plugins-outputs-librato-gauge) | [hash](value-types.md#hash) | No |
 
 Also see [Common options](plugins-outputs-librato.md#plugins-outputs-librato-common-options) for a list of options supported by all output plugins.
 
@@ -50,7 +50,7 @@ Also see [Common options](plugins-outputs-librato.md#plugins-outputs-librato-com
 ### `account_id` [plugins-outputs-librato-account_id]
 
 * This is a required setting.
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 Your Librato account usually an email address
@@ -58,7 +58,7 @@ Your Librato account usually an email address
 
 ### `annotation` [plugins-outputs-librato-annotation]
 
-* Value type is [hash](introduction.md#hash)
+* Value type is [hash](value-types.md#hash)
 * Default value is `{}`
 
 Annotations Registers an annotation with Librato The only required field is `title` and `name`. `start_time` and `end_time` will be set to `event.get("@timestamp").to_i` You can add any other optional annotation values as well. All values will be passed through `event.sprintf`
@@ -86,7 +86,7 @@ or
 ### `api_token` [plugins-outputs-librato-api_token]
 
 * This is a required setting.
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 Your Librato API Token
@@ -94,7 +94,7 @@ Your Librato API Token
 
 ### `batch_size` [plugins-outputs-librato-batch_size]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"10"`
 
 Batch size Number of events to batch up before sending to Librato.
@@ -102,7 +102,7 @@ Batch size Number of events to batch up before sending to Librato.
 
 ### `counter` [plugins-outputs-librato-counter]
 
-* Value type is [hash](introduction.md#hash)
+* Value type is [hash](value-types.md#hash)
 * Default value is `{}`
 
 Counters Send data to Librato as a counter
@@ -133,7 +133,7 @@ Default is to use the event’s timestamp
 
 ### `gauge` [plugins-outputs-librato-gauge]
 
-* Value type is [hash](introduction.md#hash)
+* Value type is [hash](value-types.md#hash)
 * Default value is `{}`
 
 Gauges Send data to Librato as a gauge

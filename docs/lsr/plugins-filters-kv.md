@@ -56,31 +56,31 @@ This plugin supports the following configuration options plus the [Common option
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`allow_duplicate_values`](plugins-filters-kv.md#plugins-filters-kv-allow_duplicate_values) | [boolean](introduction.md#boolean) | No |
-| [`allow_empty_values`](plugins-filters-kv.md#plugins-filters-kv-allow_empty_values) | [boolean](introduction.md#boolean) | No |
-| [`default_keys`](plugins-filters-kv.md#plugins-filters-kv-default_keys) | [hash](introduction.md#hash) | No |
-| [`ecs_compatibility`](plugins-filters-kv.md#plugins-filters-kv-ecs_compatibility) | [string](introduction.md#string) | No |
-| [`exclude_keys`](plugins-filters-kv.md#plugins-filters-kv-exclude_keys) | [array](introduction.md#array) | No |
-| [`field_split`](plugins-filters-kv.md#plugins-filters-kv-field_split) | [string](introduction.md#string) | No |
-| [`field_split_pattern`](plugins-filters-kv.md#plugins-filters-kv-field_split_pattern) | [string](introduction.md#string) | No |
-| [`include_brackets`](plugins-filters-kv.md#plugins-filters-kv-include_brackets) | [boolean](introduction.md#boolean) | No |
-| [`include_keys`](plugins-filters-kv.md#plugins-filters-kv-include_keys) | [array](introduction.md#array) | No |
-| [`prefix`](plugins-filters-kv.md#plugins-filters-kv-prefix) | [string](introduction.md#string) | No |
-| [`recursive`](plugins-filters-kv.md#plugins-filters-kv-recursive) | [boolean](introduction.md#boolean) | No |
-| [`remove_char_key`](plugins-filters-kv.md#plugins-filters-kv-remove_char_key) | [string](introduction.md#string) | No |
-| [`remove_char_value`](plugins-filters-kv.md#plugins-filters-kv-remove_char_value) | [string](introduction.md#string) | No |
-| [`source`](plugins-filters-kv.md#plugins-filters-kv-source) | [string](introduction.md#string) | No |
-| [`target`](plugins-filters-kv.md#plugins-filters-kv-target) | [string](introduction.md#string) | No |
-| [`tag_on_failure`](plugins-filters-kv.md#plugins-filters-kv-tag_on_failure) | [array](introduction.md#array) | No |
-| [`tag_on_timeout`](plugins-filters-kv.md#plugins-filters-kv-tag_on_timeout) | [string](introduction.md#string) | No |
-| [`timeout_millis`](plugins-filters-kv.md#plugins-filters-kv-timeout_millis) | [number](introduction.md#number) | No |
-| [`transform_key`](plugins-filters-kv.md#plugins-filters-kv-transform_key) | [string](introduction.md#string), one of `["lowercase", "uppercase", "capitalize"]` | No |
-| [`transform_value`](plugins-filters-kv.md#plugins-filters-kv-transform_value) | [string](introduction.md#string), one of `["lowercase", "uppercase", "capitalize"]` | No |
-| [`trim_key`](plugins-filters-kv.md#plugins-filters-kv-trim_key) | [string](introduction.md#string) | No |
-| [`trim_value`](plugins-filters-kv.md#plugins-filters-kv-trim_value) | [string](introduction.md#string) | No |
-| [`value_split`](plugins-filters-kv.md#plugins-filters-kv-value_split) | [string](introduction.md#string) | No |
-| [`value_split_pattern`](plugins-filters-kv.md#plugins-filters-kv-value_split_pattern) | [string](introduction.md#string) | No |
-| [`whitespace`](plugins-filters-kv.md#plugins-filters-kv-whitespace) | [string](introduction.md#string), one of `["strict", "lenient"]` | No |
+| [`allow_duplicate_values`](plugins-filters-kv.md#plugins-filters-kv-allow_duplicate_values) | [boolean](value-types.md#boolean) | No |
+| [`allow_empty_values`](plugins-filters-kv.md#plugins-filters-kv-allow_empty_values) | [boolean](value-types.md#boolean) | No |
+| [`default_keys`](plugins-filters-kv.md#plugins-filters-kv-default_keys) | [hash](value-types.md#hash) | No |
+| [`ecs_compatibility`](plugins-filters-kv.md#plugins-filters-kv-ecs_compatibility) | [string](value-types.md#string) | No |
+| [`exclude_keys`](plugins-filters-kv.md#plugins-filters-kv-exclude_keys) | [array](value-types.md#array) | No |
+| [`field_split`](plugins-filters-kv.md#plugins-filters-kv-field_split) | [string](value-types.md#string) | No |
+| [`field_split_pattern`](plugins-filters-kv.md#plugins-filters-kv-field_split_pattern) | [string](value-types.md#string) | No |
+| [`include_brackets`](plugins-filters-kv.md#plugins-filters-kv-include_brackets) | [boolean](value-types.md#boolean) | No |
+| [`include_keys`](plugins-filters-kv.md#plugins-filters-kv-include_keys) | [array](value-types.md#array) | No |
+| [`prefix`](plugins-filters-kv.md#plugins-filters-kv-prefix) | [string](value-types.md#string) | No |
+| [`recursive`](plugins-filters-kv.md#plugins-filters-kv-recursive) | [boolean](value-types.md#boolean) | No |
+| [`remove_char_key`](plugins-filters-kv.md#plugins-filters-kv-remove_char_key) | [string](value-types.md#string) | No |
+| [`remove_char_value`](plugins-filters-kv.md#plugins-filters-kv-remove_char_value) | [string](value-types.md#string) | No |
+| [`source`](plugins-filters-kv.md#plugins-filters-kv-source) | [string](value-types.md#string) | No |
+| [`target`](plugins-filters-kv.md#plugins-filters-kv-target) | [string](value-types.md#string) | No |
+| [`tag_on_failure`](plugins-filters-kv.md#plugins-filters-kv-tag_on_failure) | [array](value-types.md#array) | No |
+| [`tag_on_timeout`](plugins-filters-kv.md#plugins-filters-kv-tag_on_timeout) | [string](value-types.md#string) | No |
+| [`timeout_millis`](plugins-filters-kv.md#plugins-filters-kv-timeout_millis) | [number](value-types.md#number) | No |
+| [`transform_key`](plugins-filters-kv.md#plugins-filters-kv-transform_key) | [string](value-types.md#string), one of `["lowercase", "uppercase", "capitalize"]` | No |
+| [`transform_value`](plugins-filters-kv.md#plugins-filters-kv-transform_value) | [string](value-types.md#string), one of `["lowercase", "uppercase", "capitalize"]` | No |
+| [`trim_key`](plugins-filters-kv.md#plugins-filters-kv-trim_key) | [string](value-types.md#string) | No |
+| [`trim_value`](plugins-filters-kv.md#plugins-filters-kv-trim_value) | [string](value-types.md#string) | No |
+| [`value_split`](plugins-filters-kv.md#plugins-filters-kv-value_split) | [string](value-types.md#string) | No |
+| [`value_split_pattern`](plugins-filters-kv.md#plugins-filters-kv-value_split_pattern) | [string](value-types.md#string) | No |
+| [`whitespace`](plugins-filters-kv.md#plugins-filters-kv-whitespace) | [string](value-types.md#string), one of `["strict", "lenient"]` | No |
 
 Also see [Common options](plugins-filters-kv.md#plugins-filters-kv-common-options) for a list of options supported by all filter plugins.
 
@@ -88,7 +88,7 @@ Also see [Common options](plugins-filters-kv.md#plugins-filters-kv-common-option
 
 ### `allow_duplicate_values` [plugins-filters-kv-allow_duplicate_values]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `true`
 
 A bool option for removing duplicate key/value pairs. When set to false, only one unique key/value pair will be preserved.
@@ -106,7 +106,7 @@ For example, consider a source like `from=me from=me`. `[from]` will map to an A
 
 ### `allow_empty_values` [plugins-filters-kv-allow_empty_values]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 A bool option for explicitly including empty values. When set to true, empty values will be added to the event.
@@ -119,7 +119,7 @@ Parsing empty values typically requires [`whitespace => strict`](plugins-filters
 
 ### `default_keys` [plugins-filters-kv-default_keys]
 
-* Value type is [hash](introduction.md#hash)
+* Value type is [hash](value-types.md#hash)
 * Default value is `{}`
 
 A hash specifying the default keys and their values which should be added to the event in case these keys do not exist in the source field being parsed.
@@ -136,7 +136,7 @@ A hash specifying the default keys and their values which should be added to the
 
 ### `ecs_compatibility` [plugins-filters-kv-ecs_compatibility]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Supported values are:
 
     * `disabled`: does not use ECS-compatible field names
@@ -148,7 +148,7 @@ Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)](ht
 
 ### `exclude_keys` [plugins-filters-kv-exclude_keys]
 
-* Value type is [array](introduction.md#array)
+* Value type is [array](value-types.md#array)
 * Default value is `[]`
 
 An array specifying the parsed keys which should not be added to the event. By default no keys will be excluded.
@@ -166,7 +166,7 @@ For example, consider a source like `Hey, from=<abc>, to=def foo=bar`. To exclud
 
 ### `field_split` [plugins-filters-kv-field_split]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `" "`
 
 A string of characters to use as single-character field delimiters for parsing out key-value pairs.
@@ -196,7 +196,7 @@ The above splits on both `&` and `?` characters, giving you the following fields
 
 ### `field_split_pattern` [plugins-filters-kv-field_split_pattern]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 A regex expression to use as field delimiter for parsing out key-value pairs. Useful to define multi-character field delimiters. Setting the `field_split_pattern` options will take precedence over the `field_split` option.
@@ -218,7 +218,7 @@ To split fields on a regex character that need escaping like the plus sign `k1=v
 
 ### `include_brackets` [plugins-filters-kv-include_brackets]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `true`
 
 A boolean specifying whether to treat square brackets, angle brackets, and parentheses as value "wrappers" that should be removed from the value.
@@ -248,7 +248,7 @@ instead of:
 
 ### `include_keys` [plugins-filters-kv-include_keys]
 
-* Value type is [array](introduction.md#array)
+* Value type is [array](value-types.md#array)
 * Default value is `[]`
 
 An array specifying the parsed keys which should be added to the event. By default all keys will be added.
@@ -266,7 +266,7 @@ For example, consider a source like `Hey, from=<abc>, to=def foo=bar`. To includ
 
 ### `prefix` [plugins-filters-kv-prefix]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `""`
 
 A string to prepend to all of the extracted keys.
@@ -280,7 +280,7 @@ For example, to prepend arg_ to all keys:
 
 ### `recursive` [plugins-filters-kv-recursive]
 
-* Value type is [boolean](introduction.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 A boolean specifying whether to drill down into values and recursively get more key-value pairs from it. The extra key-value pairs will be stored as subkeys of the root key.
@@ -298,7 +298,7 @@ Default is not to recursive values.
 
 ### `remove_char_key` [plugins-filters-kv-remove_char_key]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 A string of characters to remove from the key.
@@ -320,7 +320,7 @@ For example, to remove `<` `>` `[` `]` and `,` characters from keys:
 
 ### `remove_char_value` [plugins-filters-kv-remove_char_value]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 A string of characters to remove from the value.
@@ -342,7 +342,7 @@ For example, to remove `<`, `>`, `[`, `]` and `,` characters from values:
 
 ### `source` [plugins-filters-kv-source]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"message"`
 
 The field to perform `key=value` searching on
@@ -356,7 +356,7 @@ For example, to process the `not_the_message` field:
 
 ### `target` [plugins-filters-kv-target]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 The name of the container to put all of the key-value pairs into.
@@ -372,7 +372,7 @@ For example, to place all keys into the event field kv:
 
 ### `tag_on_failure` [plugins-filters-kv-tag_on_failure]
 
-* Value type is [array](introduction.md#array)
+* Value type is [array](value-types.md#array)
 * The default value for this setting is [`_kv_filter_error`].
 
 When a kv operation causes a runtime exception to be thrown within the plugin, the operation is safely aborted without crashing the plugin, and the event is tagged with the provided values.
@@ -380,7 +380,7 @@ When a kv operation causes a runtime exception to be thrown within the plugin, t
 
 ### `tag_on_timeout` [plugins-filters-kv-tag_on_timeout]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * The default value for this setting is `_kv_filter_timeout`.
 
 When timeouts are enabled and a kv operation is aborted, the event is tagged with the provided value (see: [`timeout_millis`](plugins-filters-kv.md#plugins-filters-kv-timeout_millis)).
@@ -388,7 +388,7 @@ When timeouts are enabled and a kv operation is aborted, the event is tagged wit
 
 ### `timeout_millis` [plugins-filters-kv-timeout_millis]
 
-* Value type is [number](introduction.md#number)
+* Value type is [number](value-types.md#number)
 * The default value for this setting is 30000 (30 seconds).
 * Set to zero (`0`) to disable timeouts
 
@@ -433,7 +433,7 @@ For example, to capitalize all values:
 
 ### `trim_key` [plugins-filters-kv-trim_key]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 A string of characters to trim from the key. This is useful if your keys are wrapped in brackets or start with space.
@@ -455,7 +455,7 @@ For example, to trim `<` `>` `[` `]` and `,` characters from keys:
 
 ### `trim_value` [plugins-filters-kv-trim_value]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 Constants used for transform check A string of characters to trim from the value. This is useful if your values are wrapped in brackets or are terminated with commas (like postfix logs).
@@ -477,7 +477,7 @@ For example, to trim `<`, `>`, `[`, `]` and `,` characters from values:
 
 ### `value_split` [plugins-filters-kv-value_split]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"="`
 
 A non-empty string of characters to use as single-character value delimiters for parsing out key-value pairs.
@@ -493,7 +493,7 @@ For example, to identify key-values such as `key1:value1 key2:value2`:
 
 ### `value_split_pattern` [plugins-filters-kv-value_split_pattern]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 A regex expression to use as value delimiter for parsing out key-value pairs. Useful to define multi-character value delimiters. Setting the `value_split_pattern` options will take precedence over the `value_split option`.

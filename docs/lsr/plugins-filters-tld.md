@@ -36,8 +36,8 @@ This plugin supports the following configuration options plus the [Common option
 
 | Setting | Input type | Required |
 | --- | --- | --- |
-| [`source`](plugins-filters-tld.md#plugins-filters-tld-source) | [string](introduction.md#string) | No |
-| [`target`](plugins-filters-tld.md#plugins-filters-tld-target) | [string](introduction.md#string) | No |
+| [`source`](plugins-filters-tld.md#plugins-filters-tld-source) | [string](value-types.md#string) | No |
+| [`target`](plugins-filters-tld.md#plugins-filters-tld-target) | [string](value-types.md#string) | No |
 
 Also see [Common options](plugins-filters-tld.md#plugins-filters-tld-common-options) for a list of options supported by all filter plugins.
 
@@ -45,7 +45,7 @@ Also see [Common options](plugins-filters-tld.md#plugins-filters-tld-common-opti
 
 ### `source` [plugins-filters-tld-source]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"message"`
 
 Setting the config_name here is required. This is how you configure this filter from your Logstash config.
@@ -57,7 +57,7 @@ The source field to parse
 
 ### `target` [plugins-filters-tld-target]
 
-* Value type is [string](introduction.md#string)
+* Value type is [string](value-types.md#string)
 * Default value is `"tld"`
 
 The target field to place all the data
