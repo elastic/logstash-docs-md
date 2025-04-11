@@ -7,9 +7,9 @@ mapped_pages:
 # Elasticsearch input plugin [plugins-inputs-elasticsearch]
 
 
-* Plugin version: v5.0.0
-* Released on: 2024-12-18
-* [Changelog](https://github.com/logstash-plugins/logstash-input-elasticsearch/blob/v5.0.0/CHANGELOG.md)
+* Plugin version: v5.0.2
+* Released on: 2025-04-07
+* [Changelog](https://github.com/logstash-plugins/logstash-input-elasticsearch/blob/v5.0.2/CHANGELOG.md)
 
 For other versions, see the [Versioned plugin docs](/vpr/input-elasticsearch-index.md).
 
@@ -87,6 +87,17 @@ The plugin logs a warning when ECS is enabled and `target` isn’t set.
 Set the `target` option to avoid potential schema conflicts.
 ::::
 
+
+## Failure handling [plugins-inputs-elasticsearch-failure-handling]
+
+When this input plugin cannot create a structured `Event` from a hit result, it will instead create an `Event` that is tagged with `_elasticsearch_input_failure` whose `[event][original]` is a JSON-encoded string representation of the entire hit.
+
+Common causes are:
+
+ - When the hit result contains top-level fields that are reserved in Logstash but do not have the expected shape. 
+   Use the `target` directive to avoid conflicts with the top-level namespace.
+ - When `doc-info``is enabled and the docinfo fields cannot be merged into the hit result. 
+ Combine `target` and `docinfo_target` to avoid conflict.
 
 
 ## Elasticsearch Input configuration options [plugins-inputs-elasticsearch-options]

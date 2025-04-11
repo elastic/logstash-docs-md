@@ -8,9 +8,9 @@ mapped_pages:
 
 
 * A component of the [jdbc integration plugin](plugins-integrations-jdbc.md)
-* Integration version: v5.5.2
-* Released on: 2024-12-23
-* [Changelog](https://github.com/logstash-plugins/logstash-integration-jdbc/blob/v5.5.2/CHANGELOG.md)
+* Integration version: v5.5.3
+* Released on: 2025-03-07
+* [Changelog](https://github.com/logstash-plugins/logstash-integration-jdbc/blob/v5.5.3/CHANGELOG.md)
 
 For other versions, see the [Versioned plugin docs](/vpr/filter-jdbc_streaming-index.md).
 

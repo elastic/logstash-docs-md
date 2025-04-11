@@ -8,9 +8,9 @@ mapped_pages:
 
 
 * A component of the [jdbc integration plugin](plugins-integrations-jdbc.md)
-* Integration version: v5.5.2
-* Released on: 2024-12-23
-* [Changelog](https://github.com/logstash-plugins/logstash-integration-jdbc/blob/v5.5.2/CHANGELOG.md)
+* Integration version: v5.5.3
+* Released on: 2025-03-07
+* [Changelog](https://github.com/logstash-plugins/logstash-integration-jdbc/blob/v5.5.3/CHANGELOG.md)
 
 For other versions, see the [Versioned plugin docs](/vpr/filter-jdbc_static-index.md).
 
@@ -97,7 +97,7 @@ To define the filter, you specify three main sections: local_db_objects, loaders
         add_field => { user_lastname => "%{[user][0][lastname]}" }
         remove_field => ["server", "user"]
         staging_directory => "/tmp/logstash/jdbc_static/import_data"
-        loader_schedule => "* */2 * * *"
+        loader_schedule => "* */2 * * *" <8>
         jdbc_user => "logstash"
         jdbc_password => "example"
         jdbc_driver_class => "org.postgresql.Driver"
@@ -121,6 +121,7 @@ To define the filter, you specify three main sections: local_db_objects, loaders
     5. Specifies the event field that will store the looked-up data. If the lookup returns multiple columns, the data is stored as a JSON object within the field.
     6. When the user is not found in the database, an event is created using data from the [`local_lookups`](plugins-filters-jdbc_static.md#plugins-filters-jdbc_static-local_lookups) `default hash` setting, and the event is tagged with the list set in [`tag_on_default_use`](plugins-filters-jdbc_static.md#plugins-filters-jdbc_static-tag_on_default_use).
     7. Takes data from the JSON object and stores it in top-level event fields for easier analysis in Kibana.
+    8. Runs loaders every 2 hours.
 
 
 Here’s a full example:
