@@ -7,9 +7,9 @@ mapped_pages:
 # Elasticsearch filter plugin [plugins-filters-elasticsearch]
 
 
-* Plugin version: v4.0.0
-* Released on: 2025-01-10
-* [Changelog](https://github.com/logstash-plugins/logstash-filter-elasticsearch/blob/v4.0.0/CHANGELOG.md)
+* Plugin version: v4.1.1
+* Released on: 2025-03-17
+* [Changelog](https://github.com/logstash-plugins/logstash-filter-elasticsearch/blob/v4.1.1/CHANGELOG.md)
 
 For other versions, see the [Versioned plugin docs](/vpr/filter-elasticsearch-index.md).
 
