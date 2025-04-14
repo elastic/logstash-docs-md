@@ -7,9 +7,9 @@ mapped_pages:
 # Syslog input plugin [plugins-inputs-syslog]
 
 
-* Plugin version: v3.7.0
-* Released on: 2023-10-17
-* [Changelog](https://github.com/logstash-plugins/logstash-input-syslog/blob/v3.7.0/CHANGELOG.md)
+* Plugin version: v3.7.1
+* Released on: 2025-03-04
+* [Changelog](https://github.com/logstash-plugins/logstash-input-syslog/blob/v3.7.1/CHANGELOG.md)
 
 For other versions, see the [Versioned plugin docs](/vpr/input-syslog-index.md).
 
