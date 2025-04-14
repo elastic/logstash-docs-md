@@ -11,7 +11,6 @@ Integration plugins combine related plugins—​inputs, outputs, and sometimes 
 | --- | --- | --- |
 | Integration Plugin | Description | Github repository |
 | [aws](plugins-integrations-aws.md) | Plugins for use with Amazon Web Services (AWS). | [logstash-integration-aws](https://github.com/logstash-plugins/logstash-integration-aws) |
-| [elastic_enterprise_search (deprecated) ](plugins-integrations-elastic_enterprise_search.md) | [deprecated at {{stack}} version 9.0.0 and plugin version 3.0.1] Plugins for use with Elastic Enterprise Search. | [logstash-integration-elastic_enterprise_search](https://github.com/logstash-plugins/logstash-integration-elastic_enterprise_search) |
 | [jdbc](plugins-integrations-jdbc.md) | Plugins for use with databases that provide JDBC drivers. | [logstash-integration-jdbc](https://github.com/logstash-plugins/logstash-integration-jdbc) |
 | [kafka](plugins-integrations-kafka.md) | Plugins for use with the Kafka distributed streaming platform. | [logstash-integration-kafka](https://github.com/logstash-plugins/logstash-integration-kafka) |
 | [logstash](plugins-integrations-logstash.md) | Plugins to enable {{ls}}-to-{{ls}} communication. | [logstash-integration-logstash](https://github.com/logstash-plugins/logstash-integration-logstash) |
