@@ -17,7 +17,7 @@ To learn more about Logstash, see the [Logstash Reference](logstash://reference/
 
 ## Getting help [_getting_help_1808]
 
-For questions about the plugin, open a topic in the [Discuss](http://discuss.elastic.co) forums. For bugs or feature requests, open an issue in [Github](https://github.com/logstash-plugins/logstash-filter-elastic_integration). For the list of Elastic supported plugins, please consult the [Elastic Support Matrix](https://www.elastic.co/support/matrix#matrix_logstash_plugins).
+For questions about the plugin, open a topic in the [Discuss](http://discuss.elastic.co) forums. For bugs or feature requests, open an issue in [Github](https://github.com/elastic/logstash-filter-elastic_integration). For the list of Elastic supported plugins, please consult the [Elastic Support Matrix](https://www.elastic.co/support/matrix#matrix_logstash_plugins).
 
 ::::{admonition} Elastic Enterprise License
 Use of this plugin requires an active Enterprise Elastic License.
