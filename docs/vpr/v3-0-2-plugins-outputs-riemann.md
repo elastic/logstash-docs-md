@@ -87,8 +87,11 @@ As an example, the logstash event:
                        "key": "value"
                      }
    }
+```
+
 Is mapped to this riemann event:
-[source,ruby]
+
+```ruby
   {
     :time 1386686186,
     :host host.domain.com,

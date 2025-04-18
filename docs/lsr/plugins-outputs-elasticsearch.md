@@ -45,7 +45,7 @@ You can use this plugin to send your {{ls}} data to {{es-serverless}}. Some diff
 * {{es-serverless}} uses **data streams** and [{{dlm}} ({{dlm-init}})](https://www.elastic.co/guide/en/elasticsearch/reference/current/data-stream-lifecycle.html) instead of {{ilm}} ({{ilm-init}}). Any {{ilm-init}} settings in your [{{es}} output plugin](plugins-outputs-elasticsearch.md) configuration are ignored and may cause errors.
 * **{{ls}} monitoring** is available through the [{{ls}} Integration](https://github.com/elastic/integrations/blob/main/packages/logstash/_dev/build/docs/README.md) in [Elastic Observability](https://docs.elastic.co/serverless/observability/what-is-observability-serverless) on {{serverless-full}}.
 
-::::{admonition} Known issue for {{ls}} to {es-serverless}
+::::{admonition} Known issue for {{ls}} to {{es-serverless}}
 The logstash-output-elasticsearch `hosts` setting on {{serverless-short}} defaults the port to 9200 when omitted. Set the value to port :443 instead.
 
 ::::
@@ -56,7 +56,7 @@ For more info on sending data from {{ls}} to {{es-serverless}}, check out the [{
 
 ## Hosted {{es}} Service on Elastic Cloud [plugins-outputs-elasticsearch-ess]
 
-{ess-leadin}
+{{ess-leadin}}
 
 
 ## Compatibility with the Elastic Common Schema (ECS) [_compatibility_with_the_elastic_common_schema_ecs]
@@ -79,7 +79,7 @@ Use the data stream options for indexing time series datasets (such as logs, met
 * [`data_stream_sync_fields`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-data_stream_sync_fields)
 * [`data_stream_type`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-data_stream_type)
 
-::::{important} 
+::::{important}
 [ECS compatibility](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-ecs_compatibility) must be enabled (set to `v1` or `v8`) for data streams to work properly.
 ::::
 
@@ -117,7 +117,7 @@ output {
 
 ## Writing to different indices: best practices [_writing_to_different_indices_best_practices]
 
-::::{note} 
+::::{note}
 You cannot use dynamic variable substitution when `ilm_enabled` is `true` and when using `ilm_rollover_alias`.
 ::::
 
@@ -189,7 +189,7 @@ Mapping (404) errors from Elasticsearch can lead to data loss. Unfortunately map
 
 ## {{ilm-cap}} ({{ilm-init}}) [plugins-outputs-elasticsearch-ilm]
 
-::::{note} 
+::::{note}
 * The {{ilm-cap}} ({{ilm-init}}) feature does not apply for {{es-serverless}}. Any {{ilm-init}} settings in your plugin configuration are ignored and may cause errors.
 * The {{ilm-init}} feature requires plugin version `9.3.1` or higher.
 * This feature requires an {{es}} instance of 6.6.0 or higher with at least a Basic license
@@ -223,7 +223,7 @@ See config below for an example:
     }
 ```
 
-::::{note} 
+::::{note}
 * Custom ILM policies must already exist on the {{es}} cluster before they can be used.
 * If the rollover alias or pattern is modified, the index template will need to be overwritten as the settings `index.lifecycle.name` and `index.lifecycle.rollover_alias` are automatically written to the template
 * If the index property is supplied in the output definition, it will be overwritten by the rollover alias.
@@ -272,7 +272,7 @@ This plugin transmits events to Elasticsearch using a JSON API, and therefore re
 
 This plugin supports these configuration options plus the [Common options](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-common-options) described later.
 
-::::{note} 
+::::{note}
 As of version 12.0.0 of this plugin, a number of previously deprecated SSL settings have been removed. Please check out [Elasticsearch Output Obsolete Configuration Options](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-obsolete-options) for details.
 ::::
 
@@ -475,7 +475,7 @@ The data stream namespace used to construct the data stream at index time.
 
 Automatically adds and syncs the `data_stream.*` event fields if they are missing from the event. This ensures that fields match the name of the data stream that is receiving events.
 
-::::{note} 
+::::{note}
 If existing `data_stream.*` event fields do not match the data stream name and `data_stream_auto_routing` is disabled, the event fields will be overwritten with a warning.
 ::::
 
@@ -527,12 +527,12 @@ The document ID for the index. Useful for overwriting existing entries in Elasti
 * There is no default value for this setting.
 * This option is deprecated
 
-::::{note} 
+::::{note}
 This option is deprecated due to the [removal of types in Elasticsearch 6.0](https://www.elastic.co/guide/en/elasticsearch/reference/6.0/removal-of-types.md). It will be removed in the next major version of Logstash.
 ::::
 
 
-::::{note} 
+::::{note}
 This value is ignored and has no effect for Elasticsearch clusters `8.x`.
 ::::
 
@@ -571,7 +571,7 @@ Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)](ht
 * Value type is [array](value-types.md#array)
 * Default value is `[]`
 
-::::{note} 
+::::{note}
 Deprecated, refer to [`silence_errors_in_log`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-silence_errors_in_log).
 ::::
 
@@ -630,7 +630,7 @@ Setting `true` enables gzip compression level 1 on requests.
 
 This setting allows you to reduce this plugin’s outbound network traffic by compressing each bulk *request* to {{es}}.
 
-::::{note} 
+::::{note}
 This output plugin reads compressed *responses* from {{es}} regardless of the value of this setting.
 ::::
 
@@ -645,7 +645,7 @@ The default setting of `auto` will automatically enable [Index Lifecycle Managem
 
 Setting this flag to `false` will disable the Index Lifecycle Management feature, even if the Elasticsearch cluster supports ILM. Setting this flag to `true` will enable Index Lifecycle Management feature, if the Elasticsearch cluster supports it. This is required to enable Index Lifecycle Management on a version of Elasticsearch earlier than version `7.0.0`.
 
-::::{note} 
+::::{note}
 This feature requires a Basic License or above to be installed on an Elasticsearch cluster version 6.6.0 or later.
 ::::
 
@@ -660,17 +660,17 @@ Pattern used for generating indices managed by [Index Lifecycle Management](http
 
 Date Math can be used when specifying an ilm pattern, see [Rollover API docs](https://www.elastic.co/guide/en/elasticsearch/reference/current/indices-rollover-index.html#_using_date_math_with_the_rollover_api) for details.
 
-::::{note} 
+::::{note}
 Updating the pattern will require the index template to be rewritten.
 ::::
 
 
-::::{note} 
+::::{note}
 The pattern must finish with a dash and a number that will be automatically incremented when indices rollover.
 ::::
 
 
-::::{note} 
+::::{note}
 The pattern is a 6-digit string padded by zeros, regardless of prior index name. Example: 000001. See [Rollover path parameters API docs](https://www.elastic.co/guide/en/elasticsearch/reference/current/indices-rollover-index.html#rollover-index-api-path-params) for details.
 ::::
 
@@ -683,7 +683,7 @@ The pattern is a 6-digit string padded by zeros, regardless of prior index name.
 
 Modify this setting to use a custom Index Lifecycle Management policy, rather than the default. If this value is not set, the default policy will be automatically installed into Elasticsearch
 
-::::{note} 
+::::{note}
 If this setting is specified, the policy must already exist in Elasticsearch cluster.
 ::::
 
@@ -700,17 +700,17 @@ If this setting is specified, the policy must already exist in Elasticsearch clu
 
 The rollover alias is the alias where indices managed using Index Lifecycle Management will be written to.
 
-::::{note} 
+::::{note}
 If both `index` and `ilm_rollover_alias` are specified, `ilm_rollover_alias` takes precedence.
 ::::
 
 
-::::{note} 
+::::{note}
 Updating the rollover alias will require the index template to be rewritten.
 ::::
 
 
-::::{note} 
+::::{note}
 `ilm_rollover_alias` does NOT support dynamic variable substitution as `index` does.
 ::::
 
@@ -907,7 +907,7 @@ Defines the list of Elasticsearch errors that you don’t want to log. A useful 
     }
 ```
 
-::::{note} 
+::::{note}
 Deprecates [`failure_type_logging_whitelist`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-failure_type_logging_whitelist).
 ::::
 
@@ -944,7 +944,7 @@ HTTP Path to be used for the sniffing requests the default value is computed by 
 
 SSL certificate to use to authenticate the client. This certificate should be an OpenSSL-style X.509 certificate file.
 
-::::{note} 
+::::{note}
 This setting can be used only if [`ssl_key`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-ssl_key) is set.
 ::::
 
@@ -957,7 +957,7 @@ This setting can be used only if [`ssl_key`](plugins-outputs-elasticsearch.md#pl
 
 The .cer or .pem files to validate the server’s certificate.
 
-::::{note} 
+::::{note}
 You cannot use this setting and [`ssl_truststore_path`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-ssl_truststore_path) at the same time.
 ::::
 
@@ -990,7 +990,7 @@ SSL key to use. This key must be in the PKCS8 format and PEM encoded. You can us
 openssl pkcs8 -inform PEM -in path/to/logstash.key -topk8 -nocrypt -outform PEM -out path/to/logstash.pkcs8.key
 ```
 
-::::{note} 
+::::{note}
 This setting can be used only if [`ssl_certificate`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-ssl_certificate) is set.
 ::::
 
@@ -1011,7 +1011,7 @@ Set the keystore password
 
 The keystore used to present a certificate to the server. It can be either `.jks` or `.p12`
 
-::::{note} 
+::::{note}
 You cannot use this setting and [`ssl_certificate`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-ssl_certificate) at the same time.
 ::::
 
@@ -1035,7 +1035,7 @@ List of allowed SSL/TLS versions to use when establishing a connection to the El
 
 For Java 8 `'TLSv1.3'` is supported only since ***8u262*** (AdoptOpenJDK), but requires that you set the `LS_JAVA_OPTS="-Djdk.tls.client.protocols=TLSv1.3"` system property in Logstash.
 
-::::{note} 
+::::{note}
 If you configure the plugin to use `'TLSv1.1'` on any recent JVM, such as the one packaged with Logstash, the protocol is disabled by default and needs to be enabled manually by changing `jdk.tls.disabledAlgorithms` in the **$JDK_HOME/conf/security/java.security** configuration file. That is, `TLSv1.1` needs to be removed from the list.
 ::::
 
@@ -1056,7 +1056,7 @@ Set the truststore password
 
 The truststore to validate the server’s certificate. It can be either `.jks` or `.p12`.
 
-::::{note} 
+::::{note}
 You cannot use this setting and [`ssl_certificate_authorities`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-ssl_certificate_authorities) at the same time.
 ::::
 
@@ -1081,7 +1081,7 @@ Defines how to verify the certificates presented by another party in the TLS con
 
 `none` performs no certificate validation.
 
-::::{warning} 
+::::{warning}
 Setting certificate verification to `none` disables many security benefits of SSL/TLS, which is very dangerous. For more information on disabling certificate verification please read [https://www.cs.utexas.edu/~shmat/shmat_ccs12.pdf](https://www.cs.utexas.edu/~shmat/shmat_ccs12.pdf)
 ::::
 
@@ -1104,7 +1104,7 @@ The default setting of `auto` will use [index template API](https://www.elastic.
 
 Setting this flag to `legacy` will use legacy template API to create index template. Setting this flag to `composable` will use index template API to create index template.
 
-::::{note} 
+::::{note}
 The format of template provided to [`template`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-template) needs to match the template API being used.
 ::::
 
@@ -1189,7 +1189,7 @@ The version_type to use for indexing. See the [versioning support blog](https://
 
 ## Elasticsearch Output Obsolete Configuration Options [plugins-outputs-elasticsearch-obsolete-options]
 
-::::{warning} 
+::::{warning}
 As of version `12.0.0` of this plugin, some configuration options have been replaced. The plugin will fail to start if it contains any of these obsolete options.
 ::::
 
@@ -1237,7 +1237,7 @@ output {
 }
 ```
 
-::::{note} 
+::::{note}
 Variable substitution in the `id` field only supports environment variables and does not support the use of values from the secret store.
 ::::
 

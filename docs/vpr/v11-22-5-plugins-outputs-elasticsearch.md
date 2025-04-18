@@ -47,7 +47,7 @@ You can use this plugin to send your {{ls}} data to {{es-serverless}}. Some diff
 * {{es-serverless}} uses **data streams** and [{{dlm}} ({{dlm-init}})](docs-content://manage-data/lifecycle/data-stream.md) instead of {{ilm}} ({{ilm-init}}). Any {{ilm-init}} settings in your [{{es}} output plugin](v11-22-5-plugins-outputs-elasticsearch.md) configuration are ignored and may cause errors.
 * **{{ls}} monitoring** is available through the [{{ls}} Integration](https://github.com/elastic/integrations/blob/main/packages/logstash/_dev/build/docs/README.md) in [Elastic Observability](docs-content://solutions/observability.md) on {{serverless-full}}.
 
-::::{admonition} Known issue for {{ls}} to {es-serverless}
+::::{admonition} Known issue for {{ls}} to {{es-serverless}}
 The logstash-output-elasticsearch `hosts` setting on {{serverless-short}} defaults the port to 9200 when omitted. Set the value to port :443 instead.
 
 ::::
@@ -58,7 +58,7 @@ For more info on sending data from {{ls}} to {{es-serverless}}, check out the [{
 
 ## Hosted {{es}} Service on Elastic Cloud [v11.22.5-plugins-outputs-elasticsearch-ess]
 
-{ess-leadin}
+{{ess-leadin}}
 
 
 ## Compatibility with the Elastic Common Schema (ECS) [_compatibility_with_the_elastic_common_schema_ecs_11]

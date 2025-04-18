@@ -47,19 +47,19 @@ The Logstash open source distribution uses the MaxMind Creative Commons license 
 
 This plugin bundles Creative Commons (CC) license databases. If the auto-update feature is enabled in `logstash.yml`(as it is by default), Logstash checks for database updates every day. It downloads the latest and can replace the old database while the plugin is running.
 
-::::{note} 
+::::{note}
 If the auto-update feature is disabled or the database has never been updated successfully, as in air-gapped environments, Logstash can use CC license databases indefinitely.
 ::::
 
 
 After Logstash has switched to a EULA licensed database, the geoip filter will stop enriching events in order to maintain compliance if Logstash fails to check for database updates for 30 days. Events will be tagged with `_geoip_expired_database` tag to facilitate the handling of this situation.
 
-::::{note} 
+::::{note}
 If the auto-update feature is enabled, Logstash upgrades from the CC database license to the EULA version on the first download.
 ::::
 
 
-::::{tip} 
+::::{tip}
 When possible, allow Logstash to access the internet to download databases so that they are always up-to-date.
 ::::
 
@@ -184,7 +184,7 @@ When this plugin is run with [`ecs_compatibility`](plugins-filters-geoip.md#plug
 | `continent_code` | `[geo][continent_code]` | `NA` |
 | `continent_name` | `[geo][continent_name]` | `North America` |
 | `country_code2` | `[geo][country_iso_code]` | `US` |
-| `country_code3` | *N/A* | `US`<br>                                                           *maintained for legacy                                                           support, but populated                                                           with 2-character country                                                           code* |
+| `country_code3` | *N/A* | `US`<br>*maintained for legacy support, but populated with 2-character country code* |
 | `postal_code` | `[geo][postal_code]` | `98106` |
 | `region_name` | `[geo][region_name]` | `Washington` |
 | `region_code` | `[geo][region_code]` | `WA` |
@@ -200,7 +200,7 @@ When this plugin is run with [`ecs_compatibility`](plugins-filters-geoip.md#plug
 | `dma_code` | `[mmdb][dma_code]` | `819` |
 | `organization` | `[mmdb][organization]` | `Elastic, NV` |
 
-::::{note} 
+::::{note}
 `*` indicates a composite field, which is only populated if GeoIP lookup result contains all components.
 ::::
 
@@ -214,7 +214,7 @@ The `location` field combines the latitude and longitude into a structure called
 
 As this field is a `geo_point` *and* it is still valid GeoJSON, you get the awesomeness of Elasticsearch’s geospatial query, facet and filter functions and the flexibility of having GeoJSON for all other applications (like Kibana’s map visualization).
 
-::::{note} 
+::::{note}
 This product includes GeoLite2 data created by MaxMind, available from [http://www.maxmind.com](http://www.maxmind.com). This database is licensed under [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/).
 
 Versions 4.0.0 and later of the GeoIP filter use the MaxMind GeoLite2 database and support both IPv4 and IPv6 lookups. Versions prior to 4.0.0 use the legacy MaxMind GeoLite database and support IPv4 lookups only.
@@ -438,7 +438,7 @@ Add a unique `ID` to the plugin configuration. If no ID is specified, Logstash w
     }
 ```
 
-::::{note} 
+::::{note}
 Variable substitution in the `id` field only supports environment variables and does not support the use of values from the secret store.
 ::::
 

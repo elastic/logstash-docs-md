@@ -83,12 +83,12 @@ The following is a mapping between these fields.
 | CEF Field Name (optional CEF Key) | ECS Field |
 | --- | --- |
 | `agentAddress` (`agt`) | `[agent][ip]` |
-| `agentDnsDomain` | `[cef][agent][registered_domain]`<br>                                                 Multiple possible CEF fields map to this ECS Field. When decoding, the last entry encountered wins. When encoding, this field has *higher* priority. |
+| `agentDnsDomain` | `[cef][agent][registered_domain]`<br>Multiple possible CEF fields map to this ECS Field. When decoding, the last entry encountered wins. When encoding, this field has *higher* priority. |
 | `agentHostName` (`ahost`) | `[agent][name]` |
 | `agentId` (`aid`) | `[agent][id]` |
 | `agentMacAddress` (`amac`) | `[agent][mac]` |
-| `agentNtDomain` | `[cef][agent][registered_domain]`<br>                                                 Multiple possible CEF fields map to this ECS Field. When decoding, the last entry encountered wins. When encoding, this field has *lower* priority. |
-| `agentReceiptTime` (`art`) | `[event][created]`<br>                                                 This field contains a timestamp. In ECS Compatibility Mode, it is parsed to a specific point in time. |
+| `agentNtDomain` | `[cef][agent][registered_domain]`<br>Multiple possible CEF fields map to this ECS Field. When decoding, the last entry encountered wins. When encoding, this field has *lower* priority. |
+| `agentReceiptTime` (`art`) | `[event][created]`<br>This field contains a timestamp. In ECS Compatibility Mode, it is parsed to a specific point in time. |
 | `agentTimeZone` (`atz`) | `[cef][agent][timezone]` |
 | `agentTranslatedAddress` | `[cef][agent][nat][ip]` |
 | `agentTranslatedZoneExternalID` | `[cef][agent][translated_zone][external_id]` |
@@ -105,12 +105,12 @@ The following is a mapping between these fields.
 | `customerExternalID` | `[organization][id]` |
 | `customerURI` | `[organization][name]` |
 | `destinationAddress` (`dst`) | `[destination][ip]` |
-| `destinationDnsDomain` | `[destination][registered_domain]`<br>                                                 Multiple possible CEF fields map to this ECS Field. When decoding, the last entry encountered wins. When encoding, this field has *higher* priority. |
+| `destinationDnsDomain` | `[destination][registered_domain]`<br>Multiple possible CEF fields map to this ECS Field. When decoding, the last entry encountered wins. When encoding, this field has *higher* priority. |
 | `destinationGeoLatitude` (`dlat`) | `[destination][geo][location][lat]` |
 | `destinationGeoLongitude` (`dlong`) | `[destination][geo][location][lon]` |
 | `destinationHostName` (`dhost`) | `[destination][domain]` |
 | `destinationMacAddress` (`dmac`) | `[destination][mac]` |
-| `destinationNtDomain` (`dntdom`) | `[destination][registered_domain]`<br>                                                 Multiple possible CEF fields map to this ECS Field. When decoding, the last entry encountered wins. When encoding, this field has *lower* priority. |
+| `destinationNtDomain` (`dntdom`) | `[destination][registered_domain]`<br>Multiple possible CEF fields map to this ECS Field. When decoding, the last entry encountered wins. When encoding, this field has *lower* priority. |
 | `destinationPort` (`dpt`) | `[destination][port]` |
 | `destinationProcessId` (`dpid`) | `[destination][process][pid]` |
 | `destinationProcessName` (`dproc`) | `[destination][process][name]` |
@@ -125,8 +125,7 @@ The following is a mapping between these fields.
 | `destinationZoneExternalID` | `[cef][destination][zone][external_id]` |
 | `destinationZoneURI` | `[cef][destination][zone][uri]` |
 | `deviceAction` (`act`) | `[event][action]` |
-| `deviceAddress` (`dvc`) | `[observer][ip]`<br>                                                 When plugin configured with `device => observer` |
-| `[host][ip]`<br>                                                 When plugin configured with `device => host` |
+| `deviceAddress` (`dvc`) | `[observer][ip]`<br>When plugin configured with `device => observer`<br><br>`[host][ip]`<br>When plugin configured with `device => host` |
 | `deviceCustomFloatingPoint1` (`cfp1`) | `[cef][device_custom_floating_point_1][value]` |
 | `deviceCustomFloatingPoint1Label` (`cfp1Label`) | `[cef][device_custom_floating_point_1][label]` |
 | `deviceCustomFloatingPoint2` (`cfp2`) | `[cef][device_custom_floating_point_2][value]` |
@@ -248,23 +247,19 @@ The following is a mapping between these fields.
 | `deviceCustomString15` (`cs15`) | `[cef][device_custom_string_15][value]` |
 | `deviceCustomString15Label` (`cs15Label`) | `[cef][device_custom_string_15][label]` |
 | `deviceDirection` | `[network][direction]` |
-| `deviceDnsDomain` | `[observer][registered_domain]`<br>                                                 When plugin configured with `device => observer`. |
-| `[host][registered_domain]`<br>                                                 When plugin configured with `device => host`. |
+| `deviceDnsDomain` | `[observer][registered_domain]`<br>When plugin configured with `device => observer`.<br><br>`[host][registered_domain]`<br>When plugin configured with `device => host`. |
 | `deviceEventCategory` (`cat`) | `[cef][category]` |
-| `deviceExternalId` | `[observer][name]`<br>                                                 When plugin configured with `device => observer`. |
-| `[host][id]`<br>                                                 When plugin configured with `device => host`. |
+| `deviceExternalId` | `[observer][name]`<br>When plugin configured with `device => observer`.<br><br>`[host][id]`<br>When plugin configured with `device => host`. |
 | `deviceFacility` | `[log][syslog][facility][code]` |
-| `deviceHostName` (`dvchost`) | `[observer][hostname]`<br>                                                 When plugin configured with `device => observer`. |
-| `[host][name]`<br>                                                 When plugin configured with `device => host`. |
+| `deviceHostName` (`dvchost`) | `[observer][hostname]`<br>When plugin configured with `device => observer`.<br><br>`[host][name]`<br>When plugin configured with `device => host`. |
 | `deviceInboundInterface` | `[observer][ingress][interface][name]` |
-| `deviceMacAddress` (`dvcmac`) | `[observer][mac]`<br>                                                 When plugin configured with `device => observer`. |
-| `[host][mac]`<br>                                                 When plugin configured with `device => host`. |
+| `deviceMacAddress` (`dvcmac`) | `[observer][mac]`<br>When plugin configured with `device => observer`.<br><br>`[host][mac]`<br>When plugin configured with `device => host`. |
 | `deviceNtDomain` | `[cef][nt_domain]` |
 | `deviceOutboundInterface` | `[observer][egress][interface][name]` |
 | `devicePayloadId` | `[cef][payload_id]` |
 | `deviceProcessId` (`dvcpid`) | `[process][pid]` |
 | `deviceProcessName` | `[process][name]` |
-| `deviceReceiptTime` (`rt`) | `@timestamp`<br>                                                 This field contains a timestamp. In ECS Compatibility Mode, it is parsed to a specific point in time. |
+| `deviceReceiptTime` (`rt`) | `@timestamp`<br>This field contains a timestamp. In ECS Compatibility Mode, it is parsed to a specific point in time. |
 | `deviceTimeZone` (`dtz`) | `[event][timezone]` |
 | `deviceTranslatedAddress` | `[host][nat][ip]` |
 | `deviceTranslatedZoneExternalID` | `[cef][translated_zone][external_id]` |
@@ -272,25 +267,25 @@ The following is a mapping between these fields.
 | `deviceVersion` | `[observer][version]` |
 | `deviceZoneExternalID` | `[cef][zone][external_id]` |
 | `deviceZoneURI` | `[cef][zone][uri]` |
-| `endTime` (`end`) | `[event][end]`<br>                                                 This field contains a timestamp. In ECS Compatibility Mode, it is parsed to a specific point in time. |
+| `endTime` (`end`) | `[event][end]`<br>This field contains a timestamp. In ECS Compatibility Mode, it is parsed to a specific point in time. |
 | `eventId` | `[event][id]` |
 | `eventOutcome` (`outcome`) | `[event][outcome]` |
 | `externalId` | `[cef][external_id]` |
 | `fileCreateTime` | `[file][created]` |
 | `fileHash` | `[file][hash]` |
 | `fileId` | `[file][inode]` |
-| `fileModificationTime` | `[file][mtime]`<br>                                                 This field contains a timestamp. In ECS Compatibility Mode, it is parsed to a specific point in time. |
+| `fileModificationTime` | `[file][mtime]`<br>This field contains a timestamp. In ECS Compatibility Mode, it is parsed to a specific point in time. |
 | `fileName` (`fname`) | `[file][name]` |
 | `filePath` | `[file][path]` |
 | `filePermission` | `[file][group]` |
 | `fileSize` (`fsize`) | `[file][size]` |
 | `fileType` | `[file][extension]` |
-| `managerReceiptTime` (`mrt`) | `[event][ingested]`<br>                                                 This field contains a timestamp. In ECS Compatibility Mode, it is parsed to a specific point in time. |
+| `managerReceiptTime` (`mrt`) | `[event][ingested]`<br>This field contains a timestamp. In ECS Compatibility Mode, it is parsed to a specific point in time. |
 | `message` (`msg`) | `[message]` |
-| `oldFileCreateTime` | `[cef][old_file][created]`<br>                                                 This field contains a timestamp. In ECS Compatibility Mode, it is parsed to a specific point in time. |
+| `oldFileCreateTime` | `[cef][old_file][created]`<br>This field contains a timestamp. In ECS Compatibility Mode, it is parsed to a specific point in time. |
 | `oldFileHash` | `[cef][old_file][hash]` |
 | `oldFileId` | `[cef][old_file][inode]` |
-| `oldFileModificationTime` | `[cef][old_file][mtime]`<br>                                                 This field contains a timestamp. In ECS Compatibility Mode, it is parsed to a specific point in time. |
+| `oldFileModificationTime` | `[cef][old_file][mtime]`<br>This field contains a timestamp. In ECS Compatibility Mode, it is parsed to a specific point in time. |
 | `oldFileName` | `[cef][old_file][name]` |
 | `oldFilePath` | `[cef][old_file][path]` |
 | `oldFilePermission` | `[cef][old_file][group]` |
@@ -304,12 +299,12 @@ The following is a mapping between these fields.
 | `requestMethod` | `[http][request][method]` |
 | `requestUrl` (`request`) | `[url][original]` |
 | `sourceAddress` (`src`) | `[source][ip]` |
-| `sourceDnsDomain` | `[source][registered_domain]`<br>                                                 Multiple possible CEF fields map to this ECS Field. When decoding, the last entry encountered wins. When encoding, this field has *higher* priority. |
+| `sourceDnsDomain` | `[source][registered_domain]`<br>Multiple possible CEF fields map to this ECS Field. When decoding, the last entry encountered wins. When encoding, this field has *higher* priority. |
 | `sourceGeoLatitude` (`slat`) | `[source][geo][location][lat]` |
 | `sourceGeoLongitude` (`slong`) | `[source][geo][location][lon]` |
 | `sourceHostName` (`shost`) | `[source][domain]` |
 | `sourceMacAddress` (`smac`) | `[source][mac]` |
-| `sourceNtDomain` (`sntdom`) | `[source][registered_domain]`<br>                                                 Multiple possible CEF fields map to this ECS Field. When decoding, the last entry encountered wins. When encoding, this field has *lower* priority. |
+| `sourceNtDomain` (`sntdom`) | `[source][registered_domain]`<br>Multiple possible CEF fields map to this ECS Field. When decoding, the last entry encountered wins. When encoding, this field has *lower* priority. |
 | `sourcePort` (`spt`) | `[source][port]` |
 | `sourceProcessId` (`spid`) | `[source][process][pid]` |
 | `sourceProcessName` (`sproc`) | `[source][process][name]` |
@@ -323,7 +318,7 @@ The following is a mapping between these fields.
 | `sourceUserPrivileges` (`spriv`) | `[source][user][group][name]` |
 | `sourceZoneExternalID` | `[cef][source][zone][external_id]` |
 | `sourceZoneURI` | `[cef][source][zone][uri]` |
-| `startTime` (`start`) | `[event][start]`<br>                                                 This field contains a timestamp. In ECS Compatibility Mode, it is parsed to a specific point in time. |
+| `startTime` (`start`) | `[event][start]`<br>This field contains a timestamp. In ECS Compatibility Mode, it is parsed to a specific point in time. |
 | `transportProtocol` (`proto`) | `[network][transport]` |
 | `type` | `[cef][type]` |
 
@@ -372,7 +367,7 @@ When parsing timestamp fields in ECS mode and encountering timestamps that do no
 
 If your input puts a delimiter between each CEF event, you’ll want to set this to be that delimiter.
 
-::::{note} 
+::::{note}
 Byte stream inputs such as TCP require delimiter to be specified. Otherwise input can be truncated or incorrectly split.
 ::::
 

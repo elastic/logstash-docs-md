@@ -23,17 +23,34 @@ For questions about the plugin, open a topic in the [Discuss](http://discuss.ela
 
 Send events to a [Logstash input plugin](plugins-inputs-logstash.md) in a pipeline that may be in another process or on another host. You must have a TCP route to the port (defaults to 9800) on an interface that the downstream input is bound to.
 
-::::{note} 
+::::{note}
 Sending events to *any* destination other than a `logstash-input` plugin is neither advised nor supported. We will maintain cross-compatibility with any two supported versions of output/input pair and reserve the right to change details such as protocol and encoding.
 ::::
 
 
 ### Minimum Configuration [plugins-outputs-logstash-minimum-config]
 
-| SSL Enabled | SSL Disabled |
-| --- | --- |
-| ```<br>output {<br>  logstash {<br>    hosts => "10.0.0.123:9801"<br>  }<br>}<br>```<br> | ```<br>output {<br>  logstash {<br>    hosts => "10.0.0.123:9801"<br>    ssl_enabled<br>         => false<br>  }<br>}<br>```<br> |
+#### SSL Enabled
 
+```
+output {
+  logstash {
+    hosts => "10.0.0.123:9801"
+  }
+}
+```
+
+#### SSL Disabled
+
+```
+output {
+  logstash {
+    hosts => "10.0.0.123:9801"
+    ssl_enabled
+         => false
+  }
+}
+```
 
 ### Configuration Concepts [plugins-outputs-logstash-config-connecting]
 
@@ -64,7 +81,7 @@ If the downstream input plugin is configured to request or require client authen
 
 If the downstream `logstash-input` plugin is configured to require `username` and `password`, you will need to configure this output with a matching [`username`](plugins-outputs-logstash.md#plugins-outputs-logstash-username) and [`password`](plugins-outputs-logstash.md#plugins-outputs-logstash-password).
 
-::::{note} 
+::::{note}
 when SSL is disabled, data and credentials will be transmitted in clear-text.
 ::::
 
@@ -129,7 +146,7 @@ The security of this plugin relies on SSL to avoid leaking credentials and to av
 ::::
 
 
-::::{note} 
+::::{note}
 when using SSL, the server that responds must present a certificated with identity claim matching this host name or ip address.
 ::::
 
@@ -251,7 +268,7 @@ Username for password-based authentication.
 
 When the downstream input plugin is configured with a `username` and `password`, you must also configure upstream outputs with a matching `username`/`password` pair.
 
-::::{note} 
+::::{note}
 when SSL is disabled, credentials will be transmitted in clear-text.
 ::::
 
@@ -290,7 +307,7 @@ output {
 }
 ```
 
-::::{note} 
+::::{note}
 Variable substitution in the `id` field only supports environment variables and does not support the use of values from the secret store.
 ::::
 

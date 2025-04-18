@@ -32,10 +32,29 @@ Sending events to *any* destination other than [logstash input plugin](/lsr/plug
 
 ### Minimum Configuration [v0.0.2-plugins-outputs-logstash-minimum-config]
 
-| SSL Enabled | SSL Disabled |
-| --- | --- |
-| ```shell<br>output {<br>  logstash {<br>    host => "10.0.0.123"<br>    port => 8080<br>  }<br>}<br>```<br> | ```shell<br>output {<br>  logstash {<br>    host => "10.0.0.123"<br>    port => 8080<br>    ssl_enabled<br>         => false<br>  }<br>}<br>```<br> |
+#### SSL Enabled
 
+```shell
+output {
+  logstash {
+    host => "10.0.0.123"
+    port => 8080
+  }
+}
+```
+
+#### SSL Disabled
+
+```shell
+output {
+  logstash {
+    host => "10.0.0.123"
+    port => 8080
+    ssl_enabled
+         => false
+  }
+}
+```
 
 ### Configuration Concepts [v0.0.2-plugins-outputs-logstash-config-connecting]
 

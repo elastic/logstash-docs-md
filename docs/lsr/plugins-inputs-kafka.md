@@ -34,7 +34,7 @@ This input supports connecting to Kafka over:
 
 By default security is disabled but can be turned on as needed.
 
-::::{note} 
+::::{note}
 This plugin does not support using a proxy when communicating to the Kafka broker.
 
 This plugin does support using a proxy when communicating to the Schema Registry using the [`schema_registry_proxy`](plugins-inputs-kafka.md#plugins-inputs-kafka-schema_registry_proxy) option.
@@ -73,7 +73,7 @@ Please note that `@metadata` fields are not part of any of your events at output
 
 This plugin supports these configuration options plus the [Common options](plugins-inputs-kafka.md#plugins-inputs-kafka-common-options) described later.
 
-::::{note} 
+::::{note}
 Some of these options map to a Kafka option. Defaults usually reflect the Kafka default setting, and might change if Kafka’s consumer defaults change. See the [https://kafka.apache.org/38/documentation](https://kafka.apache.org/38/documentation) for more details.
 ::::
 
@@ -198,7 +198,7 @@ Automatically check the CRC32 of the records consumed. This ensures no on-the-wi
 
 How DNS lookups should be done. If set to `use_all_dns_ips`, when the lookup returns multiple IP addresses for a hostname, they will all be attempted to connect to before failing the connection. If the value is `resolve_canonical_bootstrap_servers_only` each entry will be resolved and expanded into a list of canonical names.
 
-::::{note} 
+::::{note}
 Starting from Kafka 3 `default` value for `client.dns.lookup` value has been removed. If explicitly configured it fallbacks to `use_all_dns_ips`.
 
 ::::
@@ -220,7 +220,7 @@ The id string to pass to the server when making requests. The purpose of this is
 
 A rack identifier for the Kafka consumer. Used to select the physically closest rack for the consumer to read from. The setting corresponds with Kafka’s `broker.rack` configuration.
 
-::::{note} 
+::::{note}
 Available only for Kafka 2.4.0 and higher. See [KIP-392](https://cwiki.apache.org/confluence/display/KAFKA/KIP-392%3A+Allow+consumers+to+fetch+from+closest+replica).
 ::::
 
@@ -266,7 +266,8 @@ Option to add Kafka metadata like topic, message size and header key values to t
 
 ### `auto_create_topics`  [plugins-inputs-kafka-auto_create_topics]
 
-  * Value type is [boolean](value-types.md#boolean) * Default value is `true`
+* Value type is [boolean](value-types.md#boolean)
+* Default value is `true`
 
 Controls whether the topic is automatically created when subscribing to a non-existent topic. A topic will be auto-created only if this configuration is set to `true` and auto-topic creation is enabled on the broker using `auto.create.topics.enable`; otherwise auto-topic creation is not permitted. 
 
@@ -320,7 +321,7 @@ The minimum amount of data the server should return for a fetch request. If insu
 
 The identifier of the group this consumer belongs to. Consumer group is a single logical subscriber that happens to be made up of multiple processors. Messages in a topic will be distributed to all Logstash instances with the same `group_id`.
 
-::::{note} 
+::::{note}
 In cases when multiple inputs are being used in a single pipeline, reading from different topics, it’s essential to set a different `group_id => ...` for each input. Setting a unique `client_id => ...` is also recommended.
 ::::
 
@@ -333,12 +334,12 @@ In cases when multiple inputs are being used in a single pipeline, reading from 
 
 The static membership identifier for this Logstash Kafka consumer. Static membership feature was introduced in [KIP-345](https://cwiki.apache.org/confluence/display/KAFKA/KIP-345%3A+Introduce+static+membership+protocol+to+reduce+consumer+rebalances), available under Kafka property `group.instance.id`. Its purpose is to avoid rebalances in situations in which a lot of data has to be forwarded after a consumer goes offline. This feature mitigates cases where the service state is heavy and the rebalance of one topic partition from instance A to B would cause a huge amount of data to be transferred. A client that goes offline/online frequently can avoid frequent and heavy rebalances by using this option.
 
-::::{note} 
+::::{note}
 The `group_instance_id` setting must be unique across all the clients belonging to the same [`group_id`](plugins-inputs-kafka.md#plugins-inputs-kafka-group_id). Otherwise, another client connecting with same `group.instance.id` value would cause the oldest instance to be disconnected. You can set this value to use information such as a hostname, an IP, or anything that uniquely identifies the client application.
 ::::
 
 
-::::{note} 
+::::{note}
 In cases when multiple threads are configured and `consumer_threads` is greater than one, a suffix is appended to the `group_instance_id` to avoid collisions.
 ::::
 
@@ -670,7 +671,7 @@ Use either the Schema Registry config option or the [`value_deserializer_class`]
 * Value can be either of: `auto`, `skip`
 * Default value is `"auto"`
 
-::::{note} 
+::::{note}
 Under most circumstances, the default setting of `auto` should not need to be changed.
 ::::
 
@@ -783,7 +784,7 @@ A topic regular expression pattern to subscribe to.
 
 Filtering by a regular expression is done by retrieving the full list of topic names from the broker and applying the pattern locally. When used with brokers with a lot of topics this operation could be very slow, especially if there are a lot of consumers.
 
-::::{note} 
+::::{note}
 When the broker has some topics configured with ACL rules and they miss the DESCRIBE permission, then the subscription happens but on the broker side it is logged that the subscription of some topics was denied to the configured user.
 ::::
 
@@ -850,7 +851,7 @@ input {
 }
 ```
 
-::::{note} 
+::::{note}
 Variable substitution in the `id` field only supports environment variables and does not support the use of values from the secret store.
 ::::
 

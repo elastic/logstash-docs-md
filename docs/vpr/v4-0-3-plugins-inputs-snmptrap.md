@@ -48,7 +48,7 @@ Resulting `message` field resembles:
 {"agent_addr":"192.168.1.40", "generic_trap":6, "specific_trap":15511, "enterprise":"1.3.6.1.2.1.1.1", "variable_bindings":{"1.3.6.1.2.1.1.2.0":"test one", "1.3.6.1.2.1.1.1.0":"test two"}, "type":"V1TRAP", "community":"public", "version":1, "timestamp":1500}
 ```
 
-::::{admonition} Migrating to `logstash-integration-snmp` from stand-alone `input-snmptrap`
+::::{admonition} Migrating to logstash-integration-snmp from stand-alone input-snmptrap
 The `logstash-input-snmptrap` plugin is now a component of the `logstash-integration-snmp` plugin. This integrated plugin package provides better alignment in snmp processing, better resource management, easier package maintenance, and a smaller installation footprint.
 
 Before you install the new integration, be aware of [behavioral and mapping differences](/lsr/plugins-integrations-snmp.md#plugins-integrations-snmp-migration) between current stand-alone plugins and the new versions included in `integration-snmp`.

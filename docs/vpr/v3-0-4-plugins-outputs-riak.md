@@ -66,12 +66,15 @@ Bucket properties (NYI) Logstash hash of properties for the bucket i.e.
         "w" => "one"
         "dw", "one
      }
-or
-[source,ruby]
-    bucket_props => { "n_val" => "3" }
-Properties will be passed as-is
 ```
 
+or
+
+```ruby
+    bucket_props => { "n_val" => "3" }
+```
+
+Properties will be passed as-is
 
 ### `enable_search` [v3.0.4-plugins-outputs-riak-enable_search]
 

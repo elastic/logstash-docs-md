@@ -24,17 +24,34 @@ Using this input you can receive events from Elastic Serverless Forwarder over h
 
 ### Minimum Configuration [plugins-inputs-elastic_serverless_forwarder-ext-field]
 
-| SSL Enabled | SSL Disabled |
-| --- | --- |
-| ```<br>input {<br>  elastic_serverless_forwarder {<br>    port => 8080<br>    ssl_certificate => "/path/to/logstash.crt"<br>    ssl_key => "/path/to/logstash.key"<br>  }<br>}<br>```<br> | ```<br>input {<br>  elastic_serverless_forwarder {<br>    port => 8080<br>    ssl_enabled => false<br>  }<br>}<br>```<br> |
+#### SSL Enabled
 
+```
+input {
+    elastic_serverless_forwarder {
+      port => 8080
+    ssl_certificate => "/path/to/logstash.crt"
+    ssl_key => "/path/to/logstash.key"
+  }
+}
+```
 
+#### SSL Disabled
+
+```
+input {
+    elastic_serverless_forwarder {
+      port => 8080
+    ssl_enabled => false
+  }
+}
+```
 
 ## Enrichment [plugins-inputs-elastic_serverless_forwarder-enrichment]
 
 This input provides *minimal enrichment* on events, and avoids including information about itself, the client from which it received the data, or about the original event as-decoded from the request.
 
-::::{note} 
+::::{note}
 Senders are advised to use care with respect to fields that are [reserved in Logstash](https://www.elastic.co/guide/en/logstash/current/processing.html#reserved-fields). ESF sends the Logstash-required `@timestamp` field by default, but if this value is missing it will be populated with the current time.
 ::::
 
@@ -59,7 +76,7 @@ By default, this plugin does not request certificates from clients during SSL ne
 
 It can be configured to either request or require client certificates using [`ssl_client_authentication`](plugins-inputs-elastic_serverless_forwarder.md#plugins-inputs-elastic_serverless_forwarder-ssl_client_authentication), which often also requires configuring it with a list of [`ssl_certificate_authorities`](plugins-inputs-elastic_serverless_forwarder.md#plugins-inputs-elastic_serverless_forwarder-ssl_certificate_authorities) to trust. When validating a certificate that is presented, [`ssl_verification_mode`](plugins-inputs-elastic_serverless_forwarder.md#plugins-inputs-elastic_serverless_forwarder-ssl_verification_mode) controls how certificates are verified.
 
-::::{note} 
+::::{note}
 ESF does not currently support *presenting* client certificates, so requesting or requiring clients to present identity is only useful when combined with an SSL-terminating proxy.
 ::::
 
@@ -78,7 +95,7 @@ This plugin exposes several advanced SSL configurations:
 
 You can configure this plugin to authenticate requests using HTTP Basic authentication by configuring [`auth_basic_username`](plugins-inputs-elastic_serverless_forwarder.md#plugins-inputs-elastic_serverless_forwarder-auth_basic_username) and [`auth_basic_password`](plugins-inputs-elastic_serverless_forwarder.md#plugins-inputs-elastic_serverless_forwarder-auth_basic_password).
 
-::::{note} 
+::::{note}
 Basic Authentication is not a substitute for SSL, as it provides neither secrecy nor security on its own. When used with SSL disabled, HTTP Basic credentials are transmitted in effectively clear-text and can be easily recovered by an adversary.
 ::::
 
@@ -119,7 +136,7 @@ Here are some tips for configuring the {{esf}} input to work with the elasticsea
 
 This plugin supports the following configuration options plus the [Common options](plugins-inputs-elastic_serverless_forwarder.md#plugins-inputs-elastic_serverless_forwarder-common-options) described later.
 
-::::{note} 
+::::{note}
 As of version `2.0.0` of this plugin, a previously deprecated SSL setting has been removed. Please check out [Elasticsearch Output Obsolete Configuration Options](plugins-inputs-elastic_serverless_forwarder.md#plugins-inputs-elastic_serverless_forwarder-obsolete-options) for details.
 ::::
 
@@ -247,7 +264,7 @@ This is an advanced SSL configuration.
 
 SSL key to use.
 
-::::{note} 
+::::{note}
 This key need to be in the PKCS8 format, you can convert it with [OpenSSL](https://www.openssl.org/docs/man1.1.1/man1/openssl-pkcs8.md) for more information.
 ::::
 
@@ -273,7 +290,7 @@ This is an advanced SSL configuration.
 
 For Java 8 `'TLSv1.3'` is supported  only since ***8u262*** (AdoptOpenJDK), but requires that you set the `LS_JAVA_OPTS="-Djdk.tls.client.protocols=TLSv1.3"` system property in Logstash.
 
-::::{note} 
+::::{note}
 If you configure the plugin to use `'TLSv1.1'` on any recent JVM, such as the one packaged with Logstash, the protocol is disabled by default and needs to be enabled manually by changing `jdk.tls.disabledAlgorithms` in the **$JDK_HOME/conf/security/java.security** configuration file. That is, `TLSv1.1` needs to be removed from the list.
 ::::
 
@@ -291,7 +308,7 @@ If you configure the plugin to use `'TLSv1.1'` on any recent JVM, such as the on
 
 When [`ssl_client_authentication`](plugins-inputs-elastic_serverless_forwarder.md#plugins-inputs-elastic_serverless_forwarder-ssl_client_authentication) causes a client to present a certificate, this setting controls how that certificate is verified.
 
-::::{note} 
+::::{note}
 Client identity is not typically validated using SSL because the receiving server only has access to the client’s outbound-ip, which is not always constant and is frequently not represented in the certificate’s subject or subjectAltNames extensions. For more information, see [RFC2818 § 3.2 (HTTP over TLS — Client Identity)](https://www.rfc-editor.org/rfc/rfc2818#section-3.1)
 ::::
 
@@ -300,7 +317,7 @@ Client identity is not typically validated using SSL because the receiving serve
 
 ## Elasticsearch Output Obsolete Configuration Options [plugins-inputs-elastic_serverless_forwarder-obsolete-options]
 
-::::{warning} 
+::::{warning}
 As of version `2.0.0` of this plugin, some configuration options have been replaced. The plugin will fail to start if it contains any of these obsolete options.
 ::::
 
@@ -353,7 +370,7 @@ input {
 }
 ```
 
-::::{note} 
+::::{note}
 Variable substitution in the `id` field only supports environment variables and does not support the use of values from the secret store.
 ::::
 

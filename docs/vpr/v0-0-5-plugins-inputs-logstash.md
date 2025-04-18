@@ -32,9 +32,28 @@ Sending events to this input by *any* means other than `plugins-outputs-logstash
 
 ### Minimum Configuration [v0.0.5-plugins-inputs-logstash-minimum-config]
 
-| SSL Enabled | SSL Disabled |
-| --- | --- |
-| ```shell<br>input {<br>  logstash {<br>    ssl_keystore_path<br>         => "/path/to/logstash.p12"<br>    ssl_keystore_password<br>         => "${PASS}"<br>  }<br>}<br>```<br> | ```shell<br>input {<br>  logstash {<br>    ssl_enabled => false<br>  }<br>}<br>```<br> |
+#### SSL Enabled
+
+```shell
+input {
+  logstash {
+    ssl_keystore_path
+         => "/path/to/logstash.p12"
+    ssl_keystore_password
+         => "${PASS}"
+  }
+}
+```
+
+#### SSL Disabled
+
+```shell
+input {
+  logstash {
+    ssl_enabled => false
+  }
+}
+```
 
 
 ### Configuration Concepts [v0.0.5-plugins-inputs-logstash-config-binding]

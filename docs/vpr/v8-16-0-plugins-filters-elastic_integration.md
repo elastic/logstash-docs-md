@@ -30,7 +30,7 @@ Use of this plugin requires an active Elastic Enterprise [subscription](https://
 
 Use this filter to process Elastic integrations powered by {{es}} Ingest Node in {{ls}}.
 
-::::{admonition} Extending Elastic integrations with {ls}
+::::{admonition} Extending Elastic integrations with {{ls}}
 This plugin can help you take advantage of the extensive, built-in capabilities of [Elastic {{integrations}}\]\(([^:]+)://reference/index.md)—​such as managing data collection, transformation, and visualization—​and then use {{ls}} for additional data processing and output options. For more info about extending Elastic integrations with {{ls}}, check out [Using {{ls}} with Elastic Integrations](logstash://reference/using-logstash-with-elastic-integrations.md).
 
 ::::
@@ -52,7 +52,7 @@ Events that *fail* ingest pipeline processing will be tagged with `_ingest_pipel
 * This plugin requires Java 17 minimum with {{ls}} `8.x` versions and Java 21 minimum with {{ls}} `9.x` versions.
 * When you upgrade the {{stack}}, upgrade {{ls}} (or this plugin specifically) *before* you upgrade {{kib}}. (Note that this requirement is a departure from the typical {{stack}} [installation order](docs-content://get-started/the-stack.md#installation-order).)
 
-    The {{es}}-{ls}-{{kib}} installation order ensures the best experience with {{agent}}-managed pipelines, and embeds functionality from a version of {{es}} Ingest Node that is compatible with the plugin version (`major`.`minor`).
+    The {{es}}-{{ls}}-{{kib}} installation order ensures the best experience with {{agent}}-managed pipelines, and embeds functionality from a version of {{es}} Ingest Node that is compatible with the plugin version (`major`.`minor`).
 
 
 

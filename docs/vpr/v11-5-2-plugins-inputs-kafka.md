@@ -261,7 +261,8 @@ Option to add Kafka metadata like topic, message size and header key values to t
 
 ### `auto_create_topics`  [v11.5.2-plugins-inputs-kafka-auto_create_topics]
 
-  * Value type is [boolean](logstash://reference/configuration-file-structure.md#boolean) * Default value is `true`
+* Value type is [boolean](logstash://reference/configuration-file-structure.md#boolean)
+* Default value is `true`
 
 Controls whether the topic is automatically created when subscribing to a non-existent topic. A topic will be auto-created only if this configuration is set to `true` and auto-topic creation is enabled on the broker using `auto.create.topics.enable`; otherwise auto-topic creation is not permitted. 
 

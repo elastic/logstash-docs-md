@@ -104,7 +104,7 @@ Defines the format of the metric string. The placeholder *** will be replaced wi
     metrics_format => "foo.bar.*.sum"
 ```
 
-::::{note} 
+::::{note}
 If no metrics_format is defined, the name of the metric will be used as fallback.
 ::::
 
@@ -115,9 +115,7 @@ If no metrics_format is defined, the name of the metric will be used as fallback
 * Value type is [string](value-types.md#string)
 * Default value is `"."`
 
-When hashes are passed in as values they are broken out into a dotted notation For instance if you configure this plugin with # [source,ruby] metrics ⇒ "mymetrics"
-
-and "mymetrics" is a nested hash of *{a ⇒ 1, b ⇒ { c ⇒ 2 }}* this plugin will generate two metrics: a ⇒ 1, and b.c ⇒ 2 . If you’ve specified a *metrics_format* it will respect that, but you still may want control over the separator within these nested key names. This config setting changes the separator from the *.* default.
+When hashes are passed in as values they are broken out into a dotted notation For instance if you configure this plugin with `metrics ⇒ "mymetrics` and "mymetrics" is a nested hash of *{a ⇒ 1, b ⇒ { c ⇒ 2 }}* this plugin will generate two metrics: a ⇒ 1, and b.c ⇒ 2 . If you’ve specified a *metrics_format* it will respect that, but you still may want control over the separator within these nested key names. This config setting changes the separator from the *.* default.
 
 
 ### `port` [plugins-outputs-graphite-port]
@@ -194,7 +192,7 @@ output {
 }
 ```
 
-::::{note} 
+::::{note}
 Variable substitution in the `id` field only supports environment variables and does not support the use of values from the secret store.
 ::::
 

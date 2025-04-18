@@ -28,7 +28,7 @@ Use of this plugin requires an active Elastic Enterprise [subscription](https://
 
 Use this filter to process Elastic integrations powered by {{es}} Ingest Node in {{ls}}.
 
-::::{admonition} Extending Elastic integrations with {ls}
+::::{admonition} Extending Elastic integrations with {{ls}}
 This plugin can help you take advantage of the extensive, built-in capabilities of [Elastic {{integrations}}](https://docs.elastic.co/en/integrations)—​such as managing data collection, transformation, and visualization—​and then use {{ls}} for additional data processing and output options. For more info about extending Elastic integrations with {{ls}}, check out [Using {{ls}} with Elastic Integrations](logstash://reference/using-logstash-with-elastic-integrations.md).
 
 ::::
@@ -38,7 +38,7 @@ When you configure this filter to point to an {{es}} cluster, it detects which i
 
 It then loads that pipeline’s definition from {{es}} and run that pipeline inside Logstash without transmitting the event to {{es}}. Events that are successfully handled by their ingest pipeline will have `[@metadata][target_ingest_pipeline]` set to `_none` so that any downstream {{es}} output in the Logstash pipeline will avoid running the event’s default pipeline *again* in {{es}}.
 
-::::{note} 
+::::{note}
 Some multi-pipeline configurations such as logstash-to-logstash over http(s) do not maintain the state of `[@metadata]` fields. In these setups, you may need to explicitly configure your downstream pipeline’s {{es}} output with `pipeline => "_none"` to avoid re-running the default pipeline.
 ::::
 
@@ -50,7 +50,7 @@ Events that *fail* ingest pipeline processing will be tagged with `_ingest_pipel
 * This plugin requires Java 17 minimum with {{ls}} `8.x` versions and Java 21 minimum with {{ls}} `9.x` versions.
 * When you upgrade the {{stack}}, upgrade {{ls}} (or this plugin specifically) *before* you upgrade {{kib}}. (Note that this requirement is a departure from the typical {{stack}} [installation order](https://www.elastic.co/guide/en/elastic-stack/current/installing-elastic-stack.md#install-order-elastic-stack).)
 
-    The {{es}}-{ls}-{{kib}} installation order ensures the best experience with {{agent}}-managed pipelines, and embeds functionality from a version of {{es}} Ingest Node that is compatible with the plugin version (`major`.`minor`).
+    The {{es}}-{{ls}}-{{kib}} installation order ensures the best experience with {{agent}}-managed pipelines, and embeds functionality from a version of {{es}} Ingest Node that is compatible with the plugin version (`major`.`minor`).
 
 
 
@@ -119,7 +119,7 @@ You can configure this plugin to present authentication credentials to {{es}} in
 * Cloud Auth: (see [`cloud_auth`](plugins-filters-elastic_integration.md#plugins-filters-elastic_integration-cloud_auth))
 * HTTP Basic Auth: (see [`username`](plugins-filters-elastic_integration.md#plugins-filters-elastic_integration-username) and [`password`](plugins-filters-elastic_integration.md#plugins-filters-elastic_integration-password))
 
-::::{note} 
+::::{note}
 Your request credentials are only as secure as the connection they are being passed over. They provide neither privacy nor secrecy on their own, and can easily be recovered by an adversary when SSL is disabled.
 ::::
 
@@ -136,7 +136,7 @@ This plugin communicates with Elasticsearch to resolve events into pipeline defi
 | `read_pipeline` | A read-only get and simulate access to ingest pipeline. It is required when plugin reads {{es}} ingest pipeline definitions. |
 | `manage_index_templates` | All operations on index templates privilege. It is required when plugin resolves default pipeline based on event data stream name. |
 
-::::{note} 
+::::{note}
 This plugin cannot determine if an anonymous user has the required privileges when it connects to an {{es}} cluster that has security features disabled or when the user does not provide credentials. The plugin starts in an unsafe mode with a runtime error indicating that API permissions are insufficient, and prevents events from being processed by the ingest pipeline.
 
 To avoid these issues, set up user authentication and ensure that security in {{es}} is enabled (default).
@@ -308,7 +308,7 @@ This plugin will discover all regular files with the `.mmdb` suffix in the provi
 * `Enterprise`
 * `Isp`
 
-::::{note} 
+::::{note}
 Most integrations rely on databases being present named *exactly*:
 
 * `GeoLite2-ASN.mmdb`,
@@ -601,7 +601,7 @@ Add a unique `ID` to the plugin configuration. If no ID is specified, Logstash w
     }
 ```
 
-::::{note} 
+::::{note}
 Variable substitution in the `id` field only supports environment variables and does not support the use of values from the secret store.
 ::::
 

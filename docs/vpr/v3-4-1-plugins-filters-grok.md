@@ -124,7 +124,9 @@ Then use the `patterns_dir` setting in this plugin to tell logstash where your c
 
 ```ruby
     Jan  1 06:25:43 mailserver14 postfix/cleanup[21403]: BEF25A72965: message-id=<20130101142543.5828399CCAF@mailserver14.example.com>
-[source,ruby]
+```
+
+```ruby
     filter {
       grok {
         patterns_dir => ["./patterns"]

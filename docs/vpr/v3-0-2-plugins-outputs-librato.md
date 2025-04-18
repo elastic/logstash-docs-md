@@ -69,8 +69,11 @@ Example:
       "title" => "Logstash event on %{host}"
       "name" => "logstash_stream"
   }
+```
+
 or
-[source,ruby]
+
+```ruby
    {
       "title" => "Logstash event"
       "description" => "%{message}"
@@ -141,18 +144,20 @@ Example:
         "source" => "%{host}"
         "name" => "apache_bytes"
     }
+```
+
 Additionally, you can override the `measure_time` for the event. Must be a unix timestamp:
-[source,ruby]
+
+```ruby
     {
         "value" => "%{bytes_received}"
         "source" => "%{host}"
         "name" => "apache_bytes"
         "measure_time" => "%{my_unixtime_field}
     }
-Default is to use the event's timestamp
 ```
 
-
+Default is to use the event's timestamp
 
 ## Common options [v3.0.2-plugins-outputs-librato-common-options]
 
