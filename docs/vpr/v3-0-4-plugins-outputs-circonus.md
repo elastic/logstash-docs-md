@@ -51,8 +51,11 @@ Example:
 
 ```ruby
   ["title":"Logstash event", "description":"Logstash event for %{host}"]
+```
+
 or
-[source,ruby]
+
+```ruby
   ["title":"Logstash event", "description":"Logstash event for %{host}", "parent_id", "1"]
 ```
 

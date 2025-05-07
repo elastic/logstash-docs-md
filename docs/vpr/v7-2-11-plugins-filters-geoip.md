@@ -164,7 +164,7 @@ When this plugin is run with [`ecs_compatibility`](v7-2-11-plugins-filters-geoip
 | `continent_code` | `[geo][continent_code]` | `NA` |
 | `continent_name` | `[geo][continent_name]` | `North America` |
 | `country_code2` | `[geo][country_iso_code]` | `US` |
-| `country_code3` | *N/A* | `US`<br>                                                    *maintained for legacy                                                    support, but populated                                                    with 2-character country                                                    code* |
+| `country_code3` | *N/A* | `US`<br>*maintained for legacy                                                    support, but populated with 2-character country code* |
 | `postal_code` | `[geo][postal_code]` | `98106` |
 | `region_name` | `[geo][region_name]` | `Washington` |
 | `region_code` | `[geo][region_code]` | `WA` |

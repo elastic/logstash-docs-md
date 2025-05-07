@@ -30,8 +30,7 @@ Operationally, for each event, the value from the `field` setting is tested agai
 
 Example:
 
-```
-[source,ruby]
+```ruby
     filter {
       translate {
         field => "[http_status]"

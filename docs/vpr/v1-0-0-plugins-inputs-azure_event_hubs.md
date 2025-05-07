@@ -60,7 +60,7 @@ Find the connection string to Blob Storage here: [Azure Portal](https://portal.a
 
 Here are some guidelines to help you avoid data conflicts that can cause lost events.
 
-* **Create a {{ls}} consumer group.** Create a new consumer group specifically for {{ls}}}. Do not use the $default or any other consumer group that might already be in use. Reusing consumer groups among non-related consumers can cause expected behavior and possibly lost events. All [ls] instances should use the same consumer group so that they can work together for processing events.
+* **Create a {{ls}} consumer group.** Create a new consumer group specifically for {{ls}}. Do not use the $default or any other consumer group that might already be in use. Reusing consumer groups among non-related consumers can cause expected behavior and possibly lost events. All [ls] instances should use the same consumer group so that they can work together for processing events.
 * **Avoid overwriting offset with multiple Event Hubs.** The offsets (position) of the Event Hubs are stored in the configured Azure Blob store. The Azure Blob store uses paths like a file system to store the offsets. If the paths between multiple Event Hubs overlap, then the offsets may be stored incorrectly. To avoid duplicate file paths, use the advanced configuration model and make sure that at least one of these options is different per Event Hub:
 
     * storage_connection

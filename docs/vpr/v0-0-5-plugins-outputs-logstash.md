@@ -32,9 +32,27 @@ Sending events to *any* destination other than a `logstash-input` plugin is neit
 
 ### Minimum Configuration [v0.0.5-plugins-outputs-logstash-minimum-config]
 
-| SSL Enabled | SSL Disabled |
-| --- | --- |
-| ```shell<br>output {<br>  logstash {<br>    hosts => "10.0.0.123:9801"<br>  }<br>}<br>```<br> | ```shell<br>output {<br>  logstash {<br>    hosts => "10.0.0.123:9801"<br>    ssl_enabled<br>         => false<br>  }<br>}<br>```<br> |
+#### SSL Enabled
+
+```shell
+output {
+  logstash {
+    hosts => "10.0.0.123:9801"
+  }
+}
+```
+
+#### SSL Disabled
+
+```shell
+output {
+  logstash {
+    hosts => "10.0.0.123:9801"
+    ssl_enabled
+         => false
+  }
+}
+```
 
 
 ### Configuration Concepts [v0.0.5-plugins-outputs-logstash-config-connecting]

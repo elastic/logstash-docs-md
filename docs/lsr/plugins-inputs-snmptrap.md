@@ -18,7 +18,7 @@ For other versions, see the [Versioned plugin docs](/vpr/input-snmptrap-index.md
 
 For questions about the plugin, open a topic in the [Discuss](http://discuss.elastic.co) forums. For bugs or feature requests, open an issue in [Github](https://github.com/logstash-plugins/logstash-integration-snmp). For the list of Elastic supported plugins, please consult the [Elastic Support Matrix](https://www.elastic.co/support/matrix#logstash_plugins).
 
-::::{admonition} Migrating to `logstash-integration-snmp` from stand-alone `input-snmptrap`
+::::{admonition} Migrating to logstash-integration-snmp from stand-alone input-snmptrap
 The `logstash-input-snmptrap` plugin is now a component of the `logstash-integration-snmp` plugin which is bundled with {{ls}} 8.15.0 by default. This integrated plugin package provides better alignment in snmp processing, better resource management, easier package maintenance, and a smaller installation footprint.
 
 Before you upgrade to {{ls}} 8.15.0, be aware of [behavioral and mapping differences](https://www.elastic.co/guide/en/logstash/current/plugins-integrations-snmp.md#plugins-integrations-snmp-migration) between current stand-alone plugins and the new versions included in `integration-snmp`. If you need to maintain current mappings for the `input-snmptrap` plugin, you have options to [preserve existing behavior](https://www.elastic.co/guide/en/logstash/current/plugins-integrations-snmp.html#plugins-integrations-snmp-input-snmptrap-compat).
@@ -410,7 +410,7 @@ input {
 }
 ```
 
-::::{note} 
+::::{note}
 Variable substitution in the `id` field only supports environment variables and does not support the use of values from the secret store.
 ::::
 

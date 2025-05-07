@@ -26,9 +26,28 @@ Using this input you can receive events from Elastic Serverless Forwarder over h
 
 ### Minimum Configuration [v0.1.4-plugins-inputs-elastic_serverless_forwarder-ext-field]
 
-| SSL Enabled | SSL Disabled |
-| --- | --- |
-| ```shell<br>input {<br>  elastic_serverless_forwarder {<br>    port => 8080<br>    ssl_certificate => "/path/to/logstash.crt"<br>    ssl_key => "/path/to/logstash.key"<br>  }<br>}<br>```<br> | ```shell<br>input {<br>  elastic_serverless_forwarder {<br>    port => 8080<br>    ssl_enabled => false<br>  }<br>}<br>```<br> |
+#### SSL Enabled
+
+```shell
+input {
+  elastic_serverless_forwarder {
+    port => 8080
+    ssl_certificate => "/path/to/logstash.crt"
+    ssl_key => "/path/to/logstash.key"
+  }
+}
+```
+
+#### SSL Disabled
+
+```shell
+input {
+  elastic_serverless_forwarder {
+    port => 8080
+    ssl_enabled => false
+  }
+}
+```
 
 ::::{admonition} Technical Preview
 This Elastic Serverless Forwarder input plugin is part of a *Technical Preview*, which means that both configuration options and implementation details are subject to change in minor releases without being preceded by deprecation warnings.

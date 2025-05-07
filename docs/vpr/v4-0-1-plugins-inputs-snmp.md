@@ -44,7 +44,7 @@ The SNMP input polls network devices using Simple Network Management Protocol (S
 
 The SNMP input plugin supports SNMP v1, v2c, and v3 over UDP and TCP transport protocols.
 
-::::{admonition} Migrating to `logstash-integration-snmp` from stand-alone `input-snmp`
+::::{admonition} Migrating to logstash-integration-snmp from stand-alone input-snmp
 The `logstash-input-snmp` plugin is now a component of the `logstash-integration-snmp` plugin. This integrated plugin package provides better alignment in snmp processing, better resource management, easier package maintenance, and a smaller installation footprint.
 
 Before you install the new integration, be aware of [behavioral and mapping differences](/lsr/plugins-integrations-snmp.md#plugins-integrations-snmp-migration) between current stand-alone plugins and the new versions included in `integration-snmp`.

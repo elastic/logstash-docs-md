@@ -23,17 +23,35 @@ For questions about the plugin, open a topic in the [Discuss](http://discuss.ela
 
 Listen for events that are sent by a [Logstash output plugin](plugins-outputs-logstash.md) in a pipeline that may be in another process or on another host. The upstream output must have a TCP route to the port (defaults to 9800) on an interface that this plugin is bound to.
 
-::::{note} 
+::::{note}
 Sending events to this input by *any* means other than `plugins-outputs-logstash` is neither advised nor supported. We will maintain cross-compatibility with any two supported versions of output/input pair and reserve the right to change details such as protocol and encoding.
 ::::
 
 
 ### Minimum Configuration [plugins-inputs-logstash-minimum-config]
 
-| SSL Enabled | SSL Disabled |
-| --- | --- |
-| ```<br>input {<br>  logstash {<br>    ssl_keystore_path<br>         => "/path/to/logstash.p12"<br>    ssl_keystore_password<br>         => "${PASS}"<br>  }<br>}<br>```<br> | ```<br>input {<br>  logstash {<br>    ssl_enabled => false<br>  }<br>}<br>```<br> |
+#### SSL Enabled
 
+```
+input {
+  logstash {
+    ssl_keystore_path
+         => "/path/to/logstash.p12"
+    ssl_keystore_password
+         => "${PASS}"
+  }
+}
+```
+
+#### SSL Disabled
+
+```
+input {
+  logstash {
+    ssl_enabled => false
+  }
+}
+```
 
 ### Configuration Concepts [plugins-inputs-logstash-config-binding]
 
@@ -56,7 +74,7 @@ Certificates that are presented by clients are validated by default using the sy
 
 * A PEM-formatted list of trusted certificate authorities (see [`ssl_certificate_authorities`](plugins-inputs-logstash.md#plugins-inputs-logstash-ssl_certificate_authorities))
 
-::::{note} 
+::::{note}
 Client-certificate verification does *not* verify identity claims on the presented certificate, such as whether the certificate includes a Subject Alt Name matching the IP address from which the client is connecting.
 ::::
 
@@ -66,7 +84,7 @@ Client-certificate verification does *not* verify identity claims on the present
 
 You can also configure this plugin to require a specific username/password be provided by configuring [`username`](plugins-inputs-logstash.md#plugins-inputs-logstash-username) and [`password`](plugins-inputs-logstash.md#plugins-inputs-logstash-password). Doing so requires connecting `logstash-output` plugin clients to provide matching `username` and `password`.
 
-::::{note} 
+::::{note}
 when SSL is disabled, data and credentials will be received in clear-text.
 ::::
 
@@ -210,7 +228,7 @@ A password or passphrase of the [`ssl_key`](plugins-inputs-logstash.md#plugins-i
 
 Username for password-based authentication. When this input plugin is configured with a `username`, it also requires a `password`, and any upstream `logstash-output` plugin must also be configured with a matching `username`/`password` pair.
 
-::::{note} 
+::::{note}
 when SSL is disabled, credentials will be transmitted in clear-text.
 ::::
 
@@ -260,7 +278,7 @@ input {
 }
 ```
 
-::::{note} 
+::::{note}
 Variable substitution in the `id` field only supports environment variables and does not support the use of values from the secret store.
 ::::
 

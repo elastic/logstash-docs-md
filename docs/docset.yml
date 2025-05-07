@@ -26,3 +26,4 @@ subs:
   ilm-init:   "ILM"
   dlm:   "data lifecycle management"
   dlm-init:   "DLM"
+  ess-leadin: "You can run Elasticsearch on your own hardware or use our hosted Elasticsearch Service that is available on AWS, GCP, and Azure. Try the Elasticsearch Service for free: https://cloud.elastic.co/registration."

@@ -251,7 +251,7 @@ This plugin supports the following configuration options plus the [Common option
 * Value type is [password](logstash://reference/configuration-file-structure.md#password)
 * There is no default value for this setting.
 
-The encoded form of an API key that is used to authenticate this plugin to {es}
+The encoded form of an API key that is used to authenticate this plugin to {{es}}
 
 
 ### `cloud_auth` [v0.0.3-plugins-filters-elastic_integration-cloud_auth]
