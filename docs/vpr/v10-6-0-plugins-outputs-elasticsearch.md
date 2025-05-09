@@ -40,7 +40,7 @@ If you are using a custom [`template`](v10-6-0-plugins-outputs-elasticsearch.md#
 ::::
 
 
-### Hosted {{es}} Service on Elastic Cloud [_hosted_es_service_on_elastic_cloud_66]
+### {{ech}} [_hosted_es_service_on_elastic_cloud_66]
 
 You can run Elasticsearch on your own hardware, or use our [hosted {{es}} Service](https://www.elastic.co/cloud/elasticsearch-service) on Elastic Cloud. The Elasticsearch Service is available on AWS, Google Cloud Platform, and Microsoft Azure. [Try the {{es}} Service for free](https://cloud.elastic.co/registration?page=docs&placement=docs-body).
 
