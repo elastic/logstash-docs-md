@@ -11,6 +11,7 @@ toc:
   - toc: vpr
 subs:
   logstash-ref:   "https://www.elastic.co/guide/en/logstash/current"
+  ech:   "Elastic Cloud Hosted"
   esf:   "Elastic Serverless Forwarder"
   serverless-full:   "Elastic Cloud Serverless"
   serverless-short:   "Serverless"
@@ -26,4 +27,4 @@ subs:
   ilm-init:   "ILM"
   dlm:   "data lifecycle management"
   dlm-init:   "DLM"
-  ess-leadin: "You can run Elasticsearch on your own hardware or use our hosted Elasticsearch Service that is available on AWS, GCP, and Azure. Try the Elasticsearch Service for free: https://cloud.elastic.co/registration."
+  ess-leadin: "You can run Elasticsearch on your own hardware or use Elastic Cloud Hosted, available on AWS, GCP, and Azure. Try Elastic Cloud Hosted for free: https://cloud.elastic.co/registration."
