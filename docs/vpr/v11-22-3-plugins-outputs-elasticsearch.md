@@ -56,7 +56,7 @@ The logstash-output-elasticsearch `hosts` setting on {{serverless-short}} defaul
 For more info on sending data from {{ls}} to {{es-serverless}}, check out the [{{es-serverless}} docs](docs-content://solutions/search.md).
 
 
-## {{ech}} [v11.22.3-plugins-outputs-elasticsearch-ess]
+## {{ls}} to {{ech}} [v11.22.3-plugins-outputs-elasticsearch-ess]
 
 {{ess-leadin}}
 

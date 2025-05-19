@@ -38,7 +38,7 @@ If you are using a custom [`template`](v11-6-0-plugins-outputs-elasticsearch.md#
 ::::
 
 
-### {{ech}} [_hosted_es_service_on_elastic_cloud_36]
+### {{ls}} to {{ech}} [_hosted_es_service_on_elastic_cloud_36]
 
 {{ess-leadin}}
 
