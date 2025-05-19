@@ -54,7 +54,7 @@ The logstash-output-elasticsearch `hosts` setting on {{serverless-short}} defaul
 For more info on sending data from {{ls}} to {{es-serverless}}, check out the [{{es-serverless}} docs](https://docs.elastic.co/serverless/elasticsearch/what-is-elasticsearch-serverless).
 
 
-## Hosted {{es}} Service on Elastic Cloud [plugins-outputs-elasticsearch-ess]
+## {{ls}} to {{ech}} [plugins-outputs-elasticsearch-ess]
 
 {{ess-leadin}}
 
