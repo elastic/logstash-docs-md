@@ -7,9 +7,9 @@ mapped_pages:
 # Kafka Integration Plugin [plugins-integrations-kafka]
 
 
-* Plugin version: v11.6.0
-* Released on: 2025-01-07
-* [Changelog](https://github.com/logstash-plugins/logstash-integration-kafka/blob/v11.6.0/CHANGELOG.md)
+* Plugin version: v11.6.1
+* Released on: 2025-05-08
+* [Changelog](https://github.com/logstash-plugins/logstash-integration-kafka/blob/v11.6.1/CHANGELOG.md)
 
 For other versions, see the [Versioned plugin docs](/vpr/integration-kafka-index.md).
 
