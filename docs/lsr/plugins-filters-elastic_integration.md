@@ -258,15 +258,17 @@ If you encounter `No pipeline resolved for event ...` messages in the debug logs
 To further diagnose and resolve the issue, verify whether the data stream's index settings include a `default_pipeline` or `final_pipeline` configuration.
 You can inspect the index settings by running a `POST _index_template/_simulate_index/{type}-{dataset}-{namespace}` query in the {{kib}} Dev Tools.
 Make sure to replace `{type}-{dataset}-{namespace}` with values corresponding to your data stream.
-For further guidance, we recommend exploring {fleet-guide}/integrations.html[Manage Elastic Agent Integrations], {es} {ref}/ingest.html#pipelines-for-fleet-elastic-agent[Ingest pipelines for fleet] and {integrations-docs}[Elastic {integrations}] resources.
+
+For further guidance, we recommend exploring [Manage Elastic Agent Integrations](docs-content://reference/fleet/manage-integrations.md), [Ingest pipelines for Fleet](docs-content://manage-data/ingest/), and [Elastic Integrations](integration-docs://index.md) topics.
 
 **Ingest pipeline does not exist**
 
 If you notice `pipeline not found: ...` messages in the debug logs or `Pipeline {pipeline-name} could not be loaded` warning messages, it indicates that the plugin has successfully resolved the ingest pipeline from `default_pipeline` or `final_pipeline`, but the specified pipeline does not exist.
-To confirm whether pipeline exists, run a `GET _ingest/pipeline/{ingest-pipeline-name}` query in the {{kib}}} Dev Tools console.
-For further guidance, we recommend exploring {fleet-guide}/integrations.html[Manage Elastic Agent Integrations], {es} {ref}/ingest.html#pipelines-for-fleet-elastic-agent[Ingest pipelines for fleet] and {integrations-docs}[Elastic {integrations}] resources.
+To confirm whether a pipeline exists, run a `GET _ingest/pipeline/{ingest-pipeline-name}` query in the {{kib}}} Dev Tools console.
 
-### Ingest Pipeline Creation Errors[plugins-filters-elastic_integration-ingest-pipeline-creation
+For further guidance, we recommend exploring [Manage Elastic Agent Integrations](docs-content://reference/fleet/manage-integrations.md), [Ingest pipelines for Fleet](docs-content://manage-data/ingest/), and [Elastic Integrations](integration-docs://index.md) topics.
+
+### Ingest Pipeline Creation Errors[plugins-filters-elastic_integration-ingest-pipeline-creation]
 
 If you encounter `failed to create ingest pipeline {pipeline-name} from pipeline configuration` error messages, it indicates that the plugin is unable to create an ingest pipeline from the resolved pipeline configuration.
 This issue typically arises when the pipeline configuration contains unsupported or invalid processor(s) that the plugin cannot execute.
@@ -280,10 +282,7 @@ For example, the following error message indicating `inference` processor in the
 2025-01-21 12:29:13     at org.elasticsearch.ingest.ConfigurationUtils.readProcessor(ConfigurationUtils.java:635)
 ```
 
-
-
-% ToDo: Fix links
-% For further guidance, we recommend exploring {fleet-guide}/integrations.html[Manage Elastic Agent Integrations], {es} {ref}/ingest.html#handling-pipeline-failures[Handling pipeline failures] resources.
+For further guidance, we recommend exploring [Manage Elastic Agent Integrations](docs-content://reference/fleet/manage-integrations.md) and [Handling pipeline failures](docs-content://ingest-pipelines.md) topics.
 
 ### Ingest Pipeline Execution Errors[plugins-filters-elastic_integration-ingest-pipeline-execution-errors]
 
@@ -294,7 +293,8 @@ These errors typically fall into two main categories, each requiring specific in
 When errors occur during the execution of ingest pipelines, {ls} attaches the `_ingest_pipeline_failure` tag to the event, making it easier to identify and investigate problematic events.
 The detailed logs are available in the {ls} logs for your investigation.
 The root cause may depend on configuration, environment or integration you are running.
-For further guidance, we recommend exploring {fleet-guide}/integrations.html[Manage Elastic Agent Integrations], {es} {ref}/ingest.html#handling-pipeline-failures[Handling pipeline failures] resources.
+
+For further guidance, we recommend exploring [Manage Elastic Agent Integrations](docs-content://reference/fleet/manage-integrations.md) and [Handling pipeline failures](docs-content://ingest-pipelines.md) topics.
 
 **Errors internally occurred in the ingest pipeline**
 
@@ -306,17 +306,7 @@ For example, the pipeline might store error information in a `error.message` fie
 Go to the {{kib}} Dev Tools and search for the data (`GET {index-ingest-pipeline-is-writing}/_search`) and look for the fields mentioned in the failure processors .
 The fields have error details which help you to analyze the root cause.
 
-% ToDo: Fix links
-% For further guidance, we recommend exploring {fleet-guide}/integrations.html[Manage Elastic Agent Integrations], {es} {ref}/ingest.html#handling-pipeline-failures[Handling pipeline failures] resources.
-
-
-
-
-
-
-
-
-
+For further guidance, we recommend exploring [Manage Elastic Agent Integrations](docs-content://reference/fleet/manage-integrations.md), [Handling pipeline failures](docs-content://ingest-pipelines.md) topics.
 
 ## Elastic Integration Filter Configuration Options [plugins-filters-elastic_integration-options]
 
