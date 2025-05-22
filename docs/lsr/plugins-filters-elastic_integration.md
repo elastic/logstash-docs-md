@@ -256,14 +256,14 @@ The plugin operates through following phases: pipeline _resolution_, ingest pipe
 
 If you encounter `No pipeline resolved for event ...` messages in the debug logs, the error indicates that the plugin is unable to resolve the ingest pipeline from the data stream.
 To further diagnose and resolve the issue, verify whether the data stream's index settings include a `default_pipeline` or `final_pipeline` configuration.
-You can inspect the index settings by running a `POST _index_template/_simulate_index/{type}-{dataset}-{namespace}` query in the {kib} Dev Tools.
+You can inspect the index settings by running a `POST _index_template/_simulate_index/{type}-{dataset}-{namespace}` query in the {{kib}} Dev Tools.
 Make sure to replace `{type}-{dataset}-{namespace}` with values corresponding to your data stream.
 For further guidance, we recommend exploring {fleet-guide}/integrations.html[Manage Elastic Agent Integrations], {es} {ref}/ingest.html#pipelines-for-fleet-elastic-agent[Ingest pipelines for fleet] and {integrations-docs}[Elastic {integrations}] resources.
 
 **Ingest pipeline does not exist**
 
 If you notice `pipeline not found: ...` messages in the debug logs or `Pipeline {pipeline-name} could not be loaded` warning messages, it indicates that the plugin has successfully resolved the ingest pipeline from `default_pipeline` or `final_pipeline`, but the specified pipeline does not exist.
-To confirm whether pipeline exists, run a `GET _ingest/pipeline/{ingest-pipeline-name}` query in the {kib} Dev Tools console.
+To confirm whether pipeline exists, run a `GET _ingest/pipeline/{ingest-pipeline-name}` query in the {{kib}}} Dev Tools console.
 For further guidance, we recommend exploring {fleet-guide}/integrations.html[Manage Elastic Agent Integrations], {es} {ref}/ingest.html#pipelines-for-fleet-elastic-agent[Ingest pipelines for fleet] and {integrations-docs}[Elastic {integrations}] resources.
 
 ### Ingest Pipeline Creation Errors[plugins-filters-elastic_integration-ingest-pipeline-creation
@@ -300,10 +300,10 @@ For further guidance, we recommend exploring {fleet-guide}/integrations.html[Man
 
 If an ingest pipeline is configured with `on_failure` conditions, failures during pipeline execution are internally handled by the ingest pipeline itself and not be visible to {ls}.
 This means that errors are captured and processed within the pipeline, rather than being passed to {ls} for logging or tagging.
-To identify and analyze such cases, go to the {kib} -> Stack Management -> Ingest pipelines and find the ingest pipeline you are using.
+To identify and analyze such cases, go to the {{kib}}} -> Stack Management -> Ingest pipelines and find the ingest pipeline you are using.
 Click on it and navigate to the _Failure processors_ section. If processors are configured, they may specify which field contains the failure details.
 For example, the pipeline might store error information in a `error.message` field or a custom field defined in the _Failure processors_ configuration.
-Go to the {kib} Dev Tools and search for the data (`GET {index-ingest-pipeline-is-writing}/_search`) and look for the fields mentioned in the failure processors .
+Go to the {{kib}} Dev Tools and search for the data (`GET {index-ingest-pipeline-is-writing}/_search`) and look for the fields mentioned in the failure processors .
 The fields have error details which help you to analyze the root cause.
 
 % ToDo: Fix links
@@ -436,7 +436,7 @@ The security of this plugin relies on SSL to avoid leaking credentials and to av
 There are two ways to disable SSL:
 
 * Provide a list of `http`-protocol hosts
-* Set `<<plugins-{{type}}s-{{plugin}}-ssl_enabled>>=>false`
+* Set `[`ssl_enabled`](plugins-filters-elastic_integration.md#plugins-filters-elastic_integration-ssl_enabled)=>false`
 
 ::::
 

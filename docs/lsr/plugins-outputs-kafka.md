@@ -66,13 +66,13 @@ This plugin does not support using a proxy when communicating to the Kafka broke
 
 
 
-[id="plugins-{type}s-{plugin}-aws_msk_iam_auth"]
-==== AWS MSK IAM authentication
+### AWS MSK IAM authentication[plugins-outputs-kafka-aws_msk_iam_auth]
+
 If you use AWS MSK, the AWS MSK IAM access control enables you to handle both authentication and authorization for your MSK cluster with AWS IAM.
-For more information on this AWS MSK feature see the https://docs.aws.amazon.com/msk/latest/developerguide/iam-access-control.html[AWS documentation].
+For more information on this AWS MSK feature see the [AWS documentation](https://docs.aws.amazon.com/msk/latest/developerguide/iam-access-control.html).
 
 To use this Kafka input with AWS MSK IAM authentication, download the uber jar which contains the client library for
-this specific cloud vendor and all the transitive dependencies from this https://github.com/elastic/logstash-kafka-iams-packages/releases[repository].
+this specific cloud vendor and all the transitive dependencies from this [repository](https://github.com/elastic/logstash-kafka-iams-packages/releases).
 Configure the following setting:
 ```
 security_protocol => "SASL_SSL"
@@ -81,7 +81,7 @@ sasl_iam_jar_paths => ["/path/to/aws_iam_uber.jar"]
 sasl_jaas_config => "software.amazon.msk.auth.iam.IAMLoginModule required;"
 sasl_client_callback_handler_class => "software.amazon.msk.auth.iam.IAMClientCallbackHandler"
 ```
-For more IAM authentication configurations, see the https://github.com/aws/aws-msk-iam-auth[AWS MSK IAM authentication library documentation].
+For more IAM authentication configurations, see the [AWS MSK IAM authentication library documentation](https://github.com/aws/aws-msk-iam-auth).
 
 
 

@@ -76,36 +76,20 @@ This plugin supports the following configuration options plus the [Common option
 | Setting | Input type | Required |
 | --- | --- | --- |
 | [`api_version`](plugins-inputs-salesforce.md#plugins-inputs-salesforce-api_version) | [string](value-types.md#string) | No |
-
-
-| <<plugins-{type}s-{plugin}-changed_data_filter>> |<<string,string>>|No
-
-
+| [`changed_data_filter`](plugins-inputs-salesforce.md#plugins-inputs-salesforce-changed_data_filter) |[string](value-types.md#string) | No |
 | [`client_id`](plugins-inputs-salesforce.md#plugins-inputs-salesforce-client_id) | [string](value-types.md#string) | Yes |
 | [`client_secret`](plugins-inputs-salesforce.md#plugins-inputs-salesforce-client_secret) | [password](value-types.md#password) | Yes |
-
-
-| <<plugins-{type}s-{plugin}-interval>> |<<number,number>>|No
-
-
+| [interval](plugins-inputs-salesforce.md#plugins-inputs-salesforce-interval) |[number](value-types.md#number)|No
 | [`password`](plugins-inputs-salesforce.md#plugins-inputs-salesforce-password) | [password](value-types.md#password) | Yes |
 | [`security_token`](plugins-inputs-salesforce.md#plugins-inputs-salesforce-security_token) | [password](value-types.md#password) | Yes |
 | [`sfdc_fields`](plugins-inputs-salesforce.md#plugins-inputs-salesforce-sfdc_fields) | [array](value-types.md#array) | No |
 | [`sfdc_filters`](plugins-inputs-salesforce.md#plugins-inputs-salesforce-sfdc_filters) | [string](value-types.md#string) | No |
 | [`sfdc_instance_url`](plugins-inputs-salesforce.md#plugins-inputs-salesforce-sfdc_instance_url) | [string](value-types.md#string) | No |
 | [`sfdc_object_name`](plugins-inputs-salesforce.md#plugins-inputs-salesforce-sfdc_object_name) | [string](value-types.md#string) | Yes |
-
-
-| <<plugins-{type}s-{plugin}-timeout>> |<<number,number>>|No
-
-
+| [`timeout`](plugins-inputs-salesforce.md#plugins-inputs-salesforce-timeout) |[number](value-types.md#number)| No |
 | [`to_underscores`](plugins-inputs-salesforce.md#plugins-inputs-salesforce-to_underscores) | [boolean](value-types.md#boolean) | No |
-
-
-| <<plugins-{type}s-{plugin}-tracking_field>> |<<string,string>>|No
-| <<plugins-{type}s-{plugin}-tracking_field_value_file>> |<<string,string>>|No
-
-
+| [`tracking_field`](plugins-inputs-salesforce.md#plugins-inputs-salesforce-tracking_field) |[string](value-types.md#string) | No |
+| [`tracking_field_value_file`](plugins-inputs-salesforce.md#plugins-inputs-salesforce-tracking_field_value_file) |[string](value-types.md#string) | No |
 | [`use_test_sandbox`](plugins-inputs-salesforce.md#plugins-inputs-salesforce-use_test_sandbox) | [boolean](value-types.md#boolean) | No |
 | [`use_tooling_api`](plugins-inputs-salesforce.md#plugins-inputs-salesforce-use_tooling_api) | [boolean](value-types.md#boolean) | No |
 | [`username`](plugins-inputs-salesforce.md#plugins-inputs-salesforce-username) | [string](value-types.md#string) | Yes |
@@ -122,18 +106,17 @@ By default, this uses the default Restforce API version. To override this, set t
 
 
 
-[id="plugins-{type}s-{plugin}-changed_data_filter"]
-===== `changed_data_filter`
+### `changed_data_filter`[plugins-inputs-salesforce-changed_data_filter]
 
-* Value type is <<string,string>>
-  * There is no default value for this setting.
+* Value type is [string](value-types.md#string)
+* There is no default value for this setting.
 
 The filter to add to the Salesforce query when a previous tracking field value
-was read from the <<plugins-{type}s-{plugin}-tracking_field_value_file>>.
-The string can (and should) contain a placeholder `%+{last_tracking_field_value}+` that
-will be substituted with the actual value read from the <<plugins-{type}s-{plugin}-tracking_field_value_file>>.
+was read from the [`tracking_field_value_file`](plugins-inputs-salesforce.md#plugins-inputs-salesforce-tracking_field_value_file).
+The string can (and should) contain a placeholder `%{last_tracking_field_value}` that
+will be substituted with the actual value read from the [`tracking_field_value_file`](plugins-inputs-salesforce.md#plugins-inputs-salesforce-tracking_field_value_file).
 
-This clause is combined with any <<plugins-{type}s-{plugin}-sfdc_filters>>
+This clause is combined with any [`sfdc_filters`](plugins-inputs-salesforce.md#plugins-inputs-salesforce-sfdc_filters)
 clause that is configured using the `AND` operator.
 
 The value should be properly quoted according to the SOQL rules for the field
@@ -141,12 +124,13 @@ type.
 
 **Examples:**
 
-[source,ruby]
+```
 "changed_data_filter" => "Number > '%{last_tracking_field_value}'"
+```
 
-[source,ruby]
+```
 "changed_data_filter" => "LastModifiedDate >= %{last_tracking_field_value}"
-
+```
 
 
 
@@ -170,11 +154,10 @@ Consumer Secret from your oauth enabled connected app.
 
 
 
-[id="plugins-{type}s-{plugin}-interval"]
-===== `interval`
+### `interval` [plugins-inputs-salesforce-interval]
 
-  * Value type is <<number,number>>
-  * There is no default value for this setting.
+* Value type is [number](value-types.md#number)
+* There is no default value for this setting.
 
 The interval in seconds between each run of the plugin.
 
@@ -242,10 +225,10 @@ Use either this or the `use_test_sandbox` configuration option but not both to c
 
 The name of the Salesforce object you are creating or updating.
 
-[id="plugins-{type}s-{plugin}-timeout"]
-===== `timeout`
 
-* Value type is <<number,number>>
+### `timeout`[plugins-inputs-salesforce-timeout]
+
+* Value type is [number](value-types.md#number)
 * Default value is `60`
 
 The timeout to apply to REST API calls to Salesforce, in seconds. If a connection to Salesforce cannot be made in this time, an error occurs.
@@ -259,40 +242,38 @@ If it takes longer than the timeout for a block of data (e.g. query results) to 
 
 Setting this to true will convert Salesforce's `++NamedFields__c++` to `++named_fields__c++`.
 
-[id="plugins-{type}s-{plugin}-tracking_field"]
-===== `tracking_field`
 
-  * Value type is <<string,string>>
-  * There is no default value for this setting.
+### `tracking_field`[plugins-inputs-salesforce-tracking_field]
+
+* Value type is [string](value-types.md#string)
+* There is no default value for this setting.
 
 The field to track for incremental data loads. This field will
 be used in an `ORDER BY ... ASC` clause that is added to the Salesforce query.
-This field _should_ also be used in the <<plugins-{type}s-{plugin}-changed_data_filter>> clause
+This field _should_ also be used in the [`changed_data_filter`](plugins-inputs-salesforce.md#plugins-inputs-salesforce-changed_data_filter) clause
 to actually achieve incremental loading of data.
 
 The last value (which is the highest value if the query sorts by this field ascending)
 value for this field will be saved to the file at the path configured by
-<<plugins-{type}s-{plugin}-tracking_field_value_file>>, if specified.
+[`tracking_field_value_file`](plugins-inputs-salesforce.md#plugins-inputs-salesforce-tracking_field_value_file), if specified.
 
 This field should ideally be strictly ascending for new records. An
 autonumber field is ideal for this.
 
 The standard `LastModifiedDate` field can be used, but since it is not _strictly_
 ascending (multiple records can have the same `LastModifiedDate`, the
-<<plugins-{type}s-{plugin}-changed_data_filter>> should account for this by using the `>=`
+[`changed_data_filter`](plugins-inputs-salesforce.md#plugins-inputs-salesforce-changed_data_filter) should account for this by using the `>=`
 operator, and duplicates should be expected.
 
 Note that Salesforce does not guarantee that the standard `Id` field has ascending
 values for new records (https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_testing_best_practices.htm).
 Therefore, using `Id` as tracking field risks missing records and is not recommended.
 
-If this field is not already included in the <<plugins-{type}s-{plugin}-sfdc_fields>>,
-it is added.
+If this field is not already included in the [`sfdc_fields`](plugins-inputs-salesforce.md#plugins-inputs-salesforce-sfdc_fields), it is added.
 
-[id="plugins-{type}s-{plugin}-tracking_field_value_file"]
-===== `tracking_field_value_file`
+### `tracking_field_value_file`[plugins-inputs-salesforce-tracking_field_value_file]
 
-* Value type is <<string,string>>
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 The full path to the file from which the latest tracking field value from the previous
@@ -304,8 +285,8 @@ loading of data.
 
 The file should be readable and writable by the Logstash process.
 
-If the file exists and a <<plugins-{type}s-{plugin}-changed_data_filter>> is configured,
-a changed data filter clause is added to the query (and combined with any <<plugins-{type}s-{plugin}-sfdc_filters>>
+If the file exists and a [`changed_data_filter`](plugins-inputs-salesforce.md#plugins-inputs-salesforce-changed_data_filter) is configured,
+a changed data filter clause is added to the query (and combined with any [`sfdc_filters`](plugins-inputs-salesforce.md#plugins-inputs-salesforce-sfdc_filters)
 clause that is configured using the `AND` operator).
 
 If the result set is not empty, the value for `tracking_field` from the last row is
