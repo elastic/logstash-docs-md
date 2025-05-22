@@ -7,9 +7,9 @@ mapped_pages:
 # Xml filter plugin [plugins-filters-xml]
 
 
-* Plugin version: v4.2.1
-* Released on: 2024-10-29
-* [Changelog](https://github.com/logstash-plugins/logstash-filter-xml/blob/v4.2.1/CHANGELOG.md)
+* Plugin version: v4.3.1
+* Released on: 2025-04-22
+* [Changelog](https://github.com/logstash-plugins/logstash-filter-xml/blob/v4.3.1/CHANGELOG.md)
 
 For other versions, see the [Versioned plugin docs](/vpr/filter-xml-index.md).
 
@@ -289,7 +289,7 @@ Add a unique `ID` to the plugin configuration. If no ID is specified, Logstash w
     }
 ```
 
-::::{note} 
+::::{note}
 Variable substitution in the `id` field only supports environment variables and does not support the use of values from the secret store.
 ::::
 
