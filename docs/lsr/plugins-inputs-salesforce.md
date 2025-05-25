@@ -266,7 +266,7 @@ ascending (multiple records can have the same `LastModifiedDate`, the
 operator, and duplicates should be expected.
 
 Note that Salesforce does not guarantee that the standard `Id` field has ascending
-values for new records (https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_testing_best_practices.htm).
+values for new records ([https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_testing_best_practices.html](https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_testing_best_practices.html)).
 Therefore, using `Id` as tracking field risks missing records and is not recommended.
 
 If this field is not already included in the [`sfdc_fields`](plugins-inputs-salesforce.md#plugins-inputs-salesforce-sfdc_fields), it is added.
