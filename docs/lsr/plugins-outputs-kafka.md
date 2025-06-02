@@ -8,9 +8,9 @@ mapped_pages:
 
 
 * A component of the [kafka integration plugin](plugins-integrations-kafka.md)
-* Integration version: v11.6.0
-* Released on: 2025-01-07
-* [Changelog](https://github.com/logstash-plugins/logstash-integration-kafka/blob/v11.6.0/CHANGELOG.md)
+* Integration version: v11.6.1
+* Released on: 2025-05-08
+* [Changelog](https://github.com/logstash-plugins/logstash-integration-kafka/blob/v11.6.1/CHANGELOG.md)
 
 For other versions, see the [Versioned plugin docs](/vpr/output-kafka-index.md).
 
@@ -53,9 +53,42 @@ For more information see [https://kafka.apache.org/38/documentation.html#theprod
 
 Kafka producer configuration: [https://kafka.apache.org/38/documentation.html#producerconfigs](https://kafka.apache.org/38/documentation.md#producerconfigs)
 
-::::{note} 
+::::{note}
 This plugin does not support using a proxy when communicating to the Kafka broker.
 ::::
+
+
+
+
+
+
+
+
+
+
+### AWS MSK IAM authentication[plugins-outputs-kafka-aws_msk_iam_auth]
+
+If you use AWS MSK, the AWS MSK IAM access control enables you to handle both authentication and authorization for your MSK cluster with AWS IAM.
+For more information on this AWS MSK feature see the [AWS documentation](https://docs.aws.amazon.com/msk/latest/developerguide/iam-access-control.html).
+
+To use this Kafka input with AWS MSK IAM authentication, download the uber jar which contains the client library for
+this specific cloud vendor and all the transitive dependencies from this [repository](https://github.com/elastic/logstash-kafka-iams-packages/releases).
+Configure the following setting:
+```
+security_protocol => "SASL_SSL"
+sasl_mechanism => "AWS_MSK_IAM"
+sasl_iam_jar_paths => ["/path/to/aws_iam_uber.jar"]
+sasl_jaas_config => "software.amazon.msk.auth.iam.IAMLoginModule required;"
+sasl_client_callback_handler_class => "software.amazon.msk.auth.iam.IAMClientCallbackHandler"
+```
+For more IAM authentication configurations, see the [AWS MSK IAM authentication library documentation](https://github.com/aws/aws-msk-iam-auth).
+
+
+
+
+
+
+
 
 
 
@@ -63,7 +96,7 @@ This plugin does not support using a proxy when communicating to the Kafka broke
 
 This plugin supports the following configuration options plus the [Common options](plugins-outputs-kafka.md#plugins-outputs-kafka-common-options) described later.
 
-::::{note} 
+::::{note}
 Some of these options map to a Kafka option. Defaults usually reflect the Kafka default setting, and might change if Kafka’s producer defaults change. See the [https://kafka.apache.org/38/documentation](https://kafka.apache.org/38/documentation) for more details.
 ::::
 
@@ -167,7 +200,7 @@ The total bytes of memory the producer can use to buffer records waiting to be s
 
 Controls how DNS lookups are done. If set to `use_all_dns_ips`, Logstash tries all IP addresses returned for a hostname before failing the connection. If set to `resolve_canonical_bootstrap_servers_only`, each entry will be resolved and expanded into a list of canonical names.
 
-::::{note} 
+::::{note}
 Starting from Kafka 3 `default` value for `client.dns.lookup` value has been removed. If not explicitly configured it defaults to `use_all_dns_ips`.
 
 ::::
@@ -591,7 +624,7 @@ output {
 }
 ```
 
-::::{note} 
+::::{note}
 Variable substitution in the `id` field only supports environment variables and does not support the use of values from the secret store.
 ::::
 

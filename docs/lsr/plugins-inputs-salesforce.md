@@ -6,10 +6,9 @@ mapped_pages:
 
 # Salesforce input plugin [plugins-inputs-salesforce]
 
-
-* Plugin version: v3.2.1
-* Released on: 2023-05-30
-* [Changelog](https://github.com/logstash-plugins/logstash-input-salesforce/blob/v3.2.1/CHANGELOG.md)
+* Plugin version: v3.3.0
+* Released on: 2025-05-14
+* [Changelog](https://github.com/logstash-plugins/logstash-input-salesforce/blob/v3.3.0/CHANGELOG.md)
 
 For other versions, see the [Versioned plugin docs](/vpr/input-salesforce-index.md).
 
@@ -27,21 +26,23 @@ For questions about the plugin, open a topic in the [Discuss](http://discuss.ela
 
 This Logstash input plugin allows you to query Salesforce using SOQL and puts the results into Logstash, one row per event. You can configure it to pull entire sObjects or only specific fields.
 
-::::{note} 
+::::{note}
 This input plugin will stop after all the results of the query are processed and will need to be re-run to fetch new results. It does not utilize the streaming API.
 ::::
 
 
-In order to use this plugin, you will need to create a new SFDC Application using oauth. More details can be found here: [https://help.salesforce.com/apex/HTViewHelpDoc?id=connected_app_create.htm](https://help.salesforce.com/apex/HTViewHelpDoc?id=connected_app_create.htm)
+In order to use this plugin, you will need to create a new Salesforce Connected App with OAuth enabled.
+More details can be found here: [https://help.salesforce.com/apex/HTViewHelpDoc?id=connected_app_create.htm](https://help.salesforce.com/apex/HTViewHelpDoc?id=connected_app_create.htm)
 
-You will also need a username, password, and security token for your salesforce instance. More details for generating a token can be found here: [https://help.salesforce.com/apex/HTViewHelpDoc?id=user_security_token.htm](https://help.salesforce.com/apex/HTViewHelpDoc?id=user_security_token.htm)
+You will also need a username, password, and security token for your Salesforce instance.
+More details for generating a token can be found here: [https://help.salesforce.com/apex/HTViewHelpDoc?id=user_security_token.htm](https://help.salesforce.com/apex/HTViewHelpDoc?id=user_security_token.htm)
 
 In addition to specifying an sObject, you can also supply a list of API fields that will be used in the SOQL query.
 
 
 ## HTTP proxy [_http_proxy]
 
-If your infrastructure uses a HTTP proxy, you can set the `SALESFORCE_PROXY_URI` environment variable with the desired URI value (e.g `export SALESFORCE_PROXY_URI="http://proxy.example.com:123"`).
+If your infrastructure uses an HTTP proxy, you can set the `SALESFORCE_PROXY_URI` environment variable with the desired URI value (e.g `export SALESFORCE_PROXY_URI="http://proxy.example.com:123"`).
 
 
 ## Example [_example_2]
@@ -75,29 +76,62 @@ This plugin supports the following configuration options plus the [Common option
 | Setting | Input type | Required |
 | --- | --- | --- |
 | [`api_version`](plugins-inputs-salesforce.md#plugins-inputs-salesforce-api_version) | [string](value-types.md#string) | No |
+| [`changed_data_filter`](plugins-inputs-salesforce.md#plugins-inputs-salesforce-changed_data_filter) |[string](value-types.md#string) | No |
 | [`client_id`](plugins-inputs-salesforce.md#plugins-inputs-salesforce-client_id) | [string](value-types.md#string) | Yes |
 | [`client_secret`](plugins-inputs-salesforce.md#plugins-inputs-salesforce-client_secret) | [password](value-types.md#password) | Yes |
+| [interval](plugins-inputs-salesforce.md#plugins-inputs-salesforce-interval) |[number](value-types.md#number)|No
 | [`password`](plugins-inputs-salesforce.md#plugins-inputs-salesforce-password) | [password](value-types.md#password) | Yes |
 | [`security_token`](plugins-inputs-salesforce.md#plugins-inputs-salesforce-security_token) | [password](value-types.md#password) | Yes |
 | [`sfdc_fields`](plugins-inputs-salesforce.md#plugins-inputs-salesforce-sfdc_fields) | [array](value-types.md#array) | No |
 | [`sfdc_filters`](plugins-inputs-salesforce.md#plugins-inputs-salesforce-sfdc_filters) | [string](value-types.md#string) | No |
 | [`sfdc_instance_url`](plugins-inputs-salesforce.md#plugins-inputs-salesforce-sfdc_instance_url) | [string](value-types.md#string) | No |
 | [`sfdc_object_name`](plugins-inputs-salesforce.md#plugins-inputs-salesforce-sfdc_object_name) | [string](value-types.md#string) | Yes |
+| [`timeout`](plugins-inputs-salesforce.md#plugins-inputs-salesforce-timeout) |[number](value-types.md#number)| No |
 | [`to_underscores`](plugins-inputs-salesforce.md#plugins-inputs-salesforce-to_underscores) | [boolean](value-types.md#boolean) | No |
+| [`tracking_field`](plugins-inputs-salesforce.md#plugins-inputs-salesforce-tracking_field) |[string](value-types.md#string) | No |
+| [`tracking_field_value_file`](plugins-inputs-salesforce.md#plugins-inputs-salesforce-tracking_field_value_file) |[string](value-types.md#string) | No |
 | [`use_test_sandbox`](plugins-inputs-salesforce.md#plugins-inputs-salesforce-use_test_sandbox) | [boolean](value-types.md#boolean) | No |
 | [`use_tooling_api`](plugins-inputs-salesforce.md#plugins-inputs-salesforce-use_tooling_api) | [boolean](value-types.md#boolean) | No |
 | [`username`](plugins-inputs-salesforce.md#plugins-inputs-salesforce-username) | [string](value-types.md#string) | Yes |
 
 Also see [Common options](plugins-inputs-salesforce.md#plugins-inputs-salesforce-common-options) for a list of options supported by all input plugins.
 
- 
 
 ### `api_version` [plugins-inputs-salesforce-api_version]
 
 * Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
-By default, this uses the default Restforce API version. To override this, set this to something like "32.0" for example
+By default, this uses the default Restforce API version. To override this, set this to something like "32.0" for example.
+
+
+
+### `changed_data_filter`[plugins-inputs-salesforce-changed_data_filter]
+
+* Value type is [string](value-types.md#string)
+* There is no default value for this setting.
+
+The filter to add to the Salesforce query when a previous tracking field value
+was read from the [`tracking_field_value_file`](plugins-inputs-salesforce.md#plugins-inputs-salesforce-tracking_field_value_file).
+The string can (and should) contain a placeholder `%{last_tracking_field_value}` that
+will be substituted with the actual value read from the [`tracking_field_value_file`](plugins-inputs-salesforce.md#plugins-inputs-salesforce-tracking_field_value_file).
+
+This clause is combined with any [`sfdc_filters`](plugins-inputs-salesforce.md#plugins-inputs-salesforce-sfdc_filters)
+clause that is configured using the `AND` operator.
+
+The value should be properly quoted according to the SOQL rules for the field
+type.
+
+**Examples:**
+
+```
+"changed_data_filter" => "Number > '%{last_tracking_field_value}'"
+```
+
+```
+"changed_data_filter" => "LastModifiedDate >= %{last_tracking_field_value}"
+```
+
 
 
 ### `client_id` [plugins-inputs-salesforce-client_id]
@@ -106,7 +140,7 @@ By default, this uses the default Restforce API version. To override this, set t
 * Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
-Consumer Key for authentication. You must set up a new SFDC connected app with oath to use this output. More information can be found here: [https://help.salesforce.com/apex/HTViewHelpDoc?id=connected_app_create.htm](https://help.salesforce.com/apex/HTViewHelpDoc?id=connected_app_create.htm)
+Consumer Key for authentication. You must set up a new Salesforce connected app with OAth enabled to use this plugin. More information can be found here: [https://help.salesforce.com/apex/HTViewHelpDoc?id=connected_app_create.htm](https://help.salesforce.com/apex/HTViewHelpDoc?id=connected_app_create.htm)
 
 
 ### `client_secret` [plugins-inputs-salesforce-client_secret]
@@ -115,7 +149,28 @@ Consumer Key for authentication. You must set up a new SFDC connected app with o
 * Value type is [password](value-types.md#password)
 * There is no default value for this setting.
 
-Consumer Secret from your oauth enabled connected app
+Consumer Secret from your oauth enabled connected app.
+
+
+
+
+### `interval` [plugins-inputs-salesforce-interval]
+
+* Value type is [number](value-types.md#number)
+* There is no default value for this setting.
+
+The interval in seconds between each run of the plugin.
+
+If specified, the plugin only terminates when it receives the stop
+signal from Logstash, e.g. when you press Ctrl-C when running interactively,
+or when the process receives a TERM signal. It will query and publish
+events for all results, then sleep until `interval` seconds from the start
+of the previous run of the plugin have passed. If the plugin ran for longer
+than `interval` seconds, it will run again immediately.
+
+If this property is not specified or is set to -1, the plugin will run once and then exit.
+
+
 
 
 ### `password` [plugins-inputs-salesforce-password]
@@ -124,7 +179,7 @@ Consumer Secret from your oauth enabled connected app
 * Value type is [password](value-types.md#password)
 * There is no default value for this setting.
 
-The password used to login to sfdc
+The password used to login to Salesforce.
 
 
 ### `security_token` [plugins-inputs-salesforce-security_token]
@@ -133,7 +188,7 @@ The password used to login to sfdc
 * Value type is [password](value-types.md#password)
 * There is no default value for this setting.
 
-The security token for this account. For more information about generting a security token, see: [https://help.salesforce.com/apex/HTViewHelpDoc?id=user_security_token.htm](https://help.salesforce.com/apex/HTViewHelpDoc?id=user_security_token.htm)
+The security token for this account. For more information about generating a security token, see: [https://help.salesforce.com/apex/HTViewHelpDoc?id=user_security_token.htm](https://help.salesforce.com/apex/HTViewHelpDoc?id=user_security_token.htm).
 
 
 ### `sfdc_fields` [plugins-inputs-salesforce-sfdc_fields]
@@ -149,7 +204,7 @@ These are the field names to return in the Salesforce query If this is empty, al
 * Value type is [string](value-types.md#string)
 * Default value is `""`
 
-These options will be added to the WHERE clause in the SOQL statement. Additional fields can be filtered on by adding field1 = value1 AND field2 = value2 AND…​
+These options will be added to the `WHERE` clause in the SOQL statement. Additional fields can be filtered on by adding `field1 = value1 AND field2 = value2 AND...​`.
 
 
 ### `sfdc_instance_url` [plugins-inputs-salesforce-sfdc_instance_url]
@@ -168,7 +223,16 @@ Use either this or the `use_test_sandbox` configuration option but not both to c
 * Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
-The name of the salesforce object you are creating or updating
+The name of the Salesforce object you are creating or updating.
+
+
+### `timeout`[plugins-inputs-salesforce-timeout]
+
+* Value type is [number](value-types.md#number)
+* Default value is `60`
+
+The timeout to apply to REST API calls to Salesforce, in seconds. If a connection to Salesforce cannot be made in this time, an error occurs.
+If it takes longer than the timeout for a block of data (e.g. query results) to be read, an error occurs.
 
 
 ### `to_underscores` [plugins-inputs-salesforce-to_underscores]
@@ -176,7 +240,64 @@ The name of the salesforce object you are creating or updating
 * Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
-Setting this to true will convert SFDC’s NamedFields*c to named_fields*c
+Setting this to true will convert Salesforce's `++NamedFields__c++` to `++named_fields__c++`.
+
+
+### `tracking_field`[plugins-inputs-salesforce-tracking_field]
+
+* Value type is [string](value-types.md#string)
+* There is no default value for this setting.
+
+The field to track for incremental data loads. This field will
+be used in an `ORDER BY ... ASC` clause that is added to the Salesforce query.
+This field _should_ also be used in the [`changed_data_filter`](plugins-inputs-salesforce.md#plugins-inputs-salesforce-changed_data_filter) clause
+to actually achieve incremental loading of data.
+
+The last value (which is the highest value if the query sorts by this field ascending)
+value for this field will be saved to the file at the path configured by
+[`tracking_field_value_file`](plugins-inputs-salesforce.md#plugins-inputs-salesforce-tracking_field_value_file), if specified.
+
+This field should ideally be strictly ascending for new records. An
+autonumber field is ideal for this.
+
+The standard `LastModifiedDate` field can be used, but since it is not _strictly_
+ascending (multiple records can have the same `LastModifiedDate`, the
+[`changed_data_filter`](plugins-inputs-salesforce.md#plugins-inputs-salesforce-changed_data_filter) should account for this by using the `>=`
+operator, and duplicates should be expected.
+
+Note that Salesforce does not guarantee that the standard `Id` field has ascending
+values for new records ([https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_testing_best_practices.html](https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_testing_best_practices.html)).
+Therefore, using `Id` as tracking field risks missing records and is not recommended.
+
+If this field is not already included in the [`sfdc_fields`](plugins-inputs-salesforce.md#plugins-inputs-salesforce-sfdc_fields), it is added.
+
+### `tracking_field_value_file`[plugins-inputs-salesforce-tracking_field_value_file]
+
+* Value type is [string](value-types.md#string)
+* There is no default value for this setting.
+
+The full path to the file from which the latest tracking field value from the previous
+plugin invocation will be read, and to which the new latest tracking field value will be
+written after the current plugin invocation.
+
+This keeps persistent track of the last seen value of the tracking field used for incremental
+loading of data.
+
+The file should be readable and writable by the Logstash process.
+
+If the file exists and a [`changed_data_filter`](plugins-inputs-salesforce.md#plugins-inputs-salesforce-changed_data_filter) is configured,
+a changed data filter clause is added to the query (and combined with any [`sfdc_filters`](plugins-inputs-salesforce.md#plugins-inputs-salesforce-sfdc_filters)
+clause that is configured using the `AND` operator).
+
+If the result set is not empty, the value for `tracking_field` from the last row is
+written to the file.
+
+
+
+
+
+
+
 
 
 ### `use_test_sandbox` [plugins-inputs-salesforce-use_test_sandbox]
@@ -259,7 +380,7 @@ input {
 }
 ```
 
-::::{note} 
+::::{note}
 Variable substitution in the `id` field only supports environment variables and does not support the use of values from the secret store.
 ::::
 

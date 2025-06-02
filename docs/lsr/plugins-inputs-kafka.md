@@ -8,9 +8,9 @@ mapped_pages:
 
 
 * A component of the [kafka integration plugin](plugins-integrations-kafka.md)
-* Integration version: v11.6.0
-* Released on: 2025-01-07
-* [Changelog](https://github.com/logstash-plugins/logstash-integration-kafka/blob/v11.6.0/CHANGELOG.md)
+* Integration version: v11.6.1
+* Released on: 2025-05-08
+* [Changelog](https://github.com/logstash-plugins/logstash-integration-kafka/blob/v11.6.1/CHANGELOG.md)
 
 For other versions, see the [Versioned plugin docs](/vpr/input-kafka-index.md).
 
@@ -51,6 +51,25 @@ Ideally you should have as many threads as the number of partitions for a perfec
 For more information see [https://kafka.apache.org/38/documentation.html#theconsumer](https://kafka.apache.org/38/documentation.md#theconsumer)
 
 Kafka consumer configuration: [https://kafka.apache.org/38/documentation.html#consumerconfigs](https://kafka.apache.org/38/documentation.md#consumerconfigs)
+
+
+### AWS MSK IAM authentication[plugins-inputs-kafka-aws_msk_iam_auth]
+
+If you use AWS MSK, the AWS MSK IAM access control enables you to handle both authentication and authorization for your MSK cluster with AWS IAM.
+For more information on this AWS MSK feature see the [AWS documentation](https://docs.aws.amazon.com/msk/latest/developerguide/iam-access-control.html).
+
+To use this Kafka input with AWS MSK IAM authentication, download the uber jar which contains the client library for
+this specific cloud vendor and all the transitive dependencies from this [repository](https://github.com/elastic/logstash-kafka-iams-packages/releases).
+Configure the following setting:
+
+```
+security_protocol => "SASL_SSL"
+sasl_mechanism => "AWS_MSK_IAM"
+sasl_iam_jar_paths => ["/path/to/aws_iam_uber.jar"]
+sasl_jaas_config => "software.amazon.msk.auth.iam.IAMLoginModule required;"
+sasl_client_callback_handler_class => "software.amazon.msk.auth.iam.IAMClientCallbackHandler"
+```
+For more IAM authentication configurations, see the [AWS MSK IAM authentication library documentation](https://github.com/aws/aws-msk-iam-auth).
 
 
 ## Metadata fields [_metadata_fields]

@@ -6,10 +6,9 @@ mapped_pages:
 
 # Tcp output plugin [plugins-outputs-tcp]
 
-
-* Plugin version: v7.0.0
-* Released on: 2025-01-10
-* [Changelog](https://github.com/logstash-plugins/logstash-output-tcp/blob/v7.0.0/CHANGELOG.md)
+* Plugin version: v7.0.1
+* Released on: 2025-04-29
+* [Changelog](https://github.com/logstash-plugins/logstash-output-tcp/blob/v7.0.1/CHANGELOG.md)
 
 For other versions, see the [Versioned plugin docs](/vpr/output-tcp-index.md).
 
@@ -31,7 +30,7 @@ Can either accept connections from clients or connect to a server, depending on 
 
 This plugin supports the following configuration options plus the [Common options](plugins-outputs-tcp.md#plugins-outputs-tcp-common-options) described later.
 
-::::{note} 
+::::{note}
 As of version `7.0.0` of this plugin, a number of previously deprecated settings related to SSL have been removed. Please see the [TCP Output Obsolete Configuration Options](plugins-outputs-tcp.md#plugins-outputs-tcp-obsolete-options) for more details.
 ::::
 
@@ -123,7 +122,7 @@ Controls the server’s behavior in regard to requesting a certificate from clie
 
 When mutual TLS is enabled (`optional` or `required`), the certificate presented by the client must be signed by trusted [`ssl_certificate_authorities`](plugins-outputs-tcp.md#plugins-outputs-tcp-ssl_certificate_authorities) (CAs). Please note that the server does not validate the client certificate CN (Common Name) or SAN (Subject Alternative Name).
 
-::::{note} 
+::::{note}
 This setting can be used only if [`mode`](plugins-outputs-tcp.md#plugins-outputs-tcp-mode) is `server` and [`ssl_certificate_authorities`](plugins-outputs-tcp.md#plugins-outputs-tcp-ssl_certificate_authorities) is set.
 ::::
 
@@ -161,7 +160,7 @@ SSL key passphrase
 
 List of allowed SSL/TLS versions to use when establishing a secure connection.
 
-::::{note} 
+::::{note}
 If you configure the plugin to use `'TLSv1.1'` on any recent JVM, such as the one packaged with Logstash, the protocol is disabled by default and needs to be enabled manually by changing `jdk.tls.disabledAlgorithms` in the **$JDK_HOME/conf/security/java.security** configuration file. That is, `TLSv1.1` needs to be removed from the list.
 ::::
 
@@ -178,7 +177,7 @@ Defines how to verify the certificates presented by another part in the TLS conn
 
 `none` performs no certificate validation.
 
-::::{note} 
+::::{note}
 This setting can be used only if [`mode`](plugins-outputs-tcp.md#plugins-outputs-tcp-mode) is `client`.
 ::::
 
@@ -187,7 +186,7 @@ This setting can be used only if [`mode`](plugins-outputs-tcp.md#plugins-outputs
 
 ## TCP Output Obsolete Configuration Options [plugins-outputs-tcp-obsolete-options]
 
-::::{warning} 
+::::{warning}
 As of version `6.0.0` of this plugin, some configuration options have been replaced. The plugin will fail to start if it contains any of these obsolete options.
 ::::
 
@@ -241,7 +240,7 @@ output {
 }
 ```
 
-::::{note} 
+::::{note}
 Variable substitution in the `id` field only supports environment variables and does not support the use of values from the secret store.
 ::::
 
