@@ -7,5 +7,4 @@ mapped_pages:
 
 Looking for a specific version of the Logstash plugin docs? You’ve come to the right place. This section contains all available versions of the Logstash codec plugin docs.
 
-Want to learn how to use Logstash? See the [Logstash Reference](logstash://reference/index.md).
-
+Want to learn how to use Logstash? See the [Logstash Reference](https://www.elastic.co/guide/en/logstash/current/index.html).

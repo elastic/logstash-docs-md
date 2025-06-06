@@ -6,21 +6,19 @@ mapped_pages:
 
 # Gemfire output plugin v2.0.7 [v2.0.7-plugins-outputs-gemfire]
 
-
 * Plugin version: v2.0.7
 * Released on: 2018-04-06
 * [Changelog](https://github.com/logstash-plugins/logstash-output-gemfire/blob/v2.0.7/CHANGELOG.md)
 
-For other versions, see the [overview list](output-gemfire-index.md).
+For other versions, see the [overview list](output-gemfire-index.md "Versioned gemfire output plugin docs").
 
-To learn more about Logstash, see the [Logstash Reference](logstash://reference/index.md).
+To learn more about Logstash, see the [Logstash Reference](https://www.elastic.co/guide/en/logstash/current/index.html).
 
-## Getting help [_getting_help_1242]
+### Getting help [_getting_help_1249]
 
 For questions about the plugin, open a topic in the [Discuss](http://discuss.elastic.co) forums. For bugs or feature requests, open an issue in [Github](https://github.com/logstash-plugins/logstash-output-gemfire). For the list of Elastic supported plugins, please consult the [Elastic Support Matrix](https://www.elastic.co/support/matrix#matrix_logstash_plugins).
 
-
-## Description [_description_1235]
+### Description [_description_1242]
 
 Push events to a GemFire region.
 
@@ -30,40 +28,38 @@ To use this plugin you need to add gemfire.jar to your CLASSPATH; using format=j
 
 Note: this plugin has only been tested with GemFire 7.0.
 
+### Gemfire Output Configuration Options [v2.0.7-plugins-outputs-gemfire-options]
 
-## Gemfire Output Configuration Options [v2.0.7-plugins-outputs-gemfire-options]
-
-This plugin supports the following configuration options plus the [Common options](v2-0-7-plugins-outputs-gemfire.md#v2.0.7-plugins-outputs-gemfire-common-options) described later.
+This plugin supports the following configuration options plus the [Common options](v2-0-7-plugins-outputs-gemfire.md#v2.0.7-plugins-outputs-gemfire-common-options "Common options") described later.
 
 | Setting | Input type | Required |
-| --- | --- | --- |
-| [`cache_name`](v2-0-7-plugins-outputs-gemfire.md#v2.0.7-plugins-outputs-gemfire-cache_name) | [string](logstash://reference/configuration-file-structure.md#string) | No |
-| [`cache_xml_file`](v2-0-7-plugins-outputs-gemfire.md#v2.0.7-plugins-outputs-gemfire-cache_xml_file) | [string](logstash://reference/configuration-file-structure.md#string) | No |
-| [`key_format`](v2-0-7-plugins-outputs-gemfire.md#v2.0.7-plugins-outputs-gemfire-key_format) | [string](logstash://reference/configuration-file-structure.md#string) | No |
-| [`region_name`](v2-0-7-plugins-outputs-gemfire.md#v2.0.7-plugins-outputs-gemfire-region_name) | [string](logstash://reference/configuration-file-structure.md#string) | No |
+| :- | :- | :- |
+| [`cache_name`](v2-0-7-plugins-outputs-gemfire.md#v2.0.7-plugins-outputs-gemfire-cache_name "cache_name") | [string](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#string) | No |
+| [`cache_xml_file`](v2-0-7-plugins-outputs-gemfire.md#v2.0.7-plugins-outputs-gemfire-cache_xml_file "cache_xml_file") | [string](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#string) | No |
+| [`key_format`](v2-0-7-plugins-outputs-gemfire.md#v2.0.7-plugins-outputs-gemfire-key_format "key_format") | [string](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#string) | No |
+| [`region_name`](v2-0-7-plugins-outputs-gemfire.md#v2.0.7-plugins-outputs-gemfire-region_name "region_name") | [string](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#string) | No |
 
-Also see [Common options](v2-0-7-plugins-outputs-gemfire.md#v2.0.7-plugins-outputs-gemfire-common-options) for a list of options supported by all output plugins.
+Also see [Common options](v2-0-7-plugins-outputs-gemfire.md#v2.0.7-plugins-outputs-gemfire-common-options "Common options") for a list of options supported by all output plugins.
 
  
 
-### `cache_name` [v2.0.7-plugins-outputs-gemfire-cache_name]
+#### `cache_name` [v2.0.7-plugins-outputs-gemfire-cache_name]
 
-* Value type is [string](logstash://reference/configuration-file-structure.md#string)
+* Value type is [string](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#string)
 * Default value is `"logstash"`
 
 Your client cache name
 
+#### `cache_xml_file` [v2.0.7-plugins-outputs-gemfire-cache_xml_file]
 
-### `cache_xml_file` [v2.0.7-plugins-outputs-gemfire-cache_xml_file]
-
-* Value type is [string](logstash://reference/configuration-file-structure.md#string)
+* Value type is [string](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#string)
 * Default value is `nil`
 
 The path to a GemFire client cache XML file.
 
 Example:
 
-```xml
+```
      <client-cache>
        <pool name="client-pool">
            <locator host="localhost" port="31331"/>
@@ -75,64 +71,55 @@ Example:
      </client-cache>
 ```
 
+#### `key_format` [v2.0.7-plugins-outputs-gemfire-key_format]
 
-### `key_format` [v2.0.7-plugins-outputs-gemfire-key_format]
-
-* Value type is [string](logstash://reference/configuration-file-structure.md#string)
-* Default value is `"%{{host}}-%{@timestamp}"`
+* Value type is [string](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#string)
+* Default value is `"%{host}-%{@timestamp}"`
 
 A sprintf format to use when building keys
 
+#### `region_name` [v2.0.7-plugins-outputs-gemfire-region_name]
 
-### `region_name` [v2.0.7-plugins-outputs-gemfire-region_name]
-
-* Value type is [string](logstash://reference/configuration-file-structure.md#string)
+* Value type is [string](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#string)
 * Default value is `"Logstash"`
 
 The region name
 
-
-
-## Common options [v2.0.7-plugins-outputs-gemfire-common-options]
+### Common options [v2.0.7-plugins-outputs-gemfire-common-options]
 
 These configuration options are supported by all output plugins:
 
 | Setting | Input type | Required |
-| --- | --- | --- |
-| [`codec`](v2-0-7-plugins-outputs-gemfire.md#v2.0.7-plugins-outputs-gemfire-codec) | [codec](logstash://reference/configuration-file-structure.md#codec) | No |
-| [`enable_metric`](v2-0-7-plugins-outputs-gemfire.md#v2.0.7-plugins-outputs-gemfire-enable_metric) | [boolean](logstash://reference/configuration-file-structure.md#boolean) | No |
-| [`id`](v2-0-7-plugins-outputs-gemfire.md#v2.0.7-plugins-outputs-gemfire-id) | [string](logstash://reference/configuration-file-structure.md#string) | No |
+| :- | :- | :- |
+| [`codec`](v2-0-7-plugins-outputs-gemfire.md#v2.0.7-plugins-outputs-gemfire-codec "codec") | [codec](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#codec) | No |
+| [`enable_metric`](v2-0-7-plugins-outputs-gemfire.md#v2.0.7-plugins-outputs-gemfire-enable_metric "enable_metric") | [boolean](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#boolean) | No |
+| [`id`](v2-0-7-plugins-outputs-gemfire.md#v2.0.7-plugins-outputs-gemfire-id "id") | [string](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#string) | No |
 
-### `codec` [v2.0.7-plugins-outputs-gemfire-codec]
+#### `codec` [v2.0.7-plugins-outputs-gemfire-codec]
 
-* Value type is [codec](logstash://reference/configuration-file-structure.md#codec)
+* Value type is [codec](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#codec)
 * Default value is `"plain"`
 
 The codec used for output data. Output codecs are a convenient method for encoding your data before it leaves the output without needing a separate filter in your Logstash pipeline.
 
+#### `enable_metric` [v2.0.7-plugins-outputs-gemfire-enable_metric]
 
-### `enable_metric` [v2.0.7-plugins-outputs-gemfire-enable_metric]
-
-* Value type is [boolean](logstash://reference/configuration-file-structure.md#boolean)
+* Value type is [boolean](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#boolean)
 * Default value is `true`
 
 Disable or enable metric logging for this specific plugin instance. By default we record all the metrics we can, but you can disable metrics collection for a specific plugin.
 
+#### `id` [v2.0.7-plugins-outputs-gemfire-id]
 
-### `id` [v2.0.7-plugins-outputs-gemfire-id]
-
-* Value type is [string](logstash://reference/configuration-file-structure.md#string)
+* Value type is [string](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#string)
 * There is no default value for this setting.
 
 Add a unique `ID` to the plugin configuration. If no ID is specified, Logstash will generate one. It is strongly recommended to set this ID in your configuration. This is particularly useful when you have two or more plugins of the same type. For example, if you have 2 gemfire outputs. Adding a named ID in this case will help in monitoring Logstash when using the monitoring APIs.
 
-```json
+```
 output {
   gemfire {
     id => "my_plugin_id"
   }
 }
 ```
-
-
-

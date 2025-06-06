@@ -6,21 +6,19 @@ mapped_pages:
 
 # Exec input plugin v3.3.3 [v3.3.3-plugins-inputs-exec]
 
-
 * Plugin version: v3.3.3
 * Released on: 2019-09-10
 * [Changelog](https://github.com/logstash-plugins/logstash-input-exec/blob/v3.3.3/CHANGELOG.md)
 
-For other versions, see the [overview list](input-exec-index.md).
+For other versions, see the [overview list](input-exec-index.md "Versioned exec input plugin docs").
 
-To learn more about Logstash, see the [Logstash Reference](logstash://reference/index.md).
+To learn more about Logstash, see the [Logstash Reference](https://www.elastic.co/guide/en/logstash/current/index.html).
 
-## Getting help [_getting_help_360]
+### Getting help [_getting_help_373]
 
 For questions about the plugin, open a topic in the [Discuss](http://discuss.elastic.co) forums. For bugs or feature requests, open an issue in [Github](https://github.com/logstash-plugins/logstash-input-exec). For the list of Elastic supported plugins, please consult the [Elastic Support Matrix](https://www.elastic.co/support/matrix#matrix_logstash_plugins).
 
-
-## Description [_description_360]
+### Description [_description_373]
 
 Periodically run a shell command and capture the whole output as an event.
 
@@ -29,13 +27,13 @@ Notes:
 * The `command` field of this event will be the command run.
 * The `message` field of this event will be the entire stdout of the command.
 
-### IMPORTANT [_important]
+#### IMPORTANT [_important]
 
 The exec input ultimately uses `fork` to spawn a child process. Using fork duplicates the parent process address space (in our case, **logstash and the JVM**); this is mitigated with OS copy-on-write but ultimately you can end up allocating lots of memory just for a "simple" executable. If the exec input fails with errors like `ENOMEM: Cannot allocate memory` it is an indication that there is not enough non-JVM-heap physical memory to perform the fork.
 
 Example:
 
-```ruby
+```
 input {
   exec {
     command => "ls"
@@ -46,44 +44,40 @@ input {
 
 This will execute `ls` command every 30 seconds.
 
+### Exec Input Configuration Options [v3.3.3-plugins-inputs-exec-options]
 
-
-## Exec Input Configuration Options [v3.3.3-plugins-inputs-exec-options]
-
-This plugin supports the following configuration options plus the [Common options](v3-3-3-plugins-inputs-exec.md#v3.3.3-plugins-inputs-exec-common-options) described later.
+This plugin supports the following configuration options plus the [Common options](v3-3-3-plugins-inputs-exec.md#v3.3.3-plugins-inputs-exec-common-options "Common options") described later.
 
 | Setting | Input type | Required |
-| --- | --- | --- |
-| [`command`](v3-3-3-plugins-inputs-exec.md#v3.3.3-plugins-inputs-exec-command) | [string](logstash://reference/configuration-file-structure.md#string) | Yes |
-| [`interval`](v3-3-3-plugins-inputs-exec.md#v3.3.3-plugins-inputs-exec-interval) | [number](logstash://reference/configuration-file-structure.md#number) | No |
-| [`schedule`](v3-3-3-plugins-inputs-exec.md#v3.3.3-plugins-inputs-exec-schedule) | [string](logstash://reference/configuration-file-structure.md#string) | No |
+| :- | :- | :- |
+| [`command`](v3-3-3-plugins-inputs-exec.md#v3.3.3-plugins-inputs-exec-command "command") | [string](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#string) | Yes |
+| [`interval`](v3-3-3-plugins-inputs-exec.md#v3.3.3-plugins-inputs-exec-interval "interval") | [number](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#number) | No |
+| [`schedule`](v3-3-3-plugins-inputs-exec.md#v3.3.3-plugins-inputs-exec-schedule "schedule") | [string](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#string) | No |
 
-Also see [Common options](v3-3-3-plugins-inputs-exec.md#v3.3.3-plugins-inputs-exec-common-options) for a list of options supported by all input plugins.
+Also see [Common options](v3-3-3-plugins-inputs-exec.md#v3.3.3-plugins-inputs-exec-common-options "Common options") for a list of options supported by all input plugins.
 
  
 
-### `command` [v3.3.3-plugins-inputs-exec-command]
+#### `command` [v3.3.3-plugins-inputs-exec-command]
 
 * This is a required setting.
-* Value type is [string](logstash://reference/configuration-file-structure.md#string)
+* Value type is [string](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#string)
 * There is no default value for this setting.
 
 Command to run. For example, `uptime`
 
+#### `interval` [v3.3.3-plugins-inputs-exec-interval]
 
-### `interval` [v3.3.3-plugins-inputs-exec-interval]
-
-* Value type is [number](logstash://reference/configuration-file-structure.md#number)
+* Value type is [number](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#number)
 * There is no default value for this setting.
 
 Interval to run the command. Value is in seconds.
 
 Either `interval` or `schedule` option must be defined.
 
+#### `schedule` [v3.3.3-plugins-inputs-exec-schedule]
 
-### `schedule` [v3.3.3-plugins-inputs-exec-schedule]
-
-* Value type is [string](logstash://reference/configuration-file-structure.md#string)
+* Value type is [string](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#string)
 * There is no default value for this setting.
 
 Schedule of when to periodically run command.
@@ -92,8 +86,8 @@ This scheduling syntax is powered by [rufus-scheduler](https://github.com/jmettr
 
 Examples:
 
-|     |     |
-| --- | --- |
+| | |
+| :- | :- |
 | `* 5 * 1-3 *` | will execute every minute of 5am every day of January through March. |
 | `0 * * * *` | will execute on the 0th minute of every hour every day. |
 | `0 6 * * * America/Chicago` | will execute at 6:00am (UTC/GMT -5) every day. |
@@ -102,53 +96,48 @@ Further documentation describing this syntax can be found [here](https://github.
 
 Either `interval` or `schedule` option must be defined.
 
-
-
-## Common options [v3.3.3-plugins-inputs-exec-common-options]
+### Common options [v3.3.3-plugins-inputs-exec-common-options]
 
 These configuration options are supported by all input plugins:
 
 | Setting | Input type | Required |
-| --- | --- | --- |
-| [`add_field`](v3-3-3-plugins-inputs-exec.md#v3.3.3-plugins-inputs-exec-add_field) | [hash](logstash://reference/configuration-file-structure.md#hash) | No |
-| [`codec`](v3-3-3-plugins-inputs-exec.md#v3.3.3-plugins-inputs-exec-codec) | [codec](logstash://reference/configuration-file-structure.md#codec) | No |
-| [`enable_metric`](v3-3-3-plugins-inputs-exec.md#v3.3.3-plugins-inputs-exec-enable_metric) | [boolean](logstash://reference/configuration-file-structure.md#boolean) | No |
-| [`id`](v3-3-3-plugins-inputs-exec.md#v3.3.3-plugins-inputs-exec-id) | [string](logstash://reference/configuration-file-structure.md#string) | No |
-| [`tags`](v3-3-3-plugins-inputs-exec.md#v3.3.3-plugins-inputs-exec-tags) | [array](logstash://reference/configuration-file-structure.md#array) | No |
-| [`type`](v3-3-3-plugins-inputs-exec.md#v3.3.3-plugins-inputs-exec-type) | [string](logstash://reference/configuration-file-structure.md#string) | No |
+| :- | :- | :- |
+| [`add_field`](v3-3-3-plugins-inputs-exec.md#v3.3.3-plugins-inputs-exec-add_field "add_field") | [hash](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#hash) | No |
+| [`codec`](v3-3-3-plugins-inputs-exec.md#v3.3.3-plugins-inputs-exec-codec "codec") | [codec](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#codec) | No |
+| [`enable_metric`](v3-3-3-plugins-inputs-exec.md#v3.3.3-plugins-inputs-exec-enable_metric "enable_metric") | [boolean](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#boolean) | No |
+| [`id`](v3-3-3-plugins-inputs-exec.md#v3.3.3-plugins-inputs-exec-id "id") | [string](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#string) | No |
+| [`tags`](v3-3-3-plugins-inputs-exec.md#v3.3.3-plugins-inputs-exec-tags "tags") | [array](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#array) | No |
+| [`type`](v3-3-3-plugins-inputs-exec.md#v3.3.3-plugins-inputs-exec-type "type") | [string](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#string) | No |
 
-### `add_field` [v3.3.3-plugins-inputs-exec-add_field]
+#### `add_field` [v3.3.3-plugins-inputs-exec-add_field]
 
-* Value type is [hash](logstash://reference/configuration-file-structure.md#hash)
+* Value type is [hash](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#hash)
 * Default value is `{}`
 
 Add a field to an event
 
+#### `codec` [v3.3.3-plugins-inputs-exec-codec]
 
-### `codec` [v3.3.3-plugins-inputs-exec-codec]
-
-* Value type is [codec](logstash://reference/configuration-file-structure.md#codec)
+* Value type is [codec](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#codec)
 * Default value is `"plain"`
 
 The codec used for input data. Input codecs are a convenient method for decoding your data before it enters the input, without needing a separate filter in your Logstash pipeline.
 
+#### `enable_metric` [v3.3.3-plugins-inputs-exec-enable_metric]
 
-### `enable_metric` [v3.3.3-plugins-inputs-exec-enable_metric]
-
-* Value type is [boolean](logstash://reference/configuration-file-structure.md#boolean)
+* Value type is [boolean](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#boolean)
 * Default value is `true`
 
 Disable or enable metric logging for this specific plugin instance by default we record all the metrics we can, but you can disable metrics collection for a specific plugin.
 
+#### `id` [v3.3.3-plugins-inputs-exec-id]
 
-### `id` [v3.3.3-plugins-inputs-exec-id]
-
-* Value type is [string](logstash://reference/configuration-file-structure.md#string)
+* Value type is [string](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#string)
 * There is no default value for this setting.
 
 Add a unique `ID` to the plugin configuration. If no ID is specified, Logstash will generate one. It is strongly recommended to set this ID in your configuration. This is particularly useful when you have two or more plugins of the same type, for example, if you have 2 exec inputs. Adding a named ID in this case will help in monitoring Logstash when using the monitoring APIs.
 
-```json
+```
 input {
   exec {
     id => "my_plugin_id"
@@ -156,20 +145,18 @@ input {
 }
 ```
 
+#### `tags` [v3.3.3-plugins-inputs-exec-tags]
 
-### `tags` [v3.3.3-plugins-inputs-exec-tags]
-
-* Value type is [array](logstash://reference/configuration-file-structure.md#array)
+* Value type is [array](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#array)
 * There is no default value for this setting.
 
 Add any number of arbitrary tags to your event.
 
 This can help with processing later.
 
+#### `type` [v3.3.3-plugins-inputs-exec-type]
 
-### `type` [v3.3.3-plugins-inputs-exec-type]
-
-* Value type is [string](logstash://reference/configuration-file-structure.md#string)
+* Value type is [string](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#string)
 * There is no default value for this setting.
 
 Add a `type` field to all events handled by this input.
