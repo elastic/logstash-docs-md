@@ -27,9 +27,9 @@ Sending events to this input by *any* means other than `plugins-outputs-logstash
 
 #### Minimum Configuration [v1.0.1-plugins-inputs-logstash-minimum-config]
 
-| SSL Enabled | SSL Disabled |
-| :- | :- |
-| ```
+**SSL Enabled**
+
+```
 input {
   logstash {
     ssl_keystore_path
@@ -38,13 +38,17 @@ input {
          => "${PASS}"
   }
 }
-``` | ```
+```
+
+**SSL Disabled**
+
+```
 input {
   logstash {
     ssl_enabled => false
   }
 }
-``` |
+```
 
 #### Configuration Concepts [v1.0.1-plugins-inputs-logstash-config-binding]
 

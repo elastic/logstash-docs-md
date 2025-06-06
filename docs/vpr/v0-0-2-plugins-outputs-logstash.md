@@ -27,16 +27,20 @@ Sending events to *any* destination other than [logstash input plugin](https://w
 
 #### Minimum Configuration [v0.0.2-plugins-outputs-logstash-minimum-config]
 
-| SSL Enabled | SSL Disabled |
-| :- | :- |
-| ```
+**SSL Enabled**
+
+```
 output {
   logstash {
     host => "10.0.0.123"
     port => 8080
   }
 }
-``` | ```
+```
+
+**SSL Disabled**
+
+```
 output {
   logstash {
     host => "10.0.0.123"
@@ -45,7 +49,7 @@ output {
          => false
   }
 }
-``` |
+```
 
 #### Configuration Concepts [v0.0.2-plugins-outputs-logstash-config-connecting]
 

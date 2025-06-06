@@ -27,9 +27,9 @@ Sending events to this input by *any* means other than `plugins-outputs-logstash
 
 #### Minimum Configuration [v0.0.3-plugins-inputs-logstash-minimum-config]
 
-| SSL Enabled | SSL Disabled |
-| :- | :- |
-| ```
+**SSL Enabled**
+
+```
 input {
   logstash {
     port => 8080
@@ -39,14 +39,18 @@ input {
          => "${PASS}"
   }
 }
-``` | ```
+```
+
+**SSL Disabled**
+
+```
 input {
   logstash {
     port        => 8080
     ssl_enabled => false
   }
 }
-``` |
+```
 
 #### Configuration Concepts [v0.0.3-plugins-inputs-logstash-config-binding]
 
