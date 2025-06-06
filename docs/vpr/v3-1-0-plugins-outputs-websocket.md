@@ -6,99 +6,88 @@ mapped_pages:
 
 # Websocket output plugin v3.1.0 [v3.1.0-plugins-outputs-websocket]
 
-
 * Plugin version: v3.1.0
 * Released on: 2024-01-11
 * [Changelog](https://github.com/logstash-plugins/logstash-output-websocket/blob/v3.1.0/CHANGELOG.md)
 
-For other versions, see the [overview list](output-websocket-index.md).
+For other versions, see the [overview list](output-websocket-index.md "Versioned websocket output plugin docs").
 
-To learn more about Logstash, see the [Logstash Reference](logstash://reference/index.md).
+To learn more about Logstash, see the [Logstash Reference](https://www.elastic.co/guide/en/logstash/current/index.html).
 
-## Getting help [_getting_help_1657]
+### Getting help [_getting_help_1674]
 
 For questions about the plugin, open a topic in the [Discuss](http://discuss.elastic.co) forums. For bugs or feature requests, open an issue in [Github](https://github.com/logstash-plugins/logstash-output-websocket). For the list of Elastic supported plugins, please consult the [Elastic Support Matrix](https://www.elastic.co/support/matrix#matrix_logstash_plugins).
 
-
-## Description [_description_1647]
+### Description [_description_1664]
 
 This output runs a websocket server and publishes any messages to all connected websocket clients.
 
-You can connect to it with ws://<host\>:<port\>/
+You can connect to it with ws\://\<host\\>:\<port\\>/
 
 If no clients are connected, any messages received are ignored.
 
+### Websocket Output Configuration Options [v3.1.0-plugins-outputs-websocket-options]
 
-## Websocket Output Configuration Options [v3.1.0-plugins-outputs-websocket-options]
-
-This plugin supports the following configuration options plus the [Common options](v3-1-0-plugins-outputs-websocket.md#v3.1.0-plugins-outputs-websocket-common-options) described later.
+This plugin supports the following configuration options plus the [Common options](v3-1-0-plugins-outputs-websocket.md#v3.1.0-plugins-outputs-websocket-common-options "Common options") described later.
 
 | Setting | Input type | Required |
-| --- | --- | --- |
-| [`host`](v3-1-0-plugins-outputs-websocket.md#v3.1.0-plugins-outputs-websocket-host) | [string](logstash://reference/configuration-file-structure.md#string) | No |
-| [`port`](v3-1-0-plugins-outputs-websocket.md#v3.1.0-plugins-outputs-websocket-port) | [number](logstash://reference/configuration-file-structure.md#number) | No |
+| :- | :- | :- |
+| [`host`](v3-1-0-plugins-outputs-websocket.md#v3.1.0-plugins-outputs-websocket-host "host") | [string](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#string) | No |
+| [`port`](v3-1-0-plugins-outputs-websocket.md#v3.1.0-plugins-outputs-websocket-port "port") | [number](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#number) | No |
 
-Also see [Common options](v3-1-0-plugins-outputs-websocket.md#v3.1.0-plugins-outputs-websocket-common-options) for a list of options supported by all output plugins.
+Also see [Common options](v3-1-0-plugins-outputs-websocket.md#v3.1.0-plugins-outputs-websocket-common-options "Common options") for a list of options supported by all output plugins.
 
  
 
-### `host` [v3.1.0-plugins-outputs-websocket-host]
+#### `host` [v3.1.0-plugins-outputs-websocket-host]
 
-* Value type is [string](logstash://reference/configuration-file-structure.md#string)
+* Value type is [string](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#string)
 * Default value is `"0.0.0.0"`
 
 The address to serve websocket data from
 
+#### `port` [v3.1.0-plugins-outputs-websocket-port]
 
-### `port` [v3.1.0-plugins-outputs-websocket-port]
-
-* Value type is [number](logstash://reference/configuration-file-structure.md#number)
+* Value type is [number](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#number)
 * Default value is `3232`
 
 The port to serve websocket data from
 
-
-
-## Common options [v3.1.0-plugins-outputs-websocket-common-options]
+### Common options [v3.1.0-plugins-outputs-websocket-common-options]
 
 These configuration options are supported by all output plugins:
 
 | Setting | Input type | Required |
-| --- | --- | --- |
-| [`codec`](v3-1-0-plugins-outputs-websocket.md#v3.1.0-plugins-outputs-websocket-codec) | [codec](logstash://reference/configuration-file-structure.md#codec) | No |
-| [`enable_metric`](v3-1-0-plugins-outputs-websocket.md#v3.1.0-plugins-outputs-websocket-enable_metric) | [boolean](logstash://reference/configuration-file-structure.md#boolean) | No |
-| [`id`](v3-1-0-plugins-outputs-websocket.md#v3.1.0-plugins-outputs-websocket-id) | [string](logstash://reference/configuration-file-structure.md#string) | No |
+| :- | :- | :- |
+| [`codec`](v3-1-0-plugins-outputs-websocket.md#v3.1.0-plugins-outputs-websocket-codec "codec") | [codec](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#codec) | No |
+| [`enable_metric`](v3-1-0-plugins-outputs-websocket.md#v3.1.0-plugins-outputs-websocket-enable_metric "enable_metric") | [boolean](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#boolean) | No |
+| [`id`](v3-1-0-plugins-outputs-websocket.md#v3.1.0-plugins-outputs-websocket-id "id") | [string](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#string) | No |
 
-### `codec` [v3.1.0-plugins-outputs-websocket-codec]
+#### `codec` [v3.1.0-plugins-outputs-websocket-codec]
 
-* Value type is [codec](logstash://reference/configuration-file-structure.md#codec)
+* Value type is [codec](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#codec)
 * Default value is `"plain"`
 
 The codec used for output data. Output codecs are a convenient method for encoding your data before it leaves the output without needing a separate filter in your Logstash pipeline.
 
+#### `enable_metric` [v3.1.0-plugins-outputs-websocket-enable_metric]
 
-### `enable_metric` [v3.1.0-plugins-outputs-websocket-enable_metric]
-
-* Value type is [boolean](logstash://reference/configuration-file-structure.md#boolean)
+* Value type is [boolean](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#boolean)
 * Default value is `true`
 
 Disable or enable metric logging for this specific plugin instance. By default we record all the metrics we can, but you can disable metrics collection for a specific plugin.
 
+#### `id` [v3.1.0-plugins-outputs-websocket-id]
 
-### `id` [v3.1.0-plugins-outputs-websocket-id]
-
-* Value type is [string](logstash://reference/configuration-file-structure.md#string)
+* Value type is [string](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#string)
 * There is no default value for this setting.
 
 Add a unique `ID` to the plugin configuration. If no ID is specified, Logstash will generate one. It is strongly recommended to set this ID in your configuration. This is particularly useful when you have two or more plugins of the same type. For example, if you have 2 websocket outputs. Adding a named ID in this case will help in monitoring Logstash when using the monitoring APIs.
 
-```json
+```
 output {
   websocket {
     id => "my_plugin_id"
   }
 }
 ```
-
-
-

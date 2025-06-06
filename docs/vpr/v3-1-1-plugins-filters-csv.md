@@ -6,94 +6,84 @@ mapped_pages:
 
 # Csv filter plugin v3.1.1 [v3.1.1-plugins-filters-csv]
 
-
 * Plugin version: v3.1.1
 * Released on: 2021-06-08
 * [Changelog](https://github.com/logstash-plugins/logstash-filter-csv/blob/v3.1.1/CHANGELOG.md)
 
-For other versions, see the [overview list](filter-csv-index.md).
+For other versions, see the [overview list](filter-csv-index.md "Versioned csv filter plugin docs").
 
-To learn more about Logstash, see the [Logstash Reference](logstash://reference/index.md).
+To learn more about Logstash, see the [Logstash Reference](https://www.elastic.co/guide/en/logstash/current/index.html).
 
-## Getting help [_getting_help_1725]
+### Getting help [_getting_help_1742]
 
 For questions about the plugin, open a topic in the [Discuss](http://discuss.elastic.co) forums. For bugs or feature requests, open an issue in [Github](https://github.com/logstash-plugins/logstash-filter-csv). For the list of Elastic supported plugins, please consult the [Elastic Support Matrix](https://www.elastic.co/support/matrix#matrix_logstash_plugins).
 
-
-## Description [_description_1703]
+### Description [_description_1720]
 
 The CSV filter takes an event field containing CSV data, parses it, and stores it as individual fields with optionally-specified field names. This filter can parse data with any separator, not just commas.
 
-
-## Event Metadata and the Elastic Common Schema (ECS) [v3.1.1-plugins-filters-csv-ecs_metadata]
+### Event Metadata and the Elastic Common Schema (ECS) [v3.1.1-plugins-filters-csv-ecs_metadata]
 
 The plugin behaves the same regardless of ECS compatibility, except giving a warning when ECS is enabled and `target` isn’t set.
 
-::::{tip}
 Set the `target` option to avoid potential schema conflicts.
-::::
 
+### Csv Filter Configuration Options [v3.1.1-plugins-filters-csv-options]
 
-
-## Csv Filter Configuration Options [v3.1.1-plugins-filters-csv-options]
-
-This plugin supports the following configuration options plus the [Common options](v3-1-1-plugins-filters-csv.md#v3.1.1-plugins-filters-csv-common-options) described later.
+This plugin supports the following configuration options plus the [Common options](v3-1-1-plugins-filters-csv.md#v3.1.1-plugins-filters-csv-common-options "Common options") described later.
 
 | Setting | Input type | Required |
-| --- | --- | --- |
-| [`autodetect_column_names`](v3-1-1-plugins-filters-csv.md#v3.1.1-plugins-filters-csv-autodetect_column_names) | [boolean](logstash://reference/configuration-file-structure.md#boolean) | No |
-| [`autogenerate_column_names`](v3-1-1-plugins-filters-csv.md#v3.1.1-plugins-filters-csv-autogenerate_column_names) | [boolean](logstash://reference/configuration-file-structure.md#boolean) | No |
-| [`columns`](v3-1-1-plugins-filters-csv.md#v3.1.1-plugins-filters-csv-columns) | [array](logstash://reference/configuration-file-structure.md#array) | No |
-| [`convert`](v3-1-1-plugins-filters-csv.md#v3.1.1-plugins-filters-csv-convert) | [hash](logstash://reference/configuration-file-structure.md#hash) | No |
-| [`ecs_compatibility`](v3-1-1-plugins-filters-csv.md#v3.1.1-plugins-filters-csv-ecs_compatibility) | [string](logstash://reference/configuration-file-structure.md#string) | No |
-| [`quote_char`](v3-1-1-plugins-filters-csv.md#v3.1.1-plugins-filters-csv-quote_char) | [string](logstash://reference/configuration-file-structure.md#string) | No |
-| [`separator`](v3-1-1-plugins-filters-csv.md#v3.1.1-plugins-filters-csv-separator) | [string](logstash://reference/configuration-file-structure.md#string) | No |
-| [`skip_empty_columns`](v3-1-1-plugins-filters-csv.md#v3.1.1-plugins-filters-csv-skip_empty_columns) | [boolean](logstash://reference/configuration-file-structure.md#boolean) | No |
-| [`skip_empty_rows`](v3-1-1-plugins-filters-csv.md#v3.1.1-plugins-filters-csv-skip_empty_rows) | [boolean](logstash://reference/configuration-file-structure.md#boolean) | No |
-| [`skip_header`](v3-1-1-plugins-filters-csv.md#v3.1.1-plugins-filters-csv-skip_header) | [boolean](logstash://reference/configuration-file-structure.md#boolean) | No |
-| [`source`](v3-1-1-plugins-filters-csv.md#v3.1.1-plugins-filters-csv-source) | [string](logstash://reference/configuration-file-structure.md#string) | No |
-| [`target`](v3-1-1-plugins-filters-csv.md#v3.1.1-plugins-filters-csv-target) | [string](logstash://reference/configuration-file-structure.md#string) | No |
+| :- | :- | :- |
+| [`autodetect_column_names`](v3-1-1-plugins-filters-csv.md#v3.1.1-plugins-filters-csv-autodetect_column_names "autodetect_column_names") | [boolean](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#boolean) | No |
+| [`autogenerate_column_names`](v3-1-1-plugins-filters-csv.md#v3.1.1-plugins-filters-csv-autogenerate_column_names "autogenerate_column_names") | [boolean](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#boolean) | No |
+| [`columns`](v3-1-1-plugins-filters-csv.md#v3.1.1-plugins-filters-csv-columns "columns") | [array](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#array) | No |
+| [`convert`](v3-1-1-plugins-filters-csv.md#v3.1.1-plugins-filters-csv-convert "convert") | [hash](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#hash) | No |
+| [`ecs_compatibility`](v3-1-1-plugins-filters-csv.md#v3.1.1-plugins-filters-csv-ecs_compatibility "ecs_compatibility") | [string](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#string) | No |
+| [`quote_char`](v3-1-1-plugins-filters-csv.md#v3.1.1-plugins-filters-csv-quote_char "quote_char") | [string](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#string) | No |
+| [`separator`](v3-1-1-plugins-filters-csv.md#v3.1.1-plugins-filters-csv-separator "separator") | [string](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#string) | No |
+| [`skip_empty_columns`](v3-1-1-plugins-filters-csv.md#v3.1.1-plugins-filters-csv-skip_empty_columns "skip_empty_columns") | [boolean](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#boolean) | No |
+| [`skip_empty_rows`](v3-1-1-plugins-filters-csv.md#v3.1.1-plugins-filters-csv-skip_empty_rows "skip_empty_rows") | [boolean](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#boolean) | No |
+| [`skip_header`](v3-1-1-plugins-filters-csv.md#v3.1.1-plugins-filters-csv-skip_header "skip_header") | [boolean](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#boolean) | No |
+| [`source`](v3-1-1-plugins-filters-csv.md#v3.1.1-plugins-filters-csv-source "source") | [string](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#string) | No |
+| [`target`](v3-1-1-plugins-filters-csv.md#v3.1.1-plugins-filters-csv-target "target") | [string](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#string) | No |
 
-Also see [Common options](v3-1-1-plugins-filters-csv.md#v3.1.1-plugins-filters-csv-common-options) for a list of options supported by all filter plugins.
+Also see [Common options](v3-1-1-plugins-filters-csv.md#v3.1.1-plugins-filters-csv-common-options "Common options") for a list of options supported by all filter plugins.
 
  
 
-### `autodetect_column_names` [v3.1.1-plugins-filters-csv-autodetect_column_names]
+#### `autodetect_column_names` [v3.1.1-plugins-filters-csv-autodetect_column_names]
 
-* Value type is [boolean](logstash://reference/configuration-file-structure.md#boolean)
+* Value type is [boolean](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#boolean)
 * Default value is `false`
 
 Define whether column names should be auto-detected from the header column or not. Defaults to false.
 
 Logstash pipeline workers must be set to `1` for this option to work.
 
+#### `autogenerate_column_names` [v3.1.1-plugins-filters-csv-autogenerate_column_names]
 
-### `autogenerate_column_names` [v3.1.1-plugins-filters-csv-autogenerate_column_names]
-
-* Value type is [boolean](logstash://reference/configuration-file-structure.md#boolean)
+* Value type is [boolean](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#boolean)
 * Default value is `true`
 
 Define whether column names should autogenerated or not. Defaults to true. If set to false, columns not having a header specified will not be parsed.
 
+#### `columns` [v3.1.1-plugins-filters-csv-columns]
 
-### `columns` [v3.1.1-plugins-filters-csv-columns]
-
-* Value type is [array](logstash://reference/configuration-file-structure.md#array)
+* Value type is [array](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#array)
 * Default value is `[]`
 
-Define a list of column names (in the order they appear in the CSV, as if it were a header line). If `columns` is not configured, or there are not enough columns specified, the default column names are "column1", "column2", etc. In the case that there are more columns in the data than specified in this column list, extra columns will be auto-numbered: (e.g. "user_defined_1", "user_defined_2", "column3", "column4", etc.)
+Define a list of column names (in the order they appear in the CSV, as if it were a header line). If `columns` is not configured, or there are not enough columns specified, the default column names are "column1", "column2", etc. In the case that there are more columns in the data than specified in this column list, extra columns will be auto-numbered: (e.g. "user\_defined\_1", "user\_defined\_2", "column3", "column4", etc.)
 
+#### `convert` [v3.1.1-plugins-filters-csv-convert]
 
-### `convert` [v3.1.1-plugins-filters-csv-convert]
-
-* Value type is [hash](logstash://reference/configuration-file-structure.md#hash)
+* Value type is [hash](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#hash)
 * Default value is `{}`
 
-Define a set of datatype conversions to be applied to columns. Possible conversions are integer, float, date, date_time, boolean
+Define a set of datatype conversions to be applied to columns. Possible conversions are integer, float, date, date\_time, boolean
 
 Example:
 
-```ruby
+```
     filter {
       csv {
         convert => {
@@ -104,102 +94,92 @@ Example:
     }
 ```
 
+#### `ecs_compatibility` [v3.1.1-plugins-filters-csv-ecs_compatibility]
 
-### `ecs_compatibility` [v3.1.1-plugins-filters-csv-ecs_compatibility]
+* Value type is [string](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#string)
 
-* Value type is [string](logstash://reference/configuration-file-structure.md#string)
 * Supported values are:
 
-    * `disabled`: does not use ECS-compatible field names
-    * `v1`: uses the value in `target` as field name
+  * `disabled`: does not use ECS-compatible field names
+  * `v1`: uses the value in `target` as field name
 
+Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)](https://www.elastic.co/guide/en/ecs/current). See [Event Metadata and the Elastic Common Schema (ECS)](v3-1-1-plugins-filters-csv.md#v3.1.1-plugins-filters-csv-ecs_metadata "Event Metadata and the Elastic Common Schema (ECS)") for detailed information.
 
-Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)][Elastic Common Schema (ECS)\]\(([^:]+)://reference/index.md)). See [Event Metadata and the Elastic Common Schema (ECS)](v3-1-1-plugins-filters-csv.md#v3.1.1-plugins-filters-csv-ecs_metadata) for detailed information.
+#### `quote_char` [v3.1.1-plugins-filters-csv-quote_char]
 
-
-### `quote_char` [v3.1.1-plugins-filters-csv-quote_char]
-
-* Value type is [string](logstash://reference/configuration-file-structure.md#string)
+* Value type is [string](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#string)
 * Default value is `"\""`
 
 Define the character used to quote CSV fields. If this is not specified the default is a double quote `"`. Optional.
 
+#### `separator` [v3.1.1-plugins-filters-csv-separator]
 
-### `separator` [v3.1.1-plugins-filters-csv-separator]
-
-* Value type is [string](logstash://reference/configuration-file-structure.md#string)
+* Value type is [string](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#string)
 * Default value is `","`
 
 Define the column separator value. If this is not specified, the default is a comma `,`. If you want to define a tabulation as a separator, you need to set the value to the actual tab character and not `\t`. Optional.
 
+#### `skip_empty_columns` [v3.1.1-plugins-filters-csv-skip_empty_columns]
 
-### `skip_empty_columns` [v3.1.1-plugins-filters-csv-skip_empty_columns]
-
-* Value type is [boolean](logstash://reference/configuration-file-structure.md#boolean)
+* Value type is [boolean](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#boolean)
 * Default value is `false`
 
 Define whether empty columns should be skipped. Defaults to false. If set to true, columns containing no value will not get set.
 
+#### `skip_empty_rows` [v3.1.1-plugins-filters-csv-skip_empty_rows]
 
-### `skip_empty_rows` [v3.1.1-plugins-filters-csv-skip_empty_rows]
-
-* Value type is [boolean](logstash://reference/configuration-file-structure.md#boolean)
+* Value type is [boolean](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#boolean)
 * Default value is `false`
 
-Define whether empty rows could potentially be skipped. Defaults to false. If set to true, rows containing no value will be tagged with "_csvskippedemptyfield". This tag can referenced by users if they wish to cancel events using an *if* conditional statement.
+Define whether empty rows could potentially be skipped. Defaults to false. If set to true, rows containing no value will be tagged with "\_csvskippedemptyfield". This tag can referenced by users if they wish to cancel events using an *if* conditional statement.
 
+#### `skip_header` [v3.1.1-plugins-filters-csv-skip_header]
 
-### `skip_header` [v3.1.1-plugins-filters-csv-skip_header]
-
-* Value type is [boolean](logstash://reference/configuration-file-structure.md#boolean)
+* Value type is [boolean](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#boolean)
 * Default value is `false`
 
 Define whether the header should be skipped. Defaults to false. If set to true, the header will be skipped. Assumes that header is not repeated within further rows as such rows will also be skipped. If `skip_header` is set without `autodetect_column_names` being set then columns should be set which will result in the skipping of any row that exactly matches the specified column values. If `skip_header` and `autodetect_column_names` are specified then columns should not be specified, in this case `autodetect_column_names` will fill the columns setting in the background, from the first event seen, and any subsequent values that match what was autodetected will be skipped.
 
 Logstash pipeline workers must be set to `1` for this option to work.
 
+#### `source` [v3.1.1-plugins-filters-csv-source]
 
-### `source` [v3.1.1-plugins-filters-csv-source]
-
-* Value type is [string](logstash://reference/configuration-file-structure.md#string)
+* Value type is [string](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#string)
 * Default value is `"message"`
 
 The CSV data in the value of the `source` field will be expanded into a data structure.
 
+#### `target` [v3.1.1-plugins-filters-csv-target]
 
-### `target` [v3.1.1-plugins-filters-csv-target]
-
-* Value type is [string](logstash://reference/configuration-file-structure.md#string)
+* Value type is [string](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#string)
 * There is no default value for this setting.
 
 Define target field for placing the data. Defaults to writing to the root of the event.
 
-
-
-## Common options [v3.1.1-plugins-filters-csv-common-options]
+### Common options [v3.1.1-plugins-filters-csv-common-options]
 
 These configuration options are supported by all filter plugins:
 
 | Setting | Input type | Required |
-| --- | --- | --- |
-| [`add_field`](v3-1-1-plugins-filters-csv.md#v3.1.1-plugins-filters-csv-add_field) | [hash](logstash://reference/configuration-file-structure.md#hash) | No |
-| [`add_tag`](v3-1-1-plugins-filters-csv.md#v3.1.1-plugins-filters-csv-add_tag) | [array](logstash://reference/configuration-file-structure.md#array) | No |
-| [`enable_metric`](v3-1-1-plugins-filters-csv.md#v3.1.1-plugins-filters-csv-enable_metric) | [boolean](logstash://reference/configuration-file-structure.md#boolean) | No |
-| [`id`](v3-1-1-plugins-filters-csv.md#v3.1.1-plugins-filters-csv-id) | [string](logstash://reference/configuration-file-structure.md#string) | No |
-| [`periodic_flush`](v3-1-1-plugins-filters-csv.md#v3.1.1-plugins-filters-csv-periodic_flush) | [boolean](logstash://reference/configuration-file-structure.md#boolean) | No |
-| [`remove_field`](v3-1-1-plugins-filters-csv.md#v3.1.1-plugins-filters-csv-remove_field) | [array](logstash://reference/configuration-file-structure.md#array) | No |
-| [`remove_tag`](v3-1-1-plugins-filters-csv.md#v3.1.1-plugins-filters-csv-remove_tag) | [array](logstash://reference/configuration-file-structure.md#array) | No |
+| :- | :- | :- |
+| [`add_field`](v3-1-1-plugins-filters-csv.md#v3.1.1-plugins-filters-csv-add_field "add_field") | [hash](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#hash) | No |
+| [`add_tag`](v3-1-1-plugins-filters-csv.md#v3.1.1-plugins-filters-csv-add_tag "add_tag") | [array](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#array) | No |
+| [`enable_metric`](v3-1-1-plugins-filters-csv.md#v3.1.1-plugins-filters-csv-enable_metric "enable_metric") | [boolean](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#boolean) | No |
+| [`id`](v3-1-1-plugins-filters-csv.md#v3.1.1-plugins-filters-csv-id "id") | [string](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#string) | No |
+| [`periodic_flush`](v3-1-1-plugins-filters-csv.md#v3.1.1-plugins-filters-csv-periodic_flush "periodic_flush") | [boolean](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#boolean) | No |
+| [`remove_field`](v3-1-1-plugins-filters-csv.md#v3.1.1-plugins-filters-csv-remove_field "remove_field") | [array](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#array) | No |
+| [`remove_tag`](v3-1-1-plugins-filters-csv.md#v3.1.1-plugins-filters-csv-remove_tag "remove_tag") | [array](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#array) | No |
 
-### `add_field` [v3.1.1-plugins-filters-csv-add_field]
+#### `add_field` [v3.1.1-plugins-filters-csv-add_field]
 
-* Value type is [hash](logstash://reference/configuration-file-structure.md#hash)
+* Value type is [hash](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#hash)
 * Default value is `{}`
 
-If this filter is successful, add any arbitrary fields to this event. Field names can be dynamic and include parts of the event using the `%{{field}}`.
+If this filter is successful, add any arbitrary fields to this event. Field names can be dynamic and include parts of the event using the `%{field}`.
 
 Example:
 
-```json
+```
     filter {
       csv {
         add_field => { "foo_%{somefield}" => "Hello world, from %{host}" }
@@ -207,7 +187,7 @@ Example:
     }
 ```
 
-```json
+```
     # You can also add multiple fields at once:
     filter {
       csv {
@@ -219,19 +199,18 @@ Example:
     }
 ```
 
-If the event has field `"somefield" == "hello"` this filter, on success, would add field `foo_hello` if it is present, with the value above and the `%{{host}}` piece replaced with that value from the event. The second example would also add a hardcoded field.
+If the event has field `"somefield" == "hello"` this filter, on success, would add field `foo_hello` if it is present, with the value above and the `%{host}` piece replaced with that value from the event. The second example would also add a hardcoded field.
 
+#### `add_tag` [v3.1.1-plugins-filters-csv-add_tag]
 
-### `add_tag` [v3.1.1-plugins-filters-csv-add_tag]
-
-* Value type is [array](logstash://reference/configuration-file-structure.md#array)
+* Value type is [array](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#array)
 * Default value is `[]`
 
-If this filter is successful, add arbitrary tags to the event. Tags can be dynamic and include parts of the event using the `%{{field}}` syntax.
+If this filter is successful, add arbitrary tags to the event. Tags can be dynamic and include parts of the event using the `%{field}` syntax.
 
 Example:
 
-```json
+```
     filter {
       csv {
         add_tag => [ "foo_%{somefield}" ]
@@ -239,7 +218,7 @@ Example:
     }
 ```
 
-```json
+```
     # You can also add multiple tags at once:
     filter {
       csv {
@@ -250,23 +229,21 @@ Example:
 
 If the event has field `"somefield" == "hello"` this filter, on success, would add a tag `foo_hello` (and the second example would of course add a `taggedy_tag` tag).
 
+#### `enable_metric` [v3.1.1-plugins-filters-csv-enable_metric]
 
-### `enable_metric` [v3.1.1-plugins-filters-csv-enable_metric]
-
-* Value type is [boolean](logstash://reference/configuration-file-structure.md#boolean)
+* Value type is [boolean](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#boolean)
 * Default value is `true`
 
 Disable or enable metric logging for this specific plugin instance by default we record all the metrics we can, but you can disable metrics collection for a specific plugin.
 
+#### `id` [v3.1.1-plugins-filters-csv-id]
 
-### `id` [v3.1.1-plugins-filters-csv-id]
-
-* Value type is [string](logstash://reference/configuration-file-structure.md#string)
+* Value type is [string](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#string)
 * There is no default value for this setting.
 
 Add a unique `ID` to the plugin configuration. If no ID is specified, Logstash will generate one. It is strongly recommended to set this ID in your configuration. This is particularly useful when you have two or more plugins of the same type, for example, if you have 2 csv filters. Adding a named ID in this case will help in monitoring Logstash when using the monitoring APIs.
 
-```json
+```
     filter {
       csv {
         id => "ABC"
@@ -274,23 +251,21 @@ Add a unique `ID` to the plugin configuration. If no ID is specified, Logstash w
     }
 ```
 
+#### `periodic_flush` [v3.1.1-plugins-filters-csv-periodic_flush]
 
-### `periodic_flush` [v3.1.1-plugins-filters-csv-periodic_flush]
-
-* Value type is [boolean](logstash://reference/configuration-file-structure.md#boolean)
+* Value type is [boolean](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#boolean)
 * Default value is `false`
 
 Call the filter flush method at regular interval. Optional.
 
+#### `remove_field` [v3.1.1-plugins-filters-csv-remove_field]
 
-### `remove_field` [v3.1.1-plugins-filters-csv-remove_field]
-
-* Value type is [array](logstash://reference/configuration-file-structure.md#array)
+* Value type is [array](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#array)
 * Default value is `[]`
 
-If this filter is successful, remove arbitrary fields from this event. Fields names can be dynamic and include parts of the event using the `%{{field}}` Example:
+If this filter is successful, remove arbitrary fields from this event. Fields names can be dynamic and include parts of the event using the %{field} Example:
 
-```json
+```
     filter {
       csv {
         remove_field => [ "foo_%{somefield}" ]
@@ -298,7 +273,7 @@ If this filter is successful, remove arbitrary fields from this event. Fields na
     }
 ```
 
-```json
+```
     # You can also remove multiple fields at once:
     filter {
       csv {
@@ -309,17 +284,16 @@ If this filter is successful, remove arbitrary fields from this event. Fields na
 
 If the event has field `"somefield" == "hello"` this filter, on success, would remove the field with name `foo_hello` if it is present. The second example would remove an additional, non-dynamic field.
 
+#### `remove_tag` [v3.1.1-plugins-filters-csv-remove_tag]
 
-### `remove_tag` [v3.1.1-plugins-filters-csv-remove_tag]
-
-* Value type is [array](logstash://reference/configuration-file-structure.md#array)
+* Value type is [array](https://www.elastic.co/guide/en/logstash/current/configuration-file-structure.html#array)
 * Default value is `[]`
 
-If this filter is successful, remove arbitrary tags from the event. Tags can be dynamic and include parts of the event using the `%{{field}}` syntax.
+If this filter is successful, remove arbitrary tags from the event. Tags can be dynamic and include parts of the event using the `%{field}` syntax.
 
 Example:
 
-```json
+```
     filter {
       csv {
         remove_tag => [ "foo_%{somefield}" ]
@@ -327,7 +301,7 @@ Example:
     }
 ```
 
-```json
+```
     # You can also remove multiple tags at once:
     filter {
       csv {
@@ -337,6 +311,3 @@ Example:
 ```
 
 If the event has field `"somefield" == "hello"` this filter, on success, would remove the tag `foo_hello` if it is present. The second example would remove a sad, unwanted tag as well.
-
-
-
