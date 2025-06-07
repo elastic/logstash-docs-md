@@ -28,7 +28,7 @@ This tool is perfect for syslog logs, apache and other webserver logs, mysql log
 
 Logstash ships with about 120 patterns by default. You can find them here: [https://github.com/logstash-plugins/logstash-patterns-core/tree/master/patterns](https://github.com/logstash-plugins/logstash-patterns-core/tree/master/patterns). You can add your own trivially. (See the `patterns_dir` setting)
 
-If you need help building patterns to match your logs, you will find the [http://grokdebug.herokuapp.com](http://grokdebug.herokuapp.com) and [http://grokconstructor.appspot.com/](http://grokconstructor.appspot.com/) applications quite useful!
+If you need help building patterns to match your logs, try the [Grok debugger](docs-content://explore-analyze/query-filter/tools/grok-debugger.md) in {{kib}}.
 
 ### Grok or Dissect? Or both? [_grok_or_dissect_or_both]
 
@@ -40,7 +40,7 @@ You can use both Dissect and Grok for a hybrid use case when a section of the li
 
 
 
-## Grok Basics [_grok_basics]
+## Grok basics [_grok_basics]
 
 Grok works by combining text patterns into something that matches your logs.
 
@@ -94,12 +94,12 @@ After the grok filter, the event will have a few extra fields in it:
 * `duration: 0.043`
 
 
-## Regular Expressions [_regular_expressions]
+## Regular expressions [_regular_expressions]
 
 Grok sits on top of regular expressions, so any regular expressions are valid in grok as well. The regular expression library is Oniguruma, and you can see the full supported regexp syntax [on the Oniguruma site](https://github.com/kkos/oniguruma/blob/master/doc/RE).
 
 
-## Custom Patterns [_custom_patterns]
+## Custom patterns [_custom_patterns]
 
 Sometimes logstash doesn’t have a pattern you need. For this, you have a few options.
 
@@ -513,7 +513,7 @@ Add a unique `ID` to the plugin configuration. If no ID is specified, Logstash w
     }
 ```
 
-::::{note} 
+::::{note}
 Variable substitution in the `id` field only supports environment variables and does not support the use of values from the secret store.
 ::::
 
