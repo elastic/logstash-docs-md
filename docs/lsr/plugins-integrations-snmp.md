@@ -33,8 +33,8 @@ Before you upgrade to {{ls}} 8.15.0 that includes this new integration by defaul
 
 The SNMP integration plugin includes:
 
-* [SNMP input plugin](https://www.elastic.co/guide/en/logstash/current/plugins-inputs-snmp.md)
-* [Snmptrap input plugin](https://www.elastic.co/guide/en/logstash/current/plugins-inputs-snmptrap.md)
+* [SNMP input plugin](https://www.elastic.co/docs/reference/logstash/plugins/plugins-inputs-snmp)
+* [Snmptrap input plugin](https://www.elastic.co/docs/reference/logstash/plugins/plugins-inputs-snmptrap)
 
 The new `logstash-integration-snmp` plugin combines the `logstash-input-snmp` and `logstash-input-snmptrap` plugins into one integrated plugin that encompasses the capabilities of both. This integrated plugin package provides better alignment in snmp processing, better resource management, easier package maintenance, and a smaller installation footprint.
 
