@@ -6,22 +6,18 @@ mapped_pages:
 
 # S3plain [v2.0.7-plugins-codecs-s3plain]
 
-
 * Plugin version: v2.0.7
 * Released on: 2017-12-19
 * [Changelog](https://github.com/logstash-plugins/logstash-codec-s3plain/blob/v2.0.7/CHANGELOG.md)
 
 For other versions, see the [overview list](codec-s3plain-index.md).
 
-To learn more about Logstash, see the [Logstash Reference](logstash://reference/index.md).
+To learn more about Logstash, see the [Logstash Reference](https://www.elastic.co/guide/en/logstash/current/index.html).
 
-## Getting help [_getting_help_2416]
+## Getting help [_getting_help_2450]
 
 For questions about the plugin, open a topic in the [Discuss](http://discuss.elastic.co) forums. For bugs or feature requests, open an issue in [Github](https://github.com/logstash-plugins/logstash-codec-s3plain). For the list of Elastic supported plugins, please consult the [Elastic Support Matrix](https://www.elastic.co/support/matrix#matrix_logstash_plugins).
 
+## Description [_description_2428]
 
-## Description [_description_2394]
-
-The "s3_plain" codec is used for backward compatibility with previous version of the S3 Output
-
-
+The "s3\_plain" codec is used for backward compatibility with previous version of the S3 Output

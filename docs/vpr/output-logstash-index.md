@@ -6,16 +6,12 @@ mapped_pages:
 
 # Versioned logstash output plugin docs [output-logstash-index]
 
+This page lists all documentation available for this plugin. To see which plugin version you have installed, run `bin/logstash-plugin list --verbose`.
 
-This page lists all documentation available for this plugin.  To see which plugin version you have installed, run `bin/logstash-plugin list --verbose`.
-
-::::{note}
 Versioned plugin documentation is not available for plugins released prior to Logstash 6.0.
-::::
 
-
-|     |     |
-| --- | --- |
+| | |
+| :- | :- |
 | Version | Release Date |
 | [v1.0.3](v1-0-3-plugins-outputs-logstash.md) | 2024-09-12 |
 | [v1.0.2](v1-0-2-plugins-outputs-logstash.md) | 2024-01-23 |
@@ -26,13 +22,3 @@ Versioned plugin documentation is not available for plugins released prior to Lo
 | [v0.0.3](v0-0-3-plugins-outputs-logstash.md) | 2023-09-29 |
 | [v0.0.2](v0-0-2-plugins-outputs-logstash.md) | 2023-09-27 |
 | [v0.0.1](v0-0-1-plugins-outputs-logstash.md) | 2023-09-25 |
-
-
-
-
-
-
-
-
-
-

@@ -6,16 +6,12 @@ mapped_pages:
 
 # Versioned netflow codec plugin docs [codec-netflow-index]
 
+This page lists all documentation available for this plugin. To see which plugin version you have installed, run `bin/logstash-plugin list --verbose`.
 
-This page lists all documentation available for this plugin.  To see which plugin version you have installed, run `bin/logstash-plugin list --verbose`.
-
-::::{note}
 Versioned plugin documentation is not available for plugins released prior to Logstash 6.0.
-::::
 
-
-|     |     |
-| --- | --- |
+| | |
+| :- | :- |
 | Version | Release Date |
 | [v4.3.2](v4-3-2-plugins-codecs-netflow.md) | 2023-12-22 |
 | [v4.3.1](v4-3-1-plugins-codecs-netflow.md) | 2023-12-14 |
@@ -53,40 +49,3 @@ Versioned plugin documentation is not available for plugins released prior to Lo
 | [v3.5.1](v3-5-1-plugins-codecs-netflow.md) | 2017-07-18 |
 | [v3.5.0](v3-5-0-plugins-codecs-netflow.md) | 2017-06-23 |
 | [v3.4.1](v3-4-1-plugins-codecs-netflow.md) | 2017-06-23 |
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

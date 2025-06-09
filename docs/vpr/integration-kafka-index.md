@@ -6,17 +6,14 @@ mapped_pages:
 
 # Versioned kafka integration plugin docs [integration-kafka-index]
 
+This page lists all documentation available for this plugin. To see which plugin version you have installed, run `bin/logstash-plugin list --verbose`.
 
-This page lists all documentation available for this plugin.  To see which plugin version you have installed, run `bin/logstash-plugin list --verbose`.
-
-::::{note}
 Versioned plugin documentation is not available for plugins released prior to Logstash 6.0.
-::::
 
-
-|     |     |
-| --- | --- |
+| | |
+| :- | :- |
 | Version | Release Date |
+| [v11.6.1](v11-6-1-plugins-integrations-kafka.md) | 2025-05-08 |
 | [v11.6.0](v11-6-0-plugins-integrations-kafka.md) | 2025-01-07 |
 | [v11.5.4](v11-5-4-plugins-integrations-kafka.md) | 2024-12-18 |
 | [v11.5.3](v11-5-3-plugins-integrations-kafka.md) | 2024-11-25 |
@@ -35,6 +32,7 @@ Versioned plugin documentation is not available for plugins released prior to Lo
 | [v11.2.0](v11-2-0-plugins-integrations-kafka.md) | 2023-02-14 |
 | [v11.1.0](v11-1-0-plugins-integrations-kafka.md) | 2023-01-25 |
 | [v11.0.0](v11-0-0-plugins-integrations-kafka.md) | 2022-12-16 |
+| [v10.12.2](v10-12-2-plugins-integrations-kafka.md) | 2025-02-12 |
 | [v10.12.1](v10-12-1-plugins-integrations-kafka.md) | 2023-10-16 |
 | [v10.12.0](v10-12-0-plugins-integrations-kafka.md) | 2022-05-09 |
 | [v10.11.0](v10-11-0-plugins-integrations-kafka.md) | 2022-04-25 |
@@ -62,49 +60,3 @@ Versioned plugin documentation is not available for plugins released prior to Lo
 | [v10.1.0](v10-1-0-plugins-integrations-kafka.md) | 2020-03-26 |
 | [v10.0.1](v10-0-1-plugins-integrations-kafka.md) | 2020-03-12 |
 | [v10.0.0](v10-0-0-plugins-integrations-kafka.md) | 2019-10-15 |
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

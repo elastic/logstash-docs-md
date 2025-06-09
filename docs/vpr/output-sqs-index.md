@@ -6,17 +6,15 @@ mapped_pages:
 
 # Versioned sqs output plugin docs [output-sqs-index]
 
+This page lists all documentation available for this plugin. To see which plugin version you have installed, run `bin/logstash-plugin list --verbose`.
 
-This page lists all documentation available for this plugin.  To see which plugin version you have installed, run `bin/logstash-plugin list --verbose`.
-
-::::{note}
 Versioned plugin documentation is not available for plugins released prior to Logstash 6.0.
-::::
 
-
-|     |     |
-| --- | --- |
+| | |
+| :- | :- |
 | Version | Release Date |
+| [v7.2.1](v7-2-1-plugins-outputs-sqs.md) | 2025-02-13 |
+| [v7.2.0](v7-2-0-plugins-outputs-sqs.md) | 2025-02-10 |
 | [v7.1.8](v7-1-8-plugins-outputs-sqs.md) | 2024-07-26 |
 | [v7.1.7](v7-1-7-plugins-outputs-sqs.md) | 2024-07-02 |
 | [v7.1.6](v7-1-6-plugins-outputs-sqs.md) | 2023-09-12 |
@@ -37,24 +35,3 @@ Versioned plugin documentation is not available for plugins released prior to Lo
 | [v5.0.0](v5-0-0-plugins-outputs-sqs.md) | 2017-08-01 |
 | [v4.0.3](v4-0-3-plugins-outputs-sqs.md) | 2017-08-18 |
 | [v4.0.2](v4-0-2-plugins-outputs-sqs.md) | 2017-06-23 |
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

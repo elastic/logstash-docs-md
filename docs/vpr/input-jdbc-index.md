@@ -6,17 +6,15 @@ mapped_pages:
 
 # Versioned jdbc input plugin docs [input-jdbc-index]
 
+This page lists all documentation available for this plugin. To see which plugin version you have installed, run `bin/logstash-plugin list --verbose`.
 
-This page lists all documentation available for this plugin.  To see which plugin version you have installed, run `bin/logstash-plugin list --verbose`.
-
-::::{note}
 Versioned plugin documentation is not available for plugins released prior to Logstash 6.0.
-::::
 
-
-|     |     |
-| --- | --- |
+| | |
+| :- | :- |
 | Version | Release Date |
+| [v5.5.3](v5-5-3-plugins-inputs-jdbc.md) | 2025-03-07 |
+| [v5.5.2](v5-5-2-plugins-inputs-jdbc.md) | 2024-12-23 |
 | [v5.5.1](v5-5-1-plugins-inputs-jdbc.md) | 2024-12-03 |
 | [v5.5.0](v5-5-0-plugins-inputs-jdbc.md) | 2024-08-09 |
 | [v5.4.11](v5-4-11-plugins-inputs-jdbc.md) | 2024-05-23 |
@@ -79,66 +77,3 @@ Versioned plugin documentation is not available for plugins released prior to Lo
 | [v4.2.3](v4-2-3-plugins-inputs-jdbc.md) | 2017-08-15 |
 | [v4.2.2](v4-2-2-plugins-inputs-jdbc.md) | 2017-07-25 |
 | [v4.2.1](v4-2-1-plugins-inputs-jdbc.md) | 2017-06-23 |
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -6,17 +6,15 @@ mapped_pages:
 
 # Versioned s3 output plugin docs [output-s3-index]
 
+This page lists all documentation available for this plugin. To see which plugin version you have installed, run `bin/logstash-plugin list --verbose`.
 
-This page lists all documentation available for this plugin.  To see which plugin version you have installed, run `bin/logstash-plugin list --verbose`.
-
-::::{note}
 Versioned plugin documentation is not available for plugins released prior to Logstash 6.0.
-::::
 
-
-|     |     |
-| --- | --- |
+| | |
+| :- | :- |
 | Version | Release Date |
+| [v7.2.1](v7-2-1-plugins-outputs-s3.md) | 2025-02-13 |
+| [v7.2.0](v7-2-0-plugins-outputs-s3.md) | 2025-02-10 |
 | [v7.1.8](v7-1-8-plugins-outputs-s3.md) | 2024-07-26 |
 | [v7.1.7](v7-1-7-plugins-outputs-s3.md) | 2024-07-02 |
 | [v7.1.6](v7-1-6-plugins-outputs-s3.md) | 2023-09-12 |
@@ -56,43 +54,3 @@ Versioned plugin documentation is not available for plugins released prior to Lo
 | [v4.0.10](v4-0-10-plugins-outputs-s3.md) | 2017-08-16 |
 | [v4.0.9](v4-0-9-plugins-outputs-s3.md) | 2017-07-19 |
 | [v4.0.8](v4-0-8-plugins-outputs-s3.md) | 2017-06-23 |
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

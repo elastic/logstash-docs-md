@@ -6,18 +6,18 @@ mapped_pages:
 
 # Versioned tcp input plugin docs [input-tcp-index]
 
+This page lists all documentation available for this plugin. To see which plugin version you have installed, run `bin/logstash-plugin list --verbose`.
 
-This page lists all documentation available for this plugin.  To see which plugin version you have installed, run `bin/logstash-plugin list --verbose`.
-
-::::{note}
 Versioned plugin documentation is not available for plugins released prior to Logstash 6.0.
-::::
 
-
-|     |     |
-| --- | --- |
+| | |
+| :- | :- |
 | Version | Release Date |
+| [v7.0.2](v7-0-2-plugins-inputs-tcp.md) | 2025-02-12 |
+| [v7.0.1](v7-0-1-plugins-inputs-tcp.md) | 2025-02-04 |
 | [v7.0.0](v7-0-0-plugins-inputs-tcp.md) | 2025-01-10 |
+| [v6.4.6](v6-4-6-plugins-inputs-tcp.md) | 2025-02-12 |
+| [v6.4.5](v6-4-5-plugins-inputs-tcp.md) | 2025-02-04 |
 | [v6.4.4](v6-4-4-plugins-inputs-tcp.md) | 2024-11-18 |
 | [v6.4.3](v6-4-3-plugins-inputs-tcp.md) | 2024-10-16 |
 | [v6.4.2](v6-4-2-plugins-inputs-tcp.md) | 2024-04-23 |
@@ -73,60 +73,3 @@ Versioned plugin documentation is not available for plugins released prior to Lo
 | [v4.2.3](v4-2-3-plugins-inputs-tcp.md) | 2017-08-18 |
 | [v4.2.2](v4-2-2-plugins-inputs-tcp.md) | 2017-06-30 |
 | [v4.1.2](v4-1-2-plugins-inputs-tcp.md) | 2017-06-23 |
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

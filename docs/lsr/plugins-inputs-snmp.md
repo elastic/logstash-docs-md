@@ -6,57 +6,50 @@ mapped_pages:
 
 # SNMP input plugin [plugins-inputs-snmp]
 
-
 * A component of the [snmp integration plugin](plugins-integrations-snmp.md)
-* Integration version: v4.0.5
-* Released on: 2025-01-06
-* [Changelog](https://github.com/logstash-plugins/logstash-integration-snmp/blob/v4.0.5/CHANGELOG.md)
+* Integration version: v4.0.6
+* Released on: 2025-01-23
+* [Changelog](https://github.com/logstash-plugins/logstash-integration-snmp/blob/v4.0.6/CHANGELOG.md)
 
-For other versions, see the [Versioned plugin docs](/vpr/input-snmp-index.md).
+For other versions, see the [Versioned plugin docs](https://www.elastic.co/guide/en/logstash-versioned-plugins/current/input-snmp-index.html).
 
 ## Getting help [_getting_help_50]
 
 For questions about the plugin, open a topic in the [Discuss](http://discuss.elastic.co) forums. For bugs or feature requests, open an issue in [Github](https://github.com/logstash-plugins/logstash-integration-snmp). For the list of Elastic supported plugins, please consult the [Elastic Support Matrix](https://www.elastic.co/support/matrix#logstash_plugins).
 
-::::{admonition} Migrating to logstash-integration-snmp from stand-alone input-snmp
+**Migrating to `logstash-integration-snmp` from stand-alone `input-snmp`**
+
 The `logstash-input-snmp` plugin is now a component of the `logstash-integration-snmp` plugin which is bundled with Logstash 8.15.0 by default. This integrated plugin package provides better alignment in snmp processing, better resource management, easier package maintenance, and a smaller installation footprint.
 
-Before you upgrade to Logstash 8.15.0, be aware of [behavioral and mapping differences](https://www.elastic.co/guide/en/logstash/current/plugins-integrations-snmp.md#plugins-integrations-snmp-migration) between current stand-alone plugins and the new versions included in `integration-snmp`.
+Before you upgrade to Logstash 8.15.0, be aware of [behavioral and mapping differences](https://www.elastic.co/guide/en/logstash/8.18/plugins-integrations-snmp.html#plugins-integrations-snmp-migration) between current stand-alone plugins and the new versions included in `integration-snmp`.
 
-::::
-
-
-
-## Description [_description_49]
+## Description [_description_50]
 
 The SNMP input polls network devices using Simple Network Management Protocol (SNMP) to gather information related to the current state of the devices operation.
 
 The SNMP input plugin supports SNMP v1, v2c, and v3 over UDP and TCP transport protocols.
 
-
 ## Compatibility with the Elastic Common Schema (ECS) [plugins-inputs-snmp-ecs]
 
 Because SNMP data has specific field names based on OIDs, we recommend setting a [`target`](plugins-inputs-snmp.md#plugins-inputs-snmp-target). Metadata fields follow a specific naming convention when [ECS compatibility mode](plugins-inputs-snmp.md#plugins-inputs-snmp-ecs_compatibility) is enabled.
 
-|     |     |     |     |
-| --- | --- | --- | --- |
-| ECS disabled | ECS v1, v8 | *Description* | *[@metadata][host_protocol]* |
-| [@metadata][input][snmp][host][protocol] | The protocol used to retrieve data e.g. "udp" | *[@metadata][host_address]* | *[@metadata][input][snmp][host][address]* |
-| The host IP e.g. "192.168.1.1" | [@metadata][host_port] | *[@metadata][input][snmp][host][port]* | *The host’s port e.g. "161"* |
-| [@metadata][host_community] | [@metadata][input][snmp][host][community] | *The configured community e.g. "public"* | *[host]* |
-
+| | | | |
+| :- | :- | :- | :- |
+| ECS disabled | ECS v1, v8 | *Description* | *\[@metadata]\[host\_protocol]* |
+| \[@metadata]\[input]\[snmp]\[host]\[protocol] | The protocol used to retrieve data e.g. "udp" | *\[@metadata]\[host\_address]* | *\[@metadata]\[input]\[snmp]\[host]\[address]* |
+| The host IP e.g. "192.168.1.1" | \[@metadata]\[host\_port] | *\[@metadata]\[input]\[snmp]\[host]\[port]* | *The host’s port e.g. "161"* |
+| \[@metadata]\[host\_community] | \[@metadata]\[input]\[snmp]\[host]\[community] | *The configured community e.g. "public"* | *\[host]* |
 
 ## Importing MIBs [plugins-inputs-snmp-import-mibs]
 
-This plugin already includes the IETF MIBs (management information bases), and you do not need to import them. If you need additional MIBs, you need to import them. Check out [Importing MIBs](https://www.elastic.co/guide/en/logstash/current/plugins-integrations-snmp.md#plugins-integrations-snmp-import-mibs) for info.
-
+This plugin already includes the IETF MIBs (management information bases), and you do not need to import them. If you need additional MIBs, you need to import them. Check out [Importing MIBs](https://www.elastic.co/guide/en/logstash/8.18/plugins-integrations-snmp.html#plugins-integrations-snmp-import-mibs) for info.
 
 ## SNMP Input Configuration Options [plugins-inputs-snmp-options]
 
 This plugin supports the following configuration options plus the [Common options](plugins-inputs-snmp.md#plugins-inputs-snmp-common-options) described later.
 
 | Setting | Input type | Required |
-| --- | --- | --- |
+| :- | :- | :- |
 | [`ecs_compatibility`](plugins-inputs-snmp.md#plugins-inputs-snmp-ecs_compatibility) | [string](value-types.md#string) | No |
 | [`get`](plugins-inputs-snmp.md#plugins-inputs-snmp-get) | [array](value-types.md#array) | No |
 | [`hosts`](plugins-inputs-snmp.md#plugins-inputs-snmp-hosts) | [array](value-types.md#array) | No |
@@ -74,20 +67,18 @@ This plugin supports the following configuration options plus the [Common option
 | [`threads`](plugins-inputs-snmp.md#plugins-inputs-snmp-threads) | [number](value-types.md#number) | No |
 | [`use_provided_mibs`](plugins-inputs-snmp.md#plugins-inputs-snmp-use_provided_mibs) | [boolean](value-types.md#boolean) | No |
 
-
 ## SNMPv3 Authentication Options [_snmpv3_authentication_options]
 
 This plugin supports the following SNMPv3 authentication options.
 
 | Setting | Input type | Required |
-| --- | --- | --- |
+| :- | :- | :- |
 | [`auth_pass`](plugins-inputs-snmp.md#plugins-inputs-snmp-auth_pass) | [password](value-types.md#password) | No |
 | [`auth_protocol`](plugins-inputs-snmp.md#plugins-inputs-snmp-auth_protocol) | [string](value-types.md#string), one of `["md5", "sha", "sha2", "hmac128sha224", "hmac192sha256", "hmac256sha384", "hmac384sha512"]` | No |
 | [`priv_pass`](plugins-inputs-snmp.md#plugins-inputs-snmp-priv_pass) | [password](value-types.md#password) | No |
 | [`priv_protocol`](plugins-inputs-snmp.md#plugins-inputs-snmp-priv_protocol) | [string](value-types.md#string), one of `["des", "3des", "aes", "aes128", "aes192", "aes256"]` | No |
 | [`security_level`](plugins-inputs-snmp.md#plugins-inputs-snmp-security_level) | [string](value-types.md#string), one of `["noAuthNoPriv", "authNoPriv", "authPriv"]` | No |
 | [`security_name`](plugins-inputs-snmp.md#plugins-inputs-snmp-security_name) | [string](value-types.md#string) | No |
-
 
 ## SNMP Input Configuration Options [_snmp_input_configuration_options]
 
@@ -96,19 +87,18 @@ Also see [Common options](plugins-inputs-snmp.md#plugins-inputs-snmp-common-opti
 ### `ecs_compatibility` [plugins-inputs-snmp-ecs_compatibility]
 
 * Value type is [string](value-types.md#string)
+
 * Supported values are:
 
-    * `disabled`: does not use ECS-compatible field names (fields might be set at the root of the event)
-    * `v1`, `v8`: avoids field names that might conflict with Elastic Common Schema (for example, the `host` field)
+  * `disabled`: does not use ECS-compatible field names (fields might be set at the root of the event)
+  * `v1`, `v8`: avoids field names that might conflict with Elastic Common Schema (for example, the `host` field)
 
 * Default value depends on which version of Logstash is running:
 
-    * When Logstash provides a `pipeline.ecs_compatibility` setting, its value is used as the default
-    * Otherwise, the default value is `disabled`.
+  * When Logstash provides a `pipeline.ecs_compatibility` setting, its value is used as the default
+  * Otherwise, the default value is `disabled`.
 
-
-Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)](https://www.elastic.co/guide/en/ecs/current).
-
+Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)](https://www.elastic.co/guide/en/ecs/8.17).
 
 ### `get` [plugins-inputs-snmp-get]
 
@@ -119,7 +109,7 @@ Use the `get` option to query for scalar values for the given OID(s). One or mor
 
 Example
 
-```ruby
+```
 input {
   snmp {
     get => ["1.3.6.1.2.1.1.1.0", "1.3.6.1.2.1.1.3.0", "1.3.6.1.2.1.1.5.0"]
@@ -128,7 +118,6 @@ input {
 }
 ```
 
-
 ### `hosts` [plugins-inputs-snmp-hosts]
 
 * Value type is [array](value-types.md#array)
@@ -136,7 +125,7 @@ input {
 
 The `hosts` option specifies the list of hosts to query the configured `get` and `walk` options.
 
-Each host definition is a hash and must define the `host` key and value. `host` must use the format `{tcp|udp}:{ip address}/{{port}}`, for example `host => "udp:127.0.0.1/161"`
+Each host definition is a hash and must define the `host` key and value. `host` must use the format `{tcp|udp}:{ip address}/{port}`, for example `host => "udp:127.0.0.1/161"`
 
 Each host definition can optionally include the following keys and values:
 
@@ -147,7 +136,7 @@ Each host definition can optionally include the following keys and values:
 
 **Specifying all hosts options**
 
-```ruby
+```
 input {
   snmp {
     get => ["1.3.6.1.2.1.1.1.0"]
@@ -158,7 +147,7 @@ input {
 
 **Specifying multiple hosts**
 
-```ruby
+```
 input {
   snmp {
     get => ["1.3.6.1.2.1.1.1.0"]
@@ -169,7 +158,7 @@ input {
 
 **Specifying IPv6 hosts**
 
-```ruby
+```
 input {
   snmp {
     get => ["1.3.6.1.2.1.1.1.0"]
@@ -178,7 +167,6 @@ input {
 }
 ```
 
-
 ### `interval` [plugins-inputs-snmp-interval]
 
 * Value type is [number](value-types.md#number)
@@ -186,14 +174,12 @@ input {
 
 The `interval` option specifies the polling interval in seconds. If polling all configured hosts takes longer than this interval, a warning will be emitted to the logs.
 
-
 ### `local_engine_id` [plugins-inputs-snmp-local_engine_id]
 
 * Value type is [string](value-types.md#string)
 * There is no default value for this setting
 
 The SNMPv3 local engine ID. Its length must be greater or equal than 5 and less or equal than 32. If not provided, a default ID is generated based on the local IP address and additional four random bytes.
-
 
 ### `mib_paths` [plugins-inputs-snmp-mib_paths]
 
@@ -204,7 +190,6 @@ The `mib_paths` option specifies the location of one or more imported MIB files.
 
 This plugin includes the IETF MIBs. If you require other MIBs, you need to import them. See [Importing MIBs](plugins-inputs-snmp.md#plugins-inputs-snmp-import-mibs).
 
-
 ### `oid_mapping_format` [plugins-inputs-snmp-oid_mapping_format]
 
 * Value can be any of: `default`, `ruby_snmp`, `dotted_string`
@@ -214,8 +199,7 @@ Defines the mapping textual representation of an OID in the Logstash event:
 
 * `default` translates every identifier, using the MIBs resolved names, separated by dots. Example: `1.3.6.1.2.1.1.2.0` is mapped as `iso.org.dod.internet.mgmt.mib-2.system.sysObjectID.0`
 * `ruby_snmp` produces field names prefixed by the MIBs module name, followed by the latest resolved identifier name and unknowns values. Example: `1.3.6.1.2.1.1.2.0` is mapped as `SNMPv2-MIB::sysObjectID.0`.
-* `dotted_string` maps fields using the standard dotted string representation, Example: `1.3.6.1.2.1.1.2.0` is mapped as  `1.3.6.1.2.1.1.2.0`
-
+* `dotted_string` maps fields using the standard dotted string representation, Example: `1.3.6.1.2.1.1.2.0` is mapped as `1.3.6.1.2.1.1.2.0`
 
 ### `oid_map_field_values` [plugins-inputs-snmp-oid_map_field_values]
 
@@ -223,7 +207,6 @@ Defines the mapping textual representation of an OID in the Logstash event:
 * Default value is `false`
 
 Defines if the Logstash event fields values, which types are `OID`, are mapped using the configured OID textual representation set on the [`oid_mapping_format`](plugins-inputs-snmp.md#plugins-inputs-snmp-oid_mapping_format) option.
-
 
 ### `oid_root_skip` [plugins-inputs-snmp-oid_root_skip]
 
@@ -235,7 +218,6 @@ The `oid_root_skip` option specifies the number of OID root digits to ignore in 
 * You can use this setting or [`oid_path_length`](plugins-inputs-snmp.md#plugins-inputs-snmp-oid_path_length), but not both at the same time.
 * Use this setting only if [`oid_mapping_format`](plugins-inputs-snmp.md#plugins-inputs-snmp-oid_mapping_format) is set to `default`.
 
-
 ### `oid_path_length` [plugins-inputs-snmp-oid_path_length]
 
 * Value type is [number](value-types.md#number)
@@ -246,7 +228,6 @@ The `oid_path_length` option specifies the number of OID root digits to retain i
 * You can use this setting or [`oid_root_skip`](plugins-inputs-snmp.md#plugins-inputs-snmp-oid_root_skip), but not both at the same time.
 * This setting can be used only if [`oid_mapping_format`](plugins-inputs-snmp.md#plugins-inputs-snmp-oid_mapping_format) is set to `default`.
 
-
 ### `poll_hosts_timeout` [plugins-inputs-snmp-poll_hosts_timeout]
 
 * Value type is [number](value-types.md#number)
@@ -255,7 +236,6 @@ The `oid_path_length` option specifies the number of OID root digits to retain i
 Specifies the maximum amount of time in milliseconds the polling client will wait for all [`hosts`](plugins-inputs-snmp.md#plugins-inputs-snmp-hosts) responses. If all responses are not received before the timeout elapses, the client will fail and some hosts might not get polled during the current cycle.
 
 By default, it uses the highest value between `1 hour`, the maximum [`hosts`](plugins-inputs-snmp.md#plugins-inputs-snmp-hosts) configured `timeout`, and the [`interval`](plugins-inputs-snmp.md#plugins-inputs-snmp-interval) value.
-
 
 ### `walk` [plugins-inputs-snmp-walk]
 
@@ -268,14 +248,13 @@ Queries the subtree of information starting at the given OID(s).
 
 Example
 
-```ruby
+```
   snmp {
     walk => ["1.3.6.1.2.1.1"]
     hosts => [{host => "udp:127.0.0.1/161" community => "public"}]
   }
 }
 ```
-
 
 ### `tables` [plugins-inputs-snmp-tables]
 
@@ -289,7 +268,7 @@ Each table definition is a hash and must define the name key and value and the c
 
 **Specifying a single table**
 
-```ruby
+```
 input {
   snmp {
     hosts => [{host => "udp:127.0.0.1/161" community => "public" version => "2c"  retries => 2  timeout => 1000}]
@@ -300,7 +279,7 @@ input {
 
 **Specifying multiple tables**
 
-```ruby
+```
 input {
   snmp {
     get => ["1.3.6.1.2.1.1.1.0"]
@@ -308,7 +287,6 @@ input {
   }
 }
 ```
-
 
 ### `target` [plugins-inputs-snmp-target]
 
@@ -319,14 +297,12 @@ The name of the field under which SNMP payloads are assigned. If not specified d
 
 Setting a target is recommended when [`ecs_compatibility`](plugins-inputs-snmp.md#plugins-inputs-snmp-ecs_compatibility) is enabled.
 
-
 ### `threads` [plugins-inputs-snmp-threads]
 
 * Value type is [number](value-types.md#number)
 * Default value is the number of CPU cores
 
 The number of threads to use for executing the hosts SNMP requests.
-
 
 ### `use_provided_mibs` [plugins-inputs-snmp-use_provided_mibs]
 
@@ -335,11 +311,9 @@ The number of threads to use for executing the hosts SNMP requests.
 
 This plugin provides all IETF MIBs (management information bases), publicly available in the [libsmi](https://www.ibr.cs.tu-bs.de/projects/libsmi) version `0.5.0`. When enabled, it automatically loads the bundled MIBs and provides mapping of the numeric OIDs to MIB field names in the resulting event.
 
-
-
 ## SNMPv3 Authentication Options [_snmpv3_authentication_options_2]
 
-A ***single user*** can be configured and will be used for all defined SNMPv3 hosts. Multiple snmp input declarations will be needed if multiple SNMPv3 users are required. These options are required only if you are using SNMPv3.
+A **single user** can be configured and will be used for all defined SNMPv3 hosts. Multiple snmp input declarations will be needed if multiple SNMPv3 users are required. These options are required only if you are using SNMPv3.
 
 ### `auth_pass` [plugins-inputs-snmp-auth_pass]
 
@@ -347,7 +321,6 @@ A ***single user*** can be configured and will be used for all defined SNMPv3 ho
 * There is no default value for this setting
 
 The `auth_pass` option specifies the SNMPv3 authentication passphrase or password.
-
 
 ### `auth_protocol` [plugins-inputs-snmp-auth_protocol]
 
@@ -357,14 +330,12 @@ The `auth_protocol` option specifies the SNMPv3 authentication protocol or type
 * Note that `sha2` and `hmac192sha256` are equivalent
 * There is no default value for this setting
 
-
 ### `priv_pass` [plugins-inputs-snmp-priv_pass]
 
 * Value type is [password](value-types.md#password)
 * There is no default value for this setting
 
 The `priv_pass` option specifies the SNMPv3 encryption password.
-
 
 ### `priv_protocol` [plugins-inputs-snmp-priv_protocol]
 
@@ -374,14 +345,12 @@ The `priv_pass` option specifies the SNMPv3 encryption password.
 
 The `priv_protocol` option specifies the SNMPv3 privacy/encryption protocol.
 
-
 ### `security_level` [plugins-inputs-snmp-security_level]
 
 * Value can be any of: `noAuthNoPriv`, `authNoPriv`, `authPriv`
 * There is no default value for this setting
 
 The `security_level` option specifies the SNMPv3 security level between Authentication, No Privacy; Authentication, Privacy; or no Authentication, no Privacy.
-
 
 ### `security_name` [plugins-inputs-snmp-security_name]
 
@@ -390,13 +359,11 @@ The `security_level` option specifies the SNMPv3 security level between Authenti
 
 The `security_name` option specifies the SNMPv3 security name or user name.
 
-
-
 ## Configuration examples [plugins-inputs-snmp-examples]
 
 **Specifying SNMPv3 settings**
 
-```ruby
+```
 input {
   snmp {
     hosts => [{host => "udp:127.0.0.1/161" version => "3"}]
@@ -413,7 +380,7 @@ input {
 
 **Using both `get` and `walk` in the same poll cycle for each host(s)**
 
-```ruby
+```
 input {
   snmp {
     get => ["1.3.6.1.2.1.1.1.0", "1.3.6.1.2.1.1.3.0", "1.3.6.1.2.1.1.5.0"]
@@ -425,7 +392,7 @@ input {
 
 **Specifying all global options**
 
-```ruby
+```
 input {
   snmp {
     get => ["1.3.6.1.2.1.1.1.0"]
@@ -438,7 +405,6 @@ input {
 }
 ```
 
-
 ## Polled host information [_polled_host_information]
 
 All the polled host information is stored in the event `@metadata`:
@@ -450,7 +416,7 @@ All the polled host information is stored in the event `@metadata`:
 
 By default, a `host` field is added to the event with the `[@metadata][host_address]` value.
 
-```ruby
+```
 config :add_field, :validate => :hash, :default => { "host" => "%{[@metadata][host_address]}" }
 ```
 
@@ -458,7 +424,7 @@ You can customize the format and content of the `host` field by specifying an al
 
 Example
 
-```ruby
+```
 input {
   snmp {
     get => ["1.3.6.1.2.1.1.1.0"]
@@ -469,43 +435,40 @@ input {
 }
 ```
 
-
 ## Common options [plugins-inputs-snmp-common-options]
 
 These configuration options are supported by all input plugins:
 
 | Setting | Input type | Required |
-| --- | --- | --- |
-| [`add_field`](plugins-inputs-snmp.md#plugins-inputs-snmp-add_field) | [hash](logstash://reference/configuration-file-structure.md#hash) | No |
-| [`enable_metric`](plugins-inputs-snmp.md#plugins-inputs-snmp-enable_metric) | [boolean](logstash://reference/configuration-file-structure.md#boolean) | No |
-| [`id`](plugins-inputs-snmp.md#plugins-inputs-snmp-id) | [string](logstash://reference/configuration-file-structure.md#string) | No |
-| [`tags`](plugins-inputs-snmp.md#plugins-inputs-snmp-tags) | [array](logstash://reference/configuration-file-structure.md#array) | No |
-| [`type`](plugins-inputs-snmp.md#plugins-inputs-snmp-type) | [string](logstash://reference/configuration-file-structure.md#string) | No |
+| :- | :- | :- |
+| [`add_field`](plugins-inputs-snmp.md#plugins-inputs-snmp-add_field) | [hash](value-types.md#hash) | No |
+| [`enable_metric`](plugins-inputs-snmp.md#plugins-inputs-snmp-enable_metric) | [boolean](value-types.md#boolean) | No |
+| [`id`](plugins-inputs-snmp.md#plugins-inputs-snmp-id) | [string](value-types.md#string) | No |
+| [`tags`](plugins-inputs-snmp.md#plugins-inputs-snmp-tags) | [array](value-types.md#array) | No |
+| [`type`](plugins-inputs-snmp.md#plugins-inputs-snmp-type) | [string](value-types.md#string) | No |
 
 ### `add_field` [plugins-inputs-snmp-add_field]
 
-* Value type is [hash](logstash://reference/configuration-file-structure.md#hash)
+* Value type is [hash](value-types.md#hash)
 * Default value is `{}`
 
 Add a field to an event
 
-
 ### `enable_metric` [plugins-inputs-snmp-enable_metric]
 
-* Value type is [boolean](logstash://reference/configuration-file-structure.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `true`
 
 Disable or enable metric logging for this specific plugin instance by default we record all the metrics we can, but you can disable metrics collection for a specific plugin.
 
-
 ### `id` [plugins-inputs-snmp-id]
 
-* Value type is [string](logstash://reference/configuration-file-structure.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 Add a unique `ID` to the plugin configuration. If no ID is specified, Logstash will generate one. It is strongly recommended to set this ID in your configuration. This is particularly useful when you have two or more plugins of the same type, for example, if you have 2 snmp inputs. Adding a named ID in this case will help in monitoring Logstash when using the monitoring APIs.
 
-```json
+```
 input {
   snmp {
     id => "my_plugin_id"
@@ -513,25 +476,20 @@ input {
 }
 ```
 
-::::{note}
 Variable substitution in the `id` field only supports environment variables and does not support the use of values from the secret store.
-::::
-
-
 
 ### `tags` [plugins-inputs-snmp-tags]
 
-* Value type is [array](logstash://reference/configuration-file-structure.md#array)
+* Value type is [array](value-types.md#array)
 * There is no default value for this setting.
 
 Add any number of arbitrary tags to your event.
 
 This can help with processing later.
 
-
 ### `type` [plugins-inputs-snmp-type]
 
-* Value type is [string](logstash://reference/configuration-file-structure.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 Add a `type` field to all events handled by this input.
@@ -541,6 +499,3 @@ Types are used mainly for filter activation.
 The type is stored as part of the event itself, so you can also use the type to search for it in Kibana.
 
 If you try to set a type on an event that already has one (for example when you send an event from a shipper to an indexer) then a new input will not override the existing type. A type set at the shipper stays with that event for its life even when sent to another Logstash server.
-
-
-

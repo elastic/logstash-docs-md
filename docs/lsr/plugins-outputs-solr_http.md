@@ -6,28 +6,25 @@ mapped_pages:
 
 # Solr_http output plugin [plugins-outputs-solr_http]
 
-
 * Plugin version: v3.0.5
 * Released on: 2018-04-06
 * [Changelog](https://github.com/logstash-plugins/logstash-output-solr_http/blob/v3.0.5/CHANGELOG.md)
 
-For other versions, see the [Versioned plugin docs](/vpr/output-solr_http-index.md).
+For other versions, see the [Versioned plugin docs](https://www.elastic.co/guide/en/logstash-versioned-plugins/current/output-solr_http-index.html).
 
 ## Installation [_installation_46]
 
-For plugins not bundled by default, it is easy to install by running `bin/logstash-plugin install logstash-output-solr_http`. See [Working with plugins](logstash://reference/working-with-plugins.md) for more details.
-
+For plugins not bundled by default, it is easy to install by running `bin/logstash-plugin install logstash-output-solr_http`. See [Working with plugins](https://www.elastic.co/guide/en/logstash/8.18/working-with-plugins.html) for more details.
 
 ## Getting help [_getting_help_110]
 
 For questions about the plugin, open a topic in the [Discuss](http://discuss.elastic.co) forums. For bugs or feature requests, open an issue in [Github](https://github.com/logstash-plugins/logstash-output-solr_http). For the list of Elastic supported plugins, please consult the [Elastic Support Matrix](https://www.elastic.co/support/matrix#logstash_plugins).
 
+## Description [_description_110]
 
-## Description [_description_109]
+This output lets you index\&store your logs in Solr. If you want to get started quickly you should use version 4.4 or above in schemaless mode, which will try and guess your fields automatically. To turn that on, you can use the example included in the Solr archive:
 
-This output lets you index&store your logs in Solr. If you want to get started quickly you should use version 4.4 or above in schemaless mode, which will try and guess your fields automatically. To turn that on, you can use the example included in the Solr archive:
-
-```shell
+```
     tar zxf solr-4.4.0.tgz
     cd example
     mv solr solr_ #back up the existing sample conf
@@ -37,13 +34,12 @@ This output lets you index&store your logs in Solr. If you want to get started q
 
 You can learn more at [the Solr home page](https://lucene.apache.org/solr/)
 
-
 ## Solr_http Output Configuration Options [plugins-outputs-solr_http-options]
 
 This plugin supports the following configuration options plus the [Common options](plugins-outputs-solr_http.md#plugins-outputs-solr_http-common-options) described later.
 
 | Setting | Input type | Required |
-| --- | --- | --- |
+| :- | :- | :- |
 | [`document_id`](plugins-outputs-solr_http.md#plugins-outputs-solr_http-document_id) | [string](value-types.md#string) | No |
 | [`flush_size`](plugins-outputs-solr_http.md#plugins-outputs-solr_http-flush_size) | [number](value-types.md#number) | No |
 | [`idle_flush_time`](plugins-outputs-solr_http.md#plugins-outputs-solr_http-idle_flush_time) | [number](value-types.md#number) | No |
@@ -51,15 +47,12 @@ This plugin supports the following configuration options plus the [Common option
 
 Also see [Common options](plugins-outputs-solr_http.md#plugins-outputs-solr_http-common-options) for a list of options supported by all output plugins.
 
- 
-
 ### `document_id` [plugins-outputs-solr_http-document_id]
 
 * Value type is [string](value-types.md#string)
 * Default value is `nil`
 
-Solr document ID for events. You’d typically have a variable here, like `%{{foo}}` so you can assign your own IDs
-
+Solr document ID for events. You’d typically have a variable here, like *%{foo}* so you can assign your own IDs
 
 ### `flush_size` [plugins-outputs-solr_http-flush_size]
 
@@ -68,14 +61,12 @@ Solr document ID for events. You’d typically have a variable here, like `%{{fo
 
 Number of events to queue up before writing to Solr
 
-
 ### `idle_flush_time` [plugins-outputs-solr_http-idle_flush_time]
 
 * Value type is [number](value-types.md#number)
 * Default value is `1`
 
-Amount of time since the last flush before a flush is done even if the number of buffered events is smaller than flush_size
-
+Amount of time since the last flush before a flush is done even if the number of buffered events is smaller than flush\_size
 
 ### `solr_url` [plugins-outputs-solr_http-solr_url]
 
@@ -84,42 +75,38 @@ Amount of time since the last flush before a flush is done even if the number of
 
 URL used to connect to Solr
 
-
-
 ## Common options [plugins-outputs-solr_http-common-options]
 
 These configuration options are supported by all output plugins:
 
 | Setting | Input type | Required |
-| --- | --- | --- |
-| [`codec`](plugins-outputs-solr_http.md#plugins-outputs-solr_http-codec) | [codec](logstash://reference/configuration-file-structure.md#codec) | No |
-| [`enable_metric`](plugins-outputs-solr_http.md#plugins-outputs-solr_http-enable_metric) | [boolean](logstash://reference/configuration-file-structure.md#boolean) | No |
-| [`id`](plugins-outputs-solr_http.md#plugins-outputs-solr_http-id) | [string](logstash://reference/configuration-file-structure.md#string) | No |
+| :- | :- | :- |
+| [`codec`](plugins-outputs-solr_http.md#plugins-outputs-solr_http-codec) | [codec](value-types.md#codec) | No |
+| [`enable_metric`](plugins-outputs-solr_http.md#plugins-outputs-solr_http-enable_metric) | [boolean](value-types.md#boolean) | No |
+| [`id`](plugins-outputs-solr_http.md#plugins-outputs-solr_http-id) | [string](value-types.md#string) | No |
 
 ### `codec` [plugins-outputs-solr_http-codec]
 
-* Value type is [codec](logstash://reference/configuration-file-structure.md#codec)
+* Value type is [codec](value-types.md#codec)
 * Default value is `"plain"`
 
 The codec used for output data. Output codecs are a convenient method for encoding your data before it leaves the output without needing a separate filter in your Logstash pipeline.
 
-
 ### `enable_metric` [plugins-outputs-solr_http-enable_metric]
 
-* Value type is [boolean](logstash://reference/configuration-file-structure.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `true`
 
 Disable or enable metric logging for this specific plugin instance. By default we record all the metrics we can, but you can disable metrics collection for a specific plugin.
 
-
 ### `id` [plugins-outputs-solr_http-id]
 
-* Value type is [string](logstash://reference/configuration-file-structure.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
-Add a unique `ID` to the plugin configuration. If no ID is specified, Logstash will generate one. It is strongly recommended to set this ID in your configuration. This is particularly useful when you have two or more plugins of the same type. For example, if you have 2 solr_http outputs. Adding a named ID in this case will help in monitoring Logstash when using the monitoring APIs.
+Add a unique `ID` to the plugin configuration. If no ID is specified, Logstash will generate one. It is strongly recommended to set this ID in your configuration. This is particularly useful when you have two or more plugins of the same type. For example, if you have 2 solr\_http outputs. Adding a named ID in this case will help in monitoring Logstash when using the monitoring APIs.
 
-```json
+```
 output {
   solr_http {
     id => "my_plugin_id"
@@ -127,10 +114,4 @@ output {
 }
 ```
 
-::::{note} 
 Variable substitution in the `id` field only supports environment variables and does not support the use of values from the secret store.
-::::
-
-
-
-

@@ -6,36 +6,32 @@ mapped_pages:
 
 # Librato output plugin [plugins-outputs-librato]
 
-
 * Plugin version: v3.0.7
 * Released on: 2019-10-09
 * [Changelog](https://github.com/logstash-plugins/logstash-output-librato/blob/v3.0.7/CHANGELOG.md)
 
-For other versions, see the [Versioned plugin docs](/vpr/output-librato-index.md).
+For other versions, see the [Versioned plugin docs](https://www.elastic.co/guide/en/logstash-versioned-plugins/current/output-librato-index.html).
 
 ## Installation [_installation_36]
 
-For plugins not bundled by default, it is easy to install by running `bin/logstash-plugin install logstash-output-librato`. See [Working with plugins](logstash://reference/working-with-plugins.md) for more details.
-
+For plugins not bundled by default, it is easy to install by running `bin/logstash-plugin install logstash-output-librato`. See [Working with plugins](https://www.elastic.co/guide/en/logstash/8.18/working-with-plugins.html) for more details.
 
 ## Getting help [_getting_help_91]
 
 For questions about the plugin, open a topic in the [Discuss](http://discuss.elastic.co) forums. For bugs or feature requests, open an issue in [Github](https://github.com/logstash-plugins/logstash-output-librato). For the list of Elastic supported plugins, please consult the [Elastic Support Matrix](https://www.elastic.co/support/matrix#logstash_plugins).
 
-
-## Description [_description_90]
+## Description [_description_91]
 
 This output lets you send metrics, annotations, and alerts to Librato based on Logstash events
 
 This is VERY experimental and inefficient right now.
-
 
 ## Librato Output Configuration Options [plugins-outputs-librato-options]
 
 This plugin supports the following configuration options plus the [Common options](plugins-outputs-librato.md#plugins-outputs-librato-common-options) described later.
 
 | Setting | Input type | Required |
-| --- | --- | --- |
+| :- | :- | :- |
 | [`account_id`](plugins-outputs-librato.md#plugins-outputs-librato-account_id) | [string](value-types.md#string) | Yes |
 | [`annotation`](plugins-outputs-librato.md#plugins-outputs-librato-annotation) | [hash](value-types.md#hash) | No |
 | [`api_token`](plugins-outputs-librato.md#plugins-outputs-librato-api_token) | [string](value-types.md#string) | Yes |
@@ -45,8 +41,6 @@ This plugin supports the following configuration options plus the [Common option
 
 Also see [Common options](plugins-outputs-librato.md#plugins-outputs-librato-common-options) for a list of options supported by all output plugins.
 
- 
-
 ### `account_id` [plugins-outputs-librato-account_id]
 
 * This is a required setting.
@@ -54,7 +48,6 @@ Also see [Common options](plugins-outputs-librato.md#plugins-outputs-librato-com
 * There is no default value for this setting.
 
 Your Librato account usually an email address
-
 
 ### `annotation` [plugins-outputs-librato-annotation]
 
@@ -65,7 +58,7 @@ Annotations Registers an annotation with Librato The only required field is `tit
 
 Example:
 
-```ruby
+```
   {
       "title" => "Logstash event on %{host}"
       "name" => "logstash_stream"
@@ -74,14 +67,13 @@ Example:
 
 or
 
-```ruby
+```
    {
       "title" => "Logstash event"
       "description" => "%{message}"
       "name" => "logstash_stream"
    }
 ```
-
 
 ### `api_token` [plugins-outputs-librato-api_token]
 
@@ -91,14 +83,12 @@ or
 
 Your Librato API Token
 
-
 ### `batch_size` [plugins-outputs-librato-batch_size]
 
 * Value type is [string](value-types.md#string)
 * Default value is `"10"`
 
 Batch size Number of events to batch up before sending to Librato.
-
 
 ### `counter` [plugins-outputs-librato-counter]
 
@@ -109,7 +99,7 @@ Counters Send data to Librato as a counter
 
 Example:
 
-```ruby
+```
     {
         "value" => "1"
         "source" => "%{host}"
@@ -119,7 +109,7 @@ Example:
 
 Additionally, you can override the `measure_time` for the event. Must be a unix timestamp:
 
-```ruby
+```
     {
         "value" => "1"
         "source" => "%{host}"
@@ -130,7 +120,6 @@ Additionally, you can override the `measure_time` for the event. Must be a unix 
 
 Default is to use the event’s timestamp
 
-
 ### `gauge` [plugins-outputs-librato-gauge]
 
 * Value type is [hash](value-types.md#hash)
@@ -140,7 +129,7 @@ Gauges Send data to Librato as a gauge
 
 Example:
 
-```ruby
+```
     {
         "value" => "%{bytes_received}"
         "source" => "%{host}"
@@ -150,7 +139,7 @@ Example:
 
 Additionally, you can override the `measure_time` for the event. Must be a unix timestamp:
 
-```ruby
+```
     {
         "value" => "%{bytes_received}"
         "source" => "%{host}"
@@ -161,42 +150,38 @@ Additionally, you can override the `measure_time` for the event. Must be a unix 
 
 Default is to use the event’s timestamp
 
-
-
 ## Common options [plugins-outputs-librato-common-options]
 
 These configuration options are supported by all output plugins:
 
 | Setting | Input type | Required |
-| --- | --- | --- |
-| [`codec`](plugins-outputs-librato.md#plugins-outputs-librato-codec) | [codec](logstash://reference/configuration-file-structure.md#codec) | No |
-| [`enable_metric`](plugins-outputs-librato.md#plugins-outputs-librato-enable_metric) | [boolean](logstash://reference/configuration-file-structure.md#boolean) | No |
-| [`id`](plugins-outputs-librato.md#plugins-outputs-librato-id) | [string](logstash://reference/configuration-file-structure.md#string) | No |
+| :- | :- | :- |
+| [`codec`](plugins-outputs-librato.md#plugins-outputs-librato-codec) | [codec](value-types.md#codec) | No |
+| [`enable_metric`](plugins-outputs-librato.md#plugins-outputs-librato-enable_metric) | [boolean](value-types.md#boolean) | No |
+| [`id`](plugins-outputs-librato.md#plugins-outputs-librato-id) | [string](value-types.md#string) | No |
 
 ### `codec` [plugins-outputs-librato-codec]
 
-* Value type is [codec](logstash://reference/configuration-file-structure.md#codec)
+* Value type is [codec](value-types.md#codec)
 * Default value is `"plain"`
 
 The codec used for output data. Output codecs are a convenient method for encoding your data before it leaves the output without needing a separate filter in your Logstash pipeline.
 
-
 ### `enable_metric` [plugins-outputs-librato-enable_metric]
 
-* Value type is [boolean](logstash://reference/configuration-file-structure.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `true`
 
 Disable or enable metric logging for this specific plugin instance. By default we record all the metrics we can, but you can disable metrics collection for a specific plugin.
 
-
 ### `id` [plugins-outputs-librato-id]
 
-* Value type is [string](logstash://reference/configuration-file-structure.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 Add a unique `ID` to the plugin configuration. If no ID is specified, Logstash will generate one. It is strongly recommended to set this ID in your configuration. This is particularly useful when you have two or more plugins of the same type. For example, if you have 2 librato outputs. Adding a named ID in this case will help in monitoring Logstash when using the monitoring APIs.
 
-```json
+```
 output {
   librato {
     id => "my_plugin_id"
@@ -204,10 +189,4 @@ output {
 }
 ```
 
-::::{note} 
 Variable substitution in the `id` field only supports environment variables and does not support the use of values from the secret store.
-::::
-
-
-
-

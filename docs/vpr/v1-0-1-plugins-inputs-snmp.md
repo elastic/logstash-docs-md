@@ -6,26 +6,23 @@ mapped_pages:
 
 # SNMP input plugin v1.0.1 [v1.0.1-plugins-inputs-snmp]
 
-
 * Plugin version: v1.0.1
 * Released on: 2018-11-05
 * [Changelog](https://github.com/logstash-plugins/logstash-input-snmp/blob/v1.0.1/CHANGELOG.md)
 
 For other versions, see the [overview list](input-snmp-index.md).
 
-To learn more about Logstash, see the [Logstash Reference](logstash://reference/index.md).
+To learn more about Logstash, see the [Logstash Reference](https://www.elastic.co/guide/en/logstash/current/index.html).
 
-## Getting help [_getting_help_844]
+## Getting help [_getting_help_870]
 
 For questions about the plugin, open a topic in the [Discuss](http://discuss.elastic.co) forums. For bugs or feature requests, open an issue in [Github](https://github.com/logstash-plugins/logstash-input-snmp). For the list of Elastic supported plugins, please consult the [Elastic Support Matrix](https://www.elastic.co/support/matrix#matrix_logstash_plugins).
 
-
-## Description [_description_837]
+## Description [_description_863]
 
 The SNMP input polls network devices using Simple Network Management Protocol (SNMP) to gather information related to the current state of the devices operation.
 
 The SNMP input plugin supports SNMP v1, v2c, and v3 over UDP and TCP transport protocols.
-
 
 ## Importing MIBs [v1.0.1-plugins-inputs-snmp-import-mibs]
 
@@ -39,40 +36,37 @@ To import a MIB, you need to first convert the ASN.1 MIB file into a `.dic` file
 
 Example (using `RFC1213-MIB` file)
 
-```sh
+```
 $ smidump --level=1 -k -f python RFC1213-MIB > RFC1213-MIB.dic
 ```
 
 Note that the resulting file as output by `smidump` must have the `.dic` extension.
-
 
 ## SNMP Input Configuration Options [v1.0.1-plugins-inputs-snmp-options]
 
 This plugin supports the following configuration options plus the [Common options](v1-0-1-plugins-inputs-snmp.md#v1.0.1-plugins-inputs-snmp-common-options) described later.
 
 | Setting | Input type | Required |
-| --- | --- | --- |
-| [`get`](v1-0-1-plugins-inputs-snmp.md#v1.0.1-plugins-inputs-snmp-get) | [array](logstash://reference/configuration-file-structure.md#array) | No |
-| [`hosts`](v1-0-1-plugins-inputs-snmp.md#v1.0.1-plugins-inputs-snmp-hosts) | [array](logstash://reference/configuration-file-structure.md#array) | No |
-| [`interval`](v1-0-1-plugins-inputs-snmp.md#v1.0.1-plugins-inputs-snmp-interval) | [number](logstash://reference/configuration-file-structure.md#number) | No |
-| [`mib_paths`](v1-0-1-plugins-inputs-snmp.md#v1.0.1-plugins-inputs-snmp-mib_paths) | [path](logstash://reference/configuration-file-structure.md#path) | No |
-| [`oid_root_skip`](v1-0-1-plugins-inputs-snmp.md#v1.0.1-plugins-inputs-snmp-oid_root_skip) | [boolean](logstash://reference/configuration-file-structure.md#boolean) | No |
-| [`walk`](v1-0-1-plugins-inputs-snmp.md#v1.0.1-plugins-inputs-snmp-walk) | [array](logstash://reference/configuration-file-structure.md#array) | No |
-
+| :- | :- | :- |
+| [`get`](v1-0-1-plugins-inputs-snmp.md#v1.0.1-plugins-inputs-snmp-get) | [array](/lsr/value-types.md#array) | No |
+| [`hosts`](v1-0-1-plugins-inputs-snmp.md#v1.0.1-plugins-inputs-snmp-hosts) | [array](/lsr/value-types.md#array) | No |
+| [`interval`](v1-0-1-plugins-inputs-snmp.md#v1.0.1-plugins-inputs-snmp-interval) | [number](/lsr/value-types.md#number) | No |
+| [`mib_paths`](v1-0-1-plugins-inputs-snmp.md#v1.0.1-plugins-inputs-snmp-mib_paths) | [path](/lsr/value-types.md#path) | No |
+| [`oid_root_skip`](v1-0-1-plugins-inputs-snmp.md#v1.0.1-plugins-inputs-snmp-oid_root_skip) | [boolean](/lsr/value-types.md#boolean) | No |
+| [`walk`](v1-0-1-plugins-inputs-snmp.md#v1.0.1-plugins-inputs-snmp-walk) | [array](/lsr/value-types.md#array) | No |
 
 ## SNMPv3 Authentication Options [_snmpv3_authentication_options_43]
 
 This plugin supports the following SNMPv3 authentication options.
 
 | Setting | Input type | Required |
-| --- | --- | --- |
-| [`auth_pass`](v1-0-1-plugins-inputs-snmp.md#v1.0.1-plugins-inputs-snmp-auth_pass) | [password](logstash://reference/configuration-file-structure.md#password) | No |
-| [`auth_protocol`](v1-0-1-plugins-inputs-snmp.md#v1.0.1-plugins-inputs-snmp-auth_protocol) | [string](logstash://reference/configuration-file-structure.md#string), one of `["md5", "sha", "sha2", "hmac128sha224", "hmac192sha256", "hmac256sha384", "hmac384sha512"]` | No |
-| [`priv_pass`](v1-0-1-plugins-inputs-snmp.md#v1.0.1-plugins-inputs-snmp-priv_pass) | [password](logstash://reference/configuration-file-structure.md#password) | No |
-| [`priv_protocol`](v1-0-1-plugins-inputs-snmp.md#v1.0.1-plugins-inputs-snmp-priv_protocol) | [string](logstash://reference/configuration-file-structure.md#string), one of `["des", "3des", "aes", "aes128", "aes192", "aes256"]` | No |
-| [`security_level`](v1-0-1-plugins-inputs-snmp.md#v1.0.1-plugins-inputs-snmp-security_level) | [string](logstash://reference/configuration-file-structure.md#string), one of `["noAuthNoPriv", "authNoPriv", "authPriv"]` | No |
-| [`security_name`](v1-0-1-plugins-inputs-snmp.md#v1.0.1-plugins-inputs-snmp-security_name) | [string](logstash://reference/configuration-file-structure.md#string) | No |
-
+| :- | :- | :- |
+| [`auth_pass`](v1-0-1-plugins-inputs-snmp.md#v1.0.1-plugins-inputs-snmp-auth_pass) | [password](/lsr/value-types.md#password) | No |
+| [`auth_protocol`](v1-0-1-plugins-inputs-snmp.md#v1.0.1-plugins-inputs-snmp-auth_protocol) | [string](/lsr/value-types.md#string), one of `["md5", "sha", "sha2", "hmac128sha224", "hmac192sha256", "hmac256sha384", "hmac384sha512"]` | No |
+| [`priv_pass`](v1-0-1-plugins-inputs-snmp.md#v1.0.1-plugins-inputs-snmp-priv_pass) | [password](/lsr/value-types.md#password) | No |
+| [`priv_protocol`](v1-0-1-plugins-inputs-snmp.md#v1.0.1-plugins-inputs-snmp-priv_protocol) | [string](/lsr/value-types.md#string), one of `["des", "3des", "aes", "aes128", "aes192", "aes256"]` | No |
+| [`security_level`](v1-0-1-plugins-inputs-snmp.md#v1.0.1-plugins-inputs-snmp-security_level) | [string](/lsr/value-types.md#string), one of `["noAuthNoPriv", "authNoPriv", "authPriv"]` | No |
+| [`security_name`](v1-0-1-plugins-inputs-snmp.md#v1.0.1-plugins-inputs-snmp-security_name) | [string](/lsr/value-types.md#string) | No |
 
 ## SNMP Input Configuration Options [_snmp_input_configuration_options_22]
 
@@ -82,12 +76,12 @@ Also see [Common options](v1-0-1-plugins-inputs-snmp.md#v1.0.1-plugins-inputs-sn
 
 Use the `get` option to query for scalar values for the given OID(s). One or more OID(s) are specified as an array of strings of OID(s).
 
-* Value type is [array](logstash://reference/configuration-file-structure.md#array)
+* Value type is [array](/lsr/value-types.md#array)
 * There is no default value for this setting
 
 Example
 
-```ruby
+```
 input {
   snmp {
     get => ["1.3.6.1.2.1.1.1.0", "1.3.6.1.2.1.1.3.0", "1.3.6.1.2.1.1.5.0"]
@@ -96,14 +90,13 @@ input {
 }
 ```
 
-
 ### `hosts` [v1.0.1-plugins-inputs-snmp-hosts]
 
 The `hosts` option specifies the list of hosts to query the configured `get` and `walk` options.
 
-Each host definition is a hash and must define the `host` key and value. `host` must use the format `{tcp|udp}:{ip address}/{{port}}`, for example `host => "udp:127.0.0.1/161"`
+Each host definition is a hash and must define the `host` key and value. `host` must use the format `{tcp|udp}:{ip address}/{port}`, for example `host => "udp:127.0.0.1/161"`
 
-* Value type is [array](logstash://reference/configuration-file-structure.md#array)
+* Value type is [array](/lsr/value-types.md#array)
 * There is no default value for this setting
 
 Each host definition can optionally include the following keys and values:
@@ -115,7 +108,7 @@ Each host definition can optionally include the following keys and values:
 
 **Specifying all hosts options**
 
-```ruby
+```
 input {
   snmp {
     get => ["1.3.6.1.2.1.1.1.0"]
@@ -126,7 +119,7 @@ input {
 
 **Specifying multiple hosts**
 
-```ruby
+```
 input {
   snmp {
     get => ["1.3.6.1.2.1.1.1.0"]
@@ -135,53 +128,47 @@ input {
 }
 ```
 
-
 ### `interval` [v1.0.1-plugins-inputs-snmp-interval]
 
 The `interval` option specifies the polling interval in seconds.
 
-* Value type is [number](logstash://reference/configuration-file-structure.md#number)
+* Value type is [number](/lsr/value-types.md#number)
 * Default value is `30`
-
 
 ### `mib_paths` [v1.0.1-plugins-inputs-snmp-mib_paths]
 
 The `mib_paths` option specifies the location of one or more imported MIB files. The value can be either a dir path containing the imported MIB `.dic` files or a file path to a single MIB `.dic` file.
 
-* Value type is [path](logstash://reference/configuration-file-structure.md#path)
+* Value type is [path](/lsr/value-types.md#path)
 * There is no default value for this setting
 
 This plugin includes the IETF MIBs. If you require other MIBs, you need to import them. See [Importing MIBs](v1-0-1-plugins-inputs-snmp.md#v1.0.1-plugins-inputs-snmp-import-mibs).
 
-
 ### `oid_root_skip` [v1.0.1-plugins-inputs-snmp-oid_root_skip]
 
-The `oid_root_skip` option specifies the  number of OID root digits to ignore in event field name. For example, in a numeric OID like "1.3.6.1.2.1.1.1.0" the first 5 digits could be ignored by setting `oid_root_skip => 5` which would result in a field name "1.1.1.0". Similarly when a MIB is used an OID such "1.3.6.1.2.mib-2.system.sysDescr.0" would become "mib-2.system.sysDescr.0"
+The `oid_root_skip` option specifies the number of OID root digits to ignore in event field name. For example, in a numeric OID like "1.3.6.1.2.1.1.1.0" the first 5 digits could be ignored by setting `oid_root_skip => 5` which would result in a field name "1.1.1.0". Similarly when a MIB is used an OID such "1.3.6.1.2.mib-2.system.sysDescr.0" would become "mib-2.system.sysDescr.0"
 
-* Value type is [number](logstash://reference/configuration-file-structure.md#number)
+* Value type is [number](/lsr/value-types.md#number)
 * Default value is `0`
-
 
 ### `walk` [v1.0.1-plugins-inputs-snmp-walk]
 
 Use the `walk` option to retrieve the subtree of information for the given OID(s). One or more OID(s) are specified as an array of strings of OID(s).
 
-* Value type is [array](logstash://reference/configuration-file-structure.md#array)
+* Value type is [array](/lsr/value-types.md#array)
 * There is no default value for this setting
 
 Queries the subtree of information starting at the given OID(s).
 
 Example
 
-```ruby
+```
   snmp {
     walk => ["1.3.6.1.2.1.1"]
     hosts => [{host => "udp:127.0.0.1/161" community => "public"}]
   }
 }
 ```
-
-
 
 ## SNMPv3 Authentication Options [_snmpv3_authentication_options_44]
 
@@ -191,9 +178,8 @@ A **single user** can be configured and will be used for all defined SNMPv3 host
 
 The `auth_pass` option specifies the SNMPv3 authentication passphrase or password
 
-* Value type is [password](logstash://reference/configuration-file-structure.md#password)
+* Value type is [password](/lsr/value-types.md#password)
 * There is no default value for this setting
-
 
 ### `auth_protocol` [v1.0.1-plugins-inputs-snmp-auth_protocol]
 
@@ -202,14 +188,12 @@ The `auth_protocol` option specifies the SNMPv3 authentication protocol or type
 * Value can be any of: `md5`, `sha`, `sha2`, `hmac128sha224`, `hmac192sha256`, `hmac256sha384`, `hmac384sha512`
 * There is no default value for this setting
 
-
 ### `priv_pass` [v1.0.1-plugins-inputs-snmp-priv_pass]
 
 The `priv_pass` option specifies the SNMPv3 encryption password
 
-* Value type is [password](logstash://reference/configuration-file-structure.md#password)
+* Value type is [password](/lsr/value-types.md#password)
 * There is no default value for this setting
-
 
 ### `priv_protocol` [v1.0.1-plugins-inputs-snmp-priv_protocol]
 
@@ -219,14 +203,12 @@ The `priv_protocol` option specifies the SNMPv3 privacy/encryption protocol.
 * Note that `aes` and `aes128` are equivalent
 * There is no default value for this setting
 
-
 ### `security_name` [v1.0.1-plugins-inputs-snmp-security_name]
 
 The `security_name` option specifies the SNMPv3 security name or user name
 
-* Value type is [string](logstash://reference/configuration-file-structure.md#string)
+* Value type is [string](/lsr/value-types.md#string)
 * There is no default value for this setting
-
 
 ### `security_level` [v1.0.1-plugins-inputs-snmp-security_level]
 
@@ -235,13 +217,11 @@ The `security_level` option specifies the SNMPv3 security level between Authenti
 * Value can be any of: `noAuthNoPriv`, `authNoPriv`, `authPriv`
 * There is no default value for this setting
 
-
-
 ## More configuration examples [_more_configuration_examples_11]
 
 **Using both `get` and `walk` in the same poll cycle for each host(s)**
 
-```ruby
+```
 input {
   snmp {
     get => ["1.3.6.1.2.1.1.1.0", "1.3.6.1.2.1.1.3.0", "1.3.6.1.2.1.1.5.0"]
@@ -253,7 +233,7 @@ input {
 
 **Specifying all global options**
 
-```ruby
+```
 input {
   snmp {
     get => ["1.3.6.1.2.1.1.1.0"]
@@ -266,7 +246,6 @@ input {
 }
 ```
 
-
 ## Polled host information [_polled_host_information_22]
 
 All the polled host information is stored in the event `@metadata`:
@@ -278,7 +257,7 @@ All the polled host information is stored in the event `@metadata`:
 
 By default, a `host` field is added to the event with the `[@metadata][host_address]` value.
 
-```ruby
+```
 config :add_field, :validate => :hash, :default => { "host" => "%{[@metadata][host_address]}" }
 ```
 
@@ -286,7 +265,7 @@ You can customize the format and content of the `host` field by specifying an al
 
 Example
 
-```ruby
+```
 input {
   snmp {
     get => ["1.3.6.1.2.1.1.1.0"]
@@ -297,43 +276,40 @@ input {
 }
 ```
 
-
 ## Common options [v1.0.1-plugins-inputs-snmp-common-options]
 
 These configuration options are supported by all input plugins:
 
 | Setting | Input type | Required |
-| --- | --- | --- |
-| [`add_field`](v1-0-1-plugins-inputs-snmp.md#v1.0.1-plugins-inputs-snmp-add_field) | [hash](logstash://reference/configuration-file-structure.md#hash) | No |
-| [`enable_metric`](v1-0-1-plugins-inputs-snmp.md#v1.0.1-plugins-inputs-snmp-enable_metric) | [boolean](logstash://reference/configuration-file-structure.md#boolean) | No |
-| [`id`](v1-0-1-plugins-inputs-snmp.md#v1.0.1-plugins-inputs-snmp-id) | [string](logstash://reference/configuration-file-structure.md#string) | No |
-| [`tags`](v1-0-1-plugins-inputs-snmp.md#v1.0.1-plugins-inputs-snmp-tags) | [array](logstash://reference/configuration-file-structure.md#array) | No |
-| [`type`](v1-0-1-plugins-inputs-snmp.md#v1.0.1-plugins-inputs-snmp-type) | [string](logstash://reference/configuration-file-structure.md#string) | No |
+| :- | :- | :- |
+| [`add_field`](v1-0-1-plugins-inputs-snmp.md#v1.0.1-plugins-inputs-snmp-add_field) | [hash](/lsr/value-types.md#hash) | No |
+| [`enable_metric`](v1-0-1-plugins-inputs-snmp.md#v1.0.1-plugins-inputs-snmp-enable_metric) | [boolean](/lsr/value-types.md#boolean) | No |
+| [`id`](v1-0-1-plugins-inputs-snmp.md#v1.0.1-plugins-inputs-snmp-id) | [string](/lsr/value-types.md#string) | No |
+| [`tags`](v1-0-1-plugins-inputs-snmp.md#v1.0.1-plugins-inputs-snmp-tags) | [array](/lsr/value-types.md#array) | No |
+| [`type`](v1-0-1-plugins-inputs-snmp.md#v1.0.1-plugins-inputs-snmp-type) | [string](/lsr/value-types.md#string) | No |
 
 ### `add_field` [v1.0.1-plugins-inputs-snmp-add_field]
 
-* Value type is [hash](logstash://reference/configuration-file-structure.md#hash)
+* Value type is [hash](/lsr/value-types.md#hash)
 * Default value is `{}`
 
 Add a field to an event
 
-
 ### `enable_metric` [v1.0.1-plugins-inputs-snmp-enable_metric]
 
-* Value type is [boolean](logstash://reference/configuration-file-structure.md#boolean)
+* Value type is [boolean](/lsr/value-types.md#boolean)
 * Default value is `true`
 
 Disable or enable metric logging for this specific plugin instance by default we record all the metrics we can, but you can disable metrics collection for a specific plugin.
 
-
 ### `id` [v1.0.1-plugins-inputs-snmp-id]
 
-* Value type is [string](logstash://reference/configuration-file-structure.md#string)
+* Value type is [string](/lsr/value-types.md#string)
 * There is no default value for this setting.
 
 Add a unique `ID` to the plugin configuration. If no ID is specified, Logstash will generate one. It is strongly recommended to set this ID in your configuration. This is particularly useful when you have two or more plugins of the same type, for example, if you have 2 snmp inputs. Adding a named ID in this case will help in monitoring Logstash when using the monitoring APIs.
 
-```json
+```
 input {
   snmp {
     id => "my_plugin_id"
@@ -341,20 +317,18 @@ input {
 }
 ```
 
-
 ### `tags` [v1.0.1-plugins-inputs-snmp-tags]
 
-* Value type is [array](logstash://reference/configuration-file-structure.md#array)
+* Value type is [array](/lsr/value-types.md#array)
 * There is no default value for this setting.
 
 Add any number of arbitrary tags to your event.
 
 This can help with processing later.
 
-
 ### `type` [v1.0.1-plugins-inputs-snmp-type]
 
-* Value type is [string](logstash://reference/configuration-file-structure.md#string)
+* Value type is [string](/lsr/value-types.md#string)
 * There is no default value for this setting.
 
 Add a `type` field to all events handled by this input.

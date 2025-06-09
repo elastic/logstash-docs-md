@@ -6,16 +6,12 @@ mapped_pages:
 
 # Versioned google_bigquery output plugin docs [output-google_bigquery-index]
 
+This page lists all documentation available for this plugin. To see which plugin version you have installed, run `bin/logstash-plugin list --verbose`.
 
-This page lists all documentation available for this plugin.  To see which plugin version you have installed, run `bin/logstash-plugin list --verbose`.
-
-::::{note}
 Versioned plugin documentation is not available for plugins released prior to Logstash 6.0.
-::::
 
-
-|     |     |
-| --- | --- |
+| | |
+| :- | :- |
 | Version | Release Date |
 | [v4.6.0](v4-6-0-plugins-outputs-google_bigquery.md) | 2024-09-16 |
 | [v4.5.0](v4-5-0-plugins-outputs-google_bigquery.md) | 2024-01-24 |
@@ -34,21 +30,3 @@ Versioned plugin documentation is not available for plugins released prior to Lo
 | [v3.2.3](v3-2-3-plugins-outputs-google_bigquery.md) | 2017-11-07 |
 | [v3.2.2](v3-2-2-plugins-outputs-google_bigquery.md) | 2017-08-16 |
 | [v3.2.1](v3-2-1-plugins-outputs-google_bigquery.md) | 2017-06-23 |
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

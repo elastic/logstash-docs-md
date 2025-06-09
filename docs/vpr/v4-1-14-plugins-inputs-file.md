@@ -6,21 +6,19 @@ mapped_pages:
 
 # File input plugin v4.1.14 [v4.1.14-plugins-inputs-file]
 
-
 * Plugin version: v4.1.14
 * Released on: 2020-01-27
 * [Changelog](https://github.com/logstash-plugins/logstash-input-file/blob/v4.1.14/CHANGELOG.md)
 
 For other versions, see the [overview list](input-file-index.md).
 
-To learn more about Logstash, see the [Logstash Reference](logstash://reference/index.md).
+To learn more about Logstash, see the [Logstash Reference](https://www.elastic.co/guide/en/logstash/current/index.html).
 
-## Getting help [_getting_help_386]
+## Getting help [_getting_help_399]
 
 For questions about the plugin, open a topic in the [Discuss](http://discuss.elastic.co) forums. For bugs or feature requests, open an issue in [Github](https://github.com/logstash-plugins/logstash-input-file). For the list of Elastic supported plugins, please consult the [Elastic Support Matrix](https://www.elastic.co/support/matrix#matrix_logstash_plugins).
 
-
-## Description [_description_386]
+## Description [_description_399]
 
 Stream events from files, normally by tailing them in a manner similar to `tail -0F` but optionally reading them from the beginning.
 
@@ -40,14 +38,11 @@ The plugin has two modes of operation, Tail mode and Read mode.
 
 In this mode the plugin aims to track changing files and emit new content as it’s appended to each file. In this mode, files are seen as a never ending stream of content and EOF has no special significance. The plugin always assumes that there will be more content. When files are rotated, the smaller or zero size is detected, the current position is reset to zero and streaming continues. A delimiter must be seen before the accumulated characters can be emitted as a line.
 
-
 ### Read mode [_read_mode_19]
 
 In this mode the plugin treats each file as if it is content complete, that is, a finite stream of lines and now EOF is significant. A last delimiter is not needed because EOF means that the accumulated characters can be emitted as a line. Further, EOF here means that the file can be closed and put in the "unwatched" state - this automatically frees up space in the active window. This mode also makes it possible to process compressed files as they are content complete. Read mode also allows for an action to take place after processing the file completely.
 
 In the past attempts to simulate a Read mode while still assuming infinite streams was not ideal and a dedicated Read mode is an improvement.
-
-
 
 ## Tracking of current position in watched files [_tracking_of_current_position_in_watched_files_19]
 
@@ -72,109 +67,95 @@ Sincedb files are text files with four (< v5.0.0), five or six columns:
 
 On non-Windows systems you can obtain the inode number of a file with e.g. `ls -li`.
 
-
 ## Reading from remote network volumes [_reading_from_remote_network_volumes_19]
 
 The file input is not thoroughly tested on remote filesystems such as NFS, Samba, s3fs-fuse, etc, however NFS is occasionally tested. The file size as given by the remote FS client is used to govern how much data to read at any given time to prevent reading into allocated but yet unfilled memory. As we use the device major and minor in the identifier to track "last read" positions of files and on remount the device major and minor can change, the sincedb records may not match across remounts. Read mode might not be suitable for remote filesystems as the file size at discovery on the client side may not be the same as the file size on the remote side due to latency in the remote to client copy process.
-
 
 ## File rotation in Tail mode [_file_rotation_in_tail_mode_19]
 
 File rotation is detected and handled by this input, regardless of whether the file is rotated via a rename or a copy operation. To support programs that write to the rotated file for some time after the rotation has taken place, include both the original filename and the rotated filename (e.g. /var/log/syslog and /var/log/syslog.1) in the filename patterns to watch (the `path` option). For a rename, the inode will be detected as having moved from `/var/log/syslog` to `/var/log/syslog.1` and so the "state" is moved internally too, the old content will not be reread but any new content on the renamed file will be read. For copy/truncate the copied content into a new file path, if discovered, will be treated as a new discovery and be read from the beginning. The copied file paths should therefore not be in the filename patterns to watch (the `path` option). The truncation will be detected and the "last read" position updated to zero.
 
-
 ## File Input Configuration Options [v4.1.14-plugins-inputs-file-options]
 
 This plugin supports the following configuration options plus the [Common options](v4-1-14-plugins-inputs-file.md#v4.1.14-plugins-inputs-file-common-options) described later.
 
-::::{note}
-Duration settings can be specified in text form e.g. "250 ms", this string will be converted into decimal seconds. There are quite a few supported natural and abbreviated durations, see [string_duration](v4-1-14-plugins-inputs-file.md#v4.1.14-plugins-inputs-file-string_duration) for the details.
-::::
-
+Duration settings can be specified in text form e.g. "250 ms", this string will be converted into decimal seconds. There are quite a few supported natural and abbreviated durations, see [string\_duration](v4-1-14-plugins-inputs-file.md#v4.1.14-plugins-inputs-file-string_duration) for the details.
 
 | Setting | Input type | Required |
-| --- | --- | --- |
-| [`close_older`](v4-1-14-plugins-inputs-file.md#v4.1.14-plugins-inputs-file-close_older) | [number](logstash://reference/configuration-file-structure.md#number) or [string_duration](v4-1-14-plugins-inputs-file.md#v4.1.14-plugins-inputs-file-string_duration) | No |
-| [`delimiter`](v4-1-14-plugins-inputs-file.md#v4.1.14-plugins-inputs-file-delimiter) | [string](logstash://reference/configuration-file-structure.md#string) | No |
-| [`discover_interval`](v4-1-14-plugins-inputs-file.md#v4.1.14-plugins-inputs-file-discover_interval) | [number](logstash://reference/configuration-file-structure.md#number) | No |
-| [`exclude`](v4-1-14-plugins-inputs-file.md#v4.1.14-plugins-inputs-file-exclude) | [array](logstash://reference/configuration-file-structure.md#array) | No |
-| [`file_chunk_count`](v4-1-14-plugins-inputs-file.md#v4.1.14-plugins-inputs-file-file_chunk_count) | [number](logstash://reference/configuration-file-structure.md#number) | No |
-| [`file_chunk_size`](v4-1-14-plugins-inputs-file.md#v4.1.14-plugins-inputs-file-file_chunk_size) | [number](logstash://reference/configuration-file-structure.md#number) | No |
-| [`file_completed_action`](v4-1-14-plugins-inputs-file.md#v4.1.14-plugins-inputs-file-file_completed_action) | [string](logstash://reference/configuration-file-structure.md#string), one of `["delete", "log", "log_and_delete"]` | No |
-| [`file_completed_log_path`](v4-1-14-plugins-inputs-file.md#v4.1.14-plugins-inputs-file-file_completed_log_path) | [string](logstash://reference/configuration-file-structure.md#string) | No |
-| [`file_sort_by`](v4-1-14-plugins-inputs-file.md#v4.1.14-plugins-inputs-file-file_sort_by) | [string](logstash://reference/configuration-file-structure.md#string), one of `["last_modified", "path"]` | No |
-| [`file_sort_direction`](v4-1-14-plugins-inputs-file.md#v4.1.14-plugins-inputs-file-file_sort_direction) | [string](logstash://reference/configuration-file-structure.md#string), one of `["asc", "desc"]` | No |
-| [`ignore_older`](v4-1-14-plugins-inputs-file.md#v4.1.14-plugins-inputs-file-ignore_older) | [number](logstash://reference/configuration-file-structure.md#number) or [string_duration](v4-1-14-plugins-inputs-file.md#v4.1.14-plugins-inputs-file-string_duration) | No |
-| [`max_open_files`](v4-1-14-plugins-inputs-file.md#v4.1.14-plugins-inputs-file-max_open_files) | [number](logstash://reference/configuration-file-structure.md#number) | No |
-| [`mode`](v4-1-14-plugins-inputs-file.md#v4.1.14-plugins-inputs-file-mode) | [string](logstash://reference/configuration-file-structure.md#string), one of `["tail", "read"]` | No |
-| [`path`](v4-1-14-plugins-inputs-file.md#v4.1.14-plugins-inputs-file-path) | [array](logstash://reference/configuration-file-structure.md#array) | Yes |
-| [`sincedb_clean_after`](v4-1-14-plugins-inputs-file.md#v4.1.14-plugins-inputs-file-sincedb_clean_after) | [number](logstash://reference/configuration-file-structure.md#number) or [string_duration](v4-1-14-plugins-inputs-file.md#v4.1.14-plugins-inputs-file-string_duration) | No |
-| [`sincedb_path`](v4-1-14-plugins-inputs-file.md#v4.1.14-plugins-inputs-file-sincedb_path) | [string](logstash://reference/configuration-file-structure.md#string) | No |
-| [`sincedb_write_interval`](v4-1-14-plugins-inputs-file.md#v4.1.14-plugins-inputs-file-sincedb_write_interval) | [number](logstash://reference/configuration-file-structure.md#number) or [string_duration](v4-1-14-plugins-inputs-file.md#v4.1.14-plugins-inputs-file-string_duration) | No |
-| [`start_position`](v4-1-14-plugins-inputs-file.md#v4.1.14-plugins-inputs-file-start_position) | [string](logstash://reference/configuration-file-structure.md#string), one of `["beginning", "end"]` | No |
-| [`stat_interval`](v4-1-14-plugins-inputs-file.md#v4.1.14-plugins-inputs-file-stat_interval) | [number](logstash://reference/configuration-file-structure.md#number) or [string_duration](v4-1-14-plugins-inputs-file.md#v4.1.14-plugins-inputs-file-string_duration) | No |
+| :- | :- | :- |
+| [`close_older`](v4-1-14-plugins-inputs-file.md#v4.1.14-plugins-inputs-file-close_older) | [number](/lsr/value-types.md#number) or [string\_duration](v4-1-14-plugins-inputs-file.md#v4.1.14-plugins-inputs-file-string_duration) | No |
+| [`delimiter`](v4-1-14-plugins-inputs-file.md#v4.1.14-plugins-inputs-file-delimiter) | [string](/lsr/value-types.md#string) | No |
+| [`discover_interval`](v4-1-14-plugins-inputs-file.md#v4.1.14-plugins-inputs-file-discover_interval) | [number](/lsr/value-types.md#number) | No |
+| [`exclude`](v4-1-14-plugins-inputs-file.md#v4.1.14-plugins-inputs-file-exclude) | [array](/lsr/value-types.md#array) | No |
+| [`file_chunk_count`](v4-1-14-plugins-inputs-file.md#v4.1.14-plugins-inputs-file-file_chunk_count) | [number](/lsr/value-types.md#number) | No |
+| [`file_chunk_size`](v4-1-14-plugins-inputs-file.md#v4.1.14-plugins-inputs-file-file_chunk_size) | [number](/lsr/value-types.md#number) | No |
+| [`file_completed_action`](v4-1-14-plugins-inputs-file.md#v4.1.14-plugins-inputs-file-file_completed_action) | [string](/lsr/value-types.md#string), one of `["delete", "log", "log_and_delete"]` | No |
+| [`file_completed_log_path`](v4-1-14-plugins-inputs-file.md#v4.1.14-plugins-inputs-file-file_completed_log_path) | [string](/lsr/value-types.md#string) | No |
+| [`file_sort_by`](v4-1-14-plugins-inputs-file.md#v4.1.14-plugins-inputs-file-file_sort_by) | [string](/lsr/value-types.md#string), one of `["last_modified", "path"]` | No |
+| [`file_sort_direction`](v4-1-14-plugins-inputs-file.md#v4.1.14-plugins-inputs-file-file_sort_direction) | [string](/lsr/value-types.md#string), one of `["asc", "desc"]` | No |
+| [`ignore_older`](v4-1-14-plugins-inputs-file.md#v4.1.14-plugins-inputs-file-ignore_older) | [number](/lsr/value-types.md#number) or [string\_duration](v4-1-14-plugins-inputs-file.md#v4.1.14-plugins-inputs-file-string_duration) | No |
+| [`max_open_files`](v4-1-14-plugins-inputs-file.md#v4.1.14-plugins-inputs-file-max_open_files) | [number](/lsr/value-types.md#number) | No |
+| [`mode`](v4-1-14-plugins-inputs-file.md#v4.1.14-plugins-inputs-file-mode) | [string](/lsr/value-types.md#string), one of `["tail", "read"]` | No |
+| [`path`](v4-1-14-plugins-inputs-file.md#v4.1.14-plugins-inputs-file-path) | [array](/lsr/value-types.md#array) | Yes |
+| [`sincedb_clean_after`](v4-1-14-plugins-inputs-file.md#v4.1.14-plugins-inputs-file-sincedb_clean_after) | [number](/lsr/value-types.md#number) or [string\_duration](v4-1-14-plugins-inputs-file.md#v4.1.14-plugins-inputs-file-string_duration) | No |
+| [`sincedb_path`](v4-1-14-plugins-inputs-file.md#v4.1.14-plugins-inputs-file-sincedb_path) | [string](/lsr/value-types.md#string) | No |
+| [`sincedb_write_interval`](v4-1-14-plugins-inputs-file.md#v4.1.14-plugins-inputs-file-sincedb_write_interval) | [number](/lsr/value-types.md#number) or [string\_duration](v4-1-14-plugins-inputs-file.md#v4.1.14-plugins-inputs-file-string_duration) | No |
+| [`start_position`](v4-1-14-plugins-inputs-file.md#v4.1.14-plugins-inputs-file-start_position) | [string](/lsr/value-types.md#string), one of `["beginning", "end"]` | No |
+| [`stat_interval`](v4-1-14-plugins-inputs-file.md#v4.1.14-plugins-inputs-file-stat_interval) | [number](/lsr/value-types.md#number) or [string\_duration](v4-1-14-plugins-inputs-file.md#v4.1.14-plugins-inputs-file-string_duration) | No |
 
 Also see [Common options](v4-1-14-plugins-inputs-file.md#v4.1.14-plugins-inputs-file-common-options) for a list of options supported by all input plugins.
 
- 
-
 ### `close_older` [v4.1.14-plugins-inputs-file-close_older]
 
-* Value type is [number](logstash://reference/configuration-file-structure.md#number) or [string_duration](v4-1-14-plugins-inputs-file.md#v4.1.14-plugins-inputs-file-string_duration)
+* Value type is [number](/lsr/value-types.md#number) or [string\_duration](v4-1-14-plugins-inputs-file.md#v4.1.14-plugins-inputs-file-string_duration)
 * Default value is `"1 hour"`
 
-The file input closes any files that were last read the specified duration (seconds if a number is specified) ago. This has different implications depending on if a file is being tailed or read. If tailing, and there is a large time gap in incoming data the file can be closed (allowing other files to be opened) but will be queued for reopening when new data is detected. If reading, the file will be closed after closed_older seconds from when the last bytes were read. This setting is retained for backward compatibility if you upgrade the plugin to 4.1.0+, are reading not tailing and do not switch to using Read mode.
-
+The file input closes any files that were last read the specified duration (seconds if a number is specified) ago. This has different implications depending on if a file is being tailed or read. If tailing, and there is a large time gap in incoming data the file can be closed (allowing other files to be opened) but will be queued for reopening when new data is detected. If reading, the file will be closed after closed\_older seconds from when the last bytes were read. This setting is retained for backward compatibility if you upgrade the plugin to 4.1.0+, are reading not tailing and do not switch to using Read mode.
 
 ### `delimiter` [v4.1.14-plugins-inputs-file-delimiter]
 
-* Value type is [string](logstash://reference/configuration-file-structure.md#string)
+* Value type is [string](/lsr/value-types.md#string)
 * Default value is `"\n"`
 
 set the new line delimiter, defaults to "\n". Note that when reading compressed files this setting is not used, instead the standard Windows or Unix line endings are used.
 
-
 ### `discover_interval` [v4.1.14-plugins-inputs-file-discover_interval]
 
-* Value type is [number](logstash://reference/configuration-file-structure.md#number)
+* Value type is [number](/lsr/value-types.md#number)
 * Default value is `15`
 
 How often we expand the filename patterns in the `path` option to discover new files to watch. This value is a multiple to `stat_interval`, e.g. if `stat_interval` is "500 ms" then new files files could be discovered every 15 X 500 milliseconds - 7.5 seconds. In practice, this will be the best case because the time taken to read new content needs to be factored in.
 
-
 ### `exclude` [v4.1.14-plugins-inputs-file-exclude]
 
-* Value type is [array](logstash://reference/configuration-file-structure.md#array)
+* Value type is [array](/lsr/value-types.md#array)
 * There is no default value for this setting.
 
 Exclusions (matched against the filename, not full path). Filename patterns are valid here, too. For example, if you have
 
-```ruby
+```
     path => "/var/log/*"
 ```
 
 In Tail mode, you might want to exclude gzipped files:
 
-```ruby
+```
     exclude => "*.gz"
 ```
 
-
 ### `file_chunk_count` [v4.1.14-plugins-inputs-file-file_chunk_count]
 
-* Value type is [number](logstash://reference/configuration-file-structure.md#number)
+* Value type is [number](/lsr/value-types.md#number)
 * Default value is `4611686018427387903`
 
 When combined with the `file_chunk_size`, this option sets how many chunks (bands or stripes) are read from each file before moving to the next active file. For example, a `file_chunk_count` of 32 and a `file_chunk_size` 32KB will process the next 1MB from each active file. As the default is very large, the file is effectively read to EOF before moving to the next active file.
 
-
 ### `file_chunk_size` [v4.1.14-plugins-inputs-file-file_chunk_size]
 
-* Value type is [number](logstash://reference/configuration-file-structure.md#number)
+* Value type is [number](/lsr/value-types.md#number)
 * Default value is `32768` (32KB)
 
 File content is read off disk in blocks or chunks and lines are extracted from the chunk. See [`file_chunk_count`](v4-1-14-plugins-inputs-file.md#v4.1.14-plugins-inputs-file-file_chunk_count) to see why and when to change this setting from the default.
-
 
 ### `file_completed_action` [v4.1.14-plugins-inputs-file-file_completed_action]
 
@@ -183,14 +164,12 @@ File content is read off disk in blocks or chunks and lines are extracted from t
 
 When in `read` mode, what action should be carried out when a file is done with. If *delete* is specified then the file will be deleted. If *log* is specified then the full path of the file is logged to the file specified in the `file_completed_log_path` setting. If `log_and_delete` is specified then both above actions take place.
 
-
 ### `file_completed_log_path` [v4.1.14-plugins-inputs-file-file_completed_log_path]
 
-* Value type is [string](logstash://reference/configuration-file-structure.md#string)
+* Value type is [string](/lsr/value-types.md#string)
 * There is no default value for this setting.
 
-Which file should the completely read file paths be appended to. Only specify this path to a file when `file_completed_action` is *log* or *log_and_delete*. IMPORTANT: this file is appended to only - it could become very large. You are responsible for file rotation.
-
+Which file should the completely read file paths be appended to. Only specify this path to a file when `file_completed_action` is *log* or *log\_and\_delete*. IMPORTANT: this file is appended to only - it could become very large. You are responsible for file rotation.
 
 ### `file_sort_by` [v4.1.14-plugins-inputs-file-file_sort_by]
 
@@ -199,7 +178,6 @@ Which file should the completely read file paths be appended to. Only specify th
 
 Which attribute of a "watched" file should be used to sort them by. Files can be sorted by modified date or full path alphabetic. Previously the processing order of the discovered and therefore "watched" files was OS dependent.
 
-
 ### `file_sort_direction` [v4.1.14-plugins-inputs-file-file_sort_direction]
 
 * Value can be any of: `asc`, `desc`
@@ -207,22 +185,19 @@ Which attribute of a "watched" file should be used to sort them by. Files can be
 
 Select between ascending and descending order when sorting "watched" files. If oldest data first is important then the defaults of `last_modified` + `asc` are good. If newest data first is more important then opt for `last_modified` + `desc`. If you use special naming conventions for the file full paths then perhaps `path` + `asc` will help to control the order of file processing.
 
-
 ### `ignore_older` [v4.1.14-plugins-inputs-file-ignore_older]
 
-* Value type is [number](logstash://reference/configuration-file-structure.md#number) or [string_duration](v4-1-14-plugins-inputs-file.md#v4.1.14-plugins-inputs-file-string_duration)
+* Value type is [number](/lsr/value-types.md#number) or [string\_duration](v4-1-14-plugins-inputs-file.md#v4.1.14-plugins-inputs-file-string_duration)
 * There is no default value for this setting.
 
 When the file input discovers a file that was last modified before the specified duration (seconds if a number is specified), the file is ignored. After it’s discovery, if an ignored file is modified it is no longer ignored and any new data is read. By default, this option is disabled. Note this unit is in seconds.
 
-
 ### `max_open_files` [v4.1.14-plugins-inputs-file-max_open_files]
 
-* Value type is [number](logstash://reference/configuration-file-structure.md#number)
+* Value type is [number](/lsr/value-types.md#number)
 * There is no default value for this setting.
 
-What is the maximum number of file_handles that this input consumes at any one time. Use close_older to close some files if you need to process more files than this number. This should not be set to the maximum the OS can do because file handles are needed for other LS plugins and OS processes. A default of 4095 is set in internally.
-
+What is the maximum number of file\_handles that this input consumes at any one time. Use close\_older to close some files if you need to process more files than this number. This should not be set to the maximum the OS can do because file handles are needed for other LS plugins and OS processes. A default of 4095 is set in internally.
 
 ### `mode` [v4.1.14-plugins-inputs-file-mode]
 
@@ -240,42 +215,37 @@ If "read" is specified then the following settings are heeded:
 2. `file_completed_action` (what action should be taken when the file is processed)
 3. `file_completed_log_path` (which file should the completed file path be logged to)
 
-
 ### `path` [v4.1.14-plugins-inputs-file-path]
 
 * This is a required setting.
-* Value type is [array](logstash://reference/configuration-file-structure.md#array)
+* Value type is [array](/lsr/value-types.md#array)
 * There is no default value for this setting.
 
 The path(s) to the file(s) to use as an input. You can use filename patterns here, such as `/var/log/*.log`. If you use a pattern like `/var/log/**/*.log`, a recursive search of `/var/log` will be done for all `*.log` files. Paths must be absolute and cannot be relative.
 
-You may also configure multiple paths. See an example on the [Logstash configuration page](logstash://reference/configuration-file-structure.md#array).
-
+You may also configure multiple paths. See an example on the [Logstash configuration page](/lsr/value-types.md#array).
 
 ### `sincedb_clean_after` [v4.1.14-plugins-inputs-file-sincedb_clean_after]
 
-* Value type is [number](logstash://reference/configuration-file-structure.md#number) or [string_duration](v4-1-14-plugins-inputs-file.md#v4.1.14-plugins-inputs-file-string_duration)
+* Value type is [number](/lsr/value-types.md#number) or [string\_duration](v4-1-14-plugins-inputs-file.md#v4.1.14-plugins-inputs-file-string_duration)
 * The default value for this setting is "2 weeks".
 * If a number is specified then it is interpreted as **days** and can be decimal e.g. 0.5 is 12 hours.
 
-The sincedb record now has a last active timestamp associated with it. If no changes are detected in a tracked file in the last N days its sincedb tracking record expires and will not be persisted. This option helps protect against the inode recycling problem. Filebeat has a [FAQ about inode recycling\]\(([^:]+)://reference/filebeat/inode-reuse-issue.md).
-
+The sincedb record now has a last active timestamp associated with it. If no changes are detected in a tracked file in the last N days its sincedb tracking record expires and will not be persisted. This option helps protect against the inode recycling problem. Filebeat has a [FAQ about inode recycling](https://www.elastic.co/guide/en/beats/filebeat/current/inode-reuse-issue.html).
 
 ### `sincedb_path` [v4.1.14-plugins-inputs-file-sincedb_path]
 
-* Value type is [string](logstash://reference/configuration-file-structure.md#string)
+* Value type is [string](/lsr/value-types.md#string)
 * There is no default value for this setting.
 
 Path of the sincedb database file (keeps track of the current position of monitored log files) that will be written to disk. The default will write sincedb files to `<path.data>/plugins/inputs/file` NOTE: it must be a file path and not a directory path
 
-
 ### `sincedb_write_interval` [v4.1.14-plugins-inputs-file-sincedb_write_interval]
 
-* Value type is [number](logstash://reference/configuration-file-structure.md#number) or [string_duration](v4-1-14-plugins-inputs-file.md#v4.1.14-plugins-inputs-file-string_duration)
+* Value type is [number](/lsr/value-types.md#number) or [string\_duration](v4-1-14-plugins-inputs-file.md#v4.1.14-plugins-inputs-file-string_duration)
 * Default value is `"15 seconds"`
 
 How often (in seconds) to write a since database with the current position of monitored log files.
-
 
 ### `start_position` [v4.1.14-plugins-inputs-file-start_position]
 
@@ -286,66 +256,57 @@ Choose where Logstash starts initially reading files: at the beginning or at the
 
 This option only modifies "first contact" situations where a file is new and not seen before, i.e. files that don’t have a current position recorded in a sincedb file read by Logstash. If a file has already been seen before, this option has no effect and the position recorded in the sincedb file will be used.
 
-
 ### `stat_interval` [v4.1.14-plugins-inputs-file-stat_interval]
 
-* Value type is [number](logstash://reference/configuration-file-structure.md#number) or [string_duration](v4-1-14-plugins-inputs-file.md#v4.1.14-plugins-inputs-file-string_duration)
+* Value type is [number](/lsr/value-types.md#number) or [string\_duration](v4-1-14-plugins-inputs-file.md#v4.1.14-plugins-inputs-file-string_duration)
 * Default value is `"1 second"`
 
 How often (in seconds) we stat files to see if they have been modified. Increasing this interval will decrease the number of system calls we make, but increase the time to detect new log lines.
 
-::::{note}
 Discovering new files and checking whether they have grown/or shrunk occurs in a loop. This loop will sleep for `stat_interval` seconds before looping again. However, if files have grown, the new content is read and lines are enqueued. Reading and enqueuing across all grown files can take time, especially if the pipeline is congested. So the overall loop time is a combination of the `stat_interval` and the file read time.
-::::
-
-
-
 
 ## Common options [v4.1.14-plugins-inputs-file-common-options]
 
 These configuration options are supported by all input plugins:
 
 | Setting | Input type | Required |
-| --- | --- | --- |
-| [`add_field`](v4-1-14-plugins-inputs-file.md#v4.1.14-plugins-inputs-file-add_field) | [hash](logstash://reference/configuration-file-structure.md#hash) | No |
-| [`codec`](v4-1-14-plugins-inputs-file.md#v4.1.14-plugins-inputs-file-codec) | [codec](logstash://reference/configuration-file-structure.md#codec) | No |
-| [`enable_metric`](v4-1-14-plugins-inputs-file.md#v4.1.14-plugins-inputs-file-enable_metric) | [boolean](logstash://reference/configuration-file-structure.md#boolean) | No |
-| [`id`](v4-1-14-plugins-inputs-file.md#v4.1.14-plugins-inputs-file-id) | [string](logstash://reference/configuration-file-structure.md#string) | No |
-| [`tags`](v4-1-14-plugins-inputs-file.md#v4.1.14-plugins-inputs-file-tags) | [array](logstash://reference/configuration-file-structure.md#array) | No |
-| [`type`](v4-1-14-plugins-inputs-file.md#v4.1.14-plugins-inputs-file-type) | [string](logstash://reference/configuration-file-structure.md#string) | No |
+| :- | :- | :- |
+| [`add_field`](v4-1-14-plugins-inputs-file.md#v4.1.14-plugins-inputs-file-add_field) | [hash](/lsr/value-types.md#hash) | No |
+| [`codec`](v4-1-14-plugins-inputs-file.md#v4.1.14-plugins-inputs-file-codec) | [codec](/lsr/value-types.md#codec) | No |
+| [`enable_metric`](v4-1-14-plugins-inputs-file.md#v4.1.14-plugins-inputs-file-enable_metric) | [boolean](/lsr/value-types.md#boolean) | No |
+| [`id`](v4-1-14-plugins-inputs-file.md#v4.1.14-plugins-inputs-file-id) | [string](/lsr/value-types.md#string) | No |
+| [`tags`](v4-1-14-plugins-inputs-file.md#v4.1.14-plugins-inputs-file-tags) | [array](/lsr/value-types.md#array) | No |
+| [`type`](v4-1-14-plugins-inputs-file.md#v4.1.14-plugins-inputs-file-type) | [string](/lsr/value-types.md#string) | No |
 
 ### `add_field` [v4.1.14-plugins-inputs-file-add_field]
 
-* Value type is [hash](logstash://reference/configuration-file-structure.md#hash)
+* Value type is [hash](/lsr/value-types.md#hash)
 * Default value is `{}`
 
 Add a field to an event
 
-
 ### `codec` [v4.1.14-plugins-inputs-file-codec]
 
-* Value type is [codec](logstash://reference/configuration-file-structure.md#codec)
+* Value type is [codec](/lsr/value-types.md#codec)
 * Default value is `"plain"`
 
 The codec used for input data. Input codecs are a convenient method for decoding your data before it enters the input, without needing a separate filter in your Logstash pipeline.
 
-
 ### `enable_metric` [v4.1.14-plugins-inputs-file-enable_metric]
 
-* Value type is [boolean](logstash://reference/configuration-file-structure.md#boolean)
+* Value type is [boolean](/lsr/value-types.md#boolean)
 * Default value is `true`
 
 Disable or enable metric logging for this specific plugin instance by default we record all the metrics we can, but you can disable metrics collection for a specific plugin.
 
-
 ### `id` [v4.1.14-plugins-inputs-file-id]
 
-* Value type is [string](logstash://reference/configuration-file-structure.md#string)
+* Value type is [string](/lsr/value-types.md#string)
 * There is no default value for this setting.
 
 Add a unique `ID` to the plugin configuration. If no ID is specified, Logstash will generate one. It is strongly recommended to set this ID in your configuration. This is particularly useful when you have two or more plugins of the same type, for example, if you have 2 file inputs. Adding a named ID in this case will help in monitoring Logstash when using the monitoring APIs.
 
-```json
+```
 input {
   file {
     id => "my_plugin_id"
@@ -353,20 +314,18 @@ input {
 }
 ```
 
-
 ### `tags` [v4.1.14-plugins-inputs-file-tags]
 
-* Value type is [array](logstash://reference/configuration-file-structure.md#array)
+* Value type is [array](/lsr/value-types.md#array)
 * There is no default value for this setting.
 
 Add any number of arbitrary tags to your event.
 
 This can help with processing later.
 
-
 ### `type` [v4.1.14-plugins-inputs-file-type]
 
-* Value type is [string](logstash://reference/configuration-file-structure.md#string)
+* Value type is [string](/lsr/value-types.md#string)
 * There is no default value for this setting.
 
 Add a `type` field to all events handled by this input.
@@ -377,60 +336,40 @@ The type is stored as part of the event itself, so you can also use the type to 
 
 If you try to set a type on an event that already has one (for example when you send an event from a shipper to an indexer) then a new input will not override the existing type. A type set at the shipper stays with that event for its life even when sent to another Logstash server.
 
-
-
 ## String Durations [v4.1.14-plugins-inputs-file-string_duration]
 
 Format is `number` `string` and the space between these is optional. So "45s" and "45 s" are both valid.
 
-::::{tip}
 Use the most suitable duration, for example, "3 days" rather than "72 hours".
-::::
-
 
 ### Weeks [_weeks_19]
 
 Supported values: `w` `week` `weeks`, e.g. "2 w", "1 week", "4 weeks".
 
-
 ### Days [_days_19]
 
 Supported values: `d` `day` `days`, e.g. "2 d", "1 day", "2.5 days".
-
 
 ### Hours [_hours_19]
 
 Supported values: `h` `hour` `hours`, e.g. "4 h", "1 hour", "0.5 hours".
 
-
 ### Minutes [_minutes_19]
 
 Supported values: `m` `min` `minute` `minutes`, e.g. "45 m", "35 min", "1 minute", "6 minutes".
-
 
 ### Seconds [_seconds_19]
 
 Supported values: `s` `sec` `second` `seconds`, e.g. "45 s", "15 sec", "1 second", "2.5 seconds".
 
-
 ### Milliseconds [_milliseconds_19]
 
 Supported values: `ms` `msec` `msecs`, e.g. "500 ms", "750 msec", "50 msecs
 
-::::{note}
 `milli` `millis` and `milliseconds` are not supported
-::::
-
-
 
 ### Microseconds [_microseconds_19]
 
 Supported values: `us` `usec` `usecs`, e.g. "600 us", "800 usec", "900 usecs"
 
-::::{note}
 `micro` `micros` and `microseconds` are not supported
-::::
-
-
-
-

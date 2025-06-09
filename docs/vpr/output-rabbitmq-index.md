@@ -6,16 +6,12 @@ mapped_pages:
 
 # Versioned rabbitmq output plugin docs [output-rabbitmq-index]
 
+This page lists all documentation available for this plugin. To see which plugin version you have installed, run `bin/logstash-plugin list --verbose`.
 
-This page lists all documentation available for this plugin.  To see which plugin version you have installed, run `bin/logstash-plugin list --verbose`.
-
-::::{note}
 Versioned plugin documentation is not available for plugins released prior to Logstash 6.0.
-::::
 
-
-|     |     |
-| --- | --- |
+| | |
+| :- | :- |
 | Version | Release Date |
 | [v7.4.0](v7-4-0-plugins-outputs-rabbitmq.md) | 2024-09-16 |
 | [v7.3.3](v7-3-3-plugins-outputs-rabbitmq.md) | 2023-06-09 |
@@ -39,26 +35,3 @@ Versioned plugin documentation is not available for plugins released prior to Lo
 | [v4.0.10](v4-0-10-plugins-outputs-rabbitmq.md) | 2017-08-18 |
 | [v4.0.9](v4-0-9-plugins-outputs-rabbitmq.md) | 2017-07-08 |
 | [v4.0.8](v4-0-8-plugins-outputs-rabbitmq.md) | 2017-06-23 |
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

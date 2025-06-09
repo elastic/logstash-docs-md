@@ -6,16 +6,12 @@ mapped_pages:
 
 # Versioned imap input plugin docs [input-imap-index]
 
+This page lists all documentation available for this plugin. To see which plugin version you have installed, run `bin/logstash-plugin list --verbose`.
 
-This page lists all documentation available for this plugin.  To see which plugin version you have installed, run `bin/logstash-plugin list --verbose`.
-
-::::{note}
 Versioned plugin documentation is not available for plugins released prior to Logstash 6.0.
-::::
 
-
-|     |     |
-| --- | --- |
+| | |
+| :- | :- |
 | Version | Release Date |
 | [v3.2.1](v3-2-1-plugins-inputs-imap.md) | 2023-10-03 |
 | [v3.2.0](v3-2-0-plugins-inputs-imap.md) | 2021-12-06 |
@@ -25,12 +21,3 @@ Versioned plugin documentation is not available for plugins released prior to Lo
 | [v3.0.5](v3-0-5-plugins-inputs-imap.md) | 2017-11-07 |
 | [v3.0.4](v3-0-4-plugins-inputs-imap.md) | 2017-08-15 |
 | [v3.0.3](v3-0-3-plugins-inputs-imap.md) | 2017-06-23 |
-
-
-
-
-
-
-
-
-

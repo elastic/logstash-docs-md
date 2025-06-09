@@ -6,19 +6,20 @@ mapped_pages:
 
 # Versioned elasticsearch filter plugin docs [filter-elasticsearch-index]
 
+This page lists all documentation available for this plugin. To see which plugin version you have installed, run `bin/logstash-plugin list --verbose`.
 
-This page lists all documentation available for this plugin.  To see which plugin version you have installed, run `bin/logstash-plugin list --verbose`.
-
-::::{note}
 Versioned plugin documentation is not available for plugins released prior to Logstash 6.0.
-::::
 
-
-|     |     |
-| --- | --- |
+| | |
+| :- | :- |
 | Version | Release Date |
+| [v4.2.0](v4-2-0-plugins-filters-elasticsearch.md) | 2025-05-07 |
+| [v4.1.1](v4-1-1-plugins-filters-elasticsearch.md) | 2025-03-17 |
 | [v4.1.0](v4-1-0-plugins-filters-elasticsearch.md) | 2025-01-23 |
 | [v4.0.0](v4-0-0-plugins-filters-elasticsearch.md) | 2025-01-10 |
+| [v3.18.0](v3-18-0-plugins-filters-elasticsearch.md) | 2025-05-07 |
+| [v3.17.1](v3-17-1-plugins-filters-elasticsearch.md) | 2025-03-17 |
+| [v3.17.0](v3-17-0-plugins-filters-elasticsearch.md) | 2025-01-29 |
 | [v3.16.2](v3-16-2-plugins-filters-elasticsearch.md) | 2024-12-09 |
 | [v3.16.1](v3-16-1-plugins-filters-elasticsearch.md) | 2023-09-29 |
 | [v3.16.0](v3-16-0-plugins-filters-elasticsearch.md) | 2023-09-29 |
@@ -51,38 +52,3 @@ Versioned plugin documentation is not available for plugins released prior to Lo
 | [v3.1.5](v3-1-5-plugins-filters-elasticsearch.md) | 2017-07-28 |
 | [v3.1.4](v3-1-4-plugins-filters-elasticsearch.md) | 2017-06-23 |
 | [v3.1.3](v3-1-3-plugins-filters-elasticsearch.md) | 2017-05-03 |
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

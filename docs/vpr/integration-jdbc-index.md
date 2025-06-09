@@ -6,17 +6,15 @@ mapped_pages:
 
 # Versioned jdbc integration plugin docs [integration-jdbc-index]
 
+This page lists all documentation available for this plugin. To see which plugin version you have installed, run `bin/logstash-plugin list --verbose`.
 
-This page lists all documentation available for this plugin.  To see which plugin version you have installed, run `bin/logstash-plugin list --verbose`.
-
-::::{note}
 Versioned plugin documentation is not available for plugins released prior to Logstash 6.0.
-::::
 
-
-|     |     |
-| --- | --- |
+| | |
+| :- | :- |
 | Version | Release Date |
+| [v5.5.3](v5-5-3-plugins-integrations-jdbc.md) | 2025-03-07 |
+| [v5.5.2](v5-5-2-plugins-integrations-jdbc.md) | 2024-12-23 |
 | [v5.5.1](v5-5-1-plugins-integrations-jdbc.md) | 2024-12-03 |
 | [v5.5.0](v5-5-0-plugins-integrations-jdbc.md) | 2024-08-09 |
 | [v5.4.11](v5-4-11-plugins-integrations-jdbc.md) | 2024-05-23 |
@@ -57,44 +55,3 @@ Versioned plugin documentation is not available for plugins released prior to Lo
 | [v5.0.2](v5-0-2-plugins-integrations-jdbc.md) | 2020-05-11 |
 | [v5.0.1](v5-0-1-plugins-integrations-jdbc.md) | 2020-02-04 |
 | [v5.0.0](v5-0-0-plugins-integrations-jdbc.md) | 2020-01-09 |
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

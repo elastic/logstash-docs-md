@@ -6,18 +6,19 @@ mapped_pages:
 
 # Versioned elasticsearch input plugin docs [input-elasticsearch-index]
 
+This page lists all documentation available for this plugin. To see which plugin version you have installed, run `bin/logstash-plugin list --verbose`.
 
-This page lists all documentation available for this plugin.  To see which plugin version you have installed, run `bin/logstash-plugin list --verbose`.
-
-::::{note}
 Versioned plugin documentation is not available for plugins released prior to Logstash 6.0.
-::::
 
-
-|     |     |
-| --- | --- |
+| | |
+| :- | :- |
 | Version | Release Date |
+| [v5.1.0](v5-1-0-plugins-inputs-elasticsearch.md) | 2025-04-07 |
+| [v5.0.2](v5-0-2-plugins-inputs-elasticsearch.md) | 2025-03-17 |
 | [v5.0.0](v5-0-0-plugins-inputs-elasticsearch.md) | 2024-12-18 |
+| [v4.22.0](v4-22-0-plugins-inputs-elasticsearch.md) | 2025-04-07 |
+| [v4.21.2](v4-21-2-plugins-inputs-elasticsearch.md) | 2025-03-17 |
+| [v4.21.1](v4-21-1-plugins-inputs-elasticsearch.md) | 2025-01-07 |
 | [v4.21.0](v4-21-0-plugins-inputs-elasticsearch.md) | 2024-12-18 |
 | [v4.20.5](v4-20-5-plugins-inputs-elasticsearch.md) | 2024-12-05 |
 | [v4.20.4](v4-20-4-plugins-inputs-elasticsearch.md) | 2024-08-23 |
@@ -65,52 +66,3 @@ Versioned plugin documentation is not available for plugins released prior to Lo
 | [v4.0.6](v4-0-6-plugins-inputs-elasticsearch.md) | 2017-09-20 |
 | [v4.0.5](v4-0-5-plugins-inputs-elasticsearch.md) | 2017-08-15 |
 | [v4.0.4](v4-0-4-plugins-inputs-elasticsearch.md) | 2017-06-23 |
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

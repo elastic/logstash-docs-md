@@ -6,20 +6,18 @@ mapped_pages:
 
 # Rabbitmq output plugin [plugins-outputs-rabbitmq]
 
-
 * A component of the [rabbitmq integration plugin](plugins-integrations-rabbitmq.md)
 * Integration version: v7.4.0
 * Released on: 2024-09-16
 * [Changelog](https://github.com/logstash-plugins/logstash-integration-rabbitmq/blob/v7.4.0/CHANGELOG.md)
 
-For other versions, see the [Versioned plugin docs](/vpr/output-rabbitmq-index.md).
+For other versions, see the [Versioned plugin docs](https://www.elastic.co/guide/en/logstash-versioned-plugins/current/output-rabbitmq-index.html).
 
 ## Getting help [_getting_help_102]
 
 For questions about the plugin, open a topic in the [Discuss](http://discuss.elastic.co) forums. For bugs or feature requests, open an issue in [Github](https://github.com/logstash-plugins/logstash-integration-rabbitmq). For the list of Elastic supported plugins, please consult the [Elastic Support Matrix](https://www.elastic.co/support/matrix#logstash_plugins).
 
-
-## Description [_description_101]
+## Description [_description_102]
 
 Push events to a RabbitMQ exchange. Requires RabbitMQ 2.x or later version (3.x is recommended).
 
@@ -28,13 +26,12 @@ Relevant links:
 * [RabbitMQ](http://www.rabbitmq.com/)
 * [March Hare](http://rubymarchhare.info)
 
-
 ## Rabbitmq Output Configuration Options [plugins-outputs-rabbitmq-options]
 
 This plugin supports the following configuration options plus the [Common options](plugins-outputs-rabbitmq.md#plugins-outputs-rabbitmq-common-options) described later.
 
 | Setting | Input type | Required |
-| --- | --- | --- |
+| :- | :- | :- |
 | [`arguments`](plugins-outputs-rabbitmq.md#plugins-outputs-rabbitmq-arguments) | [array](value-types.md#array) | No |
 | [`automatic_recovery`](plugins-outputs-rabbitmq.md#plugins-outputs-rabbitmq-automatic_recovery) | [boolean](value-types.md#boolean) | No |
 | [`connect_retry_interval`](plugins-outputs-rabbitmq.md#plugins-outputs-rabbitmq-connect_retry_interval) | [number](value-types.md#number) | No |
@@ -59,15 +56,12 @@ This plugin supports the following configuration options plus the [Common option
 
 Also see [Common options](plugins-outputs-rabbitmq.md#plugins-outputs-rabbitmq-common-options) for a list of options supported by all output plugins.
 
- 
-
 ### `arguments` [plugins-outputs-rabbitmq-arguments]
 
 * Value type is [array](value-types.md#array)
 * Default value is `{}`
 
 Extra queue arguments as an array. To make a RabbitMQ queue mirrored, use: `{"x-ha-policy" => "all"}`
-
 
 ### `automatic_recovery` [plugins-outputs-rabbitmq-automatic_recovery]
 
@@ -76,14 +70,12 @@ Extra queue arguments as an array. To make a RabbitMQ queue mirrored, use: `{"x-
 
 Set this to automatically recover from a broken connection. You almost certainly don’t want to override this!!!
 
-
 ### `connect_retry_interval` [plugins-outputs-rabbitmq-connect_retry_interval]
 
 * Value type is [number](value-types.md#number)
 * Default value is `1`
 
 Time in seconds to wait before retrying a connection
-
 
 ### `connection_timeout` [plugins-outputs-rabbitmq-connection_timeout]
 
@@ -92,14 +84,12 @@ Time in seconds to wait before retrying a connection
 
 The default connection timeout in milliseconds. If not specified the timeout is infinite.
 
-
 ### `durable` [plugins-outputs-rabbitmq-durable]
 
 * Value type is [boolean](value-types.md#boolean)
 * Default value is `true`
 
 Is this exchange durable? (aka; Should it survive a broker restart?)
-
 
 ### `exchange` [plugins-outputs-rabbitmq-exchange]
 
@@ -109,7 +99,6 @@ Is this exchange durable? (aka; Should it survive a broker restart?)
 
 The name of the exchange
 
-
 ### `exchange_type` [plugins-outputs-rabbitmq-exchange_type]
 
 * This is a required setting.
@@ -118,7 +107,6 @@ The name of the exchange
 
 The exchange type (fanout, topic, direct)
 
-
 ### `heartbeat` [plugins-outputs-rabbitmq-heartbeat]
 
 * Value type is [number](value-types.md#number)
@@ -126,17 +114,15 @@ The exchange type (fanout, topic, direct)
 
 Heartbeat delay in seconds. If unspecified no heartbeats will be sent
 
-
 ### `host` [plugins-outputs-rabbitmq-host]
 
 * This is a required setting.
 * Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
-Common functionality for the rabbitmq input/output RabbitMQ server address(es) host can either be a single host, or a list of hosts i.e. host ⇒ "localhost" or host ⇒ ["host01", "host02]
+Common functionality for the rabbitmq input/output RabbitMQ server address(es) host can either be a single host, or a list of hosts i.e. host ⇒ "localhost" or host ⇒ \["host01", "host02]
 
 if multiple hosts are provided on the initial connection and any subsequent recovery attempts of the hosts is chosen at random and connected to. Note that only one host connection is active at a time.
-
 
 ### `key` [plugins-outputs-rabbitmq-key]
 
@@ -147,23 +133,21 @@ The default codec for this plugin is JSON. You can override this to suit your pa
 
 * Routing keys are ignored on fanout exchanges.
 
-
 ### `message_properties` [plugins-outputs-rabbitmq-message_properties]
 
 * Value type is [hash](value-types.md#hash)
 * Default value is `{}`
 
-Add properties to be set per-message here, such as *content_type*, *priority*. Values can be [`sprintf` templates](https://www.elastic.co/guide/en/logstash/current/event-dependent-configuration.html#sprintf), whose value for each message will be populated from the event.
+Add properties to be set per-message here, such as *content\_type*, *priority*. Values can be [`sprintf` templates](https://www.elastic.co/guide/en/logstash/8.18/event-dependent-configuration.html#sprintf), whose value for each message will be populated from the event.
 
 Example:
 
-```ruby
+```
     message_properties => {
       "content_type" => "application/json"
       "priority" => 1
     }
 ```
-
 
 ### `passive` [plugins-outputs-rabbitmq-passive]
 
@@ -172,14 +156,12 @@ Example:
 
 Passive queue creation? Useful for checking queue existance without modifying server state
 
-
 ### `password` [plugins-outputs-rabbitmq-password]
 
 * Value type is [password](value-types.md#password)
 * Default value is `"guest"`
 
 RabbitMQ password
-
 
 ### `persistent` [plugins-outputs-rabbitmq-persistent]
 
@@ -188,7 +170,6 @@ RabbitMQ password
 
 Should RabbitMQ persist messages to disk?
 
-
 ### `port` [plugins-outputs-rabbitmq-port]
 
 * Value type is [number](value-types.md#number)
@@ -196,22 +177,19 @@ Should RabbitMQ persist messages to disk?
 
 RabbitMQ port to connect on
 
-
 ### `ssl` [plugins-outputs-rabbitmq-ssl]
 
 * Value type is [boolean](value-types.md#boolean)
 * There is no default value for this setting.
 
-Enable or disable SSL. Note that by default remote certificate verification is off. Specify ssl_certificate_path and ssl_certificate_password if you need certificate verification
-
+Enable or disable SSL. Note that by default remote certificate verification is off. Specify ssl\_certificate\_path and ssl\_certificate\_password if you need certificate verification
 
 ### `ssl_certificate_password` [plugins-outputs-rabbitmq-ssl_certificate_password]
 
 * Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
-Password for the encrypted PKCS12 (.p12) certificate file specified in ssl_certificate_path
-
+Password for the encrypted PKCS12 (.p12) certificate file specified in ssl\_certificate\_path
 
 ### `ssl_certificate_path` [plugins-outputs-rabbitmq-ssl_certificate_path]
 
@@ -220,14 +198,12 @@ Password for the encrypted PKCS12 (.p12) certificate file specified in ssl_certi
 
 Path to an SSL certificate in PKCS12 (.p12) format used for verifying the remote host
 
-
 ### `ssl_version` [plugins-outputs-rabbitmq-ssl_version]
 
 * Value type is [string](value-types.md#string)
 * Default value is `"TLSv1.2"`
 
 Version of the SSL protocol to use.
-
 
 ### `user` [plugins-outputs-rabbitmq-user]
 
@@ -236,7 +212,6 @@ Version of the SSL protocol to use.
 
 RabbitMQ username
 
-
 ### `vhost` [plugins-outputs-rabbitmq-vhost]
 
 * Value type is [string](value-types.md#string)
@@ -244,42 +219,38 @@ RabbitMQ username
 
 The vhost (virtual host) to use. If you don’t know what this is, leave the default. With the exception of the default vhost ("/"), names of vhosts should not begin with a forward slash.
 
-
-
 ## Common options [plugins-outputs-rabbitmq-common-options]
 
 These configuration options are supported by all output plugins:
 
 | Setting | Input type | Required |
-| --- | --- | --- |
-| [`codec`](plugins-outputs-rabbitmq.md#plugins-outputs-rabbitmq-codec) | [codec](logstash://reference/configuration-file-structure.md#codec) | No |
-| [`enable_metric`](plugins-outputs-rabbitmq.md#plugins-outputs-rabbitmq-enable_metric) | [boolean](logstash://reference/configuration-file-structure.md#boolean) | No |
-| [`id`](plugins-outputs-rabbitmq.md#plugins-outputs-rabbitmq-id) | [string](logstash://reference/configuration-file-structure.md#string) | No |
+| :- | :- | :- |
+| [`codec`](plugins-outputs-rabbitmq.md#plugins-outputs-rabbitmq-codec) | [codec](value-types.md#codec) | No |
+| [`enable_metric`](plugins-outputs-rabbitmq.md#plugins-outputs-rabbitmq-enable_metric) | [boolean](value-types.md#boolean) | No |
+| [`id`](plugins-outputs-rabbitmq.md#plugins-outputs-rabbitmq-id) | [string](value-types.md#string) | No |
 
 ### `codec` [plugins-outputs-rabbitmq-codec]
 
-* Value type is [codec](logstash://reference/configuration-file-structure.md#codec)
+* Value type is [codec](value-types.md#codec)
 * Default value is `"json"`
 
 The codec used for output data. Output codecs are a convenient method for encoding your data before it leaves the output without needing a separate filter in your Logstash pipeline.
 
-
 ### `enable_metric` [plugins-outputs-rabbitmq-enable_metric]
 
-* Value type is [boolean](logstash://reference/configuration-file-structure.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `true`
 
 Disable or enable metric logging for this specific plugin instance. By default we record all the metrics we can, but you can disable metrics collection for a specific plugin.
 
-
 ### `id` [plugins-outputs-rabbitmq-id]
 
-* Value type is [string](logstash://reference/configuration-file-structure.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 Add a unique `ID` to the plugin configuration. If no ID is specified, Logstash will generate one. It is strongly recommended to set this ID in your configuration. This is particularly useful when you have two or more plugins of the same type. For example, if you have 2 rabbitmq outputs. Adding a named ID in this case will help in monitoring Logstash when using the monitoring APIs.
 
-```json
+```
 output {
   rabbitmq {
     id => "my_plugin_id"
@@ -287,10 +258,4 @@ output {
 }
 ```
 
-::::{note} 
 Variable substitution in the `id` field only supports environment variables and does not support the use of values from the secret store.
-::::
-
-
-
-

@@ -6,16 +6,12 @@ mapped_pages:
 
 # Versioned grok filter plugin docs [filter-grok-index]
 
+This page lists all documentation available for this plugin. To see which plugin version you have installed, run `bin/logstash-plugin list --verbose`.
 
-This page lists all documentation available for this plugin.  To see which plugin version you have installed, run `bin/logstash-plugin list --verbose`.
-
-::::{note}
 Versioned plugin documentation is not available for plugins released prior to Logstash 6.0.
-::::
 
-
-|     |     |
-| --- | --- |
+| | |
+| :- | :- |
 | Version | Release Date |
 | [v4.4.3](v4-4-3-plugins-filters-grok.md) | 2022-10-28 |
 | [v4.4.2](v4-4-2-plugins-filters-grok.md) | 2022-05-16 |
@@ -34,21 +30,3 @@ Versioned plugin documentation is not available for plugins released prior to Lo
 | [v3.4.3](v3-4-3-plugins-filters-grok.md) | 2017-08-15 |
 | [v3.4.2](v3-4-2-plugins-filters-grok.md) | 2017-06-23 |
 | [v3.4.1](v3-4-1-plugins-filters-grok.md) | 2017-05-10 |
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

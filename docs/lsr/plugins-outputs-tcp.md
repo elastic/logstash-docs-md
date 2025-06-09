@@ -6,18 +6,17 @@ mapped_pages:
 
 # Tcp output plugin [plugins-outputs-tcp]
 
-* Plugin version: v7.0.1
+* Plugin version: v6.2.2
 * Released on: 2025-04-29
-* [Changelog](https://github.com/logstash-plugins/logstash-output-tcp/blob/v7.0.1/CHANGELOG.md)
+* [Changelog](https://github.com/logstash-plugins/logstash-output-tcp/blob/v6.2.2/CHANGELOG.md)
 
-For other versions, see the [Versioned plugin docs](/vpr/output-tcp-index.md).
+For other versions, see the [Versioned plugin docs](https://www.elastic.co/guide/en/logstash-versioned-plugins/current/output-tcp-index.html).
 
 ## Getting help [_getting_help_116]
 
 For questions about the plugin, open a topic in the [Discuss](http://discuss.elastic.co) forums. For bugs or feature requests, open an issue in [Github](https://github.com/logstash-plugins/logstash-output-tcp). For the list of Elastic supported plugins, please consult the [Elastic Support Matrix](https://www.elastic.co/support/matrix#logstash_plugins).
 
-
-## Description [_description_115]
+## Description [_description_116]
 
 Write events over a TCP socket.
 
@@ -25,35 +24,31 @@ By default this plugin uses the `json` codec. In order to have each event json s
 
 Can either accept connections from clients or connect to a server, depending on `mode`.
 
-
 ## Tcp Output Configuration Options [plugins-outputs-tcp-options]
 
 This plugin supports the following configuration options plus the [Common options](plugins-outputs-tcp.md#plugins-outputs-tcp-common-options) described later.
 
-::::{note}
-As of version `7.0.0` of this plugin, a number of previously deprecated settings related to SSL have been removed. Please see the [TCP Output Obsolete Configuration Options](plugins-outputs-tcp.md#plugins-outputs-tcp-obsolete-options) for more details.
-::::
-
-
 | Setting | Input type | Required |
-| --- | --- | --- |
+| :- | :- | :- |
 | [`host`](plugins-outputs-tcp.md#plugins-outputs-tcp-host) | [string](value-types.md#string) | Yes |
 | [`mode`](plugins-outputs-tcp.md#plugins-outputs-tcp-mode) | [string](value-types.md#string), one of `["server", "client"]` | No |
 | [`port`](plugins-outputs-tcp.md#plugins-outputs-tcp-port) | [number](value-types.md#number) | Yes |
 | [`reconnect_interval`](plugins-outputs-tcp.md#plugins-outputs-tcp-reconnect_interval) | [number](value-types.md#number) | No |
+| [`ssl_cacert`](plugins-outputs-tcp.md#plugins-outputs-tcp-ssl_cacert) | a valid filesystem path | *Deprecated* |
+| [`ssl_cert`](plugins-outputs-tcp.md#plugins-outputs-tcp-ssl_cert) | a valid filesystem path | *Deprecated* |
 | [`ssl_certificate`](plugins-outputs-tcp.md#plugins-outputs-tcp-ssl_certificate) | a valid filesystem path | No |
 | [`ssl_certificate_authorities`](plugins-outputs-tcp.md#plugins-outputs-tcp-ssl_certificate_authorities) | [array](value-types.md#array) | No |
 | [`ssl_cipher_suites`](plugins-outputs-tcp.md#plugins-outputs-tcp-ssl_cipher_suites) | [string](value-types.md#string) | No |
 | [`ssl_client_authentication`](plugins-outputs-tcp.md#plugins-outputs-tcp-ssl_client_authentication) | [string](value-types.md#string), one of `["none", "optional", "required"]` | No |
+| [`ssl_enable`](plugins-outputs-tcp.md#plugins-outputs-tcp-ssl_enable) | [boolean](value-types.md#boolean) | *Deprecated* |
 | [`ssl_enabled`](plugins-outputs-tcp.md#plugins-outputs-tcp-ssl_enabled) | [boolean](value-types.md#boolean) | No |
 | [`ssl_key`](plugins-outputs-tcp.md#plugins-outputs-tcp-ssl_key) | a valid filesystem path | No |
 | [`ssl_key_passphrase`](plugins-outputs-tcp.md#plugins-outputs-tcp-ssl_key_passphrase) | [password](value-types.md#password) | No |
 | [`ssl_supported_protocols`](plugins-outputs-tcp.md#plugins-outputs-tcp-ssl_supported_protocols) | [string](value-types.md#string) | No |
 | [`ssl_verification_mode`](plugins-outputs-tcp.md#plugins-outputs-tcp-ssl_verification_mode) | [string](value-types.md#string), one of `["full", "none"]` | No |
+| [`ssl_verify`](plugins-outputs-tcp.md#plugins-outputs-tcp-ssl_verify) | [boolean](value-types.md#boolean) | No |
 
 Also see [Common options](plugins-outputs-tcp.md#plugins-outputs-tcp-common-options) for a list of options supported by all output plugins.
-
- 
 
 ### `host` [plugins-outputs-tcp-host]
 
@@ -63,14 +58,12 @@ Also see [Common options](plugins-outputs-tcp.md#plugins-outputs-tcp-common-opti
 
 When mode is `server`, the address to listen on. When mode is `client`, the address to connect to.
 
-
 ### `mode` [plugins-outputs-tcp-mode]
 
 * Value can be any of: `server`, `client`
 * Default value is `"client"`
 
 Mode to operate in. `server` listens for client connections, `client` connects to a server.
-
 
 ### `port` [plugins-outputs-tcp-port]
 
@@ -80,7 +73,6 @@ Mode to operate in. `server` listens for client connections, `client` connects t
 
 When mode is `server`, the port to listen on. When mode is `client`, the port to connect to.
 
-
 ### `reconnect_interval` [plugins-outputs-tcp-reconnect_interval]
 
 * Value type is [number](value-types.md#number)
@@ -88,6 +80,27 @@ When mode is `server`, the port to listen on. When mode is `client`, the port to
 
 When connect failed,retry interval in sec.
 
+### `ssl_cacert` [plugins-outputs-tcp-ssl_cacert]
+
+Deprecated in 6.2.0.
+
+Replaced by [`ssl_certificate_authorities`](plugins-outputs-tcp.md#plugins-outputs-tcp-ssl_certificate_authorities)
+
+* Value type is [path](value-types.md#path)
+* There is no default value for this setting.
+
+The SSL CA certificate, chainfile or CA path. The system CA path is automatically included.
+
+### `ssl_cert` [plugins-outputs-tcp-ssl_cert]
+
+Deprecated in 6.2.0.
+
+Replaced by [`ssl_certificate`](plugins-outputs-tcp.md#plugins-outputs-tcp-ssl_certificate)
+
+* Value type is [path](value-types.md#path)
+* There is no default value for this setting.
+
+SSL certificate path
 
 ### `ssl_certificate` [plugins-outputs-tcp-ssl_certificate]
 
@@ -96,7 +109,6 @@ When connect failed,retry interval in sec.
 
 Path to certificate in PEM format. This certificate will be presented to the other part of the TLS connection.
 
-
 ### `ssl_certificate_authorities` [plugins-outputs-tcp-ssl_certificate_authorities]
 
 * Value type is [array](value-types.md#array)
@@ -104,14 +116,12 @@ Path to certificate in PEM format. This certificate will be presented to the oth
 
 Validate client certificate or certificate chain against these authorities. You can define multiple files. All the certificates will be read and added to the trust store. The system CA path is automatically included.
 
-
 ### `ssl_cipher_suites` [plugins-outputs-tcp-ssl_cipher_suites]
 
 * Value type is a list of [string](value-types.md#string)
 * There is no default value for this setting
 
 The list of cipher suites to use, listed by priorities. Supported cipher suites vary depending on the Java and protocol versions.
-
 
 ### `ssl_client_authentication` [plugins-outputs-tcp-ssl_client_authentication]
 
@@ -122,11 +132,18 @@ Controls the server’s behavior in regard to requesting a certificate from clie
 
 When mutual TLS is enabled (`optional` or `required`), the certificate presented by the client must be signed by trusted [`ssl_certificate_authorities`](plugins-outputs-tcp.md#plugins-outputs-tcp-ssl_certificate_authorities) (CAs). Please note that the server does not validate the client certificate CN (Common Name) or SAN (Subject Alternative Name).
 
-::::{note}
 This setting can be used only if [`mode`](plugins-outputs-tcp.md#plugins-outputs-tcp-mode) is `server` and [`ssl_certificate_authorities`](plugins-outputs-tcp.md#plugins-outputs-tcp-ssl_certificate_authorities) is set.
-::::
 
+### `ssl_enable` [plugins-outputs-tcp-ssl_enable]
 
+Deprecated in 6.2.0.
+
+Replaced by [`ssl_enabled`](plugins-outputs-tcp.md#plugins-outputs-tcp-ssl_enabled)
+
+* Value type is [boolean](value-types.md#boolean)
+* Default value is `false`
+
+Enable SSL (must be set for other `ssl_` options to take effect).
 
 ### `ssl_enabled` [plugins-outputs-tcp-ssl_enabled]
 
@@ -135,7 +152,6 @@ This setting can be used only if [`mode`](plugins-outputs-tcp.md#plugins-outputs
 
 Enable SSL (must be set for other `ssl_` options to take effect).
 
-
 ### `ssl_key` [plugins-outputs-tcp-ssl_key]
 
 * Value type is [path](value-types.md#path)
@@ -143,14 +159,12 @@ Enable SSL (must be set for other `ssl_` options to take effect).
 
 SSL key path
 
-
 ### `ssl_key_passphrase` [plugins-outputs-tcp-ssl_key_passphrase]
 
 * Value type is [password](value-types.md#password)
 * Default value is `nil`
 
 SSL key passphrase
-
 
 ### `ssl_supported_protocols` [plugins-outputs-tcp-ssl_supported_protocols]
 
@@ -160,11 +174,7 @@ SSL key passphrase
 
 List of allowed SSL/TLS versions to use when establishing a secure connection.
 
-::::{note}
-If you configure the plugin to use `'TLSv1.1'` on any recent JVM, such as the one packaged with Logstash, the protocol is disabled by default and needs to be enabled manually by changing `jdk.tls.disabledAlgorithms` in the **$JDK_HOME/conf/security/java.security** configuration file. That is, `TLSv1.1` needs to be removed from the list.
-::::
-
-
+If you configure the plugin to use `'TLSv1.1'` on any recent JVM, such as the one packaged with Logstash, the protocol is disabled by default and needs to be enabled manually by changing `jdk.tls.disabledAlgorithms` in the **$JDK\_HOME/conf/security/java.security** configuration file. That is, `TLSv1.1` needs to be removed from the list.
 
 ### `ssl_verification_mode` [plugins-outputs-tcp-ssl_verification_mode]
 
@@ -173,66 +183,55 @@ If you configure the plugin to use `'TLSv1.1'` on any recent JVM, such as the on
 
 Defines how to verify the certificates presented by another part in the TLS connection:
 
-`full` validates that the server certificate has an issue date that’s within the not_before and not_after dates; chains to a trusted Certificate Authority (CA), and has a hostname or IP address that matches the names within the certificate.
+`full` validates that the server certificate has an issue date that’s within the not\_before and not\_after dates; chains to a trusted Certificate Authority (CA), and has a hostname or IP address that matches the names within the certificate.
 
 `none` performs no certificate validation.
 
-::::{note}
 This setting can be used only if [`mode`](plugins-outputs-tcp.md#plugins-outputs-tcp-mode) is `client`.
-::::
 
+### `ssl_verify` [plugins-outputs-tcp-ssl_verify]
 
+Deprecated in 6.2.0.
 
+Replaced by [`ssl_client_authentication`](plugins-outputs-tcp.md#plugins-outputs-tcp-ssl_client_authentication) and [`ssl_verification_mode`](plugins-outputs-tcp.md#plugins-outputs-tcp-ssl_verification_mode)
 
-## TCP Output Obsolete Configuration Options [plugins-outputs-tcp-obsolete-options]
+* Value type is [boolean](value-types.md#boolean)
+* Default value is `false`
 
-::::{warning}
-As of version `6.0.0` of this plugin, some configuration options have been replaced. The plugin will fail to start if it contains any of these obsolete options.
-::::
-
-
-| Setting | Replaced by |
-| --- | --- |
-| ssl_cacert | [`ssl_certificate_authorities`](plugins-outputs-tcp.md#plugins-outputs-tcp-ssl_certificate_authorities) |
-| ssl_cert | [`ssl_certificate`](plugins-outputs-tcp.md#plugins-outputs-tcp-ssl_certificate) |
-| ssl_enable | [`ssl_enabled`](plugins-outputs-tcp.md#plugins-outputs-tcp-ssl_enabled) |
-| ssl_verify | [`ssl_client_authentication`](plugins-outputs-tcp.md#plugins-outputs-tcp-ssl_client_authentication) in `server` mode and [`ssl_verification_mode`](plugins-outputs-tcp.md#plugins-outputs-tcp-ssl_verification_mode) in `client` mode |
-
+Verify the identity of the other end of the SSL connection against the CA. For input, sets the field `sslsubject` to that of the client certificate.
 
 ## Common options [plugins-outputs-tcp-common-options]
 
 These configuration options are supported by all output plugins:
 
 | Setting | Input type | Required |
-| --- | --- | --- |
-| [`codec`](plugins-outputs-tcp.md#plugins-outputs-tcp-codec) | [codec](logstash://reference/configuration-file-structure.md#codec) | No |
-| [`enable_metric`](plugins-outputs-tcp.md#plugins-outputs-tcp-enable_metric) | [boolean](logstash://reference/configuration-file-structure.md#boolean) | No |
-| [`id`](plugins-outputs-tcp.md#plugins-outputs-tcp-id) | [string](logstash://reference/configuration-file-structure.md#string) | No |
+| :- | :- | :- |
+| [`codec`](plugins-outputs-tcp.md#plugins-outputs-tcp-codec) | [codec](value-types.md#codec) | No |
+| [`enable_metric`](plugins-outputs-tcp.md#plugins-outputs-tcp-enable_metric) | [boolean](value-types.md#boolean) | No |
+| [`id`](plugins-outputs-tcp.md#plugins-outputs-tcp-id) | [string](value-types.md#string) | No |
 
 ### `codec` [plugins-outputs-tcp-codec]
 
-* Value type is [codec](logstash://reference/configuration-file-structure.md#codec)
+* Value type is [codec](value-types.md#codec)
 * Default value is `"json"`
 
 The codec used for output data. Output codecs are a convenient method for encoding your data before it leaves the output without needing a separate filter in your Logstash pipeline.
 
-
 ### `enable_metric` [plugins-outputs-tcp-enable_metric]
 
-* Value type is [boolean](logstash://reference/configuration-file-structure.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `true`
 
 Disable or enable metric logging for this specific plugin instance. By default we record all the metrics we can, but you can disable metrics collection for a specific plugin.
 
-
 ### `id` [plugins-outputs-tcp-id]
 
-* Value type is [string](logstash://reference/configuration-file-structure.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 Add a unique `ID` to the plugin configuration. If no ID is specified, Logstash will generate one. It is strongly recommended to set this ID in your configuration. This is particularly useful when you have two or more plugins of the same type. For example, if you have 2 tcp outputs. Adding a named ID in this case will help in monitoring Logstash when using the monitoring APIs.
 
-```json
+```
 output {
   tcp {
     id => "my_plugin_id"
@@ -240,10 +239,4 @@ output {
 }
 ```
 
-::::{note}
 Variable substitution in the `id` field only supports environment variables and does not support the use of values from the secret store.
-::::
-
-
-
-

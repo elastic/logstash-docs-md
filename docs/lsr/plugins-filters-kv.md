@@ -6,25 +6,23 @@ mapped_pages:
 
 # Kv filter plugin [plugins-filters-kv]
 
-
 * Plugin version: v4.7.0
 * Released on: 2022-03-04
 * [Changelog](https://github.com/logstash-plugins/logstash-filter-kv/blob/v4.7.0/CHANGELOG.md)
 
-For other versions, see the [Versioned plugin docs](/vpr/filter-kv-index.md).
+For other versions, see the [Versioned plugin docs](https://www.elastic.co/guide/en/logstash-versioned-plugins/current/filter-kv-index.html).
 
 ## Getting help [_getting_help_151]
 
 For questions about the plugin, open a topic in the [Discuss](http://discuss.elastic.co) forums. For bugs or feature requests, open an issue in [Github](https://github.com/logstash-plugins/logstash-filter-kv). For the list of Elastic supported plugins, please consult the [Elastic Support Matrix](https://www.elastic.co/support/matrix#logstash_plugins).
 
-
-## Description [_description_149]
+## Description [_description_150]
 
 This filter helps automatically parse messages (or specific event fields) which are of the `foo=bar` variety.
 
 For example, if you have a log message which contains `ip=1.2.3.4 error=REFUSED`, you can parse those automatically by configuring:
 
-```ruby
+```
     filter {
       kv { }
     }
@@ -39,23 +37,18 @@ This is great for postfix, iptables, and other types of logs that tend towards `
 
 You can configure any arbitrary strings to split your data on, in case your data is not structured using `=` signs and whitespace. For example, this filter can also be used to parse query parameters like `foo=bar&baz=fizz` by setting the `field_split` parameter to `&`.
 
-
 ## Event Metadata and the Elastic Common Schema (ECS) [plugins-filters-kv-ecs_metadata]
 
 The plugin behaves the same regardless of ECS compatibility, except giving a warning when ECS is enabled and `target` isn’t set.
 
-::::{tip} 
 Set the `target` option to avoid potential schema conflicts.
-::::
-
-
 
 ## Kv Filter Configuration Options [plugins-filters-kv-options]
 
 This plugin supports the following configuration options plus the [Common options](plugins-filters-kv.md#plugins-filters-kv-common-options) described later.
 
 | Setting | Input type | Required |
-| --- | --- | --- |
+| :- | :- | :- |
 | [`allow_duplicate_values`](plugins-filters-kv.md#plugins-filters-kv-allow_duplicate_values) | [boolean](value-types.md#boolean) | No |
 | [`allow_empty_values`](plugins-filters-kv.md#plugins-filters-kv-allow_empty_values) | [boolean](value-types.md#boolean) | No |
 | [`default_keys`](plugins-filters-kv.md#plugins-filters-kv-default_keys) | [hash](value-types.md#hash) | No |
@@ -84,8 +77,6 @@ This plugin supports the following configuration options plus the [Common option
 
 Also see [Common options](plugins-filters-kv.md#plugins-filters-kv-common-options) for a list of options supported by all filter plugins.
 
- 
-
 ### `allow_duplicate_values` [plugins-filters-kv-allow_duplicate_values]
 
 * Value type is [boolean](value-types.md#boolean)
@@ -95,14 +86,13 @@ A bool option for removing duplicate key/value pairs. When set to false, only on
 
 For example, consider a source like `from=me from=me`. `[from]` will map to an Array with two elements: `["me", "me"]`. To only keep unique key/value pairs, you could use this configuration:
 
-```ruby
+```
     filter {
       kv {
         allow_duplicate_values => false
       }
     }
 ```
-
 
 ### `allow_empty_values` [plugins-filters-kv-allow_empty_values]
 
@@ -111,11 +101,7 @@ For example, consider a source like `from=me from=me`. `[from]` will map to an A
 
 A bool option for explicitly including empty values. When set to true, empty values will be added to the event.
 
-::::{note} 
 Parsing empty values typically requires [`whitespace => strict`](plugins-filters-kv.md#plugins-filters-kv-whitespace).
-::::
-
-
 
 ### `default_keys` [plugins-filters-kv-default_keys]
 
@@ -124,7 +110,7 @@ Parsing empty values typically requires [`whitespace => strict`](plugins-filters
 
 A hash specifying the default keys and their values which should be added to the event in case these keys do not exist in the source field being parsed.
 
-```ruby
+```
     filter {
       kv {
         default_keys => [ "from", "logstash@example.com",
@@ -133,18 +119,16 @@ A hash specifying the default keys and their values which should be added to the
     }
 ```
 
-
 ### `ecs_compatibility` [plugins-filters-kv-ecs_compatibility]
 
 * Value type is [string](value-types.md#string)
+
 * Supported values are:
 
-    * `disabled`: does not use ECS-compatible field names
-    * `v1`: Elastic Common Schema compliant behavior (warns when `target` isn’t set)
+  * `disabled`: does not use ECS-compatible field names
+  * `v1`: Elastic Common Schema compliant behavior (warns when `target` isn’t set)
 
-
-Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)](https://www.elastic.co/guide/en/ecs/current). See [Event Metadata and the Elastic Common Schema (ECS)](plugins-filters-kv.md#plugins-filters-kv-ecs_metadata) for detailed information.
-
+Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)](https://www.elastic.co/guide/en/ecs/8.17). See [Event Metadata and the Elastic Common Schema (ECS)](plugins-filters-kv.md#plugins-filters-kv-ecs_metadata) for detailed information.
 
 ### `exclude_keys` [plugins-filters-kv-exclude_keys]
 
@@ -155,14 +139,13 @@ An array specifying the parsed keys which should not be added to the event. By d
 
 For example, consider a source like `Hey, from=<abc>, to=def foo=bar`. To exclude `from` and `to`, but retain the `foo` key, you could use this configuration:
 
-```ruby
+```
     filter {
       kv {
         exclude_keys => [ "from", "to" ]
       }
     }
 ```
-
 
 ### `field_split` [plugins-filters-kv-field_split]
 
@@ -177,7 +160,7 @@ These characters form a regex character class and thus you must escape special r
 
 For example, to split out the args from a url query string such as `?pin=12345~0&d=123&e=foo@bar.com&oq=bobo&ss=12345`:
 
-```ruby
+```
     filter {
       kv {
         field_split => "&?"
@@ -193,7 +176,6 @@ The above splits on both `&` and `?` characters, giving you the following fields
 * `oq: bobo`
 * `ss: 12345`
 
-
 ### `field_split_pattern` [plugins-filters-kv-field_split_pattern]
 
 * Value type is [string](value-types.md#string)
@@ -205,16 +187,15 @@ Note that you should avoid using captured groups in your regex and you should be
 
 For example, to split fields on a repetition of one or more colons `k1=v1:k2=v2::k3=v3:::k4=v4`:
 
-```ruby
+```
     filter { kv { field_split_pattern => ":+" } }
 ```
 
 To split fields on a regex character that need escaping like the plus sign `k1=v1++k2=v2++k3=v3++k4=v4`:
 
-```ruby
+```
     filter { kv { field_split_pattern => "\\+\\+" } }
 ```
-
 
 ### `include_brackets` [plugins-filters-kv-include_brackets]
 
@@ -223,7 +204,7 @@ To split fields on a regex character that need escaping like the plus sign `k1=v
 
 A boolean specifying whether to treat square brackets, angle brackets, and parentheses as value "wrappers" that should be removed from the value.
 
-```ruby
+```
     filter {
       kv {
         include_brackets => true
@@ -242,9 +223,8 @@ will be:
 instead of:
 
 * bracketsone: (hello
-* bracketstwo: [hello
-* bracketsthree: <hello
-
+* bracketstwo: \[hello
+* bracketsthree: \<hello
 
 ### `include_keys` [plugins-filters-kv-include_keys]
 
@@ -255,14 +235,13 @@ An array specifying the parsed keys which should be added to the event. By defau
 
 For example, consider a source like `Hey, from=<abc>, to=def foo=bar`. To include `from` and `to`, but exclude the `foo` key, you could use this configuration:
 
-```ruby
+```
     filter {
       kv {
         include_keys => [ "from", "to" ]
       }
     }
 ```
-
 
 ### `prefix` [plugins-filters-kv-prefix]
 
@@ -271,12 +250,11 @@ For example, consider a source like `Hey, from=<abc>, to=def foo=bar`. To includ
 
 A string to prepend to all of the extracted keys.
 
-For example, to prepend arg_ to all keys:
+For example, to prepend arg\_ to all keys:
 
-```ruby
+```
     filter { kv { prefix => "arg_" } }
 ```
-
 
 ### `recursive` [plugins-filters-kv-recursive]
 
@@ -287,14 +265,13 @@ A boolean specifying whether to drill down into values and recursively get more 
 
 Default is not to recursive values.
 
-```ruby
+```
     filter {
       kv {
         recursive => "true"
       }
     }
 ```
-
 
 ### `remove_char_key` [plugins-filters-kv-remove_char_key]
 
@@ -309,14 +286,13 @@ Contrary to trim option, all characters are removed from the key, whatever their
 
 For example, to remove `<` `>` `[` `]` and `,` characters from keys:
 
-```ruby
+```
     filter {
       kv {
         remove_char_key => "<>\[\],"
       }
     }
 ```
-
 
 ### `remove_char_value` [plugins-filters-kv-remove_char_value]
 
@@ -331,14 +307,13 @@ Contrary to trim option, all characters are removed from the value, whatever the
 
 For example, to remove `<`, `>`, `[`, `]` and `,` characters from values:
 
-```ruby
+```
     filter {
       kv {
         remove_char_value => "<>\[\],"
       }
     }
 ```
-
 
 ### `source` [plugins-filters-kv-source]
 
@@ -349,10 +324,9 @@ The field to perform `key=value` searching on
 
 For example, to process the `not_the_message` field:
 
-```ruby
+```
     filter { kv { source => "not_the_message" } }
 ```
-
 
 ### `target` [plugins-filters-kv-target]
 
@@ -365,18 +339,16 @@ If this setting is omitted, fields will be written to the root of the event, as 
 
 For example, to place all keys into the event field kv:
 
-```ruby
+```
     filter { kv { target => "kv" } }
 ```
-
 
 ### `tag_on_failure` [plugins-filters-kv-tag_on_failure]
 
 * Value type is [array](value-types.md#array)
-* The default value for this setting is [`_kv_filter_error`].
+* The default value for this setting is \[`_kv_filter_error`].
 
 When a kv operation causes a runtime exception to be thrown within the plugin, the operation is safely aborted without crashing the plugin, and the event is tagged with the provided values.
-
 
 ### `tag_on_timeout` [plugins-filters-kv-tag_on_timeout]
 
@@ -385,7 +357,6 @@ When a kv operation causes a runtime exception to be thrown within the plugin, t
 
 When timeouts are enabled and a kv operation is aborted, the event is tagged with the provided value (see: [`timeout_millis`](plugins-filters-kv.md#plugins-filters-kv-timeout_millis)).
 
-
 ### `timeout_millis` [plugins-filters-kv-timeout_millis]
 
 * Value type is [number](value-types.md#number)
@@ -393,7 +364,6 @@ When timeouts are enabled and a kv operation is aborted, the event is tagged wit
 * Set to zero (`0`) to disable timeouts
 
 Timeouts provide a safeguard against inputs that are pathological against the regular expressions that are used to extract key/value pairs. When parsing an event exceeds this threshold the operation is aborted and the event is tagged in order to prevent the operation from blocking the pipeline (see: [`tag_on_timeout`](plugins-filters-kv.md#plugins-filters-kv-tag_on_timeout)).
-
 
 ### `transform_key` [plugins-filters-kv-transform_key]
 
@@ -404,14 +374,13 @@ Transform keys to lower case, upper case or capitals.
 
 For example, to lowercase all keys:
 
-```ruby
+```
     filter {
       kv {
         transform_key => "lowercase"
       }
     }
 ```
-
 
 ### `transform_value` [plugins-filters-kv-transform_value]
 
@@ -422,14 +391,13 @@ Transform values to lower case, upper case or capitals.
 
 For example, to capitalize all values:
 
-```ruby
+```
     filter {
       kv {
         transform_value => "capitalize"
       }
     }
 ```
-
 
 ### `trim_key` [plugins-filters-kv-trim_key]
 
@@ -444,14 +412,13 @@ Only leading and trailing characters are trimed from the key.
 
 For example, to trim `<` `>` `[` `]` and `,` characters from keys:
 
-```ruby
+```
     filter {
       kv {
         trim_key => "<>\[\],"
       }
     }
 ```
-
 
 ### `trim_value` [plugins-filters-kv-trim_value]
 
@@ -466,14 +433,13 @@ Only leading and trailing characters are trimed from the value.
 
 For example, to trim `<`, `>`, `[`, `]` and `,` characters from values:
 
-```ruby
+```
     filter {
       kv {
         trim_value => "<>\[\],"
       }
     }
 ```
-
 
 ### `value_split` [plugins-filters-kv-value_split]
 
@@ -486,10 +452,9 @@ These characters form a regex character class and thus you must escape special r
 
 For example, to identify key-values such as `key1:value1 key2:value2`:
 
-```ruby
+```
     filter { kv { value_split => ":" } }
 ```
-
 
 ### `value_split_pattern` [plugins-filters-kv-value_split_pattern]
 
@@ -502,7 +467,6 @@ Note that you should avoid using captured groups in your regex and you should be
 
 See `field_split_pattern` for examples.
 
-
 ### `whitespace` [plugins-filters-kv-whitespace]
 
 * Value can be any of: `lenient`, `strict`
@@ -514,32 +478,30 @@ By default the plugin is run in `lenient` mode, which ignores spaces that occur 
 
 You may want to enable `whitespace => strict` mode if you have control of the input data and can guarantee that no extra spaces are added surrounding the pattern you have defined for splitting values. Doing so will ensure that a *field-splitter* sequence immediately following a *value-splitter* will be interpreted as an empty field.
 
-
-
 ## Common options [plugins-filters-kv-common-options]
 
 These configuration options are supported by all filter plugins:
 
 | Setting | Input type | Required |
-| --- | --- | --- |
-| [`add_field`](plugins-filters-kv.md#plugins-filters-kv-add_field) | [hash](logstash://reference/configuration-file-structure.md#hash) | No |
-| [`add_tag`](plugins-filters-kv.md#plugins-filters-kv-add_tag) | [array](logstash://reference/configuration-file-structure.md#array) | No |
-| [`enable_metric`](plugins-filters-kv.md#plugins-filters-kv-enable_metric) | [boolean](logstash://reference/configuration-file-structure.md#boolean) | No |
-| [`id`](plugins-filters-kv.md#plugins-filters-kv-id) | [string](logstash://reference/configuration-file-structure.md#string) | No |
-| [`periodic_flush`](plugins-filters-kv.md#plugins-filters-kv-periodic_flush) | [boolean](logstash://reference/configuration-file-structure.md#boolean) | No |
-| [`remove_field`](plugins-filters-kv.md#plugins-filters-kv-remove_field) | [array](logstash://reference/configuration-file-structure.md#array) | No |
-| [`remove_tag`](plugins-filters-kv.md#plugins-filters-kv-remove_tag) | [array](logstash://reference/configuration-file-structure.md#array) | No |
+| :- | :- | :- |
+| [`add_field`](plugins-filters-kv.md#plugins-filters-kv-add_field) | [hash](value-types.md#hash) | No |
+| [`add_tag`](plugins-filters-kv.md#plugins-filters-kv-add_tag) | [array](value-types.md#array) | No |
+| [`enable_metric`](plugins-filters-kv.md#plugins-filters-kv-enable_metric) | [boolean](value-types.md#boolean) | No |
+| [`id`](plugins-filters-kv.md#plugins-filters-kv-id) | [string](value-types.md#string) | No |
+| [`periodic_flush`](plugins-filters-kv.md#plugins-filters-kv-periodic_flush) | [boolean](value-types.md#boolean) | No |
+| [`remove_field`](plugins-filters-kv.md#plugins-filters-kv-remove_field) | [array](value-types.md#array) | No |
+| [`remove_tag`](plugins-filters-kv.md#plugins-filters-kv-remove_tag) | [array](value-types.md#array) | No |
 
 ### `add_field` [plugins-filters-kv-add_field]
 
-* Value type is [hash](logstash://reference/configuration-file-structure.md#hash)
+* Value type is [hash](value-types.md#hash)
 * Default value is `{}`
 
-If this filter is successful, add any arbitrary fields to this event. Field names can be dynamic and include parts of the event using the `%{{field}}`.
+If this filter is successful, add any arbitrary fields to this event. Field names can be dynamic and include parts of the event using the `%{field}`.
 
 Example:
 
-```json
+```
     filter {
       kv {
         add_field => { "foo_%{somefield}" => "Hello world, from %{host}" }
@@ -547,7 +509,7 @@ Example:
     }
 ```
 
-```json
+```
     # You can also add multiple fields at once:
     filter {
       kv {
@@ -559,19 +521,18 @@ Example:
     }
 ```
 
-If the event has field `"somefield" == "hello"` this filter, on success, would add field `foo_hello` if it is present, with the value above and the `%{{host}}` piece replaced with that value from the event. The second example would also add a hardcoded field.
-
+If the event has field `"somefield" == "hello"` this filter, on success, would add field `foo_hello` if it is present, with the value above and the `%{host}` piece replaced with that value from the event. The second example would also add a hardcoded field.
 
 ### `add_tag` [plugins-filters-kv-add_tag]
 
-* Value type is [array](logstash://reference/configuration-file-structure.md#array)
+* Value type is [array](value-types.md#array)
 * Default value is `[]`
 
-If this filter is successful, add arbitrary tags to the event. Tags can be dynamic and include parts of the event using the `%{{field}}` syntax.
+If this filter is successful, add arbitrary tags to the event. Tags can be dynamic and include parts of the event using the `%{field}` syntax.
 
 Example:
 
-```json
+```
     filter {
       kv {
         add_tag => [ "foo_%{somefield}" ]
@@ -579,7 +540,7 @@ Example:
     }
 ```
 
-```json
+```
     # You can also add multiple tags at once:
     filter {
       kv {
@@ -590,23 +551,21 @@ Example:
 
 If the event has field `"somefield" == "hello"` this filter, on success, would add a tag `foo_hello` (and the second example would of course add a `taggedy_tag` tag).
 
-
 ### `enable_metric` [plugins-filters-kv-enable_metric]
 
-* Value type is [boolean](logstash://reference/configuration-file-structure.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `true`
 
 Disable or enable metric logging for this specific plugin instance. By default we record all the metrics we can, but you can disable metrics collection for a specific plugin.
 
-
 ### `id` [plugins-filters-kv-id]
 
-* Value type is [string](logstash://reference/configuration-file-structure.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 Add a unique `ID` to the plugin configuration. If no ID is specified, Logstash will generate one. It is strongly recommended to set this ID in your configuration. This is particularly useful when you have two or more plugins of the same type, for example, if you have 2 kv filters. Adding a named ID in this case will help in monitoring Logstash when using the monitoring APIs.
 
-```json
+```
     filter {
       kv {
         id => "ABC"
@@ -614,28 +573,23 @@ Add a unique `ID` to the plugin configuration. If no ID is specified, Logstash w
     }
 ```
 
-::::{note} 
 Variable substitution in the `id` field only supports environment variables and does not support the use of values from the secret store.
-::::
-
-
 
 ### `periodic_flush` [plugins-filters-kv-periodic_flush]
 
-* Value type is [boolean](logstash://reference/configuration-file-structure.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 Call the filter flush method at regular interval. Optional.
 
-
 ### `remove_field` [plugins-filters-kv-remove_field]
 
-* Value type is [array](logstash://reference/configuration-file-structure.md#array)
+* Value type is [array](value-types.md#array)
 * Default value is `[]`
 
-If this filter is successful, remove arbitrary fields from this event. Fields names can be dynamic and include parts of the event using the `%{{field}}` Example:
+If this filter is successful, remove arbitrary fields from this event. Fields names can be dynamic and include parts of the event using the %{field} Example:
 
-```json
+```
     filter {
       kv {
         remove_field => [ "foo_%{somefield}" ]
@@ -643,7 +597,7 @@ If this filter is successful, remove arbitrary fields from this event. Fields na
     }
 ```
 
-```json
+```
     # You can also remove multiple fields at once:
     filter {
       kv {
@@ -654,17 +608,16 @@ If this filter is successful, remove arbitrary fields from this event. Fields na
 
 If the event has field `"somefield" == "hello"` this filter, on success, would remove the field with name `foo_hello` if it is present. The second example would remove an additional, non-dynamic field.
 
-
 ### `remove_tag` [plugins-filters-kv-remove_tag]
 
-* Value type is [array](logstash://reference/configuration-file-structure.md#array)
+* Value type is [array](value-types.md#array)
 * Default value is `[]`
 
-If this filter is successful, remove arbitrary tags from the event. Tags can be dynamic and include parts of the event using the `%{{field}}` syntax.
+If this filter is successful, remove arbitrary tags from the event. Tags can be dynamic and include parts of the event using the `%{field}` syntax.
 
 Example:
 
-```json
+```
     filter {
       kv {
         remove_tag => [ "foo_%{somefield}" ]
@@ -672,7 +625,7 @@ Example:
     }
 ```
 
-```json
+```
     # You can also remove multiple tags at once:
     filter {
       kv {
@@ -682,6 +635,3 @@ Example:
 ```
 
 If the event has field `"somefield" == "hello"` this filter, on success, would remove the tag `foo_hello` if it is present. The second example would remove a sad, unwanted tag as well.
-
-
-

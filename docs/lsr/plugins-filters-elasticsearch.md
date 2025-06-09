@@ -6,25 +6,23 @@ mapped_pages:
 
 # Elasticsearch filter plugin [plugins-filters-elasticsearch]
 
-
-* Plugin version: v4.1.1
+* Plugin version: v3.17.1
 * Released on: 2025-03-17
-* [Changelog](https://github.com/logstash-plugins/logstash-filter-elasticsearch/blob/v4.1.1/CHANGELOG.md)
+* [Changelog](https://github.com/logstash-plugins/logstash-filter-elasticsearch/blob/v3.17.1/CHANGELOG.md)
 
-For other versions, see the [Versioned plugin docs](/vpr/filter-elasticsearch-index.md).
+For other versions, see the [Versioned plugin docs](https://www.elastic.co/guide/en/logstash-versioned-plugins/current/filter-elasticsearch-index.html).
 
 ## Getting help [_getting_help_138]
 
 For questions about the plugin, open a topic in the [Discuss](http://discuss.elastic.co) forums. For bugs or feature requests, open an issue in [Github](https://github.com/logstash-plugins/logstash-filter-elasticsearch). For the list of Elastic supported plugins, please consult the [Elastic Support Matrix](https://www.elastic.co/support/matrix#logstash_plugins).
 
-
-## Description [_description_136]
+## Description [_description_137]
 
 Search Elasticsearch for a previous log event and copy some fields from it into the current event. Below are two complete examples of how this filter might be used.
 
-The first example uses the legacy *query* parameter where the user is limited to an Elasticsearch query_string. Whenever logstash receives an "end" event, it uses this elasticsearch filter to find the matching "start" event based on some operation identifier. Then it copies the `@timestamp` field from the "start" event into a new field on the "end" event.  Finally, using a combination of the "date" filter and the "ruby" filter, we calculate the time duration in hours between the two events.
+The first example uses the legacy *query* parameter where the user is limited to an Elasticsearch query\_string. Whenever logstash receives an "end" event, it uses this elasticsearch filter to find the matching "start" event based on some operation identifier. Then it copies the `@timestamp` field from the "start" event into a new field on the "end" event. Finally, using a combination of the "date" filter and the "ruby" filter, we calculate the time duration in hours between the two events.
 
-```ruby
+```
 if [type] == "end" {
    elasticsearch {
       hosts => ["es-server"]
@@ -43,9 +41,9 @@ if [type] == "end" {
 }
 ```
 
-The example below reproduces the above example but utilises the query_template. This query_template represents a full Elasticsearch query DSL and supports the standard Logstash field substitution syntax.  The example below issues the same query as the first example but uses the template shown.
+The example below reproduces the above example but utilises the query\_template. This query\_template represents a full Elasticsearch query DSL and supports the standard Logstash field substitution syntax. The example below issues the same query as the first example but uses the template shown.
 
-```ruby
+```
 if [type] == "end" {
       elasticsearch {
          hosts => ["es-server"]
@@ -66,7 +64,7 @@ if [type] == "end" {
 
 template.json:
 
-```json
+```
 {
   "size": 1,
   "sort" : [ { "@timestamp" : "desc" } ],
@@ -83,7 +81,6 @@ As illustrated above, through the use of *opid*, fields from the Logstash events
 
 Notice also that when you use `query_template`, the Logstash attributes `result_size` and `sort` will be ignored. They should be specified directly in the JSON template, as shown in the example above.
 
-
 ## Authentication [plugins-filters-elasticsearch-auth]
 
 Authentication to a secure Elasticsearch cluster is possible using *one* of the following options:
@@ -91,30 +88,24 @@ Authentication to a secure Elasticsearch cluster is possible using *one* of the 
 * [`user`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-user) AND [`password`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-password)
 * [`cloud_auth`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-cloud_auth)
 * [`api_key`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-api_key)
-* [`ssl_keystore_path`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-ssl_keystore_path) and/or [`ssl_keystore_password`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-ssl_keystore_password)
-
+* [`keystore`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-keystore) and/or [`keystore_password`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-keystore_password)
 
 ## Authorization [plugins-filters-elasticsearch-autz]
 
 Authorization to a secure Elasticsearch cluster requires `read` permission at index level and `monitoring` permissions at cluster level. The `monitoring` permission at cluster level is necessary to perform periodic connectivity checks.
 
-
 ## Elasticsearch Filter Configuration Options [plugins-filters-elasticsearch-options]
 
-This plugin supports the following configuration options plus the [Common options](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-common-options) described later.
-
-::::{note} 
-As of version `4.0.0` of this plugin, a number of previously deprecated settings related to SSL have been removed. Please see the [Elasticsearch Filter Obsolete Configuration Options](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-obsolete-options) for more details.
-::::
-
+This plugin supports the following configuration options plus the [Common options](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-common-options) and the [Elasticsearch Filter Deprecated Configuration Options](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-deprecated-options) described later.
 
 | Setting | Input type | Required |
-| --- | --- | --- |
+| :- | :- | :- |
 | [`aggregation_fields`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-aggregation_fields) | [hash](value-types.md#hash) | No |
 | [`api_key`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-api_key) | [password](value-types.md#password) | No |
 | [`ca_trusted_fingerprint`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-ca_trusted_fingerprint) | [string](value-types.md#string) | No |
 | [`cloud_auth`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-cloud_auth) | [password](value-types.md#password) | No |
 | [`cloud_id`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-cloud_id) | [string](value-types.md#string) | No |
+| [`custom_headers`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-custom_headers) | [hash](value-types.md#hash) | No |
 | [`docinfo_fields`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-docinfo_fields) | [hash](value-types.md#hash) | No |
 | [`enable_sort`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-enable_sort) | [boolean](value-types.md#boolean) | No |
 | [`fields`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-fields) | [array](value-types.md#array) | No |
@@ -128,6 +119,7 @@ As of version `4.0.0` of this plugin, a number of previously deprecated settings
 | [`retry_on_failure`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-retry_on_failure) | [number](value-types.md#number) | No |
 | [`retry_on_status`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-retry_on_status) | [array](value-types.md#array) | No |
 | [`sort`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-sort) | [string](value-types.md#string) | No |
+| [`ssl`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-ssl) | [boolean](value-types.md#boolean) | *Deprecated* |
 | [`ssl_certificate`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-ssl_certificate) | [path](value-types.md#path) | No |
 | [`ssl_certificate_authorities`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-ssl_certificate_authorities) | list of [path](value-types.md#path) | No |
 | [`ssl_cipher_suites`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-ssl_cipher_suites) | list of [string](value-types.md#string) | No |
@@ -146,8 +138,6 @@ As of version `4.0.0` of this plugin, a number of previously deprecated settings
 
 Also see [Common options](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-common-options) for a list of options supported by all filter plugins.
 
- 
-
 ### `aggregation_fields` [plugins-filters-elasticsearch-aggregation_fields]
 
 * Value type is [hash](value-types.md#hash)
@@ -157,7 +147,7 @@ Hash of aggregation names to copy from elasticsearch response into Logstash even
 
 Example:
 
-```ruby
+```
     filter {
       elasticsearch {
         aggregation_fields => {
@@ -167,7 +157,6 @@ Example:
     }
 ```
 
-
 ### `api_key` [plugins-filters-elasticsearch-api_key]
 
 * Value type is [password](value-types.md#password)
@@ -175,8 +164,7 @@ Example:
 
 Authenticate using Elasticsearch API key. Note that this option also requires enabling the [`ssl_enabled`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-ssl_enabled) option.
 
-Format is `id:api_key` where `id` and `api_key` are as returned by the Elasticsearch [Create API key API](https://www.elastic.co/guide/en/elasticsearch/reference/current/security-api-create-api-key.html).
-
+Format is `id:api_key` where `id` and `api_key` are as returned by the Elasticsearch [Create API key API](https://www.elastic.co/guide/en/elasticsearch/reference/8.18/security-api-create-api-key.html).
 
 ### `ca_trusted_fingerprint` [plugins-filters-elasticsearch-ca_trusted_fingerprint]
 
@@ -186,16 +174,14 @@ Format is `id:api_key` where `id` and `api_key` are as returned by the Elasticse
 
 The SHA-256 fingerprint of an SSL Certificate Authority to trust, such as the autogenerated self-signed CA for an Elasticsearch cluster.
 
-
 ### `cloud_auth` [plugins-filters-elasticsearch-cloud_auth]
 
 * Value type is [password](value-types.md#password)
 * There is no default value for this setting.
 
-Cloud authentication string ("<username>:<password>" format) is an alternative for the `user`/`password` pair.
+Cloud authentication string ("\<username>:\<password>" format) is an alternative for the `user`/`password` pair.
 
-For more info, check out the [Logstash-to-Cloud documentation](logstash://reference/connecting-to-cloud.md).
-
+For more info, check out the [Logstash-to-Cloud documentation](https://www.elastic.co/guide/en/logstash/8.18/connecting-to-cloud.html).
 
 ### `cloud_id` [plugins-filters-elasticsearch-cloud_id]
 
@@ -204,8 +190,14 @@ For more info, check out the [Logstash-to-Cloud documentation](logstash://refere
 
 Cloud ID, from the Elastic Cloud web console. If set `hosts` should not be used.
 
-For more info, check out the [Logstash-to-Cloud documentation](logstash://reference/connecting-to-cloud.md).
+For more info, check out the [Logstash-to-Cloud documentation](https://www.elastic.co/guide/en/logstash/8.18/connecting-to-cloud.html).
 
+### `custom_headers` [plugins-filters-elasticsearch-custom_headers]
+
+* Value type is [hash](value-types.md#hash)
+* Default value is empty
+
+Pass a set of key value pairs as the headers sent in each request to Elasticsearch. These custom headers will override any headers previously set by the plugin such as the User Agent or Authorization headers.
 
 ### `docinfo_fields` [plugins-filters-elasticsearch-docinfo_fields]
 
@@ -216,7 +208,7 @@ Hash of docinfo fields to copy from old event (found via elasticsearch) into new
 
 Example:
 
-```ruby
+```
     filter {
       elasticsearch {
         docinfo_fields => {
@@ -227,14 +219,12 @@ Example:
     }
 ```
 
-
 ### `enable_sort` [plugins-filters-elasticsearch-enable_sort]
 
 * Value type is [boolean](value-types.md#boolean)
 * Default value is `true`
 
 Whether results should be sorted or not
-
 
 ### `fields` [plugins-filters-elasticsearch-fields]
 
@@ -245,13 +235,12 @@ An array of fields to copy from the old event (found via elasticsearch) into the
 
 In the following example, the values of `@timestamp` and `event_id` on the event found via elasticsearch are copied to the current event’s `started` and `start_id` fields, respectively:
 
-```ruby
+```
 fields => {
   "@timestamp" => "started"
   "event_id" => "start_id"
 }
 ```
-
 
 ### `hosts` [plugins-filters-elasticsearch-hosts]
 
@@ -260,14 +249,12 @@ fields => {
 
 List of elasticsearch hosts to use for querying.
 
-
 ### `index` [plugins-filters-elasticsearch-index]
 
 * Value type is [string](value-types.md#string)
 * Default value is `""`
 
-Comma-delimited list of index names to search; use `_all` or empty string to perform the operation on all indices. Field substitution (e.g. `index-name-%{{date_field}}`) is available
-
+Comma-delimited list of index names to search; use `_all` or empty string to perform the operation on all indices. Field substitution (e.g. `index-name-%{date_field}`) is available
 
 ### `password` [plugins-filters-elasticsearch-password]
 
@@ -276,7 +263,6 @@ Comma-delimited list of index names to search; use `_all` or empty string to per
 
 Basic Auth - password
 
-
 ### `proxy` [plugins-filters-elasticsearch-proxy]
 
 * Value type is [uri](value-types.md#uri)
@@ -284,22 +270,19 @@ Basic Auth - password
 
 Set the address of a forward HTTP proxy. An empty string is treated as if proxy was not set, and is useful when using environment variables e.g. `proxy => '${LS_PROXY:}'`.
 
-
 ### `query` [plugins-filters-elasticsearch-query]
 
 * Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
-Elasticsearch query string. More information is available in the [Elasticsearch query string documentation](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-query-string-query.html#query-string-syntax). Use either `query` or `query_template`.
-
+Elasticsearch query string. More information is available in the [Elasticsearch query string documentation](https://www.elastic.co/guide/en/elasticsearch/reference/8.18/query-dsl-query-string-query.html#query-string-syntax). Use either `query` or `query_template`.
 
 ### `query_template` [plugins-filters-elasticsearch-query_template]
 
 * Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
-File path to elasticsearch query in DSL format. More information is available in the [Elasticsearch query documentation](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl.html). Use either `query` or `query_template`.
-
+File path to elasticsearch query in DSL format. More information is available in the [Elasticsearch query documentation](https://www.elastic.co/guide/en/elasticsearch/reference/8.18/query-dsl.html). Use either `query` or `query_template`.
 
 ### `result_size` [plugins-filters-elasticsearch-result_size]
 
@@ -307,7 +290,6 @@ File path to elasticsearch query in DSL format. More information is available in
 * Default value is `1`
 
 How many results to return
-
 
 ### `retry_on_failure` [plugins-filters-elasticsearch-retry_on_failure]
 
@@ -318,14 +300,12 @@ How many times to retry an individual failed request.
 
 When enabled, retry requests that result in connection errors or an HTTP status code included in [`retry_on_status`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-retry_on_status)
 
-
 ### `retry_on_status` [plugins-filters-elasticsearch-retry_on_status]
 
 * Value type is [array](value-types.md#array)
 * Default value is an empty list `[]`
 
 Which HTTP Status codes to consider for retries (in addition to connection errors) when using [`retry_on_failure`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-retry_on_failure),
-
 
 ### `sort` [plugins-filters-elasticsearch-sort]
 
@@ -334,7 +314,6 @@ Which HTTP Status codes to consider for retries (in addition to connection error
 
 Comma-delimited list of `<field>:<direction>` pairs that define the sort order
 
-
 ### `ssl_certificate` [plugins-filters-elasticsearch-ssl_certificate]
 
 * Value type is [path](value-types.md#path)
@@ -342,11 +321,7 @@ Comma-delimited list of `<field>:<direction>` pairs that define the sort order
 
 SSL certificate to use to authenticate the client. This certificate should be an OpenSSL-style X.509 certificate file.
 
-::::{note} 
 This setting can be used only if [`ssl_key`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-ssl_key) is set.
-::::
-
-
 
 ### `ssl_certificate_authorities` [plugins-filters-elasticsearch-ssl_certificate_authorities]
 
@@ -355,11 +330,7 @@ This setting can be used only if [`ssl_key`](plugins-filters-elasticsearch.md#pl
 
 The .cer or .pem files to validate the server’s certificate.
 
-::::{note} 
 You cannot use this setting and [`ssl_truststore_path`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-ssl_truststore_path) at the same time.
-::::
-
-
 
 ### `ssl_cipher_suites` [plugins-filters-elasticsearch-ssl_cipher_suites]
 
@@ -368,14 +339,12 @@ You cannot use this setting and [`ssl_truststore_path`](plugins-filters-elastics
 
 The list of cipher suites to use, listed by priorities. Supported cipher suites vary depending on the Java and protocol versions.
 
-
 ### `ssl_enabled` [plugins-filters-elasticsearch-ssl_enabled]
 
 * Value type is [boolean](value-types.md#boolean)
 * There is no default value for this setting.
 
 Enable SSL/TLS secured communication to Elasticsearch cluster. Leaving this unspecified will use whatever scheme is specified in the URLs listed in [`hosts`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-hosts) or extracted from the [`cloud_id`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-cloud_id). If no explicit protocol is specified plain HTTP will be used.
-
 
 ### `ssl_key` [plugins-filters-elasticsearch-ssl_key]
 
@@ -384,11 +353,7 @@ Enable SSL/TLS secured communication to Elasticsearch cluster. Leaving this unsp
 
 OpenSSL-style RSA private key that corresponds to the [`ssl_certificate`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-ssl_certificate).
 
-::::{note} 
 This setting can be used only if [`ssl_certificate`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-ssl_certificate) is set.
-::::
-
-
 
 ### `ssl_keystore_password` [plugins-filters-elasticsearch-ssl_keystore_password]
 
@@ -397,7 +362,6 @@ This setting can be used only if [`ssl_certificate`](plugins-filters-elasticsear
 
 Set the keystore password
 
-
 ### `ssl_keystore_path` [plugins-filters-elasticsearch-ssl_keystore_path]
 
 * Value type is [path](value-types.md#path)
@@ -405,11 +369,7 @@ Set the keystore password
 
 The keystore used to present a certificate to the server. It can be either `.jks` or `.p12`
 
-::::{note} 
 You cannot use this setting and [`ssl_certificate`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-ssl_certificate) at the same time.
-::::
-
-
 
 ### `ssl_keystore_type` [plugins-filters-elasticsearch-ssl_keystore_type]
 
@@ -417,7 +377,6 @@ You cannot use this setting and [`ssl_certificate`](plugins-filters-elasticsearc
 * If not provided, the value will be inferred from the keystore filename.
 
 The format of the keystore file. It must be either `jks` or `pkcs12`.
-
 
 ### `ssl_supported_protocols` [plugins-filters-elasticsearch-ssl_supported_protocols]
 
@@ -427,13 +386,9 @@ The format of the keystore file. It must be either `jks` or `pkcs12`.
 
 List of allowed SSL/TLS versions to use when establishing a connection to the Elasticsearch cluster.
 
-For Java 8 `'TLSv1.3'` is supported only since ***8u262*** (AdoptOpenJDK), but requires that you set the `LS_JAVA_OPTS="-Djdk.tls.client.protocols=TLSv1.3"` system property in Logstash.
+For Java 8 `'TLSv1.3'` is supported only since **8u262** (AdoptOpenJDK), but requires that you set the `LS_JAVA_OPTS="-Djdk.tls.client.protocols=TLSv1.3"` system property in Logstash.
 
-::::{note} 
-If you configure the plugin to use `'TLSv1.1'` on any recent JVM, such as the one packaged with Logstash, the protocol is disabled by default and needs to be enabled manually by changing `jdk.tls.disabledAlgorithms` in the **$JDK_HOME/conf/security/java.security** configuration file. That is, `TLSv1.1` needs to be removed from the list.
-::::
-
-
+If you configure the plugin to use `'TLSv1.1'` on any recent JVM, such as the one packaged with Logstash, the protocol is disabled by default and needs to be enabled manually by changing `jdk.tls.disabledAlgorithms` in the **$JDK\_HOME/conf/security/java.security** configuration file. That is, `TLSv1.1` needs to be removed from the list.
 
 ### `ssl_truststore_password` [plugins-filters-elasticsearch-ssl_truststore_password]
 
@@ -442,7 +397,6 @@ If you configure the plugin to use `'TLSv1.1'` on any recent JVM, such as the on
 
 Set the truststore password
 
-
 ### `ssl_truststore_path` [plugins-filters-elasticsearch-ssl_truststore_path]
 
 * Value type is [path](value-types.md#path)
@@ -450,11 +404,7 @@ Set the truststore password
 
 The truststore to validate the server’s certificate. It can be either `.jks` or `.p12`.
 
-::::{note} 
 You cannot use this setting and [`ssl_certificate_authorities`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-ssl_certificate_authorities) at the same time.
-::::
-
-
 
 ### `ssl_truststore_type` [plugins-filters-elasticsearch-ssl_truststore_type]
 
@@ -463,7 +413,6 @@ You cannot use this setting and [`ssl_certificate_authorities`](plugins-filters-
 
 The format of the truststore file. It must be either `jks` or `pkcs12`.
 
-
 ### `ssl_verification_mode` [plugins-filters-elasticsearch-ssl_verification_mode]
 
 * Value can be any of: `full`, `none`
@@ -471,15 +420,11 @@ The format of the truststore file. It must be either `jks` or `pkcs12`.
 
 Defines how to verify the certificates presented by another party in the TLS connection:
 
-`full` validates that the server certificate has an issue date that’s within the not_before and not_after dates; chains to a trusted Certificate Authority (CA), and has a hostname or IP address that matches the names within the certificate.
+`full` validates that the server certificate has an issue date that’s within the not\_before and not\_after dates; chains to a trusted Certificate Authority (CA), and has a hostname or IP address that matches the names within the certificate.
 
 `none` performs no certificate validation.
 
-::::{warning} 
-Setting certificate verification to `none` disables many security benefits of SSL/TLS, which is very dangerous. For more information on disabling certificate verification please read [https://www.cs.utexas.edu/~shmat/shmat_ccs12.pdf](https://www.cs.utexas.edu/~shmat/shmat_ccs12.pdf)
-::::
-
-
+Setting certificate verification to `none` disables many security benefits of SSL/TLS, which is very dangerous. For more information on disabling certificate verification please read <https://www.cs.utexas.edu/~shmat/shmat_ccs12.pdf>
 
 ### `tag_on_failure` [plugins-filters-elasticsearch-tag_on_failure]
 
@@ -488,7 +433,6 @@ Setting certificate verification to `none` disables many security benefits of SS
 
 Tags the event on failure to look up previous log event information. This can be used in later analysis.
 
-
 ### `user` [plugins-filters-elasticsearch-user]
 
 * Value type is [string](value-types.md#string)
@@ -496,45 +440,86 @@ Tags the event on failure to look up previous log event information. This can be
 
 Basic Auth - username
 
+## Elasticsearch Filter Deprecated Configuration Options [plugins-filters-elasticsearch-deprecated-options]
 
+This plugin supports the following deprecated configurations.
 
-## Elasticsearch Filter Obsolete Configuration Options [plugins-filters-elasticsearch-obsolete-options]
+Deprecated options are subject to removal in future releases.
 
-::::{warning} 
-As of version `4.0.0` of this plugin, some configuration options have been replaced. The plugin will fail to start if it contains any of these obsolete options.
-::::
+| Setting | Input type | Replaced by |
+| :- | :- | :- |
+| [`ca_file`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-ca_file) | a valid filesystem path | [`ssl_certificate_authorities`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-ssl_certificate_authorities) |
+| [`keystore`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-keystore) | a valid filesystem path | [`ssl_keystore_path`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-ssl_keystore_path) |
+| [`keystore_password`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-keystore_password) | [password](value-types.md#password) | [`ssl_keystore_password`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-ssl_keystore_password) |
 
+### `ca_file` [plugins-filters-elasticsearch-ca_file]
 
-| Setting | Replaced by | ca_file |
-| --- | --- | --- |
-| [`ssl_certificate_authorities`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-ssl_certificate_authorities) | keystore | [`ssl_keystore_path`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-ssl_keystore_path) |
-| keystore_password | [`ssl_keystore_password`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-ssl_keystore_password) | ssl |
+Deprecated in 3.15.0.
 
+Replaced by [`ssl_certificate_authorities`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-ssl_certificate_authorities)
+
+* Value type is [path](value-types.md#path)
+* There is no default value for this setting.
+
+SSL Certificate Authority file
+
+### `ssl` [plugins-filters-elasticsearch-ssl]
+
+Deprecated in 3.15.0.
+
+Replaced by [`ssl_enabled`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-ssl_enabled)
+
+* Value type is [boolean](value-types.md#boolean)
+* Default value is `false`
+
+SSL
+
+### `keystore` [plugins-filters-elasticsearch-keystore]
+
+Deprecated in 3.15.0.
+
+Replaced by [`ssl_keystore_path`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-ssl_keystore_path)
+
+* Value type is [path](value-types.md#path)
+* There is no default value for this setting.
+
+The keystore used to present a certificate to the server. It can be either .jks or .p12
+
+### `keystore_password` [plugins-filters-elasticsearch-keystore_password]
+
+Deprecated in 3.15.0.
+
+Replaced by [`ssl_keystore_password`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-ssl_keystore_password)
+
+* Value type is [password](value-types.md#password)
+* There is no default value for this setting.
+
+Set the keystore password
 
 ## Common options [plugins-filters-elasticsearch-common-options]
 
 These configuration options are supported by all filter plugins:
 
 | Setting | Input type | Required |
-| --- | --- | --- |
-| [`add_field`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-add_field) | [hash](logstash://reference/configuration-file-structure.md#hash) | No |
-| [`add_tag`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-add_tag) | [array](logstash://reference/configuration-file-structure.md#array) | No |
-| [`enable_metric`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-enable_metric) | [boolean](logstash://reference/configuration-file-structure.md#boolean) | No |
-| [`id`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-id) | [string](logstash://reference/configuration-file-structure.md#string) | No |
-| [`periodic_flush`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-periodic_flush) | [boolean](logstash://reference/configuration-file-structure.md#boolean) | No |
-| [`remove_field`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-remove_field) | [array](logstash://reference/configuration-file-structure.md#array) | No |
-| [`remove_tag`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-remove_tag) | [array](logstash://reference/configuration-file-structure.md#array) | No |
+| :- | :- | :- |
+| [`add_field`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-add_field) | [hash](value-types.md#hash) | No |
+| [`add_tag`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-add_tag) | [array](value-types.md#array) | No |
+| [`enable_metric`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-enable_metric) | [boolean](value-types.md#boolean) | No |
+| [`id`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-id) | [string](value-types.md#string) | No |
+| [`periodic_flush`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-periodic_flush) | [boolean](value-types.md#boolean) | No |
+| [`remove_field`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-remove_field) | [array](value-types.md#array) | No |
+| [`remove_tag`](plugins-filters-elasticsearch.md#plugins-filters-elasticsearch-remove_tag) | [array](value-types.md#array) | No |
 
 ### `add_field` [plugins-filters-elasticsearch-add_field]
 
-* Value type is [hash](logstash://reference/configuration-file-structure.md#hash)
+* Value type is [hash](value-types.md#hash)
 * Default value is `{}`
 
-If this filter is successful, add any arbitrary fields to this event. Field names can be dynamic and include parts of the event using the `%{{field}}`.
+If this filter is successful, add any arbitrary fields to this event. Field names can be dynamic and include parts of the event using the `%{field}`.
 
 Example:
 
-```json
+```
     filter {
       elasticsearch {
         add_field => { "foo_%{somefield}" => "Hello world, from %{host}" }
@@ -542,7 +527,7 @@ Example:
     }
 ```
 
-```json
+```
     # You can also add multiple fields at once:
     filter {
       elasticsearch {
@@ -554,19 +539,18 @@ Example:
     }
 ```
 
-If the event has field `"somefield" == "hello"` this filter, on success, would add field `foo_hello` if it is present, with the value above and the `%{{host}}` piece replaced with that value from the event. The second example would also add a hardcoded field.
-
+If the event has field `"somefield" == "hello"` this filter, on success, would add field `foo_hello` if it is present, with the value above and the `%{host}` piece replaced with that value from the event. The second example would also add a hardcoded field.
 
 ### `add_tag` [plugins-filters-elasticsearch-add_tag]
 
-* Value type is [array](logstash://reference/configuration-file-structure.md#array)
+* Value type is [array](value-types.md#array)
 * Default value is `[]`
 
-If this filter is successful, add arbitrary tags to the event. Tags can be dynamic and include parts of the event using the `%{{field}}` syntax.
+If this filter is successful, add arbitrary tags to the event. Tags can be dynamic and include parts of the event using the `%{field}` syntax.
 
 Example:
 
-```json
+```
     filter {
       elasticsearch {
         add_tag => [ "foo_%{somefield}" ]
@@ -574,7 +558,7 @@ Example:
     }
 ```
 
-```json
+```
     # You can also add multiple tags at once:
     filter {
       elasticsearch {
@@ -585,23 +569,21 @@ Example:
 
 If the event has field `"somefield" == "hello"` this filter, on success, would add a tag `foo_hello` (and the second example would of course add a `taggedy_tag` tag).
 
-
 ### `enable_metric` [plugins-filters-elasticsearch-enable_metric]
 
-* Value type is [boolean](logstash://reference/configuration-file-structure.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `true`
 
 Disable or enable metric logging for this specific plugin instance. By default we record all the metrics we can, but you can disable metrics collection for a specific plugin.
 
-
 ### `id` [plugins-filters-elasticsearch-id]
 
-* Value type is [string](logstash://reference/configuration-file-structure.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 Add a unique `ID` to the plugin configuration. If no ID is specified, Logstash will generate one. It is strongly recommended to set this ID in your configuration. This is particularly useful when you have two or more plugins of the same type, for example, if you have 2 elasticsearch filters. Adding a named ID in this case will help in monitoring Logstash when using the monitoring APIs.
 
-```json
+```
     filter {
       elasticsearch {
         id => "ABC"
@@ -609,28 +591,23 @@ Add a unique `ID` to the plugin configuration. If no ID is specified, Logstash w
     }
 ```
 
-::::{note} 
 Variable substitution in the `id` field only supports environment variables and does not support the use of values from the secret store.
-::::
-
-
 
 ### `periodic_flush` [plugins-filters-elasticsearch-periodic_flush]
 
-* Value type is [boolean](logstash://reference/configuration-file-structure.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 Call the filter flush method at regular interval. Optional.
 
-
 ### `remove_field` [plugins-filters-elasticsearch-remove_field]
 
-* Value type is [array](logstash://reference/configuration-file-structure.md#array)
+* Value type is [array](value-types.md#array)
 * Default value is `[]`
 
-If this filter is successful, remove arbitrary fields from this event. Fields names can be dynamic and include parts of the event using the `%{{field}}` Example:
+If this filter is successful, remove arbitrary fields from this event. Fields names can be dynamic and include parts of the event using the %{field} Example:
 
-```json
+```
     filter {
       elasticsearch {
         remove_field => [ "foo_%{somefield}" ]
@@ -638,7 +615,7 @@ If this filter is successful, remove arbitrary fields from this event. Fields na
     }
 ```
 
-```json
+```
     # You can also remove multiple fields at once:
     filter {
       elasticsearch {
@@ -649,17 +626,16 @@ If this filter is successful, remove arbitrary fields from this event. Fields na
 
 If the event has field `"somefield" == "hello"` this filter, on success, would remove the field with name `foo_hello` if it is present. The second example would remove an additional, non-dynamic field.
 
-
 ### `remove_tag` [plugins-filters-elasticsearch-remove_tag]
 
-* Value type is [array](logstash://reference/configuration-file-structure.md#array)
+* Value type is [array](value-types.md#array)
 * Default value is `[]`
 
-If this filter is successful, remove arbitrary tags from the event. Tags can be dynamic and include parts of the event using the `%{{field}}` syntax.
+If this filter is successful, remove arbitrary tags from the event. Tags can be dynamic and include parts of the event using the `%{field}` syntax.
 
 Example:
 
-```json
+```
     filter {
       elasticsearch {
         remove_tag => [ "foo_%{somefield}" ]
@@ -667,7 +643,7 @@ Example:
     }
 ```
 
-```json
+```
     # You can also remove multiple tags at once:
     filter {
       elasticsearch {
@@ -677,6 +653,3 @@ Example:
 ```
 
 If the event has field `"somefield" == "hello"` this filter, on success, would remove the tag `foo_hello` if it is present. The second example would remove a sad, unwanted tag as well.
-
-
-

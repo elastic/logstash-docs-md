@@ -6,25 +6,21 @@ mapped_pages:
 
 # Elastic Enterprise Search integration plugin v2.1.1 [v2.1.1-plugins-integrations-elastic_enterprise_search]
 
-
 * Plugin version: v2.1.1
 * Released on: 2021-06-02
 * [Changelog](https://github.com/logstash-plugins/logstash-integration-elastic_enterprise_search/blob/v2.1.1/CHANGELOG.md)
 
 For other versions, see the [overview list](integration-elastic_enterprise_search-index.md).
 
-To learn more about Logstash, see the [Logstash Reference](logstash://reference/index.md).
+To learn more about Logstash, see the [Logstash Reference](https://www.elastic.co/guide/en/logstash/current/index.html).
 
-## Getting help [_getting_help_17]
+## Getting help [_getting_help_19]
 
 For questions about the plugin, open a topic in the [Discuss](http://discuss.elastic.co) forums. For bugs or feature requests, open an issue in [Github](https://github.com/logstash-plugins/logstash-integration-elastic_enterprise_search). For the list of Elastic supported plugins, please consult the [Elastic Support Matrix](https://www.elastic.co/support/matrix#matrix_logstash_plugins).
 
-
-## Description [_description_17]
+## Description [_description_19]
 
 The Elastic Enterprise Search integration plugin provides integrated plugins for working with App Search and Workplace Search services:
 
-* [App Search Output Plugin](/lsr/plugins-outputs-elastic_app_search.md)
+* [App Search Output Plugin](https://www.elastic.co/guide/en/logstash/current/plugins-outputs-elastic_app_search.html)
 * Workplace Search Output Plugin
-
-

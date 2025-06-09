@@ -6,16 +6,12 @@ mapped_pages:
 
 # Versioned google_pubsub input plugin docs [input-google_pubsub-index]
 
+This page lists all documentation available for this plugin. To see which plugin version you have installed, run `bin/logstash-plugin list --verbose`.
 
-This page lists all documentation available for this plugin.  To see which plugin version you have installed, run `bin/logstash-plugin list --verbose`.
-
-::::{note}
 Versioned plugin documentation is not available for plugins released prior to Logstash 6.0.
-::::
 
-
-|     |     |
-| --- | --- |
+| | |
+| :- | :- |
 | Version | Release Date |
 | [v1.4.0](v1-4-0-plugins-inputs-google_pubsub.md) | 2024-10-15 |
 | [v1.3.0](v1-3-0-plugins-inputs-google_pubsub.md) | 2023-08-22 |
@@ -28,15 +24,3 @@ Versioned plugin documentation is not available for plugins released prior to Lo
 | [v1.0.4](v1-0-4-plugins-inputs-google_pubsub.md) | 2017-11-07 |
 | [v1.0.3](v1-0-3-plugins-inputs-google_pubsub.md) | 2017-08-15 |
 | [v1.0.1](v1-0-1-plugins-inputs-google_pubsub.md) | 2017-06-23 |
-
-
-
-
-
-
-
-
-
-
-
-

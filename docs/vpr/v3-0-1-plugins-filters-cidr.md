@@ -6,46 +6,41 @@ mapped_pages:
 
 # Cidr filter plugin v3.0.1 [v3.0.1-plugins-filters-cidr]
 
-
 * Plugin version: v3.0.1
 * Released on: 2017-06-23
 * [Changelog](https://github.com/logstash-plugins/logstash-filter-cidr/blob/v3.0.1/CHANGELOG.md)
 
 For other versions, see the [overview list](filter-cidr-index.md).
 
-To learn more about Logstash, see the [Logstash Reference](logstash://reference/index.md).
+To learn more about Logstash, see the [Logstash Reference](https://www.elastic.co/guide/en/logstash/current/index.html).
 
-## Getting help [_getting_help_1706]
+## Getting help [_getting_help_1723]
 
 For questions about the plugin, open a topic in the [Discuss](http://discuss.elastic.co) forums. For bugs or feature requests, open an issue in [Github](https://github.com/logstash-plugins/logstash-filter-cidr). For the list of Elastic supported plugins, please consult the [Elastic Support Matrix](https://www.elastic.co/support/matrix#matrix_logstash_plugins).
 
-
-## Description [_description_1684]
+## Description [_description_1701]
 
 The CIDR filter is for checking IP addresses in events against a list of network blocks that might contain it. Multiple addresses can be checked against multiple networks, any match succeeds. Upon success additional tags and/or fields can be added to the event.
-
 
 ## Cidr Filter Configuration Options [v3.0.1-plugins-filters-cidr-options]
 
 This plugin supports the following configuration options plus the [Common options](v3-0-1-plugins-filters-cidr.md#v3.0.1-plugins-filters-cidr-common-options) described later.
 
 | Setting | Input type | Required |
-| --- | --- | --- |
-| [`address`](v3-0-1-plugins-filters-cidr.md#v3.0.1-plugins-filters-cidr-address) | [array](logstash://reference/configuration-file-structure.md#array) | No |
-| [`network`](v3-0-1-plugins-filters-cidr.md#v3.0.1-plugins-filters-cidr-network) | [array](logstash://reference/configuration-file-structure.md#array) | No |
+| :- | :- | :- |
+| [`address`](v3-0-1-plugins-filters-cidr.md#v3.0.1-plugins-filters-cidr-address) | [array](/lsr/value-types.md#array) | No |
+| [`network`](v3-0-1-plugins-filters-cidr.md#v3.0.1-plugins-filters-cidr-network) | [array](/lsr/value-types.md#array) | No |
 
 Also see [Common options](v3-0-1-plugins-filters-cidr.md#v3.0.1-plugins-filters-cidr-common-options) for a list of options supported by all filter plugins.
 
- 
-
 ### `address` [v3.0.1-plugins-filters-cidr-address]
 
-* Value type is [array](logstash://reference/configuration-file-structure.md#array)
+* Value type is [array](/lsr/value-types.md#array)
 * Default value is `[]`
 
 The IP address(es) to check with. Example:
 
-```ruby
+```
     filter {
       cidr {
         add_tag => [ "testnet" ]
@@ -55,15 +50,14 @@ The IP address(es) to check with. Example:
     }
 ```
 
-
 ### `network` [v3.0.1-plugins-filters-cidr-network]
 
-* Value type is [array](logstash://reference/configuration-file-structure.md#array)
+* Value type is [array](/lsr/value-types.md#array)
 * Default value is `[]`
 
 The IP network(s) to check against. Example:
 
-```ruby
+```
     filter {
       cidr {
         add_tag => [ "linklocal" ]
@@ -73,32 +67,30 @@ The IP network(s) to check against. Example:
     }
 ```
 
-
-
 ## Common options [v3.0.1-plugins-filters-cidr-common-options]
 
 These configuration options are supported by all filter plugins:
 
 | Setting | Input type | Required |
-| --- | --- | --- |
-| [`add_field`](v3-0-1-plugins-filters-cidr.md#v3.0.1-plugins-filters-cidr-add_field) | [hash](logstash://reference/configuration-file-structure.md#hash) | No |
-| [`add_tag`](v3-0-1-plugins-filters-cidr.md#v3.0.1-plugins-filters-cidr-add_tag) | [array](logstash://reference/configuration-file-structure.md#array) | No |
-| [`enable_metric`](v3-0-1-plugins-filters-cidr.md#v3.0.1-plugins-filters-cidr-enable_metric) | [boolean](logstash://reference/configuration-file-structure.md#boolean) | No |
-| [`id`](v3-0-1-plugins-filters-cidr.md#v3.0.1-plugins-filters-cidr-id) | [string](logstash://reference/configuration-file-structure.md#string) | No |
-| [`periodic_flush`](v3-0-1-plugins-filters-cidr.md#v3.0.1-plugins-filters-cidr-periodic_flush) | [boolean](logstash://reference/configuration-file-structure.md#boolean) | No |
-| [`remove_field`](v3-0-1-plugins-filters-cidr.md#v3.0.1-plugins-filters-cidr-remove_field) | [array](logstash://reference/configuration-file-structure.md#array) | No |
-| [`remove_tag`](v3-0-1-plugins-filters-cidr.md#v3.0.1-plugins-filters-cidr-remove_tag) | [array](logstash://reference/configuration-file-structure.md#array) | No |
+| :- | :- | :- |
+| [`add_field`](v3-0-1-plugins-filters-cidr.md#v3.0.1-plugins-filters-cidr-add_field) | [hash](/lsr/value-types.md#hash) | No |
+| [`add_tag`](v3-0-1-plugins-filters-cidr.md#v3.0.1-plugins-filters-cidr-add_tag) | [array](/lsr/value-types.md#array) | No |
+| [`enable_metric`](v3-0-1-plugins-filters-cidr.md#v3.0.1-plugins-filters-cidr-enable_metric) | [boolean](/lsr/value-types.md#boolean) | No |
+| [`id`](v3-0-1-plugins-filters-cidr.md#v3.0.1-plugins-filters-cidr-id) | [string](/lsr/value-types.md#string) | No |
+| [`periodic_flush`](v3-0-1-plugins-filters-cidr.md#v3.0.1-plugins-filters-cidr-periodic_flush) | [boolean](/lsr/value-types.md#boolean) | No |
+| [`remove_field`](v3-0-1-plugins-filters-cidr.md#v3.0.1-plugins-filters-cidr-remove_field) | [array](/lsr/value-types.md#array) | No |
+| [`remove_tag`](v3-0-1-plugins-filters-cidr.md#v3.0.1-plugins-filters-cidr-remove_tag) | [array](/lsr/value-types.md#array) | No |
 
 ### `add_field` [v3.0.1-plugins-filters-cidr-add_field]
 
-* Value type is [hash](logstash://reference/configuration-file-structure.md#hash)
+* Value type is [hash](/lsr/value-types.md#hash)
 * Default value is `{}`
 
-If this filter is successful, add any arbitrary fields to this event. Field names can be dynamic and include parts of the event using the `%{{field}}`.
+If this filter is successful, add any arbitrary fields to this event. Field names can be dynamic and include parts of the event using the `%{field}`.
 
 Example:
 
-```json
+```
     filter {
       cidr {
         add_field => { "foo_%{somefield}" => "Hello world, from %{host}" }
@@ -106,7 +98,7 @@ Example:
     }
 ```
 
-```json
+```
     # You can also add multiple fields at once:
     filter {
       cidr {
@@ -118,19 +110,18 @@ Example:
     }
 ```
 
-If the event has field `"somefield" == "hello"` this filter, on success, would add field `foo_hello` if it is present, with the value above and the `%{{host}}` piece replaced with that value from the event. The second example would also add a hardcoded field.
-
+If the event has field `"somefield" == "hello"` this filter, on success, would add field `foo_hello` if it is present, with the value above and the `%{host}` piece replaced with that value from the event. The second example would also add a hardcoded field.
 
 ### `add_tag` [v3.0.1-plugins-filters-cidr-add_tag]
 
-* Value type is [array](logstash://reference/configuration-file-structure.md#array)
+* Value type is [array](/lsr/value-types.md#array)
 * Default value is `[]`
 
-If this filter is successful, add arbitrary tags to the event. Tags can be dynamic and include parts of the event using the `%{{field}}` syntax.
+If this filter is successful, add arbitrary tags to the event. Tags can be dynamic and include parts of the event using the `%{field}` syntax.
 
 Example:
 
-```json
+```
     filter {
       cidr {
         add_tag => [ "foo_%{somefield}" ]
@@ -138,7 +129,7 @@ Example:
     }
 ```
 
-```json
+```
     # You can also add multiple tags at once:
     filter {
       cidr {
@@ -149,23 +140,21 @@ Example:
 
 If the event has field `"somefield" == "hello"` this filter, on success, would add a tag `foo_hello` (and the second example would of course add a `taggedy_tag` tag).
 
-
 ### `enable_metric` [v3.0.1-plugins-filters-cidr-enable_metric]
 
-* Value type is [boolean](logstash://reference/configuration-file-structure.md#boolean)
+* Value type is [boolean](/lsr/value-types.md#boolean)
 * Default value is `true`
 
 Disable or enable metric logging for this specific plugin instance by default we record all the metrics we can, but you can disable metrics collection for a specific plugin.
 
-
 ### `id` [v3.0.1-plugins-filters-cidr-id]
 
-* Value type is [string](logstash://reference/configuration-file-structure.md#string)
+* Value type is [string](/lsr/value-types.md#string)
 * There is no default value for this setting.
 
 Add a unique `ID` to the plugin configuration. If no ID is specified, Logstash will generate one. It is strongly recommended to set this ID in your configuration. This is particularly useful when you have two or more plugins of the same type, for example, if you have 2 cidr filters. Adding a named ID in this case will help in monitoring Logstash when using the monitoring APIs.
 
-```json
+```
     filter {
       cidr {
         id => "ABC"
@@ -173,23 +162,21 @@ Add a unique `ID` to the plugin configuration. If no ID is specified, Logstash w
     }
 ```
 
-
 ### `periodic_flush` [v3.0.1-plugins-filters-cidr-periodic_flush]
 
-* Value type is [boolean](logstash://reference/configuration-file-structure.md#boolean)
+* Value type is [boolean](/lsr/value-types.md#boolean)
 * Default value is `false`
 
 Call the filter flush method at regular interval. Optional.
 
-
 ### `remove_field` [v3.0.1-plugins-filters-cidr-remove_field]
 
-* Value type is [array](logstash://reference/configuration-file-structure.md#array)
+* Value type is [array](/lsr/value-types.md#array)
 * Default value is `[]`
 
-If this filter is successful, remove arbitrary fields from this event. Fields names can be dynamic and include parts of the event using the `%{{field}}` Example:
+If this filter is successful, remove arbitrary fields from this event. Fields names can be dynamic and include parts of the event using the %{field} Example:
 
-```json
+```
     filter {
       cidr {
         remove_field => [ "foo_%{somefield}" ]
@@ -197,7 +184,7 @@ If this filter is successful, remove arbitrary fields from this event. Fields na
     }
 ```
 
-```json
+```
     # You can also remove multiple fields at once:
     filter {
       cidr {
@@ -208,17 +195,16 @@ If this filter is successful, remove arbitrary fields from this event. Fields na
 
 If the event has field `"somefield" == "hello"` this filter, on success, would remove the field with name `foo_hello` if it is present. The second example would remove an additional, non-dynamic field.
 
-
 ### `remove_tag` [v3.0.1-plugins-filters-cidr-remove_tag]
 
-* Value type is [array](logstash://reference/configuration-file-structure.md#array)
+* Value type is [array](/lsr/value-types.md#array)
 * Default value is `[]`
 
-If this filter is successful, remove arbitrary tags from the event. Tags can be dynamic and include parts of the event using the `%{{field}}` syntax.
+If this filter is successful, remove arbitrary tags from the event. Tags can be dynamic and include parts of the event using the `%{field}` syntax.
 
 Example:
 
-```json
+```
     filter {
       cidr {
         remove_tag => [ "foo_%{somefield}" ]
@@ -226,7 +212,7 @@ Example:
     }
 ```
 
-```json
+```
     # You can also remove multiple tags at once:
     filter {
       cidr {
@@ -236,6 +222,3 @@ Example:
 ```
 
 If the event has field `"somefield" == "hello"` this filter, on success, would remove the tag `foo_hello` if it is present. The second example would remove a sad, unwanted tag as well.
-
-
-

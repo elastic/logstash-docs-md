@@ -6,32 +6,28 @@ mapped_pages:
 
 # AWS Integration Plugin v7.1.7 [v7.1.7-plugins-integrations-aws]
 
-
 * Plugin version: v7.1.7
 * Released on: 2024-07-02
 * [Changelog](https://github.com/logstash-plugins/logstash-integration-aws/blob/v7.1.7/CHANGELOG.md)
 
 For other versions, see the [overview list](integration-aws-index.md).
 
-To learn more about Logstash, see the [Logstash Reference](logstash://reference/index.md).
+To learn more about Logstash, see the [Logstash Reference](https://www.elastic.co/guide/en/logstash/current/index.html).
 
-## Getting help [_getting_help_2]
+## Getting help [_getting_help_4]
 
 For questions about the plugin, open a topic in the [Discuss](http://discuss.elastic.co) forums. For bugs or feature requests, open an issue in [Github](https://github.com/logstash-plugins/logstash-integration-aws). For the list of Elastic supported plugins, please consult the [Elastic Support Matrix](https://www.elastic.co/support/matrix#matrix_logstash_plugins).
 
-
-## Description [_description_2]
+## Description [_description_4]
 
 The AWS Integration Plugin provides integrated plugins for working with Amazon Web Services:
 
-* [Cloudfront Codec Plugin](/lsr/plugins-codecs-cloudfront.md)
-* [Cloudtrail Codec Plugin](/lsr/plugins-codecs-cloudtrail.md)
-* [Cloudwatch Input Plugin](/lsr/plugins-inputs-cloudwatch.md)
-* [S3 Input Plugin](/lsr/plugins-inputs-s3.md)
-* [Sqs Input Plugin](/lsr/plugins-inputs-sqs.md)
-* [Cloudwatch Output Plugin](/lsr/plugins-outputs-cloudwatch.md)
-* [S3 Output Plugin](/lsr/plugins-outputs-s3.md)
-* [Sns Output Plugin](/lsr/plugins-outputs-sns.md)
-* [Sqs Output Plugin](/lsr/plugins-outputs-sqs.md)
-
-
+* [Cloudfront Codec Plugin](https://www.elastic.co/guide/en/logstash/current/plugins-codecs-cloudfront.html)
+* [Cloudtrail Codec Plugin](https://www.elastic.co/guide/en/logstash/current/plugins-codecs-cloudtrail.html)
+* [Cloudwatch Input Plugin](https://www.elastic.co/guide/en/logstash/current/plugins-inputs-cloudwatch.html)
+* [S3 Input Plugin](https://www.elastic.co/guide/en/logstash/current/plugins-inputs-s3.html)
+* [Sqs Input Plugin](https://www.elastic.co/guide/en/logstash/current/plugins-inputs-sqs.html)
+* [Cloudwatch Output Plugin](https://www.elastic.co/guide/en/logstash/current/plugins-outputs-cloudwatch.html)
+* [S3 Output Plugin](https://www.elastic.co/guide/en/logstash/current/plugins-outputs-s3.html)
+* [Sns Output Plugin](https://www.elastic.co/guide/en/logstash/current/plugins-outputs-sns.html)
+* [Sqs Output Plugin](https://www.elastic.co/guide/en/logstash/current/plugins-outputs-sqs.html)

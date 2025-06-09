@@ -6,36 +6,32 @@ mapped_pages:
 
 # Gelf output plugin [plugins-outputs-gelf]
 
-
 * Plugin version: v3.1.7
 * Released on: 2018-04-06
 * [Changelog](https://github.com/logstash-plugins/logstash-output-gelf/blob/v3.1.7/CHANGELOG.md)
 
-For other versions, see the [Versioned plugin docs](/vpr/output-gelf-index.md).
+For other versions, see the [Versioned plugin docs](https://www.elastic.co/guide/en/logstash-versioned-plugins/current/output-gelf-index.html).
 
 ## Installation [_installation_28]
 
-For plugins not bundled by default, it is easy to install by running `bin/logstash-plugin install logstash-output-gelf`. See [Working with plugins](logstash://reference/working-with-plugins.md) for more details.
-
+For plugins not bundled by default, it is easy to install by running `bin/logstash-plugin install logstash-output-gelf`. See [Working with plugins](https://www.elastic.co/guide/en/logstash/8.18/working-with-plugins.html) for more details.
 
 ## Getting help [_getting_help_79]
 
 For questions about the plugin, open a topic in the [Discuss](http://discuss.elastic.co) forums. For bugs or feature requests, open an issue in [Github](https://github.com/logstash-plugins/logstash-output-gelf). For the list of Elastic supported plugins, please consult the [Elastic Support Matrix](https://www.elastic.co/support/matrix#logstash_plugins).
 
-
-## Description [_description_78]
+## Description [_description_79]
 
 This output generates messages in GELF format. This is most useful if you want to use Logstash to output events to Graylog2.
 
-More information at [The Graylog2 GELF specs page](http://docs.graylog.org/en/2.3/pages/gelf.md#gelf-payload-specification)
-
+More information at [The Graylog2 GELF specs page](http://docs.graylog.org/en/2.3/pages/gelf.html#gelf-payload-specification)
 
 ## Gelf Output Configuration Options [plugins-outputs-gelf-options]
 
 This plugin supports the following configuration options plus the [Common options](plugins-outputs-gelf.md#plugins-outputs-gelf-common-options) described later.
 
 | Setting | Input type | Required |
-| --- | --- | --- |
+| :- | :- | :- |
 | [`chunksize`](plugins-outputs-gelf.md#plugins-outputs-gelf-chunksize) | [number](value-types.md#number) | No |
 | [`custom_fields`](plugins-outputs-gelf.md#plugins-outputs-gelf-custom_fields) | [hash](value-types.md#hash) | No |
 | [`full_message`](plugins-outputs-gelf.md#plugins-outputs-gelf-full_message) | [string](value-types.md#string) | No |
@@ -51,15 +47,12 @@ This plugin supports the following configuration options plus the [Common option
 
 Also see [Common options](plugins-outputs-gelf.md#plugins-outputs-gelf-common-options) for a list of options supported by all output plugins.
 
- 
-
 ### `chunksize` [plugins-outputs-gelf-chunksize]
 
 * Value type is [number](value-types.md#number)
 * Default value is `1420`
 
 The chunksize. You usually don’t need to change this.
-
 
 ### `custom_fields` [plugins-outputs-gelf-custom_fields]
 
@@ -68,14 +61,12 @@ The chunksize. You usually don’t need to change this.
 
 The GELF custom field mappings. GELF supports arbitrary attributes as custom fields. This exposes that. Exclude the `_` portion of the field name e.g. `custom_fields => ['foo_field', 'some_value']` sets `_foo_field` = `some_value`.
 
-
 ### `full_message` [plugins-outputs-gelf-full_message]
 
 * Value type is [string](value-types.md#string)
-* Default value is `"%{{message}}"`
+* Default value is `"%{message}"`
 
-The GELF full message. Dynamic values like `%{{foo}}` are permitted here.
-
+The GELF full message. Dynamic values like `%{foo}` are permitted here.
 
 ### `host` [plugins-outputs-gelf-host]
 
@@ -85,7 +76,6 @@ The GELF full message. Dynamic values like `%{{foo}}` are permitted here.
 
 Graylog2 server IP address or hostname.
 
-
 ### `ignore_metadata` [plugins-outputs-gelf-ignore_metadata]
 
 * Value type is [array](value-types.md#array)
@@ -93,16 +83,14 @@ Graylog2 server IP address or hostname.
 
 Ignore these fields when `ship_metadata` is set. Typically this lists the fields used in dynamic values for GELF fields.
 
-
 ### `level` [plugins-outputs-gelf-level]
 
 * Value type is [array](value-types.md#array)
-* Default value is `["%{{severity}}", "INFO"]`
+* Default value is `["%{severity}", "INFO"]`
 
-The GELF message level. Dynamic values like `%{{level}}` are permitted here; useful if you want to parse the *log level* from an event and use that as the GELF level/severity.
+The GELF message level. Dynamic values like `%{level}` are permitted here; useful if you want to parse the *log level* from an event and use that as the GELF level/severity.
 
-Values here can be integers [0..7] inclusive or any of "debug", "info", "warn", "error", "fatal" (case insensitive). Single-character versions of these are also valid, "d", "i", "w", "e", "f", "u" The following additional severity\_labels from Logstash’s  syslog\_pri filter are accepted: "emergency", "alert", "critical",  "warning", "notice", and "informational".
-
+Values here can be integers \[0..7] inclusive or any of "debug", "info", "warn", "error", "fatal" (case insensitive). Single-character versions of these are also valid, "d", "i", "w", "e", "f", "u" The following additional severity\\\_labels from Logstash’s syslog\\\_pri filter are accepted: "emergency", "alert", "critical", "warning", "notice", and "informational".
 
 ### `port` [plugins-outputs-gelf-port]
 
@@ -110,7 +98,6 @@ Values here can be integers [0..7] inclusive or any of "debug", "info", "warn", 
 * Default value is `12201`
 
 Graylog2 server port number.
-
 
 ### `protocol` [plugins-outputs-gelf-protocol]
 
@@ -121,14 +108,12 @@ By default, this plugin outputs via the UDP transfer protocol, but can be config
 
 Values here can be either "TCP" or "UDP".
 
-
 ### `sender` [plugins-outputs-gelf-sender]
 
 * Value type is [string](value-types.md#string)
-* Default value is `"%{{host}}"`
+* Default value is `"%{host}"`
 
 Allow overriding of the GELF `sender` field. This is useful if you want to use something other than the event’s source host as the "sender" of an event. A common case for this is using the application name instead of the hostname.
-
 
 ### `ship_metadata` [plugins-outputs-gelf-ship_metadata]
 
@@ -137,14 +122,12 @@ Allow overriding of the GELF `sender` field. This is useful if you want to use s
 
 Should Logstash ship metadata within event object? This will cause Logstash to ship any fields in the event (such as those created by grok) in the GELF messages. These will be sent as underscored "additional fields".
 
-
 ### `ship_tags` [plugins-outputs-gelf-ship_tags]
 
 * Value type is [boolean](value-types.md#boolean)
 * Default value is `true`
 
 Ship tags within events. This will cause Logstash to ship the tags of an event as the field `\_tags`.
-
 
 ### `short_message` [plugins-outputs-gelf-short_message]
 
@@ -153,42 +136,38 @@ Ship tags within events. This will cause Logstash to ship the tags of an event a
 
 The GELF short message field name. If the field does not exist or is empty, the event message is taken instead.
 
-
-
 ## Common options [plugins-outputs-gelf-common-options]
 
 These configuration options are supported by all output plugins:
 
 | Setting | Input type | Required |
-| --- | --- | --- |
-| [`codec`](plugins-outputs-gelf.md#plugins-outputs-gelf-codec) | [codec](logstash://reference/configuration-file-structure.md#codec) | No |
-| [`enable_metric`](plugins-outputs-gelf.md#plugins-outputs-gelf-enable_metric) | [boolean](logstash://reference/configuration-file-structure.md#boolean) | No |
-| [`id`](plugins-outputs-gelf.md#plugins-outputs-gelf-id) | [string](logstash://reference/configuration-file-structure.md#string) | No |
+| :- | :- | :- |
+| [`codec`](plugins-outputs-gelf.md#plugins-outputs-gelf-codec) | [codec](value-types.md#codec) | No |
+| [`enable_metric`](plugins-outputs-gelf.md#plugins-outputs-gelf-enable_metric) | [boolean](value-types.md#boolean) | No |
+| [`id`](plugins-outputs-gelf.md#plugins-outputs-gelf-id) | [string](value-types.md#string) | No |
 
 ### `codec` [plugins-outputs-gelf-codec]
 
-* Value type is [codec](logstash://reference/configuration-file-structure.md#codec)
+* Value type is [codec](value-types.md#codec)
 * Default value is `"plain"`
 
 The codec used for output data. Output codecs are a convenient method for encoding your data before it leaves the output without needing a separate filter in your Logstash pipeline.
 
-
 ### `enable_metric` [plugins-outputs-gelf-enable_metric]
 
-* Value type is [boolean](logstash://reference/configuration-file-structure.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `true`
 
 Disable or enable metric logging for this specific plugin instance. By default we record all the metrics we can, but you can disable metrics collection for a specific plugin.
 
-
 ### `id` [plugins-outputs-gelf-id]
 
-* Value type is [string](logstash://reference/configuration-file-structure.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 Add a unique `ID` to the plugin configuration. If no ID is specified, Logstash will generate one. It is strongly recommended to set this ID in your configuration. This is particularly useful when you have two or more plugins of the same type. For example, if you have 2 gelf outputs. Adding a named ID in this case will help in monitoring Logstash when using the monitoring APIs.
 
-```json
+```
 output {
   gelf {
     id => "my_plugin_id"
@@ -196,10 +175,4 @@ output {
 }
 ```
 
-::::{note} 
 Variable substitution in the `id` field only supports environment variables and does not support the use of values from the secret store.
-::::
-
-
-
-

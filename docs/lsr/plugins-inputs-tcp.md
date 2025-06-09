@@ -6,19 +6,17 @@ mapped_pages:
 
 # Tcp input plugin [plugins-inputs-tcp]
 
+* Plugin version: v6.4.6
+* Released on: 2025-02-12
+* [Changelog](https://github.com/logstash-plugins/logstash-input-tcp/blob/v6.4.6/CHANGELOG.md)
 
-* Plugin version: v7.0.0
-* Released on: 2025-01-10
-* [Changelog](https://github.com/logstash-plugins/logstash-input-tcp/blob/v7.0.0/CHANGELOG.md)
-
-For other versions, see the [Versioned plugin docs](/vpr/input-tcp-index.md).
+For other versions, see the [Versioned plugin docs](https://www.elastic.co/guide/en/logstash-versioned-plugins/current/input-tcp-index.html).
 
 ## Getting help [_getting_help_57]
 
 For questions about the plugin, open a topic in the [Discuss](http://discuss.elastic.co) forums. For bugs or feature requests, open an issue in [Github](https://github.com/logstash-plugins/logstash-input-tcp). For the list of Elastic supported plugins, please consult the [Elastic Support Matrix](https://www.elastic.co/support/matrix#logstash_plugins).
 
-
-## Description [_description_56]
+## Description [_description_57]
 
 Read events over a TCP socket.
 
@@ -48,6 +46,7 @@ Note, you will want to change the `host` and `port` settings in this configurati
   </Loggers>
 </Configuration>
 ```
+
 To accept this in Logstash, you will want tcp input and a date filter:
 
 ```
@@ -58,6 +57,7 @@ input {
   }
 }
 ```
+
 and add a date filter to take log4j2’s `timeMillis` field and use it as the event timestamp
 
 ```
@@ -68,7 +68,6 @@ filter {
 }
 ```
 
-
 ## Event Metadata and the Elastic Common Schema (ECS) [plugins-inputs-tcp-ecs_metadata]
 
 In addition to decoding the events, this input will add metadata about the TCP connection itself to each event. This can be helpful when applications are configured to send events directly to this input’s TCP listener without including information about themselves.
@@ -76,17 +75,17 @@ In addition to decoding the events, this input will add metadata about the TCP c
 Historically, this metadata was added to a variety of non-standard top-level fields, which had the potential to create confusion and schema conflicts downstream. With ECS compatibility mode, we can ensure a pipeline still has access to this metadata throughout the event’s lifecycle without polluting the top-level namespace.
 
 | Metadata Group | ecs: `v1`, `v8` | ecs: `disabled` |
-| --- | --- | --- |
-| Source Metadata from the TCP connectionon which events are being received, includingthe sender’s name, ip, and outbound port. | [@metadata][input][tcp][source][name] | [host] |
-| [@metadata][input][tcp][source][ip] | [@metadata][ip_address] |
-| [@metadata][input][tcp][source][port] | [port] |
-| Proxy Metadata from a proxied TCP connection.Available when receiving events by proxy and`proxy_protocol => true` | [@metadata][input][tcp][proxy][ip] | [proxy_host] |
-| [@metadata][input][tcp][proxy][port] | [proxy_port] |
-| SSL Subject Metadata from a secured TCPconnection. Available when `ssl_enabled => true`AND `ssl_client_authentication => 'optional' or 'required'` | [@metadata][input][tcp][ssl][subject] | [sslsubject] |
+| :- | :- | :- |
+| Source Metadata from the TCP connection on which events are being received, including the sender’s name, ip, and outbound port. | \[@metadata]\[input]\[tcp]\[source]\[name] | \[host] |
+| | \[@metadata]\[input]\[tcp]\[source]\[ip] | \[@metadata]\[ip\_address] |
+| | \[@metadata]\[input]\[tcp]\[source]\[port] | \[port] |
+| Proxy Metadata from a proxied TCP connection. Available when receiving events by proxy and `proxy_protocol => true` | \[@metadata]\[input]\[tcp]\[proxy]\[ip] | \[proxy\_host] |
+| | \[@metadata]\[input]\[tcp]\[proxy]\[port] | \[proxy\_port] |
+| SSL Subject Metadata from a secured TCP connection. Available when `ssl_enabled => true` AND `ssl_client_authentication => 'optional' or 'required'` | \[@metadata]\[input]\[tcp]\[ssl]\[subject] | \[sslsubject] |
 
-For example, the Elastic Common Schema reserves the [top-level `host` field](https://www.elastic.co/guide/en/ecs/current/ecs-host.md) for information about the host on which the event happened. If an event is missing this metadata, it can be copied into place from the source TCP connection metadata that has been added to the event:
+For example, the Elastic Common Schema reserves the [top-level `host` field](https://www.elastic.co/guide/en/ecs/current/ecs-host.html) for information about the host on which the event happened. If an event is missing this metadata, it can be copied into place from the source TCP connection metadata that has been added to the event:
 
-```txt
+```
 filter {
   if [@metadata][input][tcp][source] and ![host] {
     mutate {
@@ -99,39 +98,34 @@ filter {
 }
 ```
 
-
 ## Tcp Input Configuration Options [plugins-inputs-tcp-options]
 
 This plugin supports the following configuration options plus the [Common options](plugins-inputs-tcp.md#plugins-inputs-tcp-common-options) described later.
 
-::::{note} 
-As of version `7.0.0` of this plugin, a number of previously deprecated settings related to SSL have been removed. Please see the [TCP Input Obsolete Configuration Options](plugins-inputs-tcp.md#plugins-inputs-tcp-obsolete-options) for more details.
-::::
-
-
 | Setting | Input type | Required |
-| --- | --- | --- |
+| :- | :- | :- |
 | [`dns_reverse_lookup_enabled`](plugins-inputs-tcp.md#plugins-inputs-tcp-dns_reverse_lookup_enabled) | [boolean](value-types.md#boolean) | No |
 | [`ecs_compatibility`](plugins-inputs-tcp.md#plugins-inputs-tcp-ecs_compatibility) | [string](value-types.md#string) | No |
 | [`host`](plugins-inputs-tcp.md#plugins-inputs-tcp-host) | [string](value-types.md#string) | No |
 | [`mode`](plugins-inputs-tcp.md#plugins-inputs-tcp-mode) | [string](value-types.md#string), one of `["server", "client"]` | No |
 | [`port`](plugins-inputs-tcp.md#plugins-inputs-tcp-port) | [number](value-types.md#number) | Yes |
 | [`proxy_protocol`](plugins-inputs-tcp.md#plugins-inputs-tcp-proxy_protocol) | [boolean](value-types.md#boolean) | No |
+| [`ssl_cert`](plugins-inputs-tcp.md#plugins-inputs-tcp-ssl_cert) | a valid filesystem path | *Deprecated* |
 | [`ssl_certificate`](plugins-inputs-tcp.md#plugins-inputs-tcp-ssl_certificate) | a valid filesystem path | No |
 | [`ssl_certificate_authorities`](plugins-inputs-tcp.md#plugins-inputs-tcp-ssl_certificate_authorities) | [array](value-types.md#array) | No |
 | [`ssl_cipher_suites`](plugins-inputs-tcp.md#plugins-inputs-tcp-ssl_cipher_suites) | [string](value-types.md#string) | No |
 | [`ssl_client_authentication`](plugins-inputs-tcp.md#plugins-inputs-tcp-ssl_client_authentication) | [string](value-types.md#string), one of `["none", "optional", "required"]` | No |
+| [`ssl_enable`](plugins-inputs-tcp.md#plugins-inputs-tcp-ssl_enable) | [boolean](value-types.md#boolean) | *Deprecated* |
 | [`ssl_enabled`](plugins-inputs-tcp.md#plugins-inputs-tcp-ssl_enabled) | [boolean](value-types.md#boolean) | No |
 | [`ssl_extra_chain_certs`](plugins-inputs-tcp.md#plugins-inputs-tcp-ssl_extra_chain_certs) | [array](value-types.md#array) | No |
 | [`ssl_key`](plugins-inputs-tcp.md#plugins-inputs-tcp-ssl_key) | a valid filesystem path | No |
 | [`ssl_key_passphrase`](plugins-inputs-tcp.md#plugins-inputs-tcp-ssl_key_passphrase) | [password](value-types.md#password) | No |
 | [`ssl_supported_protocols`](plugins-inputs-tcp.md#plugins-inputs-tcp-ssl_supported_protocols) | [string](value-types.md#string) | No |
 | [`ssl_verification_mode`](plugins-inputs-tcp.md#plugins-inputs-tcp-ssl_verification_mode) | [string](value-types.md#string), one of `["full", "none"]` | No |
+| [`ssl_verify`](plugins-inputs-tcp.md#plugins-inputs-tcp-ssl_verify) | [boolean](value-types.md#boolean) | *Deprecated* |
 | [`tcp_keep_alive`](plugins-inputs-tcp.md#plugins-inputs-tcp-tcp_keep_alive) | [boolean](value-types.md#boolean) | No |
 
 Also see [Common options](plugins-inputs-tcp.md#plugins-inputs-tcp-common-options) for a list of options supported by all input plugins.
-
- 
 
 ### `dns_reverse_lookup_enabled` [plugins-inputs-tcp-dns_reverse_lookup_enabled]
 
@@ -140,23 +134,21 @@ Also see [Common options](plugins-inputs-tcp.md#plugins-inputs-tcp-common-option
 
 It is possible to avoid DNS reverse-lookups by disabling this setting. If disabled, the address metadata that is added to events will contain the source address as-specified at the TCP layer and IPs will not be resolved to hostnames.
 
-
 ### `ecs_compatibility` [plugins-inputs-tcp-ecs_compatibility]
 
 * Value type is [string](value-types.md#string)
+
 * Supported values are:
 
-    * `disabled`: unstructured connection metadata added at root level
-    * `v1`,`v8`: structured connection metadata added under `[@metadata][input][tcp]`
+  * `disabled`: unstructured connection metadata added at root level
+  * `v1`,`v8`: structured connection metadata added under `[@metadata][input][tcp]`
 
 * Default value depends on which version of Logstash is running:
 
-    * When Logstash provides a `pipeline.ecs_compatibility` setting, its value is used as the default
-    * Otherwise, the default value is `disabled`.
+  * When Logstash provides a `pipeline.ecs_compatibility` setting, its value is used as the default
+  * Otherwise, the default value is `disabled`.
 
-
-Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)](https://www.elastic.co/guide/en/ecs/current/index.md). The value of this setting affects the [placement of a TCP connection’s metadata](plugins-inputs-tcp.md#plugins-inputs-tcp-ecs_metadata) on events.
-
+Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)](https://www.elastic.co/guide/en/ecs/current/index.html). The value of this setting affects the [placement of a TCP connection’s metadata](plugins-inputs-tcp.md#plugins-inputs-tcp-ecs_metadata) on events.
 
 ### `host` [plugins-inputs-tcp-host]
 
@@ -165,14 +157,12 @@ Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)](ht
 
 When mode is `server`, the address to listen on. When mode is `client`, the address to connect to.
 
-
 ### `mode` [plugins-inputs-tcp-mode]
 
 * Value can be any of: `server`, `client`
 * Default value is `"server"`
 
 Mode to operate in. `server` listens for client connections, `client` connects to a server.
-
 
 ### `port` [plugins-inputs-tcp-port]
 
@@ -182,14 +172,23 @@ Mode to operate in. `server` listens for client connections, `client` connects t
 
 When mode is `server`, the port to listen on. When mode is `client`, the port to connect to.
 
-
 ### `proxy_protocol` [plugins-inputs-tcp-proxy_protocol]
 
 * Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
-Proxy protocol support, only v1 is supported at this time [http://www.haproxy.org/download/1.5/doc/proxy-protocol.txt](http://www.haproxy.org/download/1.5/doc/proxy-protocol.txt)
+Proxy protocol support, only v1 is supported at this time <http://www.haproxy.org/download/1.5/doc/proxy-protocol.txt>
 
+### `ssl_cert` [plugins-inputs-tcp-ssl_cert]
+
+Deprecated in 6.4.0.
+
+Replaced by [`ssl_certificate`](plugins-inputs-tcp.md#plugins-inputs-tcp-ssl_certificate)
+
+* Value type is [path](value-types.md#path)
+* There is no default value for this setting.
+
+Path to certificate in PEM format. This certificate will be presented to the connecting clients.
 
 ### `ssl_certificate` [plugins-inputs-tcp-ssl_certificate]
 
@@ -198,7 +197,6 @@ Proxy protocol support, only v1 is supported at this time [http://www.haproxy.or
 
 Path to certificate in PEM format. This certificate will be presented to the other part of the TLS connection.
 
-
 ### `ssl_certificate_authorities` [plugins-inputs-tcp-ssl_certificate_authorities]
 
 * Value type is [array](value-types.md#array)
@@ -206,19 +204,14 @@ Path to certificate in PEM format. This certificate will be presented to the oth
 
 Validate client certificate or certificate chain against these authorities. You can define multiple files or paths. All the certificates will be read and added to the trust store.
 
-
 ### `ssl_cipher_suites` [plugins-inputs-tcp-ssl_cipher_suites]
 
 * Value type is [string](value-types.md#string)
 * Default value includes *all* cipher suites enabled by the JDK and depends on JDK configuration
 
-Supported cipher suites vary depending on Java version used, and entries look like `TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384`. For more information, see Oracle’s [JDK SunJSSE provider documentation](https://docs.oracle.com/en/java/javase/11/security/oracle-providers.md#GUID-7093246A-31A3-4304-AC5F-5FB6400405E2) and the table of supported [Java cipher suite names](https://docs.oracle.com/en/java/javase/11/docs/specs/security/standard-names.md#jsse-cipher-suite-names).
+Supported cipher suites vary depending on Java version used, and entries look like `TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384`. For more information, see Oracle’s [JDK SunJSSE provider documentation](https://docs.oracle.com/en/java/javase/11/security/oracle-providers.html#GUID-7093246A-31A3-4304-AC5F-5FB6400405E2) and the table of supported [Java cipher suite names](https://docs.oracle.com/en/java/javase/11/docs/specs/security/standard-names.html#jsse-cipher-suite-names).
 
-::::{note} 
 To check the supported cipher suites locally run the following script: `$LS_HOME/bin/ruby -e 'p javax.net.ssl.SSLServerSocketFactory.getDefault.getSupportedCipherSuites'`.
-::::
-
-
 
 ### `ssl_client_authentication` [plugins-inputs-tcp-ssl_client_authentication]
 
@@ -229,11 +222,18 @@ Controls the server’s behavior in regard to requesting a certificate from clie
 
 When mutual TLS is enabled (`optional` or `required`), the certificate presented by the client must be signed by trusted [`ssl_certificate_authorities`](plugins-inputs-tcp.md#plugins-inputs-tcp-ssl_certificate_authorities) (CAs). Please note that the server does not validate the client certificate CN (Common Name) or SAN (Subject Alternative Name).
 
-::::{note} 
 This setting can be used only if [`mode`](plugins-inputs-tcp.md#plugins-inputs-tcp-mode) is `server` and [`ssl_certificate_authorities`](plugins-inputs-tcp.md#plugins-inputs-tcp-ssl_certificate_authorities) is set.
-::::
 
+### `ssl_enable` [plugins-inputs-tcp-ssl_enable]
 
+Deprecated in 6.4.0.
+
+Replaced by [`ssl_enabled`](plugins-inputs-tcp.md#plugins-inputs-tcp-ssl_enabled)
+
+* Value type is [boolean](value-types.md#boolean)
+* Default value is `false`
+
+Enable SSL (must be set for other `ssl_` options to take effect).
 
 ### `ssl_enabled` [plugins-inputs-tcp-ssl_enabled]
 
@@ -242,14 +242,12 @@ This setting can be used only if [`mode`](plugins-inputs-tcp.md#plugins-inputs-t
 
 Enable SSL (must be set for other `ssl_` options to take effect).
 
-
 ### `ssl_extra_chain_certs` [plugins-inputs-tcp-ssl_extra_chain_certs]
 
 * Value type is [array](value-types.md#array)
 * Default value is `[]`
 
 An Array of paths to extra X509 certificates. These are used together with the certificate to construct the certificate chain presented to the client.
-
 
 ### `ssl_key` [plugins-inputs-tcp-ssl_key]
 
@@ -258,14 +256,12 @@ An Array of paths to extra X509 certificates. These are used together with the c
 
 The path to the private key corresponding to the specified certificate (PEM format).
 
-
 ### `ssl_key_passphrase` [plugins-inputs-tcp-ssl_key_passphrase]
 
 * Value type is [password](value-types.md#password)
 * Default value is `nil`
 
 SSL key passphrase for the private key.
-
 
 ### `ssl_supported_protocols` [plugins-inputs-tcp-ssl_supported_protocols]
 
@@ -275,11 +271,7 @@ SSL key passphrase for the private key.
 
 List of allowed SSL/TLS versions to use when establishing a secure connection.
 
-::::{note} 
-If you configure the plugin to use `'TLSv1.1'` on any recent JVM, such as the one packaged with Logstash, the protocol is disabled by default and needs to be enabled manually by changing `jdk.tls.disabledAlgorithms` in the **$JDK_HOME/conf/security/java.security** configuration file. That is, `TLSv1.1` needs to be removed from the list.
-::::
-
-
+If you configure the plugin to use `'TLSv1.1'` on any recent JVM, such as the one packaged with Logstash, the protocol is disabled by default and needs to be enabled manually by changing `jdk.tls.disabledAlgorithms` in the **$JDK\_HOME/conf/security/java.security** configuration file. That is, `TLSv1.1` needs to be removed from the list.
 
 ### `ssl_verification_mode` [plugins-inputs-tcp-ssl_verification_mode]
 
@@ -288,17 +280,24 @@ If you configure the plugin to use `'TLSv1.1'` on any recent JVM, such as the on
 
 Defines how to verify the certificates presented by another party in the TLS connection:
 
-`full` validates that the server certificate has an issue date that’s within the not_before and not_after dates; chains to a trusted Certificate Authority (CA), and has a hostname or IP address that matches the names within the certificate.
+`full` validates that the server certificate has an issue date that’s within the not\_before and not\_after dates; chains to a trusted Certificate Authority (CA), and has a hostname or IP address that matches the names within the certificate.
 
 `none` performs no certificate validation.
 
 This setting can be used only if [`mode`](plugins-inputs-tcp.md#plugins-inputs-tcp-mode) is `client`.
 
-::::{warning} 
-Setting certificate verification to `none` disables many security benefits of SSL/TLS, which is very dangerous. For more information on disabling certificate verification please read [https://www.cs.utexas.edu/~shmat/shmat_ccs12.pdf](https://www.cs.utexas.edu/~shmat/shmat_ccs12.pdf)
-::::
+Setting certificate verification to `none` disables many security benefits of SSL/TLS, which is very dangerous. For more information on disabling certificate verification please read <https://www.cs.utexas.edu/~shmat/shmat_ccs12.pdf>
 
+### `ssl_verify` [plugins-inputs-tcp-ssl_verify]
 
+Deprecated in 6.4.0.
+
+Replaced by [`ssl_client_authentication`](plugins-inputs-tcp.md#plugins-inputs-tcp-ssl_client_authentication) and [`ssl_verification_mode`](plugins-inputs-tcp.md#plugins-inputs-tcp-ssl_verification_mode)
+
+* Value type is [boolean](value-types.md#boolean)
+* Default value is `true`
+
+Verify the identity of the other end of the SSL connection against the CA. For input, sets the field `sslsubject` to that of the client certificate.
 
 ### `tcp_keep_alive` [plugins-inputs-tcp-tcp_keep_alive]
 
@@ -307,67 +306,48 @@ Setting certificate verification to `none` disables many security benefits of SS
 
 Instruct the socket to use TCP keep alive. If it’s `true` then the underlying socket will use the OS defaults settings for keep alive. If it’s `false` it doesn’t configure any keep alive setting for the underlying socket.
 
-
-
-## TCP Input Obsolete Configuration Options [plugins-inputs-tcp-obsolete-options]
-
-::::{warning} 
-As of version `7.0.0` of this plugin, some configuration options have been replaced. The plugin will fail to start if it contains any of these obsolete options.
-::::
-
-
-| Setting | Replaced by |
-| --- | --- |
-| ssl_cert | [`ssl_certificate`](plugins-inputs-tcp.md#plugins-inputs-tcp-ssl_certificate) |
-| ssl_enable | [`ssl_enabled`](plugins-inputs-tcp.md#plugins-inputs-tcp-ssl_enabled) |
-| ssl_verify | [`ssl_client_authentication`](plugins-inputs-tcp.md#plugins-inputs-tcp-ssl_client_authentication) in `server` mode and [`ssl_verification_mode`](plugins-inputs-tcp.md#plugins-inputs-tcp-ssl_verification_mode) in `client` mode |
-
-
 ## Common options [plugins-inputs-tcp-common-options]
 
 These configuration options are supported by all input plugins:
 
 | Setting | Input type | Required |
-| --- | --- | --- |
-| [`add_field`](plugins-inputs-tcp.md#plugins-inputs-tcp-add_field) | [hash](logstash://reference/configuration-file-structure.md#hash) | No |
-| [`codec`](plugins-inputs-tcp.md#plugins-inputs-tcp-codec) | [codec](logstash://reference/configuration-file-structure.md#codec) | No |
-| [`enable_metric`](plugins-inputs-tcp.md#plugins-inputs-tcp-enable_metric) | [boolean](logstash://reference/configuration-file-structure.md#boolean) | No |
-| [`id`](plugins-inputs-tcp.md#plugins-inputs-tcp-id) | [string](logstash://reference/configuration-file-structure.md#string) | No |
-| [`tags`](plugins-inputs-tcp.md#plugins-inputs-tcp-tags) | [array](logstash://reference/configuration-file-structure.md#array) | No |
-| [`type`](plugins-inputs-tcp.md#plugins-inputs-tcp-type) | [string](logstash://reference/configuration-file-structure.md#string) | No |
+| :- | :- | :- |
+| [`add_field`](plugins-inputs-tcp.md#plugins-inputs-tcp-add_field) | [hash](value-types.md#hash) | No |
+| [`codec`](plugins-inputs-tcp.md#plugins-inputs-tcp-codec) | [codec](value-types.md#codec) | No |
+| [`enable_metric`](plugins-inputs-tcp.md#plugins-inputs-tcp-enable_metric) | [boolean](value-types.md#boolean) | No |
+| [`id`](plugins-inputs-tcp.md#plugins-inputs-tcp-id) | [string](value-types.md#string) | No |
+| [`tags`](plugins-inputs-tcp.md#plugins-inputs-tcp-tags) | [array](value-types.md#array) | No |
+| [`type`](plugins-inputs-tcp.md#plugins-inputs-tcp-type) | [string](value-types.md#string) | No |
 
 ### `add_field` [plugins-inputs-tcp-add_field]
 
-* Value type is [hash](logstash://reference/configuration-file-structure.md#hash)
+* Value type is [hash](value-types.md#hash)
 * Default value is `{}`
 
 Add a field to an event
 
-
 ### `codec` [plugins-inputs-tcp-codec]
 
-* Value type is [codec](logstash://reference/configuration-file-structure.md#codec)
+* Value type is [codec](value-types.md#codec)
 * Default value is `"line"`
 
 The codec used for input data. Input codecs are a convenient method for decoding your data before it enters the input, without needing a separate filter in your Logstash pipeline.
 
-
 ### `enable_metric` [plugins-inputs-tcp-enable_metric]
 
-* Value type is [boolean](logstash://reference/configuration-file-structure.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `true`
 
 Disable or enable metric logging for this specific plugin instance by default we record all the metrics we can, but you can disable metrics collection for a specific plugin.
 
-
 ### `id` [plugins-inputs-tcp-id]
 
-* Value type is [string](logstash://reference/configuration-file-structure.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 Add a unique `ID` to the plugin configuration. If no ID is specified, Logstash will generate one. It is strongly recommended to set this ID in your configuration. This is particularly useful when you have two or more plugins of the same type, for example, if you have 2 tcp inputs. Adding a named ID in this case will help in monitoring Logstash when using the monitoring APIs.
 
-```json
+```
 input {
   tcp {
     id => "my_plugin_id"
@@ -375,25 +355,20 @@ input {
 }
 ```
 
-::::{note} 
 Variable substitution in the `id` field only supports environment variables and does not support the use of values from the secret store.
-::::
-
-
 
 ### `tags` [plugins-inputs-tcp-tags]
 
-* Value type is [array](logstash://reference/configuration-file-structure.md#array)
+* Value type is [array](value-types.md#array)
 * There is no default value for this setting.
 
 Add any number of arbitrary tags to your event.
 
 This can help with processing later.
 
-
 ### `type` [plugins-inputs-tcp-type]
 
-* Value type is [string](logstash://reference/configuration-file-structure.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 Add a `type` field to all events handled by this input.
@@ -403,6 +378,3 @@ Types are used mainly for filter activation.
 The type is stored as part of the event itself, so you can also use the type to search for it in Kibana.
 
 If you try to set a type on an event that already has one (for example when you send an event from a shipper to an indexer) then a new input will not override the existing type. A type set at the shipper stays with that event for its life even when sent to another Logstash server.
-
-
-

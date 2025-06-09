@@ -6,16 +6,12 @@ mapped_pages:
 
 # Versioned aggregate filter plugin docs [filter-aggregate-index]
 
+This page lists all documentation available for this plugin. To see which plugin version you have installed, run `bin/logstash-plugin list --verbose`.
 
-This page lists all documentation available for this plugin.  To see which plugin version you have installed, run `bin/logstash-plugin list --verbose`.
-
-::::{note}
 Versioned plugin documentation is not available for plugins released prior to Logstash 6.0.
-::::
 
-
-|     |     |
-| --- | --- |
+| | |
+| :- | :- |
 | Version | Release Date |
 | [v2.10.0](v2-10-0-plugins-filters-aggregate.md) | 2021-10-11 |
 | [v2.9.2](v2-9-2-plugins-filters-aggregate.md) | 2021-04-25 |
@@ -29,16 +25,3 @@ Versioned plugin documentation is not available for plugins released prior to Lo
 | [v2.6.3](v2-6-3-plugins-filters-aggregate.md) | 2017-08-15 |
 | [v2.6.1](v2-6-1-plugins-filters-aggregate.md) | 2017-06-23 |
 | [v2.6.0](v2-6-0-plugins-filters-aggregate.md) | 2017-06-11 |
-
-
-
-
-
-
-
-
-
-
-
-
-

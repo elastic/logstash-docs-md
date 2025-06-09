@@ -6,24 +6,21 @@ mapped_pages:
 
 # Google Cloud Pub/Sub Output Plugin [plugins-outputs-google_pubsub]
 
-
 * Plugin version: v1.2.0
 * Released on: 2023-08-22
 * [Changelog](https://github.com/logstash-plugins/logstash-output-google_pubsub/blob/v1.2.0/CHANGELOG.md)
 
-For other versions, see the [Versioned plugin docs](/vpr/output-google_pubsub-index.md).
+For other versions, see the [Versioned plugin docs](https://www.elastic.co/guide/en/logstash-versioned-plugins/current/output-google_pubsub-index.html).
 
 ## Installation [_installation_31]
 
-For plugins not bundled by default, it is easy to install by running `bin/logstash-plugin install logstash-output-google_pubsub`. See [Working with plugins](logstash://reference/working-with-plugins.md) for more details.
-
+For plugins not bundled by default, it is easy to install by running `bin/logstash-plugin install logstash-output-google_pubsub`. See [Working with plugins](https://www.elastic.co/guide/en/logstash/8.18/working-with-plugins.html) for more details.
 
 ## Getting help [_getting_help_82]
 
 For questions about the plugin, open a topic in the [Discuss](http://discuss.elastic.co) forums. For bugs or feature requests, open an issue in [Github](https://github.com/logstash-plugins/logstash-output-google_pubsub). For the list of Elastic supported plugins, please consult the [Elastic Support Matrix](https://www.elastic.co/support/matrix#logstash_plugins).
 
-
-## Description [_description_81]
+## Description [_description_82]
 
 A Logstash plugin to upload log events to [Google Cloud Pubsub](https://cloud.google.com/pubsub/). Events are batched and uploaded in the background for the sake of efficiency. Message payloads are serialized JSON representations of the events.
 
@@ -35,13 +32,11 @@ Example use-cases:
 
 Note: While this project is partially maintained by Google, this is not an official Google product.
 
-
 ## Environment Configuration [_environment_configuration_2]
 
 To use this plugin, you must create a [service account](https://developers.google.com/storage/docs/authentication#service_accounts) and grant it the publish permission on a topic. You MAY also use the [Application Default Credentials](https://cloud.google.com/docs/authentication/production) assigned to a compute instance.
 
 The Pub/Sub topic *must* exist before you run the plugin.
-
 
 ## Example Configurations [_example_configurations]
 
@@ -49,7 +44,7 @@ The Pub/Sub topic *must* exist before you run the plugin.
 
 A basic configuration which only includes a project, topic, and JSON key file:
 
-```ruby
+```
 output {
   google_pubsub {
     # Required attributes
@@ -62,12 +57,11 @@ output {
 }
 ```
 
-
 ### High Volume [_high_volume]
 
 If you find that uploads are going too slowly, you can increase the message batching:
 
-```ruby
+```
 output {
   google_pubsub {
     project_id => "my_project"
@@ -82,12 +76,11 @@ output {
 }
 ```
 
-
 ### Attributes [_attributes]
 
 You can attach additional attributes to each request. For example, you could attach a datacenter label to a log message to help with debugging:
 
-```ruby
+```
 output {
   google_pubsub {
     project_id => "my_project"
@@ -100,12 +93,11 @@ output {
 }
 ```
 
-
 ### Different Codecs [_different_codecs]
 
 You can use codecs with this plugin to change the body of the events:
 
-```ruby
+```
 output {
   google_pubsub {
     project_id => "my_project"
@@ -118,8 +110,6 @@ output {
 }
 ```
 
-
-
 ## Additional Resources [_additional_resources_3]
 
 * [Cloud Pub/Sub Homepage](https://cloud.google.com/pubsub/)
@@ -127,13 +117,12 @@ output {
 * [IAM Service Accounts](https://cloud.google.com/iam/docs/service-accounts)
 * [Application Default Credentials](https://cloud.google.com/docs/authentication/production)
 
-
 ## Google Cloud Pub/Sub Output Configuration Options [plugins-outputs-google_pubsub-options]
 
 This plugin supports the following configuration options plus the [Common options](plugins-outputs-google_pubsub.md#plugins-outputs-google_pubsub-common-options) described later.
 
 | Setting | Input type | Required |
-| --- | --- | --- |
+| :- | :- | :- |
 | [`project_id`](plugins-outputs-google_pubsub.md#plugins-outputs-google_pubsub-project_id) | [string](value-types.md#string) | Yes |
 | [`topic`](plugins-outputs-google_pubsub.md#plugins-outputs-google_pubsub-topic) | [string](value-types.md#string) | Yes |
 | [`json_key_file`](plugins-outputs-google_pubsub.md#plugins-outputs-google_pubsub-json_key_file) | [path](value-types.md#path) | No |
@@ -151,14 +140,12 @@ Also see [Common options](plugins-outputs-google_pubsub.md#plugins-outputs-googl
 
 Google Cloud Project ID (name, not number).
 
-
 ### `topic` [plugins-outputs-google_pubsub-topic]
 
 * Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 Google Cloud Pub/Sub Topic. You must create the topic manually before running this plugin.
-
 
 ### `json_key_file` [plugins-outputs-google_pubsub-json_key_file]
 
@@ -169,14 +156,12 @@ The path to the key to authenticate your user to the bucket. This service user *
 
 If Logstash is running within Google Compute Engine and no `json_key_file` is defined, the plugin will use GCE’s Application Default Credentials. Outside of GCE, you must to specify a Service Account JSON key file.
 
-
 ### `delay_threshold_secs` [plugins-outputs-google_pubsub-delay_threshold_secs]
 
 * Value type is [number](value-types.md#number)
 * Default is: `5`
 
 Send the batch once this delay has passed, from the time the first message is queued. Must be greater than 0.
-
 
 ### `message_count_threshold` [plugins-outputs-google_pubsub-message_count_threshold]
 
@@ -185,14 +170,12 @@ Send the batch once this delay has passed, from the time the first message is qu
 
 Once this many messages are queued, send all the messages in a single call, even if the delay threshold hasn’t elapsed yet. Must be < 1000. A value of 0 will cause messages to instantly be sent but will reduce total throughput due to overhead.
 
-
 ### `request_byte_threshold` [plugins-outputs-google_pubsub-request_byte_threshold]
 
 * Value type is [bytes](value-types.md#bytes)
 * Default is: `1000000`
 
 Once the number of bytes in the batched request reaches this threshold, send all of the messages in a single call, even if neither the delay or message count thresholds have been exceeded yet. This includes full message payload size, including any attributes set.
-
 
 ### `attributes` [plugins-outputs-google_pubsub-attributes]
 
@@ -201,42 +184,38 @@ Once the number of bytes in the batched request reaches this threshold, send all
 
 Attributes to add to the message in key: value formats. Keys and values MUST be strings.
 
-
-
 ## Common options [plugins-outputs-google_pubsub-common-options]
 
 These configuration options are supported by all output plugins:
 
 | Setting | Input type | Required |
-| --- | --- | --- |
-| [`codec`](plugins-outputs-google_pubsub.md#plugins-outputs-google_pubsub-codec) | [codec](logstash://reference/configuration-file-structure.md#codec) | No |
-| [`enable_metric`](plugins-outputs-google_pubsub.md#plugins-outputs-google_pubsub-enable_metric) | [boolean](logstash://reference/configuration-file-structure.md#boolean) | No |
-| [`id`](plugins-outputs-google_pubsub.md#plugins-outputs-google_pubsub-id) | [string](logstash://reference/configuration-file-structure.md#string) | No |
+| :- | :- | :- |
+| [`codec`](plugins-outputs-google_pubsub.md#plugins-outputs-google_pubsub-codec) | [codec](value-types.md#codec) | No |
+| [`enable_metric`](plugins-outputs-google_pubsub.md#plugins-outputs-google_pubsub-enable_metric) | [boolean](value-types.md#boolean) | No |
+| [`id`](plugins-outputs-google_pubsub.md#plugins-outputs-google_pubsub-id) | [string](value-types.md#string) | No |
 
 ### `codec` [plugins-outputs-google_pubsub-codec]
 
-* Value type is [codec](logstash://reference/configuration-file-structure.md#codec)
+* Value type is [codec](value-types.md#codec)
 * Default value is `"json"`
 
 The codec used for output data. Output codecs are a convenient method for encoding your data before it leaves the output without needing a separate filter in your Logstash pipeline.
 
-
 ### `enable_metric` [plugins-outputs-google_pubsub-enable_metric]
 
-* Value type is [boolean](logstash://reference/configuration-file-structure.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `true`
 
 Disable or enable metric logging for this specific plugin instance. By default we record all the metrics we can, but you can disable metrics collection for a specific plugin.
 
-
 ### `id` [plugins-outputs-google_pubsub-id]
 
-* Value type is [string](logstash://reference/configuration-file-structure.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
-Add a unique `ID` to the plugin configuration. If no ID is specified, Logstash will generate one. It is strongly recommended to set this ID in your configuration. This is particularly useful when you have two or more plugins of the same type. For example, if you have 2 google_pubsub outputs. Adding a named ID in this case will help in monitoring Logstash when using the monitoring APIs.
+Add a unique `ID` to the plugin configuration. If no ID is specified, Logstash will generate one. It is strongly recommended to set this ID in your configuration. This is particularly useful when you have two or more plugins of the same type. For example, if you have 2 google\_pubsub outputs. Adding a named ID in this case will help in monitoring Logstash when using the monitoring APIs.
 
-```json
+```
 output {
   google_pubsub {
     id => "my_plugin_id"
@@ -244,10 +223,4 @@ output {
 }
 ```
 
-::::{note} 
 Variable substitution in the `id` field only supports environment variables and does not support the use of values from the secret store.
-::::
-
-
-
-

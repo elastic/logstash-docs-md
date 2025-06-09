@@ -6,24 +6,21 @@ mapped_pages:
 
 # Http input plugin [plugins-inputs-http]
 
+* Plugin version: v3.10.2
+* Released on: 2025-02-12
+* [Changelog](https://github.com/logstash-plugins/logstash-input-http/blob/v3.10.2/CHANGELOG.md)
 
-* Plugin version: v4.1.0
-* Released on: 2024-12-19
-* [Changelog](https://github.com/logstash-plugins/logstash-input-http/blob/v4.1.0/CHANGELOG.md)
-
-For other versions, see the [Versioned plugin docs](/vpr/input-http-index.md).
+For other versions, see the [Versioned plugin docs](https://www.elastic.co/guide/en/logstash-versioned-plugins/current/input-http-index.html).
 
 ## Getting help [_getting_help_26]
 
 For questions about the plugin, open a topic in the [Discuss](http://discuss.elastic.co) forums. For bugs or feature requests, open an issue in [Github](https://github.com/logstash-plugins/logstash-input-http). For the list of Elastic supported plugins, please consult the [Elastic Support Matrix](https://www.elastic.co/support/matrix#logstash_plugins).
 
-
-## Description [_description_25]
+## Description [_description_26]
 
 Using this input you can receive single or multiline events over http(s). Applications can send an HTTP request to the endpoint started by this input and Logstash will convert it into an event for subsequent processing. Users can pass plain text, JSON, or any formatted data and use a corresponding codec with this input. For Content-Type `application/json` the `json` codec is used, but for all other data formats, `plain` codec is used.
 
 This input can also be used to receive webhook requests to integrate with other services and applications. By taking advantage of the vast plugin ecosystem available in Logstash you can trigger actionable events right from your application.
-
 
 ## Event Metadata and the Elastic Common Schema (ECS) [plugins-inputs-http-ecs_metadata]
 
@@ -31,18 +28,17 @@ In addition to decoding the events, this input will add HTTP headers containing 
 
 Here’s how ECS compatibility mode affects output.
 
-|  ECS `disabled` |  ECS `v1`,`v8` | Availability | Description |
-| --- | --- | --- | --- |
-|  [host] |  [host][ip] | *Always* | *Host IP address* |
-|  [headers] |  [@metadata][input][http][request][headers] | *Always* | *Complete HTTP headers* |
-|  [headers][http_version] |  [http][version] | *Always* | *HTTP version* |
-|  [headers][http_user_agent] |  [user_agent][original] | *Always* | *client user agent* |
-|  [headers][http_host] |  [url][domain] and [url][port] | *Always* | *host domain and port* |
-|  [headers][request_method] |  [http][method] | *Always* | *HTTP method* |
-|  [headers][request_path] |  [url][path] | *Always* | *Query path* |
-|  [headers][content_length] |  [http][request][body][bytes] | *Always* | *Request content length* |
-|  [headers][content_type] |  [http][request][mime_type] | *Always* | *Request mime type* |
-
+| ECS \`disabled\` | ECS \`v1\`,\`v8\` | Availability | Description |
+| :- | :- | :- | :- |
+| \[host] | \[host]\[ip] | *Always* | *Host IP address* |
+| \[headers] | \[@metadata]\[input]\[http]\[request]\[headers] | *Always* | *Complete HTTP headers* |
+| \[headers]\[http\_version] | \[http]\[version] | *Always* | *HTTP version* |
+| \[headers]\[http\_user\_agent] | \[user\_agent]\[original] | *Always* | *client user agent* |
+| \[headers]\[http\_host] | \[url]\[domain] and \[url]\[port] | *Always* | *host domain and port* |
+| \[headers]\[request\_method] | \[http]\[method] | *Always* | *HTTP method* |
+| \[headers]\[request\_path] | \[url]\[path] | *Always* | *Query path* |
+| \[headers]\[content\_length] | \[http]\[request]\[body]\[bytes] | *Always* | *Request content length* |
+| \[headers]\[content\_type] | \[http]\[request]\[mime\_type] | *Always* | *Request mime type* |
 
 ## Blocking Behavior [_blocking_behavior]
 
@@ -52,13 +48,11 @@ If a 429 error is encountered clients should sleep, backing off exponentially wi
 
 This plugin will block if the Logstash queue is blocked and there are available HTTP input threads. This will cause most HTTP clients to time out. Sent events will still be processed in this case. This behavior is not optimal and will be changed in a future release. In the future, this plugin will always return a 429 if the queue is busy, and will not time out in the event of a busy queue.
 
-
 ## Security [_security]
 
 This plugin supports standard HTTP basic authentication headers to identify the requester. You can pass in a username, password combination while sending data to this input
 
 You can also setup SSL and send data securely over https, with multiple options such as validating the client’s certificate.
-
 
 ## Codec settings [plugins-inputs-http-codec-settings]
 
@@ -66,26 +60,24 @@ This plugin has two configuration options for codecs: `codec` and `additional_co
 
 Values in `additional_codecs` are prioritized over those specified in the `codec` option. That is, the default `codec` is applied only if no codec for the request’s content-type is found in the `additional_codecs` setting.
 
-
 ## Http Input Configuration Options [plugins-inputs-http-options]
 
 This plugin supports the following configuration options plus the [Common options](plugins-inputs-http.md#plugins-inputs-http-common-options) described later.
 
-::::{note} 
-As of version `4.0.0` of this plugin, a number of previously deprecated settings related to SSL have been removed. Please check out [HTTP Input Obsolete Configuration Options](plugins-inputs-http.md#plugins-inputs-http-obsolete-options) for details.
-::::
-
-
 | Setting | Input type | Required |
-| --- | --- | --- |
+| :- | :- | :- |
 | [`additional_codecs`](plugins-inputs-http.md#plugins-inputs-http-additional_codecs) | [hash](value-types.md#hash) | No |
+| [`cipher_suites`](plugins-inputs-http.md#plugins-inputs-http-cipher_suites) | [array](value-types.md#array) | *Deprecated* |
 | [`ecs_compatibility`](plugins-inputs-http.md#plugins-inputs-http-ecs_compatibility) | [string](value-types.md#string) | No |
 | [`host`](plugins-inputs-http.md#plugins-inputs-http-host) | [string](value-types.md#string) | No |
+| [`keystore`](plugins-inputs-http.md#plugins-inputs-http-keystore) | [path](value-types.md#path) | *Deprecated* |
+| [`keystore_password`](plugins-inputs-http.md#plugins-inputs-http-keystore_password) | [password](value-types.md#password) | *Deprecated* |
 | [`password`](plugins-inputs-http.md#plugins-inputs-http-password) | [password](value-types.md#password) | No |
 | [`port`](plugins-inputs-http.md#plugins-inputs-http-port) | [number](value-types.md#number) | No |
 | [`max_pending_requests`](plugins-inputs-http.md#plugins-inputs-http-max_pending_requests) | [number](value-types.md#number) | No |
 | [`response_headers`](plugins-inputs-http.md#plugins-inputs-http-response_headers) | [hash](value-types.md#hash) | No |
 | [`response_code`](plugins-inputs-http.md#plugins-inputs-http-response_code) | [number](value-types.md#number), one of `[200, 201, 202, 204]` | No |
+| [`ssl`](plugins-inputs-http.md#plugins-inputs-http-ssl) | [boolean](value-types.md#boolean) | *Deprecated* |
 | [`ssl_certificate`](plugins-inputs-http.md#plugins-inputs-http-ssl_certificate) | a valid filesystem path | No |
 | [`ssl_certificate_authorities`](plugins-inputs-http.md#plugins-inputs-http-ssl_certificate_authorities) | [array](value-types.md#array) | No |
 | [`ssl_cipher_suites`](plugins-inputs-http.md#plugins-inputs-http-ssl_cipher_suites) | [array](value-types.md#array) | No |
@@ -101,12 +93,14 @@ As of version `4.0.0` of this plugin, a number of previously deprecated settings
 | [`ssl_truststore_password`](plugins-inputs-http.md#plugins-inputs-http-ssl_truststore_password) | [password](value-types.md#password) | No |
 | [`ssl_truststore_path`](plugins-inputs-http.md#plugins-inputs-http-ssl_truststore_path) | [path](value-types.md#path) | No |
 | [`ssl_truststore_type`](plugins-inputs-http.md#plugins-inputs-http-ssl_truststore_type) | [string](value-types.md#string) | No |
+| [`ssl_verify_mode`](plugins-inputs-http.md#plugins-inputs-http-ssl_verify_mode) | [string](value-types.md#string), one of `["none", "peer", "force_peer"]` | *Deprecated* |
 | [`threads`](plugins-inputs-http.md#plugins-inputs-http-threads) | [number](value-types.md#number) | No |
+| [`tls_max_version`](plugins-inputs-http.md#plugins-inputs-http-tls_max_version) | [number](value-types.md#number) | *Deprecated* |
+| [`tls_min_version`](plugins-inputs-http.md#plugins-inputs-http-tls_min_version) | [number](value-types.md#number) | *Deprecated* |
 | [`user`](plugins-inputs-http.md#plugins-inputs-http-user) | [string](value-types.md#string) | No |
+| [`verify_mode`](plugins-inputs-http.md#plugins-inputs-http-verify_mode) | [string](value-types.md#string), one of `["none", "peer", "force_peer"]` | *Deprecated* |
 
 Also see [Common options](plugins-inputs-http.md#plugins-inputs-http-common-options) for a list of options supported by all input plugins.
-
- 
 
 ### `additional_codecs` [plugins-inputs-http-additional_codecs]
 
@@ -115,21 +109,30 @@ Also see [Common options](plugins-inputs-http.md#plugins-inputs-http-common-opti
 
 Apply specific codecs for specific content types. The default codec will be applied only after this list is checked and no codec for the request’s content-type is found
 
+### `cipher_suites` [plugins-inputs-http-cipher_suites]
+
+Deprecated in 3.6.0.
+
+Replaced by [`ssl_cipher_suites`](plugins-inputs-http.md#plugins-inputs-http-ssl_cipher_suites)
+
+* Value type is [array](value-types.md#array)
+
+The list of cipher suites to use, listed by priorities.
 
 ### `ecs_compatibility` [plugins-inputs-http-ecs_compatibility]
 
 * Value type is [string](value-types.md#string)
+
 * Supported values are:
 
-    * `disabled`: unstructured connection metadata added at root level
-    * `v1`,`v8`: headers added under `[@metadata][http][header]`. Some are copied to structured ECS fields `http`, `url`, `user_agent` and `host`
+  * `disabled`: unstructured connection metadata added at root level
+  * `v1`,`v8`: headers added under `[@metadata][http][header]`. Some are copied to structured ECS fields `http`, `url`, `user_agent` and `host`
 
+Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)](https://www.elastic.co/guide/en/ecs/8.17). See [Event Metadata and the Elastic Common Schema (ECS)](plugins-inputs-http.md#plugins-inputs-http-ecs_metadata) for detailed information.
 
-Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)](https://www.elastic.co/guide/en/ecs/current). See [Event Metadata and the Elastic Common Schema (ECS)](plugins-inputs-http.md#plugins-inputs-http-ecs_metadata) for detailed information.
+**Sample output: ECS disabled**
 
-***Sample output: ECS disabled***
-
-```text
+```
 {
     "@version" => "1",
     "headers" => {
@@ -148,9 +151,9 @@ Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)](ht
 }
 ```
 
-***Sample output: ECS enabled***
+**Sample output: ECS enabled**
 
-```text
+```
 {
     "@version" => "1",
     "user_agent" => {
@@ -179,7 +182,6 @@ Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)](ht
 }
 ```
 
-
 ### `host` [plugins-inputs-http-host]
 
 * Value type is [string](value-types.md#string)
@@ -187,6 +189,27 @@ Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)](ht
 
 The host or ip to bind
 
+### `keystore` [plugins-inputs-http-keystore]
+
+Deprecated in 3.7.0.
+
+Use [`ssl_keystore_path`](plugins-inputs-http.md#plugins-inputs-http-ssl_keystore_path) instead
+
+* Value type is [path](value-types.md#path)
+* There is no default value for this setting.
+
+The JKS keystore to validate the client’s certificates
+
+### `keystore_password` [plugins-inputs-http-keystore_password]
+
+Deprecated in 3.7.0.
+
+Use [`ssl_keystore_password`](plugins-inputs-http.md#plugins-inputs-http-ssl_keystore_password) instead
+
+* Value type is [password](value-types.md#password)
+* There is no default value for this setting.
+
+Set the keystore password
 
 ### `password` [plugins-inputs-http-password]
 
@@ -195,14 +218,12 @@ The host or ip to bind
 
 Password for basic authorization
 
-
 ### `port` [plugins-inputs-http-port]
 
 * Value type is [number](value-types.md#number)
 * Default value is `8080`
 
 The TCP port to bind to
-
 
 ### `max_content_length` [plugins-inputs-http-max_content_length]
 
@@ -211,14 +232,12 @@ The TCP port to bind to
 
 The max content of an HTTP request in bytes. It defaults to 100mb.
 
-
 ### `max_pending_requests` [plugins-inputs-http-max_pending_requests]
 
 * Value type is [number](value-types.md#number)
 * Default value is 200
 
 Maximum number of incoming requests to store in a temporary queue before being processed by worker threads. If a request arrives and the queue is full a 429 response will be returned immediately. This queue exists to deal with micro bursts of events and to improve overall throughput, so it should be changed very carefully as it can lead to memory pressure and impact performance. If you need to deal both periodic or unforeseen spikes in incoming requests consider enabling the Persistent Queue for the logstash pipeline.
-
 
 ### `response_code` [plugins-inputs-http-response_code]
 
@@ -231,14 +250,12 @@ Other return codes may happen in the case of an error condition, such as invalid
 
 If 204 (No Content) is set, the response body will not be sent in the response.
 
-
 ### `response_headers` [plugins-inputs-http-response_headers]
 
 * Value type is [hash](value-types.md#hash)
 * Default value is `{"Content-Type"=>"text/plain"}`
 
 specify a custom set of response headers
-
 
 ### `remote_host_target_field` [plugins-inputs-http-remote_host_target_field]
 
@@ -248,7 +265,6 @@ specify a custom set of response headers
 
 specify a target field for the client host of the http request
 
-
 ### `request_headers_target_field` [plugins-inputs-http-request_headers_target_field]
 
 * Value type is [string](value-types.md#string)
@@ -257,6 +273,16 @@ specify a target field for the client host of the http request
 
 specify target field for the client host of the http request
 
+### `ssl` [plugins-inputs-http-ssl]
+
+Deprecated in 3.7.0.
+
+Replaced by [`ssl_enabled`](plugins-inputs-http.md#plugins-inputs-http-ssl_enabled)
+
+* Value type is [boolean](value-types.md#boolean)
+* Default value is `false`
+
+Events are, by default, sent in plain text. You can enable encryption by setting `ssl` to true and configuring the `ssl_certificate` and `ssl_key` options.
 
 ### `ssl_certificate` [plugins-inputs-http-ssl_certificate]
 
@@ -265,14 +291,12 @@ specify target field for the client host of the http request
 
 SSL certificate to use.
 
-
 ### `ssl_certificate_authorities` [plugins-inputs-http-ssl_certificate_authorities]
 
 * Value type is [array](value-types.md#array)
 * Default value is `[]`
 
 Validate client certificates against these authorities. You can define multiple files or paths. All the certificates will be read and added to the trust store. You need to configure the [`ssl_client_authentication`](plugins-inputs-http.md#plugins-inputs-http-ssl_client_authentication) to `optional` or `required` to enable the verification.
-
 
 ### `ssl_cipher_suites` [plugins-inputs-http-ssl_cipher_suites]
 
@@ -281,7 +305,6 @@ Validate client certificates against these authorities. You can define multiple 
 
 The list of cipher suites to use, listed by priorities. This default list applies for OpenJDK 11.0.14 and higher. For older JDK versions, the default list includes only suites supported by that version. For example, the ChaCha20 family of ciphers is not supported in older versions.
 
-
 ### `ssl_client_authentication` [plugins-inputs-http-ssl_client_authentication]
 
 * Value can be any of: `none`, `optional`, `required`
@@ -289,11 +312,7 @@ The list of cipher suites to use, listed by priorities. This default list applie
 
 Controls the server’s behavior in regard to requesting a certificate from client connections: `required` forces a client to present a certificate, while `optional` requests a client certificate but the client is not required to present one. Defaults to `none`, which disables the client authentication.
 
-::::{note} 
 This setting can be used only if [`ssl_certificate_authorities`](plugins-inputs-http.md#plugins-inputs-http-ssl_certificate_authorities) is set.
-::::
-
-
 
 ### `ssl_enabled` [plugins-inputs-http-ssl_enabled]
 
@@ -302,7 +321,6 @@ This setting can be used only if [`ssl_certificate_authorities`](plugins-inputs-
 
 Events are, by default, sent in plain text. You can enable encryption by setting `ssl_enabled` to true and configuring the [`ssl_certificate`](plugins-inputs-http.md#plugins-inputs-http-ssl_certificate) and [`ssl_key`](plugins-inputs-http.md#plugins-inputs-http-ssl_key) options.
 
-
 ### `ssl_handshake_timeout` [plugins-inputs-http-ssl_handshake_timeout]
 
 * Value type is [number](value-types.md#number)
@@ -310,14 +328,12 @@ Events are, by default, sent in plain text. You can enable encryption by setting
 
 Time in milliseconds for an incomplete ssl handshake to timeout
 
-
 ### `ssl_key` [plugins-inputs-http-ssl_key]
 
 * Value type is [path](value-types.md#path)
 * There is no default value for this setting.
 
-SSL key to use. NOTE: This key need to be in the PKCS8 format, you can convert it with [OpenSSL](https://www.openssl.org/docs/man1.1.1/man1/openssl-pkcs8.md) for more information.
-
+SSL key to use. NOTE: This key need to be in the PKCS8 format, you can convert it with [OpenSSL](https://www.openssl.org/docs/man1.1.1/man1/openssl-pkcs8.html) for more information.
 
 ### `ssl_key_passphrase` [plugins-inputs-http-ssl_key_passphrase]
 
@@ -326,7 +342,6 @@ SSL key to use. NOTE: This key need to be in the PKCS8 format, you can convert i
 
 SSL key passphrase to use.
 
-
 ### `ssl_keystore_path` [plugins-inputs-http-ssl_keystore_path]
 
 * Value type is [path](value-types.md#path)
@@ -334,11 +349,7 @@ SSL key passphrase to use.
 
 The path for the keystore file that contains a private key and certificate. It must be either a Java keystore (jks) or a PKCS#12 file.
 
-::::{note} 
 You cannot use this setting and [`ssl_certificate`](plugins-inputs-http.md#plugins-inputs-http-ssl_certificate) at the same time.
-::::
-
-
 
 ### `ssl_keystore_type` [plugins-inputs-http-ssl_keystore_type]
 
@@ -347,14 +358,12 @@ You cannot use this setting and [`ssl_certificate`](plugins-inputs-http.md#plugi
 
 The format of the keystore file. It must be either `jks` or `pkcs12`.
 
-
 ### `ssl_keystore_password` [plugins-inputs-http-ssl_keystore_password]
 
 * Value type is [password](value-types.md#password)
 * There is no default value for this setting.
 
 Set the JKS keystore password
-
 
 ### `ssl_supported_protocols` [plugins-inputs-http-ssl_supported_protocols]
 
@@ -364,13 +373,9 @@ Set the JKS keystore password
 
 List of allowed SSL/TLS versions to use when establishing a connection to the HTTP endpoint.
 
-For Java 8 `'TLSv1.3'` is supported  only since ***8u262*** (AdoptOpenJDK), but requires that you set the `LS_JAVA_OPTS="-Djdk.tls.client.protocols=TLSv1.3"` system property in Logstash.
+For Java 8 `'TLSv1.3'` is supported only since **8u262** (AdoptOpenJDK), but requires that you set the `LS_JAVA_OPTS="-Djdk.tls.client.protocols=TLSv1.3"` system property in Logstash.
 
-::::{note} 
-If you configure the plugin to use `'TLSv1.1'` on any recent JVM, such as the one packaged with Logstash, the protocol is disabled by default and needs to be enabled manually by changing `jdk.tls.disabledAlgorithms` in the **$JDK_HOME/conf/security/java.security** configuration file. That is, `TLSv1.1` needs to be removed from the list.
-::::
-
-
+If you configure the plugin to use `'TLSv1.1'` on any recent JVM, such as the one packaged with Logstash, the protocol is disabled by default and needs to be enabled manually by changing `jdk.tls.disabledAlgorithms` in the **$JDK\_HOME/conf/security/java.security** configuration file. That is, `TLSv1.1` needs to be removed from the list.
 
 ### `ssl_truststore_password` [plugins-inputs-http-ssl_truststore_password]
 
@@ -379,7 +384,6 @@ If you configure the plugin to use `'TLSv1.1'` on any recent JVM, such as the on
 
 Set the truststore password
 
-
 ### `ssl_truststore_path` [plugins-inputs-http-ssl_truststore_path]
 
 * Value type is [path](value-types.md#path)
@@ -387,11 +391,7 @@ Set the truststore password
 
 The path for the keystore that contains the certificates to trust. It must be either a Java keystore (jks) or a PKCS#12 file.
 
-::::{note} 
 You cannot use this setting and [`ssl_certificate_authorities`](plugins-inputs-http.md#plugins-inputs-http-ssl_certificate_authorities) at the same time.
-::::
-
-
 
 ### `ssl_truststore_type` [plugins-inputs-http-ssl_truststore_type]
 
@@ -400,6 +400,22 @@ You cannot use this setting and [`ssl_certificate_authorities`](plugins-inputs-h
 
 The format of the truststore file. It must be either `jks` or `pkcs12`.
 
+### `ssl_verify_mode` [plugins-inputs-http-ssl_verify_mode]
+
+Deprecated in 3.7.0.
+
+Replaced by [`ssl_client_authentication`](plugins-inputs-http.md#plugins-inputs-http-ssl_client_authentication)
+
+* Value can be any of: `none`, `peer`, `force_peer`
+* Default value is `"none"`
+
+By default the server doesn’t do any client verification.
+
+`peer` will make the server ask the client to provide a certificate. If the client provides a certificate, it will be validated.
+
+`force_peer` will make the server ask the client to provide a certificate. If the client doesn’t provide a certificate, the connection will be closed.
+
+This option needs to be used with [`ssl_certificate_authorities`](plugins-inputs-http.md#plugins-inputs-http-ssl_certificate_authorities) and a defined list of CAs.
 
 ### `threads` [plugins-inputs-http-threads]
 
@@ -408,6 +424,21 @@ The format of the truststore file. It must be either `jks` or `pkcs12`.
 
 Number of threads to use for both accepting connections and handling requests
 
+### `tls_max_version` [plugins-inputs-http-tls_max_version]
+
+Deprecated in 3.6.0.
+
+* Value type is [number](value-types.md#number)
+
+The maximum TLS version allowed for the encrypted connections. The value must be the one of the following: 1.1 for TLS 1.1, 1.2 for TLS 1.2, 1.3 for TLSv1.3
+
+### `tls_min_version` [plugins-inputs-http-tls_min_version]
+
+Deprecated in 3.6.0.
+
+* Value type is [number](value-types.md#number)
+
+The minimum TLS version allowed for the encrypted connections. The value must be one of the following: 1.1 for TLS 1.1, 1.2 for TLS 1.2, 1.3 for TLSv1.3
 
 ### `user` [plugins-inputs-http-user]
 
@@ -416,72 +447,59 @@ Number of threads to use for both accepting connections and handling requests
 
 Username for basic authorization
 
+### `verify_mode` [plugins-inputs-http-verify_mode]
 
+Deprecated in 3.6.0.
 
-## HTTP Input Obsolete Configuration Options [plugins-inputs-http-obsolete-options]
+Replaced by [`ssl_verify_mode`](plugins-inputs-http.md#plugins-inputs-http-ssl_verify_mode)
 
-::::{warning} 
-As of version `4.0.0` of this plugin, some configuration options have been replaced. The plugin will fail to start if it contains any of these obsolete options.
-::::
+* Value can be any of: `none`, `peer`, `force_peer`
+* Default value is `"none"`
 
-
-| Setting | Replaced by |
-| --- | --- |
-| cipher_suites | [`ssl_cipher_suites`](plugins-inputs-http.md#plugins-inputs-http-ssl_cipher_suites) |
-| keystore | [`ssl_keystore_path`](plugins-inputs-http.md#plugins-inputs-http-ssl_keystore_path) |
-| keystore_password | [`ssl_keystore_password`](plugins-inputs-http.md#plugins-inputs-http-ssl_keystore_password) |
-| ssl | [`ssl_enabled`](plugins-inputs-http.md#plugins-inputs-http-ssl_enabled) |
-| ssl_verify_mode | [`ssl_client_authentication`](plugins-inputs-http.md#plugins-inputs-http-ssl_client_authentication) |
-| tls_max_version | [`ssl_supported_protocols`](plugins-inputs-http.md#plugins-inputs-http-ssl_supported_protocols) |
-| tls_min_version | [`ssl_supported_protocols`](plugins-inputs-http.md#plugins-inputs-http-ssl_supported_protocols) |
-| verify_mode | [`ssl_client_authentication`](plugins-inputs-http.md#plugins-inputs-http-ssl_client_authentication) |
-
+Set the client certificate verification method. Valid methods: none, peer, force\_peer
 
 ## Common options [plugins-inputs-http-common-options]
 
 These configuration options are supported by all input plugins:
 
 | Setting | Input type | Required |
-| --- | --- | --- |
-| [`add_field`](plugins-inputs-http.md#plugins-inputs-http-add_field) | [hash](logstash://reference/configuration-file-structure.md#hash) | No |
-| [`codec`](plugins-inputs-http.md#plugins-inputs-http-codec) | [codec](logstash://reference/configuration-file-structure.md#codec) | No |
-| [`enable_metric`](plugins-inputs-http.md#plugins-inputs-http-enable_metric) | [boolean](logstash://reference/configuration-file-structure.md#boolean) | No |
-| [`id`](plugins-inputs-http.md#plugins-inputs-http-id) | [string](logstash://reference/configuration-file-structure.md#string) | No |
-| [`tags`](plugins-inputs-http.md#plugins-inputs-http-tags) | [array](logstash://reference/configuration-file-structure.md#array) | No |
-| [`type`](plugins-inputs-http.md#plugins-inputs-http-type) | [string](logstash://reference/configuration-file-structure.md#string) | No |
+| :- | :- | :- |
+| [`add_field`](plugins-inputs-http.md#plugins-inputs-http-add_field) | [hash](value-types.md#hash) | No |
+| [`codec`](plugins-inputs-http.md#plugins-inputs-http-codec) | [codec](value-types.md#codec) | No |
+| [`enable_metric`](plugins-inputs-http.md#plugins-inputs-http-enable_metric) | [boolean](value-types.md#boolean) | No |
+| [`id`](plugins-inputs-http.md#plugins-inputs-http-id) | [string](value-types.md#string) | No |
+| [`tags`](plugins-inputs-http.md#plugins-inputs-http-tags) | [array](value-types.md#array) | No |
+| [`type`](plugins-inputs-http.md#plugins-inputs-http-type) | [string](value-types.md#string) | No |
 
 ### `add_field` [plugins-inputs-http-add_field]
 
-* Value type is [hash](logstash://reference/configuration-file-structure.md#hash)
+* Value type is [hash](value-types.md#hash)
 * Default value is `{}`
 
 Add a field to an event
 
-
 ### `codec` [plugins-inputs-http-codec]
 
-* Value type is [codec](logstash://reference/configuration-file-structure.md#codec)
+* Value type is [codec](value-types.md#codec)
 * Default value is `"plain"`
 
 The codec used for input data. Input codecs are a convenient method for decoding your data before it enters the input, without needing a separate filter in your Logstash pipeline.
 
-
 ### `enable_metric` [plugins-inputs-http-enable_metric]
 
-* Value type is [boolean](logstash://reference/configuration-file-structure.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `true`
 
 Disable or enable metric logging for this specific plugin instance by default we record all the metrics we can, but you can disable metrics collection for a specific plugin.
 
-
 ### `id` [plugins-inputs-http-id]
 
-* Value type is [string](logstash://reference/configuration-file-structure.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 Add a unique `ID` to the plugin configuration. If no ID is specified, Logstash will generate one. It is strongly recommended to set this ID in your configuration. This is particularly useful when you have two or more plugins of the same type, for example, if you have 2 http inputs. Adding a named ID in this case will help in monitoring Logstash when using the monitoring APIs.
 
-```json
+```
 input {
   http {
     id => "my_plugin_id"
@@ -489,25 +507,20 @@ input {
 }
 ```
 
-::::{note} 
 Variable substitution in the `id` field only supports environment variables and does not support the use of values from the secret store.
-::::
-
-
 
 ### `tags` [plugins-inputs-http-tags]
 
-* Value type is [array](logstash://reference/configuration-file-structure.md#array)
+* Value type is [array](value-types.md#array)
 * There is no default value for this setting.
 
 Add any number of arbitrary tags to your event.
 
 This can help with processing later.
 
-
 ### `type` [plugins-inputs-http-type]
 
-* Value type is [string](logstash://reference/configuration-file-structure.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 Add a `type` field to all events handled by this input.
@@ -517,6 +530,3 @@ Types are used mainly for filter activation.
 The type is stored as part of the event itself, so you can also use the type to search for it in Kibana.
 
 If you try to set a type on an event that already has one (for example when you send an event from a shipper to an indexer) then a new input will not override the existing type. A type set at the shipper stays with that event for its life even when sent to another Logstash server.
-
-
-
