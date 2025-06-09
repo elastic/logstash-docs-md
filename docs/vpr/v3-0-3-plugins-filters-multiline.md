@@ -43,7 +43,7 @@ The config looks like this:
     }
 ```
 
-The `pattern` should be a regexp ([grok]({{logstash-ref}}/plugins-filters-grok.html) patterns are supported) which matches what you believe to be an indicator that the field is part of an event consisting of multiple lines of log data.
+The `pattern` should be a regexp ([grok](https://www.elastic.co/guide/en/logstash/current/plugins-filters-grok.html) patterns are supported) which matches what you believe to be an indicator that the field is part of an event consisting of multiple lines of log data.
 
 The `what` must be `previous` or `next` and indicates the relation to the multi-line event.
 

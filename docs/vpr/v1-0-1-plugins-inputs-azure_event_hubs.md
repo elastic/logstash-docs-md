@@ -39,13 +39,13 @@ Endpoint=sb://logstash.servicebus.windows.net/;SharedAccessKeyName=activity-log-
 
 ### Blob Storage and connection string [_blob_storage_and_connection_string_25]
 
-[Azure Blob Storage account](https://azure.microsoft.com/en-us/services/storage/blobs) is an essential part of Azure-to-{{ls}} configuration. A Blob Storage account is a central location that enables multiple instances of {{ls}} to work together to process events. It records the offset (location) of processed events. On restart, {{ls}} resumes processing exactly where it left off.
+[Azure Blob Storage account](https://azure.microsoft.com/en-us/services/storage/blobs) is an essential part of Azure-to-Logstash configuration. A Blob Storage account is a central location that enables multiple instances of Logstash to work together to process events. It records the offset (location) of processed events. On restart, Logstash resumes processing exactly where it left off.
 
 Configuration notes:
 
 * A Blob Storage account is highly recommended for use with this plugin, and is likely required for production servers.
 * The `storage_connection` option passes the blob storage connection string.
-* Configure all {{ls}} instances to use the same `storage_connection` to get the benefits of shared processing.
+* Configure all Logstash instances to use the same `storage_connection` to get the benefits of shared processing.
 
 Sample Blob Storage connection string:
 
@@ -60,7 +60,7 @@ Find the connection string to Blob Storage here: [Azure Portal](https://portal.a
 
 Here are some guidelines to help you avoid data conflicts that can cause lost events.
 
-* **Create a {{ls}} consumer group.** Create a new consumer group specifically for {{ls}}. Do not use the $default or any other consumer group that might already be in use. Reusing consumer groups among non-related consumers can cause expected behavior and possibly lost events. All [ls] instances should use the same consumer group so that they can work together for processing events.
+* **Create a Logstash consumer group.** Create a new consumer group specifically for Logstash. Do not use the $default or any other consumer group that might already be in use. Reusing consumer groups among non-related consumers can cause expected behavior and possibly lost events. All [ls] instances should use the same consumer group so that they can work together for processing events.
 * **Avoid overwriting offset with multiple Event Hubs.** The offsets (position) of the Event Hubs are stored in the configured Azure Blob store. The Azure Blob store uses paths like a file system to store the offsets. If the paths between multiple Event Hubs overlap, then the offsets may be stored incorrectly. To avoid duplicate file paths, use the advanced configuration model and make sure that at least one of these options is different per Event Hub:
 
     * storage_connection
@@ -243,7 +243,7 @@ azure_event_hubs {
 * Default value is `5` seconds
 * Set to `0` to disable.
 
-Interval in seconds to write checkpoints during batch processing. Checkpoints tell {{ls}} where to resume processing after a restart. Checkpoints are automatically written at the end of each batch, regardless of this setting.
+Interval in seconds to write checkpoints during batch processing. Checkpoints tell Logstash where to resume processing after a restart. Checkpoints are automatically written at the end of each batch, regardless of this setting.
 
 Writing checkpoints too frequently can slow down processing unnecessarily.
 
@@ -313,7 +313,7 @@ azure_event_hubs {
 * Default value is `86400`
 * Used only if `initial_position` is set to `look-back`
 
-Number of seconds to look back to find the initial position for pre-existing events. This option is used only if `initial_position` is set to `look_back`. If `storage_connection` is set, this configuration applies only the first time {{ls}} reads from the Event Hub.
+Number of seconds to look back to find the initial position for pre-existing events. This option is used only if `initial_position` is set to `look_back`. If `storage_connection` is set, this configuration applies only the first time Logstash reads from the Event Hub.
 
 ```ruby
 azure_event_hubs {
@@ -361,7 +361,7 @@ azure_event_hubs {
 * Value type is [string](logstash://reference/configuration-file-structure.md#string)
 * Defaults to the Event Hub name if not defined
 
-Name of the storage container used to persist offsets and allow multiple instances of {{ls}} to work together.
+Name of the storage container used to persist offsets and allow multiple instances of Logstash to work together.
 
 ```ruby
 azure_event_hubs {

@@ -28,20 +28,20 @@ Use of this plugin requires an active Elastic Enterprise [subscription](https://
 
 ## Description [_description_1764]
 
-Use this filter to process Elastic integrations powered by {{es}} Ingest Node in {{ls}}.
+Use this filter to process Elastic integrations powered by Elasticsearch Ingest Node in Logstash.
 
-::::{admonition} Extending Elastic integrations with {{ls}}
-This plugin can help you take advantage of the extensive, built-in capabilities of [Elastic {{integrations}}\]\(([^:]+)://reference/index.md)—​such as managing data collection, transformation, and visualization—​and then use {{ls}} for additional data processing and output options. For more info about extending Elastic integrations with {{ls}}, check out [Using {{ls}} with Elastic Integrations](logstash://reference/using-logstash-with-elastic-integrations.md).
+::::{admonition} Extending Elastic integrations with Logstash
+This plugin can help you take advantage of the extensive, built-in capabilities of [Elastic Integrations\]\(([^:]+)://reference/index.md)—​such as managing data collection, transformation, and visualization—​and then use Logstash for additional data processing and output options. For more info about extending Elastic integrations with Logstash, check out [Using Logstash with Elastic Integrations](logstash://reference/using-logstash-with-elastic-integrations.md).
 
 ::::
 
 
-When you configure this filter to point to an {{es}} cluster, it detects which ingest pipeline (if any) should be executed for each event, using an explicitly-defined [`pipeline_name`](v8-17-0-plugins-filters-elastic_integration.md#v8.17.0-plugins-filters-elastic_integration-pipeline_name) or auto-detecting the event’s data-stream and its default pipeline.
+When you configure this filter to point to an Elasticsearch cluster, it detects which ingest pipeline (if any) should be executed for each event, using an explicitly-defined [`pipeline_name`](v8-17-0-plugins-filters-elastic_integration.md#v8.17.0-plugins-filters-elastic_integration-pipeline_name) or auto-detecting the event’s data-stream and its default pipeline.
 
-It then loads that pipeline’s definition from {{es}} and run that pipeline inside Logstash without transmitting the event to {{es}}. Events that are successfully handled by their ingest pipeline will have `[@metadata][target_ingest_pipeline]` set to `_none` so that any downstream {{es}} output in the Logstash pipeline will avoid running the event’s default pipeline *again* in {{es}}.
+It then loads that pipeline’s definition from Elasticsearch and run that pipeline inside Logstash without transmitting the event to Elasticsearch. Events that are successfully handled by their ingest pipeline will have `[@metadata][target_ingest_pipeline]` set to `_none` so that any downstream Elasticsearch output in the Logstash pipeline will avoid running the event’s default pipeline *again* in Elasticsearch.
 
 ::::{note}
-Some multi-pipeline configurations such as logstash-to-logstash over http(s) do not maintain the state of `[@metadata]` fields. In these setups, you may need to explicitly configure your downstream pipeline’s {{es}} output with `pipeline => "_none"` to avoid re-running the default pipeline.
+Some multi-pipeline configurations such as logstash-to-logstash over http(s) do not maintain the state of `[@metadata]` fields. In these setups, you may need to explicitly configure your downstream pipeline’s Elasticsearch output with `pipeline => "_none"` to avoid re-running the default pipeline.
 ::::
 
 
@@ -49,16 +49,16 @@ Events that *fail* ingest pipeline processing will be tagged with `_ingest_pipel
 
 ### Requirements and upgrade guidance [v8.17.0-plugins-filters-elastic_integration-requirements]
 
-* This plugin requires Java 17 minimum with {{ls}} `8.x` versions and Java 21 minimum with {{ls}} `9.x` versions.
-* When you upgrade the {{stack}}, upgrade {{ls}} (or this plugin specifically) *before* you upgrade {{kib}}. (Note that this requirement is a departure from the typical {{stack}} [installation order](docs-content://get-started/the-stack.md#installation-order).)
+* This plugin requires Java 17 minimum with Logstash `8.x` versions and Java 21 minimum with Logstash `9.x` versions.
+* When you upgrade the Elastic Stack, upgrade Logstash (or this plugin specifically) *before* you upgrade Kibana. (Note that this requirement is a departure from the typical Elastic Stack [installation order](docs-content://get-started/the-stack.md#installation-order).)
 
-    The {{es}}-{{ls}}-{{kib}} installation order ensures the best experience with {{agent}}-managed pipelines, and embeds functionality from a version of {{es}} Ingest Node that is compatible with the plugin version (`major`.`minor`).
+    The Elasticsearch-Logstash-Kibana installation order ensures the best experience with Elastic Agent-managed pipelines, and embeds functionality from a version of Elasticsearch Ingest Node that is compatible with the plugin version (`major`.`minor`).
 
 
 
 ### Using `filter-elastic_integration` with `output-elasticsearch` [v8.17.0-plugins-filters-elastic_integration-es-tips]
 
-Elastic {{integrations}} are designed to work with [data streams](/lsr/plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-data-streams) and [ECS-compatible](/lsr/plugins-outputs-elasticsearch.md#_compatibility_with_the_elastic_common_schema_ecs) output. Be sure that these features are enabled in the [`output-elasticsearch`](/lsr/plugins-outputs-elasticsearch.md) plugin.
+Elastic Integrations are designed to work with [data streams](/lsr/plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-data-streams) and [ECS-compatible](/lsr/plugins-outputs-elasticsearch.md#_compatibility_with_the_elastic_common_schema_ecs) output. Be sure that these features are enabled in the [`output-elasticsearch`](/lsr/plugins-outputs-elasticsearch.md) plugin.
 
 * Set [`data-stream`](/lsr/plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-data_stream) to `true`.<br> (Check out [Data streams](/lsr/plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-data-streams) for additional data streams settings.)
 * Set [`ecs-compatibility`](/lsr/plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-ecs_compatibility) to `v1` or `v8`.
@@ -69,7 +69,7 @@ Check out the [`output-elasticsearch` plugin](/lsr/plugins-outputs-elasticsearch
 
 ## Minimum configuration [v8.17.0-plugins-filters-elastic_integration-minimum_configuration]
 
-You will need to configure this plugin to connect to {{es}}, and may need to also need to provide local GeoIp databases.
+You will need to configure this plugin to connect to Elasticsearch, and may need to also need to provide local GeoIp databases.
 
 ```ruby
 filter {
@@ -84,9 +84,9 @@ filter {
 Read on for a guide to configuration, or jump to the [complete list of configuration options](v8-17-0-plugins-filters-elastic_integration.md#v8.17.0-plugins-filters-elastic_integration-options).
 
 
-## Connecting to {{es}} [v8.17.0-plugins-filters-elastic_integration-connecting_to_elasticsearch]
+## Connecting to Elasticsearch [v8.17.0-plugins-filters-elastic_integration-connecting_to_elasticsearch]
 
-This plugin communicates with {{es}} to identify which ingest pipeline should be run for a given event, and to retrieve the ingest pipeline definitions themselves. You must configure this plugin to point to {{es}} using exactly one of:
+This plugin communicates with Elasticsearch to identify which ingest pipeline should be run for a given event, and to retrieve the ingest pipeline definitions themselves. You must configure this plugin to point to Elasticsearch using exactly one of:
 
 * A Cloud Id (see [`cloud_id`](v8-17-0-plugins-filters-elastic_integration.md#v8.17.0-plugins-filters-elastic_integration-cloud_id))
 * A list of one or more host URLs (see [`hosts`](v8-17-0-plugins-filters-elastic_integration.md#v8.17.0-plugins-filters-elastic_integration-hosts))
@@ -97,7 +97,7 @@ You may need to configure how this plugin establishes trust of the server that r
 
 ### SSL Trust Configuration [_ssl_trust_configuration_2]
 
-When communicating over SSL, this plugin fully-validates the proof-of-identity presented by {{es}} using the system trust store. You can provide an *alternate* source of trust with one of:
+When communicating over SSL, this plugin fully-validates the proof-of-identity presented by Elasticsearch using the system trust store. You can provide an *alternate* source of trust with one of:
 
 * A PEM-formatted list of trusted certificate authorities (see [`ssl_certificate_authorities`](v8-17-0-plugins-filters-elastic_integration.md#v8.17.0-plugins-filters-elastic_integration-ssl_certificate_authorities))
 * A JKS- or PKCS12-formatted Keystore containing trusted certificates (see [`ssl_truststore_path`](v8-17-0-plugins-filters-elastic_integration.md#v8.17.0-plugins-filters-elastic_integration-ssl_truststore_path))
@@ -107,7 +107,7 @@ You can also configure which aspects of the proof-of-identity are verified (see 
 
 ### SSL Identity Configuration [_ssl_identity_configuration_2]
 
-When communicating over SSL, you can also configure this plugin to present a certificate-based proof-of-identity to the {{es}} cluster it connects to using one of:
+When communicating over SSL, you can also configure this plugin to present a certificate-based proof-of-identity to the Elasticsearch cluster it connects to using one of:
 
 * A PKCS8 Certificate/Key pair (see [`ssl_certificate`](v8-17-0-plugins-filters-elastic_integration.md#v8.17.0-plugins-filters-elastic_integration-ssl_certificate))
 * A JKS- or PKCS12-formatted Keystore (see [`ssl_keystore_path`](v8-17-0-plugins-filters-elastic_integration.md#v8.17.0-plugins-filters-elastic_integration-ssl_keystore_path))
@@ -115,7 +115,7 @@ When communicating over SSL, you can also configure this plugin to present a cer
 
 ### Request Identity [_request_identity_2]
 
-You can configure this plugin to present authentication credentials to {{es}} in one of several ways:
+You can configure this plugin to present authentication credentials to Elasticsearch in one of several ways:
 
 * ApiKey: (see [`api_key`](v8-17-0-plugins-filters-elastic_integration.md#v8.17.0-plugins-filters-elastic_integration-api_key))
 * Cloud Auth: (see [`cloud_auth`](v8-17-0-plugins-filters-elastic_integration.md#v8.17.0-plugins-filters-elastic_integration-cloud_auth))
@@ -134,14 +134,14 @@ This plugin communicates with Elasticsearch to resolve events into pipeline defi
 
 | Privilege name | Description |
 | --- | --- |
-| `monitor` | A read-only privilege for cluster operations such as cluster health or state. Plugin requires it when checks {{es}} license. |
-| `read_pipeline` | A read-only get and simulate access to ingest pipeline. It is required when plugin reads {{es}} ingest pipeline definitions. |
+| `monitor` | A read-only privilege for cluster operations such as cluster health or state. Plugin requires it when checks Elasticsearch license. |
+| `read_pipeline` | A read-only get and simulate access to ingest pipeline. It is required when plugin reads Elasticsearch ingest pipeline definitions. |
 | `manage_index_templates` | All operations on index templates privilege. It is required when plugin resolves default pipeline based on event data stream name. |
 
 ::::{note}
-This plugin cannot determine if an anonymous user has the required privileges when it connects to an {{es}} cluster that has security features disabled or when the user does not provide credentials. The plugin starts in an unsafe mode with a runtime error indicating that API permissions are insufficient, and prevents events from being processed by the ingest pipeline.
+This plugin cannot determine if an anonymous user has the required privileges when it connects to an Elasticsearch cluster that has security features disabled or when the user does not provide credentials. The plugin starts in an unsafe mode with a runtime error indicating that API permissions are insufficient, and prevents events from being processed by the ingest pipeline.
 
-To avoid these issues, set up user authentication and ensure that security in {{es}} is enabled (default).
+To avoid these issues, set up user authentication and ensure that security in Elasticsearch is enabled (default).
 
 ::::
 
@@ -149,7 +149,7 @@ To avoid these issues, set up user authentication and ensure that security in {{
 
 ## Supported Ingest Processors [v8.17.0-plugins-filters-elastic_integration-supported_ingest_processors]
 
-This filter can run {{es}} Ingest Node pipelines that are *wholly* comprised of the supported subset of processors. It has access to the Painless and Mustache scripting engines where applicable:
+This filter can run Elasticsearch Ingest Node pipelines that are *wholly* comprised of the supported subset of processors. It has access to the Painless and Mustache scripting engines where applicable:
 
 | Source | Processor | Caveats |
 | --- | --- | --- |
@@ -202,16 +202,16 @@ It also contains additional metadata fields as required by ingest pipeline proce
 
 After execution completes the event is sanitized to ensure that Logstash-reserved fields have the expected shape, providing sensible defaults for any missing required fields. When an ingest pipeline has set a reserved field to a value that cannot be coerced, the value is made available in an alternate location on the event as described below.
 
-| {{ls}} field | type | value |
+| Logstash field | type | value |
 | --- | --- | --- |
 | `@timestamp` | `Timestamp` | First coercible value of the ingest document’s `@timestamp`, `event.created`, `_ingest.timestamp`, or `_now` fields; or the current timestamp.When the ingest document has a value for `@timestamp` that cannot be coerced, it will be available in the event’s `_@timestamp` field. |
 | `@version` | String-encoded integer | First coercible value of the ingest document’s `@version`, or `_version` fields; or the current timestamp.When the ingest document has a value for `@version` that cannot be coerced, it will be available in the event’s `_@version` field. |
 | `@metadata` | key/value map | The ingest document’s `@metadata`; or an empty map.When the ingest document has a value for `@metadata` that cannot be coerced, it will be available in the event’s `_@metadata` field. |
 | `tags` | a String or a list of Strings | The ingest document’s `tags`.When the ingest document has a value for `tags` that cannot be coerced, it will be available in the event’s `_tags` field. |
 
-Additionally, these {{es}} IngestDocument Metadata fields are made available on the resulting event *if-and-only-if* they were set during pipeline execution:
+Additionally, these Elasticsearch IngestDocument Metadata fields are made available on the resulting event *if-and-only-if* they were set during pipeline execution:
 
-| {{es}} document metadata | {{ls}} field |
+| Elasticsearch document metadata | Logstash field |
 | --- | --- |
 | `_id` | `[@metadata][_ingest_document][id]` |
 | `_index` | `[@metadata][_ingest_document][index]` |
@@ -224,9 +224,9 @@ Additionally, these {{es}} IngestDocument Metadata fields are made available on 
 
 ## Resolving Pipeline Definitions [v8.17.0-plugins-filters-elastic_integration-resolving]
 
-This plugin uses {{es}} to resolve pipeline names into their pipeline definitions. When configured *without* an explicit [`pipeline_name`](v8-17-0-plugins-filters-elastic_integration.md#v8.17.0-plugins-filters-elastic_integration-pipeline_name), or when a pipeline uses the Reroute Processor, it also uses {{es}} to establish mappings of data stream names to their respective default pipeline names.
+This plugin uses Elasticsearch to resolve pipeline names into their pipeline definitions. When configured *without* an explicit [`pipeline_name`](v8-17-0-plugins-filters-elastic_integration.md#v8.17.0-plugins-filters-elastic_integration-pipeline_name), or when a pipeline uses the Reroute Processor, it also uses Elasticsearch to establish mappings of data stream names to their respective default pipeline names.
 
-It uses hit/miss caches to avoid querying Elasticsearch for every single event. It also works to update these cached mappings *before* they expire. The result is that when {{es}} is responsive this plugin is able to pick up changes quickly without impacting its own performance, and it can survive periods of {{es}} issues without interruption by continuing to use potentially-stale mappings or definitions.
+It uses hit/miss caches to avoid querying Elasticsearch for every single event. It also works to update these cached mappings *before* they expire. The result is that when Elasticsearch is responsive this plugin is able to pick up changes quickly without impacting its own performance, and it can survive periods of Elasticsearch issues without interruption by continuing to use potentially-stale mappings or definitions.
 
 To achieve this, mappings are cached for a maximum of 24 hours, and cached values are reloaded every 1 minute with the following effect:
 
@@ -266,7 +266,7 @@ This plugin supports the following configuration options plus the [Common option
 * Value type is [password](logstash://reference/configuration-file-structure.md#password)
 * There is no default value for this setting.
 
-The encoded form of an API key that is used to authenticate this plugin to {{es}}.
+The encoded form of an API key that is used to authenticate this plugin to Elasticsearch.
 
 
 ### `cloud_auth` [v8.17.0-plugins-filters-elastic_integration-cloud_auth]
@@ -285,7 +285,7 @@ Cloud authentication string ("<username>:<password>" format) is an alternative f
 
 Cloud Id, from the Elastic Cloud web console.
 
-When connecting with a Cloud Id, communication to {{es}} is secured with SSL.
+When connecting with a Cloud Id, communication to Elasticsearch is secured with SSL.
 
 For more details, check out the [Logstash-to-Cloud documentation](logstash://reference/connecting-to-cloud.md).
 
@@ -334,7 +334,7 @@ Most integrations rely on databases being present named *exactly*:
     * When any URL contains a path component, all URLs must have the same path as each other.
 
 
-A non-empty list of {{es}} hosts to connect.
+A non-empty list of Elasticsearch hosts to connect.
 
 Examples:
 
@@ -344,7 +344,7 @@ Examples:
 * `["https://127.0.0.1:9200"]`
 * `["https://127.0.0.1:9200/subpath"]` (If using a proxy on a subpath)
 
-When connecting with a list of hosts, communication to {{es}} is secured with SSL unless configured otherwise.
+When connecting with a list of hosts, communication to Elasticsearch is secured with SSL unless configured otherwise.
 
 ::::{admonition} Disabling SSL is dangerous
 :class: warning
@@ -366,7 +366,7 @@ There are two ways to disable SSL:
 * There is no default value for this setting.
 * Required when request auth is configured with [`username`](v8-17-0-plugins-filters-elastic_integration.md#v8.17.0-plugins-filters-elastic_integration-username)
 
-A password when using HTTP Basic Authentication to connect to {{es}}.
+A password when using HTTP Basic Authentication to connect to Elasticsearch.
 
 
 ### `pipeline_name` [v8.17.0-plugins-filters-elastic_integration-pipeline_name]
@@ -384,7 +384,7 @@ A password when using HTTP Basic Authentication to connect to {{es}}.
 * When present, [`ssl_key`](v8-17-0-plugins-filters-elastic_integration.md#v8.17.0-plugins-filters-elastic_integration-ssl_key) and [`ssl_key_passphrase`](v8-17-0-plugins-filters-elastic_integration.md#v8.17.0-plugins-filters-elastic_integration-ssl_key_passphrase) are also required.
 * Cannot be combined with configurations that disable SSL
 
-Path to a PEM-encoded certificate or certificate chain with which to identify this plugin to {{es}}.
+Path to a PEM-encoded certificate or certificate chain with which to identify this plugin to Elasticsearch.
 
 
 ### `ssl_certificate_authorities` [v8.17.0-plugins-filters-elastic_integration-ssl_certificate_authorities]
@@ -396,7 +396,7 @@ Path to a PEM-encoded certificate or certificate chain with which to identify th
 
 One or more PEM-formatted files defining certificate authorities.
 
-This setting can be used to *override* the system trust store for verifying the SSL certificate presented by {{es}}.
+This setting can be used to *override* the system trust store for verifying the SSL certificate presented by Elasticsearch.
 
 
 ### `ssl_enabled` [v8.17.0-plugins-filters-elastic_integration-ssl_enabled]
@@ -404,7 +404,7 @@ This setting can be used to *override* the system trust store for verifying the 
 * Value type is [boolean](logstash://reference/configuration-file-structure.md#boolean)
 * There is no default value for this setting.
 
-Secure SSL communication to {{es}} is enabled unless:
+Secure SSL communication to Elasticsearch is enabled unless:
 
 * it is explicitly disabled with `ssl_enabled => false`; OR
 * it is implicitly disabled by providing `http`-protocol [`hosts`](v8-17-0-plugins-filters-elastic_integration.md#v8.17.0-plugins-filters-elastic_integration-hosts).
@@ -439,7 +439,7 @@ Password for the [`ssl_keystore_path`](v8-17-0-plugins-filters-elastic_integrati
 * When present, [`ssl_keystore_password`](v8-17-0-plugins-filters-elastic_integration.md#v8.17.0-plugins-filters-elastic_integration-ssl_keystore_password) is also required.
 * Cannot be combined with configurations that disable SSL
 
-A path to a JKS- or PKCS12-formatted keystore with which to identify this plugin to {{es}}.
+A path to a JKS- or PKCS12-formatted keystore with which to identify this plugin to Elasticsearch.
 
 
 ### `ssl_key_passphrase` [v8.17.0-plugins-filters-elastic_integration-ssl_key_passphrase]
@@ -462,7 +462,7 @@ A password or passphrase of the [`ssl_key`](v8-17-0-plugins-filters-elastic_inte
 
 A path to JKS- or PKCS12-formatted keystore where trusted certificates are located.
 
-This setting can be used to *override* the system trust store for verifying the SSL certificate presented by {{es}}.
+This setting can be used to *override* the system trust store for verifying the SSL certificate presented by Elasticsearch.
 
 
 ### `ssl_truststore_password` [v8.17.0-plugins-filters-elastic_integration-ssl_truststore_password]
@@ -481,9 +481,9 @@ Password for the [`ssl_truststore_path`](v8-17-0-plugins-filters-elastic_integra
 * There is no default value for this setting.
 * Cannot be combined with configurations that disable SSL
 
-Level of verification of the certificate provided by {{es}}.
+Level of verification of the certificate provided by Elasticsearch.
 
-SSL certificates presented by {{es}} are fully-validated by default.
+SSL certificates presented by Elasticsearch are fully-validated by default.
 
 * Available modes:
 
@@ -499,7 +499,7 @@ SSL certificates presented by {{es}} are fully-validated by default.
 * There is no default value for this setting.
 * When present, [`password`](v8-17-0-plugins-filters-elastic_integration.md#v8.17.0-plugins-filters-elastic_integration-password) is also required.
 
-A user name when using HTTP Basic Authentication to connect to {{es}}.
+A user name when using HTTP Basic Authentication to connect to Elasticsearch.
 
  
 

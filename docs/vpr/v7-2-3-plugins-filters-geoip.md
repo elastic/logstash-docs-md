@@ -71,8 +71,8 @@ You can create a service that mimics the Elastic GeoIP endpoint. You can then ge
 
 1. Download your `.mmdb` database files from the [MaxMind site](http://dev.maxmind.com/geoip/geoip2/geolite2).
 2. Copy your database files to a single directory.
-3. [Download {{es}}](https://www.elastic.co/downloads/elasticsearch).
-4. From your {{es}} directory, run:
+3. [Download Elasticsearch](https://www.elastic.co/downloads/elasticsearch).
+4. From your Elasticsearch directory, run:
 
     ```sh
     ./bin/elasticsearch-geoip -s my/database/dir

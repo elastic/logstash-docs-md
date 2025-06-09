@@ -7,7 +7,7 @@ mapped_pages:
 # Sink output plugin [plugins-outputs-sink]
 
 
-**{{ls}} Core Plugin.** The sink output plugin cannot be installed or uninstalled independently of {{ls}}.
+**Logstash Core Plugin.** The sink output plugin cannot be installed or uninstalled independently of Logstash.
 
 ## Getting help [_getting_help_108]
 
@@ -65,7 +65,7 @@ output {
 }
 ```
 
-::::{note} 
+::::{note}
 Variable substitution in the `id` field only supports environment variables and does not support the use of values from the secret store.
 ::::
 

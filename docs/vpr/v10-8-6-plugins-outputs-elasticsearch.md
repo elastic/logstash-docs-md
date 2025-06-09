@@ -40,9 +40,9 @@ If you are using a custom [`template`](v10-8-6-plugins-outputs-elasticsearch.md#
 ::::
 
 
-### Hosted {{es}} Service on Elastic Cloud [_hosted_es_service_on_elastic_cloud_56]
+### Hosted Elasticsearch Service on Elastic Cloud [_hosted_es_service_on_elastic_cloud_56]
 
-{{ess-leadin}}
+You can run Elasticsearch on your own hardware or use our hosted Elasticsearch Service that is available on AWS, GCP, and Azure. Try the Elasticsearch Service for free: https://cloud.elastic.co/registration.
 
 
 
@@ -182,7 +182,7 @@ If the index property is supplied in the output definition, it will be overwritt
 
 ## Batch Sizes [_batch_sizes_70]
 
-This plugin attempts to send batches of events to the [{{es}} Bulk API](https://www.elastic.co/docs/api/doc/elasticsearch/operation/operation-bulk) as a single request. However, if a batch exceeds 20MB we break it up into multiple bulk requests. If a single document exceeds 20MB it is sent as a single request.
+This plugin attempts to send batches of events to the [Elasticsearch Bulk API](https://www.elastic.co/docs/api/doc/elasticsearch/operation/operation-bulk) as a single request. However, if a batch exceeds 20MB we break it up into multiple bulk requests. If a single document exceeds 20MB it is sent as a single request.
 
 
 ## DNS Caching [_dns_caching_70]

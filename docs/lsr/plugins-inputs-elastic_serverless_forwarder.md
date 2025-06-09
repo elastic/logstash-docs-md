@@ -104,9 +104,9 @@ Basic Authentication is not a substitute for SSL, as it provides neither secrecy
 
 ## Using Elastic Serverless Forwarder with the Elasticsearch output [plugins-inputs-elastic_serverless_forwarder-es-output-notes]
 
-Here are some tips for configuring the {{esf}} input to work with the elasticsearch output:
+Here are some tips for configuring the Elastic Serverless Forwarder input to work with the elasticsearch output:
 
-* Set the `document_id` in the output configuration when you use the {{esf}}  input with an [Elasticsearch output plugin](https://www.elastic.co/guide/en/logstash/current/plugins-outputs-elasticsearch.html#plugins-outputs-elasticsearch).
+* Set the `document_id` in the output configuration when you use the Elastic Serverless Forwarder  input with an [Elasticsearch output plugin](https://www.elastic.co/guide/en/logstash/current/plugins-outputs-elasticsearch.html#plugins-outputs-elasticsearch).
 
     ```ruby
     output {

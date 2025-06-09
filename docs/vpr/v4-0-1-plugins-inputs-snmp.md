@@ -28,7 +28,7 @@ This functionality is in technical preview and may be changed or removed in a fu
 ::::{admonition} Technical Preview
 The new `integration-snmp` plugin, and its component plugins--`input-snmp` and `input-snmptrap`--are available in *Technical Preview* and can be installed on the latest Logstash 7.x and 8.x versions.
 
-Current 1.x versions of the `input-snmp` plugin are bundled with {{ls}} by default, and will soon be replaced by the snmp input plugin contained in this integration. (If you want to opt into the Technical Preview for the `integration-snmp` plugin, run `bin/logstash-plugin install logstash-integration-snmp`.)
+Current 1.x versions of the `input-snmp` plugin are bundled with Logstash by default, and will soon be replaced by the snmp input plugin contained in this integration. (If you want to opt into the Technical Preview for the `integration-snmp` plugin, run `bin/logstash-plugin install logstash-integration-snmp`.)
 
 Be aware of behavioral and mapping differences between current stand-alone plugins and the new versions included in the `integration-snmp`.
 

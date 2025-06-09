@@ -27,7 +27,7 @@ This functionality is in technical preview and may be changed or removed in a fu
 ::::{admonition} Technical Preview
 The new `integration-snmp` plugin, and its component plugins--`input-snmp` and `input-snmptrap`--are available in *Technical Preview* and can be installed on the latest Logstash 7.x and 8.x versions.
 
-Current 1.x versions of the `input-snmp` plugin are bundled with {{ls}} by default, and will soon be replaced by the snmp input plugin contained in this integration. (If you want to opt into the Technical Preview for the `integration-snmp` plugin, run `bin/logstash-plugin install logstash-integration-snmp`.)
+Current 1.x versions of the `input-snmp` plugin are bundled with Logstash by default, and will soon be replaced by the snmp input plugin contained in this integration. (If you want to opt into the Technical Preview for the `integration-snmp` plugin, run `bin/logstash-plugin install logstash-integration-snmp`.)
 
 Be aware of [behavioral and mapping differences](v4-0-1-plugins-integrations-snmp.md#v4.0.1-plugins-integrations-snmp-migration) between current stand-alone plugins and the new versions included in the `integration-snmp`. The information in this topic can help.
 
@@ -78,7 +78,7 @@ You might need to address some behavior changes depending on your use case and h
 
 ### Changes to mapping and error logging: `logstash-input-snmptrap` [v4.0.1-plugins-integrations-snmp-input-snmptrap-mapping]
 
-* The **PDU variable bindings** are mapped into the {{ls}} event using the defined data type. By default, the stand-alone `logstash-input-snmptrap` plugin converts all of the data to `string`, ignoring the original type. If this behavior is not what you want, you can use a filter to retain the original type.
+* The **PDU variable bindings** are mapped into the Logstash event using the defined data type. By default, the stand-alone `logstash-input-snmptrap` plugin converts all of the data to `string`, ignoring the original type. If this behavior is not what you want, you can use a filter to retain the original type.
 * **SNMP `TimeTicks` variables** are mapped as `Long` timestamps instead of formatted date string (`%d days, %02d:%02d:%02d.%02d`).
 * **`null` variables values** are mapped using the string `null` instead of `Null` (upper-case N).
 * **No such instance errors** are mapped as `error: no such instance currently exists at this OID string` instead of `noSuchInstance`.

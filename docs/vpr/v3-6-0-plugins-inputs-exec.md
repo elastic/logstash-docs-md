@@ -56,7 +56,7 @@ This plugin adds metadata about the event’s source, and can be configured to d
 
 | ECS Disabled | ECS v1 , v8 | Description |
 | --- | --- | --- |
-| `host` | `[host][name]` | The name of the {{ls}} host that processed the event |
+| `host` | `[host][name]` | The name of the Logstash host that processed the event |
 | `command` | `[process][command_line]` | The command run by the plugin |
 | `[@metadata][exit_status]` | `[process][exit_code]` | The exit code of the process |
 |  —  | `[@metadata][input][exec][process][elapsed_time]` | The elapsed time the command took to run in nanoseconds |

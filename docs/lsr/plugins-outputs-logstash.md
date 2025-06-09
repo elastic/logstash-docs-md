@@ -136,7 +136,7 @@ Host can be any of IPv4, IPv6 (in enclosed bracket) or host name, examples:
 
 Plugin balances incoming load among the `hosts`. For more information, visit [Logstash integration plugin](plugins-integrations-logstash.md) *Load Balancing* section.
 
-When connecting, communication to downstream input {{ls}} is secured with SSL unless configured otherwise.
+When connecting, communication to downstream input Logstash is secured with SSL unless configured otherwise.
 
 ::::{admonition} Disabling SSL is dangerous
 :class: warning

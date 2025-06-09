@@ -33,7 +33,7 @@ Starting with Elasticsearch 5.3, there’s an [HTTP setting](elasticsearch://ref
 If you plan to use the Kibana web interface, use the Elasticsearch output plugin to get your log data into Elasticsearch.
 
 ::::{tip}
-You can run Elasticsearch on your own hardware, or use our [hosted {{es}} Service](https://www.elastic.co/cloud/elasticsearch-service) on Elastic Cloud. The Elasticsearch Service is available on both AWS and GCP. [Try the {{es}} Service for free](https://www.elastic.co/cloud/elasticsearch-service/signup).
+You can run Elasticsearch on your own hardware, or use our [hosted Elasticsearch Service](https://www.elastic.co/cloud/elasticsearch-service) on Elastic Cloud. The Elasticsearch Service is available on both AWS and GCP. [Try the Elasticsearch Service for free](https://www.elastic.co/cloud/elasticsearch-service/signup).
 ::::
 
 

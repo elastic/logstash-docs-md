@@ -7,7 +7,7 @@ mapped_pages:
 # Jdots codec plugin [plugins-codecs-jdots]
 
 
-**{{ls}} Core Plugin.** The jdots codec plugin cannot be installed or uninstalled independently of {{ls}}.
+**Logstash Core Plugin.** The jdots codec plugin cannot be installed or uninstalled independently of Logstash.
 
 ## Getting help [_getting_help_185]
 

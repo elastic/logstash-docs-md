@@ -208,7 +208,7 @@ Password for the [`ssl_keystore_path`](plugins-inputs-logstash.md#plugins-inputs
 * When present, [`ssl_keystore_password`](plugins-inputs-logstash.md#plugins-inputs-logstash-ssl_keystore_password) is also required.
 * Cannot be combined with configurations that disable SSL.
 
-A path to a JKS- or PKCS12-formatted keystore with which to identify this plugin to {{es}}.
+A path to a JKS- or PKCS12-formatted keystore with which to identify this plugin to Elasticsearch.
 
 
 ### `ssl_key_passphrase` [plugins-inputs-logstash-ssl_key_passphrase]

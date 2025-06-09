@@ -7,7 +7,7 @@ mapped_pages:
 # Java_plain codec plugin [plugins-codecs-java_plain]
 
 
-**{{ls}} Core Plugin.** The java_plain codec plugin cannot be installed or uninstalled independently of {{ls}}.
+**Logstash Core Plugin.** The java_plain codec plugin cannot be installed or uninstalled independently of Logstash.
 
 ## Getting help [_getting_help_187]
 

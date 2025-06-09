@@ -77,7 +77,7 @@ You might need to address some behavior changes depending on your use case and h
 
 ### Changes to mapping and error logging: `logstash-input-snmptrap` [v4.0.0-plugins-integrations-snmp-input-snmptrap-mapping]
 
-* The **PDU variable bindings** are mapped into the {{ls}} event using the defined data type. By default, the stand-alone `logstash-input-snmptrap` plugin converts all of the data to `string`, ignoring the original type. If this behavior is not what you want, you can use a filter to retain the original type.
+* The **PDU variable bindings** are mapped into the Logstash event using the defined data type. By default, the stand-alone `logstash-input-snmptrap` plugin converts all of the data to `string`, ignoring the original type. If this behavior is not what you want, you can use a filter to retain the original type.
 * **SNMP `TimeTicks` variables** are mapped as `Long` timestamps instead of formatted date string (`%d days, %02d:%02d:%02d.%02d`).
 * **`null` variables values** are mapped using the string `null` instead of `Null` (upper-case N).
 * **No such instance errors** are mapped as `error: no such instance currently exists at this OID string` instead of `noSuchInstance`.

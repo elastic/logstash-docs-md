@@ -20,10 +20,10 @@ To learn more about Logstash, see the [Logstash Reference](logstash://reference/
 For questions about the plugin, open a topic in the [Discuss](http://discuss.elastic.co) forums. For bugs or feature requests, open an issue in [Github](https://github.com/logstash-plugins/logstash-integration-snmp). For the list of Elastic supported plugins, please consult the [Elastic Support Matrix](https://www.elastic.co/support/matrix#matrix_logstash_plugins).
 
 :::::{admonition} Announcing the new SNMP integration plugin
-The new `logstash-integration-snmp` plugin is available and bundled with {{ls}} 8.15.0 (and later) by default. This plugin combines our classic `logstash-input-snmp` and `logstash-input-snmptrap` plugins into a single Ruby gem at v4.0.0 and later. Earlier versions of the stand-alone plugins that were bundled with {{ls}} by default will be replaced by the 4.0.0+ version contained in this new integration.
+The new `logstash-integration-snmp` plugin is available and bundled with Logstash 8.15.0 (and later) by default. This plugin combines our classic `logstash-input-snmp` and `logstash-input-snmptrap` plugins into a single Ruby gem at v4.0.0 and later. Earlier versions of the stand-alone plugins that were bundled with Logstash by default will be replaced by the 4.0.0+ version contained in this new integration.
 
 ::::{important}
-Before you upgrade to {{ls}} 8.15.0 that includes this new integration by default, be aware of [behavioral and mapping differences](/lsr/plugins-integrations-snmp.md#plugins-integrations-snmp-migration) between stand-alone plugins and the new versions included in `integration-snmp`. If you need to maintain current mappings for the `input-snmptrap` plugin, you have options to [preserve existing behavior](/lsr/plugins-integrations-snmp.md#plugins-integrations-snmp-input-snmptrap-compat).
+Before you upgrade to Logstash 8.15.0 that includes this new integration by default, be aware of [behavioral and mapping differences](/lsr/plugins-integrations-snmp.md#plugins-integrations-snmp-migration) between stand-alone plugins and the new versions included in `integration-snmp`. If you need to maintain current mappings for the `input-snmptrap` plugin, you have options to [preserve existing behavior](/lsr/plugins-integrations-snmp.md#plugins-integrations-snmp-input-snmptrap-compat).
 ::::
 
 
@@ -74,7 +74,7 @@ You might need to address some behavior changes depending on your use case and h
 
 ### Changes to mapping and error logging: `logstash-input-snmptrap` [v4.0.6-plugins-integrations-snmp-input-snmptrap-mapping]
 
-* The **PDU variable bindings** are mapped into the {{ls}} event using the defined data type. By default, the stand-alone `logstash-input-snmptrap` plugin converts all of the data to `string`, ignoring the original type. If this behavior is not what you want, you can use a filter to retain the original type.
+* The **PDU variable bindings** are mapped into the Logstash event using the defined data type. By default, the stand-alone `logstash-input-snmptrap` plugin converts all of the data to `string`, ignoring the original type. If this behavior is not what you want, you can use a filter to retain the original type.
 * **SNMP `TimeTicks` variables** are mapped as `Long` timestamps instead of formatted date string (`%d days, %02d:%02d:%02d.%02d`).
 * **`null` variables values** are mapped using the string `null` instead of `Null` (upper-case N).
 * **No such instance errors** are mapped as `error: no such instance currently exists at this OID string` instead of `noSuchInstance`.

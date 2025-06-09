@@ -55,7 +55,7 @@ This plugin adds metadata about event’s source, and can be configured to do so
 
 | ECS Disabled | ECS `v1`, `v8` | Description |
 | --- | --- | --- |
-| `host` | `[host][name]` | The name of the {{ls}} host that processed the event |
+| `host` | `[host][name]` | The name of the Logstash host that processed the event |
 | `path` | `[log][file][path]` | The full path to the log file from which the event originates |
 
 

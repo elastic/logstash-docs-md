@@ -53,7 +53,7 @@ This plugin adds metadata about event’s source, and can be configured to do so
 
 | ECS Disabled | ECS `v1`, `v8` | Description |
 | --- | --- | --- |
-| `host` | `[host][name]` | The name of the {{ls}} host that processed the event |
+| `host` | `[host][name]` | The name of the Logstash host that processed the event |
 | `path` | `[log][file][path]` | The full path to the log file from which the event originates |
 
 
@@ -95,7 +95,7 @@ File rotation is detected and handled by this input, regardless of whether the f
 
 This plugin supports the following configuration options plus the [Common options](plugins-inputs-file.md#plugins-inputs-file-common-options) described later.
 
-::::{note} 
+::::{note}
 Duration settings can be specified in text form e.g. "250 ms", this string will be converted into decimal seconds. There are quite a few supported natural and abbreviated durations, see [string_duration](plugins-inputs-file.md#plugins-inputs-file-string_duration) for the details.
 ::::
 
@@ -342,7 +342,7 @@ This option only modifies "first contact" situations where a file is new and not
 
 How often (in seconds) we stat files to see if they have been modified. Increasing this interval will decrease the number of system calls we make, but increase the time to detect new log lines.
 
-::::{note} 
+::::{note}
 Discovering new files and checking whether they have grown/or shrunk occurs in a loop. This loop will sleep for `stat_interval` seconds before looping again. However, if files have grown, the new content is read and lines are enqueued. Reading and enqueuing across all grown files can take time, especially if the pipeline is congested. So the overall loop time is a combination of the `stat_interval` and the file read time.
 ::::
 
@@ -401,7 +401,7 @@ input {
 }
 ```
 
-::::{note} 
+::::{note}
 Variable substitution in the `id` field only supports environment variables and does not support the use of values from the secret store.
 ::::
 
@@ -436,7 +436,7 @@ If you try to set a type on an event that already has one (for example when you 
 
 Format is `number` `string` and the space between these is optional. So "45s" and "45 s" are both valid.
 
-::::{tip} 
+::::{tip}
 Use the most suitable duration, for example, "3 days" rather than "72 hours".
 ::::
 
@@ -470,7 +470,7 @@ Supported values: `s` `sec` `second` `seconds`, e.g. "45 s", "15 sec", "1 second
 
 Supported values: `ms` `msec` `msecs`, e.g. "500 ms", "750 msec", "50 msecs
 
-::::{note} 
+::::{note}
 `milli` `millis` and `milliseconds` are not supported
 ::::
 
@@ -480,7 +480,7 @@ Supported values: `ms` `msec` `msecs`, e.g. "500 ms", "750 msec", "50 msecs
 
 Supported values: `us` `usec` `usecs`, e.g. "600 us", "800 usec", "900 usecs"
 
-::::{note} 
+::::{note}
 `micro` `micros` and `microseconds` are not supported
 ::::
 

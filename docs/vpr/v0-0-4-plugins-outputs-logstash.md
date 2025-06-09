@@ -123,7 +123,7 @@ Also see [Common options](v0-0-4-plugins-outputs-logstash.md#v0.0.4-plugins-outp
     * When a port is not provided, the default `9800` is used.
 
 
-A downstream input {{ls}} host or IP address to connect.
+A downstream input Logstash host or IP address to connect.
 
 ::::{note}
 Single host endpoint is supported for `hosts`. Multi-host support is coming soon.
@@ -141,7 +141,7 @@ Host can be any of IPv4, IPv6 (in enclosed bracket) or host name, examples:
 * `"[2001:0db8:85a3:0000:0000:8a2e:0370:7334]"`
 * `"[2001:0db8:85a3:0000:0000:8a2e:0370:7334]:9804"`
 
-When connecting, communication to downstream input {{ls}} is secured with SSL unless configured otherwise.
+When connecting, communication to downstream input Logstash is secured with SSL unless configured otherwise.
 
 ::::{admonition} Disabling SSL is dangerous
 :class: warning

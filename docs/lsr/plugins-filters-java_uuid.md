@@ -7,7 +7,7 @@ mapped_pages:
 # Java_uuid filter plugin [plugins-filters-java_uuid]
 
 
-**{{ls}} Core Plugin.** The java_uuid filter plugin cannot be installed or uninstalled independently of {{ls}}.
+**Logstash Core Plugin.** The java_uuid filter plugin cannot be installed or uninstalled independently of Logstash.
 
 ## Getting help [_getting_help_146]
 
@@ -173,7 +173,7 @@ Add a unique `ID` to the plugin configuration. If no ID is specified, Logstash w
     }
 ```
 
-::::{note} 
+::::{note}
 Variable substitution in the `id` field only supports environment variables and does not support the use of values from the secret store.
 ::::
 

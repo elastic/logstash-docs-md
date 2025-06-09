@@ -33,7 +33,7 @@ These fields are added after the event has been decoded by the appropriate codec
 
 | ECS Disabled | ECS v1 , v8 | Description |
 | --- | --- | --- |
-| `host` | `[host][name]` | The name of the {{ls}} host that processed the event |
+| `host` | `[host][name]` | The name of the Logstash host that processed the event |
 | `command` | `[process][command_line]` | The command run by the plugin |
 
 
@@ -160,7 +160,7 @@ input {
 }
 ```
 
-::::{note} 
+::::{note}
 Variable substitution in the `id` field only supports environment variables and does not support the use of values from the secret store.
 ::::
 

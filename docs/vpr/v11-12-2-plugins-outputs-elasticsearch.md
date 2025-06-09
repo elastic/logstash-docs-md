@@ -38,9 +38,9 @@ If you are using a custom [`template`](v11-12-2-plugins-outputs-elasticsearch.md
 ::::
 
 
-### Hosted {{es}} Service on Elastic Cloud [_hosted_es_service_on_elastic_cloud_25]
+### Hosted Elasticsearch Service on Elastic Cloud [_hosted_es_service_on_elastic_cloud_25]
 
-{{ess-leadin}}
+You can run Elasticsearch on your own hardware or use our hosted Elasticsearch Service that is available on AWS, GCP, and Azure. Try the Elasticsearch Service for free: https://cloud.elastic.co/registration.
 
 
 
@@ -53,9 +53,9 @@ However, the Elasticsearch Index Templates it manages can be configured to be EC
 
 ## Data streams [v11.12.2-plugins-outputs-elasticsearch-data-streams]
 
-The {{es}} output plugin can store both time series datasets (such as logs, events, and metrics) and non-time series data in Elasticsearch.
+The Elasticsearch output plugin can store both time series datasets (such as logs, events, and metrics) and non-time series data in Elasticsearch.
 
-The data stream options are recommended for indexing time series datasets (such as logs, metrics, and events) into {{es}}:
+The data stream options are recommended for indexing time series datasets (such as logs, metrics, and events) into Elasticsearch:
 
 * [`data_stream`](v11-12-2-plugins-outputs-elasticsearch.md#v11.12.2-plugins-outputs-elasticsearch-data_stream)
 * [`data_stream_auto_routing`](v11-12-2-plugins-outputs-elasticsearch.md#v11.12.2-plugins-outputs-elasticsearch-data_stream_auto_routing)
@@ -223,7 +223,7 @@ If the index property is supplied in the output definition, it will be overwritt
 
 ## Batch Sizes [_batch_sizes_39]
 
-This plugin attempts to send batches of events to the [{{es}} Bulk API](https://www.elastic.co/docs/api/doc/elasticsearch/operation/operation-bulk) as a single request. However, if a batch exceeds 20MB we break it up into multiple bulk requests. If a single document exceeds 20MB it is sent as a single request.
+This plugin attempts to send batches of events to the [Elasticsearch Bulk API](https://www.elastic.co/docs/api/doc/elasticsearch/operation/operation-bulk) as a single request. However, if a batch exceeds 20MB we break it up into multiple bulk requests. If a single document exceeds 20MB it is sent as a single request.
 
 
 ## DNS Caching [_dns_caching_39]
@@ -237,7 +237,7 @@ Keep in mind that a connection with keepalive enabled will not reevaluate its DN
 
 ## HTTP Compression [_http_compression_39]
 
-This plugin always reads compressed responses from {{es}}. It *can be configured* to send compressed bulk requests to {{es}}.
+This plugin always reads compressed responses from Elasticsearch. It *can be configured* to send compressed bulk requests to Elasticsearch.
 
 If you are concerned about bandwidth, you can enable [`http_compression`](v11-12-2-plugins-outputs-elasticsearch.md#v11.12.2-plugins-outputs-elasticsearch-http_compression) to trade a small amount of CPU capacity for a significant reduction in network IO.
 
@@ -343,7 +343,7 @@ The Elasticsearch action to perform. Valid actions are:
 * `delete`: deletes a document by id (An id is required for this action)
 * `create`: indexes a document, fails if a document by that id already exists in the index.
 * `update`: updates a document by id. Update has a special case where you can upsert — update a document if not already present. See the `doc_as_upsert` option. NOTE: This does not work and is not supported in Elasticsearch 1.x. Please upgrade to ES 2.x or greater to use this feature with Logstash!
-* A sprintf style string to change the action based on the content of the event. The value `%{[foo]}` would use the foo field for the action. If resolved action is not in [`index`, `delete`, `create`, `update`], the event will not be sent to {{es}}. Instead the event will be sent to the pipeline’s [dead-letter-queue (DLQ)](logstash://reference/dead-letter-queues.md) (if enabled), or it will be logged and dropped.
+* A sprintf style string to change the action based on the content of the event. The value `%{[foo]}` would use the foo field for the action. If resolved action is not in [`index`, `delete`, `create`, `update`], the event will not be sent to Elasticsearch. Instead the event will be sent to the pipeline’s [dead-letter-queue (DLQ)](logstash://reference/dead-letter-queues.md) (if enabled), or it will be logged and dropped.
 
 For more details on actions, check out the [Elasticsearch bulk API documentation](https://www.elastic.co/docs/api/doc/elasticsearch/operation/operation-bulk).
 
@@ -592,10 +592,10 @@ Any special characters present in the URLs here MUST be URL escaped! This means 
 
 Enable gzip compression on requests.
 
-This setting allows you to reduce this plugin’s outbound network traffic by compressing each bulk *request* to {{es}}.
+This setting allows you to reduce this plugin’s outbound network traffic by compressing each bulk *request* to Elasticsearch.
 
 ::::{note}
-This output plugin reads compressed *responses* from {{es}} regardless of the value of this setting.
+This output plugin reads compressed *responses* from Elasticsearch regardless of the value of this setting.
 ::::
 
 

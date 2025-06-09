@@ -28,12 +28,12 @@ Use of this plugin requires an active Enterprise Elastic License.
 
 ## Description [_description_1786]
 
-Using this filter you can process Elastic integrations powered by {{es}} Ingest Node in Logstash.
+Using this filter you can process Elastic integrations powered by Elasticsearch Ingest Node in Logstash.
 
-Once configured to point to an {{es}} cluster, events processed by this filter will first resolve their effective data-stream, and determine from {{es}} which ingest pipeline to run. The ingest pipeline will be run inside Logstash without transmitting the event to {{es}}. Events that are successfully handled by their ingest pipeline will have `[@metadata][target_ingest_pipeline]` set to `+_none+` so that any downstream {{es}} output in the Logstash pipeline will avoid running the event’s default pipeline *again* in {{es}}.
+Once configured to point to an Elasticsearch cluster, events processed by this filter will first resolve their effective data-stream, and determine from Elasticsearch which ingest pipeline to run. The ingest pipeline will be run inside Logstash without transmitting the event to Elasticsearch. Events that are successfully handled by their ingest pipeline will have `[@metadata][target_ingest_pipeline]` set to `+_none+` so that any downstream Elasticsearch output in the Logstash pipeline will avoid running the event’s default pipeline *again* in Elasticsearch.
 
 ::::{note}
-Some multi-pipeline configurations such as logstash-to-logstash over http(s) do not maintain the state of `[@metadata]` fields. In these setups, you may need to explicitly configure your downstream pipeline’s {{es}} output with `+pipeline => "_none"+` to avoid re-running the default pipeline.
+Some multi-pipeline configurations such as logstash-to-logstash over http(s) do not maintain the state of `[@metadata]` fields. In these setups, you may need to explicitly configure your downstream pipeline’s Elasticsearch output with `+pipeline => "_none"+` to avoid re-running the default pipeline.
 ::::
 
 
@@ -55,7 +55,7 @@ Before upgrading this plugin or Logstash itself, please pay special attention to
 
 ## Minimum Configuration [v0.0.1-plugins-filters-elastic_integration-minimum_configuration]
 
-You will need to configure this plugin to connect to {{es}}, and may need to also need to provide local GeoIp databases.
+You will need to configure this plugin to connect to Elasticsearch, and may need to also need to provide local GeoIp databases.
 
 ```shell
 filter {
@@ -70,9 +70,9 @@ filter {
 Read on for a guide to configuration, or jump to the [complete list of configuration options](v0-0-1-plugins-filters-elastic_integration.md#v0.0.1-plugins-filters-elastic_integration-options).
 
 
-## Connecting to {{es}} [v0.0.1-plugins-filters-elastic_integration-connecting_to_elasticsearch]
+## Connecting to Elasticsearch [v0.0.1-plugins-filters-elastic_integration-connecting_to_elasticsearch]
 
-This plugin communicates with {{es}} to identify which ingest pipeline should be run for a given event, and to retrieve the ingest pipeline definitions themselves. You must configure this plugin to point to {{es}} using exactly one of:
+This plugin communicates with Elasticsearch to identify which ingest pipeline should be run for a given event, and to retrieve the ingest pipeline definitions themselves. You must configure this plugin to point to Elasticsearch using exactly one of:
 
 * A Cloud Id (see [`cloud_id`](v0-0-1-plugins-filters-elastic_integration.md#v0.0.1-plugins-filters-elastic_integration-cloud_id))
 * A list of one or more host URLs (see [`hosts`](v0-0-1-plugins-filters-elastic_integration.md#v0.0.1-plugins-filters-elastic_integration-hosts))
@@ -83,7 +83,7 @@ You may need to configure how this plugin establishes trust of the server that r
 
 ### SSL Trust Configuration [_ssl_trust_configuration_24]
 
-When communicating over SSL, this plugin fully-validates the proof-of-identity presented by {{es}} using the system trust store. You can provide an *alternate* source of trust with one of:
+When communicating over SSL, this plugin fully-validates the proof-of-identity presented by Elasticsearch using the system trust store. You can provide an *alternate* source of trust with one of:
 
 * A PEM-formatted list of trusted certificate authorities (see [`ssl_certificate_authorities`](v0-0-1-plugins-filters-elastic_integration.md#v0.0.1-plugins-filters-elastic_integration-ssl_certificate_authorities))
 * A JKS- or PKCS12-formatted Keystore containing trusted certificates (see [`ssl_truststore_path`](v0-0-1-plugins-filters-elastic_integration.md#v0.0.1-plugins-filters-elastic_integration-ssl_truststore_path))
@@ -93,7 +93,7 @@ You can also configure which aspects of the proof-of-identity are verified (see 
 
 ### SSL Identity Configuration [_ssl_identity_configuration_24]
 
-When communicating over SSL, you can also configure this plugin to present a certificate-based proof-of-identity to the {{es}} cluster it connects to using one of:
+When communicating over SSL, you can also configure this plugin to present a certificate-based proof-of-identity to the Elasticsearch cluster it connects to using one of:
 
 * A PKCS8 Certificate/Key pair (see [`ssl_certificate`](v0-0-1-plugins-filters-elastic_integration.md#v0.0.1-plugins-filters-elastic_integration-ssl_certificate))
 * A JKS- or PKCS12-formatted Keystore (see [`ssl_keystore_path`](v0-0-1-plugins-filters-elastic_integration.md#v0.0.1-plugins-filters-elastic_integration-ssl_keystore_path))
@@ -101,7 +101,7 @@ When communicating over SSL, you can also configure this plugin to present a cer
 
 ### Request Identity [_request_identity_24]
 
-You can configure this plugin to present authentication credentials to {{es}} in one of several ways:
+You can configure this plugin to present authentication credentials to Elasticsearch in one of several ways:
 
 * ApiKey: (see [`api_key`](v0-0-1-plugins-filters-elastic_integration.md#v0.0.1-plugins-filters-elastic_integration-api_key))
 * Cloud Auth: (see [`cloud_auth`](v0-0-1-plugins-filters-elastic_integration.md#v0.0.1-plugins-filters-elastic_integration-cloud_auth))
@@ -116,7 +116,7 @@ Your request credentials are only as secure as the connection they are being pas
 
 ## Supported Ingest Processors [v0.0.1-plugins-filters-elastic_integration-supported_ingest_processors]
 
-This filter can run {{es}} Ingest Node pipelines that are *wholly* comprised of the supported subset of processors. It has access to the Painless and Mustache scripting engines where applicable:
+This filter can run Elasticsearch Ingest Node pipelines that are *wholly* comprised of the supported subset of processors. It has access to the Painless and Mustache scripting engines where applicable:
 
 | Source | Processor | Caveats |
 | --- | --- | --- |
@@ -158,9 +158,9 @@ This filter can run {{es}} Ingest Node pipelines that are *wholly* comprised of 
 
 ### Field Mappings [v0.0.1-plugins-filters-elastic_integration-field_mappings]
 
-During execution, the Ingest pipeline works with a temporary mutable *view* of the Logstash event that re-shapes some {{ls}}-reserved fields into their expected IngestDocument field names and object-types. Changes to the IngestDocument will be reflected in the resulting Logstash Event, including safely mapping these reserved fields *back* from the IngestDocument reserved field to the {{ls}} reserved field counterpart.
+During execution, the Ingest pipeline works with a temporary mutable *view* of the Logstash event that re-shapes some Logstash-reserved fields into their expected IngestDocument field names and object-types. Changes to the IngestDocument will be reflected in the resulting Logstash Event, including safely mapping these reserved fields *back* from the IngestDocument reserved field to the Logstash reserved field counterpart.
 
-| {{ls}} Field | IngestDocument Field | Conflict Handling |
+| Logstash Field | IngestDocument Field | Conflict Handling |
 | --- | --- | --- |
 | `@timestamp` | `_ingest.timestamp` | when ingest processing *also* sets a top-level `@timestamp` field, it will be made available via the Event’s `_@timestamp` field |
 | `@version` | `_version` | when ingest processing *also* sets a top-level `@version` field in the source, it will be made available via the Event’s `_@version` field |
@@ -198,7 +198,7 @@ This plugin supports the following configuration options plus the [Common option
 * Value type is [password](logstash://reference/configuration-file-structure.md#password)
 * There is no default value for this setting.
 
-The encoded form of an API key that is used to authenticate this plugin to {{es}}
+The encoded form of an API key that is used to authenticate this plugin to Elasticsearch
 
 
 ### `auth_basic_password` [v0.0.1-plugins-filters-elastic_integration-auth_basic_password]
@@ -207,7 +207,7 @@ The encoded form of an API key that is used to authenticate this plugin to {{es}
 * There is no default value for this setting.
 * Required when request auth is configured with [`auth_basic_username`](v0-0-1-plugins-filters-elastic_integration.md#v0.0.1-plugins-filters-elastic_integration-auth_basic_username)
 
-A password when using HTTP Basic Authentication to connect to {{es}}.
+A password when using HTTP Basic Authentication to connect to Elasticsearch.
 
 
 ### `auth_basic_username` [v0.0.1-plugins-filters-elastic_integration-auth_basic_username]
@@ -216,7 +216,7 @@ A password when using HTTP Basic Authentication to connect to {{es}}.
 * There is no default value for this setting.
 * When present, [`auth_basic_password`](v0-0-1-plugins-filters-elastic_integration.md#v0.0.1-plugins-filters-elastic_integration-auth_basic_password) is also required.
 
-A user name when using HTTP Basic Authentication to connect to {{es}}.
+A user name when using HTTP Basic Authentication to connect to Elasticsearch.
 
 
 ### `cloud_auth` [v0.0.1-plugins-filters-elastic_integration-cloud_auth]
@@ -235,7 +235,7 @@ Cloud authentication string ("<username>:<password>" format) is an alternative f
 
 Cloud Id, from the Elastic Cloud web console.
 
-When connecting with a Cloud Id, communication to {{es}} is secured with SSL.
+When connecting with a Cloud Id, communication to Elasticsearch is secured with SSL.
 
 For more details, check out the [Logstash-to-Cloud documentation](logstash://reference/connecting-to-cloud.md).
 
@@ -253,7 +253,7 @@ For more details, check out the [Logstash-to-Cloud documentation](logstash://ref
     * When any URL contains a path component, all URLs must have the same path as each other.
 
 
-A non-empty list of {{es}} hosts to connect.
+A non-empty list of Elasticsearch hosts to connect.
 
 Examples:
 
@@ -264,7 +264,7 @@ Examples:
 `["https://127.0.0.1:9200"]`
 `["https://127.0.0.1:9200/subpath"]` (If using a proxy on a subpath)
 ```
-When connecting with a list of hosts, communication to {{es}} is secured with SSL unless configured otherwise.
+When connecting with a list of hosts, communication to Elasticsearch is secured with SSL unless configured otherwise.
 
 ::::{admonition} Disabling SSL is dangerous
 :class: warning
@@ -287,7 +287,7 @@ There are two ways to disable SSL:
 * When present, [`ssl_key`](v0-0-1-plugins-filters-elastic_integration.md#v0.0.1-plugins-filters-elastic_integration-ssl_key) and [`ssl_key_passphrase`](v0-0-1-plugins-filters-elastic_integration.md#v0.0.1-plugins-filters-elastic_integration-ssl_key_passphrase) are also required.
 * Cannot be combined with configurations that disable SSL
 
-Path to a PEM-encoded certificate or certificate chain with which to identify this plugin to {{es}}.
+Path to a PEM-encoded certificate or certificate chain with which to identify this plugin to Elasticsearch.
 
 
 ### `ssl_certificate_authorities` [v0.0.1-plugins-filters-elastic_integration-ssl_certificate_authorities]
@@ -299,7 +299,7 @@ Path to a PEM-encoded certificate or certificate chain with which to identify th
 
 One or more PEM-formatted files defining certificate authorities.
 
-This setting can be used to *override* the system trust store for verifying the SSL certificate presented by {{es}}.
+This setting can be used to *override* the system trust store for verifying the SSL certificate presented by Elasticsearch.
 
 
 ### `ssl_enabled` [v0.0.1-plugins-filters-elastic_integration-ssl_enabled]
@@ -307,7 +307,7 @@ This setting can be used to *override* the system trust store for verifying the 
 * Value type is [boolean](logstash://reference/configuration-file-structure.md#boolean)
 * There is no default value for this setting.
 
-Secure SSL communication to {{es}} is enabled unless:
+Secure SSL communication to Elasticsearch is enabled unless:
 
 * it is explicitly disabled with `+ssl_enabled => false+`; OR
 * it is implicitly disabled by providing `http`-protocol [`hosts`](v0-0-1-plugins-filters-elastic_integration.md#v0.0.1-plugins-filters-elastic_integration-hosts).
@@ -342,7 +342,7 @@ Password for the [`ssl_keystore_path`](v0-0-1-plugins-filters-elastic_integratio
 * When present, [`ssl_keystore_password`](v0-0-1-plugins-filters-elastic_integration.md#v0.0.1-plugins-filters-elastic_integration-ssl_keystore_password) is also required.
 * Cannot be combined with configurations that disable SSL
 
-A path to a JKS- or PKCS12-formatted keystore with which to identify this plugin to {{es}}.
+A path to a JKS- or PKCS12-formatted keystore with which to identify this plugin to Elasticsearch.
 
 
 ### `ssl_key_passphrase` [v0.0.1-plugins-filters-elastic_integration-ssl_key_passphrase]
@@ -365,7 +365,7 @@ A password or passphrase of the [`ssl_key`](v0-0-1-plugins-filters-elastic_integ
 
 A path to JKS- or PKCS12-formatted keystore where trusted certificates are located.
 
-This setting can be used to *override* the system trust store for verifying the SSL certificate presented by {{es}}.
+This setting can be used to *override* the system trust store for verifying the SSL certificate presented by Elasticsearch.
 
 
 ### `ssl_truststore_password` [v0.0.1-plugins-filters-elastic_integration-ssl_truststore_password]
@@ -384,9 +384,9 @@ Password for the [`ssl_truststore_path`](v0-0-1-plugins-filters-elastic_integrat
 * There is no default value for this setting.
 * Cannot be combined with configurations that disable SSL
 
-Level of verification of the certificate provided by {{es}}.
+Level of verification of the certificate provided by Elasticsearch.
 
-SSL certificates presented by {{es}} are fully-validated by default.
+SSL certificates presented by Elasticsearch are fully-validated by default.
 
 * Available modes:
 
@@ -401,7 +401,7 @@ SSL certificates presented by {{es}} are fully-validated by default.
 * Value type is [path](logstash://reference/configuration-file-structure.md#path)
 * There is no default value for this setting.
 
-When using the GeoIp processor, this plugin does *not* have access to the GeoIp databases that are a part of the {{es}} cluster, and must be configured with locally-available database files.
+When using the GeoIp processor, this plugin does *not* have access to the GeoIp databases that are a part of the Elasticsearch cluster, and must be configured with locally-available database files.
 
 Databases are registered by file name, and most integrations rely on databases being present named:
 

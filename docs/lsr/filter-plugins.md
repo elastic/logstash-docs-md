@@ -26,7 +26,7 @@ For a list of Elastic supported plugins, please consult the [Support Matrix](htt
 | [dns](plugins-filters-dns.md) | Performs a standard or reverse DNS lookup | [logstash-filter-dns](https://github.com/logstash-plugins/logstash-filter-dns) |
 | [drop](plugins-filters-drop.md) | Drops all events | [logstash-filter-drop](https://github.com/logstash-plugins/logstash-filter-drop) |
 | [elapsed](plugins-filters-elapsed.md) | Calculates the elapsed time between a pair of events | [logstash-filter-elapsed](https://github.com/logstash-plugins/logstash-filter-elapsed) |
-| [elastic_integration](plugins-filters-elastic_integration.md) | Provides additional {{ls}} processing on data from Elastic integrations | [logstash-filter-elastic_integration](https://github.com/elastic/logstash-filter-elastic_integration) |
+| [elastic_integration](plugins-filters-elastic_integration.md) | Provides additional Logstash processing on data from Elastic integrations | [logstash-filter-elastic_integration](https://github.com/elastic/logstash-filter-elastic_integration) |
 | [elasticsearch](plugins-filters-elasticsearch.md) | Copies fields from previous log events in Elasticsearch to current events | [logstash-filter-elasticsearch](https://github.com/logstash-plugins/logstash-filter-elasticsearch) |
 | [environment](plugins-filters-environment.md) | Stores environment variables as metadata sub-fields | [logstash-filter-environment](https://github.com/logstash-plugins/logstash-filter-environment) |
 | [extractnumbers](plugins-filters-extractnumbers.md) | Extracts numbers from a string | [logstash-filter-extractnumbers](https://github.com/logstash-plugins/logstash-filter-extractnumbers) |

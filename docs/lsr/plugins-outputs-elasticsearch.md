@@ -36,26 +36,26 @@ If you are using a custom [`template`](plugins-outputs-elasticsearch.md#plugins-
 
 
 
-## {{ls}} to {{es-serverless}} [plugins-outputs-elasticsearch-serverless]
+## Logstash to Elasticsearch Serverless [plugins-outputs-elasticsearch-serverless]
 
-You can use this plugin to send your {{ls}} data to {{es-serverless}}. Some differences to note between {{es-serverless}} and self-managed {{es}}:
+You can use this plugin to send your Logstash data to Elasticsearch Serverless. Some differences to note between Elasticsearch Serverless and self-managed Elasticsearch:
 
-* Use **API keys** to access {{serverless-full}} from {{ls}}. Any user-based security settings in your [{{es}} output plugin](plugins-outputs-elasticsearch.md) configuration are ignored and may cause errors.
-* {{es-serverless}} uses **data streams** and [{{dlm}} ({{dlm-init}})](https://www.elastic.co/guide/en/elasticsearch/reference/current/data-stream-lifecycle.html) instead of {{ilm}} ({{ilm-init}}). Any {{ilm-init}} settings in your [{{es}} output plugin](plugins-outputs-elasticsearch.md) configuration are ignored and may cause errors.
-* **{{ls}} monitoring** is available through the [{{ls}} Integration](https://github.com/elastic/integrations/blob/main/packages/logstash/_dev/build/docs/README.md) in [Elastic Observability](https://docs.elastic.co/serverless/observability/what-is-observability-serverless) on {{serverless-full}}.
+* Use **API keys** to access Elastic Cloud Serverless from Logstash. Any user-based security settings in your [Elasticsearch output plugin](plugins-outputs-elasticsearch.md) configuration are ignored and may cause errors.
+* Elasticsearch Serverless uses **data streams** and [data lifecycle management (DLM)](https://www.elastic.co/guide/en/elasticsearch/reference/current/data-stream-lifecycle.html) instead of index lifecycle management (ILM). Any ILM settings in your [Elasticsearch output plugin](plugins-outputs-elasticsearch.md) configuration are ignored and may cause errors.
+* **Logstash monitoring** is available through the [Logstash Integration](https://github.com/elastic/integrations/blob/main/packages/logstash/_dev/build/docs/README.md) in [Elastic Observability](https://docs.elastic.co/serverless/observability/what-is-observability-serverless) on Elastic Cloud Serverless.
 
-::::{admonition} Known issue for {{ls}} to {{es-serverless}}
-The logstash-output-elasticsearch `hosts` setting on {{serverless-short}} defaults the port to 9200 when omitted. Set the value to port :443 instead.
+::::{admonition} Known issue for Logstash to Elasticsearch Serverless
+The logstash-output-elasticsearch `hosts` setting on Serverless defaults the port to 9200 when omitted. Set the value to port :443 instead.
 
 ::::
 
 
-For more info on sending data from {{ls}} to {{es-serverless}}, check out the [{{es-serverless}} docs](https://docs.elastic.co/serverless/elasticsearch/what-is-elasticsearch-serverless).
+For more info on sending data from Logstash to Elasticsearch Serverless, check out the [Elasticsearch Serverless docs](https://docs.elastic.co/serverless/elasticsearch/what-is-elasticsearch-serverless).
 
 
-## Hosted {{es}} Service on Elastic Cloud [plugins-outputs-elasticsearch-ess]
+## Hosted Elasticsearch Service on Elastic Cloud [plugins-outputs-elasticsearch-ess]
 
-{{ess-leadin}}
+You can run Elasticsearch on your own hardware or use our hosted Elasticsearch Service that is available on AWS, GCP, and Azure. Try the Elasticsearch Service for free: https://cloud.elastic.co/registration.
 
 
 ## Compatibility with the Elastic Common Schema (ECS) [_compatibility_with_the_elastic_common_schema_ecs]
@@ -67,9 +67,9 @@ However, the Elasticsearch Index Templates it manages can be configured to be EC
 
 ## Data streams [plugins-outputs-elasticsearch-data-streams]
 
-The {{es}} output plugin can store both time series datasets (such as logs, events, and metrics) and non-time series data in Elasticsearch.
+The Elasticsearch output plugin can store both time series datasets (such as logs, events, and metrics) and non-time series data in Elasticsearch.
 
-Use the data stream options for indexing time series datasets (such as logs, metrics, and events) into {{es}} and {{es-serverless}}:
+Use the data stream options for indexing time series datasets (such as logs, metrics, and events) into Elasticsearch and Elasticsearch Serverless:
 
 * [`data_stream`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-data_stream)
 * [`data_stream_auto_routing`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-data_stream_auto_routing)
@@ -186,23 +186,23 @@ Note that 409 exceptions are no longer retried. Please set a higher `retry_on_co
 Mapping (404) errors from Elasticsearch can lead to data loss. Unfortunately mapping errors cannot be handled without human intervention and without looking at the field that caused the mapping mismatch. If the DLQ is enabled, the original events causing the mapping errors are stored in a file that can be processed at a later time. Often times, the offending field can be removed and re-indexed to Elasticsearch. If the DLQ is not enabled, and a mapping error happens, the problem is logged as a warning, and the event is dropped. See [dead-letter-queue (DLQ)](logstash://reference/dead-letter-queues.md) for more information about processing events in the DLQ. The list of error codes accepted for DLQ could be customized with [`dlq_custom_codes`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-dlq_custom_codes) but should be used only in motivated cases.
 
 
-## {{ilm-cap}} ({{ilm-init}}) [plugins-outputs-elasticsearch-ilm]
+## Index lifecycle management (ILM) [plugins-outputs-elasticsearch-ilm]
 
 ::::{note}
-* The {{ilm-cap}} ({{ilm-init}}) feature does not apply for {{es-serverless}}. Any {{ilm-init}} settings in your plugin configuration are ignored and may cause errors.
-* The {{ilm-init}} feature requires plugin version `9.3.1` or higher.
-* This feature requires an {{es}} instance of 6.6.0 or higher with at least a Basic license
+* The Index lifecycle management (ILM) feature does not apply for Elasticsearch Serverless. Any ILM settings in your plugin configuration are ignored and may cause errors.
+* The ILM feature requires plugin version `9.3.1` or higher.
+* This feature requires an Elasticsearch instance of 6.6.0 or higher with at least a Basic license
 
 ::::
 
 
-{{ls}} can use [{{ilm}}](https://www.elastic.co/guide/en/elasticsearch/reference/current/index-lifecycle-management.html) to automate the management of indices over time.
+Logstash can use [index lifecycle management](https://www.elastic.co/guide/en/elasticsearch/reference/current/index-lifecycle-management.html) to automate the management of indices over time.
 
-The use of {{ilm}} is controlled by the `ilm_enabled` setting. By default, this setting detects whether the Elasticsearch instance supports {{ilm-init}}, and uses it if it is available. `ilm_enabled` can also be set to `true` or `false` to override the automatic detection, or disable {{ilm-init}}.
+The use of index lifecycle management is controlled by the `ilm_enabled` setting. By default, this setting detects whether the Elasticsearch instance supports ILM, and uses it if it is available. `ilm_enabled` can also be set to `true` or `false` to override the automatic detection, or disable ILM.
 
-This will overwrite the index settings and adjust the {{ls}} template to write the necessary settings for the template to support {{ilm}}, including the index policy and rollover alias to be used.
+This will overwrite the index settings and adjust the Logstash template to write the necessary settings for the template to support index lifecycle management, including the index policy and rollover alias to be used.
 
-{{ls}} creates a rollover alias for the indices to be written to, including a pattern for how the actual indices will be named, and unless an ILM policy that already exists has been specified, a default policy will also be created. The default policy is configured to rollover an index when it reaches either 50 gigabytes in size, or is 30 days old, whichever happens first.
+Logstash creates a rollover alias for the indices to be written to, including a pattern for how the actual indices will be named, and unless an ILM policy that already exists has been specified, a default policy will also be created. The default policy is configured to rollover an index when it reaches either 50 gigabytes in size, or is 30 days old, whichever happens first.
 
 The default rollover alias is called `logstash`, with a default pattern for the rollover index of `{now/d}-00001`, which will name indices on the date that the index is rolled over, followed by an incrementing number. Note that the pattern must end with a dash and a number that will be incremented.
 
@@ -223,7 +223,7 @@ See config below for an example:
 ```
 
 ::::{note}
-* Custom ILM policies must already exist on the {{es}} cluster before they can be used.
+* Custom ILM policies must already exist on the Elasticsearch cluster before they can be used.
 * If the rollover alias or pattern is modified, the index template will need to be overwritten as the settings `index.lifecycle.name` and `index.lifecycle.rollover_alias` are automatically written to the template
 * If the index property is supplied in the output definition, it will be overwritten by the rollover alias.
 
@@ -233,7 +233,7 @@ See config below for an example:
 
 ## Batch Sizes [_batch_sizes]
 
-This plugin attempts to send batches of events to the [{{es}} Bulk API](https://www.elastic.co/guide/en/elasticsearch/reference/current/docs-bulk.html) as a single request. However, if a batch exceeds 20MB we break it up into multiple bulk requests. If a single document exceeds 20MB it is sent as a single request.
+This plugin attempts to send batches of events to the [Elasticsearch Bulk API](https://www.elastic.co/guide/en/elasticsearch/reference/current/docs-bulk.html) as a single request. However, if a batch exceeds 20MB we break it up into multiple bulk requests. If a single document exceeds 20MB it is sent as a single request.
 
 
 ## DNS Caching [_dns_caching]
@@ -247,7 +247,7 @@ Keep in mind that a connection with keepalive enabled will not reevaluate its DN
 
 ## HTTP Compression [_http_compression]
 
-This plugin always reads compressed responses from {{es}}. By default, it sends compressed bulk requests to {{es}}.
+This plugin always reads compressed responses from Elasticsearch. By default, it sends compressed bulk requests to Elasticsearch.
 
 If you are concerned about bandwidth, you can set a higher [`compression_level`](plugins-outputs-elasticsearch.md#plugins-outputs-elasticsearch-compression_level) to trade CPU capacity for a reduction in network IO.
 
@@ -369,7 +369,7 @@ The Elasticsearch action to perform. Valid actions are:
 * `delete`: deletes a document by id (An id is required for this action)
 * `create`: indexes a document, fails if a document by that id already exists in the index.
 * `update`: updates a document by id. Update has a special case where you can upsert — update a document if not already present. See the `doc_as_upsert` option. NOTE: This does not work and is not supported in Elasticsearch 1.x. Please upgrade to ES 2.x or greater to use this feature with Logstash!
-* A sprintf style string to change the action based on the content of the event. The value `%{[foo]}` would use the foo field for the action. If resolved action is not in [`index`, `delete`, `create`, `update`], the event will not be sent to {{es}}. Instead the event will be sent to the pipeline’s [dead-letter-queue (DLQ)](logstash://reference/dead-letter-queues.md) (if enabled), or it will be logged and dropped.
+* A sprintf style string to change the action based on the content of the event. The value `%{[foo]}` would use the foo field for the action. If resolved action is not in [`index`, `delete`, `create`, `update`], the event will not be sent to Elasticsearch. Instead the event will be sent to the pipeline’s [dead-letter-queue (DLQ)](logstash://reference/dead-letter-queues.md) (if enabled), or it will be logged and dropped.
 
 For more details on actions, check out the [Elasticsearch bulk API documentation](https://www.elastic.co/guide/en/elasticsearch/reference/current/docs-bulk.html).
 
@@ -627,10 +627,10 @@ Replaced by [`compression_level`](plugins-outputs-elasticsearch.md#plugins-outpu
 
 Setting `true` enables gzip compression level 1 on requests.
 
-This setting allows you to reduce this plugin’s outbound network traffic by compressing each bulk *request* to {{es}}.
+This setting allows you to reduce this plugin’s outbound network traffic by compressing each bulk *request* to Elasticsearch.
 
 ::::{note}
-This output plugin reads compressed *responses* from {{es}} regardless of the value of this setting.
+This output plugin reads compressed *responses* from Elasticsearch regardless of the value of this setting.
 ::::
 
 

@@ -38,9 +38,9 @@ If you are using a custom [`template`](v11-0-4-plugins-outputs-elasticsearch.md#
 ::::
 
 
-### Hosted {{es}} Service on Elastic Cloud [_hosted_es_service_on_elastic_cloud_51]
+### Hosted Elasticsearch Service on Elastic Cloud [_hosted_es_service_on_elastic_cloud_51]
 
-{{ess-leadin}}
+You can run Elasticsearch on your own hardware or use our hosted Elasticsearch Service that is available on AWS, GCP, and Azure. Try the Elasticsearch Service for free: https://cloud.elastic.co/registration.
 
 
 
@@ -53,9 +53,9 @@ However, the Elasticsearch Index Templates it manages can be configured to be EC
 
 ## Data streams [v11.0.4-plugins-outputs-elasticsearch-data-streams]
 
-The {{es}} output plugin can store both time series datasets (such as logs, events, and metrics) and non-time series data in Elasticsearch.
+The Elasticsearch output plugin can store both time series datasets (such as logs, events, and metrics) and non-time series data in Elasticsearch.
 
-The data stream options are recommended for indexing time series datasets (such as logs, metrics, and events) into {{es}}:
+The data stream options are recommended for indexing time series datasets (such as logs, metrics, and events) into Elasticsearch:
 
 * [`data_stream`](v11-0-4-plugins-outputs-elasticsearch.md#v11.0.4-plugins-outputs-elasticsearch-data_stream)
 * [`data_stream_auto_routing`](v11-0-4-plugins-outputs-elasticsearch.md#v11.0.4-plugins-outputs-elasticsearch-data_stream_auto_routing)
@@ -224,7 +224,7 @@ If the index property is supplied in the output definition, it will be overwritt
 
 ## Batch Sizes [_batch_sizes_65]
 
-This plugin attempts to send batches of events to the [{{es}} Bulk API](https://www.elastic.co/docs/api/doc/elasticsearch/operation/operation-bulk) as a single request. However, if a batch exceeds 20MB we break it up into multiple bulk requests. If a single document exceeds 20MB it is sent as a single request.
+This plugin attempts to send batches of events to the [Elasticsearch Bulk API](https://www.elastic.co/docs/api/doc/elasticsearch/operation/operation-bulk) as a single request. However, if a batch exceeds 20MB we break it up into multiple bulk requests. If a single document exceeds 20MB it is sent as a single request.
 
 
 ## DNS Caching [_dns_caching_65]
@@ -559,10 +559,10 @@ Any special characters present in the URLs here MUST be URL escaped! This means 
 
 Enable gzip compression on requests.
 
-This setting allows you to reduce this plugin’s outbound network traffic by compressing each bulk *request* to {{es}}.
+This setting allows you to reduce this plugin’s outbound network traffic by compressing each bulk *request* to Elasticsearch.
 
 ::::{note}
-This output plugin reads compressed *responses* from {{es}} regardless of the value of this setting.
+This output plugin reads compressed *responses* from Elasticsearch regardless of the value of this setting.
 ::::
 
 

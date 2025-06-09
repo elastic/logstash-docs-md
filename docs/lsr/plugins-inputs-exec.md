@@ -22,14 +22,14 @@ For questions about the plugin, open a topic in the [Discuss](http://discuss.ela
 
 Periodically run a shell command and capture the whole output as an event.
 
-::::{note} 
+::::{note}
 * The `command` field of this event will be the command run.
 * The `message` field of this event will be the entire stdout of the command.
 
 ::::
 
 
-::::{important} 
+::::{important}
 The exec input ultimately uses `fork` to spawn a child process. Using fork duplicates the parent process address space (in our case, ***logstash and the JVM***); this is mitigated with OS copy-on-write but ultimately you can end up allocating lots of memory just for a "simple" executable. If the exec input fails with errors like `ENOMEM: Cannot allocate memory` it is an indication that there is not enough non-JVM-heap physical memory to perform the fork.
 ::::
 
@@ -54,7 +54,7 @@ This plugin adds metadata about the event’s source, and can be configured to d
 
 | ECS Disabled | ECS v1 , v8 | Description |
 | --- | --- | --- |
-| `host` | `[host][name]` | The name of the {{ls}} host that processed the event |
+| `host` | `[host][name]` | The name of the Logstash host that processed the event |
 | `command` | `[process][command_line]` | The command run by the plugin |
 | `[@metadata][exit_status]` | `[process][exit_code]` | The exit code of the process |
 |  —  | `[@metadata][input][exec][process][elapsed_time]` | The elapsed time the command took to run in nanoseconds |
@@ -222,7 +222,7 @@ input {
 }
 ```
 
-::::{note} 
+::::{note}
 Variable substitution in the `id` field only supports environment variables and does not support the use of values from the secret store.
 ::::
 

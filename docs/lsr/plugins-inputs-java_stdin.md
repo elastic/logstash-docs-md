@@ -7,7 +7,7 @@ mapped_pages:
 # Java_stdin input plugin [plugins-inputs-java_stdin]
 
 
-**{{ls}} Core Plugin.** The java_stdin input plugin cannot be installed or uninstalled independently of {{ls}}.
+**Logstash Core Plugin.** The java_stdin input plugin cannot be installed or uninstalled independently of Logstash.
 
 ## Getting help [_getting_help_31]
 
@@ -78,7 +78,7 @@ input {
 }
 ```
 
-::::{note} 
+::::{note}
 Variable substitution in the `id` field only supports environment variables and does not support the use of values from the secret store.
 ::::
 

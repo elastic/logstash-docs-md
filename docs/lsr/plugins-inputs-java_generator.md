@@ -7,7 +7,7 @@ mapped_pages:
 # Java_generator input plugin [plugins-inputs-java_generator]
 
 
-**{{ls}} Core Plugin.** The java_generator input plugin cannot be installed or uninstalled independently of {{ls}}.
+**Logstash Core Plugin.** The java_generator input plugin cannot be installed or uninstalled independently of Logstash.
 
 ## Getting help [_getting_help_30]
 
@@ -152,7 +152,7 @@ input {
 }
 ```
 
-::::{note} 
+::::{note}
 Variable substitution in the `id` field only supports environment variables and does not support the use of values from the secret store.
 ::::
 

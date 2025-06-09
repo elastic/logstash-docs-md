@@ -41,7 +41,7 @@ For a list of Elastic supported plugins, please consult the [Support Matrix](htt
 | [jmx](plugins-inputs-jmx.md) | Retrieves metrics from remote Java applications over JMX | [logstash-input-jmx](https://github.com/logstash-plugins/logstash-input-jmx) |
 | [kafka](plugins-inputs-kafka.md) | Reads events from a Kafka topic | [logstash-integration-kafka](https://github.com/logstash-plugins/logstash-integration-kafka) |
 | [kinesis](plugins-inputs-kinesis.md) | Receives events through an AWS Kinesis stream | [logstash-input-kinesis](https://github.com/logstash-plugins/logstash-input-kinesis) |
-| [logstash](plugins-inputs-logstash.md) | Reads from {{ls}} output of another {{ls}} instance | [logstash-integration-logstash](https://github.com/logstash-plugins/logstash-integration-logstash) |
+| [logstash](plugins-inputs-logstash.md) | Reads from Logstash output of another Logstash instance | [logstash-integration-logstash](https://github.com/logstash-plugins/logstash-integration-logstash) |
 | [log4j](plugins-inputs-log4j.md) | Reads events over a TCP socket from a Log4j `SocketAppender` object | [logstash-input-log4j](https://github.com/logstash-plugins/logstash-input-log4j) |
 | [lumberjack](plugins-inputs-lumberjack.md) | Receives events using the Lumberjack protocol | [logstash-input-lumberjack](https://github.com/logstash-plugins/logstash-input-lumberjack) |
 | [meetup](plugins-inputs-meetup.md) | Captures the output of command line tools as an event | [logstash-input-meetup](https://github.com/logstash-plugins/logstash-input-meetup) |

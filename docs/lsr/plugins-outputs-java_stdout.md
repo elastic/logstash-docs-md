@@ -7,7 +7,7 @@ mapped_pages:
 # Java_stdout output plugin [plugins-outputs-java_stdout]
 
 
-**{{ls}} Core Plugin.** The java_stdout output plugin cannot be installed or uninstalled independently of {{ls}}.
+**Logstash Core Plugin.** The java_stdout output plugin cannot be installed or uninstalled independently of Logstash.
 
 ## Getting help [_getting_help_88]
 
@@ -83,7 +83,7 @@ output {
 }
 ```
 
-::::{note} 
+::::{note}
 Variable substitution in the `id` field only supports environment variables and does not support the use of values from the secret store.
 ::::
 

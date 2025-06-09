@@ -40,9 +40,9 @@ If you are using a custom [`template`](v10-8-1-plugins-outputs-elasticsearch.md#
 ::::
 
 
-### Hosted {{es}} Service on Elastic Cloud [_hosted_es_service_on_elastic_cloud_60]
+### Hosted Elasticsearch Service on Elastic Cloud [_hosted_es_service_on_elastic_cloud_60]
 
-{{ess-leadin}}
+You can run Elasticsearch on your own hardware or use our hosted Elasticsearch Service that is available on AWS, GCP, and Azure. Try the Elasticsearch Service for free: https://cloud.elastic.co/registration.
 
 
 

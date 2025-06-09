@@ -7,7 +7,7 @@ mapped_pages:
 # Java_line codec plugin [plugins-codecs-java_line]
 
 
-**{{ls}} Core Plugin.** The java_line codec plugin cannot be installed or uninstalled independently of {{ls}}.
+**Logstash Core Plugin.** The java_line codec plugin cannot be installed or uninstalled independently of Logstash.
 
 ## Getting help [_getting_help_186]
 

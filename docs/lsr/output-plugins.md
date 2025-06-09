@@ -5,7 +5,7 @@ mapped_pages:
 
 # Output plugins [output-plugins]
 
-An output plugin sends event data to a particular destination. 
+An output plugin sends event data to a particular destination.
 Outputs are the final stage in the Logstash event pipeline.
 
 For a list of Elastic supported plugins, please consult the [Support Matrix](https://www.elastic.co/support/matrix#show_logstash_plugins).
@@ -13,7 +13,7 @@ For a list of Elastic supported plugins, please consult the [Support Matrix](htt
 |     |     |     |
 | --- | --- | --- |
 | Plugin | Description | Github repository |
-| [app_search (deprecated)](plugins-outputs-elastic_app_search.md) | [deprecated at {{stack}} version 9.0.0 and plugin version 3.0.1] Sends events to Elastic App Search | [logstash-integration-elastic_enterprise_search](https://github.com/logstash-plugins/logstash-output-elastic_app_search) |
+| [app_search (deprecated)](plugins-outputs-elastic_app_search.md) | [deprecated at Elastic Stack version 9.0.0 and plugin version 3.0.1] Sends events to Elastic App Search | [logstash-integration-elastic_enterprise_search](https://github.com/logstash-plugins/logstash-output-elastic_app_search) |
 | [boundary](plugins-outputs-boundary.md) | Sends annotations to Boundary based on Logstash events | [logstash-output-boundary](https://github.com/logstash-plugins/logstash-output-boundary) |
 | [circonus](plugins-outputs-circonus.md) | Sends annotations to Circonus based on Logstash events | [logstash-output-circonus](https://github.com/logstash-plugins/logstash-output-circonus) |
 | [cloudwatch](plugins-outputs-cloudwatch.md) | Aggregates and sends metric data to AWS CloudWatch | [logstash-output-cloudwatch](https://github.com/logstash-plugins/logstash-output-cloudwatch) |
@@ -21,7 +21,7 @@ For a list of Elastic supported plugins, please consult the [Support Matrix](htt
 | [datadog](plugins-outputs-datadog.md) | Sends events to DataDogHQ based on Logstash events | [logstash-output-datadog](https://github.com/logstash-plugins/logstash-output-datadog) |
 | [datadog_metrics](plugins-outputs-datadog_metrics.md) | Sends metrics to DataDogHQ based on Logstash events | [logstash-output-datadog_metrics](https://github.com/logstash-plugins/logstash-output-datadog_metrics) |
 | [dynatrace](plugins-outputs-dynatrace.md) | Sends events to Dynatrace based on Logstash events | [logstash-output-dynatrace](https://github.com/dynatrace-oss/logstash-output-dynatrace) |
-| [elastic_app_search (deprecated)](plugins-outputs-elastic_app_search.md) | [deprecated at {{stack}} version 9.0.0 and plugin version 3.0.1]Sends events to the [Elastic App Search](https://www.elastic.co/app-search/) solution | [logstash-integration-elastic_enterprise_search](https://github.com/logstash-plugins/logstash-output-elastic_app_search) |
+| [elastic_app_search (deprecated)](plugins-outputs-elastic_app_search.md) | [deprecated at Elastic Stack version 9.0.0 and plugin version 3.0.1]Sends events to the [Elastic App Search](https://www.elastic.co/app-search/) solution | [logstash-integration-elastic_enterprise_search](https://github.com/logstash-plugins/logstash-output-elastic_app_search) |
 | [elastic_workplace_search](plugins-outputs-elastic_workplace_search.md) | Sends events to the [Elastic Workplace Search](https://www.elastic.co/enterprise-search) solution | [logstash-integration-elastic_enterprise_search](https://github.com/logstash-plugins/logstash-output-elastic_app_search) |
 | [elasticsearch](plugins-outputs-elasticsearch.md) | Stores logs in Elasticsearch | [logstash-output-elasticsearch](https://github.com/logstash-plugins/logstash-output-elasticsearch) |
 | [email](plugins-outputs-email.md) | Sends email to a specified address when output is received | [logstash-output-email](https://github.com/logstash-plugins/logstash-output-email) |
@@ -42,7 +42,7 @@ For a list of Elastic supported plugins, please consult the [Support Matrix](htt
 | [kafka](plugins-outputs-kafka.md) | Writes events to a Kafka topic | [logstash-integration-kafka](https://github.com/logstash-plugins/logstash-integration-kafka) |
 | [librato](plugins-outputs-librato.md) | Sends metrics, annotations, and alerts to Librato based on Logstash events | [logstash-output-librato](https://github.com/logstash-plugins/logstash-output-librato) |
 | [loggly](plugins-outputs-loggly.md) | Ships logs to Loggly | [logstash-output-loggly](https://github.com/logstash-plugins/logstash-output-loggly) |
-| [logstash](plugins-outputs-logstash.md) | Ships data to {{ls}} input on another {{ls}} instance | [logstash-integration-logstash](https://github.com/logstash-plugins/logstash-integration-logstash) |
+| [logstash](plugins-outputs-logstash.md) | Ships data to Logstash input on another Logstash instance | [logstash-integration-logstash](https://github.com/logstash-plugins/logstash-integration-logstash) |
 | [lumberjack](plugins-outputs-lumberjack.md) | Sends events using the `lumberjack` protocol | [logstash-output-lumberjack](https://github.com/logstash-plugins/logstash-output-lumberjack) |
 | [metriccatcher](plugins-outputs-metriccatcher.md) | Writes metrics to MetricCatcher | [logstash-output-metriccatcher](https://github.com/logstash-plugins/logstash-output-metriccatcher) |
 | [mongodb](plugins-outputs-mongodb.md) | Writes events to MongoDB | [logstash-output-mongodb](https://github.com/logstash-plugins/logstash-output-mongodb) |
@@ -70,7 +70,7 @@ For a list of Elastic supported plugins, please consult the [Support Matrix](htt
 | [udp](plugins-outputs-udp.md) | Sends events over UDP | [logstash-output-udp](https://github.com/logstash-plugins/logstash-output-udp) |
 | [webhdfs](plugins-outputs-webhdfs.md) | Sends Logstash events to HDFS using the `webhdfs` REST API | [logstash-output-webhdfs](https://github.com/logstash-plugins/logstash-output-webhdfs) |
 | [websocket](plugins-outputs-websocket.md) | Publishes messages to a websocket | [logstash-output-websocket](https://github.com/logstash-plugins/logstash-output-websocket) |
-| [workplace_search (deprecated)](plugins-outputs-elastic_workplace_search.md) | [deprecated at {{stack}} version 9.0.0 and plugin version 3.0.1]  Sends events to Elastic Workplace Search | [logstash-integration-elastic_enterprise_search](https://github.com/logstash-plugins/logstash-output-elastic_app_search) |
+| [workplace_search (deprecated)](plugins-outputs-elastic_workplace_search.md) | [deprecated at Elastic Stack version 9.0.0 and plugin version 3.0.1]  Sends events to Elastic Workplace Search | [logstash-integration-elastic_enterprise_search](https://github.com/logstash-plugins/logstash-output-elastic_app_search) |
 | [xmpp](plugins-outputs-xmpp.md) | Posts events over XMPP | [logstash-output-xmpp](https://github.com/logstash-plugins/logstash-output-xmpp) |
 | [zabbix](plugins-outputs-zabbix.md) | Sends events to a Zabbix server | [logstash-output-zabbix](https://github.com/logstash-plugins/logstash-output-zabbix) |
 

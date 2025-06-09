@@ -33,7 +33,7 @@ This plugin uses different field names depending on whether [ECS-compatibility](
 
 | ECS Disabled | ECS v1, v8 | Description |
 | --- | --- | --- |
-| `host` | `[host][name]` | The name of the {{ls}} host that processed the event |
+| `host` | `[host][name]` | The name of the Logstash host that processed the event |
 | `sequence` | `[event][sequence]` | The sequence number for the generated event |
 
 
@@ -196,7 +196,7 @@ input {
 }
 ```
 
-::::{note} 
+::::{note}
 Variable substitution in the `id` field only supports environment variables and does not support the use of values from the secret store.
 ::::
 
