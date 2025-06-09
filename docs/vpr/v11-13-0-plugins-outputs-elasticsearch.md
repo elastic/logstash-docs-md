@@ -14,11 +14,11 @@ For other versions, see the [overview list](output-elasticsearch-index.md).
 
 To learn more about Logstash, see the [Logstash Reference](https://www.elastic.co/guide/en/logstash/current/index.html).
 
-## Getting help [_getting_help_1155]
+## Getting help [_getting_help_1157]
 
 For questions about the plugin, open a topic in the [Discuss](http://discuss.elastic.co) forums. For bugs or feature requests, open an issue in [Github](https://github.com/logstash-plugins/logstash-output-elasticsearch). For the list of Elastic supported plugins, please consult the [Elastic Support Matrix](https://www.elastic.co/support/matrix#matrix_logstash_plugins).
 
-## Description [_description_1148]
+## Description [_description_1150]
 
 Elasticsearch provides near real-time search and analytics for all types of data. The Elasticsearch output plugin can store both time series datasets (such as logs, events, and metrics) and non-time series data in Elasticsearch.
 

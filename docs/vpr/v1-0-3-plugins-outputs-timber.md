@@ -14,11 +14,11 @@ For other versions, see the [overview list](output-timber-index.md).
 
 To learn more about Logstash, see the [Logstash Reference](https://www.elastic.co/guide/en/logstash/current/index.html).
 
-## Getting help [_getting_help_1662]
+## Getting help [_getting_help_1664]
 
 For questions about the plugin, open a topic in the [Discuss](http://discuss.elastic.co) forums. For bugs or feature requests, open an issue in [Github](https://github.com/logstash-plugins/logstash-output-timber). For the list of Elastic supported plugins, please consult the [Elastic Support Matrix](https://www.elastic.co/support/matrix#matrix_logstash_plugins).
 
-## Description [_description_1652]
+## Description [_description_1654]
 
 This output sends structured events to the [Timber.io logging service](https://timber.io). Timber is a cloud-based logging service designed for developers, providing easy features out of the box that make you more productive. [Tail users](https://timber.io/docs/app/console/tail-a-user), [trace requests](https://timber.io/docs/app/console/trace-http-requests), [inspect HTTP parameters](https://timber.io/docs/app/console/inspect-http-requests), and [search](https://timber.io/docs/app/console/searching) on rich structured data without sacrificing readability.
 

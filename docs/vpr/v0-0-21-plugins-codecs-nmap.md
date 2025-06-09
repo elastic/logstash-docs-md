@@ -14,11 +14,11 @@ For other versions, see the [overview list](codec-nmap-index.md).
 
 To learn more about Logstash, see the [Logstash Reference](https://www.elastic.co/guide/en/logstash/current/index.html).
 
-## Getting help [_getting_help_2425]
+## Getting help [_getting_help_2427]
 
 For questions about the plugin, open a topic in the [Discuss](http://discuss.elastic.co) forums. For bugs or feature requests, open an issue in [Github](https://github.com/logstash-plugins/logstash-codec-nmap). For the list of Elastic supported plugins, please consult the [Elastic Support Matrix](https://www.elastic.co/support/matrix#matrix_logstash_plugins).
 
-## Description [_description_2403]
+## Description [_description_2405]
 
 This codec is used to parse [namp](https://nmap.org/) output data which is serialized in XML format. Nmap ("Network Mapper") is a free and open source utility for network discovery and security auditing. For more information on nmap, see <https://nmap.org/>.
 

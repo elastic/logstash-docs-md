@@ -14,11 +14,11 @@ For other versions, see the [overview list](filter-jdbc_static-index.md).
 
 To learn more about Logstash, see the [Logstash Reference](https://www.elastic.co/guide/en/logstash/current/index.html).
 
-## Getting help [_getting_help_2018]
+## Getting help [_getting_help_2020]
 
 For questions about the plugin, open a topic in the [Discuss](http://discuss.elastic.co) forums. For bugs or feature requests, open an issue in [Github](https://github.com/logstash-plugins/logstash-filter-jdbc_static). For the list of Elastic supported plugins, please consult the [Elastic Support Matrix](https://www.elastic.co/support/matrix#matrix_logstash_plugins).
 
-## Description [_description_1996]
+## Description [_description_1998]
 
 This filter is best suited for event enhancement from static or reference data that does not change very often. Examples of these are environments, users and products. Locally there is a database that the enhancement lookups are done against. Remotely there is a database that has the static data. The local db is loaded with data from the remote db once or very periodically. To achieve this three main sections are defined: db\_objects, loaders and lookups. The local database is an [Apache Derby](https://db.apache.org/derby/manuals/#docs_10.14) in-memory database.
 

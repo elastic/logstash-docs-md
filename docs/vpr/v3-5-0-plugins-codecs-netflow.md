@@ -14,11 +14,11 @@ For other versions, see the [overview list](codec-netflow-index.md).
 
 To learn more about Logstash, see the [Logstash Reference](https://www.elastic.co/guide/en/logstash/current/index.html).
 
-## Getting help [_getting_help_2423]
+## Getting help [_getting_help_2425]
 
 For questions about the plugin, open a topic in the [Discuss](http://discuss.elastic.co) forums. For bugs or feature requests, open an issue in [Github](https://github.com/logstash-plugins/logstash-codec-netflow). For the list of Elastic supported plugins, please consult the [Elastic Support Matrix](https://www.elastic.co/support/matrix#matrix_logstash_plugins).
 
-## Description [_description_2401]
+## Description [_description_2403]
 
 The "netflow" codec is used for decoding Netflow v5/v9/v10 (IPFIX) flows.
 

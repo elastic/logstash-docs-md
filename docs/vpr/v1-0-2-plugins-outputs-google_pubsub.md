@@ -14,11 +14,11 @@ For other versions, see the [overview list](output-google_pubsub-index.md).
 
 To learn more about Logstash, see the [Logstash Reference](https://www.elastic.co/guide/en/logstash/current/index.html).
 
-## Getting help [_getting_help_1285]
+## Getting help [_getting_help_1287]
 
 For questions about the plugin, open a topic in the [Discuss](http://discuss.elastic.co) forums. For bugs or feature requests, open an issue in [Github](https://github.com/logstash-plugins/logstash-output-google_pubsub). For the list of Elastic supported plugins, please consult the [Elastic Support Matrix](https://www.elastic.co/support/matrix#matrix_logstash_plugins).
 
-## Description [_description_1278]
+## Description [_description_1280]
 
 A Logstash plugin to upload log events to [Google Cloud Pubsub](https://cloud.google.com/pubsub/). Events are batched and uploaded in the background for the sake of efficiency. Message payloads are serialized JSON representations of the events.
 

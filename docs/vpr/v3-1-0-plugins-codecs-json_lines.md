@@ -14,11 +14,11 @@ For other versions, see the [overview list](codec-json_lines-index.md).
 
 To learn more about Logstash, see the [Logstash Reference](https://www.elastic.co/guide/en/logstash/current/index.html).
 
-## Getting help [_getting_help_2361]
+## Getting help [_getting_help_2363]
 
 For questions about the plugin, open a topic in the [Discuss](http://discuss.elastic.co) forums. For bugs or feature requests, open an issue in [Github](https://github.com/logstash-plugins/logstash-codec-json_lines). For the list of Elastic supported plugins, please consult the [Elastic Support Matrix](https://www.elastic.co/support/matrix#matrix_logstash_plugins).
 
-## Description [_description_2339]
+## Description [_description_2341]
 
 This codec will decode streamed JSON that is newline delimited. Encoding will emit a single JSON string ending in a `@delimiter` NOTE: Do not use this codec if your source input is line-oriented JSON, for example, redis or file inputs. Rather, use the json codec. More info: This codec is expecting to receive a stream (string) of newline terminated lines. The file input will produce a line string without a newline. Therefore this codec cannot work with line oriented inputs.
 

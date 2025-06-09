@@ -14,11 +14,11 @@ For other versions, see the [overview list](filter-punct-index.md).
 
 To learn more about Logstash, see the [Logstash Reference](https://www.elastic.co/guide/en/logstash/current/index.html).
 
-## Getting help [_getting_help_2142]
+## Getting help [_getting_help_2144]
 
 For questions about the plugin, open a topic in the [Discuss](http://discuss.elastic.co) forums. For bugs or feature requests, open an issue in [Github](https://github.com/logstash-plugins/logstash-filter-punct). For the list of Elastic supported plugins, please consult the [Elastic Support Matrix](https://www.elastic.co/support/matrix#matrix_logstash_plugins).
 
-## Description [_description_2120]
+## Description [_description_2122]
 
 Strip everything but punctuation from a field and store the remainder in the a separate field. This is often used for fingerprinting log events.
 

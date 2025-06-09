@@ -14,11 +14,11 @@ For other versions, see the [overview list](input-eventlog-index.md).
 
 To learn more about Logstash, see the [Logstash Reference](https://www.elastic.co/guide/en/logstash/current/index.html).
 
-## Getting help [_getting_help_369]
+## Getting help [_getting_help_371]
 
 For questions about the plugin, open a topic in the [Discuss](http://discuss.elastic.co) forums. For bugs or feature requests, open an issue in [Github](https://github.com/logstash-plugins/logstash-input-eventlog). For the list of Elastic supported plugins, please consult the [Elastic Support Matrix](https://www.elastic.co/support/matrix#matrix_logstash_plugins).
 
-## Description [_description_369]
+## Description [_description_371]
 
 This input will pull events from a [Windows Event Log](http://msdn.microsoft.com/en-us/library/windows/desktop/bb309026%28v=vs.85%29.aspx). Note that Windows Event Logs are stored on disk in a binary format and are only accessible from the Win32 API. This means Losgtash needs to be running as an agent on Windows servers where you wish to collect logs from, and will not be accesible across the network.
 

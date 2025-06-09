@@ -15,11 +15,11 @@ For other versions, see the [overview list](output-logstash-index.md).
 
 To learn more about Logstash, see the [Logstash Reference](https://www.elastic.co/guide/en/logstash/current/index.html).
 
-## Getting help [_getting_help_1438]
+## Getting help [_getting_help_1440]
 
 For questions about the plugin, open a topic in the [Discuss](http://discuss.elastic.co) forums. For bugs or feature requests, open an issue in [Github](https://github.com/logstash-plugins/logstash-integration-logstash). For the list of Elastic supported plugins, please consult the [Elastic Support Matrix](https://www.elastic.co/support/matrix#matrix_logstash_plugins).
 
-## Description [_description_1428]
+## Description [_description_1430]
 
 Send events to a [logstash input plugin](https://www.elastic.co/guide/en/logstash/current/plugins-inputs-logstash.html) in a pipeline that may be in another process or on another host. You must have a TCP route to the port on an interface that the downstream input is bound to.
 

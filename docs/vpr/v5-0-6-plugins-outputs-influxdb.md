@@ -14,11 +14,11 @@ For other versions, see the [overview list](output-influxdb-index.md).
 
 To learn more about Logstash, see the [Logstash Reference](https://www.elastic.co/guide/en/logstash/current/index.html).
 
-## Getting help [_getting_help_1325]
+## Getting help [_getting_help_1327]
 
 For questions about the plugin, open a topic in the [Discuss](http://discuss.elastic.co) forums. For bugs or feature requests, open an issue in [Github](https://github.com/logstash-plugins/logstash-output-influxdb). For the list of Elastic supported plugins, please consult the [Elastic Support Matrix](https://www.elastic.co/support/matrix#matrix_logstash_plugins).
 
-## Description [_description_1315]
+## Description [_description_1317]
 
 This output lets you output Metrics to InfluxDB (>= 0.9.0-rc31)
 

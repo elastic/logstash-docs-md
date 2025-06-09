@@ -14,11 +14,11 @@ For other versions, see the [overview list](filter-yaml-index.md).
 
 To learn more about Logstash, see the [Logstash Reference](https://www.elastic.co/guide/en/logstash/current/index.html).
 
-## Getting help [_getting_help_2240]
+## Getting help [_getting_help_2242]
 
 For questions about the plugin, open a topic in the [Discuss](http://discuss.elastic.co) forums. For bugs or feature requests, open an issue in [Github](https://github.com/logstash-plugins/logstash-filter-yaml). For the list of Elastic supported plugins, please consult the [Elastic Support Matrix](https://www.elastic.co/support/matrix#matrix_logstash_plugins).
 
-## Description [_description_2218]
+## Description [_description_2220]
 
 This is a YAML parsing filter. It takes an existing field which contains YAML and expands it into an actual data structure within the Logstash event.
 

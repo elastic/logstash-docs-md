@@ -14,11 +14,11 @@ For other versions, see the [overview list](codec-collectd-index.md).
 
 To learn more about Logstash, see the [Logstash Reference](https://www.elastic.co/guide/en/logstash/current/index.html).
 
-## Getting help [_getting_help_2312]
+## Getting help [_getting_help_2314]
 
 For questions about the plugin, open a topic in the [Discuss](http://discuss.elastic.co) forums. For bugs or feature requests, open an issue in [Github](https://github.com/logstash-plugins/logstash-codec-collectd). For the list of Elastic supported plugins, please consult the [Elastic Support Matrix](https://www.elastic.co/support/matrix#matrix_logstash_plugins).
 
-## Description [_description_2290]
+## Description [_description_2292]
 
 Read events from the collectd binary protocol over the network via udp. See <https://collectd.org/wiki/index.php/Binary_protocol>
 

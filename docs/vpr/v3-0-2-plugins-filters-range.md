@@ -14,11 +14,11 @@ For other versions, see the [overview list](filter-range-index.md).
 
 To learn more about Logstash, see the [Logstash Reference](https://www.elastic.co/guide/en/logstash/current/index.html).
 
-## Getting help [_getting_help_2145]
+## Getting help [_getting_help_2147]
 
 For questions about the plugin, open a topic in the [Discuss](http://discuss.elastic.co) forums. For bugs or feature requests, open an issue in [Github](https://github.com/logstash-plugins/logstash-filter-range). For the list of Elastic supported plugins, please consult the [Elastic Support Matrix](https://www.elastic.co/support/matrix#matrix_logstash_plugins).
 
-## Description [_description_2123]
+## Description [_description_2125]
 
 This filter is used to check that certain fields are within expected size/length ranges. Supported types are numbers and strings. Numbers are checked to be within numeric value range. Strings are checked to be within string length range. More than one range can be specified for same fieldname, actions will be applied incrementally. When field value is within a specified range an action will be taken. Supported actions are drop event, add tag, or add field with specified value.
 

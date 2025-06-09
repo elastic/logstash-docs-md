@@ -14,11 +14,11 @@ For other versions, see the [overview list](filter-ruby-index.md).
 
 To learn more about Logstash, see the [Logstash Reference](https://www.elastic.co/guide/en/logstash/current/index.html).
 
-## Getting help [_getting_help_2149]
+## Getting help [_getting_help_2151]
 
 For questions about the plugin, open a topic in the [Discuss](http://discuss.elastic.co) forums. For bugs or feature requests, open an issue in [Github](https://github.com/logstash-plugins/logstash-filter-ruby). For the list of Elastic supported plugins, please consult the [Elastic Support Matrix](https://www.elastic.co/support/matrix#matrix_logstash_plugins).
 
-## Description [_description_2127]
+## Description [_description_2129]
 
 Execute ruby code. This filter accepts inline ruby code or a ruby file. The two options are mutually exclusive and have slightly different ways of working, which are described below.
 

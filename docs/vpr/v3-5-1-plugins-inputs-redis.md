@@ -14,11 +14,11 @@ For other versions, see the [overview list](input-redis-index.md).
 
 To learn more about Logstash, see the [Logstash Reference](https://www.elastic.co/guide/en/logstash/current/index.html).
 
-## Getting help [_getting_help_786]
+## Getting help [_getting_help_788]
 
 For questions about the plugin, open a topic in the [Discuss](http://discuss.elastic.co) forums. For bugs or feature requests, open an issue in [Github](https://github.com/logstash-plugins/logstash-input-redis). For the list of Elastic supported plugins, please consult the [Elastic Support Matrix](https://www.elastic.co/support/matrix#matrix_logstash_plugins).
 
-## Description [_description_779]
+## Description [_description_781]
 
 This input will read events from a Redis instance; it supports both Redis channels and lists. The list command (BLPOP) used by Logstash is supported in Redis v1.3.1+, and the channel commands used by Logstash are found in Redis v1.3.8+. While you may be able to make these Redis versions work, the best performance and stability will be found in more recent stable versions. Versions 2.6.0+ are recommended.
 

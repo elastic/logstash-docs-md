@@ -15,7 +15,7 @@ For other versions, see the [overview list](input-snmptrap-index.md).
 
 To learn more about Logstash, see the [Logstash Reference](https://www.elastic.co/guide/en/logstash/current/index.html).
 
-## Getting help [_getting_help_873]
+## Getting help [_getting_help_875]
 
 For questions about the plugin, open a topic in the [Discuss](http://discuss.elastic.co) forums. For bugs or feature requests, open an issue in [Github](https://github.com/logstash-plugins/logstash-integration-snmp). For the list of Elastic supported plugins, please consult the [Elastic Support Matrix](https://www.elastic.co/support/matrix#matrix_logstash_plugins).
 
@@ -25,7 +25,7 @@ The `logstash-input-snmptrap` plugin is now a component of the `logstash-integra
 
 Before you upgrade to Logstash 8.15.0, be aware of [behavioral and mapping differences](https://www.elastic.co/guide/en/logstash/current/plugins-integrations-snmp.html#plugins-integrations-snmp-migration) between current stand-alone plugins and the new versions included in `integration-snmp`. If you need to maintain current mappings for the `input-snmptrap` plugin, you have options to [preserve existing behavior](https://www.elastic.co/guide/en/logstash/current/plugins-integrations-snmp.html#plugins-integrations-snmp-input-snmptrap-compat).
 
-## Description [_description_866]
+## Description [_description_868]
 
 The `logstash-input-snmptrap` plugin reads SNMP trap messages as events.
 

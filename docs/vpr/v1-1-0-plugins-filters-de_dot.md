@@ -14,11 +14,11 @@ For other versions, see the [overview list](filter-de_dot-index.md).
 
 To learn more about Logstash, see the [Logstash Reference](https://www.elastic.co/guide/en/logstash/current/index.html).
 
-## Getting help [_getting_help_1759]
+## Getting help [_getting_help_1761]
 
 For questions about the plugin, open a topic in the [Discuss](http://discuss.elastic.co) forums. For bugs or feature requests, open an issue in [Github](https://github.com/logstash-plugins/logstash-filter-de_dot). For the list of Elastic supported plugins, please consult the [Elastic Support Matrix](https://www.elastic.co/support/matrix#matrix_logstash_plugins).
 
-## Description [_description_1737]
+## Description [_description_1739]
 
 This filter *appears* to rename fields by replacing `.` characters with a different separator. In reality, it’s a somewhat expensive filter that has to copy the source field contents to a new destination field (whose name no longer contains dots), and then remove the corresponding source field.
 

@@ -14,11 +14,11 @@ For other versions, see the [overview list](filter-clone-index.md).
 
 To learn more about Logstash, see the [Logstash Reference](https://www.elastic.co/guide/en/logstash/current/index.html).
 
-## Getting help [_getting_help_1738]
+## Getting help [_getting_help_1740]
 
 For questions about the plugin, open a topic in the [Discuss](http://discuss.elastic.co) forums. For bugs or feature requests, open an issue in [Github](https://github.com/logstash-plugins/logstash-filter-clone). For the list of Elastic supported plugins, please consult the [Elastic Support Matrix](https://www.elastic.co/support/matrix#matrix_logstash_plugins).
 
-## Description [_description_1716]
+## Description [_description_1718]
 
 The clone filter is for duplicating events. A clone will be created for each type in the clone list. The original event is left unchanged. Created events are inserted into the pipeline as normal events and will be processed by the remaining pipeline configuration starting from the filter that generated them (i.e. this plugin).
 

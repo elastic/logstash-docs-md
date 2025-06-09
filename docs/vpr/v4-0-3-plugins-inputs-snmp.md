@@ -15,7 +15,7 @@ For other versions, see the [overview list](input-snmp-index.md).
 
 To learn more about Logstash, see the [Logstash Reference](https://www.elastic.co/guide/en/logstash/current/index.html).
 
-## Getting help [_getting_help_852]
+## Getting help [_getting_help_854]
 
 For questions about the plugin, open a topic in the [Discuss](http://discuss.elastic.co) forums. For bugs or feature requests, open an issue in [Github](https://github.com/logstash-plugins/logstash-integration-snmp). For the list of Elastic supported plugins, please consult the [Elastic Support Matrix](https://www.elastic.co/support/matrix#matrix_logstash_plugins).
 
@@ -31,7 +31,7 @@ Be aware of behavioral and mapping differences between current stand-alone plugi
 
 Before you install the new integration, be aware of [behavioral and mapping differences](https://www.elastic.co/guide/en/logstash/current/plugins-integrations-snmp.html#plugins-integrations-snmp-migration) between current stand-alone plugins and the new versions included in `integration-snmp`.
 
-## Description [_description_845]
+## Description [_description_847]
 
 The SNMP input polls network devices using Simple Network Management Protocol (SNMP) to gather information related to the current state of the devices operation.
 

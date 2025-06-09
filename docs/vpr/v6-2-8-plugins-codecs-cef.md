@@ -14,11 +14,11 @@ For other versions, see the [overview list](codec-cef-index.md).
 
 To learn more about Logstash, see the [Logstash Reference](https://www.elastic.co/guide/en/logstash/current/index.html).
 
-## Getting help [_getting_help_2252]
+## Getting help [_getting_help_2254]
 
 For questions about the plugin, open a topic in the [Discuss](http://discuss.elastic.co) forums. For bugs or feature requests, open an issue in [Github](https://github.com/logstash-plugins/logstash-codec-cef). For the list of Elastic supported plugins, please consult the [Elastic Support Matrix](https://www.elastic.co/support/matrix#matrix_logstash_plugins).
 
-## Description [_description_2230]
+## Description [_description_2232]
 
 Implementation of a Logstash codec for the ArcSight Common Event Format (CEF). It is based on [Implementing ArcSight CEF Revision 25, September 2017](https://www.microfocus.com/documentation/arcsight/arcsight-smartconnectors/pdfdoc/common-event-format-v25/common-event-format-v25.pdf).
 

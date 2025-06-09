@@ -14,7 +14,7 @@ For other versions, see the [overview list](input-log4j-index.md).
 
 To learn more about Logstash, see the [Logstash Reference](https://www.elastic.co/guide/en/logstash/current/index.html).
 
-## Getting help [_getting_help_723]
+## Getting help [_getting_help_725]
 
 For questions about the plugin, open a topic in the [Discuss](http://discuss.elastic.co) forums. For bugs or feature requests, open an issue in [Github](https://github.com/logstash-plugins/logstash-input-log4j). For the list of Elastic supported plugins, please consult the [Elastic Support Matrix](https://www.elastic.co/support/matrix#matrix_logstash_plugins).
 
@@ -76,7 +76,7 @@ It is strongly recommended that you also enable TLS in filebeat and logstash bea
 
 For more details on configuring the beats input, see [the logstash beats input documentation](https://www.elastic.co/guide/en/logstash/7.8/plugins-inputs-beats.html).
 
-## Description [_description_717]
+## Description [_description_719]
 
 Read events over a TCP socket from a Log4j SocketAppender. This plugin works only with log4j version 1.x.
 

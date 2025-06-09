@@ -14,11 +14,11 @@ For other versions, see the [overview list](filter-syslog_pri-index.md).
 
 To learn more about Logstash, see the [Logstash Reference](https://www.elastic.co/guide/en/logstash/current/index.html).
 
-## Getting help [_getting_help_2175]
+## Getting help [_getting_help_2177]
 
 For questions about the plugin, open a topic in the [Discuss](http://discuss.elastic.co) forums. For bugs or feature requests, open an issue in [Github](https://github.com/logstash-plugins/logstash-filter-syslog_pri). For the list of Elastic supported plugins, please consult the [Elastic Support Matrix](https://www.elastic.co/support/matrix#matrix_logstash_plugins).
 
-## Description [_description_2153]
+## Description [_description_2155]
 
 Filter plugin for logstash to parse the `PRI` field from the front of a Syslog (RFC3164) message. If no priority is set, it will default to 13 (per RFC).
 

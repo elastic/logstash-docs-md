@@ -347,9 +347,11 @@ toc:
           - file: v0-1-0-plugins-inputs-elastic_serverless_forwarder.md
         file: input-elastic_serverless_forwarder-index.md
       - children:
+          - file: v5-2-0-plugins-inputs-elasticsearch.md
           - file: v5-1-0-plugins-inputs-elasticsearch.md
           - file: v5-0-2-plugins-inputs-elasticsearch.md
           - file: v5-0-0-plugins-inputs-elasticsearch.md
+          - file: v4-23-0-plugins-inputs-elasticsearch.md
           - file: v4-22-0-plugins-inputs-elasticsearch.md
           - file: v4-21-2-plugins-inputs-elasticsearch.md
           - file: v4-21-1-plugins-inputs-elasticsearch.md

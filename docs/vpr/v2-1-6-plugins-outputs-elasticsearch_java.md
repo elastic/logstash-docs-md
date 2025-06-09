@@ -14,11 +14,11 @@ For other versions, see the [overview list](output-elasticsearch_java-index.md).
 
 To learn more about Logstash, see the [Logstash Reference](https://www.elastic.co/guide/en/logstash/current/index.html).
 
-## Getting help [_getting_help_1218]
+## Getting help [_getting_help_1220]
 
 For questions about the plugin, open a topic in the [Discuss](http://discuss.elastic.co) forums. For bugs or feature requests, open an issue in [Github](https://github.com/logstash-plugins/logstash-output-elasticsearch_java). For the list of Elastic supported plugins, please consult the [Elastic Support Matrix](https://www.elastic.co/support/matrix#matrix_logstash_plugins).
 
-## Description [_description_1211]
+## Description [_description_1213]
 
 This output lets you store logs in Elasticsearch using the native *node* and *transport* protocols. It is highly recommended to use the regular *logstash-output-elasticsearch* output which uses HTTP instead. This output is, in-fact, sometimes slower, and never faster than that one. Additionally, upgrading your Elasticsearch cluster may require you to simultaneously update this plugin for any protocol level changes. The HTTP client may be easier to work with due to wider familiarity with HTTP.
 

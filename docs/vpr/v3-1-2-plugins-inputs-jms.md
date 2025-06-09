@@ -14,11 +14,11 @@ For other versions, see the [overview list](input-jms-index.md).
 
 To learn more about Logstash, see the [Logstash Reference](https://www.elastic.co/guide/en/logstash/current/index.html).
 
-## Getting help [_getting_help_628]
+## Getting help [_getting_help_630]
 
 For questions about the plugin, open a topic in the [Discuss](http://discuss.elastic.co) forums. For bugs or feature requests, open an issue in [Github](https://github.com/logstash-plugins/logstash-input-jms). For the list of Elastic supported plugins, please consult the [Elastic Support Matrix](https://www.elastic.co/support/matrix#matrix_logstash_plugins).
 
-## Description [_description_622]
+## Description [_description_624]
 
 Read events from a Jms Broker. Supports both Jms Queues and Topics.
 

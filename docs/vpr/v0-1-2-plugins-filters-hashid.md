@@ -14,11 +14,11 @@ For other versions, see the [overview list](filter-hashid-index.md).
 
 To learn more about Logstash, see the [Logstash Reference](https://www.elastic.co/guide/en/logstash/current/index.html).
 
-## Getting help [_getting_help_1948]
+## Getting help [_getting_help_1950]
 
 For questions about the plugin, open a topic in the [Discuss](http://discuss.elastic.co) forums. For bugs or feature requests, open an issue in [Github](https://github.com/logstash-plugins/logstash-filter-hashid). For the list of Elastic supported plugins, please consult the [Elastic Support Matrix](https://www.elastic.co/support/matrix#matrix_logstash_plugins).
 
-## Description [_description_1926]
+## Description [_description_1928]
 
 This filter allow you to generate predictable, string encoded hashed keys based om event contents and timestamp. This can be used to avoid getting duplicate records indexed into Elasticsearch.
 

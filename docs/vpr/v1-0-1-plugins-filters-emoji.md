@@ -14,11 +14,11 @@ For other versions, see the [overview list](filter-emoji-index.md).
 
 To learn more about Logstash, see the [Logstash Reference](https://www.elastic.co/guide/en/logstash/current/index.html).
 
-## Getting help [_getting_help_1868]
+## Getting help [_getting_help_1870]
 
 For questions about the plugin, open a topic in the [Discuss](http://discuss.elastic.co) forums. For bugs or feature requests, open an issue in [Github](https://github.com/logstash-plugins/logstash-filter-emoji). For the list of Elastic supported plugins, please consult the [Elastic Support Matrix](https://www.elastic.co/support/matrix#matrix_logstash_plugins).
 
-## Description [_description_1846]
+## Description [_description_1848]
 
 This plugin maps the severity names or numeric codes as defined in [RFC 3164](https://tools.ietf.org/html/rfc3164#section-4.1.1) and [RFC 5424](https://tools.ietf.org/html/rfc5424#section-6.2.1) to the emoji as defined in the configuration.
 

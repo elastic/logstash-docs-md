@@ -14,11 +14,11 @@ For other versions, see the [overview list](output-statsd-index.md).
 
 To learn more about Logstash, see the [Logstash Reference](https://www.elastic.co/guide/en/logstash/current/index.html).
 
-## Getting help [_getting_help_1627]
+## Getting help [_getting_help_1629]
 
 For questions about the plugin, open a topic in the [Discuss](http://discuss.elastic.co) forums. For bugs or feature requests, open an issue in [Github](https://github.com/logstash-plugins/logstash-output-statsd). For the list of Elastic supported plugins, please consult the [Elastic Support Matrix](https://www.elastic.co/support/matrix#matrix_logstash_plugins).
 
-## Description [_description_1617]
+## Description [_description_1619]
 
 statsd is a network daemon for aggregating statistics, such as counters and timers, and shipping over UDP to backend services, such as Graphite or Datadog. The general idea is that you send metrics to statsd and every few seconds it will emit the aggregated values to the backend. Example aggregates are sums, average and maximum values, their standard deviation, etc. This plugin makes it easy to send such metrics based on data in Logstash events.
 

@@ -14,11 +14,11 @@ For other versions, see the [overview list](codec-json-index.md).
 
 To learn more about Logstash, see the [Logstash Reference](https://www.elastic.co/guide/en/logstash/current/index.html).
 
-## Getting help [_getting_help_2356]
+## Getting help [_getting_help_2358]
 
 For questions about the plugin, open a topic in the [Discuss](http://discuss.elastic.co) forums. For bugs or feature requests, open an issue in [Github](https://github.com/logstash-plugins/logstash-codec-json). For the list of Elastic supported plugins, please consult the [Elastic Support Matrix](https://www.elastic.co/support/matrix#matrix_logstash_plugins).
 
-## Description [_description_2334]
+## Description [_description_2336]
 
 This codec may be used to decode (via inputs) and encode (via outputs) full JSON messages. If the data being sent is a JSON array at its root multiple events will be created (one per element).
 

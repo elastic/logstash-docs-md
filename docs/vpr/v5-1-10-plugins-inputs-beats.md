@@ -67,7 +67,7 @@ index => "%{[@metadata][beat]}-%{[@metadata][version]}-%{+YYYY.MM.dd}"
 
   Sets the third part of the name to a date based on the Logstash `@timestamp` field.
 
-This configuration results in daily index names like `filebeat-{logstash_version}-2025-06-03`.
+This configuration results in daily index names like `filebeat-{logstash_version}-2025-06-09`.
 
 ## Beats Input Configuration Options [v5.1.10-plugins-inputs-beats-options]
 

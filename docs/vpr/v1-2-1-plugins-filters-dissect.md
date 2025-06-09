@@ -14,11 +14,11 @@ For other versions, see the [overview list](filter-dissect-index.md).
 
 To learn more about Logstash, see the [Logstash Reference](https://www.elastic.co/guide/en/logstash/current/index.html).
 
-## Getting help [_getting_help_1768]
+## Getting help [_getting_help_1770]
 
 For questions about the plugin, open a topic in the [Discuss](http://discuss.elastic.co) forums. For bugs or feature requests, open an issue in [Github](https://github.com/logstash-plugins/logstash-filter-dissect). For the list of Elastic supported plugins, please consult the [Elastic Support Matrix](https://www.elastic.co/support/matrix#matrix_logstash_plugins).
 
-## Description [_description_1746]
+## Description [_description_1748]
 
 The Dissect filter plugin tokenizes incoming strings using defined patterns. It extracts unstructured event data into fields using delimiters. This process is called tokenization.
 

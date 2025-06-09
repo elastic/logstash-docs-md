@@ -14,11 +14,11 @@ For other versions, see the [overview list](output-graphtastic-index.md).
 
 To learn more about Logstash, see the [Logstash Reference](https://www.elastic.co/guide/en/logstash/current/index.html).
 
-## Getting help [_getting_help_1295]
+## Getting help [_getting_help_1297]
 
 For questions about the plugin, open a topic in the [Discuss](http://discuss.elastic.co) forums. For bugs or feature requests, open an issue in [Github](https://github.com/logstash-plugins/logstash-output-graphtastic). For the list of Elastic supported plugins, please consult the [Elastic Support Matrix](https://www.elastic.co/support/matrix#matrix_logstash_plugins).
 
-## Description [_description_1288]
+## Description [_description_1290]
 
 A plugin for a newly developed Java/Spring Metrics application I didn’t really want to code this project but I couldn’t find a respectable alternative that would also run on any Windows machine - which is the problem and why I am not going with Graphite and statsd. This application provides multiple integration options so as to make its use under your network requirements possible. This includes a REST option that is always enabled for your use in case you want to write a small script to send the occasional metric data.
 

@@ -14,11 +14,11 @@ For other versions, see the [overview list](filter-throttle-index.md).
 
 To learn more about Logstash, see the [Logstash Reference](https://www.elastic.co/guide/en/logstash/current/index.html).
 
-## Getting help [_getting_help_2177]
+## Getting help [_getting_help_2179]
 
 For questions about the plugin, open a topic in the [Discuss](http://discuss.elastic.co) forums. For bugs or feature requests, open an issue in [Github](https://github.com/logstash-plugins/logstash-filter-throttle). For the list of Elastic supported plugins, please consult the [Elastic Support Matrix](https://www.elastic.co/support/matrix#matrix_logstash_plugins).
 
-## Description [_description_2155]
+## Description [_description_2157]
 
 The throttle filter is for throttling the number of events. The filter is configured with a lower bound, the "before\_count", and upper bound, the "after\_count", and a period of time. All events passing through the filter will be counted based on their key and the event timestamp. As long as the count is less than the "before\_count" or greater than the "after\_count", the event will be "throttled" which means the filter will be considered successful and any tags or fields will be added (or removed).
 
