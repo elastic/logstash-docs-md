@@ -6,16 +6,12 @@ mapped_pages:
 
 # Versioned elastic_app_search output plugin docs [output-elastic_app_search-index]
 
+This page lists all documentation available for this plugin. To see which plugin version you have installed, run `bin/logstash-plugin list --verbose`.
 
-This page lists all documentation available for this plugin.  To see which plugin version you have installed, run `bin/logstash-plugin list --verbose`.
-
-::::{note}
 Versioned plugin documentation is not available for plugins released prior to Logstash 6.0.
-::::
 
-
-|     |     |
-| --- | --- |
+| | |
+| :- | :- |
 | Version | Release Date |
 | [v3.0.1](v3-0-1-plugins-outputs-elastic_app_search.md) | 2025-01-03 |
 | [v3.0.0](v3-0-0-plugins-outputs-elastic_app_search.md) | 2023-11-07 |
@@ -29,16 +25,3 @@ Versioned plugin documentation is not available for plugins released prior to Lo
 | [v1.1.1](v1-1-1-plugins-outputs-elastic_app_search.md) | 2020-09-16 |
 | [v1.1.0](v1-1-0-plugins-outputs-elastic_app_search.md) | 2020-07-08 |
 | [v1.0.0](v1-0-0-plugins-outputs-elastic_app_search.md) | 2019-06-12 |
-
-
-
-
-
-
-
-
-
-
-
-
-

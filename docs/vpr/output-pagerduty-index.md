@@ -6,16 +6,12 @@ mapped_pages:
 
 # Versioned pagerduty output plugin docs [output-pagerduty-index]
 
+This page lists all documentation available for this plugin. To see which plugin version you have installed, run `bin/logstash-plugin list --verbose`.
 
-This page lists all documentation available for this plugin.  To see which plugin version you have installed, run `bin/logstash-plugin list --verbose`.
-
-::::{note}
 Versioned plugin documentation is not available for plugins released prior to Logstash 6.0.
-::::
 
-
-|     |     |
-| --- | --- |
+| | |
+| :- | :- |
 | Version | Release Date |
 | [v3.0.9](v3-0-9-plugins-outputs-pagerduty.md) | 2020-01-27 |
 | [v3.0.8](v3-0-8-plugins-outputs-pagerduty.md) | 2019-01-05 |
@@ -23,10 +19,3 @@ Versioned plugin documentation is not available for plugins released prior to Lo
 | [v3.0.6](v3-0-6-plugins-outputs-pagerduty.md) | 2017-11-13 |
 | [v3.0.5](v3-0-5-plugins-outputs-pagerduty.md) | 2017-08-16 |
 | [v3.0.4](v3-0-4-plugins-outputs-pagerduty.md) | 2017-06-23 |
-
-
-
-
-
-
-

@@ -6,18 +6,18 @@ mapped_pages:
 
 # Versioned beats input plugin docs [input-beats-index]
 
+This page lists all documentation available for this plugin. To see which plugin version you have installed, run `bin/logstash-plugin list --verbose`.
 
-This page lists all documentation available for this plugin.  To see which plugin version you have installed, run `bin/logstash-plugin list --verbose`.
-
-::::{note}
 Versioned plugin documentation is not available for plugins released prior to Logstash 6.0.
-::::
 
-
-|     |     |
-| --- | --- |
+| | |
+| :- | :- |
 | Version | Release Date |
+| [v7.0.2](v7-0-2-plugins-inputs-beats.md) | 2025-02-12 |
+| [v7.0.1](v7-0-1-plugins-inputs-beats.md) | 2025-01-30 |
 | [v7.0.0](v7-0-0-plugins-inputs-beats.md) | 2024-12-02 |
+| [v6.9.3](v6-9-3-plugins-inputs-beats.md) | 2025-02-12 |
+| [v6.9.2](v6-9-2-plugins-inputs-beats.md) | 2025-02-04 |
 | [v6.9.1](v6-9-1-plugins-inputs-beats.md) | 2024-11-18 |
 | [v6.9.0](v6-9-0-plugins-inputs-beats.md) | 2024-08-28 |
 | [v6.8.4](v6-8-4-plugins-inputs-beats.md) | 2024-08-28 |
@@ -111,106 +111,3 @@ Versioned plugin documentation is not available for plugins released prior to Lo
 | [v3.1.23](v3-1-23-plugins-inputs-beats.md) | 2017-07-12 |
 | [v3.1.22](v3-1-22-plugins-inputs-beats.md) | 2017-07-12 |
 | [v3.1.21](v3-1-21-plugins-inputs-beats.md) | 2017-06-23 |
-| [v3.1.20](v3-1-20-plugins-inputs-beats.md) | 2017-06-23 |
-| [v3.1.19](v3-1-19-plugins-inputs-beats.md) | 2017-06-22 |
-| [v3.1.18](v3-1-18-plugins-inputs-beats.md) | 2017-06-07 |
-| [v3.1.17](v3-1-17-plugins-inputs-beats.md) | 2017-06-05 |
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

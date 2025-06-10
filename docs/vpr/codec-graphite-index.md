@@ -6,23 +6,14 @@ mapped_pages:
 
 # Versioned graphite codec plugin docs [codec-graphite-index]
 
+This page lists all documentation available for this plugin. To see which plugin version you have installed, run `bin/logstash-plugin list --verbose`.
 
-This page lists all documentation available for this plugin.  To see which plugin version you have installed, run `bin/logstash-plugin list --verbose`.
-
-::::{note}
 Versioned plugin documentation is not available for plugins released prior to Logstash 6.0.
-::::
 
-
-|     |     |
-| --- | --- |
+| | |
+| :- | :- |
 | Version | Release Date |
 | [v3.0.6](v3-0-6-plugins-codecs-graphite.md) | 2021-08-12 |
 | [v3.0.5](v3-0-5-plugins-codecs-graphite.md) | 2017-11-07 |
 | [v3.0.4](v3-0-4-plugins-codecs-graphite.md) | 2017-08-15 |
 | [v3.0.3](v3-0-3-plugins-codecs-graphite.md) | 2017-06-23 |
-
-
-
-
-

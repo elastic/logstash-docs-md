@@ -6,63 +6,57 @@ mapped_pages:
 
 # Pipe input plugin v3.1.0 [v3.1.0-plugins-inputs-pipe]
 
-
 * Plugin version: v3.1.0
 * Released on: 2021-11-18
 * [Changelog](https://github.com/logstash-plugins/logstash-input-pipe/blob/v3.1.0/CHANGELOG.md)
 
 For other versions, see the [overview list](input-pipe-index.md).
 
-To learn more about Logstash, see the [Logstash Reference](logstash://reference/index.md).
+To learn more about Logstash, see the [Logstash Reference](https://www.elastic.co/guide/en/logstash/current/index.html).
 
-## Getting help [_getting_help_727]
+## Getting help [_getting_help_753]
 
 For questions about the plugin, open a topic in the [Discuss](http://discuss.elastic.co) forums. For bugs or feature requests, open an issue in [Github](https://github.com/logstash-plugins/logstash-input-pipe). For the list of Elastic supported plugins, please consult the [Elastic Support Matrix](https://www.elastic.co/support/matrix#matrix_logstash_plugins).
 
-
-## Description [_description_720]
+## Description [_description_746]
 
 Stream events from a long running command pipe.
 
 By default, each event is assumed to be one line. If you want to join lines, you’ll want to use the multiline codec.
 
-
 ## Compatibility with the Elastic Common Schema (ECS) [v3.1.0-plugins-inputs-pipe-ecs]
 
-This plugin adds extra fields about the event’s source. Configure the [`ecs_compatibility`\]\(([^:]+)://reference/index.md).
+This plugin adds extra fields about the event’s source. Configure the [`ecs_compatibility`](v3-1-0-plugins-inputs-pipe.md#v3.1.0-plugins-inputs-pipe-ecs_compatibility) option if you want to ensure that these fields are compatible with [ECS](https://www.elastic.co/guide/en/ecs/current).
 
 These fields are added after the event has been decoded by the appropriate codec, and will not overwrite existing values.
 
 | ECS Disabled | ECS v1 , v8 | Description |
-| --- | --- | --- |
-| `host` | `[host][name]` | The name of the {{ls}} host that processed the event |
+| :- | :- | :- |
+| `host` | `[host][name]` | The name of the Logstash host that processed the event |
 | `command` | `[process][command_line]` | The command run by the plugin |
-
 
 ## Pipe Input Configuration Options [v3.1.0-plugins-inputs-pipe-options]
 
 This plugin supports the following configuration options plus the [Common options](v3-1-0-plugins-inputs-pipe.md#v3.1.0-plugins-inputs-pipe-common-options) described later.
 
 | Setting | Input type | Required |
-| --- | --- | --- |
-| [`command`](v3-1-0-plugins-inputs-pipe.md#v3.1.0-plugins-inputs-pipe-command) | [string](logstash://reference/configuration-file-structure.md#string) | Yes |
-| [`ecs_compatibility`](v3-1-0-plugins-inputs-pipe.md#v3.1.0-plugins-inputs-pipe-ecs_compatibility) | [string](logstash://reference/configuration-file-structure.md#string) | No |
+| :- | :- | :- |
+| [`command`](v3-1-0-plugins-inputs-pipe.md#v3.1.0-plugins-inputs-pipe-command) | [string](/lsr/value-types.md#string) | Yes |
+| [`ecs_compatibility`](v3-1-0-plugins-inputs-pipe.md#v3.1.0-plugins-inputs-pipe-ecs_compatibility) | [string](/lsr/value-types.md#string) | No |
 
 Also see [Common options](v3-1-0-plugins-inputs-pipe.md#v3.1.0-plugins-inputs-pipe-common-options) for a list of options supported by all input plugins.
-
- 
 
 ### `command` [v3.1.0-plugins-inputs-pipe-command]
 
 * This is a required setting.
-* Value type is [string](logstash://reference/configuration-file-structure.md#string)
+* Value type is [string](/lsr/value-types.md#string)
 * There is no default value for this setting.
 
 Command to run and read events from, one line at a time.
 
 Example:
 
-```ruby
+```
 input {
   pipe {
     command => "echo ¡Hola!"
@@ -70,21 +64,20 @@ input {
 }
 ```
 
-
 ### `ecs_compatibility` [v3.1.0-plugins-inputs-pipe-ecs_compatibility]
 
-* Value type is [string](logstash://reference/configuration-file-structure.md#string)
+* Value type is [string](/lsr/value-types.md#string)
+
 * Supported values are:
 
-    * `disabled`: uses backwards compatible field names, such as `[host]`
-    * `v1`, `v8`: uses fields that are compatible with ECS, such as `[host][name]`
+  * `disabled`: uses backwards compatible field names, such as `[host]`
+  * `v1`, `v8`: uses fields that are compatible with ECS, such as `[host][name]`
 
-
-Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)][Elastic Common Schema (ECS)\]\(([^:]+)://reference/index.md)). See [Compatibility with the Elastic Common Schema (ECS)](v3-1-0-plugins-inputs-pipe.md#v3.1.0-plugins-inputs-pipe-ecs) for detailed information.
+Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)](https://www.elastic.co/guide/en/ecs/current). See [Compatibility with the Elastic Common Schema (ECS)](v3-1-0-plugins-inputs-pipe.md#v3.1.0-plugins-inputs-pipe-ecs) for detailed information.
 
 **Sample output: ECS enabled**
 
-```ruby
+```
 {
     "@timestamp"=>2021-11-16T09:18:45.306Z,
     "message" => "¡Hola!",
@@ -99,7 +92,7 @@ Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)][El
 
 **Sample output: ECS disabled**
 
-```ruby
+```
 {
     "@timestamp"=>2021-11-16T09:18:45.306Z,
     "message" => "¡Hola!",
@@ -108,53 +101,48 @@ Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)][El
 }
 ```
 
-
-
 ## Common options [v3.1.0-plugins-inputs-pipe-common-options]
 
 These configuration options are supported by all input plugins:
 
 | Setting | Input type | Required |
-| --- | --- | --- |
-| [`add_field`](v3-1-0-plugins-inputs-pipe.md#v3.1.0-plugins-inputs-pipe-add_field) | [hash](logstash://reference/configuration-file-structure.md#hash) | No |
-| [`codec`](v3-1-0-plugins-inputs-pipe.md#v3.1.0-plugins-inputs-pipe-codec) | [codec](logstash://reference/configuration-file-structure.md#codec) | No |
-| [`enable_metric`](v3-1-0-plugins-inputs-pipe.md#v3.1.0-plugins-inputs-pipe-enable_metric) | [boolean](logstash://reference/configuration-file-structure.md#boolean) | No |
-| [`id`](v3-1-0-plugins-inputs-pipe.md#v3.1.0-plugins-inputs-pipe-id) | [string](logstash://reference/configuration-file-structure.md#string) | No |
-| [`tags`](v3-1-0-plugins-inputs-pipe.md#v3.1.0-plugins-inputs-pipe-tags) | [array](logstash://reference/configuration-file-structure.md#array) | No |
-| [`type`](v3-1-0-plugins-inputs-pipe.md#v3.1.0-plugins-inputs-pipe-type) | [string](logstash://reference/configuration-file-structure.md#string) | No |
+| :- | :- | :- |
+| [`add_field`](v3-1-0-plugins-inputs-pipe.md#v3.1.0-plugins-inputs-pipe-add_field) | [hash](/lsr/value-types.md#hash) | No |
+| [`codec`](v3-1-0-plugins-inputs-pipe.md#v3.1.0-plugins-inputs-pipe-codec) | [codec](/lsr/value-types.md#codec) | No |
+| [`enable_metric`](v3-1-0-plugins-inputs-pipe.md#v3.1.0-plugins-inputs-pipe-enable_metric) | [boolean](/lsr/value-types.md#boolean) | No |
+| [`id`](v3-1-0-plugins-inputs-pipe.md#v3.1.0-plugins-inputs-pipe-id) | [string](/lsr/value-types.md#string) | No |
+| [`tags`](v3-1-0-plugins-inputs-pipe.md#v3.1.0-plugins-inputs-pipe-tags) | [array](/lsr/value-types.md#array) | No |
+| [`type`](v3-1-0-plugins-inputs-pipe.md#v3.1.0-plugins-inputs-pipe-type) | [string](/lsr/value-types.md#string) | No |
 
 ### `add_field` [v3.1.0-plugins-inputs-pipe-add_field]
 
-* Value type is [hash](logstash://reference/configuration-file-structure.md#hash)
+* Value type is [hash](/lsr/value-types.md#hash)
 * Default value is `{}`
 
 Add a field to an event
 
-
 ### `codec` [v3.1.0-plugins-inputs-pipe-codec]
 
-* Value type is [codec](logstash://reference/configuration-file-structure.md#codec)
+* Value type is [codec](/lsr/value-types.md#codec)
 * Default value is `"plain"`
 
 The codec used for input data. Input codecs are a convenient method for decoding your data before it enters the input, without needing a separate filter in your Logstash pipeline.
 
-
 ### `enable_metric` [v3.1.0-plugins-inputs-pipe-enable_metric]
 
-* Value type is [boolean](logstash://reference/configuration-file-structure.md#boolean)
+* Value type is [boolean](/lsr/value-types.md#boolean)
 * Default value is `true`
 
 Disable or enable metric logging for this specific plugin instance by default we record all the metrics we can, but you can disable metrics collection for a specific plugin.
 
-
 ### `id` [v3.1.0-plugins-inputs-pipe-id]
 
-* Value type is [string](logstash://reference/configuration-file-structure.md#string)
+* Value type is [string](/lsr/value-types.md#string)
 * There is no default value for this setting.
 
 Add a unique `ID` to the plugin configuration. If no ID is specified, Logstash will generate one. It is strongly recommended to set this ID in your configuration. This is particularly useful when you have two or more plugins of the same type, for example, if you have 2 pipe inputs. Adding a named ID in this case will help in monitoring Logstash when using the monitoring APIs.
 
-```json
+```
 input {
   pipe {
     id => "my_plugin_id"
@@ -162,20 +150,18 @@ input {
 }
 ```
 
-
 ### `tags` [v3.1.0-plugins-inputs-pipe-tags]
 
-* Value type is [array](logstash://reference/configuration-file-structure.md#array)
+* Value type is [array](/lsr/value-types.md#array)
 * There is no default value for this setting.
 
 Add any number of arbitrary tags to your event.
 
 This can help with processing later.
 
-
 ### `type` [v3.1.0-plugins-inputs-pipe-type]
 
-* Value type is [string](logstash://reference/configuration-file-structure.md#string)
+* Value type is [string](/lsr/value-types.md#string)
 * There is no default value for this setting.
 
 Add a `type` field to all events handled by this input.

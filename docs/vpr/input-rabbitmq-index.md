@@ -6,16 +6,12 @@ mapped_pages:
 
 # Versioned rabbitmq input plugin docs [input-rabbitmq-index]
 
+This page lists all documentation available for this plugin. To see which plugin version you have installed, run `bin/logstash-plugin list --verbose`.
 
-This page lists all documentation available for this plugin.  To see which plugin version you have installed, run `bin/logstash-plugin list --verbose`.
-
-::::{note}
 Versioned plugin documentation is not available for plugins released prior to Logstash 6.0.
-::::
 
-
-|     |     |
-| --- | --- |
+| | |
+| :- | :- |
 | Version | Release Date |
 | [v7.4.0](v7-4-0-plugins-inputs-rabbitmq.md) | 2024-09-16 |
 | [v7.3.3](v7-3-3-plugins-inputs-rabbitmq.md) | 2023-06-09 |
@@ -36,23 +32,3 @@ Versioned plugin documentation is not available for plugins released prior to Lo
 | [v6.0.0](v6-0-0-plugins-inputs-rabbitmq.md) | 2017-08-02 |
 | [v5.2.5](v5-2-5-plugins-inputs-rabbitmq.md) | 2017-08-18 |
 | [v5.2.4](v5-2-4-plugins-inputs-rabbitmq.md) | 2017-06-23 |
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

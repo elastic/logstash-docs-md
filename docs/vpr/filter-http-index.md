@@ -6,16 +6,12 @@ mapped_pages:
 
 # Versioned http filter plugin docs [filter-http-index]
 
+This page lists all documentation available for this plugin. To see which plugin version you have installed, run `bin/logstash-plugin list --verbose`.
 
-This page lists all documentation available for this plugin.  To see which plugin version you have installed, run `bin/logstash-plugin list --verbose`.
-
-::::{note}
 Versioned plugin documentation is not available for plugins released prior to Logstash 6.0.
-::::
 
-
-|     |     |
-| --- | --- |
+| | |
+| :- | :- |
 | Version | Release Date |
 | [v2.0.0](v2-0-0-plugins-filters-http.md) | 2024-12-18 |
 | [v1.6.0](v1-6-0-plugins-filters-http.md) | 2024-06-19 |
@@ -33,20 +29,3 @@ Versioned plugin documentation is not available for plugins released prior to Lo
 | [v1.0.1](v1-0-1-plugins-filters-http.md) | 2019-02-06 |
 | [v1.0.0](v1-0-0-plugins-filters-http.md) | 2019-01-11 |
 | [v0.1.0](v0-1-0-plugins-filters-http.md) | 2018-12-12 |
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

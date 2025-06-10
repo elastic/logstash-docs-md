@@ -6,17 +6,15 @@ mapped_pages:
 
 # Versioned jdbc_static filter plugin docs [filter-jdbc_static-index]
 
+This page lists all documentation available for this plugin. To see which plugin version you have installed, run `bin/logstash-plugin list --verbose`.
 
-This page lists all documentation available for this plugin.  To see which plugin version you have installed, run `bin/logstash-plugin list --verbose`.
-
-::::{note}
 Versioned plugin documentation is not available for plugins released prior to Logstash 6.0.
-::::
 
-
-|     |     |
-| --- | --- |
+| | |
+| :- | :- |
 | Version | Release Date |
+| [v5.5.3](v5-5-3-plugins-filters-jdbc_static.md) | 2025-03-07 |
+| [v5.5.2](v5-5-2-plugins-filters-jdbc_static.md) | 2024-12-23 |
 | [v5.5.1](v5-5-1-plugins-filters-jdbc_static.md) | 2024-12-03 |
 | [v5.5.0](v5-5-0-plugins-filters-jdbc_static.md) | 2024-08-09 |
 | [v5.4.11](v5-4-11-plugins-filters-jdbc_static.md) | 2024-05-23 |
@@ -66,53 +64,3 @@ Versioned plugin documentation is not available for plugins released prior to Lo
 | [v1.0.2](v1-0-2-plugins-filters-jdbc_static.md) | 2018-04-20 |
 | [v1.0.1](v1-0-1-plugins-filters-jdbc_static.md) | 2018-03-17 |
 | [v1.0.0](v1-0-0-plugins-filters-jdbc_static.md) | 2018-01-11 |
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

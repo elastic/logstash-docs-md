@@ -6,16 +6,12 @@ mapped_pages:
 
 # Versioned cef codec plugin docs [codec-cef-index]
 
+This page lists all documentation available for this plugin. To see which plugin version you have installed, run `bin/logstash-plugin list --verbose`.
 
-This page lists all documentation available for this plugin.  To see which plugin version you have installed, run `bin/logstash-plugin list --verbose`.
-
-::::{note}
 Versioned plugin documentation is not available for plugins released prior to Logstash 6.0.
-::::
 
-
-|     |     |
-| --- | --- |
+| | |
+| :- | :- |
 | Version | Release Date |
 | [v6.2.8](v6-2-8-plugins-codecs-cef.md) | 2024-10-22 |
 | [v6.2.7](v6-2-7-plugins-codecs-cef.md) | 2023-05-12 |
@@ -40,27 +36,3 @@ Versioned plugin documentation is not available for plugins released prior to Lo
 | [v5.0.0](v5-0-0-plugins-codecs-cef.md) | 2017-08-01 |
 | [v4.1.4](v4-1-4-plugins-codecs-cef.md) | 2017-08-18 |
 | [v4.1.3](v4-1-3-plugins-codecs-cef.md) | 2017-06-23 |
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

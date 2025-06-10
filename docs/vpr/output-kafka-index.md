@@ -6,17 +6,14 @@ mapped_pages:
 
 # Versioned kafka output plugin docs [output-kafka-index]
 
+This page lists all documentation available for this plugin. To see which plugin version you have installed, run `bin/logstash-plugin list --verbose`.
 
-This page lists all documentation available for this plugin.  To see which plugin version you have installed, run `bin/logstash-plugin list --verbose`.
-
-::::{note}
 Versioned plugin documentation is not available for plugins released prior to Logstash 6.0.
-::::
 
-
-|     |     |
-| --- | --- |
+| | |
+| :- | :- |
 | Version | Release Date |
+| [v11.6.1](v11-6-1-plugins-outputs-kafka.md) | 2025-05-08 |
 | [v11.6.0](v11-6-0-plugins-outputs-kafka.md) | 2025-01-07 |
 | [v11.5.4](v11-5-4-plugins-outputs-kafka.md) | 2024-12-18 |
 | [v11.5.3](v11-5-3-plugins-outputs-kafka.md) | 2024-11-25 |
@@ -35,6 +32,7 @@ Versioned plugin documentation is not available for plugins released prior to Lo
 | [v11.2.0](v11-2-0-plugins-outputs-kafka.md) | 2023-02-14 |
 | [v11.1.0](v11-1-0-plugins-outputs-kafka.md) | 2023-01-25 |
 | [v11.0.0](v11-0-0-plugins-outputs-kafka.md) | 2022-12-16 |
+| [v10.12.2](v10-12-2-plugins-outputs-kafka.md) | 2025-02-12 |
 | [v10.12.1](v10-12-1-plugins-outputs-kafka.md) | 2023-10-16 |
 | [v10.12.0](v10-12-0-plugins-outputs-kafka.md) | 2022-05-09 |
 | [v10.11.0](v10-11-0-plugins-outputs-kafka.md) | 2022-04-25 |
@@ -87,74 +85,3 @@ Versioned plugin documentation is not available for plugins released prior to Lo
 | [v6.2.2](v6-2-2-plugins-outputs-kafka.md) | 2017-07-11 |
 | [v6.2.1](v6-2-1-plugins-outputs-kafka.md) | 2017-06-23 |
 | [v6.2.0](v6-2-0-plugins-outputs-kafka.md) | 2017-05-11 |
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -6,30 +6,25 @@ mapped_pages:
 
 # Edn_lines codec plugin [plugins-codecs-edn_lines]
 
-
 * Plugin version: v3.1.0
 * Released on: 2021-08-04
 * [Changelog](https://github.com/logstash-plugins/logstash-codec-edn_lines/blob/v3.1.0/CHANGELOG.md)
 
-For other versions, see the [Versioned plugin docs](/vpr/codec-edn_lines-index.md).
+For other versions, see the [Versioned plugin docs](https://www.elastic.co/guide/en/logstash-versioned-plugins/current/codec-edn_lines-index.html).
 
 ## Getting help [_getting_help_180]
 
 For questions about the plugin, open a topic in the [Discuss](http://discuss.elastic.co) forums. For bugs or feature requests, open an issue in [Github](https://github.com/logstash-plugins/logstash-codec-edn_lines). For the list of Elastic supported plugins, please consult the [Elastic Support Matrix](https://www.elastic.co/support/matrix#logstash_plugins).
 
-
-## Description [_description_178]
+## Description [_description_179]
 
 Reads and produces newline-delimited EDN format data.
-
 
 ## Edn_lines Codec configuration options [plugins-codecs-edn_lines-options]
 
 | Setting | Input type | Required |
-| --- | --- | --- |
+| :- | :- | :- |
 | [`target`](plugins-codecs-edn_lines.md#plugins-codecs-edn_lines-target) | [string](value-types.md#string) | No |
-
- 
 
 ### `target` [plugins-codecs-edn_lines-target]
 
@@ -41,7 +36,7 @@ Define the target field for placing the decoded fields. If this setting is not s
 
 For example, if you want data to be put under the `document` field:
 
-```ruby
+```
     input {
       tcp {
         port => 4242
@@ -51,6 +46,3 @@ For example, if you want data to be put under the `document` field:
       }
     }
 ```
-
-
-

@@ -6,60 +6,47 @@ mapped_pages:
 
 # Elastic Integration filter plugin v0.1.5 [v0.1.5-plugins-filters-elastic_integration]
 
-
 * Plugin version: v0.1.5
 * Released on: 2024-01-31
 * [Changelog](https://github.com/elastic/logstash-filter-elastic_integration/blob/v0.1.5/CHANGELOG.md)
 
 For other versions, see the [overview list](filter-elastic_integration-index.md).
 
-To learn more about Logstash, see the [Logstash Reference](logstash://reference/index.md).
+To learn more about Logstash, see the [Logstash Reference](https://www.elastic.co/guide/en/logstash/current/index.html).
 
-## Getting help [_getting_help_1801]
+## Getting help [_getting_help_1822]
 
 For questions about the plugin, open a topic in the [Discuss](http://discuss.elastic.co) forums. For bugs or feature requests, open an issue in [Github](https://github.com/elastic/logstash-filter-elastic_integration). For the list of Elastic supported plugins, please consult the [Elastic Support Matrix](https://www.elastic.co/support/matrix#matrix_logstash_plugins).
 
-::::{admonition} Elastic Enterprise License
+**Elastic Enterprise License**
+
 Use of this plugin requires an active Elastic Enterprise [subscription](https://www.elastic.co/subscriptions).
 
-::::
+## Description [_description_1800]
 
+Using this filter you can process Elastic integrations powered by Elasticsearch Ingest Node in Logstash.
 
+Once configured to point to an Elasticsearch cluster, this filter will detect which ingest pipeline (if any) should be executed for each event, using an explicitly-defined [`pipeline_name`](v0-1-5-plugins-filters-elastic_integration.md#v0.1.5-plugins-filters-elastic_integration-pipeline_name) or auto-detecting the event’s data-stream and its default pipeline.
 
-## Description [_description_1779]
+It will then load that pipeline’s definition from Elasticsearch and run that pipeline inside Logstash without transmitting the event to Elasticsearch. Events that are successfully handled by their ingest pipeline will have `[@metadata][target_ingest_pipeline]` set to `_none` so that any downstream Elasticsearch output in the Logstash pipeline will avoid running the event’s default pipeline *again* in Elasticsearch.
 
-Using this filter you can process Elastic integrations powered by {{es}} Ingest Node in Logstash.
-
-Once configured to point to an {{es}} cluster, this filter will detect which ingest pipeline (if any) should be executed for each event, using an explicitly-defined [`pipeline_name`](v0-1-5-plugins-filters-elastic_integration.md#v0.1.5-plugins-filters-elastic_integration-pipeline_name) or auto-detecting the event’s data-stream and its default pipeline.
-
-It will then load that pipeline’s definition from {{es}} and run that pipeline inside Logstash without transmitting the event to {{es}}. Events that are successfully handled by their ingest pipeline will have `[@metadata][target_ingest_pipeline]` set to `_none` so that any downstream {{es}} output in the Logstash pipeline will avoid running the event’s default pipeline *again* in {{es}}.
-
-::::{note}
-Some multi-pipeline configurations such as logstash-to-logstash over http(s) do not maintain the state of `[@metadata]` fields. In these setups, you may need to explicitly configure your downstream pipeline’s {{es}} output with `pipeline => "_none"` to avoid re-running the default pipeline.
-::::
-
+Some multi-pipeline configurations such as logstash-to-logstash over http(s) do not maintain the state of `[@metadata]` fields. In these setups, you may need to explicitly configure your downstream pipeline’s Elasticsearch output with `pipeline => "_none"` to avoid re-running the default pipeline.
 
 Events that *fail* ingest pipeline processing will be tagged with `_ingest_pipeline_failure`, and their `[@metadata][_ingest_pipeline_failure]` will be populated with details as a key/value map.
 
-::::{important}
 This plugin requires minimum Java 17 and Logstash 8.7.0 versions.
-::::
 
+**Technology Preview**
 
-::::{admonition} Technology Preview
 This Elastic Integration filter plugin is part of a *Technology Preview*, which means that both configuration options and implementation details are subject to change in minor releases without being preceded by deprecation warnings.
 
 Before upgrading this plugin or Logstash itself, please pay special attention to the changelogs to avoid being caught by surprise.
 
-::::
-
-
-
 ## Minimum Configuration [v0.1.5-plugins-filters-elastic_integration-minimum_configuration]
 
-You will need to configure this plugin to connect to {{es}}, and may need to also need to provide local GeoIp databases.
+You will need to configure this plugin to connect to Elasticsearch, and may need to also need to provide local GeoIp databases.
 
-```ruby
+```
 filter {
   elastic_integration {
     cloud_id   => "YOUR_CLOUD_ID_HERE"
@@ -71,10 +58,9 @@ filter {
 
 Read on for a guide to configuration, or jump to the [complete list of configuration options](v0-1-5-plugins-filters-elastic_integration.md#v0.1.5-plugins-filters-elastic_integration-options).
 
+## Connecting to Elasticsearch [v0.1.5-plugins-filters-elastic_integration-connecting_to_elasticsearch]
 
-## Connecting to {{es}} [v0.1.5-plugins-filters-elastic_integration-connecting_to_elasticsearch]
-
-This plugin communicates with {{es}} to identify which ingest pipeline should be run for a given event, and to retrieve the ingest pipeline definitions themselves. You must configure this plugin to point to {{es}} using exactly one of:
+This plugin communicates with Elasticsearch to identify which ingest pipeline should be run for a given event, and to retrieve the ingest pipeline definitions themselves. You must configure this plugin to point to Elasticsearch using exactly one of:
 
 * A Cloud Id (see [`cloud_id`](v0-1-5-plugins-filters-elastic_integration.md#v0.1.5-plugins-filters-elastic_integration-cloud_id))
 * A list of one or more host URLs (see [`hosts`](v0-1-5-plugins-filters-elastic_integration.md#v0.1.5-plugins-filters-elastic_integration-hosts))
@@ -83,101 +69,89 @@ Communication will be made securely over SSL unless you explicitly configure thi
 
 You may need to configure how this plugin establishes trust of the server that responds, and will likely need to configure how this plugin presents its own identity or credentials.
 
-### SSL Trust Configuration [_ssl_trust_configuration_17]
+### SSL Trust Configuration [_ssl_trust_configuration_19]
 
-When communicating over SSL, this plugin fully-validates the proof-of-identity presented by {{es}} using the system trust store. You can provide an *alternate* source of trust with one of:
+When communicating over SSL, this plugin fully-validates the proof-of-identity presented by Elasticsearch using the system trust store. You can provide an *alternate* source of trust with one of:
 
 * A PEM-formatted list of trusted certificate authorities (see [`ssl_certificate_authorities`](v0-1-5-plugins-filters-elastic_integration.md#v0.1.5-plugins-filters-elastic_integration-ssl_certificate_authorities))
 * A JKS- or PKCS12-formatted Keystore containing trusted certificates (see [`ssl_truststore_path`](v0-1-5-plugins-filters-elastic_integration.md#v0.1.5-plugins-filters-elastic_integration-ssl_truststore_path))
 
 You can also configure which aspects of the proof-of-identity are verified (see [`ssl_verification_mode`](v0-1-5-plugins-filters-elastic_integration.md#v0.1.5-plugins-filters-elastic_integration-ssl_verification_mode)).
 
+### SSL Identity Configuration [_ssl_identity_configuration_19]
 
-### SSL Identity Configuration [_ssl_identity_configuration_17]
-
-When communicating over SSL, you can also configure this plugin to present a certificate-based proof-of-identity to the {{es}} cluster it connects to using one of:
+When communicating over SSL, you can also configure this plugin to present a certificate-based proof-of-identity to the Elasticsearch cluster it connects to using one of:
 
 * A PKCS8 Certificate/Key pair (see [`ssl_certificate`](v0-1-5-plugins-filters-elastic_integration.md#v0.1.5-plugins-filters-elastic_integration-ssl_certificate))
 * A JKS- or PKCS12-formatted Keystore (see [`ssl_keystore_path`](v0-1-5-plugins-filters-elastic_integration.md#v0.1.5-plugins-filters-elastic_integration-ssl_keystore_path))
 
+### Request Identity [_request_identity_19]
 
-### Request Identity [_request_identity_17]
-
-You can configure this plugin to present authentication credentials to {{es}} in one of several ways:
+You can configure this plugin to present authentication credentials to Elasticsearch in one of several ways:
 
 * ApiKey: (see [`api_key`](v0-1-5-plugins-filters-elastic_integration.md#v0.1.5-plugins-filters-elastic_integration-api_key))
 * Cloud Auth: (see [`cloud_auth`](v0-1-5-plugins-filters-elastic_integration.md#v0.1.5-plugins-filters-elastic_integration-cloud_auth))
 * HTTP Basic Auth: (see [`username`](v0-1-5-plugins-filters-elastic_integration.md#v0.1.5-plugins-filters-elastic_integration-username) and [`password`](v0-1-5-plugins-filters-elastic_integration.md#v0.1.5-plugins-filters-elastic_integration-password))
 
-::::{note}
 Your request credentials are only as secure as the connection they are being passed over. They provide neither privacy nor secrecy on their own, and can easily be recovered by an adversary when SSL is disabled.
-::::
-
-
-
 
 ## Minimum required privileges [v0.1.5-plugins-filters-elastic_integration-minimum_required_privileges]
 
 This plugin communicates with Elasticsearch to resolve events into pipeline definitions and needs to be configured with credentials with appropriate privileges to read from the relevant APIs. At the startup phase, this plugin confirms that current user has sufficient privileges, including:
 
 | Privilege name | Description |
-| --- | --- |
-| `monitor` | A read-only privilege for cluster operations such as cluster health or state. Plugin requires it when checks {{es}} license. |
-| `read_pipeline` | A read-only get and simulate access to ingest pipeline. It is required when plugin reads {{es}} ingest pipeline definitions. |
+| :- | :- |
+| `monitor` | A read-only privilege for cluster operations such as cluster health or state. Plugin requires it when checks Elasticsearch license. |
+| `read_pipeline` | A read-only get and simulate access to ingest pipeline. It is required when plugin reads Elasticsearch ingest pipeline definitions. |
 | `manage_index_templates` | All operations on index templates privilege. It is required when plugin resolves default pipeline based on event data stream name. |
 
-::::{note}
-This plugin cannot determine if an anonymous user has the required privileges when it connects to an {{es}} cluster that has security features disabled or when the user does not provide credentials. The plugin starts in an unsafe mode with a runtime error indicating that API permissions are insufficient, and prevents events from being processed by the ingest pipeline.
+This plugin cannot determine if an anonymous user has the required privileges when it connects to an Elasticsearch cluster that has security features disabled or when the user does not provide credentials. The plugin starts in an unsafe mode with a runtime error indicating that API permissions are insufficient, and prevents events from being processed by the ingest pipeline.
 
-To avoid these issues, set up user authentication and ensure that security in {{es}} is enabled (default).
-
-::::
-
-
+To avoid these issues, set up user authentication and ensure that security in Elasticsearch is enabled (default).
 
 ## Supported Ingest Processors [v0.1.5-plugins-filters-elastic_integration-supported_ingest_processors]
 
-This filter can run {{es}} Ingest Node pipelines that are *wholly* comprised of the supported subset of processors. It has access to the Painless and Mustache scripting engines where applicable:
+This filter can run Elasticsearch Ingest Node pipelines that are *wholly* comprised of the supported subset of processors. It has access to the Painless and Mustache scripting engines where applicable:
 
 | Source | Processor | Caveats |
-| --- | --- | --- |
-| Ingest Common | `append` | *none* |
-| `bytes` | *none* |
-| `communityid` | *none* |
-| `convert` | *none* |
-| `csv` | *none* |
-| `date` | *none* |
-| `dateindexname` | *none* |
-| `dissect` | *none* |
-| `dotexpander` | *none* |
-| `drop` | *none* |
-| `fail` | *none* |
-| `fingerprint` | *none* |
-| `foreach` | *none* |
-| `grok` | *none* |
-| `gsub` | *none* |
-| `htmlstrip` | *none* |
-| `join` | *none* |
-| `json` | *none* |
-| `keyvalue` | *none* |
-| `lowercase` | *none* |
-| `networkdirection` | *none* |
-| `pipeline` | resolved pipeline *must* be wholly-composed of supported processors |
-| `registereddomain` | *none* |
-| `remove` | *none* |
-| `rename` | *none* |
-| `reroute` | *none* |
-| `script` | `lang` must be `painless` (default) |
-| `set` | *none* |
-| `sort` | *none* |
-| `split` | *none* |
-| `trim` | *none* |
-| `uppercase` | *none* |
-| `uriparts` | *none* |
-| `urldecode` | *none* |
-| `user_agent` | side-loading a custom regex file is not supported; the processor will use the default user agent definitions as specified in [Elasticsearch processor definition](elasticsearch://reference/enrich-processor/user-agent-processor.md) |
-| Redact | `redact` | *none* |
-| GeoIp | `geoip` | requires MaxMind GeoIP2 databases, which may be provided by Logstash’s Geoip Database Management *OR* configured using [`geoip_database_directory`](v0-1-5-plugins-filters-elastic_integration.md#v0.1.5-plugins-filters-elastic_integration-geoip_database_directory) |
+| :- | :- | :- |
+| **Ingest Common** | `append` | *none* |
+| | `bytes` | *none* |
+| | `communityid` | *none* |
+| | `convert` | *none* |
+| | `csv` | *none* |
+| | `date` | *none* |
+| | `dateindexname` | *none* |
+| | `dissect` | *none* |
+| | `dotexpander` | *none* |
+| | `drop` | *none* |
+| | `fail` | *none* |
+| | `fingerprint` | *none* |
+| | `foreach` | *none* |
+| | `grok` | *none* |
+| | `gsub` | *none* |
+| | `htmlstrip` | *none* |
+| | `join` | *none* |
+| | `json` | *none* |
+| | `keyvalue` | *none* |
+| | `lowercase` | *none* |
+| | `networkdirection` | *none* |
+| | `pipeline` | resolved pipeline *must* be wholly-composed of supported processors |
+| | `registereddomain` | *none* |
+| | `remove` | *none* |
+| | `rename` | *none* |
+| | `reroute` | *none* |
+| | `script` | `lang` must be `painless` (default) |
+| | `set` | *none* |
+| | `sort` | *none* |
+| | `split` | *none* |
+| | `trim` | *none* |
+| | `uppercase` | *none* |
+| | `uriparts` | *none* |
+| | `urldecode` | *none* |
+| | `user_agent` | side-loading a custom regex file is not supported; the processor will use the default user agent definitions as specified in [Elasticsearch processor definition](https://www.elastic.co/guide/en/elasticsearch/reference/current/user-agent-processor.html) |
+| **Redact** | `redact` | *none* |
+| **GeoIp** | `geoip` | requires MaxMind GeoIP2 databases, which may be provided by Logstash’s Geoip Database Management *OR* configured using [`geoip_database_directory`](v0-1-5-plugins-filters-elastic_integration.md#v0.1.5-plugins-filters-elastic_integration-geoip_database_directory) |
 
 ### Field Mappings [v0.1.5-plugins-filters-elastic_integration-field_mappings]
 
@@ -190,31 +164,29 @@ It also contains additional metadata fields as required by ingest pipeline proce
 
 After execution completes the event is sanitized to ensure that Logstash-reserved fields have the expected shape, providing sensible defaults for any missing required fields. When an ingest pipeline has set a reserved field to a value that cannot be coerced, the value is made available in an alternate location on the event as described below.
 
-| {{ls}} field | type | value |
-| --- | --- | --- |
-| `@timestamp` | `Timestamp` | First coercible value of the ingest document’s `@timestamp`, `event.created`, `_ingest.timestamp`, or `_now` fields; or the current timestamp.When the ingest document has a value for `@timestamp` that cannot be coerced, it will be available in the event’s `_@timestamp` field. |
-| `@version` | String-encoded integer | First coercible value of the ingest document’s `@version`, or `_version` fields; or the current timestamp.When the ingest document has a value for `@version` that cannot be coerced, it will be available in the event’s `_@version` field. |
-| `@metadata` | key/value map | The ingest document’s `@metadata`; or an empty map.When the ingest document has a value for `@metadata` that cannot be coerced, it will be available in the event’s `_@metadata` field. |
-| `tags` | a String or a list of Strings | The ingest document’s `tags`.When the ingest document has a value for `tags` that cannot be coerced, it will be available in the event’s `_tags` field. |
+| Logstash field | type | value |
+| :- | :- | :- |
+| `@timestamp` | `Timestamp` | First coercible value of the ingest document’s `@timestamp`, `event.created`, `_ingest.timestamp`, or `_now` fields; or the current timestamp. When the ingest document has a value for `@timestamp` that cannot be coerced, it will be available in the event’s `_@timestamp` field. |
+| `@version` | String-encoded integer | First coercible value of the ingest document’s `@version`, or `_version` fields; or the current timestamp. When the ingest document has a value for `@version` that cannot be coerced, it will be available in the event’s `_@version` field. |
+| `@metadata` | key/value map | The ingest document’s `@metadata`; or an empty map. When the ingest document has a value for `@metadata` that cannot be coerced, it will be available in the event’s `_@metadata` field. |
+| `tags` | a String or a list of Strings | The ingest document’s `tags`. When the ingest document has a value for `tags` that cannot be coerced, it will be available in the event’s `_tags` field. |
 
 Additionally, the following Elasticsearch IngestDocument Metadata fields are made available on the resulting event *if-and-only-if* they were set during pipeline execution:
 
-| {{es}} document metadata | {{ls}} field |
-| --- | --- |
-| `_id` | `{{mcc-prefix}}[id]` |
-| `_index` | `{{mcc-prefix}}[index]` |
-| `_routing` | `{{mcc-prefix}}[routing]` |
-| `_version` | `{{mcc-prefix}}[version]` |
-| `_version_type` | `{{mcc-prefix}}[version_type]` |
-| `_ingest.timestamp` | `{{mcc-prefix}}[timestamp]` |
-
-
+| Elasticsearch document metadata | Logstash field |
+| :- | :- |
+| `_id` | `{mcc-prefix}[id]` |
+| `_index` | `{mcc-prefix}[index]` |
+| `_routing` | `{mcc-prefix}[routing]` |
+| `_version` | `{mcc-prefix}[version]` |
+| `_version_type` | `{mcc-prefix}[version_type]` |
+| `_ingest.timestamp` | `{mcc-prefix}[timestamp]` |
 
 ## Resolving Pipeline Definitions [v0.1.5-plugins-filters-elastic_integration-resolving]
 
-This plugin uses {{es}} to resolve pipeline names into their pipeline definitions. When configured *without* an explicit [`pipeline_name`](v0-1-5-plugins-filters-elastic_integration.md#v0.1.5-plugins-filters-elastic_integration-pipeline_name), or when a pipeline uses the Reroute Processor, it also uses {{es}} to establish mappings of data stream names to their respective default pipeline names.
+This plugin uses Elasticsearch to resolve pipeline names into their pipeline definitions. When configured *without* an explicit [`pipeline_name`](v0-1-5-plugins-filters-elastic_integration.md#v0.1.5-plugins-filters-elastic_integration-pipeline_name), or when a pipeline uses the Reroute Processor, it also uses Elasticsearch to establish mappings of data stream names to their respective default pipeline names.
 
-It uses hit/miss caches to avoid querying Elasticsearch for every single event. It also works to update these cached mappings *before* they expire. The result is that when {{es}} is responsive this plugin is able to pick up changes quickly without impacting its own performance, and it can survive periods of {{es}} issues without interruption by continuing to use potentially-stale mappings or definitions.
+It uses hit/miss caches to avoid querying Elasticsearch for every single event. It also works to update these cached mappings *before* they expire. The result is that when Elasticsearch is responsive this plugin is able to pick up changes quickly without impacting its own performance, and it can survive periods of Elasticsearch issues without interruption by continuing to use potentially-stale mappings or definitions.
 
 To achieve this, mappings are cached for a maximum of 24 hours, and cached values are reloaded every 1 minute with the following effect:
 
@@ -223,64 +195,60 @@ To achieve this, mappings are cached for a maximum of 24 hours, and cached value
 * when a reloaded mapping is newly *empty*, the previous non-empty mapping is *replaced* with a new empty entry so that subsequent events will use the empty value
 * when the reload of a mapping *fails*, this plugin emits a log warning but the existing cache entry is unchanged and gets closer to its expiry.
 
-
 ## Elastic Integration Filter Configuration Options [v0.1.5-plugins-filters-elastic_integration-options]
 
 This plugin supports the following configuration options plus the [Common options](v0-1-5-plugins-filters-elastic_integration.md#v0.1.5-plugins-filters-elastic_integration-common-options) described later.
 
 | Setting | Input type | Required |
-| --- | --- | --- |
-| [`api_key`](v0-1-5-plugins-filters-elastic_integration.md#v0.1.5-plugins-filters-elastic_integration-api_key) | [password](logstash://reference/configuration-file-structure.md#password) | No |
-| [`cloud_auth`](v0-1-5-plugins-filters-elastic_integration.md#v0.1.5-plugins-filters-elastic_integration-cloud_auth) | [password](logstash://reference/configuration-file-structure.md#password) | No |
-| [`cloud_id`](v0-1-5-plugins-filters-elastic_integration.md#v0.1.5-plugins-filters-elastic_integration-cloud_id) | [string](logstash://reference/configuration-file-structure.md#string) | No |
-| [`geoip_database_directory`](v0-1-5-plugins-filters-elastic_integration.md#v0.1.5-plugins-filters-elastic_integration-geoip_database_directory) | [path](logstash://reference/configuration-file-structure.md#path) | No |
-| [`hosts`](v0-1-5-plugins-filters-elastic_integration.md#v0.1.5-plugins-filters-elastic_integration-hosts) | [array](logstash://reference/configuration-file-structure.md#array) | No |
-| [`password`](v0-1-5-plugins-filters-elastic_integration.md#v0.1.5-plugins-filters-elastic_integration-password) | [password](logstash://reference/configuration-file-structure.md#password) | No |
-| [`pipeline_name`](v0-1-5-plugins-filters-elastic_integration.md#v0.1.5-plugins-filters-elastic_integration-pipeline_name) | [string](logstash://reference/configuration-file-structure.md#string) | No |
-| [`ssl_certificate`](v0-1-5-plugins-filters-elastic_integration.md#v0.1.5-plugins-filters-elastic_integration-ssl_certificate) | [path](logstash://reference/configuration-file-structure.md#path) | No |
-| [`ssl_certificate_authorities`](v0-1-5-plugins-filters-elastic_integration.md#v0.1.5-plugins-filters-elastic_integration-ssl_certificate_authorities) | [array](logstash://reference/configuration-file-structure.md#array) | No |
-| [`ssl_enabled`](v0-1-5-plugins-filters-elastic_integration.md#v0.1.5-plugins-filters-elastic_integration-ssl_enabled) | [boolean](logstash://reference/configuration-file-structure.md#boolean) | No |
-| [`ssl_key`](v0-1-5-plugins-filters-elastic_integration.md#v0.1.5-plugins-filters-elastic_integration-ssl_key) | [path](logstash://reference/configuration-file-structure.md#path) | No |
-| [`ssl_keystore_password`](v0-1-5-plugins-filters-elastic_integration.md#v0.1.5-plugins-filters-elastic_integration-ssl_keystore_password) | [password](logstash://reference/configuration-file-structure.md#password) | No |
-| [`ssl_keystore_path`](v0-1-5-plugins-filters-elastic_integration.md#v0.1.5-plugins-filters-elastic_integration-ssl_keystore_path) | [path](logstash://reference/configuration-file-structure.md#path) | No |
-| [`ssl_key_passphrase`](v0-1-5-plugins-filters-elastic_integration.md#v0.1.5-plugins-filters-elastic_integration-ssl_key_passphrase) | [password](logstash://reference/configuration-file-structure.md#password) | No |
-| [`ssl_truststore_path`](v0-1-5-plugins-filters-elastic_integration.md#v0.1.5-plugins-filters-elastic_integration-ssl_truststore_path) | [path](logstash://reference/configuration-file-structure.md#path) | No |
-| [`ssl_truststore_password`](v0-1-5-plugins-filters-elastic_integration.md#v0.1.5-plugins-filters-elastic_integration-ssl_truststore_password) | [password](logstash://reference/configuration-file-structure.md#password) | No |
-| [`ssl_verification_mode`](v0-1-5-plugins-filters-elastic_integration.md#v0.1.5-plugins-filters-elastic_integration-ssl_verification_mode) | [string](logstash://reference/configuration-file-structure.md#string), one of `["full", "certificate", "none"]` | No |
-| [`username`](v0-1-5-plugins-filters-elastic_integration.md#v0.1.5-plugins-filters-elastic_integration-username) | [string](logstash://reference/configuration-file-structure.md#string) | No |
+| :- | :- | :- |
+| [`api_key`](v0-1-5-plugins-filters-elastic_integration.md#v0.1.5-plugins-filters-elastic_integration-api_key) | [password](/lsr/value-types.md#password) | No |
+| [`cloud_auth`](v0-1-5-plugins-filters-elastic_integration.md#v0.1.5-plugins-filters-elastic_integration-cloud_auth) | [password](/lsr/value-types.md#password) | No |
+| [`cloud_id`](v0-1-5-plugins-filters-elastic_integration.md#v0.1.5-plugins-filters-elastic_integration-cloud_id) | [string](/lsr/value-types.md#string) | No |
+| [`geoip_database_directory`](v0-1-5-plugins-filters-elastic_integration.md#v0.1.5-plugins-filters-elastic_integration-geoip_database_directory) | [path](/lsr/value-types.md#path) | No |
+| [`hosts`](v0-1-5-plugins-filters-elastic_integration.md#v0.1.5-plugins-filters-elastic_integration-hosts) | [array](/lsr/value-types.md#array) | No |
+| [`password`](v0-1-5-plugins-filters-elastic_integration.md#v0.1.5-plugins-filters-elastic_integration-password) | [password](/lsr/value-types.md#password) | No |
+| [`pipeline_name`](v0-1-5-plugins-filters-elastic_integration.md#v0.1.5-plugins-filters-elastic_integration-pipeline_name) | [string](/lsr/value-types.md#string) | No |
+| [`ssl_certificate`](v0-1-5-plugins-filters-elastic_integration.md#v0.1.5-plugins-filters-elastic_integration-ssl_certificate) | [path](/lsr/value-types.md#path) | No |
+| [`ssl_certificate_authorities`](v0-1-5-plugins-filters-elastic_integration.md#v0.1.5-plugins-filters-elastic_integration-ssl_certificate_authorities) | [array](/lsr/value-types.md#array) | No |
+| [`ssl_enabled`](v0-1-5-plugins-filters-elastic_integration.md#v0.1.5-plugins-filters-elastic_integration-ssl_enabled) | [boolean](/lsr/value-types.md#boolean) | No |
+| [`ssl_key`](v0-1-5-plugins-filters-elastic_integration.md#v0.1.5-plugins-filters-elastic_integration-ssl_key) | [path](/lsr/value-types.md#path) | No |
+| [`ssl_keystore_password`](v0-1-5-plugins-filters-elastic_integration.md#v0.1.5-plugins-filters-elastic_integration-ssl_keystore_password) | [password](/lsr/value-types.md#password) | No |
+| [`ssl_keystore_path`](v0-1-5-plugins-filters-elastic_integration.md#v0.1.5-plugins-filters-elastic_integration-ssl_keystore_path) | [path](/lsr/value-types.md#path) | No |
+| [`ssl_key_passphrase`](v0-1-5-plugins-filters-elastic_integration.md#v0.1.5-plugins-filters-elastic_integration-ssl_key_passphrase) | [password](/lsr/value-types.md#password) | No |
+| [`ssl_truststore_path`](v0-1-5-plugins-filters-elastic_integration.md#v0.1.5-plugins-filters-elastic_integration-ssl_truststore_path) | [path](/lsr/value-types.md#path) | No |
+| [`ssl_truststore_password`](v0-1-5-plugins-filters-elastic_integration.md#v0.1.5-plugins-filters-elastic_integration-ssl_truststore_password) | [password](/lsr/value-types.md#password) | No |
+| [`ssl_verification_mode`](v0-1-5-plugins-filters-elastic_integration.md#v0.1.5-plugins-filters-elastic_integration-ssl_verification_mode) | [string](/lsr/value-types.md#string), one of `["full", "certificate", "none"]` | No |
+| [`username`](v0-1-5-plugins-filters-elastic_integration.md#v0.1.5-plugins-filters-elastic_integration-username) | [string](/lsr/value-types.md#string) | No |
 
 ### `api_key` [v0.1.5-plugins-filters-elastic_integration-api_key]
 
-* Value type is [password](logstash://reference/configuration-file-structure.md#password)
+* Value type is [password](/lsr/value-types.md#password)
 * There is no default value for this setting.
 
-The encoded form of an API key that is used to authenticate this plugin to {{es}}.
-
+The encoded form of an API key that is used to authenticate this plugin to Elasticsearch.
 
 ### `cloud_auth` [v0.1.5-plugins-filters-elastic_integration-cloud_auth]
 
-* Value type is [password](logstash://reference/configuration-file-structure.md#password)
+* Value type is [password](/lsr/value-types.md#password)
 * There is no default value for this setting.
 
-Cloud authentication string ("<username>:<password>" format) is an alternative for the `username`/`password` pair and can be obtained from Elastic Cloud web console.
-
+Cloud authentication string ("\<username>:\<password>" format) is an alternative for the `username`/`password` pair and can be obtained from Elastic Cloud web console.
 
 ### `cloud_id` [v0.1.5-plugins-filters-elastic_integration-cloud_id]
 
-* Value type is [string](logstash://reference/configuration-file-structure.md#string)
+* Value type is [string](/lsr/value-types.md#string)
 * There is no default value for this setting.
-* Cannot be combined with `[`ssl_enabled`](v0-1-5-plugins-filters-elastic_integration.md#v0.1.5-plugins-filters-elastic_integration-ssl_enabled)⇒false`.
+* Cannot be combined with \`[`ssl_enabled`](v0-1-5-plugins-filters-elastic_integration.md#v0.1.5-plugins-filters-elastic_integration-ssl_enabled)⇒false\`.
 
 Cloud Id, from the Elastic Cloud web console.
 
-When connecting with a Cloud Id, communication to {{es}} is secured with SSL.
+When connecting with a Cloud Id, communication to Elasticsearch is secured with SSL.
 
-For more details, check out the [Logstash-to-Cloud documentation](logstash://reference/connecting-to-cloud.md).
-
+For more details, check out the [Logstash-to-Cloud documentation](https://www.elastic.co/guide/en/logstash/current/connecting-to-cloud.html).
 
 ### `geoip_database_directory` [v0.1.5-plugins-filters-elastic_integration-geoip_database_directory]
 
-* Value type is [path](logstash://reference/configuration-file-structure.md#path)
+* Value type is [path](/lsr/value-types.md#path)
 * There is no default value for this setting.
 
 When running in a Logstash process that has Geoip Database Management enabled, integrations that use the Geoip Processor wil use managed Maxmind databases by default. By using managed databases you accept and agree to the [MaxMind EULA](https://www.maxmind.com/en/geolite2/eula).
@@ -295,21 +263,21 @@ Databases are registered by file name, and most integrations rely on databases b
 
 This plugin will discover any regular file with the `.mmdb` suffix in the provided directory, and expects the files it finds to be in the MaxMind DB format.
 
-
 ### `hosts` [v0.1.5-plugins-filters-elastic_integration-hosts]
 
-* Value type is a list of [uri](logstash://reference/configuration-file-structure.md#uri)s
+* Value type is a list of [uri](/lsr/value-types.md#uri)s
+
 * There is no default value for this setting.
+
 * Constraints:
 
-    * When any URL contains a protocol component, all URLs must have the same protocol as each other.
-    * `https`-protocol hosts use HTTPS and cannot be combined with [`ssl_enabled => false`](v0-1-5-plugins-filters-elastic_integration.md#v0.1.5-plugins-filters-elastic_integration-ssl_enabled).
-    * `http`-protocol hosts use unsecured HTTP and cannot be combined with [`ssl_enabled => true`](v0-1-5-plugins-filters-elastic_integration.md#v0.1.5-plugins-filters-elastic_integration-ssl_enabled).
-    * When any URL omits a port component, the default `9200` is used.
-    * When any URL contains a path component, all URLs must have the same path as each other.
+  * When any URL contains a protocol component, all URLs must have the same protocol as each other.
+  * `https`-protocol hosts use HTTPS and cannot be combined with [`ssl_enabled => false`](v0-1-5-plugins-filters-elastic_integration.md#v0.1.5-plugins-filters-elastic_integration-ssl_enabled).
+  * `http`-protocol hosts use unsecured HTTP and cannot be combined with [`ssl_enabled => true`](v0-1-5-plugins-filters-elastic_integration.md#v0.1.5-plugins-filters-elastic_integration-ssl_enabled).
+  * When any URL omits a port component, the default `9200` is used.
+  * When any URL contains a path component, all URLs must have the same path as each other.
 
-
-A non-empty list of {{es}} hosts to connect.
+A non-empty list of Elasticsearch hosts to connect.
 
 Examples:
 
@@ -319,191 +287,169 @@ Examples:
 * `["https://127.0.0.1:9200"]`
 * `["https://127.0.0.1:9200/subpath"]` (If using a proxy on a subpath)
 
-When connecting with a list of hosts, communication to {{es}} is secured with SSL unless configured otherwise.
+When connecting with a list of hosts, communication to Elasticsearch is secured with SSL unless configured otherwise.
 
-::::{admonition} Disabling SSL is dangerous
-:class: warning
+Disabling SSL is dangerous
 
 The security of this plugin relies on SSL to avoid leaking credentials and to avoid running illegitimate ingest pipeline definitions.
 
 There are two ways to disable SSL:
 
 * Provide a list of `http`-protocol hosts
-* Set `<<{{version}}-plugins-{{type}}s-{{plugin}}-ssl_enabled>>=>false`
-
-::::
-
-
+* Set `<<{version}-plugins-{type}s-{plugin}-ssl_enabled>>=>false`
 
 ### `password` [v0.1.5-plugins-filters-elastic_integration-password]
 
-* Value type is [password](logstash://reference/configuration-file-structure.md#password)
+* Value type is [password](/lsr/value-types.md#password)
 * There is no default value for this setting.
 * Required when request auth is configured with [`username`](v0-1-5-plugins-filters-elastic_integration.md#v0.1.5-plugins-filters-elastic_integration-username)
 
-A password when using HTTP Basic Authentication to connect to {{es}}.
-
+A password when using HTTP Basic Authentication to connect to Elasticsearch.
 
 ### `pipeline_name` [v0.1.5-plugins-filters-elastic_integration-pipeline_name]
 
-* Value type is [string](logstash://reference/configuration-file-structure.md#string)
+* Value type is [string](/lsr/value-types.md#string)
 * There is no default value for this setting.
 * When present, the event’s initial pipeline will *not* be auto-detected from the event’s data stream fields.
-* Value may be a [sprintf-style](logstash://reference/event-dependent-configuration.md#sprintf) template; if any referenced fields cannot be resolved the event will not be routed to an ingest pipeline.
-
+* Value may be a [sprintf-style](https://www.elastic.co/guide/en/logstash/current/event-dependent-configuration.html#sprintf) template; if any referenced fields cannot be resolved the event will not be routed to an ingest pipeline.
 
 ### `ssl_certificate` [v0.1.5-plugins-filters-elastic_integration-ssl_certificate]
 
-* Value type is [path](logstash://reference/configuration-file-structure.md#path)
+* Value type is [path](/lsr/value-types.md#path)
 * There is no default value for this setting.
 * When present, [`ssl_key`](v0-1-5-plugins-filters-elastic_integration.md#v0.1.5-plugins-filters-elastic_integration-ssl_key) and [`ssl_key_passphrase`](v0-1-5-plugins-filters-elastic_integration.md#v0.1.5-plugins-filters-elastic_integration-ssl_key_passphrase) are also required.
 * Cannot be combined with configurations that disable SSL
 
-Path to a PEM-encoded certificate or certificate chain with which to identify this plugin to {{es}}.
-
+Path to a PEM-encoded certificate or certificate chain with which to identify this plugin to Elasticsearch.
 
 ### `ssl_certificate_authorities` [v0.1.5-plugins-filters-elastic_integration-ssl_certificate_authorities]
 
-* Value type is a list of [path](logstash://reference/configuration-file-structure.md#path)s
+* Value type is a list of [path](/lsr/value-types.md#path)s
 * There is no default value for this setting.
 * Cannot be combined with configurations that disable SSL
-* Cannot be combined with `[`ssl_verification_mode`](v0-1-5-plugins-filters-elastic_integration.md#v0.1.5-plugins-filters-elastic_integration-ssl_verification_mode)⇒none`.
+* Cannot be combined with \`[`ssl_verification_mode`](v0-1-5-plugins-filters-elastic_integration.md#v0.1.5-plugins-filters-elastic_integration-ssl_verification_mode)⇒none\`.
 
 One or more PEM-formatted files defining certificate authorities.
 
-This setting can be used to *override* the system trust store for verifying the SSL certificate presented by {{es}}.
-
+This setting can be used to *override* the system trust store for verifying the SSL certificate presented by Elasticsearch.
 
 ### `ssl_enabled` [v0.1.5-plugins-filters-elastic_integration-ssl_enabled]
 
-* Value type is [boolean](logstash://reference/configuration-file-structure.md#boolean)
+* Value type is [boolean](/lsr/value-types.md#boolean)
 * There is no default value for this setting.
 
-Secure SSL communication to {{es}} is enabled unless:
+Secure SSL communication to Elasticsearch is enabled unless:
 
 * it is explicitly disabled with `ssl_enabled => false`; OR
 * it is implicitly disabled by providing `http`-protocol [`hosts`](v0-1-5-plugins-filters-elastic_integration.md#v0.1.5-plugins-filters-elastic_integration-hosts).
 
 Specifying `ssl_enabled => true` can be a helpful redundant safeguard to ensure this plugin cannot be configured to use non-ssl communication.
 
-
 ### `ssl_key` [v0.1.5-plugins-filters-elastic_integration-ssl_key]
 
-* Value type is [path](logstash://reference/configuration-file-structure.md#path)
+* Value type is [path](/lsr/value-types.md#path)
 * There is no default value for this setting.
 * Required when connection identity is configured with [`ssl_certificate`](v0-1-5-plugins-filters-elastic_integration.md#v0.1.5-plugins-filters-elastic_integration-ssl_certificate)
 * Cannot be combined with configurations that disable SSL
 
 A path to a PKCS8-formatted SSL certificate key.
 
-
 ### `ssl_keystore_password` [v0.1.5-plugins-filters-elastic_integration-ssl_keystore_password]
 
-* Value type is [password](logstash://reference/configuration-file-structure.md#password)
+* Value type is [password](/lsr/value-types.md#password)
 * There is no default value for this setting.
 * Required when connection identity is configured with [`ssl_keystore_path`](v0-1-5-plugins-filters-elastic_integration.md#v0.1.5-plugins-filters-elastic_integration-ssl_keystore_path)
 * Cannot be combined with configurations that disable SSL
 
 Password for the [`ssl_keystore_path`](v0-1-5-plugins-filters-elastic_integration.md#v0.1.5-plugins-filters-elastic_integration-ssl_keystore_path).
 
-
 ### `ssl_keystore_path` [v0.1.5-plugins-filters-elastic_integration-ssl_keystore_path]
 
-* Value type is [path](logstash://reference/configuration-file-structure.md#path)
+* Value type is [path](/lsr/value-types.md#path)
 * There is no default value for this setting.
 * When present, [`ssl_keystore_password`](v0-1-5-plugins-filters-elastic_integration.md#v0.1.5-plugins-filters-elastic_integration-ssl_keystore_password) is also required.
 * Cannot be combined with configurations that disable SSL
 
-A path to a JKS- or PKCS12-formatted keystore with which to identify this plugin to {{es}}.
-
+A path to a JKS- or PKCS12-formatted keystore with which to identify this plugin to Elasticsearch.
 
 ### `ssl_key_passphrase` [v0.1.5-plugins-filters-elastic_integration-ssl_key_passphrase]
 
-* Value type is [password](logstash://reference/configuration-file-structure.md#password)
+* Value type is [password](/lsr/value-types.md#password)
 * There is no default value for this setting.
 * Required when connection identity is configured with [`ssl_certificate`](v0-1-5-plugins-filters-elastic_integration.md#v0.1.5-plugins-filters-elastic_integration-ssl_certificate)
 * Cannot be combined with configurations that disable SSL
 
 A password or passphrase of the [`ssl_key`](v0-1-5-plugins-filters-elastic_integration.md#v0.1.5-plugins-filters-elastic_integration-ssl_key).
 
-
 ### `ssl_truststore_path` [v0.1.5-plugins-filters-elastic_integration-ssl_truststore_path]
 
-* Value type is [path](logstash://reference/configuration-file-structure.md#path)
+* Value type is [path](/lsr/value-types.md#path)
 * There is no default value for this setting.
 * When present, [`ssl_truststore_password`](v0-1-5-plugins-filters-elastic_integration.md#v0.1.5-plugins-filters-elastic_integration-ssl_truststore_password) is required.
 * Cannot be combined with configurations that disable SSL
-* Cannot be combined with `[`ssl_verification_mode`](v0-1-5-plugins-filters-elastic_integration.md#v0.1.5-plugins-filters-elastic_integration-ssl_verification_mode)⇒none`.
+* Cannot be combined with \`[`ssl_verification_mode`](v0-1-5-plugins-filters-elastic_integration.md#v0.1.5-plugins-filters-elastic_integration-ssl_verification_mode)⇒none\`.
 
 A path to JKS- or PKCS12-formatted keystore where trusted certificates are located.
 
-This setting can be used to *override* the system trust store for verifying the SSL certificate presented by {{es}}.
-
+This setting can be used to *override* the system trust store for verifying the SSL certificate presented by Elasticsearch.
 
 ### `ssl_truststore_password` [v0.1.5-plugins-filters-elastic_integration-ssl_truststore_password]
 
-* Value type is [password](logstash://reference/configuration-file-structure.md#password)
+* Value type is [password](/lsr/value-types.md#password)
 * There is no default value for this setting.
 * Required when connection trust is configured with [`ssl_truststore_path`](v0-1-5-plugins-filters-elastic_integration.md#v0.1.5-plugins-filters-elastic_integration-ssl_truststore_path)
 * Cannot be combined with configurations that disable SSL
 
 Password for the [`ssl_truststore_path`](v0-1-5-plugins-filters-elastic_integration.md#v0.1.5-plugins-filters-elastic_integration-ssl_truststore_path).
 
-
 ### `ssl_verification_mode` [v0.1.5-plugins-filters-elastic_integration-ssl_verification_mode]
 
-* Value type is [string](logstash://reference/configuration-file-structure.md#string)
+* Value type is [string](/lsr/value-types.md#string)
 * There is no default value for this setting.
 * Cannot be combined with configurations that disable SSL
 
-Level of verification of the certificate provided by {{es}}.
+Level of verification of the certificate provided by Elasticsearch.
 
-SSL certificates presented by {{es}} are fully-validated by default.
+SSL certificates presented by Elasticsearch are fully-validated by default.
 
 * Available modes:
 
-    * `none`: performs no validation, implicitly trusting any server that this plugin connects to (insecure)
-    * `certificate`: validates the server-provided certificate is signed by a trusted certificate authority and that the server can prove possession of its associated private key (less secure)
-    * `full` (default): performs the same validations as `certificate` and also verifies that the provided certificate has an identity claim matching the server we are attempting to connect to (most secure)
-
-
+  * `none`: performs no validation, implicitly trusting any server that this plugin connects to (insecure)
+  * `certificate`: validates the server-provided certificate is signed by a trusted certificate authority and that the server can prove possession of its associated private key (less secure)
+  * `full` (default): performs the same validations as `certificate` and also verifies that the provided certificate has an identity claim matching the server we are attempting to connect to (most secure)
 
 ### `username` [v0.1.5-plugins-filters-elastic_integration-username]
 
-* Value type is [string](logstash://reference/configuration-file-structure.md#string)
+* Value type is [string](/lsr/value-types.md#string)
 * There is no default value for this setting.
 * When present, [`password`](v0-1-5-plugins-filters-elastic_integration.md#v0.1.5-plugins-filters-elastic_integration-password) is also required.
 
-A user name when using HTTP Basic Authentication to connect to {{es}}.
-
- 
-
-
+A user name when using HTTP Basic Authentication to connect to Elasticsearch.
 
 ## Common options [v0.1.5-plugins-filters-elastic_integration-common-options]
 
 These configuration options are supported by all filter plugins:
 
 | Setting | Input type | Required |
-| --- | --- | --- |
-| [`add_field`](v0-1-5-plugins-filters-elastic_integration.md#v0.1.5-plugins-filters-elastic_integration-add_field) | [hash](logstash://reference/configuration-file-structure.md#hash) | No |
-| [`add_tag`](v0-1-5-plugins-filters-elastic_integration.md#v0.1.5-plugins-filters-elastic_integration-add_tag) | [array](logstash://reference/configuration-file-structure.md#array) | No |
-| [`enable_metric`](v0-1-5-plugins-filters-elastic_integration.md#v0.1.5-plugins-filters-elastic_integration-enable_metric) | [boolean](logstash://reference/configuration-file-structure.md#boolean) | No |
-| [`id`](v0-1-5-plugins-filters-elastic_integration.md#v0.1.5-plugins-filters-elastic_integration-id) | [string](logstash://reference/configuration-file-structure.md#string) | No |
-| [`periodic_flush`](v0-1-5-plugins-filters-elastic_integration.md#v0.1.5-plugins-filters-elastic_integration-periodic_flush) | [boolean](logstash://reference/configuration-file-structure.md#boolean) | No |
-| [`remove_field`](v0-1-5-plugins-filters-elastic_integration.md#v0.1.5-plugins-filters-elastic_integration-remove_field) | [array](logstash://reference/configuration-file-structure.md#array) | No |
-| [`remove_tag`](v0-1-5-plugins-filters-elastic_integration.md#v0.1.5-plugins-filters-elastic_integration-remove_tag) | [array](logstash://reference/configuration-file-structure.md#array) | No |
+| :- | :- | :- |
+| [`add_field`](v0-1-5-plugins-filters-elastic_integration.md#v0.1.5-plugins-filters-elastic_integration-add_field) | [hash](/lsr/value-types.md#hash) | No |
+| [`add_tag`](v0-1-5-plugins-filters-elastic_integration.md#v0.1.5-plugins-filters-elastic_integration-add_tag) | [array](/lsr/value-types.md#array) | No |
+| [`enable_metric`](v0-1-5-plugins-filters-elastic_integration.md#v0.1.5-plugins-filters-elastic_integration-enable_metric) | [boolean](/lsr/value-types.md#boolean) | No |
+| [`id`](v0-1-5-plugins-filters-elastic_integration.md#v0.1.5-plugins-filters-elastic_integration-id) | [string](/lsr/value-types.md#string) | No |
+| [`periodic_flush`](v0-1-5-plugins-filters-elastic_integration.md#v0.1.5-plugins-filters-elastic_integration-periodic_flush) | [boolean](/lsr/value-types.md#boolean) | No |
+| [`remove_field`](v0-1-5-plugins-filters-elastic_integration.md#v0.1.5-plugins-filters-elastic_integration-remove_field) | [array](/lsr/value-types.md#array) | No |
+| [`remove_tag`](v0-1-5-plugins-filters-elastic_integration.md#v0.1.5-plugins-filters-elastic_integration-remove_tag) | [array](/lsr/value-types.md#array) | No |
 
 ### `add_field` [v0.1.5-plugins-filters-elastic_integration-add_field]
 
-* Value type is [hash](logstash://reference/configuration-file-structure.md#hash)
+* Value type is [hash](/lsr/value-types.md#hash)
 * Default value is `{}`
 
-If this filter is successful, add any arbitrary fields to this event. Field names can be dynamic and include parts of the event using the `%{{field}}`.
+If this filter is successful, add any arbitrary fields to this event. Field names can be dynamic and include parts of the event using the `%{field}`.
 
 Example:
 
-```json
+```
     filter {
       elastic_integration {
         add_field => { "foo_%{somefield}" => "Hello world, from %{host}" }
@@ -511,7 +457,7 @@ Example:
     }
 ```
 
-```json
+```
     # You can also add multiple fields at once:
     filter {
       elastic_integration {
@@ -523,19 +469,18 @@ Example:
     }
 ```
 
-If the event has field `"somefield" == "hello"` this filter, on success, would add field `foo_hello` if it is present, with the value above and the `%{{host}}` piece replaced with that value from the event. The second example would also add a hardcoded field.
-
+If the event has field `"somefield" == "hello"` this filter, on success, would add field `foo_hello` if it is present, with the value above and the `%{host}` piece replaced with that value from the event. The second example would also add a hardcoded field.
 
 ### `add_tag` [v0.1.5-plugins-filters-elastic_integration-add_tag]
 
-* Value type is [array](logstash://reference/configuration-file-structure.md#array)
+* Value type is [array](/lsr/value-types.md#array)
 * Default value is `[]`
 
-If this filter is successful, add arbitrary tags to the event. Tags can be dynamic and include parts of the event using the `%{{field}}` syntax.
+If this filter is successful, add arbitrary tags to the event. Tags can be dynamic and include parts of the event using the `%{field}` syntax.
 
 Example:
 
-```json
+```
     filter {
       elastic_integration {
         add_tag => [ "foo_%{somefield}" ]
@@ -543,7 +488,7 @@ Example:
     }
 ```
 
-```json
+```
     # You can also add multiple tags at once:
     filter {
       elastic_integration {
@@ -554,23 +499,21 @@ Example:
 
 If the event has field `"somefield" == "hello"` this filter, on success, would add a tag `foo_hello` (and the second example would of course add a `taggedy_tag` tag).
 
-
 ### `enable_metric` [v0.1.5-plugins-filters-elastic_integration-enable_metric]
 
-* Value type is [boolean](logstash://reference/configuration-file-structure.md#boolean)
+* Value type is [boolean](/lsr/value-types.md#boolean)
 * Default value is `true`
 
 Disable or enable metric logging for this specific plugin instance by default we record all the metrics we can, but you can disable metrics collection for a specific plugin.
 
-
 ### `id` [v0.1.5-plugins-filters-elastic_integration-id]
 
-* Value type is [string](logstash://reference/configuration-file-structure.md#string)
+* Value type is [string](/lsr/value-types.md#string)
 * There is no default value for this setting.
 
-Add a unique `ID` to the plugin configuration. If no ID is specified, Logstash will generate one. It is strongly recommended to set this ID in your configuration. This is particularly useful when you have two or more plugins of the same type, for example, if you have 2 elastic_integration filters. Adding a named ID in this case will help in monitoring Logstash when using the monitoring APIs.
+Add a unique `ID` to the plugin configuration. If no ID is specified, Logstash will generate one. It is strongly recommended to set this ID in your configuration. This is particularly useful when you have two or more plugins of the same type, for example, if you have 2 elastic\_integration filters. Adding a named ID in this case will help in monitoring Logstash when using the monitoring APIs.
 
-```json
+```
     filter {
       elastic_integration {
         id => "ABC"
@@ -578,23 +521,21 @@ Add a unique `ID` to the plugin configuration. If no ID is specified, Logstash w
     }
 ```
 
-
 ### `periodic_flush` [v0.1.5-plugins-filters-elastic_integration-periodic_flush]
 
-* Value type is [boolean](logstash://reference/configuration-file-structure.md#boolean)
+* Value type is [boolean](/lsr/value-types.md#boolean)
 * Default value is `false`
 
 Call the filter flush method at regular interval. Optional.
 
-
 ### `remove_field` [v0.1.5-plugins-filters-elastic_integration-remove_field]
 
-* Value type is [array](logstash://reference/configuration-file-structure.md#array)
+* Value type is [array](/lsr/value-types.md#array)
 * Default value is `[]`
 
-If this filter is successful, remove arbitrary fields from this event. Fields names can be dynamic and include parts of the event using the `%{{field}}` Example:
+If this filter is successful, remove arbitrary fields from this event. Fields names can be dynamic and include parts of the event using the %{field} Example:
 
-```json
+```
     filter {
       elastic_integration {
         remove_field => [ "foo_%{somefield}" ]
@@ -602,7 +543,7 @@ If this filter is successful, remove arbitrary fields from this event. Fields na
     }
 ```
 
-```json
+```
     # You can also remove multiple fields at once:
     filter {
       elastic_integration {
@@ -613,17 +554,16 @@ If this filter is successful, remove arbitrary fields from this event. Fields na
 
 If the event has field `"somefield" == "hello"` this filter, on success, would remove the field with name `foo_hello` if it is present. The second example would remove an additional, non-dynamic field.
 
-
 ### `remove_tag` [v0.1.5-plugins-filters-elastic_integration-remove_tag]
 
-* Value type is [array](logstash://reference/configuration-file-structure.md#array)
+* Value type is [array](/lsr/value-types.md#array)
 * Default value is `[]`
 
-If this filter is successful, remove arbitrary tags from the event. Tags can be dynamic and include parts of the event using the `%{{field}}` syntax.
+If this filter is successful, remove arbitrary tags from the event. Tags can be dynamic and include parts of the event using the `%{field}` syntax.
 
 Example:
 
-```json
+```
     filter {
       elastic_integration {
         remove_tag => [ "foo_%{somefield}" ]
@@ -631,7 +571,7 @@ Example:
     }
 ```
 
-```json
+```
     # You can also remove multiple tags at once:
     filter {
       elastic_integration {
@@ -641,6 +581,3 @@ Example:
 ```
 
 If the event has field `"somefield" == "hello"` this filter, on success, would remove the tag `foo_hello` if it is present. The second example would remove a sad, unwanted tag as well.
-
-
-

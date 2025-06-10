@@ -6,16 +6,12 @@ mapped_pages:
 
 # Versioned redis output plugin docs [output-redis-index]
 
+This page lists all documentation available for this plugin. To see which plugin version you have installed, run `bin/logstash-plugin list --verbose`.
 
-This page lists all documentation available for this plugin.  To see which plugin version you have installed, run `bin/logstash-plugin list --verbose`.
-
-::::{note}
 Versioned plugin documentation is not available for plugins released prior to Logstash 6.0.
-::::
 
-
-|     |     |
-| --- | --- |
+| | |
+| :- | :- |
 | Version | Release Date |
 | [v5.2.0](v5-2-0-plugins-outputs-redis.md) | 2024-06-04 |
 | [v5.0.0](v5-0-0-plugins-outputs-redis.md) | 2019-01-11 |
@@ -26,13 +22,3 @@ Versioned plugin documentation is not available for plugins released prior to Lo
 | [v4.0.0](v4-0-0-plugins-outputs-redis.md) | 2017-07-27 |
 | [v3.0.5](v3-0-5-plugins-outputs-redis.md) | 2017-08-18 |
 | [v3.0.4](v3-0-4-plugins-outputs-redis.md) | 2017-06-23 |
-
-
-
-
-
-
-
-
-
-

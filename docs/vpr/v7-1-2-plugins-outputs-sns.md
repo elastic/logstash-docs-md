@@ -6,7 +6,6 @@ mapped_pages:
 
 # Sns output plugin v7.1.2 [v7.1.2-plugins-outputs-sns]
 
-
 * A component of the [aws integration plugin](integration-aws-index.md)
 * Integration version: v7.1.2
 * Released on: 2023-06-08
@@ -14,58 +13,54 @@ mapped_pages:
 
 For other versions, see the [overview list](output-sns-index.md).
 
-To learn more about Logstash, see the [Logstash Reference](logstash://reference/index.md).
+To learn more about Logstash, see the [Logstash Reference](https://www.elastic.co/guide/en/logstash/current/index.html).
 
-## Getting help [_getting_help_1577]
+## Getting help [_getting_help_1592]
 
 For questions about the plugin, open a topic in the [Discuss](http://discuss.elastic.co) forums. For bugs or feature requests, open an issue in [Github](https://github.com/logstash-plugins/logstash-integration-aws). For the list of Elastic supported plugins, please consult the [Elastic Support Matrix](https://www.elastic.co/support/matrix#matrix_logstash_plugins).
 
-
-## Description [_description_1567]
+## Description [_description_1582]
 
 SNS output.
 
-Send events to Amazon’s Simple Notification Service, a hosted pub/sub framework.  It supports various subscription types, including email, HTTP/S, SMS, and SQS.
+Send events to Amazon’s Simple Notification Service, a hosted pub/sub framework. It supports various subscription types, including email, HTTP/S, SMS, and SQS.
 
 For further documentation about the service see:
 
 ```
 http://docs.amazonwebservices.com/sns/latest/api/
 ```
+
 This plugin looks for the following fields on events it receives:
 
 * `sns` - If no ARN is found in the configuration file, this will be used as the ARN to publish.
-* `sns_subject` - The subject line that should be used. Optional. The `%{{host}}` will be used if `sns_subject` is not present. The subject will be truncated to 100 characters. If `sns_subject` is set to a non-string value a JSON version of that value will be saved.
+* `sns_subject` - The subject line that should be used. Optional. The "%{host}" will be used if `sns_subject` is not present. The subject will be truncated to 100 characters. If `sns_subject` is set to a non-string value a JSON version of that value will be saved.
 * `sns_message` - Optional string of message to be sent. If this is set to a non-string value it will be encoded with the specified `codec`. If this is not set the entire event will be encoded with the codec. with the @message truncated so that the length of the JSON fits in `32768` bytes.
 
+## Upgrading to 2.0.0 [_upgrading_to_2_0_0_9]
 
-## Upgrading to 2.0.0 [_upgrading_to_2_0_0_7]
-
-This plugin used to have a `format` option for controlling the encoding of messages prior to being sent to SNS. This plugin now uses the logstash standard [codec](logstash://reference/configuration-file-structure.md#codec) option for encoding instead. If you want the same *plain* format as the v0/1 codec (`format => "plain"`) use `codec => "s3_plain"`.
-
+This plugin used to have a `format` option for controlling the encoding of messages prior to being sent to SNS. This plugin now uses the logstash standard [codec](/lsr/value-types.md#codec) option for encoding instead. If you want the same *plain* format as the v0/1 codec (`format => "plain"`) use `codec => "s3_plain"`.
 
 ## Sns Output Configuration Options [v7.1.2-plugins-outputs-sns-options]
 
 This plugin supports the following configuration options plus the [Common options](v7-1-2-plugins-outputs-sns.md#v7.1.2-plugins-outputs-sns-common-options) described later.
 
 | Setting | Input type | Required |
-| --- | --- | --- |
-| [`access_key_id`](v7-1-2-plugins-outputs-sns.md#v7.1.2-plugins-outputs-sns-access_key_id) | [string](logstash://reference/configuration-file-structure.md#string) | No |
-| [`arn`](v7-1-2-plugins-outputs-sns.md#v7.1.2-plugins-outputs-sns-arn) | [string](logstash://reference/configuration-file-structure.md#string) | No |
-| [`aws_credentials_file`](v7-1-2-plugins-outputs-sns.md#v7.1.2-plugins-outputs-sns-aws_credentials_file) | [string](logstash://reference/configuration-file-structure.md#string) | No |
-| [`proxy_uri`](v7-1-2-plugins-outputs-sns.md#v7.1.2-plugins-outputs-sns-proxy_uri) | [string](logstash://reference/configuration-file-structure.md#string) | No |
-| [`publish_boot_message_arn`](v7-1-2-plugins-outputs-sns.md#v7.1.2-plugins-outputs-sns-publish_boot_message_arn) | [string](logstash://reference/configuration-file-structure.md#string) | No |
-| [`region`](v7-1-2-plugins-outputs-sns.md#v7.1.2-plugins-outputs-sns-region) | [string](logstash://reference/configuration-file-structure.md#string), one of `["us-east-1", "us-east-2", "us-west-1", "us-west-2", "eu-central-1", "eu-west-1", "eu-west-2", "ap-southeast-1", "ap-southeast-2", "ap-northeast-1", "ap-northeast-2", "sa-east-1", "us-gov-west-1", "cn-north-1", "ap-south-1", "ca-central-1"]` | No |
-| [`secret_access_key`](v7-1-2-plugins-outputs-sns.md#v7.1.2-plugins-outputs-sns-secret_access_key) | [string](logstash://reference/configuration-file-structure.md#string) | No |
-| [`session_token`](v7-1-2-plugins-outputs-sns.md#v7.1.2-plugins-outputs-sns-session_token) | [string](logstash://reference/configuration-file-structure.md#string) | No |
+| :- | :- | :- |
+| [`access_key_id`](v7-1-2-plugins-outputs-sns.md#v7.1.2-plugins-outputs-sns-access_key_id) | [string](/lsr/value-types.md#string) | No |
+| [`arn`](v7-1-2-plugins-outputs-sns.md#v7.1.2-plugins-outputs-sns-arn) | [string](/lsr/value-types.md#string) | No |
+| [`aws_credentials_file`](v7-1-2-plugins-outputs-sns.md#v7.1.2-plugins-outputs-sns-aws_credentials_file) | [string](/lsr/value-types.md#string) | No |
+| [`proxy_uri`](v7-1-2-plugins-outputs-sns.md#v7.1.2-plugins-outputs-sns-proxy_uri) | [string](/lsr/value-types.md#string) | No |
+| [`publish_boot_message_arn`](v7-1-2-plugins-outputs-sns.md#v7.1.2-plugins-outputs-sns-publish_boot_message_arn) | [string](/lsr/value-types.md#string) | No |
+| [`region`](v7-1-2-plugins-outputs-sns.md#v7.1.2-plugins-outputs-sns-region) | [string](/lsr/value-types.md#string), one of `["us-east-1", "us-east-2", "us-west-1", "us-west-2", "eu-central-1", "eu-west-1", "eu-west-2", "ap-southeast-1", "ap-southeast-2", "ap-northeast-1", "ap-northeast-2", "sa-east-1", "us-gov-west-1", "cn-north-1", "ap-south-1", "ca-central-1"]` | No |
+| [`secret_access_key`](v7-1-2-plugins-outputs-sns.md#v7.1.2-plugins-outputs-sns-secret_access_key) | [string](/lsr/value-types.md#string) | No |
+| [`session_token`](v7-1-2-plugins-outputs-sns.md#v7.1.2-plugins-outputs-sns-session_token) | [string](/lsr/value-types.md#string) | No |
 
 Also see [Common options](v7-1-2-plugins-outputs-sns.md#v7.1.2-plugins-outputs-sns-common-options) for a list of options supported by all output plugins.
 
- 
-
 ### `access_key_id` [v7.1.2-plugins-outputs-sns-access_key_id]
 
-* Value type is [string](logstash://reference/configuration-file-structure.md#string)
+* Value type is [string](/lsr/value-types.md#string)
 * There is no default value for this setting.
 
 This plugin uses the AWS SDK and supports several ways to get credentials, which will be tried in this order:
@@ -76,45 +71,40 @@ This plugin uses the AWS SDK and supports several ways to get credentials, which
 4. Environment variables `AMAZON_ACCESS_KEY_ID` and `AMAZON_SECRET_ACCESS_KEY`
 5. IAM Instance Profile (available when running inside EC2)
 
-
 ### `arn` [v7.1.2-plugins-outputs-sns-arn]
 
-* Value type is [string](logstash://reference/configuration-file-structure.md#string)
+* Value type is [string](/lsr/value-types.md#string)
 * There is no default value for this setting.
 
 Optional ARN to send messages to. If you do not set this you must include the `sns` field in your events to set the ARN on a per-message basis!
 
-
 ### `aws_credentials_file` [v7.1.2-plugins-outputs-sns-aws_credentials_file]
 
-* Value type is [string](logstash://reference/configuration-file-structure.md#string)
+* Value type is [string](/lsr/value-types.md#string)
 * There is no default value for this setting.
 
 Path to YAML file containing a hash of AWS credentials. This file will only be loaded if `access_key_id` and `secret_access_key` aren’t set. The contents of the file should look like this:
 
-```ruby
+```
     :access_key_id: "12345"
     :secret_access_key: "54321"
 ```
 
-
 ### `proxy_uri` [v7.1.2-plugins-outputs-sns-proxy_uri]
 
-* Value type is [string](logstash://reference/configuration-file-structure.md#string)
+* Value type is [string](/lsr/value-types.md#string)
 * There is no default value for this setting.
 
 URI to proxy server if required
 
-
 ### `publish_boot_message_arn` [v7.1.2-plugins-outputs-sns-publish_boot_message_arn]
 
-* Value type is [string](logstash://reference/configuration-file-structure.md#string)
+* Value type is [string](/lsr/value-types.md#string)
 * There is no default value for this setting.
 
 When an ARN for an SNS topic is specified here, the message "Logstash successfully booted" will be sent to it when this plugin is registered.
 
 Example: arn:aws:sns:us-east-1:770975001275:logstash-testing
-
 
 ### `region` [v7.1.2-plugins-outputs-sns-region]
 
@@ -123,64 +113,55 @@ Example: arn:aws:sns:us-east-1:770975001275:logstash-testing
 
 The AWS Region
 
-
 ### `secret_access_key` [v7.1.2-plugins-outputs-sns-secret_access_key]
 
-* Value type is [string](logstash://reference/configuration-file-structure.md#string)
+* Value type is [string](/lsr/value-types.md#string)
 * There is no default value for this setting.
 
 The AWS Secret Access Key
 
-
 ### `session_token` [v7.1.2-plugins-outputs-sns-session_token]
 
-* Value type is [string](logstash://reference/configuration-file-structure.md#string)
+* Value type is [string](/lsr/value-types.md#string)
 * There is no default value for this setting.
 
 The AWS Session token for temporary credential
-
-
 
 ## Common options [v7.1.2-plugins-outputs-sns-common-options]
 
 These configuration options are supported by all output plugins:
 
 | Setting | Input type | Required |
-| --- | --- | --- |
-| [`codec`](v7-1-2-plugins-outputs-sns.md#v7.1.2-plugins-outputs-sns-codec) | [codec](logstash://reference/configuration-file-structure.md#codec) | No |
-| [`enable_metric`](v7-1-2-plugins-outputs-sns.md#v7.1.2-plugins-outputs-sns-enable_metric) | [boolean](logstash://reference/configuration-file-structure.md#boolean) | No |
-| [`id`](v7-1-2-plugins-outputs-sns.md#v7.1.2-plugins-outputs-sns-id) | [string](logstash://reference/configuration-file-structure.md#string) | No |
+| :- | :- | :- |
+| [`codec`](v7-1-2-plugins-outputs-sns.md#v7.1.2-plugins-outputs-sns-codec) | [codec](/lsr/value-types.md#codec) | No |
+| [`enable_metric`](v7-1-2-plugins-outputs-sns.md#v7.1.2-plugins-outputs-sns-enable_metric) | [boolean](/lsr/value-types.md#boolean) | No |
+| [`id`](v7-1-2-plugins-outputs-sns.md#v7.1.2-plugins-outputs-sns-id) | [string](/lsr/value-types.md#string) | No |
 
 ### `codec` [v7.1.2-plugins-outputs-sns-codec]
 
-* Value type is [codec](logstash://reference/configuration-file-structure.md#codec)
+* Value type is [codec](/lsr/value-types.md#codec)
 * Default value is `"plain"`
 
 The codec used for output data. Output codecs are a convenient method for encoding your data before it leaves the output without needing a separate filter in your Logstash pipeline.
 
-
 ### `enable_metric` [v7.1.2-plugins-outputs-sns-enable_metric]
 
-* Value type is [boolean](logstash://reference/configuration-file-structure.md#boolean)
+* Value type is [boolean](/lsr/value-types.md#boolean)
 * Default value is `true`
 
 Disable or enable metric logging for this specific plugin instance. By default we record all the metrics we can, but you can disable metrics collection for a specific plugin.
 
-
 ### `id` [v7.1.2-plugins-outputs-sns-id]
 
-* Value type is [string](logstash://reference/configuration-file-structure.md#string)
+* Value type is [string](/lsr/value-types.md#string)
 * There is no default value for this setting.
 
 Add a unique `ID` to the plugin configuration. If no ID is specified, Logstash will generate one. It is strongly recommended to set this ID in your configuration. This is particularly useful when you have two or more plugins of the same type. For example, if you have 2 sns outputs. Adding a named ID in this case will help in monitoring Logstash when using the monitoring APIs.
 
-```json
+```
 output {
   sns {
     id => "my_plugin_id"
   }
 }
 ```
-
-
-

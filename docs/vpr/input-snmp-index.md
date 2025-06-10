@@ -6,16 +6,12 @@ mapped_pages:
 
 # Versioned snmp input plugin docs [input-snmp-index]
 
+This page lists all documentation available for this plugin. To see which plugin version you have installed, run `bin/logstash-plugin list --verbose`.
 
-This page lists all documentation available for this plugin.  To see which plugin version you have installed, run `bin/logstash-plugin list --verbose`.
-
-::::{note}
 Versioned plugin documentation is not available for plugins released prior to Logstash 6.0.
-::::
 
-
-|     |     |
-| --- | --- |
+| | |
+| :- | :- |
 | Version | Release Date |
 | [v4.0.6](v4-0-6-plugins-inputs-snmp.md) | 2025-01-23 |
 | [v4.0.5](v4-0-5-plugins-inputs-snmp.md) | 2025-01-06 |
@@ -40,27 +36,3 @@ Versioned plugin documentation is not available for plugins released prior to Lo
 | [v1.1.0](v1-1-0-plugins-inputs-snmp.md) | 2019-03-28 |
 | [v1.0.1](v1-0-1-plugins-inputs-snmp.md) | 2018-11-05 |
 | [v1.0.0](v1-0-0-plugins-inputs-snmp.md) | 2018-10-24 |
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -6,17 +6,14 @@ mapped_pages:
 
 # Versioned syslog input plugin docs [input-syslog-index]
 
+This page lists all documentation available for this plugin. To see which plugin version you have installed, run `bin/logstash-plugin list --verbose`.
 
-This page lists all documentation available for this plugin.  To see which plugin version you have installed, run `bin/logstash-plugin list --verbose`.
-
-::::{note}
 Versioned plugin documentation is not available for plugins released prior to Logstash 6.0.
-::::
 
-
-|     |     |
-| --- | --- |
+| | |
+| :- | :- |
 | Version | Release Date |
+| [v3.7.1](v3-7-1-plugins-inputs-syslog.md) | 2025-03-04 |
 | [v3.7.0](v3-7-0-plugins-inputs-syslog.md) | 2023-10-17 |
 | [v3.6.0](v3-6-0-plugins-inputs-syslog.md) | 2021-11-11 |
 | [v3.5.0](v3-5-0-plugins-inputs-syslog.md) | 2021-03-22 |
@@ -31,18 +28,3 @@ Versioned plugin documentation is not available for plugins released prior to Lo
 | [v3.2.3](v3-2-3-plugins-inputs-syslog.md) | 2017-11-07 |
 | [v3.2.2](v3-2-2-plugins-inputs-syslog.md) | 2017-08-16 |
 | [v3.2.1](v3-2-1-plugins-inputs-syslog.md) | 2017-06-23 |
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -6,34 +6,30 @@ mapped_pages:
 
 # Riak output plugin [plugins-outputs-riak]
 
-
 * Plugin version: v3.0.5
 * Released on: 2019-10-09
 * [Changelog](https://github.com/logstash-plugins/logstash-output-riak/blob/v3.0.5/CHANGELOG.md)
 
-For other versions, see the [Versioned plugin docs](/vpr/output-riak-index.md).
+For other versions, see the [Versioned plugin docs](https://www.elastic.co/guide/en/logstash-versioned-plugins/current/output-riak-index.html).
 
 ## Installation [_installation_44]
 
-For plugins not bundled by default, it is easy to install by running `bin/logstash-plugin install logstash-output-riak`. See [Working with plugins](logstash://reference/working-with-plugins.md) for more details.
-
+For plugins not bundled by default, it is easy to install by running `bin/logstash-plugin install logstash-output-riak`. See [Working with plugins](https://www.elastic.co/guide/en/logstash/8.18/working-with-plugins.html) for more details.
 
 ## Getting help [_getting_help_105]
 
 For questions about the plugin, open a topic in the [Discuss](http://discuss.elastic.co) forums. For bugs or feature requests, open an issue in [Github](https://github.com/logstash-plugins/logstash-output-riak). For the list of Elastic supported plugins, please consult the [Elastic Support Matrix](https://www.elastic.co/support/matrix#logstash_plugins).
 
-
-## Description [_description_104]
+## Description [_description_105]
 
 Riak is a distributed k/v store from Basho. It’s based on the Dynamo model.
-
 
 ## Riak Output Configuration Options [plugins-outputs-riak-options]
 
 This plugin supports the following configuration options plus the [Common options](plugins-outputs-riak.md#plugins-outputs-riak-common-options) described later.
 
 | Setting | Input type | Required |
-| --- | --- | --- |
+| :- | :- | :- |
 | [`bucket`](plugins-outputs-riak.md#plugins-outputs-riak-bucket) | [array](value-types.md#array) | No |
 | [`bucket_props`](plugins-outputs-riak.md#plugins-outputs-riak-bucket_props) | [hash](value-types.md#hash) | No |
 | [`enable_search`](plugins-outputs-riak.md#plugins-outputs-riak-enable_search) | [boolean](value-types.md#boolean) | No |
@@ -46,15 +42,12 @@ This plugin supports the following configuration options plus the [Common option
 
 Also see [Common options](plugins-outputs-riak.md#plugins-outputs-riak-common-options) for a list of options supported by all output plugins.
 
- 
-
 ### `bucket` [plugins-outputs-riak-bucket]
 
 * Value type is [array](value-types.md#array)
 * Default value is `["logstash-%{+YYYY.MM.dd}"]`
 
 The bucket name to write events to Expansion is supported here as values are passed through event.sprintf Multiple buckets can be specified here but any bucket-specific settings defined apply to ALL the buckets.
-
 
 ### `bucket_props` [plugins-outputs-riak-bucket_props]
 
@@ -63,7 +56,7 @@ The bucket name to write events to Expansion is supported here as values are pas
 
 Bucket properties (NYI) Logstash hash of properties for the bucket i.e.
 
-```ruby
+```
     bucket_props => {
         "r" => "one"
         "w" => "one"
@@ -73,12 +66,11 @@ Bucket properties (NYI) Logstash hash of properties for the bucket i.e.
 
 or
 
-```ruby
+```
     bucket_props => { "n_val" => "3" }
 ```
 
 Properties will be passed as-is
-
 
 ### `enable_search` [plugins-outputs-riak-enable_search]
 
@@ -87,14 +79,12 @@ Properties will be passed as-is
 
 Search Enable search on the bucket defined above
 
-
 ### `enable_ssl` [plugins-outputs-riak-enable_ssl]
 
 * Value type is [boolean](value-types.md#boolean)
 * Default value is `false`
 
 SSL Enable SSL
-
 
 ### `indices` [plugins-outputs-riak-indices]
 
@@ -103,12 +93,11 @@ SSL Enable SSL
 
 Indices Array of fields to add 2i on e.g.
 
-```ruby
+```
     `indices => ["source_host", "type"]
 ```
 
 Off by default as not everyone runs eleveldb
-
 
 ### `key_name` [plugins-outputs-riak-key_name]
 
@@ -119,7 +108,6 @@ The event key name variables are valid here.
 
 Choose this carefully. Best to let riak decide.
 
-
 ### `nodes` [plugins-outputs-riak-nodes]
 
 * Value type is [hash](value-types.md#hash)
@@ -127,13 +115,12 @@ Choose this carefully. Best to let riak decide.
 
 The nodes of your Riak cluster This can be a single host or a Logstash hash of node/port pairs e.g
 
-```ruby
+```
     {
         "node1" => "8098"
         "node2" => "8098"
     }
 ```
-
 
 ### `proto` [plugins-outputs-riak-proto]
 
@@ -142,17 +129,16 @@ The nodes of your Riak cluster This can be a single host or a Logstash hash of n
 
 The protocol to use HTTP or ProtoBuf Applies to ALL backends listed above No mix and match
 
-
 ### `ssl_opts` [plugins-outputs-riak-ssl_opts]
 
 * Value type is [hash](value-types.md#hash)
 * There is no default value for this setting.
 
-Options for SSL connections. Only applied if SSL is enabled. Logstash hash that maps to the riak-client options here: [https://github.com/basho/riak-ruby-client/wiki/Connecting-to-Riak](https://github.com/basho/riak-ruby-client/wiki/Connecting-to-Riak).
+Options for SSL connections. Only applied if SSL is enabled. Logstash hash that maps to the riak-client options here: <https://github.com/basho/riak-ruby-client/wiki/Connecting-to-Riak>.
 
 You’ll likely want something like this:
 
-```ruby
+```
     ssl_opts => {
        "pem" => "/etc/riak.pem"
        "ca_path" => "/usr/share/certificates"
@@ -161,42 +147,38 @@ You’ll likely want something like this:
 
 Per the riak client docs, the above sample options will turn on SSL `VERIFY_PEER`
 
-
-
 ## Common options [plugins-outputs-riak-common-options]
 
 These configuration options are supported by all output plugins:
 
 | Setting | Input type | Required |
-| --- | --- | --- |
-| [`codec`](plugins-outputs-riak.md#plugins-outputs-riak-codec) | [codec](logstash://reference/configuration-file-structure.md#codec) | No |
-| [`enable_metric`](plugins-outputs-riak.md#plugins-outputs-riak-enable_metric) | [boolean](logstash://reference/configuration-file-structure.md#boolean) | No |
-| [`id`](plugins-outputs-riak.md#plugins-outputs-riak-id) | [string](logstash://reference/configuration-file-structure.md#string) | No |
+| :- | :- | :- |
+| [`codec`](plugins-outputs-riak.md#plugins-outputs-riak-codec) | [codec](value-types.md#codec) | No |
+| [`enable_metric`](plugins-outputs-riak.md#plugins-outputs-riak-enable_metric) | [boolean](value-types.md#boolean) | No |
+| [`id`](plugins-outputs-riak.md#plugins-outputs-riak-id) | [string](value-types.md#string) | No |
 
 ### `codec` [plugins-outputs-riak-codec]
 
-* Value type is [codec](logstash://reference/configuration-file-structure.md#codec)
+* Value type is [codec](value-types.md#codec)
 * Default value is `"plain"`
 
 The codec used for output data. Output codecs are a convenient method for encoding your data before it leaves the output without needing a separate filter in your Logstash pipeline.
 
-
 ### `enable_metric` [plugins-outputs-riak-enable_metric]
 
-* Value type is [boolean](logstash://reference/configuration-file-structure.md#boolean)
+* Value type is [boolean](value-types.md#boolean)
 * Default value is `true`
 
 Disable or enable metric logging for this specific plugin instance. By default we record all the metrics we can, but you can disable metrics collection for a specific plugin.
 
-
 ### `id` [plugins-outputs-riak-id]
 
-* Value type is [string](logstash://reference/configuration-file-structure.md#string)
+* Value type is [string](value-types.md#string)
 * There is no default value for this setting.
 
 Add a unique `ID` to the plugin configuration. If no ID is specified, Logstash will generate one. It is strongly recommended to set this ID in your configuration. This is particularly useful when you have two or more plugins of the same type. For example, if you have 2 riak outputs. Adding a named ID in this case will help in monitoring Logstash when using the monitoring APIs.
 
-```json
+```
 output {
   riak {
     id => "my_plugin_id"
@@ -204,10 +186,4 @@ output {
 }
 ```
 
-::::{note} 
 Variable substitution in the `id` field only supports environment variables and does not support the use of values from the secret store.
-::::
-
-
-
-

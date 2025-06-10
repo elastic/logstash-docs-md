@@ -6,16 +6,12 @@ mapped_pages:
 
 # Versioned http output plugin docs [output-http-index]
 
+This page lists all documentation available for this plugin. To see which plugin version you have installed, run `bin/logstash-plugin list --verbose`.
 
-This page lists all documentation available for this plugin.  To see which plugin version you have installed, run `bin/logstash-plugin list --verbose`.
-
-::::{note}
 Versioned plugin documentation is not available for plugins released prior to Logstash 6.0.
-::::
 
-
-|     |     |
-| --- | --- |
+| | |
+| :- | :- |
 | Version | Release Date |
 | [v6.0.0](v6-0-0-plugins-outputs-http.md) | 2024-11-21 |
 | [v5.7.1](v5-7-1-plugins-outputs-http.md) | 2024-11-18 |
@@ -42,29 +38,3 @@ Versioned plugin documentation is not available for plugins released prior to Lo
 | [v4.3.2](v4-3-2-plugins-outputs-http.md) | 2017-07-06 |
 | [v4.3.1](v4-3-1-plugins-outputs-http.md) | 2017-06-23 |
 | [v4.3.0](v4-3-0-plugins-outputs-http.md) | 2017-05-08 |
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

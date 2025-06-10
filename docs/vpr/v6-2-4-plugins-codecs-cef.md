@@ -6,34 +6,31 @@ mapped_pages:
 
 # Cef codec plugin v6.2.4 [v6.2.4-plugins-codecs-cef]
 
-
 * Plugin version: v6.2.4
 * Released on: 2022-03-15
 * [Changelog](https://github.com/logstash-plugins/logstash-codec-cef/blob/v6.2.4/CHANGELOG.md)
 
 For other versions, see the [overview list](codec-cef-index.md).
 
-To learn more about Logstash, see the [Logstash Reference](logstash://reference/index.md).
+To learn more about Logstash, see the [Logstash Reference](https://www.elastic.co/guide/en/logstash/current/index.html).
 
-## Getting help [_getting_help_2226]
+## Getting help [_getting_help_2258]
 
 For questions about the plugin, open a topic in the [Discuss](http://discuss.elastic.co) forums. For bugs or feature requests, open an issue in [Github](https://github.com/logstash-plugins/logstash-codec-cef). For the list of Elastic supported plugins, please consult the [Elastic Support Matrix](https://www.elastic.co/support/matrix#matrix_logstash_plugins).
 
+## Description [_description_2236]
 
-## Description [_description_2204]
+Implementation of a Logstash codec for the ArcSight Common Event Format (CEF) Based on Revision 20 of Implementing ArcSight CEF, dated from June 05, 2013 <https://community.saas.hpe.com/dcvta86296/attachments/dcvta86296/connector-documentation/1116/1/CommonEventFormatv23.pdf>
 
-Implementation of a Logstash codec for the ArcSight Common Event Format (CEF) Based on Revision 20 of Implementing ArcSight CEF, dated from June 05, 2013 [https://community.saas.hpe.com/dcvta86296/attachments/dcvta86296/connector-documentation/1116/1/CommonEventFormatv23.pdf](https://community.saas.hpe.com/dcvta86296/attachments/dcvta86296/connector-documentation/1116/1/CommonEventFormatv23.pdf)
+If this codec receives a payload from an input that is not a valid CEF message, then it will produce an event with the payload as the *message* field and a *\_cefparsefailure* tag.
 
-If this codec receives a payload from an input that is not a valid CEF message, then it will produce an event with the payload as the *message* field and a *_cefparsefailure* tag.
-
-
-## Compatibility with the Elastic Common Schema (ECS) [_compatibility_with_the_elastic_common_schema_ecs_90]
+## Compatibility with the Elastic Common Schema (ECS) [_compatibility_with_the_elastic_common_schema_ecs_91]
 
 This plugin can be used to decode CEF events *into* the Elastic Common Schema, or to encode ECS-compatible events into CEF. It can also be used *without* ECS, encoding and decoding events using only CEF-defined field names and keys.
 
 The ECS Compatibility mode for a specific plugin instance can be controlled by setting [`ecs_compatibility`](v6-2-4-plugins-codecs-cef.md#v6.2.4-plugins-codecs-cef-ecs_compatibility) when defining the codec:
 
-```sh
+```
     input {
       tcp {
         # ...
@@ -56,16 +53,14 @@ Because the CEF format allows ambiguous timestamp formats, some reasonable assum
 * When the timestamp does not include UTC-offset information, we use the event’s timezone (`dtz` or `deviceTimeZone` field), or fall through to this plugin’s [`default_timezone`](v6-2-4-plugins-codecs-cef.md#v6.2.4-plugins-codecs-cef-default_timezone).
 * Localized timestamps are parsed using the provided [`locale`](v6-2-4-plugins-codecs-cef.md#v6.2.4-plugins-codecs-cef-locale).
 
-
 ### Field mapping [v6.2.4-plugins-codecs-cef-field-mapping]
 
 The header fields from each CEF payload is expanded to the following fields, depending on whether ECS is enabled.
 
-
 ### Header field mapping [v6.2.4-plugins-codecs-cef-header-field]
 
 | ECS Disabled | ECS Field |
-| --- | --- |
+| :- | :- |
 | `cefVersion` | `[cef][version]` |
 | `deviceVendor` | `[observer][vendor]` |
 | `deviceProduct` | `[observer][product]` |
@@ -80,18 +75,17 @@ When decoding in an ECS Compatibility mode, the ECS Fields are populated from th
 
 The following is a mapping between these fields.
 
-
 ### Extension field mapping [v6.2.4-plugins-codecs-cef-ext-field]
 
 | CEF Field Name (optional CEF Key) | ECS Field |
-| --- | --- |
+| :- | :- |
 | `agentAddress` (`agt`) | `[agent][ip]` |
-| `agentDnsDomain` | `[cef][agent][registered_domain]`<br>Multiple possible CEF fields map to this ECS Field. When decoding, the last entry encountered wins. When encoding, this field has *higher* priority. |
+| `agentDnsDomain` | `[cef][agent][registered_domain]`Multiple possible CEF fields map to this ECS Field. When decoding, the last entry encountered wins. When encoding, this field has *higher* priority. |
 | `agentHostName` (`ahost`) | `[agent][name]` |
 | `agentId` (`aid`) | `[agent][id]` |
 | `agentMacAddress` (`amac`) | `[agent][mac]` |
-| `agentNtDomain` | `[cef][agent][registered_domain]`<br>Multiple possible CEF fields map to this ECS Field. When decoding, the last entry encountered wins. When encoding, this field has *lower* priority. |
-| `agentReceiptTime` (`art`) | `[event][created]`<br>This field contains a timestamp. In ECS Compatibility Mode, it is parsed to a specific point in time. |
+| `agentNtDomain` | `[cef][agent][registered_domain]`Multiple possible CEF fields map to this ECS Field. When decoding, the last entry encountered wins. When encoding, this field has *lower* priority. |
+| `agentReceiptTime` (`art`) | `[event][created]`This field contains a timestamp. In ECS Compatibility Mode, it is parsed to a specific point in time. |
 | `agentTimeZone` (`atz`) | `[cef][agent][timezone]` |
 | `agentTranslatedAddress` | `[cef][agent][nat][ip]` |
 | `agentTranslatedZoneExternalID` | `[cef][agent][translated_zone][external_id]` |
@@ -108,12 +102,12 @@ The following is a mapping between these fields.
 | `customerExternalID` | `[organization][id]` |
 | `customerURI` | `[organization][name]` |
 | `destinationAddress` (`dst`) | `[destination][ip]` |
-| `destinationDnsDomain` | `[destination][registered_domain]`<br>Multiple possible CEF fields map to this ECS Field. When decoding, the last entry encountered wins. When encoding, this field has *higher* priority. |
+| `destinationDnsDomain` | `[destination][registered_domain]`Multiple possible CEF fields map to this ECS Field. When decoding, the last entry encountered wins. When encoding, this field has *higher* priority. |
 | `destinationGeoLatitude` (`dlat`) | `[destination][geo][location][lat]` |
 | `destinationGeoLongitude` (`dlong`) | `[destination][geo][location][lon]` |
 | `destinationHostName` (`dhost`) | `[destination][domain]` |
 | `destinationMacAddress` (`dmac`) | `[destination][mac]` |
-| `destinationNtDomain` (`dntdom`) | `[destination][registered_domain]`<br>Multiple possible CEF fields map to this ECS Field. When decoding, the last entry encountered wins. When encoding, this field has *lower* priority. |
+| `destinationNtDomain` (`dntdom`) | `[destination][registered_domain]`Multiple possible CEF fields map to this ECS Field. When decoding, the last entry encountered wins. When encoding, this field has *lower* priority. |
 | `destinationPort` (`dpt`) | `[destination][port]` |
 | `destinationProcessId` (`dpid`) | `[destination][process][pid]` |
 | `destinationProcessName` (`dproc`) | `[destination][process][name]` |
@@ -128,7 +122,8 @@ The following is a mapping between these fields.
 | `destinationZoneExternalID` | `[cef][destination][zone][external_id]` |
 | `destinationZoneURI` | `[cef][destination][zone][uri]` |
 | `deviceAction` (`act`) | `[event][action]` |
-| `deviceAddress` (`dvc`) | `[observer][ip]`<br>When plugin configured with `device => observer`<br><br>`[host][ip]`<br>When plugin configured with `device => host` |
+| `deviceAddress` (`dvc`) | `[observer][ip]`When plugin configured with `device => observer` |
+| | `[host][ip]`When plugin configured with `device => host` |
 | `deviceCustomFloatingPoint1` (`cfp1`) | `[cef][device_custom_floating_point_1][value]` |
 | `deviceCustomFloatingPoint1Label` (`cfp1Label`) | `[cef][device_custom_floating_point_1][label]` |
 | `deviceCustomFloatingPoint2` (`cfp2`) | `[cef][device_custom_floating_point_2][value]` |
@@ -250,19 +245,23 @@ The following is a mapping between these fields.
 | `deviceCustomString15` (`cs15`) | `[cef][device_custom_string_15][value]` |
 | `deviceCustomString15Label` (`cs15Label`) | `[cef][device_custom_string_15][label]` |
 | `deviceDirection` | `[network][direction]` |
-| `deviceDnsDomain` | `[observer][registered_domain]`<br>When plugin configured with `device => observer`.<br><br>`[host][registered_domain]`<br>When plugin configured with `device => host`. |
+| `deviceDnsDomain` | `[observer][registered_domain]`When plugin configured with `device => observer`. |
+| | `[host][registered_domain]`When plugin configured with `device => host`. |
 | `deviceEventCategory` (`cat`) | `[cef][category]` |
-| `deviceExternalId` | `[observer][name]`<br>When plugin configured with `device => observer`.<br><br>`[host][id]`<br>When plugin configured with `device => host`. |
+| `deviceExternalId` | `[observer][name]`When plugin configured with `device => observer`. |
+| | `[host][id]`When plugin configured with `device => host`. |
 | `deviceFacility` | `[log][syslog][facility][code]` |
-| `deviceHostName` (`dvchost`) | `[observer][hostname]`<br>When plugin configured with `device => observer`.<br><br>`[host][name]`<br>When plugin configured with `device => host`. |
+| `deviceHostName` (`dvchost`) | `[observer][hostname]`When plugin configured with `device => observer`. |
+| | `[host][name]`When plugin configured with `device => host`. |
 | `deviceInboundInterface` | `[observer][ingress][interface][name]` |
-| `deviceMacAddress` (`dvcmac`) | `[observer][mac]`<br>When plugin configured with `device => observer`.<br><br>`[host][mac]`<br>When plugin configured with `device => host`. |
+| `deviceMacAddress` (`dvcmac`) | `[observer][mac]`When plugin configured with `device => observer`. |
+| | `[host][mac]`When plugin configured with `device => host`. |
 | `deviceNtDomain` | `[cef][nt_domain]` |
 | `deviceOutboundInterface` | `[observer][egress][interface][name]` |
 | `devicePayloadId` | `[cef][payload_id]` |
 | `deviceProcessId` (`dvcpid`) | `[process][pid]` |
 | `deviceProcessName` | `[process][name]` |
-| `deviceReceiptTime` (`rt`) | `@timestamp`<br>This field contains a timestamp. In ECS Compatibility Mode, it is parsed to a specific point in time. |
+| `deviceReceiptTime` (`rt`) | `@timestamp`This field contains a timestamp. In ECS Compatibility Mode, it is parsed to a specific point in time. |
 | `deviceTimeZone` (`dtz`) | `[event][timezone]` |
 | `deviceTranslatedAddress` | `[host][nat][ip]` |
 | `deviceTranslatedZoneExternalID` | `[cef][translated_zone][external_id]` |
@@ -270,25 +269,25 @@ The following is a mapping between these fields.
 | `deviceVersion` | `[observer][version]` |
 | `deviceZoneExternalID` | `[cef][zone][external_id]` |
 | `deviceZoneURI` | `[cef][zone][uri]` |
-| `endTime` (`end`) | `[event][end]`<br>This field contains a timestamp. In ECS Compatibility Mode, it is parsed to a specific point in time. |
+| `endTime` (`end`) | `[event][end]`This field contains a timestamp. In ECS Compatibility Mode, it is parsed to a specific point in time. |
 | `eventId` | `[event][id]` |
 | `eventOutcome` (`outcome`) | `[event][outcome]` |
 | `externalId` | `[cef][external_id]` |
 | `fileCreateTime` | `[file][created]` |
 | `fileHash` | `[file][hash]` |
 | `fileId` | `[file][inode]` |
-| `fileModificationTime` | `[file][mtime]`<br>This field contains a timestamp. In ECS Compatibility Mode, it is parsed to a specific point in time. |
+| `fileModificationTime` | `[file][mtime]`This field contains a timestamp. In ECS Compatibility Mode, it is parsed to a specific point in time. |
 | `fileName` (`fname`) | `[file][name]` |
 | `filePath` | `[file][path]` |
 | `filePermission` | `[file][group]` |
 | `fileSize` (`fsize`) | `[file][size]` |
 | `fileType` | `[file][extension]` |
-| `managerReceiptTime` (`mrt`) | `[event][ingested]`<br>This field contains a timestamp. In ECS Compatibility Mode, it is parsed to a specific point in time. |
+| `managerReceiptTime` (`mrt`) | `[event][ingested]`This field contains a timestamp. In ECS Compatibility Mode, it is parsed to a specific point in time. |
 | `message` (`msg`) | `[message]` |
-| `oldFileCreateTime` | `[cef][old_file][created]`<br>This field contains a timestamp. In ECS Compatibility Mode, it is parsed to a specific point in time. |
+| `oldFileCreateTime` | `[cef][old_file][created]`This field contains a timestamp. In ECS Compatibility Mode, it is parsed to a specific point in time. |
 | `oldFileHash` | `[cef][old_file][hash]` |
 | `oldFileId` | `[cef][old_file][inode]` |
-| `oldFileModificationTime` | `[cef][old_file][mtime]`<br>This field contains a timestamp. In ECS Compatibility Mode, it is parsed to a specific point in time. |
+| `oldFileModificationTime` | `[cef][old_file][mtime]`This field contains a timestamp. In ECS Compatibility Mode, it is parsed to a specific point in time. |
 | `oldFileName` | `[cef][old_file][name]` |
 | `oldFilePath` | `[cef][old_file][path]` |
 | `oldFilePermission` | `[cef][old_file][group]` |
@@ -302,12 +301,12 @@ The following is a mapping between these fields.
 | `requestMethod` | `[http][request][method]` |
 | `requestUrl` (`request`) | `[url][original]` |
 | `sourceAddress` (`src`) | `[source][ip]` |
-| `sourceDnsDomain` | `[source][registered_domain]`<br>Multiple possible CEF fields map to this ECS Field. When decoding, the last entry encountered wins. When encoding, this field has *higher* priority. |
+| `sourceDnsDomain` | `[source][registered_domain]`Multiple possible CEF fields map to this ECS Field. When decoding, the last entry encountered wins. When encoding, this field has *higher* priority. |
 | `sourceGeoLatitude` (`slat`) | `[source][geo][location][lat]` |
 | `sourceGeoLongitude` (`slong`) | `[source][geo][location][lon]` |
 | `sourceHostName` (`shost`) | `[source][domain]` |
 | `sourceMacAddress` (`smac`) | `[source][mac]` |
-| `sourceNtDomain` (`sntdom`) | `[source][registered_domain]`<br>Multiple possible CEF fields map to this ECS Field. When decoding, the last entry encountered wins. When encoding, this field has *lower* priority. |
+| `sourceNtDomain` (`sntdom`) | `[source][registered_domain]`Multiple possible CEF fields map to this ECS Field. When decoding, the last entry encountered wins. When encoding, this field has *lower* priority. |
 | `sourcePort` (`spt`) | `[source][port]` |
 | `sourceProcessId` (`spid`) | `[source][process][pid]` |
 | `sourceProcessName` (`sproc`) | `[source][process][name]` |
@@ -321,61 +320,55 @@ The following is a mapping between these fields.
 | `sourceUserPrivileges` (`spriv`) | `[source][user][group][name]` |
 | `sourceZoneExternalID` | `[cef][source][zone][external_id]` |
 | `sourceZoneURI` | `[cef][source][zone][uri]` |
-| `startTime` (`start`) | `[event][start]`<br>This field contains a timestamp. In ECS Compatibility Mode, it is parsed to a specific point in time. |
+| `startTime` (`start`) | `[event][start]`This field contains a timestamp. In ECS Compatibility Mode, it is parsed to a specific point in time. |
 | `transportProtocol` (`proto`) | `[network][transport]` |
 | `type` | `[cef][type]` |
-
-
 
 ## Cef Codec Configuration Options [v6.2.4-plugins-codecs-cef-options]
 
 | Setting | Input type | Required |
-| --- | --- | --- |
-| [`default_timezone`](v6-2-4-plugins-codecs-cef.md#v6.2.4-plugins-codecs-cef-default_timezone) | [string](logstash://reference/configuration-file-structure.md#string) | No |
-| [`delimiter`](v6-2-4-plugins-codecs-cef.md#v6.2.4-plugins-codecs-cef-delimiter) | [string](logstash://reference/configuration-file-structure.md#string) | No |
-| [`device`](v6-2-4-plugins-codecs-cef.md#v6.2.4-plugins-codecs-cef-device) | [string](logstash://reference/configuration-file-structure.md#string) | No |
-| [`ecs_compatibility`](v6-2-4-plugins-codecs-cef.md#v6.2.4-plugins-codecs-cef-ecs_compatibility) | [string](logstash://reference/configuration-file-structure.md#string) | No |
-| [`fields`](v6-2-4-plugins-codecs-cef.md#v6.2.4-plugins-codecs-cef-fields) | [array](logstash://reference/configuration-file-structure.md#array) | No |
-| [`locale`](v6-2-4-plugins-codecs-cef.md#v6.2.4-plugins-codecs-cef-locale) | [string](logstash://reference/configuration-file-structure.md#string) | No |
-| [`name`](v6-2-4-plugins-codecs-cef.md#v6.2.4-plugins-codecs-cef-name) | [string](logstash://reference/configuration-file-structure.md#string) | No |
-| [`product`](v6-2-4-plugins-codecs-cef.md#v6.2.4-plugins-codecs-cef-product) | [string](logstash://reference/configuration-file-structure.md#string) | No |
-| [`reverse_mapping`](v6-2-4-plugins-codecs-cef.md#v6.2.4-plugins-codecs-cef-reverse_mapping) | [boolean](logstash://reference/configuration-file-structure.md#boolean) | No |
-| [`severity`](v6-2-4-plugins-codecs-cef.md#v6.2.4-plugins-codecs-cef-severity) | [string](logstash://reference/configuration-file-structure.md#string) | No |
-| [`signature`](v6-2-4-plugins-codecs-cef.md#v6.2.4-plugins-codecs-cef-signature) | [string](logstash://reference/configuration-file-structure.md#string) | No |
-| [`vendor`](v6-2-4-plugins-codecs-cef.md#v6.2.4-plugins-codecs-cef-vendor) | [string](logstash://reference/configuration-file-structure.md#string) | No |
-| [`version`](v6-2-4-plugins-codecs-cef.md#v6.2.4-plugins-codecs-cef-version) | [string](logstash://reference/configuration-file-structure.md#string) | No |
-
- 
+| :- | :- | :- |
+| [`default_timezone`](v6-2-4-plugins-codecs-cef.md#v6.2.4-plugins-codecs-cef-default_timezone) | [string](/lsr/value-types.md#string) | No |
+| [`delimiter`](v6-2-4-plugins-codecs-cef.md#v6.2.4-plugins-codecs-cef-delimiter) | [string](/lsr/value-types.md#string) | No |
+| [`device`](v6-2-4-plugins-codecs-cef.md#v6.2.4-plugins-codecs-cef-device) | [string](/lsr/value-types.md#string) | No |
+| [`ecs_compatibility`](v6-2-4-plugins-codecs-cef.md#v6.2.4-plugins-codecs-cef-ecs_compatibility) | [string](/lsr/value-types.md#string) | No |
+| [`fields`](v6-2-4-plugins-codecs-cef.md#v6.2.4-plugins-codecs-cef-fields) | [array](/lsr/value-types.md#array) | No |
+| [`locale`](v6-2-4-plugins-codecs-cef.md#v6.2.4-plugins-codecs-cef-locale) | [string](/lsr/value-types.md#string) | No |
+| [`name`](v6-2-4-plugins-codecs-cef.md#v6.2.4-plugins-codecs-cef-name) | [string](/lsr/value-types.md#string) | No |
+| [`product`](v6-2-4-plugins-codecs-cef.md#v6.2.4-plugins-codecs-cef-product) | [string](/lsr/value-types.md#string) | No |
+| [`reverse_mapping`](v6-2-4-plugins-codecs-cef.md#v6.2.4-plugins-codecs-cef-reverse_mapping) | [boolean](/lsr/value-types.md#boolean) | No |
+| [`severity`](v6-2-4-plugins-codecs-cef.md#v6.2.4-plugins-codecs-cef-severity) | [string](/lsr/value-types.md#string) | No |
+| [`signature`](v6-2-4-plugins-codecs-cef.md#v6.2.4-plugins-codecs-cef-signature) | [string](/lsr/value-types.md#string) | No |
+| [`vendor`](v6-2-4-plugins-codecs-cef.md#v6.2.4-plugins-codecs-cef-vendor) | [string](/lsr/value-types.md#string) | No |
+| [`version`](v6-2-4-plugins-codecs-cef.md#v6.2.4-plugins-codecs-cef-version) | [string](/lsr/value-types.md#string) | No |
 
 ### `default_timezone` [v6.2.4-plugins-codecs-cef-default_timezone]
 
-* Value type is [string](logstash://reference/configuration-file-structure.md#string)
+* Value type is [string](/lsr/value-types.md#string)
+
 * Supported values are:
 
-    * [Timezone names](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) (such as `Europe/Moscow`, `America/Argentina/Buenos_Aires`)
-    * UTC Offsets (such as `-08:00`, `+03:00`)
+  * [Timezone names](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) (such as `Europe/Moscow`, `America/Argentina/Buenos_Aires`)
+  * UTC Offsets (such as `-08:00`, `+03:00`)
 
 * The default value is your system time zone
+
 * This option has no effect when *encoding*.
 
 When parsing timestamp fields in ECS mode and encountering timestamps that do not contain UTC-offset information, the `deviceTimeZone` (`dtz`) field from the CEF payload is used to interpret the given time. If the event does not include timezone information, this `default_timezone` is used instead.
 
-
 ### `delimiter` [v6.2.4-plugins-codecs-cef-delimiter]
 
-* Value type is [string](logstash://reference/configuration-file-structure.md#string)
+* Value type is [string](/lsr/value-types.md#string)
 * There is no default value for this setting.
 
 If your input puts a delimiter between each CEF event, you’ll want to set this to be that delimiter.
 
-::::{note}
 Byte stream inputs such as TCP require delimiter to be specified. Otherwise input can be truncated or incorrectly split.
-::::
-
 
 **Example**
 
-```ruby
+```
     input {
       tcp {
         codec => cef { delimiter => "\r\n" }
@@ -386,127 +379,121 @@ Byte stream inputs such as TCP require delimiter to be specified. Otherwise inpu
 
 This setting allows the following character sequences to have special meaning:
 
-* `\\r` (backslash "r") - means carriage return (ASCII 0x0D)
-* `\\n` (backslash "n") - means newline (ASCII 0x0A)
-
+* `\r` (backslash "r") - means carriage return (ASCII 0x0D)
+* `\n` (backslash "n") - means newline (ASCII 0x0A)
 
 ### `device` [v6.2.4-plugins-codecs-cef-device]
 
-* Value type is [string](logstash://reference/configuration-file-structure.md#string)
+* Value type is [string](/lsr/value-types.md#string)
+
 * Supported values are:
 
-    * `observer`: indicates that device-specific fields represent the device used to *observe* the event.
-    * `host`: indicates that device-specific fields represent the device on which the event *occurred*.
+  * `observer`: indicates that device-specific fields represent the device used to *observe* the event.
+  * `host`: indicates that device-specific fields represent the device on which the event *occurred*.
 
 * The default value for this setting is `observer`.
+
 * Option has no effect when [`ecs_compatibility => disabled`](v6-2-4-plugins-codecs-cef.md#v6.2.4-plugins-codecs-cef-ecs_compatibility).
+
 * Option has no effect when *encoding*
 
 Defines a set of device-specific CEF fields as either representing the device on which an event *occurred*, or merely the device from which the event was *observed*. This causes the relevant fields to be routed to either the `host` or the `observer` top-level groupings.
 
 If the codec handles data from a variety of sources, the ECS recommendation is to use `observer`.
 
-
 ### `ecs_compatibility` [v6.2.4-plugins-codecs-cef-ecs_compatibility]
 
-* Value type is [string](logstash://reference/configuration-file-structure.md#string)
+* Value type is [string](/lsr/value-types.md#string)
+
 * Supported values are:
 
-    * `disabled`: uses CEF-defined field names in the event (e.g., `bytesIn`, `sourceAddress`)
-    * `v1`: supports ECS-compatible event fields (e.g., `[source][bytes]`, `[source][ip]`)
+  * `disabled`: uses CEF-defined field names in the event (e.g., `bytesIn`, `sourceAddress`)
+  * `v1`: supports ECS-compatible event fields (e.g., `[source][bytes]`, `[source][ip]`)
 
 * Default value depends on which version of Logstash is running:
 
-    * When Logstash provides a `pipeline.ecs_compatibility` setting, its value is used as the default
-    * Otherwise, the default value is `disabled`.
+  * When Logstash provides a `pipeline.ecs_compatibility` setting, its value is used as the default
+  * Otherwise, the default value is `disabled`.
 
-
-Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)][Elastic Common Schema (ECS)\]\(([^:]+)://reference/index.md)).
-
+Controls this plugin’s compatibility with the [Elastic Common Schema (ECS)](https://www.elastic.co/guide/en/ecs/current).
 
 ### `fields` [v6.2.4-plugins-codecs-cef-fields]
 
-* Value type is [array](logstash://reference/configuration-file-structure.md#array)
+* Value type is [array](/lsr/value-types.md#array)
 * Default value is `[]`
 * Option has no effect when *decoding*
 
 When this codec is used in an Output Plugin, a list of fields can be provided to be included in CEF extensions part as key/value pairs.
 
-
 ### `locale` [v6.2.4-plugins-codecs-cef-locale]
 
-* Value type is [string](logstash://reference/configuration-file-structure.md#string)
+* Value type is [string](/lsr/value-types.md#string)
+
 * Supported values are:
 
-    * Abbreviated language_COUNTRY format (e.g., `en_GB`, `pt_BR`)
-    * Valid [IETF BCP 47](https://tools.ietf.org/html/bcp47) language tag (e.g., `zh-cmn-Hans-CN`)
+  * Abbreviated language\_COUNTRY format (e.g., `en_GB`, `pt_BR`)
+  * Valid [IETF BCP 47](https://tools.ietf.org/html/bcp47) language tag (e.g., `zh-cmn-Hans-CN`)
 
 * The default value is your system locale
+
 * Option has no effect when *encoding*
 
 When parsing timestamp fields in ECS mode and encountering timestamps in a localized format, this `locale` is used to interpret locale-specific strings such as month abbreviations.
 
-
 ### `name` [v6.2.4-plugins-codecs-cef-name]
 
-* Value type is [string](logstash://reference/configuration-file-structure.md#string)
+* Value type is [string](/lsr/value-types.md#string)
 * Default value is `"Logstash"`
 * Option has no effect when *decoding*
 
-When this codec is used in an Output Plugin, this option can be used to specify the value of the name field in the CEF header. The new value can include `%{{foo}}` strings to help you build a new value from other parts of the event.
-
+When this codec is used in an Output Plugin, this option can be used to specify the value of the name field in the CEF header. The new value can include `%{foo}` strings to help you build a new value from other parts of the event.
 
 ### `product` [v6.2.4-plugins-codecs-cef-product]
 
-* Value type is [string](logstash://reference/configuration-file-structure.md#string)
+* Value type is [string](/lsr/value-types.md#string)
 * Default value is `"Logstash"`
 * Option has no effect when *decoding*
 
-When this codec is used in an Output Plugin, this option can be used to specify the value of the device product field in CEF header. The new value can include `%{{foo}}` strings to help you build a new value from other parts of the event.
-
+When this codec is used in an Output Plugin, this option can be used to specify the value of the device product field in CEF header. The new value can include `%{foo}` strings to help you build a new value from other parts of the event.
 
 ### `reverse_mapping` [v6.2.4-plugins-codecs-cef-reverse_mapping]
 
-* Value type is [boolean](logstash://reference/configuration-file-structure.md#boolean)
+* Value type is [boolean](/lsr/value-types.md#boolean)
 * Default value is `false`
 * Option has no effect when *decoding*
 
 Set to true to adhere to the specifications and encode using the CEF key name (short name) for the CEF field names.
 
-
 ### `severity` [v6.2.4-plugins-codecs-cef-severity]
 
-* Value type is [string](logstash://reference/configuration-file-structure.md#string)
+* Value type is [string](/lsr/value-types.md#string)
 * Default value is `"6"`
 * Option has no effect when *decoding*
 
-When this codec is used in an Output Plugin, this option can be used to specify the value of the severity field in CEF header. The new value can include `%{{foo}}` strings to help you build a new value from other parts of the event.
+When this codec is used in an Output Plugin, this option can be used to specify the value of the severity field in CEF header. The new value can include `%{foo}` strings to help you build a new value from other parts of the event.
 
 Defined as field of type string to allow sprintf. The value will be validated to be an integer in the range from 0 to 10 (including). All invalid values will be mapped to the default of 6.
 
-
 ### `signature` [v6.2.4-plugins-codecs-cef-signature]
 
-* Value type is [string](logstash://reference/configuration-file-structure.md#string)
+* Value type is [string](/lsr/value-types.md#string)
 * Default value is `"Logstash"`
 * Option has no effect when *decoding*
 
-When this codec is used in an Output Plugin, this option can be used to specify the value of the signature ID field in CEF header. The new value can include `%{{foo}}` strings to help you build a new value from other parts of the event.
-
+When this codec is used in an Output Plugin, this option can be used to specify the value of the signature ID field in CEF header. The new value can include `%{foo}` strings to help you build a new value from other parts of the event.
 
 ### `vendor` [v6.2.4-plugins-codecs-cef-vendor]
 
-* Value type is [string](logstash://reference/configuration-file-structure.md#string)
+* Value type is [string](/lsr/value-types.md#string)
 * Default value is `"Elasticsearch"`
 * Option has no effect when *decoding*
 
-When this codec is used in an Output Plugin, this option can be used to specify the value of the device vendor field in CEF header. The new value can include `%{{foo}}` strings to help you build a new value from other parts of the event.
-
+When this codec is used in an Output Plugin, this option can be used to specify the value of the device vendor field in CEF header. The new value can include `%{foo}` strings to help you build a new value from other parts of the event.
 
 ### `version` [v6.2.4-plugins-codecs-cef-version]
 
-* Value type is [string](logstash://reference/configuration-file-structure.md#string)
+* Value type is [string](/lsr/value-types.md#string)
 * Default value is `"1.0"`
 * Option has no effect when *decoding*
 
-When this codec is used in an Output Plugin, this option can be used to specify the value of the device version field in CEF header. The new value can include `%{{foo}}` strings to help you build a new value from other parts of the event.
+When this codec is used in an Output Plugin, this option can be used to specify the value of the device version field in CEF header. The new value can include `%{foo}` strings to help you build a new value from other parts of the event.

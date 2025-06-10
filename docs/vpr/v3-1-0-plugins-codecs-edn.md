@@ -6,36 +6,31 @@ mapped_pages:
 
 # Edn codec plugin v3.1.0 [v3.1.0-plugins-codecs-edn]
 
-
 * Plugin version: v3.1.0
 * Released on: 2021-08-04
 * [Changelog](https://github.com/logstash-plugins/logstash-codec-edn/blob/v3.1.0/CHANGELOG.md)
 
 For other versions, see the [overview list](codec-edn-index.md).
 
-To learn more about Logstash, see the [Logstash Reference](logstash://reference/index.md).
+To learn more about Logstash, see the [Logstash Reference](https://www.elastic.co/guide/en/logstash/current/index.html).
 
-## Getting help [_getting_help_2289]
+## Getting help [_getting_help_2325]
 
 For questions about the plugin, open a topic in the [Discuss](http://discuss.elastic.co) forums. For bugs or feature requests, open an issue in [Github](https://github.com/logstash-plugins/logstash-codec-edn). For the list of Elastic supported plugins, please consult the [Elastic Support Matrix](https://www.elastic.co/support/matrix#matrix_logstash_plugins).
 
-
-## Description [_description_2267]
+## Description [_description_2303]
 
 Reads and produces EDN format data.
-
 
 ## Edn Codec configuration options [v3.1.0-plugins-codecs-edn-options]
 
 | Setting | Input type | Required |
-| --- | --- | --- |
-| [`target`](v3-1-0-plugins-codecs-edn.md#v3.1.0-plugins-codecs-edn-target) | [string](logstash://reference/configuration-file-structure.md#string) | No |
-
- 
+| :- | :- | :- |
+| [`target`](v3-1-0-plugins-codecs-edn.md#v3.1.0-plugins-codecs-edn-target) | [string](/lsr/value-types.md#string) | No |
 
 ### `target` [v3.1.0-plugins-codecs-edn-target]
 
-* Value type is [string](logstash://reference/configuration-file-structure.md#string)
+* Value type is [string](/lsr/value-types.md#string)
 * There is no default value for this setting.
 * The option is only relevant while decoding.
 
@@ -43,7 +38,7 @@ Define the target field for placing the decoded fields. If this setting is not s
 
 For example, if you want data to be put under the `document` field:
 
-```ruby
+```
     input {
       tcp {
         port => 4242
@@ -53,6 +48,3 @@ For example, if you want data to be put under the `document` field:
       }
     }
 ```
-
-
-

@@ -6,16 +6,12 @@ mapped_pages:
 
 # Versioned exec input plugin docs [input-exec-index]
 
+This page lists all documentation available for this plugin. To see which plugin version you have installed, run `bin/logstash-plugin list --verbose`.
 
-This page lists all documentation available for this plugin.  To see which plugin version you have installed, run `bin/logstash-plugin list --verbose`.
-
-::::{note}
 Versioned plugin documentation is not available for plugins released prior to Logstash 6.0.
-::::
 
-
-|     |     |
-| --- | --- |
+| | |
+| :- | :- |
 | Version | Release Date |
 | [v3.6.0](v3-6-0-plugins-inputs-exec.md) | 2022-06-15 |
 | [v3.4.0](v3-4-0-plugins-inputs-exec.md) | 2021-11-16 |
@@ -27,14 +23,3 @@ Versioned plugin documentation is not available for plugins released prior to Lo
 | [v3.1.5](v3-1-5-plugins-inputs-exec.md) | 2017-11-07 |
 | [v3.1.4](v3-1-4-plugins-inputs-exec.md) | 2017-08-15 |
 | [v3.1.3](v3-1-3-plugins-inputs-exec.md) | 2017-06-23 |
-
-
-
-
-
-
-
-
-
-
-

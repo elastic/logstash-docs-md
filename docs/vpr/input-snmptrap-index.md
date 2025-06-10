@@ -6,16 +6,12 @@ mapped_pages:
 
 # Versioned snmptrap input plugin docs [input-snmptrap-index]
 
+This page lists all documentation available for this plugin. To see which plugin version you have installed, run `bin/logstash-plugin list --verbose`.
 
-This page lists all documentation available for this plugin.  To see which plugin version you have installed, run `bin/logstash-plugin list --verbose`.
-
-::::{note}
 Versioned plugin documentation is not available for plugins released prior to Logstash 6.0.
-::::
 
-
-|     |     |
-| --- | --- |
+| | |
+| :- | :- |
 | Version | Release Date |
 | [v4.0.6](v4-0-6-plugins-inputs-snmptrap.md) | 2025-01-23 |
 | [v4.0.5](v4-0-5-plugins-inputs-snmptrap.md) | 2025-01-06 |
@@ -29,16 +25,3 @@ Versioned plugin documentation is not available for plugins released prior to Lo
 | [v3.0.5](v3-0-5-plugins-inputs-snmptrap.md) | 2017-11-07 |
 | [v3.0.4](v3-0-4-plugins-inputs-snmptrap.md) | 2017-08-16 |
 | [v3.0.3](v3-0-3-plugins-inputs-snmptrap.md) | 2017-06-23 |
-
-
-
-
-
-
-
-
-
-
-
-
-

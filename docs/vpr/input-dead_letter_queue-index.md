@@ -6,16 +6,12 @@ mapped_pages:
 
 # Versioned dead_letter_queue input plugin docs [input-dead_letter_queue-index]
 
+This page lists all documentation available for this plugin. To see which plugin version you have installed, run `bin/logstash-plugin list --verbose`.
 
-This page lists all documentation available for this plugin.  To see which plugin version you have installed, run `bin/logstash-plugin list --verbose`.
-
-::::{note}
 Versioned plugin documentation is not available for plugins released prior to Logstash 6.0.
-::::
 
-
-|     |     |
-| --- | --- |
+| | |
+| :- | :- |
 | Version | Release Date |
 | [v2.0.0](v2-0-0-plugins-inputs-dead_letter_queue.md) | 2022-08-02 |
 | [v1.1.12](v1-1-12-plugins-inputs-dead_letter_queue.md) | 2022-06-16 |
@@ -34,21 +30,3 @@ Versioned plugin documentation is not available for plugins released prior to Lo
 | [v1.0.5](v1-0-5-plugins-inputs-dead_letter_queue.md) | 2017-07-12 |
 | [v1.0.4](v1-0-4-plugins-inputs-dead_letter_queue.md) | 2017-06-23 |
 | [v1.0.3](v1-0-3-plugins-inputs-dead_letter_queue.md) | 2017-06-06 |
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

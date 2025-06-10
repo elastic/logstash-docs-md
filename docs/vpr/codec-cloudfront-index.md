@@ -6,17 +6,15 @@ mapped_pages:
 
 # Versioned cloudfront codec plugin docs [codec-cloudfront-index]
 
+This page lists all documentation available for this plugin. To see which plugin version you have installed, run `bin/logstash-plugin list --verbose`.
 
-This page lists all documentation available for this plugin.  To see which plugin version you have installed, run `bin/logstash-plugin list --verbose`.
-
-::::{note}
 Versioned plugin documentation is not available for plugins released prior to Logstash 6.0.
-::::
 
-
-|     |     |
-| --- | --- |
+| | |
+| :- | :- |
 | Version | Release Date |
+| [v7.2.1](v7-2-1-plugins-codecs-cloudfront.md) | 2025-02-13 |
+| [v7.2.0](v7-2-0-plugins-codecs-cloudfront.md) | 2025-02-10 |
 | [v7.1.8](v7-1-8-plugins-codecs-cloudfront.md) | 2024-07-26 |
 | [v7.1.7](v7-1-7-plugins-codecs-cloudfront.md) | 2024-07-02 |
 | [v7.1.6](v7-1-6-plugins-codecs-cloudfront.md) | 2023-09-12 |
@@ -31,18 +29,3 @@ Versioned plugin documentation is not available for plugins released prior to Lo
 | [v3.0.3](v3-0-3-plugins-codecs-cloudfront.md) | 2017-11-07 |
 | [v3.0.2](v3-0-2-plugins-codecs-cloudfront.md) | 2017-08-15 |
 | [v3.0.1](v3-0-1-plugins-codecs-cloudfront.md) | 2017-06-23 |
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

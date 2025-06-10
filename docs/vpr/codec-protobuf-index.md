@@ -6,16 +6,12 @@ mapped_pages:
 
 # Versioned protobuf codec plugin docs [codec-protobuf-index]
 
+This page lists all documentation available for this plugin. To see which plugin version you have installed, run `bin/logstash-plugin list --verbose`.
 
-This page lists all documentation available for this plugin.  To see which plugin version you have installed, run `bin/logstash-plugin list --verbose`.
-
-::::{note}
 Versioned plugin documentation is not available for plugins released prior to Logstash 6.0.
-::::
 
-
-|     |     |
-| --- | --- |
+| | |
+| :- | :- |
 | Version | Release Date |
 | [v1.3.0](v1-3-0-plugins-codecs-protobuf.md) | 2023-09-20 |
 | [v1.2.9](v1-2-9-plugins-codecs-protobuf.md) | 2023-04-11 |
@@ -27,14 +23,3 @@ Versioned plugin documentation is not available for plugins released prior to Lo
 | [v1.0.5](v1-0-5-plugins-codecs-protobuf.md) | 2018-02-17 |
 | [v1.0.3](v1-0-3-plugins-codecs-protobuf.md) | 2017-08-15 |
 | [v1.0.2](v1-0-2-plugins-codecs-protobuf.md) | 2017-06-23 |
-
-
-
-
-
-
-
-
-
-
-

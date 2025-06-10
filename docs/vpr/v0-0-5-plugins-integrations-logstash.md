@@ -6,26 +6,24 @@ mapped_pages:
 
 # Logstash Integration Plugin v0.0.5 [v0.0.5-plugins-integrations-logstash]
 
-
 * Plugin version: v0.0.5
 * Released on: 2023-10-03
 * [Changelog](https://github.com/logstash-plugins/logstash-integration-logstash/blob/v0.0.5/CHANGELOG.md)
 
 For other versions, see the [overview list](integration-logstash-index.md).
 
-To learn more about Logstash, see the [Logstash Reference](logstash://reference/index.md).
+To learn more about Logstash, see the [Logstash Reference](https://www.elastic.co/guide/en/logstash/current/index.html).
 
-## Getting help [_getting_help_109]
+## Getting help [_getting_help_115]
 
 For questions about the plugin, open a topic in the [Discuss](http://discuss.elastic.co) forums. For bugs or feature requests, open an issue in [Github](https://github.com/logstash-plugins/logstash-integration-logstash). For the list of Elastic supported plugins, please consult the [Elastic Support Matrix](https://www.elastic.co/support/matrix#matrix_logstash_plugins).
 
-
-## Description [_description_109]
+## Description [_description_115]
 
 The Logstash Integration Plugin provides integrated plugins for sending events from one Logstash to another:
 
-* [Logstash output plugin](/lsr/plugins-outputs-logstash.md)
-* [Logstash input plugin](/lsr/plugins-inputs-logstash.md)
+* [Logstash output plugin](https://www.elastic.co/guide/en/logstash/current/plugins-outputs-logstash.html)
+* [Logstash input plugin](https://www.elastic.co/guide/en/logstash/current/plugins-inputs-logstash.html)
 
 ### High-level concepts [v0.0.5-plugins-integrations-logstash-concepts]
 
@@ -33,12 +31,9 @@ You can configure a `logstash` output to send events to a `logstash` input in an
 
 To do so, you should first configure the downstream pipeline with a `logstash` input plugin, bound to an available port so that it can listen for inbound connections. Security is enabled by default, so you will need to either provide identity material or disable SSL.
 
-::::{note}
 You will need a TCP route from the upstream pipeline to the interface that the downstream pipeline is bound to.
-::::
 
-
-```shell
+```
 input {
   logstash {
     port => 9800
@@ -52,15 +47,11 @@ input {
 
 1. Identity material typically should include identity claims about the hostnames and ip addresses that will be used by upstream output plugins.
 
-
 Once the downstream pipeline is configured and running, you may send events from any number of upstream pipelines by adding a `logstash` output plugin that points to the downstream input. You may need to configure SSL to trust the certificates presented by the downstream input plugin.
 
-::::{note}
 Single host endpoint is supported for `hosts`. Multi-host support is coming soon.
-::::
 
-
-```shell
+```
 output {
   logstash {
     hosts => "10.0.0.123:9800"
@@ -73,7 +64,3 @@ output {
 ```
 
 1. Unless SSL is disabled or the downstream input is expected to present certificates signed by globally-trusted authorities, you will likely need to provide a source-of-trust.
-
-
-
-

@@ -6,16 +6,12 @@ mapped_pages:
 
 # Versioned rabbitmq integration plugin docs [integration-rabbitmq-index]
 
+This page lists all documentation available for this plugin. To see which plugin version you have installed, run `bin/logstash-plugin list --verbose`.
 
-This page lists all documentation available for this plugin.  To see which plugin version you have installed, run `bin/logstash-plugin list --verbose`.
-
-::::{note}
 Versioned plugin documentation is not available for plugins released prior to Logstash 6.0.
-::::
 
-
-|     |     |
-| --- | --- |
+| | |
+| :- | :- |
 | Version | Release Date |
 | [v7.4.0](v7-4-0-plugins-integrations-rabbitmq.md) | 2024-09-16 |
 | [v7.3.3](v7-3-3-plugins-integrations-rabbitmq.md) | 2023-06-09 |
@@ -29,16 +25,3 @@ Versioned plugin documentation is not available for plugins released prior to Lo
 | [v7.0.2](v7-0-2-plugins-integrations-rabbitmq.md) | 2019-12-03 |
 | [v7.0.1](v7-0-1-plugins-integrations-rabbitmq.md) | 2019-11-14 |
 | [v7.0.0](v7-0-0-plugins-integrations-rabbitmq.md) | 2019-10-15 |
-
-
-
-
-
-
-
-
-
-
-
-
-

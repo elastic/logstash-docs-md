@@ -6,29 +6,27 @@ mapped_pages:
 
 # Protobuf codec plugin v1.0.2 [v1.0.2-plugins-codecs-protobuf]
 
-
 * Plugin version: v1.0.2
 * Released on: 2017-06-23
 * [Changelog](https://github.com/logstash-plugins/logstash-codec-protobuf/blob/v1.0.2/CHANGELOG.md)
 
 For other versions, see the [overview list](codec-protobuf-index.md).
 
-To learn more about Logstash, see the [Logstash Reference](logstash://reference/index.md).
+To learn more about Logstash, see the [Logstash Reference](https://www.elastic.co/guide/en/logstash/current/index.html).
 
-## Getting help [_getting_help_2410]
+## Getting help [_getting_help_2446]
 
 For questions about the plugin, open a topic in the [Discuss](http://discuss.elastic.co) forums. For bugs or feature requests, open an issue in [Github](https://github.com/logstash-plugins/logstash-codec-protobuf). For the list of Elastic supported plugins, please consult the [Elastic Support Matrix](https://www.elastic.co/support/matrix#matrix_logstash_plugins).
 
-
-## Description [_description_2388]
+## Description [_description_2424]
 
 This codec converts protobuf encoded messages into logstash events and vice versa.
 
-Requires the protobuf definitions as ruby files. You can create those using the [ruby-protoc compiler](https://github.com/codekitchen/ruby-protocol-buffers).
+Requires the protobuf definitions as ruby files. You can create those using the \[ruby-protoc compiler]\(<https://github.com/codekitchen/ruby-protocol-buffers>).
 
 The following shows a usage example for decoding events from a kafka stream:
 
-```ruby
+```
 kafka
 {
  zk_connect => "127.0.0.1"
@@ -41,31 +39,28 @@ kafka
 }
 ```
 
-
 ## Protobuf Codec Configuration Options [v1.0.2-plugins-codecs-protobuf-options]
 
 | Setting | Input type | Required |
-| --- | --- | --- |
-| [`class_name`](v1-0-2-plugins-codecs-protobuf.md#v1.0.2-plugins-codecs-protobuf-class_name) | [string](logstash://reference/configuration-file-structure.md#string) | Yes |
-| [`include_path`](v1-0-2-plugins-codecs-protobuf.md#v1.0.2-plugins-codecs-protobuf-include_path) | [array](logstash://reference/configuration-file-structure.md#array) | Yes |
-
- 
+| :- | :- | :- |
+| [`class_name`](v1-0-2-plugins-codecs-protobuf.md#v1.0.2-plugins-codecs-protobuf-class_name) | [string](/lsr/value-types.md#string) | Yes |
+| [`include_path`](v1-0-2-plugins-codecs-protobuf.md#v1.0.2-plugins-codecs-protobuf-include_path) | [array](/lsr/value-types.md#array) | Yes |
 
 ### `class_name` [v1.0.2-plugins-codecs-protobuf-class_name]
 
 * This is a required setting.
-* Value type is [string](logstash://reference/configuration-file-structure.md#string)
+* Value type is [string](/lsr/value-types.md#string)
 * There is no default value for this setting.
 
 Name of the class to decode. If your protobuf definition contains modules, prepend them to the class name with double colons like so:
 
-```ruby
+```
 class_name => "Foods::Dairy::Cheese"
 ```
 
 This corresponds to a protobuf definition starting as follows:
 
-```ruby
+```
 module Foods
    module Dairy
        class Cheese
@@ -74,18 +69,17 @@ module Foods
 
 If your class references other definitions: you only have to add the main class here.
 
-
 ### `include_path` [v1.0.2-plugins-codecs-protobuf-include_path]
 
 * This is a required setting.
-* Value type is [array](logstash://reference/configuration-file-structure.md#array)
+* Value type is [array](/lsr/value-types.md#array)
 * There is no default value for this setting.
 
 List of absolute pathes to files with protobuf definitions. When using more than one file, make sure to arrange the files in reverse order of dependency so that each class is loaded before it is refered to by another.
 
 Example: a class *Cheese* referencing another protobuf class *Milk*
 
-```ruby
+```
 module Foods
   module Dairy
         class Cheese
@@ -97,11 +91,8 @@ module Foods
 
 would be configured as
 
-```ruby
+```
 include_path => ['/path/to/protobuf/definitions/Milk.pb.rb','/path/to/protobuf/definitions/Cheese.pb.rb']
 ```
 
-When using the codec in an output plugin: * make sure to include all the desired fields in the protobuf definition, including timestamp. Remove fields that are not part of the protobuf definition from the event by using the mutate filter. * the @ symbol is currently not supported in field names when loading the protobuf definitions for encoding. Make sure to call the timestamp field "timestamp" instead of "@timestamp" in the protobuf file. Logstash event fields will be stripped of the leading @ before conversion.
-
-
-
+When using the codec in an output plugin: \* make sure to include all the desired fields in the protobuf definition, including timestamp. Remove fields that are not part of the protobuf definition from the event by using the mutate filter. \* the @ symbol is currently not supported in field names when loading the protobuf definitions for encoding. Make sure to call the timestamp field "timestamp" instead of "@timestamp" in the protobuf file. Logstash event fields will be stripped of the leading @ before conversion.

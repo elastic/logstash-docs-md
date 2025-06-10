@@ -6,16 +6,12 @@ mapped_pages:
 
 # Versioned http_poller input plugin docs [input-http_poller-index]
 
+This page lists all documentation available for this plugin. To see which plugin version you have installed, run `bin/logstash-plugin list --verbose`.
 
-This page lists all documentation available for this plugin.  To see which plugin version you have installed, run `bin/logstash-plugin list --verbose`.
-
-::::{note}
 Versioned plugin documentation is not available for plugins released prior to Logstash 6.0.
-::::
 
-
-|     |     |
-| --- | --- |
+| | |
+| :- | :- |
 | Version | Release Date |
 | [v6.0.0](v6-0-0-plugins-inputs-http_poller.md) | 2024-12-18 |
 | [v5.6.0](v5-6-0-plugins-inputs-http_poller.md) | 2024-06-19 |
@@ -41,28 +37,3 @@ Versioned plugin documentation is not available for plugins released prior to Lo
 | [v3.3.2](v3-3-2-plugins-inputs-http_poller.md) | 2017-08-18 |
 | [v3.3.1](v3-3-1-plugins-inputs-http_poller.md) | 2017-06-23 |
 | [v3.3.0](v3-3-0-plugins-inputs-http_poller.md) | 2017-05-08 |
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

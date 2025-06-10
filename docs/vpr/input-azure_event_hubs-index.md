@@ -6,16 +6,12 @@ mapped_pages:
 
 # Versioned azure_event_hubs input plugin docs [input-azure_event_hubs-index]
 
+This page lists all documentation available for this plugin. To see which plugin version you have installed, run `bin/logstash-plugin list --verbose`.
 
-This page lists all documentation available for this plugin.  To see which plugin version you have installed, run `bin/logstash-plugin list --verbose`.
-
-::::{note}
 Versioned plugin documentation is not available for plugins released prior to Logstash 6.0.
-::::
 
-
-|     |     |
-| --- | --- |
+| | |
+| :- | :- |
 | Version | Release Date |
 | [v1.5.1](v1-5-1-plugins-inputs-azure_event_hubs.md) | 2025-01-03 |
 | [v1.5.0](v1-5-0-plugins-inputs-azure_event_hubs.md) | 2024-10-25 |
@@ -43,30 +39,3 @@ Versioned plugin documentation is not available for plugins released prior to Lo
 | [v1.0.3](v1-0-3-plugins-inputs-azure_event_hubs.md) | 2018-07-30 |
 | [v1.0.1](v1-0-1-plugins-inputs-azure_event_hubs.md) | 2018-07-05 |
 | [v1.0.0](v1-0-0-plugins-inputs-azure_event_hubs.md) | 2018-06-26 |
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

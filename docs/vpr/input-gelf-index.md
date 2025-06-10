@@ -6,16 +6,12 @@ mapped_pages:
 
 # Versioned gelf input plugin docs [input-gelf-index]
 
+This page lists all documentation available for this plugin. To see which plugin version you have installed, run `bin/logstash-plugin list --verbose`.
 
-This page lists all documentation available for this plugin.  To see which plugin version you have installed, run `bin/logstash-plugin list --verbose`.
-
-::::{note}
 Versioned plugin documentation is not available for plugins released prior to Logstash 6.0.
-::::
 
-
-|     |     |
-| --- | --- |
+| | |
+| :- | :- |
 | Version | Release Date |
 | [v3.3.2](v3-3-2-plugins-inputs-gelf.md) | 2022-08-22 |
 | [v3.3.1](v3-3-1-plugins-inputs-gelf.md) | 2021-12-21 |
@@ -27,14 +23,3 @@ Versioned plugin documentation is not available for plugins released prior to Lo
 | [v3.0.6](v3-0-6-plugins-inputs-gelf.md) | 2017-08-15 |
 | [v3.0.5](v3-0-5-plugins-inputs-gelf.md) | 2017-06-27 |
 | [v3.0.4](v3-0-4-plugins-inputs-gelf.md) | 2017-06-23 |
-
-
-
-
-
-
-
-
-
-
-

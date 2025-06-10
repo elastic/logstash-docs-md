@@ -6,37 +6,31 @@ mapped_pages:
 
 # Msgpack codec plugin [plugins-codecs-msgpack]
 
-
 * Plugin version: v3.1.0
 * Released on: 2021-08-09
 * [Changelog](https://github.com/logstash-plugins/logstash-codec-msgpack/blob/v3.1.0/CHANGELOG.md)
 
-For other versions, see the [Versioned plugin docs](/vpr/codec-msgpack-index.md).
+For other versions, see the [Versioned plugin docs](https://www.elastic.co/guide/en/logstash-versioned-plugins/current/codec-msgpack-index.html).
 
 ## Getting help [_getting_help_191]
 
 For questions about the plugin, open a topic in the [Discuss](http://discuss.elastic.co) forums. For bugs or feature requests, open an issue in [Github](https://github.com/logstash-plugins/logstash-codec-msgpack). For the list of Elastic supported plugins, please consult the [Elastic Support Matrix](https://www.elastic.co/support/matrix#logstash_plugins).
 
-
-## Description [_description_189]
+## Description [_description_190]
 
 This codec reads and produces MessagePack encoded content.
-
 
 ## Msgpack Codec configuration options [plugins-codecs-msgpack-options]
 
 | Setting | Input type | Required |
-| --- | --- | --- |
+| :- | :- | :- |
 | [`format`](plugins-codecs-msgpack.md#plugins-codecs-msgpack-format) | [string](value-types.md#string) | No |
 | [`target`](plugins-codecs-msgpack.md#plugins-codecs-msgpack-target) | [string](value-types.md#string) | No |
-
- 
 
 ### `format` [plugins-codecs-msgpack-format]
 
 * Value type is [string](value-types.md#string)
 * There is no default value for this setting.
-
 
 ### `target` [plugins-codecs-msgpack-target]
 
@@ -47,7 +41,7 @@ Define the target field for placing the decoded values. If this setting is not s
 
 For example, if you want data to be put under the `document` field:
 
-```ruby
+```
     input {
       tcp {
         port => 4242
@@ -57,6 +51,3 @@ For example, if you want data to be put under the `document` field:
       }
     }
 ```
-
-
-

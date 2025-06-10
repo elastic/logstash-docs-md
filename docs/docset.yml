@@ -1,31 +1,6 @@
 project: 'Logstash versioned plugin reference'
 products:
   - id: logstash
-cross_links:
-  - beats
-  - docs-content
-  - ecs
-  - elasticsearch
-  - integration-docs
-  - logstash
 toc:
   - toc: lsr
   - toc: vpr
-subs:
-  logstash-ref:   "https://www.elastic.co/guide/en/logstash/current"
-  esf:   "Elastic Serverless Forwarder"
-  serverless-full:   "Elastic Cloud Serverless"
-  serverless-short:   "Serverless"
-  es-serverless:   "Elasticsearch Serverless"
-  agent:   "Elastic Agent"
-  integrations:   "Integrations"
-  stack:   "Elastic Stack"
-  es:   "Elasticsearch"
-  kib:   "Kibana"
-  ls:   "Logstash"
-  ilm:   "index lifecycle management"
-  ilm-cap:   "Index lifecycle management"
-  ilm-init:   "ILM"
-  dlm:   "data lifecycle management"
-  dlm-init:   "DLM"
-  ess-leadin: "You can run Elasticsearch on your own hardware or use our hosted Elasticsearch Service that is available on AWS, GCP, and Azure. Try the Elasticsearch Service for free: https://cloud.elastic.co/registration."

@@ -1,9 +1,6 @@
-project: 'Logstash core plugins reference'
-
 toc:
   - file: index.md
-  - file: plugin-integrations.md
-    children:
+  - children:
       - file: plugins-integrations-aws.md
       - file: plugins-integrations-elastic_enterprise_search.md
       - file: plugins-integrations-jdbc.md
@@ -11,8 +8,8 @@ toc:
       - file: plugins-integrations-logstash.md
       - file: plugins-integrations-rabbitmq.md
       - file: plugins-integrations-snmp.md
-  - file: input-plugins.md
-    children:
+    file: plugin-integrations.md
+  - children:
       - file: plugins-inputs-azure_event_hubs.md
       - file: plugins-inputs-beats.md
       - file: plugins-inputs-cloudwatch.md
@@ -70,8 +67,8 @@ toc:
       - file: plugins-inputs-websocket.md
       - file: plugins-inputs-wmi.md
       - file: plugins-inputs-xmpp.md
-  - file: output-plugins.md
-    children:
+    file: input-plugins.md
+  - children:
       - file: plugins-outputs-boundary.md
       - file: plugins-outputs-circonus.md
       - file: plugins-outputs-cloudwatch.md
@@ -130,8 +127,8 @@ toc:
       - file: plugins-outputs-websocket.md
       - file: plugins-outputs-xmpp.md
       - file: plugins-outputs-zabbix.md
-  - file: filter-plugins.md
-    children:
+    file: output-plugins.md
+  - children:
       - file: plugins-filters-age.md
       - file: plugins-filters-aggregate.md
       - file: plugins-filters-alter.md
@@ -181,8 +178,8 @@ toc:
       - file: plugins-filters-uuid.md
       - file: plugins-filters-wurfl_device_detection.md
       - file: plugins-filters-xml.md
-  - file: codec-plugins.md
-    children:
+    file: filter-plugins.md
+  - children:
       - file: plugins-codecs-avro.md
       - file: plugins-codecs-cef.md
       - file: plugins-codecs-cloudfront.md
@@ -209,4 +206,5 @@ toc:
       - file: plugins-codecs-plain.md
       - file: plugins-codecs-protobuf.md
       - file: plugins-codecs-rubydebug.md
+    file: codec-plugins.md
   - file: value-types.md
