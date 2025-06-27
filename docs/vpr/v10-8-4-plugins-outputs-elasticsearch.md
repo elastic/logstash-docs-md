@@ -40,9 +40,9 @@ If you are using a custom [`template`](v10-8-4-plugins-outputs-elasticsearch.md#
 ::::
 
 
-### Hosted {{es}} Service on Elastic Cloud [_hosted_es_service_on_elastic_cloud_57]
+### {{ls}} to {{ech}} [_hosted_es_service_on_elastic_cloud_57]
 
-{{ess-leadin}}
+{{ech-leadin}}
 
 
 
