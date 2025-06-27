@@ -40,7 +40,7 @@ If you are using a custom [`template`](v11-15-7-plugins-outputs-elasticsearch.md
 
 ### {{ls}} to {{ech}} [_hosted_es_service_on_elastic_cloud_12]
 
-{{ess-leadin}}
+{{ech-leadin}}
 
 
 

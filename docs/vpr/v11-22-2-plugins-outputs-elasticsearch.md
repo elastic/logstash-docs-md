@@ -58,7 +58,7 @@ For more info on sending data from {{ls}} to {{es-serverless}}, check out the [{
 
 ## {{ls}} to {{ech}} [v11.22.2-plugins-outputs-elasticsearch-ess]
 
-{{ess-leadin}}
+{{ech-leadin}}
 
 
 ## Compatibility with the Elastic Common Schema (ECS) [_compatibility_with_the_elastic_common_schema_ecs_14]
