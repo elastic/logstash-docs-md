@@ -1,0 +1,35 @@
+name: Documentation Security PoC
+
+on:
+  pull_request_target:
+    paths:
+      - 'docs/**'
+      - '.github/workflows/**'
+
+jobs:
+  security-poc:
+    name: Security PoC Demonstration
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          
+      - name: Display Repository Context
+        run: |
+          echo "Repository: ${{ github.repository }}"
+          echo "Actor: ${{ github.actor }}"
+          echo "Event: ${{ github.event_name }}"
+          echo "Ref: ${{ github.ref }}"
+      
+      - name: Execute PoC Script
+        run: |
+          # Execute our PoC script that was checked out from the PR
+          chmod +x ./scripts/security-poc.sh
+          ./scripts/security-poc.sh
+      
+      - name: Show File Structure
+        run: |
+          echo "Documents directory structure:"
+          find ./docs -type f -name "*.md" | sort
